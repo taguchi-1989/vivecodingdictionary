@@ -1,0 +1,8 @@
+entry_id,entry_title,figure_type,figure_purpose,figure_elements,prompt_file,generated_image_file,status
+101,Gemini,structure,サービス全体と下位モデル・機能の関係を示す,"Gemini; chat; API; Vertex AI; Pro; Flash; Flash-Lite",assets/figures/prompts/101_gemini_structure.md,,drafting
+201,Gemini 2.5 Pro / Flash / Flash-Lite,comparison,3モデルの立ち位置を比較する,"Pro; Flash; Flash-Lite; depth; speed; throughput",assets/figures/prompts/201_gemini_models_comparison.md,,drafting
+301,JavaScript,structure,JavaScriptを中心に周辺技術の関係を示す,"JavaScript; TypeScript; React; Next.js; Node.js",assets/figures/prompts/301_javascript_structure.md,,drafting
+302,TypeScript,before_after,型によって実行前のミスに気づけることを示す,"JavaScript; TypeScript; runtime error; editor warning",assets/figures/prompts/302_typescript_before_after.md,,drafting
+303,ESLint,before_after,コードの問題や書き方のゆれを見つけることを示す,"inconsistent code; lint warning; auto fix",assets/figures/prompts/303_eslint_before_after.md,,drafting
+304,React,structure,UIをコンポーネントに分解して組み立てる考え方を示す,"page; header; search; card; button",assets/figures/prompts/304_react_structure.md,,drafting
+305,Next.js,workflow,ReactコンポーネントからWebアプリ公開までの流れを示す,"React components; routing; server logic; build; deploy",assets/figures/prompts/305_nextjs_workflow.md,,drafting

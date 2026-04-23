@@ -1,0 +1,8 @@
+id,title,status,source_checked,reader_level_ok,subjective_separated,figure_type_ok,update_risk,notes
+101,Gemini,sample,yes,yes,yes,yes,high,モデルやサービス状況の更新確認が必要
+201,Gemini 2.5 Pro / Flash / Flash-Lite,sample,yes,yes,yes,yes,high,後継モデルや価格変更の影響が大きい
+302,TypeScript,sample,yes,yes,yes,yes,medium,Level 3以降でtsconfigを別項目化するとよい
+301,JavaScript,sample,yes,yes,yes,yes,medium,MDN参照。ブラウザ/Node.jsの違いは別項目候補
+303,ESLint,sample,yes,yes,yes,yes,medium,設定ファイルやCI連携は別項目候補
+304,React,sample,yes,yes,yes,yes,medium,コンポーネント以外の概念は分割候補
+305,Next.js,sample,yes,yes,yes,yes,high,バージョンやルーティング仕様の更新に注意

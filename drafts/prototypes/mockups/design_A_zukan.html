@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<title>バイブコーディング図鑑 — 誌面モック A案：Clean Zukan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --line: #cbd5e1;
+    --line-soft: #e5e7eb;
+    --blue: #2563eb;
+    --blue-soft: #dbeafe;
+    --blue-deep: #1e3a8a;
+    --warn-soft: #fef3c7;
+    --font-ja: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", system-ui, sans-serif;
+    --font-la: "Inter", system-ui, sans-serif;
+  }
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-ja);
+    color: var(--text);
+    background: var(--bg);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    font-feature-settings: "palt" 1;
+    letter-spacing: 0.01em;
+    line-height: 1.7;
+  }
+  .page {
+    width: 210mm;
+    height: 297mm;
+    padding: 16mm 15mm 14mm;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+    background: white;
+  }
+  .page:last-child { page-break-after: auto; }
+  @media screen {
+    body { background: #eceef2; padding: 24px 0; }
+    .page { margin: 0 auto 24px; box-shadow: 0 16px 48px rgba(15,23,42,.14); }
+  }
+
+  /* --- common header --- */
+  .top-rule {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 6mm;
+    border-bottom: 1px solid var(--line);
+    font-family: var(--font-la);
+    font-size: 8.5pt;
+    color: var(--muted);
+    letter-spacing: .08em;
+  }
+  .top-rule .brand {
+    font-weight: 700;
+    color: var(--blue-deep);
+    letter-spacing: .14em;
+  }
+  .top-rule .section-name {
+    font-family: var(--font-ja);
+    letter-spacing: .12em;
+  }
+  .id-block {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+  }
+  .id-block .id {
+    font-family: var(--font-la);
+    font-size: 10pt;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .id-block .cat {
+    font-size: 8pt;
+    padding: 1px 8px;
+    background: var(--blue-soft);
+    color: var(--blue-deep);
+    border-radius: 2px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    font-family: var(--font-la);
+    font-weight: 600;
+  }
+
+  .title-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10mm;
+    align-items: end;
+    margin: 8mm 0 4mm;
+  }
+  .title {
+    font-size: 30pt;
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--text);
+    letter-spacing: -0.005em;
+  }
+  .oneline {
+    font-size: 11.5pt;
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: 130mm;
+    margin-top: 2mm;
+  }
+  .meta {
+    border: 1px solid var(--line);
+    padding: 3mm 4mm;
+    font-size: 8.5pt;
+    color: var(--text);
+    min-width: 46mm;
+  }
+  .meta dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2px 6mm;
+    margin: 0;
+  }
+  .meta dt {
+    color: var(--muted);
+    font-family: var(--font-la);
+    letter-spacing: .06em;
+    font-size: 7.5pt;
+  }
+  .meta dd {
+    margin: 0;
+    font-weight: 500;
+  }
+  .meta .lv {
+    color: var(--blue);
+    font-weight: 700;
+  }
+
+  .divider {
+    margin: 5mm 0 6mm;
+    border-top: 1px solid var(--line-soft);
+  }
+
+  /* --- body area shared --- */
+  h3.section-h {
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: var(--blue-deep);
+    margin: 0 0 2mm;
+    letter-spacing: .06em;
+    display: flex;
+    align-items: center;
+    gap: 3mm;
+  }
+  h3.section-h::before {
+    content: "";
+    width: 3mm; height: 3mm;
+    background: var(--blue);
+    display: inline-block;
+  }
+  p.body {
+    font-size: 9.5pt;
+    margin: 0 0 3mm;
+    line-height: 1.75;
+  }
+  .pair-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8mm 10mm;
+  }
+
+  /* --- footer --- */
+  .footer {
+    position: absolute;
+    left: 15mm;
+    right: 15mm;
+    bottom: 10mm;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 6mm;
+    padding-top: 3mm;
+    border-top: 1px solid var(--line);
+    font-size: 8pt;
+    color: var(--muted);
+    font-family: var(--font-la);
+  }
+  .footer .related {
+    font-family: var(--font-ja);
+  }
+  .footer .related b {
+    color: var(--text);
+    font-weight: 700;
+    margin-right: 2mm;
+    font-size: 7.5pt;
+    letter-spacing: .08em;
+  }
+  .footer .tag {
+    display: inline-block;
+    padding: 0 6px;
+    margin-right: 4px;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    color: var(--text);
+    font-size: 7.5pt;
+  }
+  .footer .page-num {
+    font-weight: 600;
+  }
+
+  /* =======================
+     PAGE 1 — Gemini (structure)
+     ======================= */
+  .fig-structure {
+    background: #fafbfe;
+    border: 1px solid var(--line-soft);
+    padding: 4mm 5mm;
+    height: 92mm;
+    margin: 3mm 0 6mm;
+  }
+  .fig-structure svg { width: 100%; height: 100%; display: block; }
+
+  /* =======================
+     PAGE 2 — Model compare
+     ======================= */
+  .map-area {
+    background: #fafbfe;
+    border: 1px solid var(--line-soft);
+    padding: 4mm 5mm;
+    height: 72mm;
+    margin: 3mm 0 5mm;
+  }
+  .map-area svg { width: 100%; height: 100%; display: block; }
+
+  .compare3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    border: 1px solid var(--line);
+    margin-bottom: 5mm;
+  }
+  .compare3 .col {
+    padding: 4mm 4mm 3mm;
+    border-right: 1px solid var(--line-soft);
+  }
+  .compare3 .col:last-child { border-right: 0; }
+  .compare3 .col .name {
+    font-size: 11pt;
+    font-weight: 700;
+    color: var(--blue-deep);
+    margin-bottom: 1mm;
+  }
+  .compare3 .col .tag {
+    display: inline-block;
+    font-size: 7.5pt;
+    padding: 0 5px;
+    background: var(--blue-soft);
+    color: var(--blue-deep);
+    border-radius: 2px;
+    margin-bottom: 3mm;
+    letter-spacing: .06em;
+  }
+  .compare3 .col .row {
+    display: grid;
+    grid-template-columns: 18mm 1fr;
+    gap: 1mm 3mm;
+    font-size: 8.5pt;
+    margin-bottom: 2mm;
+  }
+  .compare3 .col .row .k {
+    color: var(--muted);
+    font-size: 7.5pt;
+    letter-spacing: .06em;
+    padding-top: 1pt;
+  }
+  .compare3 .col .row .v {
+    color: var(--text);
+    line-height: 1.55;
+  }
+
+  /* =======================
+     PAGE 3 — TypeScript before/after
+     ======================= */
+  .ba-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 0 6mm;
+    align-items: stretch;
+    margin: 3mm 0 5mm;
+  }
+  .ba-panel {
+    border: 1px solid var(--line);
+    padding: 5mm;
+    min-height: 78mm;
+  }
+  .ba-panel.before { background: #fff; }
+  .ba-panel.after { background: #f7faff; border-color: var(--blue); }
+  .ba-label {
+    font-family: var(--font-la);
+    letter-spacing: .18em;
+    font-size: 9pt;
+    font-weight: 700;
+    color: var(--muted);
+    margin-bottom: 3mm;
+  }
+  .ba-panel.after .ba-label { color: var(--blue); }
+  .ba-panel h4 {
+    font-size: 10.5pt;
+    margin: 0 0 3mm;
+    font-weight: 700;
+  }
+  .code {
+    font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+    font-size: 8.5pt;
+    background: #fff;
+    border: 1px solid var(--line-soft);
+    padding: 3mm;
+    line-height: 1.7;
+    color: var(--text);
+    white-space: pre-wrap;
+    margin: 2mm 0 3mm;
+  }
+  .code .kw { color: #0f72b8; }
+  .code .err {
+    background: #fff4ed;
+    border-bottom: 1.5px wavy #e53e3e;
+  }
+  .code .ok {
+    background: #e8f3ff;
+  }
+  .code .com { color: var(--muted); }
+  .ba-panel p { font-size: 9pt; margin: 0; line-height: 1.7; }
+  .ba-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 28mm;
+  }
+  .ba-arrow .center-label {
+    background: var(--blue-deep);
+    color: white;
+    padding: 2mm 3mm;
+    font-size: 8.5pt;
+    letter-spacing: .04em;
+    text-align: center;
+    margin-bottom: 2mm;
+    line-height: 1.4;
+    border-radius: 1px;
+  }
+  .ba-arrow .arrow {
+    width: 100%;
+    height: 10mm;
+  }
+
+  .callout {
+    background: var(--warn-soft);
+    border-left: 3mm solid #f59e0b;
+    padding: 3mm 4mm;
+    font-size: 8.5pt;
+    color: #78350f;
+    margin-top: 3mm;
+  }
+  .callout b { color: #7c2d12; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<!-- ========================================================
+     PAGE 1 — ID 101 / Service / Gemini  (structure diagram)
+     ======================================================== -->
+<section class="page">
+
+  <header class="top-rule">
+    <div class="brand">VIBE CODING ZUKAN</div>
+    <div class="section-name">SERVICE ／ サービス</div>
+  </header>
+
+  <div style="display:flex; align-items:flex-end; justify-content:space-between; margin-top:6mm;">
+    <div class="id-block">
+      <div class="id">ID 101</div>
+      <div class="cat">service · ai_assistant</div>
+    </div>
+    <div style="font-family:var(--font-la); font-size:8pt; color:var(--muted); letter-spacing:.1em;">
+      EVALUATED 2026-04-21 ／ STATUS sample
+    </div>
+  </div>
+
+  <div class="title-row">
+    <div>
+      <div class="title">Gemini</div>
+      <div class="oneline">Google が提供する生成AIサービスとモデル群の総称。<br/>文章・画像・音声・動画・コードを扱え、チャットにもAPIにもVertex AIにも同じ名前で登場する。</div>
+    </div>
+    <aside class="meta">
+      <dl>
+        <dt>READER</dt><dd class="lv">Lv. 2</dd>
+        <dt>EXP.</dt><dd>research_only</dd>
+        <dt>UPDATE</dt><dd>medium</dd>
+        <dt>FIGURE</dt><dd>structure</dd>
+      </dl>
+    </aside>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- FIGURE: service structure -->
+  <div class="fig-structure">
+    <svg viewBox="0 0 780 270" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <style>
+          .n-root { fill: #1e3a8a; }
+          .n-root-t { fill: #fff; font: 700 16px "Noto Sans JP", sans-serif; }
+          .n-mid { fill: #dbeafe; stroke: #2563eb; stroke-width: 1.2; }
+          .n-mid-t { fill: #1e3a8a; font: 600 12px "Noto Sans JP", sans-serif; }
+          .n-leaf { fill: #fff; stroke: #2563eb; stroke-width: 1; }
+          .n-leaf-t { fill: #1f2937; font: 500 11px "Noto Sans JP", sans-serif; }
+          .n-note { fill: #6b7280; font: 400 9.5px "Noto Sans JP", sans-serif; }
+          .edge { stroke: #2563eb; stroke-width: 1.2; fill: none; }
+        </style>
+      </defs>
+
+      <!-- Root -->
+      <rect class="n-root" x="330" y="10" width="120" height="36" rx="2" />
+      <text class="n-root-t" x="390" y="34" text-anchor="middle">Gemini</text>
+      <text class="n-note" x="390" y="60" text-anchor="middle">= サービス名／モデル群／ブランド</text>
+
+      <!-- connectors root->3 mids -->
+      <path class="edge" d="M390 70 L390 88 M130 110 L130 88 L650 88 L650 110 M390 88 L390 110"/>
+
+      <!-- 3 mids -->
+      <g>
+        <rect class="n-mid" x="60"  y="110" width="140" height="32" rx="2" />
+        <text class="n-mid-t" x="130" y="131" text-anchor="middle">チャット利用</text>
+        <rect class="n-mid" x="320" y="110" width="140" height="32" rx="2" />
+        <text class="n-mid-t" x="390" y="131" text-anchor="middle">API 利用</text>
+        <rect class="n-mid" x="580" y="110" width="140" height="32" rx="2" />
+        <text class="n-mid-t" x="650" y="131" text-anchor="middle">Vertex AI 利用</text>
+      </g>
+
+      <!-- connectors to leaves -->
+      <path class="edge" d="M130 142 L130 165"/>
+      <path class="edge" d="M390 142 L390 158 M280 180 L280 158 L500 158 L500 180 M390 158 L390 180"/>
+      <path class="edge" d="M650 142 L650 165"/>
+
+      <!-- leaves -->
+      <g>
+        <rect class="n-leaf" x="55"  y="165" width="150" height="28" rx="2" />
+        <text class="n-leaf-t" x="130" y="184" text-anchor="middle">gemini.google.com</text>
+        <text class="n-note" x="130" y="208" text-anchor="middle">日常の作業支援・相談</text>
+      </g>
+
+      <g>
+        <rect class="n-leaf" x="220" y="180" width="120" height="28" rx="2" />
+        <text class="n-leaf-t" x="280" y="199" text-anchor="middle">Gemini 2.5 Pro</text>
+        <rect class="n-leaf" x="355" y="180" width="120" height="28" rx="2" />
+        <text class="n-leaf-t" x="415" y="199" text-anchor="middle">Gemini 2.5 Flash</text>
+        <rect class="n-leaf" x="490" y="180" width="130" height="28" rx="2" />
+        <text class="n-leaf-t" x="555" y="199" text-anchor="middle">Gemini 2.5 Flash-Lite</text>
+        <text class="n-note" x="415" y="225" text-anchor="middle">用途別のモデルを呼び分ける</text>
+      </g>
+
+      <g>
+        <rect class="n-leaf" x="575" y="165" width="150" height="28" rx="2" />
+        <text class="n-leaf-t" x="650" y="184" text-anchor="middle">Google Cloud 連携</text>
+        <text class="n-note" x="650" y="208" text-anchor="middle">業務システムへの接続</text>
+      </g>
+
+      <!-- bottom caption -->
+      <text class="n-note" x="390" y="258" text-anchor="middle">同じ「Gemini」でも、どの入口の話かによって意味が変わる。</text>
+    </svg>
+  </div>
+
+  <div class="pair-grid">
+    <div>
+      <h3 class="section-h">何をしてくれるか</h3>
+      <p class="body">ひとつのアプリではなく、複数の入口を持つブランド。普通の利用者にはAIチャット、開発者にはAPIから呼ぶモデル群、企業には Vertex AI 上の生成AI機能として現れる。</p>
+    </div>
+    <div>
+      <h3 class="section-h">実務での意味</h3>
+      <p class="body">打ち合わせで「Gemini」が出たら、サービス名として話しているか、モデル名として話しているかを最初にそろえる。Gemini 2.5 Pro / Flash はモデル名。大きな箱の中に用途別モデルがある構造。</p>
+    </div>
+    <div>
+      <h3 class="section-h">非エンジニア視点のつまずき</h3>
+      <p class="body">「Geminiでやる」だけではチャットかAPIか分からない。「Geminiの性能」もどのモデルかで話が変わる。「無料で使えるか」と「API料金」は別の話になる。</p>
+    </div>
+    <div>
+      <h3 class="section-h">最初にどこまで理解すればよいか</h3>
+      <p class="body">Gemini は棚の名前、Pro は深く考える、Flash はバランス、Flash-Lite は軽く大量、Vertex AI は業務利用の入口。この区別ができれば Lv.2 としては十分。</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="related">
+      <b>関連語</b>
+      <span class="tag">Gemini 2.5 Pro</span>
+      <span class="tag">Gemini 2.5 Flash</span>
+      <span class="tag">Flash-Lite</span>
+      <span class="tag">Vertex AI</span>
+      <span class="tag">API</span>
+    </div>
+    <div class="page-num">― 012 ―</div>
+  </footer>
+</section>
+
+
+<!-- ========================================================
+     PAGE 2 — ID 201 / Model / Gemini 2.5 series (comparison)
+     ======================================================== -->
+<section class="page">
+
+  <header class="top-rule">
+    <div class="brand">VIBE CODING ZUKAN</div>
+    <div class="section-name">MODEL ／ モデル比較</div>
+  </header>
+
+  <div style="display:flex; align-items:flex-end; justify-content:space-between; margin-top:6mm;">
+    <div class="id-block">
+      <div class="id">ID 201</div>
+      <div class="cat">model · frontier_model</div>
+    </div>
+    <div style="font-family:var(--font-la); font-size:8pt; color:var(--muted); letter-spacing:.1em;">
+      EVALUATED 2026-04-21 ／ UPDATE high
+    </div>
+  </div>
+
+  <div class="title-row">
+    <div>
+      <div class="title">Gemini 2.5 Pro ／ Flash ／ Flash-Lite</div>
+      <div class="oneline">同じ Gemini の中で、「深く考える」「速く返す」「安く大量に処理する」のように用途別に分かれたモデル群。</div>
+    </div>
+    <aside class="meta">
+      <dl>
+        <dt>READER</dt><dd class="lv">Lv. 2</dd>
+        <dt>EXP.</dt><dd>research_only</dd>
+        <dt>PHASE</dt><dd>active</dd>
+        <dt>FIGURE</dt><dd>comparison</dd>
+      </dl>
+    </aside>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 2-axis comparison map -->
+  <div class="map-area">
+    <svg viewBox="0 0 780 220" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <style>
+          .axis { stroke: #cbd5e1; stroke-width: 1; }
+          .axis-label { fill: #6b7280; font: 500 10px "Noto Sans JP", sans-serif; }
+          .dot-pro   { fill: #1e3a8a; }
+          .dot-flash { fill: #2563eb; }
+          .dot-lite  { fill: #60a5fa; }
+          .dot-t { fill: #1e3a8a; font: 700 11px "Noto Sans JP", sans-serif; }
+          .dot-sub { fill: #6b7280; font: 400 9px "Noto Sans JP", sans-serif; }
+          .grid { stroke: #e5e7eb; stroke-width: 0.6; stroke-dasharray: 2 3; }
+        </style>
+      </defs>
+
+      <!-- grid -->
+      <line class="grid" x1="80"  y1="30" x2="80"  y2="180"/>
+      <line class="grid" x1="230" y1="30" x2="230" y2="180"/>
+      <line class="grid" x1="380" y1="30" x2="380" y2="180"/>
+      <line class="grid" x1="530" y1="30" x2="530" y2="180"/>
+      <line class="grid" x1="680" y1="30" x2="680" y2="180"/>
+      <line class="grid" x1="80"  y1="60"  x2="680" y2="60"/>
+      <line class="grid" x1="80"  y1="120" x2="680" y2="120"/>
+
+      <!-- axes -->
+      <line class="axis" x1="80" y1="180" x2="680" y2="180"/>
+      <line class="axis" x1="80" y1="30"  x2="80"  y2="180"/>
+      <!-- labels -->
+      <text class="axis-label" x="45" y="34">深く考える</text>
+      <text class="axis-label" x="45" y="184">軽く返す</text>
+      <text class="axis-label" x="78" y="200">遅い／高価</text>
+      <text class="axis-label" x="620" y="200">速い／安価</text>
+      <text class="axis-label" x="320" y="22" font-weight="700" fill="#1e3a8a">思考の深さ  ×  応答スピード</text>
+
+      <!-- arrowheads -->
+      <polygon points="80,24 76,32 84,32" fill="#cbd5e1"/>
+      <polygon points="686,180 678,176 678,184" fill="#cbd5e1"/>
+
+      <!-- dots -->
+      <circle class="dot-pro"   cx="180" cy="55"  r="10" />
+      <text class="dot-t"   x="200" y="52">Gemini 2.5 Pro</text>
+      <text class="dot-sub" x="200" y="66">深い推論・複雑なコード理解</text>
+
+      <circle class="dot-flash" cx="380" cy="110" r="10" />
+      <text class="dot-t"   x="400" y="107">Gemini 2.5 Flash</text>
+      <text class="dot-sub" x="400" y="121">普段使い・バランス型</text>
+
+      <circle class="dot-lite"  cx="600" cy="158" r="10" />
+      <text class="dot-t"   x="470" y="155" text-anchor="start" style="fill:#1e3a8a;">Gemini 2.5 Flash-Lite</text>
+      <text class="dot-sub" x="470" y="169">大量処理・低遅延</text>
+    </svg>
+  </div>
+
+  <!-- 3-column compare -->
+  <div class="compare3">
+    <div class="col">
+      <div class="name">Gemini 2.5 Pro</div>
+      <div class="tag">深く考える</div>
+      <div class="row"><div class="k">向く仕事</div><div class="v">難しい調査、設計、複雑なコード理解</div></div>
+      <div class="row"><div class="k">比喩</div><div class="v">じっくり考える専門家</div></div>
+      <div class="row"><div class="k">注意</div><div class="v">コストと応答時間が跳ねやすい</div></div>
+    </div>
+    <div class="col">
+      <div class="name">Gemini 2.5 Flash</div>
+      <div class="tag">バランス</div>
+      <div class="row"><div class="k">向く仕事</div><div class="v">毎日の生成・要約・分類・壁打ち</div></div>
+      <div class="row"><div class="k">比喩</div><div class="v">仕事が速い実務担当</div></div>
+      <div class="row"><div class="k">注意</div><div class="v">極端に難しい推論は弱りやすい</div></div>
+    </div>
+    <div class="col">
+      <div class="name">Gemini 2.5 Flash-Lite</div>
+      <div class="tag">軽く大量</div>
+      <div class="row"><div class="k">向く仕事</div><div class="v">大量の短い処理・低遅延応答</div></div>
+      <div class="row"><div class="k">比喩</div><div class="v">定型作業を大量に回す担当</div></div>
+      <div class="row"><div class="k">注意</div><div class="v">深い思考が必要な仕事には回さない</div></div>
+    </div>
+  </div>
+
+  <div class="pair-grid">
+    <div>
+      <h3 class="section-h">実務での意味</h3>
+      <p class="body">モデル選びは「性能ランキング」では決めない。コスト・速度・安定性・扱うデータ量・API制限が絡む。高性能モデルを常に使うのが正解ではない、と非エンジニアが理解できれば十分。</p>
+    </div>
+    <div>
+      <h3 class="section-h">評価日の注意</h3>
+      <p class="body">モデル情報は時変情報。提供状況・料金・廃止予定・後継モデルは、誌面の <b>evaluated</b> 日時点のもの。本番判断の前に公式ページを再確認する。</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="related">
+      <b>関連語</b>
+      <span class="tag">Gemini</span>
+      <span class="tag">Vertex AI</span>
+      <span class="tag">context window</span>
+      <span class="tag">multimodal</span>
+      <span class="tag">SWE-Bench</span>
+    </div>
+    <div class="page-num">― 024 ―</div>
+  </footer>
+</section>
+
+
+<!-- ========================================================
+     PAGE 3 — ID 302 / Term / TypeScript (before/after)
+     ======================================================== -->
+<section class="page">
+
+  <header class="top-rule">
+    <div class="brand">VIBE CODING ZUKAN</div>
+    <div class="section-name">TERM ／ 技術用語</div>
+  </header>
+
+  <div style="display:flex; align-items:flex-end; justify-content:space-between; margin-top:6mm;">
+    <div class="id-block">
+      <div class="id">ID 302</div>
+      <div class="cat">term · language</div>
+    </div>
+    <div style="font-family:var(--font-la); font-size:8pt; color:var(--muted); letter-spacing:.1em;">
+      EVALUATED 2026-04-21 ／ UPDATE low
+    </div>
+  </div>
+
+  <div class="title-row">
+    <div>
+      <div class="title">TypeScript</div>
+      <div class="oneline">JavaScript に「型」の考え方を足して、<br/>コードのミスに早く気づきやすくするための言語。</div>
+    </div>
+    <aside class="meta">
+      <dl>
+        <dt>READER</dt><dd class="lv">Lv. 2</dd>
+        <dt>EXP.</dt><dd>partial</dd>
+        <dt>PHASE</dt><dd>active</dd>
+        <dt>FIGURE</dt><dd>before_after</dd>
+      </dl>
+    </aside>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="ba-grid">
+    <div class="ba-panel before">
+      <div class="ba-label">BEFORE — JavaScript</div>
+      <h4>実行するまで気づきにくい</h4>
+      <div class="code"><span class="com">// user はどういう形？ 書いてみないと分からない</span>
+function greet(<span class="err">user</span>) {
+  return "Hello, " + user.<span class="err">nmae</span>;
+}
+
+greet({ name: "Aya" });
+<span class="com">// → 実行してから "Hello, undefined" と出て初めて気づく</span></div>
+      <p>動かしてみないと、タイプミスや渡し忘れが見えない。テストや目視に頼るしかない。</p>
+    </div>
+
+    <div class="ba-arrow">
+      <div class="center-label">型 = データの形の<br/>かんたんな約束</div>
+      <svg class="arrow" viewBox="0 0 80 40">
+        <line x1="4" y1="20" x2="72" y2="20" stroke="#1e3a8a" stroke-width="2"/>
+        <polygon points="72,14 80,20 72,26" fill="#1e3a8a"/>
+      </svg>
+      <div style="font-size:8pt; color:var(--muted); text-align:center; margin-top:2mm;">同じ処理に<br/>約束を足すだけ</div>
+    </div>
+
+    <div class="ba-panel after">
+      <div class="ba-label">AFTER — TypeScript</div>
+      <h4>実行前に赤線と警告が出る</h4>
+      <div class="code"><span class="com">// user の形を書いておく</span>
+type User = { name: <span class="kw">string</span> };
+
+function greet(user: <span class="ok">User</span>) {
+  return "Hello, " + user.<span class="err">nmae</span>;
+}
+<span class="com">//                      ^^ 'nmae' は User にありません</span></div>
+      <p>エディタ上で事前に赤線が出る。存在しないプロパティや型違いを、実行前に直せる。</p>
+    </div>
+  </div>
+
+  <div class="pair-grid">
+    <div>
+      <h3 class="section-h">実務での意味</h3>
+      <p class="body">チーム開発では、型が「このデータはこういう形です」という簡単な契約書のように働く。コードを読む人にも、AIに修正を頼むときにも、情報の足場になる。</p>
+    </div>
+    <div>
+      <h3 class="section-h">非エンジニア視点のつまずき</h3>
+      <p class="body">「JS とは別物？」に見えるが、TS は JS の上に型チェックを足したもの。「エラーが増えた」ように見えるが、実行前に見えるようになっただけ。</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <b>最初の理解はここまでで十分：</b> TS は JS の仲間 ／ 型はデータの形の約束 ／ 実行前にミスを見つけやすくなる ／ React や Next.js の現場でよく出てくる。エラーは「早めの注意表示」と考える。
+  </div>
+
+  <footer class="footer">
+    <div class="related">
+      <b>関連語</b>
+      <span class="tag">JavaScript</span>
+      <span class="tag">React</span>
+      <span class="tag">Next.js</span>
+      <span class="tag">ESLint</span>
+      <span class="tag">tsconfig</span>
+    </div>
+    <div class="page-num">― 051 ―</div>
+  </footer>
+</section>
+
+</body>
+</html>
