@@ -15,7 +15,7 @@ related_terms:
   - commit
   - merge
   - リポジトリ
-status: drafting
+status: needs_review
 ---
 
 # git

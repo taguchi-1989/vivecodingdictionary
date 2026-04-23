@@ -16,7 +16,7 @@ related_terms:
   - Context
   - Fine-tuning
   - VLM
-status: drafting
+status: needs_review
 ---
 
 # LLM（大規模言語モデル）

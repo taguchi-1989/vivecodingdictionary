@@ -16,7 +16,7 @@ related_terms:
   - Token
   - Prompt Engineering
   - Hallucination
-status: drafting
+status: needs_review
 ---
 
 # Context（コンテキスト）

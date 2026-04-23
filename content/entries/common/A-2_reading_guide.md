@@ -12,7 +12,7 @@ related_terms:
   - A-1 まえがき
   - A-3 図鑑の歩き方
   - A-9 索引
-status: drafting
+status: needs_review
 ---
 
 # この本の読み方

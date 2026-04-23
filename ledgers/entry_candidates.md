@@ -44,7 +44,7 @@
 - **B-16 Microsoft 365 Copilot** — Office（Word／Excel／PowerPoint 等）に組み込まれた Copilot
 - **B-17 Edge Copilot** — Microsoft Edge ブラウザ内の Copilot
 - **B-18 Aqua Voice** — AI への入力に向いた高速な音声書き起こしツール
-- **B-19 Claude Cowork** — Claude 系の共同作業サービス／機能（正式名称は要確認）
+- **B-19 Claude Cowork** — Anthropic が 2026-01 末にリサーチプレビューで公開した、Claude のコーディング支援能力をナレッジワーカーに拡張する機能。Enterprise プランに含まれる（checked 2026-04-24）
 
 ### ホスティング・クラウド・BaaS・マネージド AI（B-20〜30）
 
@@ -75,7 +75,7 @@
 
 > 料金・ティア情報は時変情報。各エントリは `evaluation_date` を必ず持たせて運用する。
 
-- **B-50 Claude の料金プラン** — 無料／Pro（$20）／Max 5x（$100）／Max 20x（$200）の 4 段階
+- **B-50 Claude の料金プラン** — Free／Pro（$20、年払 $17）／Max 5x（$100）／Max 20x（$200）／Team（$25、年払 $20／席）／Enterprise（個別）の 6 段階（checked 2026-04-24）
 - **B-51 ChatGPT の料金プラン** — 無料／Plus（$20）／Pro（$200）の 3 段階
 - **B-52 Gemini の料金プラン** — 無料／AI Pro（$20）／AI Ultra（$200 前後）
 
@@ -139,7 +139,7 @@
 - **D-11 Claude 3.5 系** — Sonnet 3.5 でコーディング適性が跳ねた世代
 - **D-12 Claude 4 系** — Opus／Sonnet／Haiku の次世代
 - **D-13 Claude 4.5 系** — 4 系のマイナー更新（Claude Code 主力帯）
-- **D-14 Claude Mitos モデル** — 著者いわく「やばすぎて後悔」系の Claude 系モデル（正式名称・所属世代は要確認）
+- **D-14 Claude Mythos（Preview）** — Anthropic が 2026-04-07 に発表した最先端モデル。サイバーセキュリティ特化。限定公開プログラム "Project Glasswing"（Apple／Google／Microsoft／Cisco／Amazon 等）経由で、一般提供はなし。2026-04-21 に不正アクセス事案が報じられた（checked 2026-04-24）
 
 ### OpenAI 系（D-20〜29）
 
@@ -188,7 +188,7 @@
 
 ### 音声・音楽モデル（D-70〜79）
 
-- **D-70 Amical** — ローカルで動く音声認識モデル（正式名称・出自は要確認）
+- **D-70 Amical** — ⚠️ 同名のモデルは一次情報・OSS 公開元いずれでも確認できず。Amica（semperai/amica、3D キャラ対話アプリ内で whisper.cpp を使用）または Whisper 本体の聞き違いの可能性が高い。著者に再確認要（checked 2026-04-24）
 
 ## E — ベンチマーク・評価指標
 
@@ -297,7 +297,7 @@
 - **F-82 WSL** — Windows 上で Linux を動かす仕組み
 - **F-83 PowerShell** — Windows 標準のシェル
 - **F-84 Ghostty** — 新興の高速ターミナルエミュレータ（Mitchell Hashimoto 作）
-- **F-85 Supercell** — ターミナル系ツール（正式名称は要確認）
+- **F-85 SuperClaude Framework** — Claude Code を拡張するコミュニティ OSS。18 のスラッシュコマンド／9 つの専門ペルソナ／トークン最適化を提供。**Anthropic 非公式**。"Supercell" は "SuperClaude" の聞き違いと判明（checked 2026-04-24）
 - **F-86 ollama** — ローカルで LLM を動かす実行環境／CLI
 
 ### コンテナ・環境（F-90〜99）
@@ -567,14 +567,16 @@
 
 - **J-100 驚き屋** — AI 情報を過剰に煽るクリエイター類型（YouTube サムネ・SNS 煽り）
 
-## 要確認
+## 要確認（2026-04-24 調査結果）
 
-- **Claude Mitos モデル（D-14）** — 著者いわく「アクロミトス ではなく Claude mits／Mitos モデル」。Anthropic の公式モデル名なのか、コミュニティ通称なのか確認したい
-- **Amical（D-70）** — ローカル音声認識モデル。正式名称の綴り（Whisper 派生／自作系／新興 OSS どれか）
-- **Claude Cowork（B-19）** — 公式名・機能範囲の確認
-- **Supercell（F-85）** — ターミナル系と確定済。正式な綴り
-- **Cursor の head F モデル** — 別枠で前回挙がっていた語彙。D-35 Cursor Composer に包含して扱うか、別モデルとして残すかの判断
-- **料金プラン（B-50〜52）** — 2026-05 時点の想定値。公開直前に再確認
+- **Claude Mythos（D-14）** — ✅ 正式名称は **Claude Mythos Preview**（Anthropic 公式）。限定公開プログラム "Project Glasswing" 経由のみ、一般提供なし。エントリ化する場合は「限定公開の実験的モデル」として扱う
+- **Amical（D-70）** — ⚠️ 同名のモデルは確認不可。**Amica または Whisper の聞き違いの可能性が高い**。著者に再確認が必要。エントリ化は保留推奨
+- **Claude Cowork（B-19）** — ✅ 正式名 "Claude Cowork"（Anthropic 2026-01 末リサーチプレビュー、Enterprise プランに含まれる）
+- **Supercell（F-85）** — ⚠️ 正式名は **"SuperClaude Framework"**（コミュニティ OSS、Anthropic 非公式）。"Supercell" は聞き違い。エントリ名を既に修正済
+- **Cursor の head F モデル** — ⚠️ 該当名称を公式で確認できず。Cursor の独自モデルは **cursor-tab-3（Tab 補完）** と **Composer（2025-10 発表）** のみ。D-35 のまま Composer を主軸に扱うのが無難
+- **料金プラン（B-50〜52）** — ✅ 2026-04-24 時点数値を取得済み（B-50 に反映）。公開直前に再確認推奨
+
+調査実施：サブエージェント（document-specialist）による WebSearch + WebFetch、2026-04-24。
 
 ## 構成・配置の検討事項
 

@@ -16,7 +16,7 @@ related_terms:
   - Claude Code
   - OpenAI
   - Google DeepMind
-status: drafting
+status: needs_review
 ---
 
 # Anthropic

@@ -18,7 +18,7 @@ related_terms:
   - Artifacts
   - API
   - G-46 ナーフ
-status: drafting
+status: needs_review
 ---
 
 # Claude

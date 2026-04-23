@@ -16,7 +16,7 @@ related_terms:
   - MCP Transport
   - Tool Use
   - Claude Code
-status: drafting
+status: needs_review
 ---
 
 # MCP（Model Context Protocol）
