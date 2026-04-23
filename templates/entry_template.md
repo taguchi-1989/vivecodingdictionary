@@ -142,7 +142,7 @@ status: drafting         # drafting / sample / needs_source / needs_review / rea
 <!-- 誤解しやすい点、副作用、学習コスト。1文で。 -->
 
 
-### 4. どこで効くか
+### 4. どこで役立つか
 
 <!-- 効果が出やすい場面（共同開発、保守、レビュー等）。1文で。 -->
 
@@ -212,7 +212,7 @@ status: drafting         # drafting / sample / needs_source / needs_review / rea
 - ① 役割: 
 - ② うれしさ: 
 - ③ 注意点: 
-- ④ どこで効くか: 
+- ④ どこで役立つか: 
 - ⑤ 最初に理解する範囲: 
 - ⑥ 深掘り先: 
 

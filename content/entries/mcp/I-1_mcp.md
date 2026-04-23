@@ -29,7 +29,7 @@ LLM とツール・データをつなぐ標準プロトコル。AI 時代の「U
 
 ## ひとことで
 
-MCP は Model Context Protocol の略で、LLM（Claude、Cursor、Claude Code など）と、外部のツール・データ（GitHub、Slack、Notion、DB など）を **共通の方式でつなぐための規格** です。2024 年に Anthropic が提案しました。
+MCP は Model Context Protocol の略で、LLM（Claude、ChatGPT など）と、外部のツール・データ（GitHub、Slack、Gmailなど）を **共通の方式でつなぐための規格** です。2024 年に Anthropic が提案しました。
 
 ## 何をしてくれるか
 
@@ -49,7 +49,7 @@ MCP は、そこに **共通のコネクタ規格** を持ち込みました。
 
 ## バイブコーディングでの位置づけ
 
-Claude Code や Cursor で使える「拡張カタログ」の規格です。公式 MCP（GitHub、Filesystem、Slack、Git など）、コミュニティ MCP（Notion、Linear、Figma、Playwright など）、自作 MCP という 3 層でエコシステムが広がっています。
+Claude Code や Cursor で使える「拡張カタログ」の規格です。公式 MCP（GitHub、Filesystem、Slack、Git など）、コミュニティ MCP（Notion、Figma、Playwright など）、自作 MCP という 3 層でエコシステムが広がっています。
 
 「Claude Code で Linear の issue を操作したい」「Figma のデザインを読ませたい」「社内 DB にアクセスさせたい」といった要望に対して、対応する MCP を 1 つ入れるだけで実現できるのが強みです。急拡大中の領域で、今後は MCP 前提のエージェント設計が当たり前になっていきます。
 
@@ -90,7 +90,7 @@ LLM とツールをつなぐ共通コネクタです。
 
 仕様とエコシステムが急成長中で、数ヶ月で状況が変わります。
 
-### 4. どこで効くか
+### 4. どこで役立つか
 
 エージェントのツール拡張、データ連携、社内システムとの橋渡し。
 
