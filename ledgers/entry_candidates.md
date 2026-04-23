@@ -188,7 +188,8 @@
 
 ### 音声・音楽モデル（D-70〜79）
 
-- **D-70 Amical** — ⚠️ 同名のモデルは一次情報・OSS 公開元いずれでも確認できず。Amica（semperai/amica、3D キャラ対話アプリ内で whisper.cpp を使用）または Whisper 本体の聞き違いの可能性が高い。著者に再確認要（checked 2026-04-24）
+- **D-70 Amical** — ローカルで動く音声認識モデル／ツール（著者確認済で実在）。一次情報 URL は執筆時に確定する（2026-04-24 時点の WebSearch では該当なし、表記ゆれか新興モデルの可能性）
+- **D-71 Whisper** — OpenAI が公開したオープンな音声認識モデル。多言語対応、ローカル実行可能（whisper.cpp などの派生あり）。音声書き起こしの事実上の標準
 
 ## E — ベンチマーク・評価指標
 
@@ -244,6 +245,7 @@
 - **F-12 Electron** — Web 技術でデスクトップアプリを作る FW（重め）
 - **F-13 Tauri** — Rust ベースの軽量デスクトップアプリ FW
 - **F-14 three.js** — ブラウザ上で 3D を描画する JavaScript ライブラリ（WebGL 上に立つ高レベル層）
+- **F-15 shadcn/ui** — React 用のコンポーネント集。npm パッケージではなく CLI でコードを **コピーして配布** するモデル（Radix UI ＋ Tailwind CSS ベース）。Next.js 生態圏で定番
 
 ### Linter・整形（F-20〜29）
 
@@ -299,6 +301,7 @@
 - **F-84 Ghostty** — 新興の高速ターミナルエミュレータ（Mitchell Hashimoto 作）
 - **F-85 SuperClaude Framework** — Claude Code を拡張するコミュニティ OSS。18 のスラッシュコマンド／9 つの専門ペルソナ／トークン最適化を提供。**Anthropic 非公式**。"Supercell" は "SuperClaude" の聞き違いと判明（checked 2026-04-24）
 - **F-86 ollama** — ローカルで LLM を動かす実行環境／CLI
+- **F-87 sudo** — UNIX 系の権限昇格コマンド（super user do）。一時的に管理者権限で 1 コマンドを実行する。Linux／macOS の基本中の基本
 
 ### コンテナ・環境（F-90〜99）
 
@@ -570,7 +573,7 @@
 ## 要確認（2026-04-24 調査結果）
 
 - **Claude Mythos（D-14）** — ✅ 正式名称は **Claude Mythos Preview**（Anthropic 公式）。限定公開プログラム "Project Glasswing" 経由のみ、一般提供なし。エントリ化する場合は「限定公開の実験的モデル」として扱う
-- **Amical（D-70）** — ⚠️ 同名のモデルは確認不可。**Amica または Whisper の聞き違いの可能性が高い**。著者に再確認が必要。エントリ化は保留推奨
+- **Amical（D-70）** — ✅ 著者確認済で実在。URL は執筆時に一次情報を当てて補足する。Whisper（D-71）は別物として併設
 - **Claude Cowork（B-19）** — ✅ 正式名 "Claude Cowork"（Anthropic 2026-01 末リサーチプレビュー、Enterprise プランに含まれる）
 - **Supercell（F-85）** — ⚠️ 正式名は **"SuperClaude Framework"**（コミュニティ OSS、Anthropic 非公式）。"Supercell" は聞き違い。エントリ名を既に修正済
 - **Cursor の head F モデル** — ⚠️ 該当名称を公式で確認できず。Cursor の独自モデルは **cursor-tab-3（Tab 補完）** と **Composer（2025-10 発表）** のみ。D-35 のまま Composer を主軸に扱うのが無難

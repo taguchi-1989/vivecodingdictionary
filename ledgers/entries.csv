@@ -115,7 +115,8 @@ D-56,,Seedance,model,image_video,candidate,
 D-57,,Flow,model,image_video,candidate,Veoベースツール
 D-58,,Whisk,model,image_video,candidate,Imagenベースツール
 D-60,,AlphaGo,model,historical,candidate,
-D-70,,Amical,model,voice_audio,candidate,要確認: 正式名称
+D-70,,Amical,model,voice_audio,candidate,著者確認済。URL は執筆時に補足
+D-71,,Whisper,model,voice_audio,candidate,OpenAI のオープン音声認識モデル
 E-1,,SWE-Bench,benchmark,coding,needs_review,
 E-2,,SWE-Bench Verified,benchmark,coding,candidate,
 E-3,,Terminal-Bench,benchmark,coding,candidate,
@@ -149,6 +150,7 @@ F-11,305,Next.js,term_tool,framework,sample,旧3桁ID連携
 F-12,,Electron,term_tool,framework,candidate,
 F-13,,Tauri,term_tool,framework,candidate,
 F-14,,three.js,term_tool,framework,candidate,3Dライブラリ
+F-15,,shadcn/ui,term_tool,framework,candidate,コピペ配布型 React コンポーネント集
 F-20,303,ESLint,term_tool,linter,sample,旧3桁ID連携
 F-21,,Prettier,term_tool,linter,candidate,
 F-30,,VS Code,term_tool,editor,candidate,
@@ -181,8 +183,9 @@ F-81,,bash,term_tool,shell,candidate,
 F-82,,WSL,term_tool,shell,candidate,
 F-83,,PowerShell,term_tool,shell,candidate,
 F-84,,Ghostty,term_tool,terminal,candidate,
-F-85,,Supercell,term_tool,terminal,candidate,要確認: 正式名称
+F-85,,SuperClaude Framework,term_tool,terminal,candidate,Claude Code 拡張 OSS（Anthropic 非公式）
 F-86,,ollama,term_tool,runtime,candidate,ローカルLLM
+F-87,,sudo,term_tool,shell,candidate,UNIX 系の権限昇格コマンド
 F-90,,Docker,term_tool,container,candidate,
 F-91,,.env,term_tool,env,candidate,
 F-100,,拡張子早見表,term_tool,file_format,candidate,
