@@ -1,0 +1,77 @@
+# 章（letter）→ 表示ラベル・カテゴリ・ディレクトリ
+# バイブコーディング図鑑の 10 章構成を定義する。生成器はこのファイルを読んで
+# ハンバーガーナビ・目次・索引・上チロムの章ラベル表示に使う。
+#
+# 更新ルール:
+#   - letter 順は A〜J で固定（触らない）
+#   - label: 誌面・ナビに出る短い日本語
+#   - categories: entries.csv の category 値の配列（複数マップ可）
+#   - dir: content/entries/ 配下のディレクトリ名
+#   - tilde_top: 上チロムで「技術用語」「〇〇の見方」のように表示する親ラベル
+
+chapters:
+  - letter: A
+    label: はじめに・読み方
+    tilde_top: 読み方
+    categories: [common]
+    dir: common
+
+  - letter: B
+    label: サービス
+    tilde_top: サービス
+    categories: [service]
+    dir: service
+
+  - letter: C
+    label: 人・会社
+    tilde_top: 人・会社
+    categories: [person, person_org]
+    dir: person
+
+  - letter: D
+    label: モデル
+    tilde_top: モデル
+    categories: [model]
+    dir: model
+
+  - letter: E
+    label: ベンチマーク
+    tilde_top: ベンチマーク
+    categories: [benchmark]
+    dir: benchmark
+
+  - letter: F
+    label: ことば・しくみ
+    tilde_top: 技術用語
+    categories: [term, tool, workflow]
+    dir: term
+
+  - letter: G
+    label: バイブ特有
+    tilde_top: バイブ特有
+    categories: [term]
+    dir: term
+
+  - letter: H
+    label: 歴史
+    tilde_top: 歴史
+    categories: [history]
+    dir: history
+
+  - letter: I
+    label: MCP
+    tilde_top: MCP
+    categories: [mcp]
+    dir: mcp
+
+  - letter: J
+    label: 一般語彙
+    tilde_top: 一般語彙
+    categories: [term_general]
+    dir: term_general
+
+# 備考:
+# - F と G はどちらも category=term を含む。letter プレフィクスで振り分ける
+#   （F-* は技術用語寄り、G-* はバイブコーディング特有語彙）
+# - C に person と person_org の両方を入れるのは entries.csv の既存表記揺れに合わせたため。
+#   生成器は両方を C 章に集約する

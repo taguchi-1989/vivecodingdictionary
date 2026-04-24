@@ -1,0 +1,342 @@
+# エントリ定義スキーマ v2（iter 22 / 2026-04-25）
+#
+# docs/v2_rules_summary.md §2 の「決定版ルール」を機械可読 YAML に落としたもの。
+# 下記 3 コンポーネントが共通入力として参照する:
+#   - 静的サイト生成器（B 方針で実装予定）
+#   - scripts/validate_entry.py（strict validator）
+#   - drafts/prototypes/mockups/design_philosophy_v2/check_entry.py（v2 validator）
+#
+# 数値を変えるときは: (1) 本ファイル → (2) v2_rules_summary §2 本文 → (3) 各 validator
+# の順で更新し、双方向で整合を取る。本ファイルと v2_rules_summary に差があれば、
+# **本ファイル（schema）を正**とする。
+
+schema_version: "v2.22.1"
+updated_at: "2026-04-25"
+canonical_doc: "docs/v2_rules_summary.md"
+
+# ────────────────────────────────────────
+# YAML フロントマター（md の --- --- 部）
+# ────────────────────────────────────────
+frontmatter:
+  required:
+    - key: id
+      format: regex
+      pattern: "^[A-J]-\\d{1,2}$"   # 例: A-1, B-3, D-12
+      description: letter-数字 ID
+      severity: error
+    - key: title
+      min_chars: 1
+      max_chars: 20
+      recommended_max_chars: 12
+      severity: error
+    - key: category
+      enum: [service, model, term, tool, workflow, history, person, person_org, benchmark, common, mcp, term_general]
+      severity: error
+    - key: figure_type
+      enum: [before_after, structure, comparison, workflow, timeline]
+      severity: error
+      # iter 22 で 5 primitive すべてに CSS class を割当。component_spec_v2.md §2-6 参照
+      css_class_map:
+        before_after: ".figure-ba"
+        structure: ".figure-structure"
+        comparison: ".figure-comparison"
+        workflow: ".figure-workflow"
+        timeline: ".figure-timeline"
+    - key: page_layout
+      enum: [spread_v1]
+      severity: error
+    - key: evaluation_date
+      format: regex
+      pattern: "^\\d{4}-\\d{2}-\\d{2}$"
+      severity: error
+    - key: status
+      enum: [drafting, sample, needs_source, needs_review, ready, archived, candidate]
+      severity: error
+    - key: related_terms
+      type: list
+      min_items: 3
+      max_items: 5
+      severity: error
+
+  recommended:
+    - key: subtype
+      description: language / framework / ai_assistant / anthropic などの下位分類
+      severity: info
+    - key: experience_level
+      enum: [hands_on, partial, research_only]
+      severity: warn
+    - key: reader_level
+      format: regex
+      pattern: "^(\\d|\\d-\\d)$"   # "1" または "2-3"
+      severity: warn
+
+  time_varying_required:  # version_status または pricing_note がある場合、出典メモに checked 日付必須
+    - key: version_status
+      enum: [active, preview, deprecated]
+      severity: warn
+    - key: pricing_note
+      enum: [none, paid, freemium]
+      severity: warn
+
+# ────────────────────────────────────────
+# 左ページの節（markdown 節 → 誌面配置）
+# ────────────────────────────────────────
+left_page:
+  - slot: title
+    source: yaml.title
+    min_chars: 1
+    max_chars: 20
+    recommended_max_chars: 12
+    severity: warn
+
+  - slot: tagline
+    heading: "## tagline"
+    min_chars: 25
+    max_chars: 45
+    recommended_min_chars: 30
+    recommended_max_chars: 38
+    sentences: [1, 2]
+    forbid_title_echo: true   # title と同じ単語始まりを禁止
+    severity: error
+
+  - slot: experience_level_tag
+    source: yaml.experience_level
+    severity: info
+
+  - slot: reader_level_tag
+    source: yaml.reader_level
+    severity: info
+
+  - slot: nanishiteku
+    heading: "## 何をしてくれるか"
+    min_chars: 60
+    max_chars: 200
+    recommended_min_chars: 80
+    recommended_max_chars: 150
+    sentences: [2, 4]
+    desumasu_required: true
+    severity: error
+
+  - slot: dokode_deau
+    heading: "## どこで出会うか"
+    min_chars: 60
+    max_chars: 200
+    recommended_min_chars: 80
+    recommended_max_chars: 150
+    sentences: [2, 4]
+    desumasu_required: true
+    severity: error
+
+  - slot: main_figure
+    heading: "## メイン図"
+    figure_type_dependent: true
+    caption_min_chars: 10
+    caption_max_chars: 25
+    severity: warn
+
+  - slot: ponchi_slot
+    # 誌面では Before/After の直下、左ページ最下段。iter 22 でメインビジュアル化
+    # markdown 上は「誌面ポンチ絵メモ」節に caption と登場人物メモを書く運用
+    source: heading_subsection
+    caption_min_chars: 30
+    caption_max_chars: 80
+    css_component: ".ponchi-slot"
+    design_tokens:
+      min_height_px: 340
+      icon_diameter_px: 200
+      icon_svg_px: 104
+      padding: "28px 24px"
+    severity: warn
+
+# ────────────────────────────────────────
+# 右ページの節（iter 22 順）
+# ────────────────────────────────────────
+right_page:
+  - slot: mihidokoro
+    heading: "## この用語の見どころ"
+    # iter 22 検証で、許容（15-40）だと右ページが詰まり過ぎる傾向がわかった。
+    # TypeScript 見本の実測（19-26 字）を踏まえ、**推奨 15-30 字**を目安にする。
+    # 許容上限は維持するが、30 字超は validator の ⚠️ 警告対象。
+    subsections:
+      - id: 1
+        heading: "### 1. 役割"
+        min_chars: 15
+        max_chars: 40
+        recommended_max_chars: 30
+        severity: error
+      - id: 2
+        heading: "### 2. うれしさ"
+        min_chars: 15
+        max_chars: 40
+        recommended_max_chars: 30
+        severity: error
+      - id: 3
+        heading: "### 3. 注意点"
+        min_chars: 15
+        max_chars: 40
+        recommended_max_chars: 30
+        severity: error
+      - id: 4
+        heading: "### 4. どこで役立つか"
+        min_chars: 15
+        max_chars: 40
+        recommended_max_chars: 30
+        severity: error
+      - id: 5
+        heading: "### 5. はじめに"
+        min_chars: 15
+        max_chars: 40
+        recommended_max_chars: 30
+        severity: error
+      - id: 6
+        heading: "### 6. 深掘り先"
+        min_chars: 15
+        max_chars: 50
+        recommended_max_chars: 35
+        severity: error
+    total_min_chars: 120
+    total_max_chars: 240
+    total_recommended_max_chars: 180
+
+  - slot: tsumazuki
+    heading: "## 非エンジニアのつまずき"
+    items_fixed: 3           # iter 22 で 3 固定
+    item_min_chars: 15
+    item_max_chars: 30
+    authored_by: user_only   # AI は触らない、空スケルトンのみ残す
+    severity: warn           # item 数のみ判定、内容は著者任せ
+
+  - slot: watashino_comment
+    heading: "## 私のコメント"
+    items_fixed: 4           # first / good / bad / who 固定
+    item_min_chars: 10
+    item_max_chars: 40
+    labels: [第一印象, 良い点, ダメな点, 誰向けか]
+    badges: ["★", "✓", "!", "☺"]
+    authored_by: user_only
+    severity: warn
+
+  - slot: kaihatsu_flow
+    heading: "## 開発フローでの位置（必須）"
+    steps_recommended: 4    # 誌面が最も美しく収まる（iter 22 で確定）
+    steps_min: 4
+    steps_max: 5            # 許容上限。5 ステップはラベル 13px に自動縮小
+    steps_forbidden_over: 5 # 6 以上は横幅破綻。縦並びや図分割を検討
+    step_label_min_chars: 3
+    step_label_max_chars: 15
+    step_note_max_chars: 20
+    total_min_chars: 80
+    total_max_chars: 180
+    severity: error
+
+  - slot: related_terms
+    # iter 22 で左ページから右ページ下段（開発フロー直下）へ移動
+    heading: "## 関連用語"
+    items_min: 3
+    items_max: 5
+    item_name_min_chars: 1
+    item_name_max_chars: 10
+    visible_total_min_chars: 20
+    visible_total_max_chars: 50
+    # "用語A — 隣接メモ" の隣接メモ部分は誌面非表示、validator は前 " — " まで
+    yaml_sync: related_terms   # YAML の related_terms と一致
+    severity: error
+
+  - slot: references_url
+    # 出典メモ末尾から代表 URL 1 本を抽出する想定
+    source: heading_subsection
+    format: "URL checked YYYY-MM-DD"
+    required_if: time_varying
+    severity: error
+
+# ────────────────────────────────────────
+# 左右ページ合計（☆ 違反判定）
+# ────────────────────────────────────────
+page_totals:
+  left:
+    min_chars: 155
+    max_chars: 250
+    stars_threshold_over: 100   # 合計が max + 100 字超で ☆ 違反
+    includes: [tagline, nanishiteku, dokode_deau]
+  right:
+    min_chars: 220
+    max_chars: 430
+    stars_threshold_over: 100
+    includes: [mihidokoro, kaihatsu_flow, related_terms]
+
+# ────────────────────────────────────────
+# 裏台帳メモ（誌面に出ない）
+# ────────────────────────────────────────
+back_ledger:
+  - slot: ponchi_memo
+    heading: "## 誌面ポンチ絵メモ"
+    severity: info
+    description: デザイン担当向け指示書（メイン図／6 視点アイコン／開発フロー図の描く内容）
+  - slot: community_memo
+    heading: "## コミュニティ補完メモ"
+    severity: info
+  - slot: sources_memo
+    heading: "## 出典メモ"
+    format: "URL または誌名 — checked YYYY-MM-DD"
+    required_if: time_varying
+    severity: error
+  - slot: remarks
+    heading: "## 備考"
+    severity: info
+
+# ────────────────────────────────────────
+# トーン・文体ルール（機械判定可能なもの）
+# ────────────────────────────────────────
+tone:
+  desumasu_required_sections: [nanishiteku, dokode_deau]
+  tagline_title_echo_forbidden: true
+  strong_assertion_words: [最新, 最強, 完全に, 絶対に, 必ず]
+  allowed_emojis: ["★", "✓", "!", "☺", "🙂", "👍", "👎", "👥"]
+
+# ────────────────────────────────────────
+# 必須節（markdown に存在すべき H2/H3）
+# ────────────────────────────────────────
+required_sections:
+  - "## tagline"
+  - "## 何をしてくれるか"
+  - "## どこで出会うか"
+  - "## メイン図"
+  - "## この用語の見どころ"
+  - "## 開発フローでの位置（必須）"
+  - "## 関連用語"
+  - "## 非エンジニアのつまずき"
+  - "## 私のコメント"
+
+required_subsections:
+  - "### 1. 役割"
+  - "### 2. うれしさ"
+  - "### 3. 注意点"
+  - "### 4. どこで役立つか"
+  - "### 5. はじめに"
+  - "### 6. 深掘り先"
+
+# ────────────────────────────────────────
+# リネーム履歴（旧見出しの互換警告用）
+# ────────────────────────────────────────
+legacy_heading_map:
+  - old: "## ひとことで"
+    new: null                        # v2 で削除（tagline に統合）
+    since: iter7
+  - old: "## バイブコーディングでの位置づけ"
+    new: "## どこで出会うか"
+    since: iter5
+  - old: "### 4. どこで効くか"
+    new: "### 4. どこで役立つか"
+    since: iter10
+  - old: "### 5. 最初に理解する範囲"
+    new: "### 5. はじめに"
+    since: iter6
+  - old: "## 非エンジニア視点のつまずき"
+    new: "## 非エンジニアのつまずき"
+    since: "2026-04-25"
+  - old: "誰に向くか"
+    new: "誰向けか"
+    since: "2026-04-25"
+  - old: "右ページ冒頭タイトル"
+    new: null                        # iter 22 で削除
+    since: iter22
