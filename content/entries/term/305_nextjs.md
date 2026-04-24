@@ -16,7 +16,8 @@ related_terms:
   - JavaScript
   - TypeScript
   - Vercel
-status: sample
+status: archived
+# 旧 3 桁 ID。v0.5 renumber 以降は letter-ID 体系のため本エントリは参照素材として凍結。
 ---
 
 # Next.js

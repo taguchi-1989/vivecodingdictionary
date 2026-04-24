@@ -16,7 +16,9 @@ related_terms:
   - Vertex AI
   - context window
   - multimodal
-status: sample
+status: archived
+# 旧 3 桁 ID。v0.5 renumber 以降は letter-ID 体系のため本エントリは参照素材として凍結。
+# 後継の letter-ID: D-2 Gemini 2.5 系（予定）
 ---
 
 # Gemini 2.5 Pro / Flash / Flash-Lite

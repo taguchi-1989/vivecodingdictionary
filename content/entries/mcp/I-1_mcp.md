@@ -23,35 +23,23 @@ status: needs_review
 
 ## tagline
 
-LLM とツール・データをつなぐ標準プロトコル。AI 時代の「USB-C」のような共通コネクタを目指しています。
+LLM とツール・データをつなぐ標準規格。「AI の USB-C」と呼ばれる共通コネクタです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
-## ひとことで
-
-MCP は Model Context Protocol の略で、LLM（Claude、ChatGPT など）と、外部のツール・データ（GitHub、Slack、Gmailなど）を **共通の方式でつなぐための規格** です。2024 年に Anthropic が提案しました。
-
 ## 何をしてくれるか
 
-従来は、LLM ごと・ツールごとに **個別で連携を実装** する必要がありました。Claude にしか使えない拡張、Cursor にしか使えない拡張、という形でバラバラだったのです。
+LLM とツール（GitHub、Slack など）を共通の方式で接続する規格です。2024 年に Anthropic が提案しました。
 
-MCP は、そこに **共通のコネクタ規格** を持ち込みました。
-
-- MCP サーバー（ツール側）を一度作れば、MCP に対応したどの LLM クライアントからも同じ方法で使えます
-- LLM クライアント（Claude Code、Cursor 等）は、任意の MCP サーバーを差し替えて使えます
-- 比喩として「AI の USB-C」と呼ばれることがあります
-
-### 3 つの登場役
-
-- **MCP Server**：ツールやデータを提供する側（GitHub MCP、Playwright MCP など）
-- **MCP Client**：LLM 側の呼び出し口（Claude Code、Cursor など）
-- **MCP Transport**：通信方式（stdio ／ SSE ／ HTTP）
+- MCP サーバーを一度作れば MCP 対応のどの LLM からも使えます
+- LLM クライアント（Claude Code、Cursor 等）は任意の MCP サーバーを差し替えられます
+- Server／Client／Transport の 3 役で構成されます
 
 ## どこで出会うか
 
-Claude Code や Cursor で使える「拡張カタログ」の規格です。公式 MCP（GitHub、Filesystem、Slack、Git など）、コミュニティ MCP（Notion、Figma、Playwright など）、自作 MCP という 3 層でエコシステムが広がっています。
+Claude Code や Cursor で使う「拡張カタログ」の規格です。公式・コミュニティ・自作の 3 層でエコシステムが広がっています。
 
-「Claude Code で Linear の issue を操作したい」「Figma のデザインを読ませたい」「社内 DB にアクセスさせたい」といった要望に対して、対応する MCP を 1 つ入れるだけで実現できるのが強みです。急拡大中の領域で、今後は MCP 前提のエージェント設計が当たり前になっていきます。
+対応 MCP を 1 つ入れるだけで GitHub 操作・Figma 読み込み・社内 DB 連携が実現できます。急拡大中の領域で、MCP 前提のエージェント設計が標準になっていきます。
 
 ## メイン図
 
@@ -96,7 +84,7 @@ LLM とツールをつなぐ共通コネクタです。
 
 ### 5. はじめに
 
-Server / Client / Transport の 3 役と、「共通コネクタ」という発想。
+Server／Client／Transport の 3 役と共通コネクタの発想。
 
 ### 6. 深掘り先
 
