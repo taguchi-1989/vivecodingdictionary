@@ -1,134 +1,148 @@
-# 次セッションへの引き継ぎ（2026-04-24 v3 更新）
+# 次セッションへの引き継ぎ（2026-04-25 v4 更新）
 
-*コンテキストが増えてきたので区切ります。次セッションはこのファイルを最初に開いて続きから再開してください。*
+*前セッションで v2 レイアウトの 21 世代反復と全エントリ監査・修正が終わりました。次セッションはこのファイルを最初に開き、続いて [docs/v2_rules_summary.md](../docs/v2_rules_summary.md) を読んでから執筆に入ってください。*
 
-## 直近までの状態（サマリ）
+---
 
-### 決まっていること
+## 最初の 3 分で把握すべき現状
 
-- **本のフィロソフィー・著者属性・執筆ポリシー**：[docs/book_philosophy.md](../docs/book_philosophy.md) に確定
-- **ID 体系**：letter A〜J の 10 区切り、10 番刻みサブ範囲。v0.5 確定版（[docs/id_scheme.md](../docs/id_scheme.md)）
-- **エントリ候補**：335 件（[ledgers/entry_candidates.md](entry_candidates.md)）
-- **テンプレ**：spread_v1（見開き 2 ページ）。[templates/entry_template.md](../templates/entry_template.md)
-- **トーン**：です・ます調、カタカナ語は日本語訳を初出で補う、略称は展開
-- **執筆優先度**：ステージ別（[ledgers/writing_priority.md](writing_priority.md)）
-- **タイムライン方針**：4 案（a/b/c/d）全採用。細部は [drafts/prototypes/timeline_drafts.md](../drafts/prototypes/timeline_drafts.md)
-- **リポジトリ**：<https://github.com/Taguchi-1989/ViveCodingDictionary>
+- **v2 レイアウト凍結済み**: iter 1-21 で確定。全ルールは [docs/v2_rules_summary.md](../docs/v2_rules_summary.md) に集約
+- **既存 19 エントリ全て v2 準拠**: `python drafts/prototypes/mockups/design_philosophy_v2/check_entry.py --dir content/entries/` で全 OK
+- **テンプレ（templates/entry_template.md）は v2 対応済**: 新規執筆はそのままコピーで OK
+- **自動チェッカー稼働中**: 保存時に PostToolUse hook で走る（scripts/validate_entry.py）＋ 手動では check_entry.py
 
-### 書き出し済みエントリ（spread_v1）
+---
 
-- A-2 この本の読み方
-- B-2 Claude
-- C-2 Anthropic
-- D-12 Claude 4 系（timeline 型）
-- E-1 SWE-Bench（workflow 型）
-- F-50 git（before_after 型）
-- G-1 Context
-- H-53 ChatGPT 登場（timeline 型）
-- I-1 MCP
-- J-14 LLM
-- 旧 3 桁 ID のサンプル 301〜305（F-1/F-2/F-20/F-10/F-11）、101（B-1）、201（D-2）も並走
+## この 2 セッションで完了したこと（2026-04-24 〜 2026-04-25）
 
-## このセッションで完了したこと（2026-04-24、2 回分）
+### Design System v2 の採択と凍結
 
-### テイスト保持の仕組み（最優先 TODO）完了
+- Claude.ai/design が出した見開きサンプル（TypeScript p.04-05）をゴールとし、Playwright で 21 世代の HTML 反復
+- 最終 HTML: [drafts/prototypes/mockups/design_philosophy_v2/typescript_spread.html](../drafts/prototypes/mockups/design_philosophy_v2/typescript_spread.html)
+- CSS primitive: [drafts/prototypes/mockups/design_philosophy_v2/overlay.css](../drafts/prototypes/mockups/design_philosophy_v2/overlay.css)
+- 反復スクショ iter 1-21: [drafts/prototypes/mockups/design_philosophy_v2/screenshots/](../drafts/prototypes/mockups/design_philosophy_v2/screenshots/)
+- 右上ハンバーガーナビで A〜J の 2 階層エントリリストを実装
 
-- [docs/quality_checklist.md](../docs/quality_checklist.md) — 1 エントリ 5 分で通す機械的チェック（☆ マーク必須）
-- [skills/write-entry.md](../skills/write-entry.md) — ID ＋ブリーフから 1 本書き上げる Step 0〜7 手順書
-- [ledgers/stage2_briefs.md](stage2_briefs.md) — Stage 2 の 46 件ぶんの figure_type／主要出典／スコープ境界
+### 仕様ドキュメント 4 本
 
-### 用語統一
+- [docs/v2_rules_summary.md](../docs/v2_rules_summary.md) — **正式入口**（執筆前に必ず）
+- [drafts/prototypes/mockups/design_philosophy_v2.md](../drafts/prototypes/mockups/design_philosophy_v2.md) — 設計思想・CSS トークン・決定履歴
+- [drafts/prototypes/mockups/design_philosophy_v2/writing_spec.md](../drafts/prototypes/mockups/design_philosophy_v2/writing_spec.md) — 節ごと文字数・書き方原則
+- [drafts/prototypes/mockups/design_philosophy_v2/book_readiness_review.md](../drafts/prototypes/mockups/design_philosophy_v2/book_readiness_review.md) — 書籍化の残課題
 
-- 「どこで効くか」→「どこで役立つか」に全置換（AI 臭回避）。対象 14 ファイル
+### 自動チェッカー
 
-### 既存 10 件の品質チェック通過
+- [drafts/prototypes/mockups/design_philosophy_v2/check_entry.py](../drafts/prototypes/mockups/design_philosophy_v2/check_entry.py)
+- 使い方: `python drafts/prototypes/mockups/design_philosophy_v2/check_entry.py --dir content/entries/`
+- archived エントリはスキップ、エラー・警告付きで出力
 
-- A-2 / B-2 / C-2 / D-12 / E-1 / F-50 / G-1 / H-53 / I-1 / J-14 すべて ☆ 項目合格
-- YAML と `entries.csv` の `status` を `drafting` → `needs_review` に更新済み
-- 旧 3 桁 ID サンプル 7 件（101/201/301–305）は旧テンプレ由来のため `sample` のまま据え置き（302 は著者欄に AI 記入が残っているので、新テンプレでの書き直し時に要クリア）
+### 既存エントリの v2 対応
 
-### 外出先コメント投入フロー（要件定義＋スキル＋受信箱）
+**11 新 letter エントリ**を v2 仕様に合わせて修正（[6b58358], [7db1d65]）:
 
-- 要件定義：[docs/mobile_inbox_requirements.md](../docs/mobile_inbox_requirements.md)（Android ＋ Obsidian Mobile ＋ Obsidian Git）
-- 取り込みスキル：[skills/import-comments.md](../skills/import-comments.md)
-- 受信箱：`mobile_inbox/` と `mobile_inbox/processed/` のディレクトリと [README](../mobile_inbox/README.md) 作成
+- A-2 / B-1 / B-2 / C-2 / D-12 / E-1 / F-50 / G-1 / H-53 / I-1 / J-14
+- 「ひとことで」削除、本文を 200 字以内に圧縮、6 視点セルを 40 字以内、related_terms を 5 個に
 
-### 要確認事項の調査完了
+**6 旧 3 桁エントリ**を `status: archived` に凍結:
 
-- ✅ **D-14 Claude Mythos Preview**（限定公開、Project Glasswing 経由、一般提供なし）
-- ✅ **B-19 Claude Cowork**（正式名確定、Enterprise プランに含まれる）
-- ✅ **F-85 SuperClaude Framework**（"Supercell" は聞き違い。コミュニティ OSS、Anthropic 非公式）
-- ✅ **料金プラン B-50〜52**（2026-04-24 時点の数値を取得済、B-50 に反映）
-- ⚠️ **D-70 Amical**：実在確認できず。**Amica（semperai/amica）か Whisper の聞き違いの可能性高**。**著者に再確認要**
-- ⚠️ **Cursor の "head F"**：公式確認できず。Cursor 独自モデルは `cursor-tab-3` と `Composer` のみ。D-35 のまま Composer 主軸でいく想定
+- 201 / 301 / 302 / 303 / 304 / 305 （101 は既に archived）
 
-### CLAUDE.md 更新
+**新規 A-1 まえがき** を作成（[content/entries/common/A-1_preface.md](../content/entries/common/A-1_preface.md)）
 
-- §6 に「執筆／レビュー／取り込み」の手順書セクションを追加（quality_checklist / write-entry / import-comments / mobile_inbox_requirements への導線）
+### 節名リネーム（全ファイル伝搬）
 
-## 次セッションの TODO（優先順）
+| 旧 | 新 | 影響ファイル |
+|---|---|---|
+| 非エンジニア視点のつまずき | **非エンジニアのつまずき** | 38 |
+| 誰に向くか | **誰向けか** | 22 |
 
-### 著者再確認（残 1 件）
+### 紙面の確定ビジュアル（iter 1-21 の累積）
 
-- ~~**D-70 Amical**~~ ✅ 著者確認済で実在。URL は執筆時に補足。Whisper は D-71 として別設
-- **Cursor の "head F" モデル**：`cursor-tab-3` のことか、`Composer` のことか、別物か。**回答次第で D-35 の扱いを決定**
+- 左タイトル 96px ネイビー、右タイトル 50px ネイビー（純黒はしんどい・純青は目立ちすぎ）
+- タグライン帯は淡青塗り（--ink-blue-100）、25〜45 字
+- 6 視点セル: 縦スタック、番号バッジ左上、アイコン 52px 中央（4 個差し替え: 的に crosshair / 電球 / 若葉→sprout / file-search）
+- つまずき:コメント = **4:6** 比率
+- フッター左右分割: 左ページ「YYYY.MM · Draft / （会話での使い方例）」、右ページ「F-01 · language / 📖 バイブコーディング図鑑」
+- ノド非対称 margin、縦横比 750×1061（√2 準拠）
+- 本文 16px、6 視点本文 14.5px（A4 換算 約 11pt）
+- 右上プロトタイプナビ（ハンバーガー → A〜J 2 階層）
 
-### 新規追加の候補（2026-04-24）
+---
 
-- **D-71 Whisper**（OpenAI の音声認識 OSS）
-- **F-15 shadcn/ui**（React 用コンポーネント集、コピペ配布モデル）
-- **F-87 sudo**（UNIX 系の権限昇格コマンド）
+## 次セッションの TODO
 
-### 最優先：ステージ 2 の執筆着手
+### 最優先: ステージ 2 の執筆着手
 
-[writing_priority.md](writing_priority.md) §ステージ 2 の 46 件を [stage2_briefs.md](stage2_briefs.md) と併読して進める。
+[writing_priority.md](writing_priority.md) §ステージ 2 の 46 件を [stage2_briefs.md](stage2_briefs.md) と併読。
 
-- 手順は必ず [skills/write-entry.md](../skills/write-entry.md) に従う（Step 0 〜 7）
-- 書くごとに：`entries.csv` の `status` を `candidate` → `drafting` → `needs_review` → `ready` と更新
-- チェックリスト通過まで `needs_review`、著者の欄記入が済んで初めて `ready`
+新規エントリ執筆手順:
 
-書き始める候補（stage2_briefs の並び順）：
+1. [docs/v2_rules_summary.md](../docs/v2_rules_summary.md) の §0 1 分チェックリストに目を通す
+2. [templates/entry_template.md](../templates/entry_template.md) を該当ディレクトリへコピー（`content/entries/service/B-3_chatgpt.md` のように）
+3. YAML → tagline → 本文 2 節 → Before/After → 関連用語 → 6 視点 → 開発フロー → 裏台帳の順に埋める
+4. 著者記入欄（非エンジニアのつまずき／私のコメント）は空スケルトンのまま残す
+5. `python drafts/prototypes/mockups/design_philosophy_v2/check_entry.py content/entries/path/to/entry.md` で検証、エラーゼロに
+6. `entries.csv` の status を更新
 
-1. **B-1 Gemini**（既存 101 の素材を参考にしつつ新テンプレで）
-2. **B-3 ChatGPT**（H-53 と接続）
-3. **C-1 OpenAI**（B-3 との流れで）
-4. **D-11 Claude 3.5 系**（D-12 との接続）
-5. **G-2 Token**（G-1 Context とセット）
-6. **G-40 バイブコーディング**（本書の中心語彙、書ければ大きい）
+次に書く候補（stage2_briefs の並び）:
 
-### 並行：モバイル投入フローを Phase 1 で回す（著者本人のスマホ作業）
+1. **B-3 ChatGPT**（H-53 と接続）
+2. **C-1 OpenAI**（B-3 との流れ）
+3. **D-11 Claude 3.5 系**（D-12 と接続）
+4. **G-2 Token**（G-1 Context とセット）
+5. **G-40 バイブコーディング**（本書の中心語彙）
 
-[docs/mobile_inbox_requirements.md](../docs/mobile_inbox_requirements.md) §9 Phase 1 に従う。
+### 著者確認の残件
 
-1. Android の Obsidian Mobile ＋ Obsidian Git に本リポジトリを vault として開く
-2. `mobile_inbox/2026-04-24.md` を作って見出し規約どおりに 1〜2 件書く
-3. 自動 push が効いているか確認。PC 側で `git pull` して届いているか確認
-4. 回り始めたら `/import-comments` を一度走らせて、反映が正しいかを検証
+- **Cursor の "head F" モデル**: `cursor-tab-3` のことか、`Composer` か、別物か。回答次第で D-35 の扱いを決定
 
-Phase 1 が回ったら、必要に応じて import-comments の挙動調整（Phase 3）に進む。
+### 旧 3 桁 ID の letter-ID 書き直し（素材として取り込み）
+
+- 301 JavaScript → F-1（予定）
+- 302 TypeScript → F-2（予定）
+- 303 ESLint → F-10（予定）
+- 304 React → F-11（予定）
+- 305 Next.js → F-20（予定）
+- 201 Gemini 2.5 系 → D-2（予定）
+- 101 Gemini は B-1 に取り込み済（archived）
+
+ステージ 2 執筆と一体で、対応する letter-ID を書くときに旧 3 桁の内容を素材として引用する形。
+
+### 並行: モバイル投入フロー Phase 1
+
+[docs/mobile_inbox_requirements.md](../docs/mobile_inbox_requirements.md) §9 Phase 1。Android Obsidian Mobile 経由のコメント取り込みを一度回して、import-comments スキルの挙動を確認。
 
 ### 保留事項
 
-- **論文エントリの配置**（Transformer 論文等）：現 H-58 のまま、他の論文候補が揃ってから判断
-- **タイムラインの細分化**：Claude 系・Gemini 系のマイナー版まで刻む作業は後回しで OK
-- **旧 3 桁 ID の新テンプレ書き直し**：B-1 / D-2 / F-1 / F-2 / F-10 / F-11 / F-20 の 7 件。ステージ 2 の対応 ID（例：B-1 を書くときに 101 の素材を取り込む）と一体で進める
-- **302_typescript の著者欄 AI 記入**：新テンプレで F-2 を書き直すときにクリアする
+- **論文エントリの配置**（Transformer 論文等）: 現 H-58 のまま、他の論文候補が揃ってから
+- **タイムラインの細分化**: Claude 系 / Gemini 系のマイナー版刻みは後回し
+- **302_typescript の著者欄 AI 記入**: 新テンプレで F-2 を書き直すときにクリア（archived なので急がない）
+- **書籍化の印刷工程**: bleed / CMYK 色校正 / フォント埋め込み確認は別担当に渡す段階で（[book_readiness_review.md](../drafts/prototypes/mockups/design_philosophy_v2/book_readiness_review.md) §5-6）
+
+---
 
 ## スコープ外（やらない）
 
-- **デザイン／誌面レイアウト／HTML モック／配色調整**は別担当。Claude Code では扱わない。
-- 既存の `drafts/prototypes/mockups/` は参照用として残すだけ
+- **CSS・React 実装（v2 仕様の実装）**: 別担当。本プロジェクトは markdown ベースの仕様更新・執筆・検証まで
+- ただし v2 仕様自体の**微調整・議論・追加ルールの集約**は引き続き本プロジェクトで OK
+
+---
 
 ## セッション再開時の最初の動き
 
 1. このファイルを開く
-2. [CLAUDE.md](../CLAUDE.md) §6 の手順書セクションに目を通す
-3. 著者に D-70 Amical と Cursor "head F" の再確認を聞く（5 分で済む）
-4. [stage2_briefs.md](stage2_briefs.md) から 1 件選び、[skills/write-entry.md](../skills/write-entry.md) Step 0 から執筆開始
+2. [docs/v2_rules_summary.md](../docs/v2_rules_summary.md) を通読（執筆前の前提を揃える）
+3. 著者に Cursor "head F" の再確認（5 分で済む）
+4. [stage2_briefs.md](stage2_briefs.md) から 1 件選び、上記の執筆手順で着手
 
-## 直近コミット
+---
 
-- 2026-04-24 initial commit: VibeCodingDictionary の土台一式（62 ファイル）
-- 2026-04-24 add CLAUDE.md and next_session_handoff for context handover
-- 2026-04-24 add taste toolkit and mobile_inbox requirements, rename どこで効くか
-- 2026-04-24 run checklist, research unresolved items, prepare stage2 briefs（このコミット）
+## 直近コミット（新しい順）
+
+- `8c44654` add docs/v2_rules_summary.md: consolidated v2 rules for authors
+- `6b58358` refine typography, 4:6 bottom split, icons; rename 視点/向くか
+- `2f71c65` bump body text sizes one step across the spread
+- `9560b01` add prototype hamburger nav with A-J two-level drawer
+- `7db1d65` bring entries to v2 spec: trim 11 letter drafts, archive 6 legacy 3-digit
+- `4ab0a84` add Design System v2 spec, prototype, and entry validator
+- `6d1eb6c` migrate to v2 template from finalized design mockup
