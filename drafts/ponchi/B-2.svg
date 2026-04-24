@@ -1,0 +1,87 @@
+<svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="sketch" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="7"/>
+      <feDisplacementMap in="SourceGraphic" scale="1.9"/>
+    </filter>
+  </defs>
+  <rect width="192" height="192" fill="#F3F6FB"/>
+  <g filter="url(#sketch)" stroke="#1A1A1A" stroke-linecap="round" stroke-linejoin="round" fill="none">
+
+    <!-- 机（前面の天板を波打たせて手書き感） -->
+    <g stroke-width="1.8">
+      <path d="M 14 152 Q 60 150 96 151 T 178 152"/>
+      <path d="M 22 152 L 24 184"/>
+      <path d="M 168 152 L 166 184"/>
+    </g>
+
+    <!-- 開発者（やや右向き、机に向かって作業） -->
+    <g stroke-width="2.1">
+      <!-- 頭（楕円・少し傾ける） -->
+      <path d="M 56 50 C 70 48 80 60 78 74 C 76 86 64 90 56 86 C 46 82 42 56 56 50 Z"/>
+      <!-- 髪（短い） -->
+      <path d="M 50 54 Q 58 46 72 50"/>
+      <path d="M 58 50 L 60 56"/>
+      <!-- 目 -->
+      <circle cx="58" cy="68" r="1.7" fill="#1A1A1A" stroke="none"/>
+      <circle cx="70" cy="68" r="1.7" fill="#1A1A1A" stroke="none"/>
+      <!-- 口（少し笑う） -->
+      <path d="M 60 78 Q 64 81 70 78"/>
+      <!-- 体（肩〜脇） -->
+      <path d="M 42 96 L 38 142 L 86 144 L 84 92"/>
+      <!-- 襟・服のしわ -->
+      <path d="M 56 92 L 62 102 L 70 92"/>
+      <!-- 左腕（手前、キーボードに向かう） -->
+      <path d="M 44 104 Q 56 122 76 138"/>
+      <!-- 右腕（奥側、机へ） -->
+      <path d="M 84 104 Q 94 120 96 138"/>
+    </g>
+
+    <!-- ノート PC（机の上、開いた状態） -->
+    <g stroke-width="2">
+      <!-- 画面（液晶） -->
+      <path d="M 96 98 L 168 102 L 170 146 L 100 144 Z"/>
+      <!-- 画面の縁取り（内側） -->
+      <path d="M 100 102 L 165 105 L 166 140 L 103 139 Z"/>
+      <!-- キーボード台（手前の傾き） -->
+      <path d="M 88 144 L 176 146 L 180 154 L 84 152 Z"/>
+    </g>
+
+    <!-- 画面の中身：ターミナル（プロンプト＋人間の指示＋Claude の応答） -->
+    <g stroke-width="1.5">
+      <!-- プロンプト記号 $ -->
+      <path d="M 108 112 L 114 112"/>
+      <path d="M 111 109 L 111 115"/>
+      <!-- 人間入力行 -->
+      <path d="M 117 112 Q 130 111 144 112 T 162 112"/>
+      <!-- claude の > 記号 -->
+      <path d="M 108 122 L 113 125 L 108 128"/>
+      <!-- Claude の応答行 1 -->
+      <path d="M 117 125 Q 132 124 148 125 T 162 125"/>
+      <!-- Claude の応答行 2（少し短い） -->
+      <path d="M 117 132 Q 130 131 144 132 T 156 132"/>
+      <!-- カーソル -->
+      <path d="M 159 132 L 159 136"/>
+    </g>
+
+    <!-- 開発者の吹き出し（左上、人間の指示） -->
+    <g stroke-width="1.7">
+      <path d="M 8 14 Q 10 6 22 6 L 86 8 Q 96 10 94 20 L 92 32 Q 90 38 80 36 L 64 36 L 56 44 L 58 36 L 18 36 Q 8 34 8 22 Z"/>
+      <text x="50" y="26" font-size="11" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">テスト書いて</text>
+    </g>
+
+    <!-- Claude 側の吹き出し（PC から出る、応答） -->
+    <g stroke-width="1.7">
+      <path d="M 110 60 Q 112 52 122 52 L 178 54 Q 186 56 184 66 L 182 78 Q 180 84 170 82 L 138 82 L 130 90 L 132 82 L 122 82 Q 112 80 110 70 Z"/>
+      <text x="146" y="72" font-size="10" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">こうですか</text>
+      <!-- 吹き出しから PC 画面へ繋がる尻尾の延長（点々ではなく薄く） -->
+      <path d="M 132 90 L 130 100"/>
+    </g>
+
+    <!-- 画面右下に小さなマーク（Claude を示唆する C 風の弧。ロゴではなく一般的記号） -->
+    <g stroke-width="1.6">
+      <path d="M 156 134 Q 150 134 150 140 Q 150 146 156 146"/>
+    </g>
+
+  </g>
+</svg>

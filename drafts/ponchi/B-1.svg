@@ -1,0 +1,138 @@
+<svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="sketch" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="7"/>
+      <feDisplacementMap in="SourceGraphic" scale="2.0"/>
+    </filter>
+  </defs>
+  <rect width="192" height="192" fill="#F3F6FB"/>
+  <g filter="url(#sketch)" stroke="#1A1A1A" stroke-linecap="round" stroke-linejoin="round" fill="none">
+
+    <!-- 吹き出し 1: 左 / 個人ユーザー「要約して」 -->
+    <g stroke-width="1.6">
+      <path d="M 6 18 Q 8 8 20 9 L 56 10 Q 66 12 64 22 L 62 34 Q 60 40 50 38 L 38 38 L 30 46 L 32 38 L 18 38 Q 6 36 6 26 Z"/>
+      <text x="35" y="29" font-size="11" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">要約して</text>
+    </g>
+
+    <!-- 吹き出し 2: 中央 / 企画者「議事録まとめ」 -->
+    <g stroke-width="1.7">
+      <path d="M 70 4 Q 70 0 80 0 L 120 1 Q 130 2 128 12 L 126 24 Q 124 30 114 28 L 104 28 L 96 34 L 98 28 L 82 28 Q 70 26 70 16 Z"/>
+      <text x="99" y="19" font-size="10" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">議事録まとめ</text>
+    </g>
+
+    <!-- 吹き出し 3: 右 / 開発者「組み込みたい」 -->
+    <g stroke-width="1.5">
+      <path d="M 132 18 Q 134 8 146 9 L 184 10 Q 190 12 188 22 L 186 36 Q 184 42 174 40 L 164 40 L 156 48 L 158 40 L 142 40 Q 132 38 132 28 Z"/>
+      <text x="160" y="29" font-size="10" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">組み込みたい</text>
+    </g>
+
+    <!-- 人物 1: 左（個人ユーザー、ノート PC で日常使い） -->
+    <g stroke-width="2.1">
+      <!-- 頭 -->
+      <path d="M 32 60 C 43 58 47 70 45 81 C 43 89 34 91 30 87 C 25 84 21 70 32 60 Z"/>
+      <!-- 髪（短い前髪 1 本） -->
+      <path d="M 28 64 Q 34 60 42 64"/>
+      <!-- 目 -->
+      <circle cx="32" cy="75" r="1.7" fill="#1A1A1A" stroke="none"/>
+      <circle cx="40" cy="75" r="1.7" fill="#1A1A1A" stroke="none"/>
+      <!-- 口 -->
+      <path d="M 32 82 Q 36 85 40 82"/>
+      <!-- 体 -->
+      <path d="M 24 93 L 22 124 L 50 122 L 48 91"/>
+      <!-- 腕（PC を打つ） -->
+      <path d="M 26 100 Q 22 110 28 118"/>
+      <path d="M 48 100 Q 52 110 46 118"/>
+      <!-- ノート PC（台形） -->
+      <path d="M 18 120 L 56 120 L 60 134 L 14 134 Z"/>
+      <path d="M 22 122 L 54 122"/>
+      <path d="M 28 127 L 46 127"/>
+      <!-- 足 -->
+      <path d="M 26 134 L 28 156"/>
+      <path d="M 44 134 L 46 156"/>
+    </g>
+
+    <!-- 人物 2: 中央（企画者、Docs／Gmail 画面） -->
+    <g stroke-width="2">
+      <!-- 頭 -->
+      <path d="M 94 58 C 105 56 111 70 109 81 C 107 91 96 93 92 89 C 86 85 82 62 94 58 Z"/>
+      <!-- 髪（横分け風の線） -->
+      <path d="M 88 62 Q 96 58 106 62"/>
+      <!-- 目 -->
+      <circle cx="94" cy="74" r="1.6" fill="#1A1A1A" stroke="none"/>
+      <circle cx="102" cy="74" r="1.6" fill="#1A1A1A" stroke="none"/>
+      <!-- 口 -->
+      <path d="M 94 82 L 102 82"/>
+      <!-- 体（ネクタイ風の短線） -->
+      <path d="M 86 92 L 84 124 L 112 124 L 110 91"/>
+      <path d="M 98 92 L 99 106"/>
+      <!-- 腕 + 書類 -->
+      <path d="M 88 100 Q 82 108 86 118"/>
+      <path d="M 110 100 Q 116 110 110 118"/>
+      <!-- 書類（A4 縦＋短線） -->
+      <path d="M 80 116 L 78 138 L 94 140 L 96 118 Z"/>
+      <path d="M 82 124 L 92 125"/>
+      <path d="M 82 130 L 92 131"/>
+      <!-- 足 -->
+      <path d="M 90 124 L 92 156"/>
+      <path d="M 104 124 L 106 156"/>
+    </g>
+
+    <!-- 人物 3: 右（開発者、ターミナル＋クラウド） -->
+    <g stroke-width="2.2">
+      <!-- 頭 -->
+      <path d="M 156 60 C 167 58 173 71 171 82 C 169 91 158 93 154 89 C 148 85 146 62 156 60 Z"/>
+      <!-- メガネ（軽く） -->
+      <path d="M 152 75 Q 156 73 160 75"/>
+      <path d="M 162 75 Q 166 73 170 75"/>
+      <!-- 目 -->
+      <circle cx="156" cy="76" r="1.6" fill="#1A1A1A" stroke="none"/>
+      <circle cx="166" cy="76" r="1.6" fill="#1A1A1A" stroke="none"/>
+      <!-- 口 -->
+      <path d="M 156 83 Q 160 85 164 83"/>
+      <!-- 体 -->
+      <path d="M 148 92 L 146 124 L 174 124 L 172 91"/>
+      <!-- 腕 + ターミナル -->
+      <path d="M 150 102 Q 144 110 148 118"/>
+      <path d="M 172 102 Q 178 112 172 118"/>
+      <!-- ターミナル画面（角丸長方形 + プロンプト） -->
+      <path d="M 140 120 L 184 120 L 184 140 L 140 140 Z"/>
+      <path d="M 144 126 L 148 126"/>
+      <path d="M 152 126 L 168 126"/>
+      <path d="M 144 132 L 158 132"/>
+      <!-- 足 -->
+      <path d="M 152 140 L 154 156"/>
+      <path d="M 168 140 L 170 156"/>
+    </g>
+
+    <!-- 下部: 4 つの入口アイコン（Gemini ブランドの 4 入口） -->
+    <g stroke-width="1.4">
+      <!-- ブラウザ（Web チャット） -->
+      <path d="M 14 168 L 40 168 L 40 184 L 14 184 Z"/>
+      <path d="M 14 173 L 40 173"/>
+      <circle cx="18" cy="170.5" r="0.8" fill="#1A1A1A" stroke="none"/>
+      <text x="27" y="180" font-size="6" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">Web</text>
+
+      <!-- Android スマホ -->
+      <path d="M 54 166 L 70 166 L 70 186 L 54 186 Z"/>
+      <path d="M 56 168 L 68 168"/>
+      <circle cx="62" cy="183" r="0.8" fill="#1A1A1A" stroke="none"/>
+      <text x="62" y="178" font-size="5" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">Android</text>
+
+      <!-- Workspace (Docs+Gmail) -->
+      <path d="M 86 168 L 108 168 L 108 184 L 86 184 Z"/>
+      <path d="M 88 172 L 106 172"/>
+      <path d="M 88 176 L 102 176"/>
+      <path d="M 88 180 L 100 180"/>
+      <text x="97" y="190" font-size="5" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">Docs</text>
+
+      <!-- API（雲） -->
+      <path d="M 124 178 Q 120 178 120 174 Q 120 170 126 170 Q 128 166 134 168 Q 140 166 144 170 Q 150 170 150 175 Q 150 180 144 180 L 128 180 Q 124 180 124 178 Z"/>
+      <text x="135" y="190" font-size="5" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">API</text>
+
+      <!-- 中央キーワード（小さく） -->
+      <text x="170" y="174" font-size="6" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">Gemini</text>
+      <path d="M 158 178 Q 170 176 182 178"/>
+    </g>
+
+  </g>
+</svg>

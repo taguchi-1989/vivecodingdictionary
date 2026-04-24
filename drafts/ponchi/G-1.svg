@@ -1,0 +1,130 @@
+<svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="sketch" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="7"/>
+      <feDisplacementMap in="SourceGraphic" scale="1.9"/>
+    </filter>
+  </defs>
+  <rect width="192" height="192" fill="#F3F6FB"/>
+  <g filter="url(#sketch)" stroke="#1A1A1A" stroke-linecap="round" stroke-linejoin="round" fill="none">
+
+    <!-- 吹き出し（左上）: 「文脈の袋」 -->
+    <g stroke-width="1.5">
+      <path d="M 6 14 Q 6 6 16 6 L 64 7 Q 74 8 73 18 L 72 28 Q 71 34 61 33 L 50 33 L 44 40 L 46 33 L 18 32 Q 6 31 6 22 Z"/>
+      <text x="40" y="24" font-size="9" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">文脈の袋</text>
+    </g>
+
+    <!-- 吹き出し（右上）: 「入れすぎ注意」 -->
+    <g stroke-width="1.5">
+      <path d="M 110 8 Q 112 2 122 3 L 184 4 Q 190 6 188 14 L 186 22 Q 184 28 174 27 L 138 26 L 132 32 L 134 26 L 120 26 Q 110 24 110 16 Z"/>
+      <text x="148" y="19" font-size="9" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">入れすぎ注意</text>
+    </g>
+
+    <!-- 窓枠 = Context Window 本体（少しゆがんだ大きな枠） -->
+    <g stroke-width="2.3">
+      <path d="M 22 48 L 152 46 L 154 138 L 24 140 Z"/>
+      <!-- 十字桟（窓らしさ） -->
+      <path d="M 88 48 Q 87 92 88 138"/>
+      <path d="M 22 92 Q 88 91 154 93"/>
+      <!-- 窓台 -->
+      <path d="M 18 142 L 158 140"/>
+      <path d="M 20 145 L 156 143"/>
+    </g>
+
+    <!-- Context Window の点線（外周にうっすら拡張限界を示す） -->
+    <g stroke-width="1.4" stroke-dasharray="3 3">
+      <path d="M 14 42 L 160 40 L 162 144 L 16 146 Z"/>
+    </g>
+
+    <!-- 窓の中: 散らばった文字行（履歴・指示） -->
+    <g stroke-width="1.4">
+      <path d="M 30 56 L 82 55"/>
+      <path d="M 30 60 L 76 60"/>
+      <path d="M 30 64 L 80 63"/>
+      <path d="M 30 68 L 70 68"/>
+
+      <path d="M 96 56 L 146 55"/>
+      <path d="M 96 60 L 142 60"/>
+      <path d="M 96 64 L 138 63"/>
+
+      <path d="M 30 100 L 80 99"/>
+      <path d="M 30 104 L 74 104"/>
+      <path d="M 30 108 L 78 107"/>
+    </g>
+
+    <!-- 窓の中: 小さなドキュメント（左下） -->
+    <g stroke-width="1.7">
+      <path d="M 32 112 L 32 134 L 56 134 L 56 116 L 52 112 Z"/>
+      <path d="M 52 112 L 52 116 L 56 116"/>
+      <path d="M 36 120 L 50 120"/>
+      <path d="M 36 124 L 50 124"/>
+      <path d="M 36 128 L 46 128"/>
+    </g>
+
+    <!-- 窓の中: 対話の吹き出し（右下、二者の会話） -->
+    <g stroke-width="1.6">
+      <!-- 上の吹き出し -->
+      <path d="M 96 100 Q 96 96 102 96 L 138 96 Q 144 97 144 102 L 144 110 Q 143 114 137 114 L 116 114 L 112 118 L 113 114 L 102 114 Q 96 113 96 108 Z"/>
+      <path d="M 102 102 L 138 102"/>
+      <path d="M 102 106 L 134 106"/>
+      <!-- 下の吹き出し（返答） -->
+      <path d="M 100 120 Q 100 117 106 117 L 142 118 Q 148 119 147 124 L 146 132 Q 145 136 139 135 L 124 135 L 118 138 L 120 135 L 108 134 L 102 134 Q 100 132 100 128 Z"/>
+      <path d="M 106 124 L 140 124"/>
+      <path d="M 106 128 L 136 127"/>
+    </g>
+
+    <!-- 文脈溢れ: 窓からはみ出している文字行・小さな紙 -->
+    <g stroke-width="1.5">
+      <!-- 右側からあふれる紙 -->
+      <path d="M 152 78 L 174 76 L 174 96 L 154 98 Z"/>
+      <path d="M 158 84 L 170 83"/>
+      <path d="M 158 88 L 170 87"/>
+      <path d="M 158 92 L 168 91"/>
+      <!-- 右下から落ちる紙片 -->
+      <path d="M 156 116 L 168 115 L 167 124 L 156 124 Z"/>
+      <path d="M 158 119 L 165 119"/>
+      <!-- 下の窓台からこぼれる線 -->
+      <path d="M 100 146 Q 110 152 102 158"/>
+      <path d="M 110 146 Q 120 152 114 160"/>
+      <path d="M 122 146 Q 130 154 124 160"/>
+    </g>
+
+    <!-- 床にこぼれた紙（窓の外、入りきらなかった情報） -->
+    <g stroke-width="1.6">
+      <path d="M 96 162 L 110 161 L 110 174 L 95 174 Z"/>
+      <path d="M 99 166 L 107 166"/>
+      <path d="M 99 170 L 107 170"/>
+    </g>
+
+    <!-- 128K → 1M の矢印（窓の上、右側） -->
+    <g stroke-width="1.4">
+      <path d="M 64 158 Q 96 152 142 156"/>
+      <!-- 矢じり -->
+      <path d="M 142 156 L 137 153"/>
+      <path d="M 142 156 L 138 160"/>
+      <text x="60" y="161" font-size="7" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="end">128K</text>
+      <text x="148" y="161" font-size="7" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="start">1M</text>
+    </g>
+
+    <!-- 小さな読者キャラクター（右下、窓を覗く） -->
+    <g stroke-width="1.8">
+      <!-- 頭 -->
+      <path d="M 168 150 C 176 149 180 158 178 166 C 176 172 170 173 167 170 C 162 168 160 152 168 150 Z"/>
+      <!-- 目 -->
+      <circle cx="168" cy="160" r="1.3" fill="#1A1A1A" stroke="none"/>
+      <circle cx="174" cy="160" r="1.3" fill="#1A1A1A" stroke="none"/>
+      <!-- 口 -->
+      <path d="M 168 166 Q 171 168 174 166"/>
+      <!-- 体 -->
+      <path d="M 162 174 L 161 188 L 182 188 L 181 174"/>
+      <!-- 腕（窓を指す） -->
+      <path d="M 164 178 Q 158 176 154 172"/>
+    </g>
+
+    <!-- 窓ラベル: "Context" -->
+    <g stroke-width="1.2">
+      <text x="88" y="44" font-size="8" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">Context Window</text>
+    </g>
+
+  </g>
+</svg>

@@ -1,0 +1,140 @@
+<svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="sketch" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="7"/>
+      <feDisplacementMap in="SourceGraphic" scale="2.0"/>
+    </filter>
+  </defs>
+  <rect width="192" height="192" fill="#F3F6FB"/>
+  <g filter="url(#sketch)" stroke="#1A1A1A" stroke-linecap="round" stroke-linejoin="round" fill="none">
+
+    <!-- 中央の仕切り（Before / After を分ける、波打つ縦線） -->
+    <g stroke-width="1.5">
+      <path d="M 96 14 Q 94 40 96 70 T 95 120 T 96 178"/>
+    </g>
+
+    <!-- ━━━━━ 左半分：Before（バックアップ散乱） ━━━━━ -->
+
+    <!-- 吹き出し：左（困惑） -->
+    <g stroke-width="1.7">
+      <path d="M 8 12 Q 8 4 18 4 L 70 5 Q 80 6 78 16 L 76 26 Q 74 32 64 30 L 50 30 L 42 38 L 44 30 L 20 30 Q 10 28 10 18 Z"/>
+      <text x="44" y="22" font-size="9" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">どれが最新？</text>
+    </g>
+
+    <!-- 人物：困り顔（左上寄せ） -->
+    <g stroke-width="2">
+      <!-- 頭 -->
+      <path d="M 22 50 C 32 48 38 60 36 70 C 34 78 24 80 20 76 C 14 72 12 52 22 50 Z"/>
+      <!-- 髪 -->
+      <path d="M 18 52 Q 22 46 30 48"/>
+      <!-- 目（八の字気味） -->
+      <circle cx="22" cy="64" r="1.6" fill="#1A1A1A" stroke="none"/>
+      <circle cx="30" cy="64" r="1.6" fill="#1A1A1A" stroke="none"/>
+      <path d="M 18 60 L 24 62"/>
+      <path d="M 34 60 L 28 62"/>
+      <!-- 口（への字） -->
+      <path d="M 22 72 Q 26 70 30 72"/>
+      <!-- 体 -->
+      <path d="M 14 82 L 12 110 L 38 110 L 36 80"/>
+      <!-- 腕（頭抱える風） -->
+      <path d="M 16 86 Q 8 78 12 70"/>
+      <path d="M 36 86 Q 44 78 40 70"/>
+    </g>
+
+    <!-- 散乱フォルダ群（タブ付き四角） -->
+    <g stroke-width="1.6">
+      <!-- folder 1: project_v1 -->
+      <path d="M 46 96 L 52 94 L 56 98 L 78 97 Q 82 98 81 102 L 80 116 Q 79 119 75 119 L 48 120 Q 45 119 45 116 Z"/>
+      <text x="62" y="111" font-size="6" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">v1</text>
+
+      <!-- folder 2: project_v2（少し傾く） -->
+      <path d="M 10 122 L 16 119 L 22 124 L 44 121 Q 48 122 47 126 L 48 140 Q 49 143 44 144 L 14 145 Q 10 144 10 141 Z"/>
+      <text x="28" y="135" font-size="6" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">v2</text>
+
+      <!-- folder 3: 最新 -->
+      <path d="M 50 128 L 56 125 L 62 130 L 84 128 Q 88 130 87 134 L 86 148 Q 85 151 81 151 L 53 152 Q 49 151 49 148 Z"/>
+      <text x="68" y="143" font-size="5" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">最新</text>
+
+      <!-- folder 4: 本当の最新 -->
+      <path d="M 14 156 L 20 153 L 26 158 L 56 156 Q 60 158 59 162 L 58 174 Q 57 177 53 177 L 18 178 Q 14 177 14 174 Z"/>
+      <text x="36" y="170" font-size="5" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">本当の最新</text>
+
+      <!-- folder 5: 本当の本当（半隠れ） -->
+      <path d="M 60 160 L 66 157 L 72 162 L 88 161 Q 90 163 89 166 L 88 178 Q 86 180 84 180 L 62 180 Q 60 179 60 176 Z"/>
+      <text x="74" y="172" font-size="4" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">本当の本当</text>
+    </g>
+
+    <!-- ━━━━━ 右半分：After（git の時系列ツリー） ━━━━━ -->
+
+    <!-- 吹き出し：右（安心） -->
+    <g stroke-width="1.7">
+      <path d="M 116 12 Q 116 4 126 4 L 178 5 Q 188 6 186 16 L 184 26 Q 182 32 172 30 L 156 30 L 148 38 L 150 30 L 128 30 Q 118 28 118 18 Z"/>
+      <text x="152" y="22" font-size="10" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">戻せる</text>
+    </g>
+
+    <!-- 人物：安心顔（右上寄せ） -->
+    <g stroke-width="2">
+      <!-- 頭 -->
+      <path d="M 130 50 C 140 48 146 60 144 70 C 142 78 132 80 128 76 C 122 72 120 52 130 50 Z"/>
+      <!-- 髪 -->
+      <path d="M 126 52 Q 130 46 138 48"/>
+      <!-- 目 -->
+      <circle cx="130" cy="64" r="1.6" fill="#1A1A1A" stroke="none"/>
+      <circle cx="138" cy="64" r="1.6" fill="#1A1A1A" stroke="none"/>
+      <!-- 口（笑み） -->
+      <path d="M 128 71 Q 134 75 140 71"/>
+      <!-- 体 -->
+      <path d="M 122 82 L 120 110 L 148 110 L 146 80"/>
+      <!-- 腕（片手で枝を指す） -->
+      <path d="M 122 86 Q 116 96 118 108"/>
+      <path d="M 146 88 Q 154 96 156 106"/>
+    </g>
+
+    <!-- ブランチツリー（main + feature の枝） -->
+    <g stroke-width="1.8">
+      <!-- main 縦線（波打つ） -->
+      <path d="M 120 122 Q 119 134 121 146 T 120 178"/>
+
+      <!-- feature 枝が分岐して合流 -->
+      <path d="M 121 130 Q 134 132 142 142 Q 144 152 142 162 Q 138 170 122 170"/>
+
+      <!-- main コミットノード（小さな○、塗らない） -->
+      <path d="M 116 122 Q 120 119 124 122 Q 124 126 120 127 Q 116 126 116 122 Z"/>
+      <path d="M 116 146 Q 120 143 124 146 Q 124 150 120 151 Q 116 150 116 146 Z"/>
+      <path d="M 116 170 Q 120 167 124 170 Q 124 174 120 175 Q 116 174 116 170 Z"/>
+
+      <!-- feature コミットノード -->
+      <path d="M 138 142 Q 142 139 146 142 Q 146 146 142 147 Q 138 146 138 142 Z"/>
+      <path d="M 138 160 Q 142 157 146 160 Q 146 164 142 161 Z"/>
+    </g>
+
+    <!-- ノードに添える短いラベル線（"何を" の暗示） -->
+    <g stroke-width="1.2">
+      <path d="M 152 122 L 168 122"/>
+      <path d="M 152 122 L 162 120"/>
+      <path d="M 152 146 L 170 146"/>
+      <path d="M 152 146 L 164 144"/>
+      <path d="M 128 178 L 144 178"/>
+    </g>
+
+    <!-- 差分パネル（右下、+ / - の見える化） -->
+    <g stroke-width="1.4">
+      <path d="M 156 154 L 184 154 L 184 184 L 156 184 Z"/>
+      <!-- + 行 -->
+      <path d="M 160 162 L 166 162"/>
+      <path d="M 163 159 L 163 165"/>
+      <path d="M 168 162 Q 174 161 180 162"/>
+      <!-- - 行 -->
+      <path d="M 160 172 L 166 172"/>
+      <path d="M 168 172 Q 174 171 180 172"/>
+      <!-- 区切り -->
+      <path d="M 158 178 Q 170 177 182 178"/>
+    </g>
+
+    <!-- 中央キーワード（下部、控えめ） -->
+    <g stroke-width="1.2">
+      <text x="96" y="10" font-size="6" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">git</text>
+    </g>
+
+  </g>
+</svg>

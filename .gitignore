@@ -33,3 +33,9 @@ out/
 
 # Design System v2 prototype — large fonts copied from zip, re-extractable
 drafts/prototypes/mockups/design_philosophy_v2/fonts/
+
+# Preview 生成器の出力（scripts/preview_gen.py で再生成可能）
+drafts/prototypes/preview/
+
+# ルート直下の一時スクリーンショット（Playwright MCP の撮影結果）
+/*.png

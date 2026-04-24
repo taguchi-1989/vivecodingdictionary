@@ -1,0 +1,110 @@
+<svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="sketch" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="3"/>
+      <feDisplacementMap in="SourceGraphic" scale="1.8"/>
+    </filter>
+  </defs>
+  <rect width="192" height="192" fill="#F3F6FB"/>
+  <g filter="url(#sketch)" stroke="#1A1A1A" stroke-linecap="round" stroke-linejoin="round" fill="none">
+
+    <!-- 吹き出し 1: 左 / 一般ユーザー「直して」 -->
+    <g stroke-width="1.6">
+      <path d="M 8 20 Q 10 10 22 11 L 56 12 Q 66 14 64 24 L 62 36 Q 60 42 50 40 L 36 40 L 28 48 L 30 40 L 18 40 Q 8 38 8 28 Z"/>
+      <text x="36" y="31" font-size="11" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">直して</text>
+    </g>
+
+    <!-- 吹き出し 2: 中央 / 業務担当「ルール通り」 -->
+    <g stroke-width="1.6">
+      <path d="M 70 6 Q 70 2 80 2 L 118 3 Q 128 4 126 14 L 124 24 Q 122 30 112 28 L 104 28 L 98 34 L 100 28 L 82 28 Q 72 26 72 16 Z"/>
+      <text x="98" y="20" font-size="10" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">ルール通り</text>
+    </g>
+
+    <!-- 吹き出し 3: 右 / 開発者「アプリに入れたい」 -->
+    <g stroke-width="1.6">
+      <path d="M 130 20 Q 132 10 144 11 L 180 12 Q 188 14 186 24 L 184 38 Q 182 44 172 42 L 162 42 L 156 48 L 158 42 L 140 42 Q 130 40 130 30 Z"/>
+      <text x="158" y="32" font-size="9" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">アプリに入れたい</text>
+    </g>
+
+    <!-- 人物 1: 左（一般ユーザー、スマホ持ち） -->
+    <g stroke-width="2">
+      <!-- 頭 -->
+      <path d="M 32 62 C 42 60 46 72 44 82 C 42 90 34 92 30 88 C 26 86 22 72 32 62 Z"/>
+      <!-- 目 -->
+      <circle cx="32" cy="76" r="1.6" fill="#1A1A1A" stroke="none"/>
+      <circle cx="40" cy="76" r="1.6" fill="#1A1A1A" stroke="none"/>
+      <!-- 口 -->
+      <path d="M 32 83 Q 36 85 40 83"/>
+      <!-- 体 -->
+      <path d="M 24 94 L 22 132 L 50 130 L 48 92"/>
+      <!-- 腕 + スマホ -->
+      <path d="M 26 100 Q 18 114 22 128"/>
+      <path d="M 48 100 Q 56 108 52 120"/>
+      <rect x="48" y="116" width="10" height="18" rx="1.5" stroke-width="1.6"/>
+      <path d="M 50 120 L 56 120"/>
+      <!-- 足 -->
+      <path d="M 28 132 L 30 156"/>
+      <path d="M 42 132 L 44 156"/>
+    </g>
+
+    <!-- 人物 2: 中央（業務担当、書類持ち） -->
+    <g stroke-width="2">
+      <!-- 頭 -->
+      <path d="M 94 60 C 104 58 110 72 108 82 C 106 92 96 94 92 90 C 86 86 82 64 94 60 Z"/>
+      <!-- 目 -->
+      <circle cx="94" cy="76" r="1.6" fill="#1A1A1A" stroke="none"/>
+      <circle cx="102" cy="76" r="1.6" fill="#1A1A1A" stroke="none"/>
+      <!-- 口 -->
+      <path d="M 94 83 L 102 83"/>
+      <!-- 体（ネクタイ風の短線） -->
+      <path d="M 86 94 L 84 132 L 112 132 L 110 92"/>
+      <path d="M 98 94 L 99 108"/>
+      <!-- 腕 + 書類 -->
+      <path d="M 88 100 Q 82 108 84 120"/>
+      <path d="M 110 100 Q 118 106 114 118"/>
+      <!-- 書類 -->
+      <path d="M 78 118 L 76 140 L 92 142 L 94 120 Z"/>
+      <path d="M 80 126 L 90 127"/>
+      <path d="M 80 132 L 90 133"/>
+      <!-- 足 -->
+      <path d="M 90 132 L 92 156"/>
+      <path d="M 104 132 L 106 156"/>
+    </g>
+
+    <!-- 人物 3: 右（開発者、ノート PC） -->
+    <g stroke-width="2">
+      <!-- 頭 -->
+      <path d="M 156 62 C 166 60 172 72 170 82 C 168 92 158 94 154 90 C 148 86 146 64 156 62 Z"/>
+      <!-- 目 -->
+      <circle cx="156" cy="76" r="1.6" fill="#1A1A1A" stroke="none"/>
+      <circle cx="164" cy="76" r="1.6" fill="#1A1A1A" stroke="none"/>
+      <!-- 口 -->
+      <path d="M 156 83 Q 160 86 164 83"/>
+      <!-- 体 -->
+      <path d="M 148 94 L 146 132 L 174 132 L 172 92"/>
+      <!-- 腕 + PC -->
+      <path d="M 150 102 Q 146 112 152 120"/>
+      <path d="M 172 102 Q 178 112 170 120"/>
+      <!-- ノート PC（台形） -->
+      <path d="M 148 122 L 178 122 L 182 136 L 144 136 Z"/>
+      <path d="M 150 124 L 176 124"/>
+      <path d="M 156 128 L 170 128"/>
+      <!-- 足 -->
+      <path d="M 150 136 L 152 156"/>
+      <path d="M 170 136 L 172 156"/>
+    </g>
+
+    <!-- 下部ラベル -->
+    <g stroke-width="1.4">
+      <path d="M 48 172 L 62 170 L 60 184 L 46 184 Z"/>
+      <text x="54" y="179" font-size="8" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">app</text>
+
+      <path d="M 90 172 L 104 170 L 102 184 L 88 184 Z"/>
+      <text x="96" y="179" font-size="7" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">GPTs</text>
+
+      <path d="M 132 172 L 146 170 L 144 184 L 130 184 Z"/>
+      <text x="138" y="179" font-size="8" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">API</text>
+    </g>
+
+  </g>
+</svg>

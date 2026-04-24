@@ -1,0 +1,104 @@
+<svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="sketch" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="7"/>
+      <feDisplacementMap in="SourceGraphic" scale="1.9"/>
+    </filter>
+  </defs>
+  <rect width="192" height="192" fill="#F3F6FB"/>
+  <g filter="url(#sketch)" stroke="#1A1A1A" stroke-linecap="round" stroke-linejoin="round" fill="none">
+
+    <!-- 吹き出し: AI の心の声「同じ口で繋がる」 -->
+    <g stroke-width="1.6">
+      <path d="M 56 8 Q 58 2 70 3 L 132 4 Q 142 5 140 16 L 138 28 Q 136 34 124 32 L 110 32 L 102 40 L 104 32 L 70 32 Q 58 30 58 18 Z"/>
+      <text x="100" y="22" font-size="10" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">同じ口で繋がる</text>
+    </g>
+
+    <!-- 中央 AI ノード（ハブ。少しいびつな六角形＋顔） -->
+    <g stroke-width="2.2">
+      <!-- 外形（ややいびつな多角形） -->
+      <path d="M 96 70 L 116 80 L 119 102 L 108 119 L 86 120 L 73 110 L 71 88 L 82 74 Z"/>
+      <!-- 内側ライン（基板の枠っぽさ） -->
+      <path d="M 86 84 L 110 84 L 112 108 L 84 108 Z"/>
+    </g>
+
+    <!-- AI の顔 -->
+    <g stroke-width="1.8">
+      <circle cx="92" cy="94" r="1.8" fill="#1A1A1A" stroke="none"/>
+      <circle cx="104" cy="94" r="1.8" fill="#1A1A1A" stroke="none"/>
+      <path d="M 91 102 Q 98 106 105 102"/>
+    </g>
+
+    <!-- AI ラベル -->
+    <g stroke-width="1.4">
+      <text x="98" y="115" font-size="7" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">AI</text>
+    </g>
+
+    <!-- 触手 1: 左上 → GitHub（猫耳箱で示唆、ロゴは描かない） -->
+    <g stroke-width="1.8">
+      <path d="M 78 76 Q 60 64 46 52 Q 38 46 30 42"/>
+      <!-- 接続点の小丸 -->
+      <circle cx="78" cy="76" r="1.4" fill="#1A1A1A" stroke="none"/>
+    </g>
+    <g stroke-width="1.8">
+      <!-- GitHub 風箱（耳付き） -->
+      <path d="M 12 26 L 14 18 L 22 22 L 30 18 L 32 26 L 42 28 L 44 50 L 14 52 Z"/>
+      <!-- 顔っぽい目 -->
+      <circle cx="22" cy="38" r="1.3" fill="#1A1A1A" stroke="none"/>
+      <circle cx="34" cy="38" r="1.3" fill="#1A1A1A" stroke="none"/>
+      <text x="28" y="62" font-size="7" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">Git</text>
+    </g>
+
+    <!-- 触手 2: 左下 → DB（円柱） -->
+    <g stroke-width="1.8">
+      <path d="M 78 110 Q 60 124 46 138 Q 38 144 32 150"/>
+      <circle cx="78" cy="110" r="1.4" fill="#1A1A1A" stroke="none"/>
+    </g>
+    <g stroke-width="1.8">
+      <!-- DB 円柱（少しいびつ） -->
+      <path d="M 10 144 Q 10 138 24 138 Q 38 138 38 144 L 38 168 Q 38 174 24 174 Q 10 174 10 168 Z"/>
+      <path d="M 10 144 Q 10 150 24 150 Q 38 150 38 144"/>
+      <path d="M 10 156 Q 10 162 24 162 Q 38 162 38 156"/>
+      <text x="24" y="184" font-size="7" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">DB</text>
+    </g>
+
+    <!-- 触手 3: 右上 → ファイル（書類アイコン） -->
+    <g stroke-width="1.8">
+      <path d="M 114 76 Q 132 64 146 52 Q 154 46 162 42"/>
+      <circle cx="114" cy="76" r="1.4" fill="#1A1A1A" stroke="none"/>
+    </g>
+    <g stroke-width="1.8">
+      <!-- ファイル -->
+      <path d="M 150 18 L 174 20 L 180 28 L 178 56 L 152 54 Z"/>
+      <path d="M 174 20 L 174 28 L 180 28"/>
+      <path d="M 156 36 L 172 37"/>
+      <path d="M 156 42 L 172 43"/>
+      <path d="M 156 48 L 168 49"/>
+      <text x="166" y="70" font-size="7" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">File</text>
+    </g>
+
+    <!-- 触手 4: 右下 → クラウド/外部 API -->
+    <g stroke-width="1.8">
+      <path d="M 114 110 Q 132 124 146 138 Q 154 144 162 150"/>
+      <circle cx="114" cy="110" r="1.4" fill="#1A1A1A" stroke="none"/>
+    </g>
+    <g stroke-width="1.8">
+      <!-- 雲 -->
+      <path d="M 144 158 Q 142 148 152 146 Q 156 138 166 142 Q 176 138 180 148 Q 188 150 184 162 Q 186 172 174 172 L 152 172 Q 142 172 144 158 Z"/>
+      <text x="164" y="184" font-size="7" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">API</text>
+    </g>
+
+    <!-- MCP ラベル（中央下） -->
+    <g stroke-width="1.4">
+      <path d="M 70 128 Q 70 124 78 124 L 118 125 Q 126 126 126 132 L 126 138 Q 126 142 118 142 L 78 142 Q 70 142 70 138 Z"/>
+      <text x="98" y="136" font-size="9" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">MCP</text>
+    </g>
+
+    <!-- 接続パケット（線上の小さな黒丸で「データが流れている」感） -->
+    <circle cx="60" cy="68" r="1.3" fill="#1A1A1A" stroke="none"/>
+    <circle cx="56" cy="128" r="1.3" fill="#1A1A1A" stroke="none"/>
+    <circle cx="134" cy="68" r="1.3" fill="#1A1A1A" stroke="none"/>
+    <circle cx="138" cy="128" r="1.3" fill="#1A1A1A" stroke="none"/>
+
+  </g>
+</svg>

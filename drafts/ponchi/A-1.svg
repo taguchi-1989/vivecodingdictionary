@@ -1,0 +1,100 @@
+<svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="sketch" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="5"/>
+      <feDisplacementMap in="SourceGraphic" scale="1.8"/>
+    </filter>
+  </defs>
+  <rect width="192" height="192" fill="#F3F6FB"/>
+  <g filter="url(#sketch)" stroke="#1A1A1A" stroke-linecap="round" stroke-linejoin="round" fill="none">
+
+    <!-- 上部の引用バナー（タグライン） -->
+    <g stroke-width="1.5">
+      <path d="M 14 14 Q 12 6 22 6 L 170 7 Q 180 8 178 18 L 178 28 Q 178 34 168 34 L 24 34 Q 14 34 14 24 Z"/>
+      <text x="96" y="22" font-size="9" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">同じ日本語でも</text>
+    </g>
+
+    <!-- 人物 1: 左（非エンジニア、考え顔） -->
+    <g stroke-width="2.2">
+      <!-- 頭 -->
+      <path d="M 28 64 C 38 60 46 70 44 82 C 42 92 32 94 26 90 C 20 86 18 68 28 64 Z"/>
+      <!-- 目（少し下げて考え顔） -->
+      <circle cx="28" cy="78" r="1.7" fill="#1A1A1A" stroke="none"/>
+      <circle cx="38" cy="78" r="1.7" fill="#1A1A1A" stroke="none"/>
+      <!-- 口（への字、迷っている） -->
+      <path d="M 30 86 Q 33 84 38 86"/>
+      <!-- 眉（少しハの字） -->
+      <path d="M 26 73 L 31 71"/>
+      <path d="M 36 71 L 41 73"/>
+      <!-- 体 -->
+      <path d="M 20 96 L 18 134 L 50 132 L 48 94"/>
+      <!-- 腕（手を口に当てて思案） -->
+      <path d="M 22 102 Q 26 116 32 92"/>
+      <path d="M 48 102 Q 56 110 52 124"/>
+      <!-- 足 -->
+      <path d="M 26 134 L 28 158"/>
+      <path d="M 42 134 L 44 158"/>
+    </g>
+
+    <!-- 人物 1 の頭上：はてなマーク -->
+    <g stroke-width="1.8">
+      <path d="M 50 52 Q 54 46 60 48 Q 64 50 62 56 Q 60 60 56 62 L 56 66"/>
+      <circle cx="56" cy="71" r="1.4" fill="#1A1A1A" stroke="none"/>
+    </g>
+
+    <!-- 中央：橋 -->
+    <g stroke-width="2">
+      <!-- 橋の上面（弧） -->
+      <path d="M 60 124 Q 96 108 132 124"/>
+      <!-- 橋の下側ライン -->
+      <path d="M 60 130 Q 96 116 132 130"/>
+      <!-- 橋脚（左） -->
+      <path d="M 70 128 L 72 146"/>
+      <path d="M 80 124 L 82 146"/>
+      <!-- 橋脚（右） -->
+      <path d="M 112 124 L 114 146"/>
+      <path d="M 122 128 L 124 146"/>
+      <!-- 川面（軽く波打つ） -->
+      <path d="M 56 150 Q 70 148 84 150 T 112 150 T 140 150"/>
+      <path d="M 58 156 Q 72 154 86 156 T 114 156 T 138 156"/>
+    </g>
+
+    <!-- 中央：橋の上の「ことば」短冊 -->
+    <g stroke-width="1.8">
+      <path d="M 80 96 L 112 94 L 114 116 L 78 118 Z"/>
+      <!-- 短冊を吊る糸 -->
+      <path d="M 84 96 L 86 88"/>
+      <path d="M 108 95 L 110 88"/>
+      <text x="96" y="110" font-size="10" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">ことば</text>
+    </g>
+
+    <!-- 人物 2: 右（エンジニア、指さして説明） -->
+    <g stroke-width="2.2">
+      <!-- 頭 -->
+      <path d="M 156 62 C 166 60 174 70 172 82 C 170 92 160 94 154 90 C 148 86 146 64 156 62 Z"/>
+      <!-- 目 -->
+      <circle cx="156" cy="76" r="1.7" fill="#1A1A1A" stroke="none"/>
+      <circle cx="166" cy="76" r="1.7" fill="#1A1A1A" stroke="none"/>
+      <!-- 口（笑み） -->
+      <path d="M 156 84 Q 161 87 166 84"/>
+      <!-- 体 -->
+      <path d="M 148 94 L 146 132 L 174 132 L 172 92"/>
+      <!-- 腕（左手で橋の方向を指さす） -->
+      <path d="M 150 102 Q 138 108 124 110"/>
+      <!-- 指さし（短い線） -->
+      <path d="M 124 110 L 120 110"/>
+      <!-- 右腕 -->
+      <path d="M 172 102 Q 180 114 176 128"/>
+      <!-- 足 -->
+      <path d="M 152 132 L 154 158"/>
+      <path d="M 168 132 L 170 158"/>
+    </g>
+
+    <!-- 下部：本書のラベル -->
+    <g stroke-width="1.4">
+      <path d="M 56 172 Q 54 166 62 166 L 132 167 Q 140 168 138 174 L 138 182 Q 138 186 130 186 L 64 186 Q 56 186 56 180 Z"/>
+      <text x="97" y="178" font-size="8" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">この本が橋になる</text>
+    </g>
+
+  </g>
+</svg>

@@ -1,0 +1,112 @@
+<svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="sketch" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="11"/>
+      <feDisplacementMap in="SourceGraphic" scale="1.9"/>
+    </filter>
+  </defs>
+  <rect width="192" height="192" fill="#F3F6FB"/>
+  <g filter="url(#sketch)" stroke="#1A1A1A" stroke-linecap="round" stroke-linejoin="round" fill="none">
+
+    <!-- 吹き出し: 読者の心の声「ここから入る」 -->
+    <g stroke-width="1.6">
+      <path d="M 12 14 Q 12 6 24 6 L 86 7 Q 96 8 95 18 L 94 30 Q 92 36 82 34 L 56 34 L 48 42 L 50 34 L 24 34 Q 14 32 13 22 Z"/>
+      <text x="54" y="24" font-size="11" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">ここから入る</text>
+    </g>
+
+    <!-- 開いた本（見開き） -->
+    <g stroke-width="2.2">
+      <!-- 左ページ -->
+      <path d="M 36 92 Q 34 80 38 78 L 94 86 L 96 154 Q 92 158 86 156 L 40 150 Q 34 148 36 140 Z"/>
+      <!-- 右ページ -->
+      <path d="M 156 90 Q 158 78 154 76 L 98 84 L 96 154 Q 100 158 106 156 L 152 148 Q 158 146 156 138 Z"/>
+      <!-- 背（中央の谷） -->
+      <path d="M 96 86 Q 95 118 96 154"/>
+    </g>
+
+    <!-- 左ページ: 物語ページの示唆（タイトル線・本文線） -->
+    <g stroke-width="1.5">
+      <path d="M 46 96 Q 60 95 78 97"/>
+      <path d="M 46 104 Q 62 103 84 105"/>
+      <path d="M 46 112 Q 60 111 80 113"/>
+      <!-- メイン図プレースホルダ（小さな円環＋中心点） -->
+      <path d="M 56 130 Q 50 124 58 120 Q 68 118 70 126 Q 70 134 62 136 Q 54 136 56 130 Z"/>
+      <circle cx="63" cy="128" r="1.4" fill="#1A1A1A" stroke="none"/>
+    </g>
+
+    <!-- 右ページ: 6 視点の小アイコン格子（2x3） -->
+    <g stroke-width="1.5">
+      <!-- 1: 役割 -->
+      <path d="M 106 96 Q 104 92 110 92 L 118 92 Q 122 92 122 98 L 122 104 Q 120 108 114 108 L 108 108 Q 104 108 106 102 Z"/>
+      <!-- 2: うれしさ（笑顔） -->
+      <path d="M 130 92 Q 144 90 144 100 Q 142 108 134 108 Q 126 106 128 98 Z"/>
+      <circle cx="134" cy="98" r="0.9" fill="#1A1A1A" stroke="none"/>
+      <circle cx="139" cy="98" r="0.9" fill="#1A1A1A" stroke="none"/>
+      <path d="M 133 102 Q 136 104 140 102"/>
+      <!-- 3: 注意点（三角＋!） -->
+      <path d="M 106 116 L 114 116 L 110 124 Z"/>
+      <path d="M 110 118 L 110 121"/>
+      <!-- 4: どこで役立つか（場所ピン） -->
+      <path d="M 132 114 Q 140 113 140 119 Q 139 124 136 124 L 136 128 L 134 128 L 134 124 Q 130 122 132 116 Z"/>
+      <!-- 5: はじめに（数字 1 風） -->
+      <path d="M 108 134 L 110 132 L 110 144"/>
+      <path d="M 107 144 L 113 144"/>
+      <!-- 6: 深掘り先（矢印） -->
+      <path d="M 130 138 Q 138 136 144 140"/>
+      <path d="M 141 137 L 144 140 L 141 143"/>
+    </g>
+
+    <!-- 読者（本の前で右ページを指差し） -->
+    <g stroke-width="2">
+      <!-- 頭 -->
+      <path d="M 78 50 C 90 48 96 60 94 70 C 92 78 84 80 80 76 C 74 72 68 52 78 50 Z"/>
+      <!-- 目 -->
+      <circle cx="80" cy="64" r="1.6" fill="#1A1A1A" stroke="none"/>
+      <circle cx="88" cy="64" r="1.6" fill="#1A1A1A" stroke="none"/>
+      <!-- 口（ほっとした笑み） -->
+      <path d="M 80 71 Q 84 74 89 71"/>
+      <!-- 首〜肩 -->
+      <path d="M 80 80 L 78 84"/>
+      <path d="M 88 80 L 90 84"/>
+    </g>
+
+    <!-- 指差している腕（本の右ページの 6 視点へ伸ばす） -->
+    <g stroke-width="2">
+      <path d="M 92 84 Q 110 80 124 96"/>
+      <!-- 指先（小さな三角の手） -->
+      <path d="M 122 94 L 128 96 L 124 100 Z"/>
+    </g>
+
+    <!-- letter A〜J の軌跡（本の上を弧でめぐる） -->
+    <g stroke-width="1.4">
+      <path d="M 22 70 Q 60 30 96 28 Q 134 30 172 70"/>
+      <text x="22" y="78" font-size="7" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">A</text>
+      <text x="40" y="56" font-size="7" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">B</text>
+      <text x="62" y="42" font-size="7" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">C</text>
+      <text x="84" y="34" font-size="7" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">D</text>
+      <text x="104" y="34" font-size="7" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">E</text>
+      <text x="124" y="40" font-size="7" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">F</text>
+      <text x="144" y="50" font-size="7" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">G</text>
+      <text x="160" y="64" font-size="7" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">H</text>
+      <text x="172" y="78" font-size="7" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">I</text>
+      <!-- J を本の手前のほうに -->
+      <text x="96" y="22" font-size="7" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">J</text>
+    </g>
+
+    <!-- 下部: 「気づく → 引く → 読む → 飛ぶ」の小さなループ矢印 -->
+    <g stroke-width="1.5">
+      <path d="M 40 172 Q 60 168 90 170 Q 122 172 152 168"/>
+      <!-- 矢じり -->
+      <path d="M 149 166 L 152 168 L 149 171"/>
+      <!-- 戻り線（薄く小さい曲線） -->
+      <path d="M 152 178 Q 100 188 40 180"/>
+      <path d="M 43 178 L 40 180 L 43 183"/>
+      <!-- 4 つの点（4 ステップを示唆） -->
+      <circle cx="50" cy="171" r="1.4" fill="#1A1A1A" stroke="none"/>
+      <circle cx="80" cy="170" r="1.4" fill="#1A1A1A" stroke="none"/>
+      <circle cx="112" cy="171" r="1.4" fill="#1A1A1A" stroke="none"/>
+      <circle cx="144" cy="170" r="1.4" fill="#1A1A1A" stroke="none"/>
+    </g>
+
+  </g>
+</svg>

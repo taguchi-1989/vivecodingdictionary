@@ -1,0 +1,114 @@
+<svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="sketch" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="12"/>
+      <feDisplacementMap in="SourceGraphic" scale="1.9"/>
+    </filter>
+  </defs>
+  <rect width="192" height="192" fill="#F3F6FB"/>
+  <g filter="url(#sketch)" stroke="#1A1A1A" stroke-linecap="round" stroke-linejoin="round" fill="none">
+
+    <!-- ━━━━ 上部の見出し（before / after） ━━━━ -->
+    <g stroke-width="1.4">
+      <text x="42" y="14" font-size="9" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">前のモデル</text>
+      <text x="150" y="14" font-size="9" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">Claude 4</text>
+    </g>
+
+    <!-- ━━━━ 中央 区切りの矢印（before → after） ━━━━ -->
+    <g stroke-width="2.2">
+      <path d="M 80 96 Q 96 92 112 96"/>
+      <path d="M 108 90 L 114 96 L 107 101"/>
+      <text x="96" y="86" font-size="8" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">4 系へ</text>
+    </g>
+
+    <!-- ━━━━ 左：困っている吹き出し ━━━━ -->
+    <g stroke-width="1.6">
+      <path d="M 8 26 Q 8 18 18 18 L 56 19 Q 66 20 64 30 L 62 44 Q 60 50 50 48 L 38 48 L 30 56 L 32 48 L 18 48 Q 8 46 8 36 Z"/>
+      <text x="36" y="32" font-size="10" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">うまく</text>
+      <text x="36" y="43" font-size="10" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">いかない</text>
+    </g>
+
+    <!-- ━━━━ 左：困っている人 ━━━━ -->
+    <g stroke-width="2">
+      <!-- 頭（やや傾く） -->
+      <path d="M 38 70 C 50 68 56 80 54 90 C 52 100 42 102 36 98 C 28 92 26 72 38 70 Z"/>
+      <!-- 目（半閉じ・困り眉） -->
+      <circle cx="38" cy="83" r="1.6" fill="#1A1A1A" stroke="none"/>
+      <circle cx="48" cy="83" r="1.6" fill="#1A1A1A" stroke="none"/>
+      <path d="M 34 78 L 41 80"/>
+      <path d="M 45 80 L 52 78"/>
+      <!-- 口（への字） -->
+      <path d="M 38 92 Q 44 88 50 92"/>
+      <!-- 汗 -->
+      <path d="M 56 76 Q 58 80 56 84 Q 54 80 56 76 Z"/>
+      <!-- 体 -->
+      <path d="M 28 104 L 26 138 L 56 138 L 56 102"/>
+      <!-- 腕（頭を抱える）-->
+      <path d="M 30 108 Q 24 100 32 92"/>
+      <path d="M 54 108 Q 60 100 52 92"/>
+      <!-- 足 -->
+      <path d="M 32 138 L 30 162"/>
+      <path d="M 50 138 L 52 162"/>
+    </g>
+
+    <!-- ━━━━ 左：絡まったコード（雲っぽい混乱マーク） ━━━━ -->
+    <g stroke-width="1.6">
+      <path d="M 14 124 Q 18 120 22 124 Q 24 128 20 132 Q 16 134 12 130 Q 10 126 14 124 Z"/>
+      <path d="M 18 128 Q 14 134 22 138"/>
+      <path d="M 12 134 Q 16 140 22 138"/>
+      <!-- ぐるぐる -->
+      <path d="M 64 128 Q 70 124 74 130 Q 76 136 70 138 Q 64 138 64 132"/>
+    </g>
+
+    <!-- ━━━━ 右：ほっとした吹き出し ━━━━ -->
+    <g stroke-width="1.6">
+      <path d="M 130 24 Q 130 16 140 16 L 180 17 Q 188 18 186 28 L 184 42 Q 182 48 172 46 L 162 46 L 154 54 L 156 46 L 140 46 Q 130 44 130 34 Z"/>
+      <text x="158" y="30" font-size="10" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">スッと</text>
+      <text x="158" y="41" font-size="10" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">通った</text>
+    </g>
+
+    <!-- ━━━━ 右：楽になった人 ━━━━ -->
+    <g stroke-width="2">
+      <!-- 頭 -->
+      <path d="M 144 68 C 156 66 162 78 160 88 C 158 98 148 100 142 96 C 134 90 132 70 144 68 Z"/>
+      <!-- 目（笑顔の弧） -->
+      <path d="M 142 80 Q 146 78 150 80"/>
+      <path d="M 154 80 Q 158 78 162 80"/>
+      <!-- 口（笑い） -->
+      <path d="M 144 90 Q 152 96 160 90"/>
+      <!-- 体 -->
+      <path d="M 134 102 L 132 138 L 164 138 L 162 100"/>
+      <!-- 腕（片方上げて軽く万歳） -->
+      <path d="M 136 106 Q 128 96 130 84"/>
+      <path d="M 162 108 Q 170 116 166 130"/>
+      <!-- 足 -->
+      <path d="M 138 138 L 136 162"/>
+      <path d="M 158 138 L 160 162"/>
+      <!-- ノート PC（小） -->
+      <path d="M 152 126 L 178 126 L 182 138 L 148 138 Z"/>
+      <path d="M 154 128 L 176 128"/>
+    </g>
+
+    <!-- ━━━━ 右：軽さの線（キラ・スッ） ━━━━ -->
+    <g stroke-width="1.4">
+      <path d="M 124 70 L 128 66"/>
+      <path d="M 124 78 L 130 78"/>
+      <path d="M 124 86 L 128 90"/>
+      <path d="M 178 66 L 174 70"/>
+      <path d="M 184 76 L 178 78"/>
+    </g>
+
+    <!-- ━━━━ 下部ラベル：3 ティア ━━━━ -->
+    <g stroke-width="1.4">
+      <path d="M 22 172 Q 22 168 28 168 L 58 168 Q 64 168 64 174 L 64 182 Q 64 186 58 186 L 28 186 Q 22 186 22 182 Z"/>
+      <text x="43" y="180" font-size="8" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">Opus</text>
+
+      <path d="M 70 172 Q 70 168 76 168 L 116 168 Q 122 168 122 174 L 122 182 Q 122 186 116 186 L 76 186 Q 70 186 70 182 Z"/>
+      <text x="96" y="180" font-size="8" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">Sonnet</text>
+
+      <path d="M 128 172 Q 128 168 134 168 L 170 168 Q 176 168 176 174 L 176 182 Q 176 186 170 186 L 134 186 Q 128 186 128 182 Z"/>
+      <text x="152" y="180" font-size="8" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">Haiku</text>
+    </g>
+
+  </g>
+</svg>

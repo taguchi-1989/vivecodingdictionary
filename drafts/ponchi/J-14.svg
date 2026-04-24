@@ -1,0 +1,124 @@
+<svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="sketch" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="14"/>
+      <feDisplacementMap in="SourceGraphic" scale="1.9"/>
+    </filter>
+  </defs>
+  <rect width="192" height="192" fill="#F3F6FB"/>
+  <g filter="url(#sketch)" stroke="#1A1A1A" stroke-linecap="round" stroke-linejoin="round" fill="none">
+
+    <!-- 吹き出し: 質問者「次の単語は？」 -->
+    <g stroke-width="1.6">
+      <path d="M 6 16 Q 8 6 20 6 L 64 7 Q 76 8 74 20 L 72 32 Q 70 38 60 36 L 50 36 L 42 44 L 44 36 L 18 36 Q 6 34 6 24 Z"/>
+      <text x="40" y="26" font-size="10" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">次の単語は？</text>
+    </g>
+
+    <!-- 人物: 左下 / 質問者（一般ユーザー） -->
+    <g stroke-width="2">
+      <!-- 頭 -->
+      <path d="M 28 86 C 38 84 44 96 42 106 C 40 114 32 116 28 112 C 22 108 18 88 28 86 Z"/>
+      <!-- 目 -->
+      <circle cx="28" cy="100" r="1.6" fill="#1A1A1A" stroke="none"/>
+      <circle cx="36" cy="100" r="1.6" fill="#1A1A1A" stroke="none"/>
+      <!-- 口 -->
+      <path d="M 28 107 Q 32 109 36 107"/>
+      <!-- 体 -->
+      <path d="M 20 118 L 18 154 L 46 152 L 44 116"/>
+      <!-- 腕（右手で AI の方を指す） -->
+      <path d="M 22 124 Q 14 138 18 152"/>
+      <path d="M 44 124 Q 56 130 64 128"/>
+      <!-- 足 -->
+      <path d="M 24 154 L 26 178"/>
+      <path d="M 38 154 L 40 178"/>
+    </g>
+
+    <!-- 入力矢印（質問者 → LLM 箱） -->
+    <g stroke-width="1.8">
+      <path d="M 64 128 Q 76 124 88 126"/>
+      <path d="M 88 126 L 82 122"/>
+      <path d="M 88 126 L 84 130"/>
+      <text x="74" y="120" font-size="7" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">質問</text>
+    </g>
+
+    <!-- LLM の箱（中央〜右、雲っぽい角丸の長方形） -->
+    <g stroke-width="2.2">
+      <path d="M 92 60
+               Q 90 50 102 48
+               L 168 50
+               Q 182 52 180 66
+               L 180 130
+               Q 182 144 168 144
+               L 100 142
+               Q 88 142 90 130
+               Z"/>
+    </g>
+
+    <!-- 箱の内部: Transformer の格子（神経網メタファ） -->
+    <g stroke-width="1.2">
+      <!-- ノード -->
+      <circle cx="106" cy="74" r="2" fill="#1A1A1A" stroke="none"/>
+      <circle cx="106" cy="96" r="2" fill="#1A1A1A" stroke="none"/>
+      <circle cx="106" cy="118" r="2" fill="#1A1A1A" stroke="none"/>
+      <circle cx="134" cy="68" r="2" fill="#1A1A1A" stroke="none"/>
+      <circle cx="134" cy="92" r="2" fill="#1A1A1A" stroke="none"/>
+      <circle cx="134" cy="118" r="2" fill="#1A1A1A" stroke="none"/>
+      <circle cx="162" cy="74" r="2" fill="#1A1A1A" stroke="none"/>
+      <circle cx="162" cy="96" r="2" fill="#1A1A1A" stroke="none"/>
+      <circle cx="162" cy="118" r="2" fill="#1A1A1A" stroke="none"/>
+      <!-- 結線（軽く波打つ） -->
+      <path d="M 108 74 Q 120 70 132 68"/>
+      <path d="M 108 74 Q 120 82 132 92"/>
+      <path d="M 108 96 Q 120 80 132 68"/>
+      <path d="M 108 96 Q 120 94 132 92"/>
+      <path d="M 108 96 Q 120 108 132 118"/>
+      <path d="M 108 118 Q 120 108 132 92"/>
+      <path d="M 108 118 Q 120 118 132 118"/>
+      <path d="M 136 68 Q 148 72 160 74"/>
+      <path d="M 136 68 Q 148 82 160 96"/>
+      <path d="M 136 92 Q 148 84 160 74"/>
+      <path d="M 136 92 Q 148 94 160 96"/>
+      <path d="M 136 92 Q 148 108 160 118"/>
+      <path d="M 136 118 Q 148 108 160 96"/>
+      <path d="M 136 118 Q 148 118 160 118"/>
+    </g>
+
+    <!-- LLM ラベル -->
+    <g>
+      <text x="135" y="58" font-size="9" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">LLM</text>
+    </g>
+
+    <!-- パラメータ数の注記（箱の内・下） -->
+    <g>
+      <text x="135" y="136" font-size="6" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">数B〜数百B</text>
+    </g>
+
+    <!-- 出力矢印（LLM 箱 → 下方の質問者の頭上へ戻る、続きのテキスト） -->
+    <g stroke-width="1.8">
+      <path d="M 100 144 Q 80 156 60 160"/>
+      <path d="M 60 160 L 66 158"/>
+      <path d="M 60 160 L 64 164"/>
+      <text x="80" y="170" font-size="7" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">回答</text>
+    </g>
+
+    <!-- 訓練データのアイコン群（右下、書類の積み重ね） -->
+    <g stroke-width="1.4">
+      <path d="M 150 156 L 168 156 L 170 178 L 152 178 Z"/>
+      <path d="M 154 160 L 166 160"/>
+      <path d="M 154 165 L 166 165"/>
+      <path d="M 154 170 L 166 170"/>
+      <!-- もう 1 枚（後ろにずらす） -->
+      <path d="M 144 152 L 162 152"/>
+      <path d="M 142 148 L 160 148"/>
+      <text x="160" y="186" font-size="6" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">訓練データ</text>
+    </g>
+
+    <!-- 訓練データ → LLM の矢印（下から上へ） -->
+    <g stroke-width="1.6">
+      <path d="M 156 152 Q 158 148 160 144"/>
+      <path d="M 160 144 L 157 147"/>
+      <path d="M 160 144 L 163 147"/>
+    </g>
+
+  </g>
+</svg>

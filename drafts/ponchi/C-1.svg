@@ -1,0 +1,113 @@
+<svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="sketch" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="11"/>
+      <feDisplacementMap in="SourceGraphic" scale="2.0"/>
+    </filter>
+  </defs>
+  <rect width="192" height="192" fill="#F3F6FB"/>
+  <g filter="url(#sketch)" stroke="#1A1A1A" stroke-linecap="round" stroke-linejoin="round" fill="none">
+
+    <!-- ========== 中央: 会社（社屋） ========== -->
+    <!-- 社名プレート（ロゴではなく額縁＋年） -->
+    <g stroke-width="1.6">
+      <path d="M 78 64 Q 78 60 82 60 L 110 60 Q 114 60 114 64 L 113 70 L 79 70 Z"/>
+      <text x="96" y="67" font-size="6" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">est. 2015</text>
+    </g>
+    <!-- 屋根 -->
+    <g stroke-width="2.2">
+      <path d="M 74 72 L 96 60 L 118 72"/>
+      <!-- 建物本体（やや台形） -->
+      <path d="M 78 72 L 76 122 L 118 123 L 116 72 Z"/>
+    </g>
+    <!-- 入口 -->
+    <g stroke-width="1.8">
+      <path d="M 91 102 Q 91 94 96 94 Q 101 94 101 102 L 101 122 L 91 122 Z"/>
+      <!-- ドアノブ（点） -->
+      <circle cx="98" cy="113" r="0.8" fill="#1A1A1A" stroke="none"/>
+    </g>
+    <!-- 窓 4 つ（少し歪ませる） -->
+    <g stroke-width="1.6">
+      <path d="M 82 80 L 90 79 L 90 88 L 82 88 Z"/>
+      <path d="M 104 80 L 112 80 L 113 88 L 104 88 Z"/>
+      <path d="M 82 92 L 90 92 L 90 100 L 82 99 Z"/>
+      <path d="M 104 92 L 113 92 L 113 100 L 104 100 Z"/>
+    </g>
+    <!-- 建物下のラベル -->
+    <g stroke-width="1.4">
+      <text x="96" y="132" font-size="7" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">AI company</text>
+    </g>
+
+    <!-- ========== 5 つの事業傘（外周） ========== -->
+    <!-- 左上: ChatGPT（吹き出し型） -->
+    <g stroke-width="1.7">
+      <path d="M 10 16 Q 10 8 22 8 L 56 8 Q 66 9 66 19 L 66 30 Q 66 38 56 38 L 40 38 L 32 44 L 34 38 L 22 38 Q 10 38 10 26 Z"/>
+      <text x="38" y="26" font-size="8" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">ChatGPT</text>
+    </g>
+    <!-- 矢印: 建物 → ChatGPT -->
+    <g stroke-width="1.5">
+      <path d="M 78 70 Q 60 56 50 44"/>
+      <path d="M 50 44 L 56 45"/>
+      <path d="M 50 44 L 51 50"/>
+    </g>
+
+    <!-- 右上: API -->
+    <g stroke-width="1.7">
+      <path d="M 128 8 Q 128 4 134 4 L 178 6 Q 184 7 183 14 L 182 28 Q 182 36 174 36 L 138 36 Q 128 35 128 28 Z"/>
+      <text x="156" y="24" font-size="8" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">{ } API</text>
+    </g>
+    <!-- 矢印: 建物 → API -->
+    <g stroke-width="1.5">
+      <path d="M 116 70 Q 132 54 142 42"/>
+      <path d="M 142 42 L 136 43"/>
+      <path d="M 142 42 L 141 48"/>
+    </g>
+
+    <!-- 左下: DALL-E（額縁＋山＋太陽） -->
+    <g stroke-width="1.7">
+      <path d="M 6 144 Q 6 138 14 138 L 54 138 Q 62 138 62 146 L 62 174 Q 62 182 54 182 L 14 182 Q 6 182 6 174 Z"/>
+      <!-- 額縁内: 山の図 -->
+      <path d="M 12 172 L 22 158 L 30 166 L 40 154 L 56 172"/>
+      <!-- 太陽（点） -->
+      <path d="M 48 152 Q 52 152 52 156 Q 52 160 48 160 Q 44 160 44 156 Q 44 152 48 152 Z"/>
+      <text x="34" y="150" font-size="7" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">DALL-E</text>
+    </g>
+    <!-- 矢印: 建物 → DALL-E -->
+    <g stroke-width="1.5">
+      <path d="M 78 122 Q 66 134 60 144"/>
+      <path d="M 60 144 L 65 142"/>
+      <path d="M 60 144 L 64 147"/>
+    </g>
+
+    <!-- 右下: Sora（再生アイコン付きフレーム） -->
+    <g stroke-width="1.7">
+      <path d="M 132 144 Q 132 138 140 138 L 178 138 Q 186 138 186 146 L 186 174 Q 186 182 178 182 L 140 182 Q 132 182 132 174 Z"/>
+      <!-- 再生三角 -->
+      <path d="M 152 154 L 168 162 L 152 170 Z"/>
+      <text x="160" y="150" font-size="8" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">Sora</text>
+    </g>
+    <!-- 矢印: 建物 → Sora -->
+    <g stroke-width="1.5">
+      <path d="M 118 122 Q 128 134 132 144"/>
+      <path d="M 132 144 L 128 142"/>
+      <path d="M 132 144 L 129 147"/>
+    </g>
+
+    <!-- 中央下: Codex（ターミナル枠 + プロンプト記号） -->
+    <g stroke-width="1.7">
+      <path d="M 70 154 Q 70 148 78 148 L 116 148 Q 124 148 124 154 L 124 174 Q 124 180 116 180 L 78 180 Q 70 180 70 174 Z"/>
+      <!-- プロンプト > -->
+      <path d="M 78 162 L 84 167 L 78 172"/>
+      <!-- 入力カーソル -->
+      <path d="M 88 172 L 102 172"/>
+      <text x="110" y="167" font-size="7" font-family="sans-serif" fill="#1A1A1A" stroke="none" text-anchor="middle">Codex</text>
+    </g>
+    <!-- 矢印: 建物 → Codex -->
+    <g stroke-width="1.5">
+      <path d="M 96 124 L 96 146"/>
+      <path d="M 96 146 L 93 142"/>
+      <path d="M 96 146 L 99 142"/>
+    </g>
+
+  </g>
+</svg>
