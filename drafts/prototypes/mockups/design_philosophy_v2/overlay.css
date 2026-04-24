@@ -3,6 +3,179 @@
    base.css の既存トークン・ユーティリティに被らない新 primitive
    ============================================================= */
 
+/* プロトタイプナビ: 右上ハンバーガー → 右側ドロワー */
+.proto-nav-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  width: 44px;
+  height: 44px;
+  border: 1.5px solid var(--ink-blue);
+  border-radius: 8px;
+  background: var(--paper);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(26,26,26,0.08);
+  padding: 0;
+}
+.proto-nav-toggle svg {
+  width: 22px;
+  height: 22px;
+  color: var(--ink-blue);
+}
+.proto-nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26,26,26,0.35);
+  z-index: 99;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+.proto-nav-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 100vh;
+  background: var(--paper);
+  z-index: 101;
+  transform: translateX(100%);
+  transition: transform 0.25s ease;
+  box-shadow: -4px 0 24px rgba(26,26,26,0.12);
+  overflow-y: auto;
+  font-family: var(--font-jp);
+}
+.proto-nav.open .proto-nav-drawer { transform: translateX(0); }
+.proto-nav.open .proto-nav-overlay { opacity: 1; pointer-events: auto; }
+
+.proto-nav-drawer .drawer-head {
+  padding: 20px 22px 14px;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.proto-nav-drawer .drawer-title {
+  font-family: var(--font-jp);
+  font-size: 14px;
+  font-weight: 900;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+}
+.proto-nav-drawer .drawer-sub {
+  font-family: var(--font-en);
+  font-size: 10px;
+  color: var(--ink-3);
+  letter-spacing: 0.08em;
+  margin-top: 2px;
+}
+.proto-nav-drawer .drawer-close {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--ink-2);
+  font-size: 22px;
+  line-height: 1;
+}
+.proto-nav-drawer .drawer-body {
+  padding: 8px 0 40px;
+}
+.proto-nav-drawer details {
+  border-bottom: 1px dotted var(--rule);
+}
+.proto-nav-drawer summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  cursor: pointer;
+  list-style: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.proto-nav-drawer summary::-webkit-details-marker { display: none; }
+.proto-nav-drawer summary .letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background: var(--ink-blue);
+  color: var(--paper);
+  border-radius: 50%;
+  font-family: var(--font-en);
+  font-weight: 900;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+.proto-nav-drawer summary .chapter-name {
+  font-family: var(--font-jp);
+  font-size: 13px;
+  color: var(--ink);
+  font-weight: 700;
+}
+.proto-nav-drawer summary .count {
+  margin-left: auto;
+  font-family: var(--font-en);
+  font-size: 10px;
+  color: var(--ink-3);
+  letter-spacing: 0.05em;
+}
+.proto-nav-drawer details[open] summary {
+  background: var(--paper-2);
+}
+.proto-nav-drawer .entry-list {
+  list-style: none;
+  margin: 0;
+  padding: 4px 0 12px;
+}
+.proto-nav-drawer .entry-item {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 6px 22px 6px 58px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--ink);
+  text-decoration: none;
+  position: relative;
+}
+.proto-nav-drawer .entry-item.is-active {
+  background: var(--ink-blue-50);
+  color: var(--ink-blue-700);
+  font-weight: 700;
+}
+.proto-nav-drawer .entry-item.is-available:hover {
+  background: var(--paper-2);
+}
+.proto-nav-drawer .entry-item.is-pending {
+  color: var(--ink-3);
+  cursor: default;
+}
+.proto-nav-drawer .entry-item .code {
+  font-family: var(--font-en);
+  font-size: 10px;
+  color: var(--ink-2);
+  letter-spacing: 0.05em;
+  min-width: 40px;
+  flex-shrink: 0;
+}
+.proto-nav-drawer .entry-item.is-pending .code { color: var(--ink-4); }
+.proto-nav-drawer .entry-item .pending-mark {
+  margin-left: auto;
+  font-size: 9px;
+  font-family: var(--font-en);
+  color: var(--ink-4);
+  letter-spacing: 0.06em;
+}
+
+
 /* ページ寸法（見開き 2 ページを画面で見られるサイズ） */
 .spread {
   display: flex;
