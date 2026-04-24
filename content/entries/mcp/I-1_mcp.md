@@ -47,7 +47,7 @@ MCP は、そこに **共通のコネクタ規格** を持ち込みました。
 - **MCP Client**：LLM 側の呼び出し口（Claude Code、Cursor など）
 - **MCP Transport**：通信方式（stdio ／ SSE ／ HTTP）
 
-## バイブコーディングでの位置づけ
+## どこで出会うか
 
 Claude Code や Cursor で使える「拡張カタログ」の規格です。公式 MCP（GitHub、Filesystem、Slack、Git など）、コミュニティ MCP（Notion、Figma、Playwright など）、自作 MCP という 3 層でエコシステムが広がっています。
 
@@ -94,7 +94,7 @@ LLM とツールをつなぐ共通コネクタです。
 
 エージェントのツール拡張、データ連携、社内システムとの橋渡し。
 
-### 5. 最初に理解する範囲
+### 5. はじめに
 
 Server / Client / Transport の 3 役と、「共通コネクタ」という発想。
 
@@ -124,7 +124,7 @@ MCP SDK、各種 MCP（GitHub／Playwright／Notion）、自作 MCP のテンプ
 - 🙂 第一印象:
 - 👍 良い点:
 - 👎 ダメな点:
-- 🎯 誰に向くか:
+- 👥 誰に向くか:
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

@@ -48,9 +48,8 @@ REQUIRED_YAML = [
 
 REQUIRED_SECTIONS = [
     "## tagline",
-    "## ひとことで",
     "## 何をしてくれるか",
-    "## バイブコーディングでの位置づけ",
+    "## どこで出会うか",
     "## メイン図",
     "## 関連用語",
     "## この用語の見どころ",
@@ -64,12 +63,17 @@ MIHIDOKORO_SUBS = [
     "### 2. うれしさ",
     "### 3. 注意点",
     "### 4. どこで役立つか",
-    "### 5. 最初に理解する範囲",
+    "### 5. はじめに",
     "### 6. 深掘り先",
 ]
 
-BAD_HEADING_PATTERNS = [
-    ("どこで効くか", "「どこで効くか」→「どこで役立つか」（AI 臭回避）"),
+# 旧テンプレで書かれた箇所を検出して移行を促す（警告のみ）
+DEPRECATED_HEADINGS = [
+    ("どこで効くか", "「どこで効くか」→「どこで役立つか」（AI 臭回避、2026-04-24 決定）"),
+    ("## ひとことで", "「ひとことで」は v2 で廃止。内容は tagline に合流してください"),
+    ("## バイブコーディングでの位置づけ", "「バイブコーディングでの位置づけ」→「どこで出会うか」（v2 改名）"),
+    ("### 5. 最初に理解する範囲", "「最初に理解する範囲」→「はじめに」（v2 改名）"),
+    ("🎯 誰に向くか", "「🎯 誰に向くか」→「👥 誰に向くか」（v2 絵文字変更）"),
 ]
 
 # 強い断定語（本文に入ると減点）
@@ -82,24 +86,29 @@ NON_DESU_MASU_PATTERNS = [
 ]
 
 
-# ─── 字数目安（quality_checklist.md §H と一致） ─────────────────
+# ─── 字数目安（quality_checklist.md §H と一致、v2 誌面ベース） ─────────────────
 
 # セクションごとの [key, display_name, min, max, page]
 # 個別セクションは超過/下回りとも「⚠️ 警告」のみ。
 # ☆（ブロッキング）は左右ページ合計が 100 字超過したときのみ。
 SECTION_TARGETS = [
-    ("tagline",        "tagline",                       25,  40, "left"),
-    ("hitotokoto",     "ひとことで",                     50,  80, "left"),
-    ("nanishiteku",    "何をしてくれるか",               250, 350, "left"),
-    ("vibe_position",  "バイブコーディングでの位置づけ", 180, 280, "left"),
-    ("related_terms",  "関連用語",                       100, 150, "left"),
-    ("mihidokoro",     "見どころ 6 視点",                150, 240, "right"),
-    ("kaihatsu_flow",  "開発フローでの位置",             120, 200, "right"),
+    ("tagline",        "tagline",            25,  40, "left"),
+    ("nanishiteku",    "何をしてくれるか",   60, 100, "left"),
+    ("dokode_deau",    "どこで出会うか",     70, 110, "left"),
+    ("related_terms",  "関連用語",           20,  50, "left"),
+    ("mihidokoro",     "見どころ 6 視点",   120, 200, "right"),
+    ("kaihatsu_flow",  "開発フローでの位置", 80, 180, "right"),
 ]
 
-# 左右ページ合計の目安と ☆ 閾値
-LEFT_TOTAL_MIN, LEFT_TOTAL_MAX = 700, 800
-RIGHT_TOTAL_MIN, RIGHT_TOTAL_MAX = 250, 400
+# 著者記入欄は誌面に出るが、著者本人が後で書く領域。文字数は情報表示のみ（判定しない）。
+AUTHOR_INFO_SECTIONS = [
+    ("tsumazuki",         "非エンジニア視点のつまずき"),
+    ("watashino_comment", "私のコメント"),
+]
+
+# 左右ページ合計の目安と ☆ 閾値（著者欄は合計に含めない）
+LEFT_TOTAL_MIN, LEFT_TOTAL_MAX = 175, 300
+RIGHT_TOTAL_MIN, RIGHT_TOTAL_MAX = 200, 380
 TOTAL_STARS_OVER = 100   # 合計がこの字数を超えて超過すると ☆
 
 
@@ -139,14 +148,19 @@ class Report:
             "| :-- | --: | --: | --: | :-- |",
         ]
         for display, mn, mx, actual, page, judge in self.char_table:
-            if actual < mn:
-                diff = f"-{mn - actual}"
-            elif actual > mx:
-                diff = f"+{actual - mx}"
-            else:
+            # 著者記入欄は target なし（min=max=0 で表現）
+            if mn == 0 and mx == 0:
+                target_str = "—"
                 diff = "—"
-            bold = display.startswith("**")
-            row = f"| {display} | {mn}-{mx} | {actual} | {diff} | {judge} |"
+            else:
+                target_str = f"{mn}-{mx}"
+                if actual < mn:
+                    diff = f"-{mn - actual}"
+                elif actual > mx:
+                    diff = f"+{actual - mx}"
+                else:
+                    diff = "—"
+            row = f"| {display} | {target_str} | {actual} | {diff} | {judge} |"
             out.append(row)
         out.append("")
         return "\n".join(out)
@@ -240,30 +254,43 @@ def check_structure(body: str, r: Report) -> None:
         r.star(f"C. 見どころ 6 視点: {', '.join(missing)} が無い")
 
 
-def check_author_fields_empty(body: str, r: Report) -> None:
-    """著者欄が空スケルトンのままか。AI が先回り記入していたら ☆ 違反。"""
+def check_author_fields_empty(body: str, status: str, r: Report) -> None:
+    """著者欄が空スケルトンのままか。
+
+    - status が `drafting` のときは ☆ 違反（AI がまだ書いている段階なので空が正）
+    - status が `needs_review` 以降は情報表示のみ（著者が記入している可能性）
+    """
+    is_strict = status in ("drafting", "candidate", "", None)
+
     # 非エンジニア視点のつまずき：`-` のみで、語句なしか
     m = re.search(r"## 非エンジニア視点のつまずき\n(.*?)(?=\n## |\n<!--)", body, re.DOTALL)
     if m:
         block = m.group(1).strip()
-        # 各行の `- ` 以降に実質的な文字がないことを確認
         for line in block.split("\n"):
             line = line.strip()
             if line.startswith("-") and len(line) > 1 and line[1:].strip():
-                r.star(f"D. 著者欄: 「非エンジニア視点のつまずき」に AI が記入している箇所あり（{line[:40]}...）")
+                msg = f"D. 著者欄: 「非エンジニア視点のつまずき」に記入あり（{line[:40]}…）"
+                if is_strict:
+                    r.star(msg + " — drafting 中は空スケルトンのままに")
+                else:
+                    r.warn(msg + " — 著者の記入なら OK")
                 break
 
-    # 私のコメント：🙂 第一印象: などのラベルの後ろに本文があれば違反
-    labels = ["🙂 第一印象", "👍 良い点", "👎 ダメな点", "🎯 誰に向くか"]
+    # 私のコメント：4 ラベル（🎯 / 👥 どちらも許容）
+    label_keys = ["第一印象", "良い点", "ダメな点", "誰に向くか"]
     m = re.search(r"## 私のコメント\n(.*?)(?=\n## |\n<!--)", body, re.DOTALL)
     if m:
         block = m.group(1)
-        for label in labels:
+        for lbl in label_keys:
             for line in block.split("\n"):
-                if label in line:
-                    after = line.split(":", 1)[-1].strip() if ":" in line else ""
+                if lbl in line and ":" in line:
+                    after = line.split(":", 1)[-1].strip()
                     if after:
-                        r.star(f"D. 著者欄: 「私のコメント」の {label} に AI が記入している（{after[:40]}）")
+                        msg = f"D. 著者欄: 「私のコメント」の {lbl} に記入あり（{after[:40]}）"
+                        if is_strict:
+                            r.star(msg + " — drafting 中は空ラベルのままに")
+                        else:
+                            r.warn(msg + " — 著者の記入なら OK")
                         break
 
 
@@ -307,19 +334,23 @@ def judge_total(actual: int, mn: int, mx: int) -> tuple[str, str]:
 
 
 def check_char_counts(body: str, r: Report) -> None:
-    """各セクションと左右ページ合計を個別に判定。"""
+    """各セクションと左右ページ合計を個別に判定。著者欄は情報表示のみ。"""
 
     heading_map = {
         "tagline": "tagline",
-        "hitotokoto": "ひとことで",
         "nanishiteku": "何をしてくれるか",
-        "vibe_position": "バイブコーディングでの位置づけ",
+        "dokode_deau": "どこで出会うか",
         "related_terms": "関連用語",
+    }
+    author_heading_map = {
+        "tsumazuki": "非エンジニア視点のつまずき",
+        "watashino_comment": "私のコメント",
     }
 
     left_total = 0
     right_total = 0
 
+    # 採点対象セクション
     for key, display, mn, mx, page in SECTION_TARGETS:
         if key in heading_map:
             text = extract_section(body, heading_map[key])
@@ -343,7 +374,16 @@ def check_char_counts(body: str, r: Report) -> None:
         if mark.startswith("⚠️"):
             r.warn(f"H. {display}: {actual} 字（目安 {mn}-{mx}、{reason}）")
 
-    # 左右ページ合計
+    # 著者記入欄は情報表示のみ（著者が書く領域なので判定しない）
+    for key, display in AUTHOR_INFO_SECTIONS:
+        heading = author_heading_map.get(key)
+        if not heading:
+            continue
+        text = extract_section(body, heading)
+        actual = count_chars(text)
+        r.add_char_row(display, 0, 0, actual, "right", "ℹ️ 著者記入欄")
+
+    # 左右ページ合計（著者欄は含めない）
     left_mark, left_reason = judge_total(left_total, LEFT_TOTAL_MIN, LEFT_TOTAL_MAX)
     left_judge = left_mark + ((" " + left_reason) if left_reason else "")
     r.add_char_row("**左ページ合計**", LEFT_TOTAL_MIN, LEFT_TOTAL_MAX, left_total, "left", left_judge)
@@ -362,10 +402,10 @@ def check_char_counts(body: str, r: Report) -> None:
 
 
 def check_tone(body: str, r: Report) -> None:
-    # 見出しの「どこで効くか」検出
-    for pat, msg in BAD_HEADING_PATTERNS:
+    # 旧テンプレの残骸（v1 → v2 移行ヘルパ）。警告のみ（☆ にはしない）
+    for pat, msg in DEPRECATED_HEADINGS:
         if pat in body:
-            r.star(f"F. 見出し: `{pat}` が残っている — {msg}")
+            r.warn(f"F. v1 テンプレの名残: `{pat}` — {msg}")
 
     # である調／だ調の検出
     for rx in NON_DESU_MASU_PATTERNS:
@@ -458,7 +498,7 @@ def main() -> int:
     r = Report(path)
     check_yaml(fm, r)
     check_structure(body, r)
-    check_author_fields_empty(body, r)
+    check_author_fields_empty(body, status, r)
     check_char_counts(body, r)
     check_tone(body, r)
     check_sources_date(body, fm, r)
