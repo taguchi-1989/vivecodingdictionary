@@ -1,6 +1,47 @@
-# 次セッションへの引き継ぎ（2026-04-25 v4 更新）
+# 次セッションへの引き継ぎ（2026-04-25 v5 更新 / iter 22 反映）
 
-*前セッションで v2 レイアウトの 21 世代反復と全エントリ監査・修正が終わりました。次セッションはこのファイルを最初に開き、続いて [docs/v2_rules_summary.md](../docs/v2_rules_summary.md) を読んでから執筆に入ってください。*
+*前セッションで v2 レイアウトの 21 世代反復と全エントリ監査・修正が終わり、同日に iter 22 で左右ページの役割再バランスを実施しました。次セッションはこのファイルを最初に開き、続いて [docs/v2_rules_summary.md](../docs/v2_rules_summary.md) を読んでから執筆に入ってください。*
+
+## iter 22（2026-04-25）: 左右ページの役割再バランス
+
+**誌面変更 3 点**:
+
+1. **右ページ冒頭タイトル `{{title}} をどう読むか` を削除**（誌面・markdown 双方）。右ページは「この用語の見どころ」から直接始まる
+2. **関連用語ピルを右ページ下段（開発フローの直下）に移動**。markdown 上も右ページ区分に移した
+3. **擬人化ポンチ絵スロットをメインビジュアルに拡大**（200px アイコン・340px 高さ）。左ページ最下段、Before/After の下に置く主役ビジュアル
+
+**伝搬済みファイル**:
+
+- [docs/v2_rules_summary.md](../docs/v2_rules_summary.md) §0 チェックリスト／§1 紙面構造／§4 レイアウト／§5 リネーム履歴
+- [drafts/prototypes/mockups/design_philosophy_v2/overlay.css](../drafts/prototypes/mockups/design_philosophy_v2/overlay.css) `.ponchi-slot` をデフォルトで大サイズに
+- [drafts/prototypes/mockups/design_philosophy_v2/typescript_spread.html](../drafts/prototypes/mockups/design_philosophy_v2/typescript_spread.html) 左ページから関連用語削除・右ページ下段に再配置・右タイトル削除
+- [drafts/prototypes/mockups/design_philosophy_v2.md](../drafts/prototypes/mockups/design_philosophy_v2.md) §3 紙面構成
+- [drafts/prototypes/mockups/design_philosophy_v2/writing_spec.md](../drafts/prototypes/mockups/design_philosophy_v2/writing_spec.md) §1-7 擬人化スロット／§2-1 右ページ冒頭タイトル削除／§2-6 関連用語（右ページへ）
+- [templates/entry_template.md](../templates/entry_template.md) 関連用語ブロックを右ページ区分へ
+- [scripts/validate_entry.py](../scripts/validate_entry.py) `related_terms` を `page="right"` に、左右合計目安を左 155-250／右 220-430 に更新
+
+**既存エントリの移行**: [scripts/migrate_iter22_related_terms.py](../scripts/migrate_iter22_related_terms.py) で **active 12 エントリ**（A-1, A-2, B-1, B-2, C-2, D-12, E-1, F-50, G-1, H-53, I-1, J-14）の `## 関連用語` ブロックを `## 開発フローでの位置（必須）` の直後に移動済み（2026-04-25）。archived 7 エントリはスキップ。再実行しても冪等（`already migrated` を返す）。
+
+**既知の注意**: 移行後も v2 validator（check_entry.py）は全 19 エントリ ☆ 警告 0。ただし strict 側の `scripts/validate_entry.py` は既存エントリで文字数超過（tagline / 何をしてくれるか等）を警告する。これは移行前からの編集課題で、移行による新規回帰ではない。
+
+## 2026-04-25 追加: 静的サイト生成器への移行準備（方針 B 採択）
+
+著者判断で **「markdown を正、HTML/PDF はそこから生成する」方針** に倒した。本プロジェクトは markdown ＋ 仕様の維持が主務。実装（CSS / Astro / TSX / Paged.js）は別担当へ引き渡す想定。
+
+**整備済みの引き渡し資産 4 本**:
+
+- [ledgers/chapters.yaml](chapters.yaml) — letter（A〜J）→ 章ラベル／カテゴリ／ディレクトリのマップ。ハンバーガーナビの自動生成元。
+- [ledgers/entries.csv](entries.csv) — `path` 列を追加（`scripts/sync_entries_csv.py` で md 実体と自動同期）。15 active エントリに path 埋込み済。
+- [docs/entry_schema.yaml](../docs/entry_schema.yaml) — v2_rules_summary §2 の機械可読版。frontmatter 制約・文字数・必須節・リネーム履歴を YAML で集約。**generator / validator / 仕様書の三者が同一入力を参照する単一真実点**。
+- [docs/component_spec_v2.md](../docs/component_spec_v2.md) — `typescript_spread.html` を 14 primitive / 6 セクション / 2 ページ / 1 スプレッドに分解した引き渡し仕様。**スタック採択: Astro + React ハイブリッド（C）**（§0 に確定、2026-04-25）。Paged.js で PDF 化想定。
+
+**新規エントリ追加時の運用**:
+
+1. エントリを書く（entry-writer で）
+2. `python scripts/sync_entries_csv.py` で path 列を更新
+3. `python scripts/validate_entry.py` で字数・トーン検証
+4. `python drafts/prototypes/mockups/design_philosophy_v2/check_entry.py` で構造検証
+5. （任意）`typescript_spread.html` のドロワーに手動追加（generator 稼働後はこの 5 が不要になる）
 
 ---
 
