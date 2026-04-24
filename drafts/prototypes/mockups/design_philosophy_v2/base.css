@@ -1,0 +1,304 @@
+/* ==========================================================================
+   バイブコーディング図鑑 — Design tokens
+   色・型・間隔・罫線を CSS カスタムプロパティで定義。
+   紙面の再現に焦点を当てた最小セット。
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@400;500;700;900&display=swap');
+
+/* Zen Maru Gothic — やわらかい丸ゴシック。本文・見出し共通で使用する主役フォント。 */
+@font-face {
+  font-family: "Zen Maru Gothic";
+  src: url("fonts/ZenMaruGothic-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Zen Maru Gothic";
+  src: url("fonts/ZenMaruGothic-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Zen Maru Gothic";
+  src: url("fonts/ZenMaruGothic-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Zen Maru Gothic";
+  src: url("fonts/ZenMaruGothic-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Zen Maru Gothic";
+  src: url("fonts/ZenMaruGothic-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* --- Colors --- */
+  --paper: #FFFFFF;
+  --paper-2: #F3F6FB;
+  --paper-3: #EAF1FB;
+  --rule: #D6DEE8;
+  --rule-strong: #B9C4D4;
+
+  --ink-blue: #2F7BE6;
+  --ink-blue-700: #1E5FBC;
+  --ink-blue-900: #123E82;
+  --ink-blue-50: #EAF1FB;
+  --ink-blue-100: #D6E4F8;
+
+  --ink: #1A1A1A;
+  --ink-2: #4A5568;
+  --ink-3: #8A94A6;
+  --ink-4: #B4BDCB;
+
+  /* Semantic */
+  --bg: var(--paper);
+  --bg-side: var(--paper-2);
+  --fg: var(--ink);
+  --fg-muted: var(--ink-2);
+  --fg-meta: var(--ink-3);
+  --accent: var(--ink-blue);
+  --accent-ink: var(--ink-blue-700);
+  --border: var(--rule);
+  --border-accent: var(--ink-blue);
+
+  /* --- Type --- */
+  --font-jp: "Zen Maru Gothic", "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  --font-jp-display: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+  --font-en: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-brand: "Noto Sans Javanese", "Noto Sans JP", serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  /* sizes (印刷想定: 紙面 ~1000px相当) */
+  --fs-meta: 11px;
+  --fs-caption: 12px;
+  --fs-body-sm: 13px;
+  --fs-body: 14px;
+  --fs-body-lg: 16px;
+  --fs-lead: 18px;
+  --fs-h4: 18px;
+  --fs-h3: 22px;
+  --fs-h2: 28px;
+  --fs-h1: 40px;
+  --fs-number: 64px;     /* 通し番号（101 等） */
+  --fs-number-lg: 96px;  /* 扉の大きな番号 */
+
+  /* line heights */
+  --lh-tight: 1.25;
+  --lh-snug: 1.4;
+  --lh-normal: 1.6;
+  --lh-body: 1.75;
+
+  /* letter spacing */
+  --ls-jp-tight: -0.01em;
+  --ls-jp-body: 0.02em;
+  --ls-en-caps: 0.08em;
+
+  /* --- Spacing (8pt grid) --- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-7: 32px;
+  --sp-8: 40px;
+  --sp-9: 48px;
+  --sp-10: 64px;
+
+  /* --- Radii --- */
+  --radius-sm: 4px;
+  --radius: 8px;
+  --radius-lg: 12px;
+
+  /* --- Borders --- */
+  --line: 1px solid var(--rule);
+  --line-strong: 1px solid var(--rule-strong);
+  --line-accent: 1.5px solid var(--ink-blue);
+  --line-accent-thick: 3px solid var(--ink-blue);
+
+  /* --- Elevation (ごく控えめ) --- */
+  --shadow-paper: 0 1px 2px rgba(26,26,26,.04), 0 8px 24px rgba(26,26,26,.06);
+
+  /* --- Layout --- */
+  --page-pad: 48px;
+  --sidebar-w: 200px;
+  --top-bar-h: 4px;
+}
+
+/* ==========================================================================
+   Base element styles — 見出し・本文の型を意味的に固定
+   ========================================================================== */
+
+.vbcd, .vbcd * {
+  box-sizing: border-box;
+}
+
+.vbcd {
+  font-family: var(--font-jp);
+  font-feature-settings: "palt";
+  color: var(--fg);
+  background: var(--bg);
+  line-height: var(--lh-body);
+  letter-spacing: var(--ls-jp-body);
+}
+
+.vbcd h1, .vbcd .h1 {
+  font-family: var(--font-jp);
+  font-weight: 900;
+  font-size: var(--fs-h1);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-jp-tight);
+  color: var(--fg);
+  margin: 0;
+}
+
+.vbcd h2, .vbcd .h2 {
+  font-weight: 700;
+  font-size: var(--fs-h2);
+  line-height: var(--lh-snug);
+  margin: 0;
+}
+
+.vbcd h3, .vbcd .h3 {
+  font-weight: 700;
+  font-size: var(--fs-h3);
+  line-height: var(--lh-snug);
+  margin: 0;
+}
+
+.vbcd h4, .vbcd .h4 {
+  font-weight: 700;
+  font-size: var(--fs-h4);
+  line-height: var(--lh-snug);
+  margin: 0;
+}
+
+.vbcd p { margin: 0; font-size: var(--fs-body); }
+.vbcd .body-sm { font-size: var(--fs-body-sm); color: var(--fg-muted); }
+.vbcd .meta {
+  font-family: var(--font-en);
+  font-size: var(--fs-meta);
+  color: var(--fg-meta);
+  letter-spacing: var(--ls-en-caps);
+}
+
+.vbcd .number {
+  font-family: var(--font-en);
+  font-weight: 900;
+  font-size: var(--fs-number);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.vbcd .en { font-family: var(--font-en); }
+
+/* Accent tokens */
+.vbcd .top-bar {
+  height: var(--top-bar-h);
+  background: var(--ink-blue);
+}
+.vbcd .hairline { border-top: var(--line); }
+
+/* Lead (quote) — 左に青の縦棒 */
+.vbcd .lead {
+  border-left: var(--line-accent-thick);
+  padding: 2px 0 2px var(--sp-4);
+  font-weight: 700;
+  font-size: var(--fs-lead);
+  line-height: var(--lh-snug);
+}
+
+/* Bullet list — 小さな青丸 */
+.vbcd ul.bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.vbcd ul.bullets li {
+  position: relative;
+  padding-left: var(--sp-4);
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  margin-bottom: var(--sp-1);
+}
+.vbcd ul.bullets li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.65em;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--ink-blue);
+}
+
+/* Category breadcrumb */
+.vbcd .breadcrumb {
+  font-family: var(--font-en);
+  font-size: var(--fs-meta);
+  color: var(--fg-meta);
+  letter-spacing: var(--ls-en-caps);
+}
+.vbcd .breadcrumb .sep { margin: 0 6px; color: var(--ink-4); }
+
+/* Figure frame — 角丸+青線+淡青塗り */
+.vbcd .figure {
+  border: var(--line-accent);
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+.vbcd .figure--fill { background: var(--ink-blue-50); }
+
+/* Category tag (pill) */
+.vbcd .tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  border: 1px solid var(--ink-blue);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-en);
+  font-size: var(--fs-meta);
+  color: var(--ink-blue-700);
+  letter-spacing: var(--ls-en-caps);
+  background: var(--paper);
+}
+.vbcd .tag--fill {
+  background: var(--ink-blue);
+  color: var(--paper);
+  border-color: var(--ink-blue);
+}
+.vbcd .tag--muted {
+  border-color: var(--rule-strong);
+  color: var(--ink-2);
+}
+
+/* Section label — サイドバー見出し */
+.vbcd .section-label {
+  font-family: var(--font-jp);
+  font-weight: 700;
+  font-size: var(--fs-body-sm);
+  color: var(--ink-blue-700);
+  letter-spacing: var(--ls-jp-body);
+  margin-bottom: 6px;
+}
+
+/* Page chrome */
+.vbcd .page {
+  background: var(--paper);
+  box-shadow: var(--shadow-paper);
+  overflow: hidden;
+  position: relative;
+}

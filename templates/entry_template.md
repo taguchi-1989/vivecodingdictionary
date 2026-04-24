@@ -46,7 +46,8 @@ status: drafting         # drafting / sample / needs_source / needs_review / rea
 
 ## tagline
 
-<!-- タイトル直下のリードコピー。25〜40 字・1〜2 文で「この用語が何か」を言い切る。
+<!-- タイトル直下の青帯に載るリードコピー。25〜45 字目安（推奨 30〜38 字）。
+     1〜2 文で「この用語が何か」を言い切る。名詞止めも可。
      誌面 v2 以降、旧「ひとことで」は本セクションに合流させた。 -->
 
 
@@ -231,6 +232,11 @@ status: drafting         # drafting / sample / needs_source / needs_review / rea
 
 
 ## 出典メモ
+
+<!-- 形式: URL または誌名 — checked YYYY-MM-DD
+     誌面 v2 以降、ここに書いた参考 URL の上位 2〜3 件が
+     右ページ下段（開発フロー図の下）に「🔗 参考 URL1 · URL2 · URL3 · checked YYYY-MM-DD」
+     として自動的に表示される想定。最重要のものを上に置く。 -->
 
 - 
 

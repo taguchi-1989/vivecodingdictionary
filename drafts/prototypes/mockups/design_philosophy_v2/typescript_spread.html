@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>TypeScript 見開き — iter 1</title>
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="overlay.css">
+<style>
+body { margin: 0; padding: 40px 20px; background: #E5EAF0; font-family: var(--font-jp); }
+</style>
+</head>
+<body>
+<div class="spread">
+
+  <!-- ========== 左ページ p.04 ========== -->
+  <section class="vbcd page">
+    <div class="page-chrome-top">
+      <div class="chrome-left">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        <span class="chrome-label">技術用語</span>
+      </div>
+      <span class="chrome-page">04</span>
+    </div>
+
+    <div class="page-body">
+      <h1 class="title-hero">TypeScript</h1>
+      <div class="tagline-bar">JavaScript に型の考え方を足し、開発時のミスを見つけやすくする仕組み。</div>
+
+      <div class="tag-row">
+        <span class="tag-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+          体験区分：少しだけ触った
+        </span>
+        <span class="tag-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="15" width="4" height="6"/><rect x="10" y="10" width="4" height="11"/><rect x="17" y="5" width="4" height="16"/></svg>
+          推奨読者レベル：Level 2〜3
+        </span>
+      </div>
+
+      <div class="body-section">
+        <span class="icon-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </span>
+        <div class="body-content">
+          <h3 class="body-heading">何をしてくれるか</h3>
+          <p class="body-text">変数や関数の受け渡しが想定どおりかを確認しやすくします。大規模化したコードでも、読みやすさと保守性を上げやすくなります。</p>
+        </div>
+      </div>
+
+      <div class="body-section">
+        <span class="icon-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </span>
+        <div class="body-content">
+          <h3 class="body-heading">どこで出会うか</h3>
+          <p class="body-text">React / Next.js の開発、エディタ上の警告、ビルド時のエラーなどでよく出会います。非エンジニアでも、開発会話で名前を聞く機会が多いです。</p>
+        </div>
+      </div>
+
+      <div class="section-heading"><span class="label">Before / After</span></div>
+      <div class="figure-ba">
+        <div class="ba-cols">
+          <div class="ba-col">
+            <div class="ba-box">
+              <div class="ba-label">Before（JavaScript）</div>
+<pre><span class="kw">function</span> add(a, b) {
+  <span class="kw">return</span> a + b
+}
+add(<span class="str">'1'</span>, 2)</pre>
+            </div>
+            <div class="ba-caption warn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              実行して初めて違和感に気づく
+            </div>
+          </div>
+          <div class="ba-arrow">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+          <div class="ba-col">
+            <div class="ba-box">
+              <div class="ba-label">After（TypeScript）</div>
+<pre><span class="kw">function</span> add(a: <span class="kw">number</span>, b: <span class="kw">number</span>) {
+  <span class="kw">return</span> a + b
+}
+add(<span class="str">'1'</span>, 2) <span class="cm">// エラー</span></pre>
+            </div>
+            <div class="ba-caption ok">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              実行前に型のズレを見つけやすい
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ponchi-slot">
+        <div class="ponchi-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/><path d="M9 12l-2 3m8-3l2 3"/></svg>
+        </div>
+        <div class="ponchi-caption">
+          <div class="ponchi-title">TypeScript を使う人</div>
+          <p class="ponchi-hint">「型」を味方にしているエンジニアの 1 コマ。たとえば入力欄の前で型違いに気づいて「おっ」となる瞬間。</p>
+          <span class="ponchi-todo">擬人化ポンチ絵 · 後日差し込み</span>
+        </div>
+      </div>
+
+      <div class="section-heading"><span class="label">関連用語</span></div>
+      <div class="related-row">
+        <span class="related-pill">JavaScript</span>
+        <span class="related-pill">ESLint</span>
+        <span class="related-pill">React</span>
+        <span class="related-pill">コンパイル</span>
+        <span class="related-pill">tsc</span>
+      </div>
+    </div>
+
+    <div class="page-chrome-bottom">
+      <div class="chrome-left-foot">
+        2026.04<span class="sep">·</span>Draft
+      </div>
+      <div class="chrome-right-foot">
+        <span class="slot-placeholder">（会話での使い方例）</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 右ページ p.05 ========== -->
+  <section class="vbcd page">
+    <div class="page-chrome-top">
+      <div class="chrome-left">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        <span class="chrome-label">TypeScript の見方</span>
+      </div>
+      <span class="chrome-page">05</span>
+    </div>
+
+    <div class="page-body">
+      <h1 class="title-hero title-hero--right">TypeScript をどう読むか</h1>
+
+      <div class="section-heading"><span class="label">この用語の見どころ</span></div>
+      <div class="seepoint-grid">
+        <div class="seepoint-cell">
+          <span class="badge-num">1</span>
+          <svg class="seepoint-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2" fill="currentColor"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>
+          <div class="seepoint-title">役割</div>
+          <p class="seepoint-body">型の情報で、ミスを早めに見つけやすくする。</p>
+        </div>
+        <div class="seepoint-cell">
+          <span class="badge-num">2</span>
+          <svg class="seepoint-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <div class="seepoint-title">うれしさ</div>
+          <p class="seepoint-body">大きなコードでも読みやすさを保ちやすい。</p>
+        </div>
+        <div class="seepoint-cell">
+          <span class="badge-num">3</span>
+          <svg class="seepoint-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <div class="seepoint-title">注意点</div>
+          <p class="seepoint-body">最初は記法が増えて難しく感じやすい。</p>
+        </div>
+        <div class="seepoint-cell">
+          <span class="badge-num">4</span>
+          <svg class="seepoint-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-7 7c0 2.4 1.2 4.5 3 5.7V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.3c1.8-1.2 3-3.3 3-5.7a7 7 0 0 0-7-7z"/></svg>
+          <div class="seepoint-title">どこで役立つか</div>
+          <p class="seepoint-body">共同開発、保守、レビューで役立ちやすい。</p>
+        </div>
+        <div class="seepoint-cell">
+          <span class="badge-num">5</span>
+          <svg class="seepoint-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3C9 6 7 9 7 12c0 5 5 9 5 9s5-4 5-9c0-3-2-6-5-9z"/><path d="M12 3v18"/></svg>
+          <div class="seepoint-title">はじめに</div>
+          <p class="seepoint-body">型注釈、エラー表示、JavaScript との違い。</p>
+        </div>
+        <div class="seepoint-cell">
+          <span class="badge-num">6</span>
+          <svg class="seepoint-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h8"/><polyline points="14 2 14 8 20 8"/><circle cx="18" cy="17" r="3"/><line x1="20.5" y1="19.5" x2="23" y2="22"/></svg>
+          <div class="seepoint-title">深掘り先</div>
+          <p class="seepoint-body">interface / type / generics は後からでよい。</p>
+        </div>
+      </div>
+
+      <div class="bottom-row">
+        <div>
+          <div class="section-heading"><span class="label">非エンジニア視点のつまずき</span></div>
+          <div class="list-block">
+            <ul>
+              <li>「型」が何を意味するのか、最初は直感しづらい</li>
+              <li>エラーが出ると、何が悪いのか読みにくい</li>
+              <li>JavaScript と何が違うのかが曖昧になりやすい</li>
+              <li>全部理解しないと使えないように見えてしまう</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="section-heading"><span class="label">私のコメント</span></div>
+          <div class="comment-block">
+            <ul>
+              <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></span><div><span class="cl">第一印象:</span>最初は少し堅いが、意図はかなりまっとう。</div></li>
+              <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg></span><div><span class="cl">良い点:</span>早い段階で事故を減らしやすい。</div></li>
+              <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"/></svg></span><div><span class="cl">ダメな点:</span>初学者には記法の圧がある。</div></li>
+              <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><div><span class="cl">誰に向くか:</span>React / Next.js に触る人、共同開発に入る人。</div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-heading"><span class="label">開発フローでの位置</span></div>
+      <div class="flow-row">
+        <div class="flow-step">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <div class="flow-label">JavaScript<br>を書く</div>
+        </div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-step">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><text x="12" y="16" text-anchor="middle" font-family="Inter" font-weight="900" font-size="9" fill="currentColor" stroke="none">TS</text></svg>
+          <div class="flow-label">TypeScript<br>が確認する</div>
+        </div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-step">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <div class="flow-label">エディタ/ビルド<br>で警告</div>
+        </div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-step">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <div class="flow-label">修正して<br>進む</div>
+        </div>
+      </div>
+
+      <div class="references-row">
+        <svg class="ref-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.71"/></svg>
+        <span class="ref-label">参考</span>
+        <a class="ref-url">typescriptlang.org</a>
+        <span class="ref-sep">·</span>
+        <a class="ref-url">developer.mozilla.org</a>
+        <span class="ref-sep">·</span>
+        <a class="ref-url">typescript-jp.gitbook.io</a>
+        <span class="ref-date">checked 2026-04-24</span>
+      </div>
+    </div>
+
+    <div class="page-chrome-bottom">
+      <div class="chrome-left-foot">
+        <span class="entry-code">F-01<span class="sep">·</span>language</span>
+      </div>
+      <div class="chrome-inline">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        <span class="book-title">バイブコーディング図鑑</span>
+      </div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>

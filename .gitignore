@@ -29,3 +29,7 @@ out/
 
 # Claude Code
 .claude/settings.local.json
+.playwright-mcp/
+
+# Design System v2 prototype — large fonts copied from zip, re-extractable
+drafts/prototypes/mockups/design_philosophy_v2/fonts/
