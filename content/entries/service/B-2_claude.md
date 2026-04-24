@@ -55,16 +55,6 @@ Anthropic が提供する AI アシスタントです。対話・文章・コー
 - シーン3: 業務担当が API で社内ツールに組み込む — 「問い合わせメールを自動分類したい」
 - 並べる基準: 使う人の立場別（企画 / 開発 / 業務）
 
-## 関連用語
-
-- Anthropic — Claude を作っている会社
-- Claude Code — Claude を CLI／エージェントとして使う道具（略称 CC）
-- Claude.ai — ブラウザから Claude を使う標準窓口
-- Artifacts — Claude が生成物を独立パネルに出す UI 機能
-- API — Claude をアプリから呼ぶためのインターフェース
-
-<!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
-
 ## この用語の見どころ
 
 ### 1. 役割
@@ -101,6 +91,16 @@ Extended Thinking、Artifacts、MCP、Projects、ナーフ（G-46）。
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
+## 関連用語
+
+- Anthropic — Claude を作っている会社
+- Claude Code — Claude を CLI／エージェントとして使う道具（略称 CC）
+- Claude.ai — ブラウザから Claude を使う標準窓口
+- Artifacts — Claude が生成物を独立パネルに出す UI 機能
+- API — Claude をアプリから呼ぶためのインターフェース
+
+<!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
+
 ## 非エンジニアのつまずき
 
 -

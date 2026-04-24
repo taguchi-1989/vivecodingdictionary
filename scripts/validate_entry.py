@@ -91,13 +91,16 @@ NON_DESU_MASU_PATTERNS = [
 # セクションごとの [key, display_name, min, max, page]
 # 個別セクションは超過/下回りとも「⚠️ 警告」のみ。
 # ☆（ブロッキング）は左右ページ合計が 100 字超過したときのみ。
+# v2_rules_summary.md §2 の決定版ルールを写したもの。数値変更時は v2_rules_summary を先に動かす。
+# min/max の「推奨範囲」。超過は ⚠️ 警告（☆ は左右合計 + 100 字超でのみ）
 SECTION_TARGETS = [
-    ("tagline",        "tagline",            25,  40, "left"),
-    ("nanishiteku",    "何をしてくれるか",   60, 100, "left"),
-    ("dokode_deau",    "どこで出会うか",     70, 110, "left"),
-    ("related_terms",  "関連用語",           20,  50, "left"),
-    ("mihidokoro",     "見どころ 6 視点",   120, 200, "right"),
+    ("tagline",        "tagline",            25,  45, "left"),   # 許容 25-45, 推奨 30-38
+    ("nanishiteku",    "何をしてくれるか",   60, 200, "left"),   # 許容 60-200, 推奨 80-150
+    ("dokode_deau",    "どこで出会うか",     60, 200, "left"),   # 許容 60-200, 推奨 80-150
+    ("mihidokoro",     "見どころ 6 視点",   120, 240, "right"),  # 6 視点合計（各 15-40、深掘り 15-50）
     ("kaihatsu_flow",  "開発フローでの位置", 80, 180, "right"),
+    # iter 22（2026-04-25）: 関連用語を左ページから右ページ下段（開発フロー直下）へ移動
+    ("related_terms",  "関連用語",           20,  50, "right"),
 ]
 
 # 著者記入欄は誌面に出るが、著者本人が後で書く領域。文字数は情報表示のみ（判定しない）。
@@ -107,8 +110,9 @@ AUTHOR_INFO_SECTIONS = [
 ]
 
 # 左右ページ合計の目安と ☆ 閾値（著者欄は合計に含めない）
-LEFT_TOTAL_MIN, LEFT_TOTAL_MAX = 175, 300
-RIGHT_TOTAL_MIN, RIGHT_TOTAL_MAX = 200, 380
+# iter 22（2026-04-25）: 関連用語（20-50 字）が左→右へ移動したため、左は -20/-50、右は +20/+50 シフト
+LEFT_TOTAL_MIN, LEFT_TOTAL_MAX = 155, 250
+RIGHT_TOTAL_MIN, RIGHT_TOTAL_MAX = 220, 430
 TOTAL_STARS_OVER = 100   # 合計がこの字数を超えて超過すると ☆
 
 

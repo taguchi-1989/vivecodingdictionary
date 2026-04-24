@@ -522,22 +522,22 @@
 .figure-ba .ba-caption.ok { color: var(--ink-blue-700); }
 .figure-ba .ba-caption.warn { color: #B24E3F; }
 
-/* 擬人化ポンチ絵スロット（左ページ、後日差し込み枠） */
+/* 擬人化ポンチ絵スロット（左ページ メインビジュアル／後日差し込み枠） */
 .ponchi-slot {
   margin-top: 20px;
   border: 1.5px dashed var(--ink-blue);
   border-radius: var(--radius-lg);
-  padding: 20px 16px;
+  padding: 28px 24px;
   background: var(--paper-2);
   display: flex;
   align-items: center;
-  gap: 16px;
-  min-height: 150px;
+  gap: 24px;
+  min-height: 340px;
 }
 .ponchi-slot .ponchi-icon {
   flex-shrink: 0;
-  width: 96px;
-  height: 96px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   background: var(--paper);
   border: 1.5px dashed var(--ink-blue);
@@ -546,20 +546,20 @@
   justify-content: center;
   color: var(--ink-blue);
 }
-.ponchi-slot .ponchi-icon svg { width: 48px; height: 48px; }
+.ponchi-slot .ponchi-icon svg { width: 104px; height: 104px; }
 .ponchi-slot .ponchi-caption {
   flex: 1;
 }
 .ponchi-slot .ponchi-title {
   font-family: var(--font-jp);
   font-weight: 700;
-  font-size: 15px;
+  font-size: 18px;
   color: var(--ink-blue-700);
-  margin: 0 0 5px;
+  margin: 0 0 8px;
 }
 .ponchi-slot .ponchi-hint {
   font-family: var(--font-jp);
-  font-size: 14px;
+  font-size: 15px;
   color: var(--ink-2);
   line-height: 1.7;
   margin: 0;
@@ -591,6 +591,209 @@
   font-weight: 500;
   color: var(--ink);
   background: var(--paper);
+}
+
+/* ──────────────────────────────────────────
+ * figure_type 別 primitive（iter 22 / 2026-04-25 で 5 種類に拡張）
+ *   - .figure-ba          before_after
+ *   - .figure-structure   structure
+ *   - .figure-comparison  comparison
+ *   - .figure-workflow    workflow
+ *   - .figure-timeline    timeline
+ * 共通コンテナクラスは `.figure`。具体のスタイルは各 `.figure--{type}`。
+ * overlay.css ではスケッチ段階。実装担当（Astro 移行時）が仕上げる。
+ * ──────────────────────────────────────────*/
+
+.figure {
+  border: 1.5px solid var(--ink-blue);
+  border-radius: var(--radius-lg);
+  padding: 18px 16px;
+  background: var(--paper);
+  margin-top: 6px;
+}
+
+/* figure: structure ── 中心ハブ + 周辺ノード（1〜4 個 + 下支え） */
+.figure-structure .st-hub {
+  text-align: center;
+  margin-bottom: 14px;
+}
+.figure-structure .st-hub-label {
+  display: inline-block;
+  padding: 6px 18px;
+  background: var(--ink-blue-100);
+  color: var(--ink-blue-900);
+  font-weight: 900;
+  font-size: 18px;
+  border-radius: 999px;
+}
+.figure-structure .st-cols {
+  display: grid;
+  grid-template-columns: repeat(var(--st-cols-count, 3), 1fr);
+  gap: 10px;
+}
+.figure-structure .st-card {
+  border: 1px solid var(--ink-blue);
+  border-radius: 8px;
+  background: var(--paper-2);
+  padding: 10px 10px 12px;
+  text-align: center;
+}
+.figure-structure .st-card-title {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--ink-blue-700);
+  margin: 0 0 4px;
+}
+.figure-structure .st-card-body {
+  font-size: 11.5px;
+  color: var(--ink-2);
+  line-height: 1.55;
+  margin: 0;
+}
+.figure-structure .st-base {
+  margin-top: 10px;
+  text-align: center;
+  padding: 6px 12px;
+  background: var(--paper-2);
+  border: 1px dashed var(--ink-blue);
+  border-radius: 6px;
+  font-size: 12px;
+  color: var(--ink-blue-700);
+  font-weight: 700;
+}
+
+/* figure: comparison ── 2〜4 列の縦比較（価格・プランなど） */
+.figure-comparison .cp-cols {
+  display: grid;
+  grid-template-columns: repeat(var(--cp-cols-count, 3), 1fr);
+  gap: 10px;
+}
+.figure-comparison .cp-col {
+  border: 1px solid var(--ink-blue);
+  border-radius: 8px;
+  background: var(--paper);
+  padding: 12px 10px;
+}
+.figure-comparison .cp-col--highlight {
+  background: var(--ink-blue-100);
+  border-color: var(--ink-blue);
+  border-width: 1.5px;
+}
+.figure-comparison .cp-head {
+  font-weight: 900;
+  font-size: 14px;
+  color: var(--ink-blue-900);
+  text-align: center;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--ink-blue-100);
+}
+.figure-comparison .cp-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--ink);
+}
+
+/* figure: workflow ── ステップボックス + 矢印（横スクロール系） */
+.figure-workflow .wf-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.figure-workflow .wf-step {
+  flex: 1 1 0;
+  min-width: 84px;
+  border: 1px solid var(--ink-blue);
+  border-radius: 8px;
+  background: var(--paper-2);
+  padding: 10px 8px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--ink);
+}
+.figure-workflow .wf-step-title {
+  font-weight: 700;
+  color: var(--ink-blue-700);
+  font-size: 12.5px;
+  margin-bottom: 2px;
+}
+.figure-workflow .wf-arrow {
+  color: var(--ink-blue);
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* figure: timeline ── 横軸 + マイルストーン点列 */
+.figure-timeline {
+  padding: 22px 16px 18px;
+}
+.figure-timeline .tl-axis {
+  position: relative;
+  height: 2px;
+  background: var(--ink-blue);
+  margin: 14px 12px 26px;
+}
+.figure-timeline .tl-events {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 12px;
+}
+.figure-timeline .tl-event {
+  position: relative;
+  flex: 1 1 0;
+  text-align: center;
+  padding-top: 20px;
+}
+.figure-timeline .tl-event::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--ink-blue);
+}
+.figure-timeline .tl-date {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink-blue-700);
+  margin-bottom: 2px;
+}
+.figure-timeline .tl-label {
+  font-size: 12px;
+  color: var(--ink);
+  line-height: 1.45;
+}
+
+/* 開発フロー 5 ステップ圧縮対策 ── iter 22 検証で B-3 が 5 ステップになり
+ * 4 ステップ前提の既存 `.flow-step` 幅では窮屈だったため、
+ * flex-basis:0 で均等分配し、矢印を flex-shrink させる。 */
+.flow-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: nowrap;
+}
+.flow-row .flow-step {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.flow-row .flow-arrow {
+  flex-shrink: 0;
+}
+/* 5 ステップ時のラベル縮小（推奨 4・許容 5） */
+.flow-row:has(.flow-step:nth-child(9)) .flow-label,
+.flow-row:has(.flow-step:nth-child(8)) .flow-label {
+  /* nth-child(9) = step 5（step 間に arrow が入るので step 5 は 9 番目） */
+  font-size: 13px;
+  line-height: 1.3;
 }
 
 /* 右ページ サブタイトル */

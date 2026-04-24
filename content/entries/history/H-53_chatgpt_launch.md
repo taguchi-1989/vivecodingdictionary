@@ -61,16 +61,6 @@ status: needs_review
   - GitHub Copilot Chat、Cursor、各社 AI 検索
   - 2024 頃から「AI エージェント元年」へ
 
-## 関連用語
-
-- OpenAI — ChatGPT を公開した会社
-- GPT-3 系 — ChatGPT 登場時に使われていたモデル系譜
-- GPT-4 リリース — 2023-03。ChatGPT の能力を大きく引き上げた後続
-- Bard → Gemini — Google の追随。改名の歴史
-- AI エージェント元年 — ChatGPT 登場から 2 年後の次のフェーズ
-
-<!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
-
 ## この用語の見どころ
 
 ### 1. 役割
@@ -107,6 +97,16 @@ GPT-3 → GPT-3.5 → GPT-4 → GPT-5 の系譜、AI エージェント元年（
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
+## 関連用語
+
+- OpenAI — ChatGPT を公開した会社
+- GPT-3 系 — ChatGPT 登場時に使われていたモデル系譜
+- GPT-4 リリース — 2023-03。ChatGPT の能力を大きく引き上げた後続
+- Bard → Gemini — Google の追随。改名の歴史
+- AI エージェント元年 — ChatGPT 登場から 2 年後の次のフェーズ
+
+<!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
+
 ## 非エンジニアのつまずき
 
 -

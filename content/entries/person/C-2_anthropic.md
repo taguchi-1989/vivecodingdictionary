@@ -51,16 +51,6 @@ Claude を作り、最先端モデルを提供する AI 企業です。三大 AI
 - 周辺の要素（4〜5 個）: 三大 AI 企業のポジション／Claude 系製品（Claude.ai / Claude Code / API）／創業者（Dario・Daniela Amodei）／研究領域（Constitutional AI、RSP）／関係先（OpenAI 分派）
 - 関係の描き方: 上に「三大 AI 企業」の帯、右に製品、左に創業者、下に研究、矢印で「研究 → 製品化」の循環
 
-## 関連用語
-
-- Claude — Anthropic の主力製品（AI アシスタント）
-- Dario Amodei — Anthropic の CEO、元 OpenAI の研究副社長
-- Claude Code — Claude を CLI で動かす Anthropic 公式ツール
-- OpenAI — Anthropic の創業者たちが元いた会社
-- Google DeepMind — 並ぶ三大 AI 企業の一角
-
-<!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
-
 ## この用語の見どころ
 
 ### 1. 役割
@@ -97,6 +87,16 @@ Constitutional AI、RSP、Interpretability の論文。
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
+## 関連用語
+
+- Claude — Anthropic の主力製品（AI アシスタント）
+- Dario Amodei — Anthropic の CEO、元 OpenAI の研究副社長
+- Claude Code — Claude を CLI で動かす Anthropic 公式ツール
+- OpenAI — Anthropic の創業者たちが元いた会社
+- Google DeepMind — 並ぶ三大 AI 企業の一角
+
+<!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
+
 ## 非エンジニアのつまずき
 
 -
