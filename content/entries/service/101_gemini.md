@@ -16,7 +16,7 @@ related_terms:
   - Gemini 2.5 Flash
   - Gemini 2.5 Flash-Lite
   - Vertex AI
-status: sample
+status: archived
 ---
 
 # Gemini

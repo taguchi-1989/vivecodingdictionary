@@ -10,7 +10,7 @@ A-8,,色・記号の凡例,common,meta,candidate,
 A-9,,索引,common,meta,candidate,
 A-10,,更新履歴と更新方針,common,meta,candidate,
 A-11,,略称表記,common,meta,candidate,
-B-1,101,Gemini,service,ai_assistant,sample,旧3桁ID連携
+B-1,101,Gemini,service,ai_assistant,needs_review,新テンプレ書き起こし済（2026-04-24）。legacy 101 は archived
 B-2,,Claude,service,ai_assistant,needs_review,
 B-3,,ChatGPT,service,ai_assistant,candidate,
 B-4,,Cursor,service,ai_assistant,candidate,
