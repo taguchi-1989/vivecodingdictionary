@@ -1,0 +1,476 @@
+#!/usr/bin/env python3
+"""
+VibeCodingDictionary エントリ検証スクリプト
+
+Usage:
+    # 単体実行：ファイルパスを引数に
+    python3 scripts/validate_entry.py content/entries/service/B-1_gemini.md
+
+    # Hook 実行：PostToolUse JSON payload を stdin から受け取る
+    echo '{"tool_input":{"file_path":"..."}}' | python3 scripts/validate_entry.py
+
+Exit codes:
+    0  全パス
+    1  警告のみ（☆ 違反なし。transcript に表示される想定）
+    2  ☆ 違反あり（PostToolUse で stderr を Claude に見せる）
+
+設計メモ:
+    - docs/quality_checklist.md の ☆ 項目を機械的にチェック
+    - archived / sample ステータスはチェック対象外
+    - 左ページ 700-800 字、右ページ 250-400 字（100 字超過で ☆ 違反）
+    - 標準ライブラリのみ（PyYAML なし、手書き frontmatter parser）
+"""
+
+import io
+import json
+import re
+import sys
+from pathlib import Path
+
+# Windows cp932 でも絵文字を出力できるように stdout/stderr を UTF-8 に統一
+if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+if sys.stderr.encoding and sys.stderr.encoding.lower() != "utf-8":
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
+
+
+# ─── 設定 ─────────────────────────────────────────
+
+REQUIRED_YAML = [
+    "id",
+    "title",
+    "category",
+    "figure_type",
+    "page_layout",
+    "evaluation_date",
+    "status",
+]
+
+REQUIRED_SECTIONS = [
+    "## tagline",
+    "## ひとことで",
+    "## 何をしてくれるか",
+    "## バイブコーディングでの位置づけ",
+    "## メイン図",
+    "## 関連用語",
+    "## この用語の見どころ",
+    "## 開発フローでの位置（必須）",
+    "## 非エンジニア視点のつまずき",
+    "## 私のコメント",
+]
+
+MIHIDOKORO_SUBS = [
+    "### 1. 役割",
+    "### 2. うれしさ",
+    "### 3. 注意点",
+    "### 4. どこで役立つか",
+    "### 5. 最初に理解する範囲",
+    "### 6. 深掘り先",
+]
+
+BAD_HEADING_PATTERNS = [
+    ("どこで効くか", "「どこで効くか」→「どこで役立つか」（AI 臭回避）"),
+]
+
+# 強い断定語（本文に入ると減点）
+STRONG_ASSERTION_WORDS = ["最新", "最強", "完全に", "絶対に", "必ず"]
+
+# です・ます調から外れるパターン（語尾検出）
+NON_DESU_MASU_PATTERNS = [
+    re.compile(r"である[。\s]"),
+    re.compile(r"(?<![すまりぞ])だ[。\s]"),  # "です"や"ます"に続く「だ」は除外
+]
+
+
+# ─── 字数目安（quality_checklist.md §H と一致） ─────────────────
+
+# セクションごとの [key, display_name, min, max, page]
+# 個別セクションは超過/下回りとも「⚠️ 警告」のみ。
+# ☆（ブロッキング）は左右ページ合計が 100 字超過したときのみ。
+SECTION_TARGETS = [
+    ("tagline",        "tagline",                       25,  40, "left"),
+    ("hitotokoto",     "ひとことで",                     50,  80, "left"),
+    ("nanishiteku",    "何をしてくれるか",               250, 350, "left"),
+    ("vibe_position",  "バイブコーディングでの位置づけ", 180, 280, "left"),
+    ("related_terms",  "関連用語",                       100, 150, "left"),
+    ("mihidokoro",     "見どころ 6 視点",                150, 240, "right"),
+    ("kaihatsu_flow",  "開発フローでの位置",             120, 200, "right"),
+]
+
+# 左右ページ合計の目安と ☆ 閾値
+LEFT_TOTAL_MIN, LEFT_TOTAL_MAX = 700, 800
+RIGHT_TOTAL_MIN, RIGHT_TOTAL_MAX = 250, 400
+TOTAL_STARS_OVER = 100   # 合計がこの字数を超えて超過すると ☆
+
+
+# ─── 結果ラッパ ─────────────────────────────────────────
+
+class Report:
+    def __init__(self, path: Path):
+        self.path = path
+        self.star_fails: list[str] = []  # ☆ 違反（exit 2）
+        self.warnings: list[str] = []    # 警告（exit 1）
+        self.char_table: list[tuple[str, int, int, int, str, str]] = []
+        # 各行: (セクション名, min, max, actual, page, judgement)
+
+    def star(self, msg: str):
+        self.star_fails.append(msg)
+
+    def warn(self, msg: str):
+        self.warnings.append(msg)
+
+    def add_char_row(self, display: str, mn: int, mx: int, actual: int, page: str, judge: str):
+        self.char_table.append((display, mn, mx, actual, page, judge))
+
+    @property
+    def exit_code(self) -> int:
+        if self.star_fails:
+            return 2
+        if self.warnings:
+            return 1
+        return 0
+
+    def render_char_table(self) -> str:
+        if not self.char_table:
+            return ""
+        out = [
+            "### 文字数チェック\n",
+            "| セクション | 目安 | 実測 | 差分 | 判定 |",
+            "| :-- | --: | --: | --: | :-- |",
+        ]
+        for display, mn, mx, actual, page, judge in self.char_table:
+            if actual < mn:
+                diff = f"-{mn - actual}"
+            elif actual > mx:
+                diff = f"+{actual - mx}"
+            else:
+                diff = "—"
+            bold = display.startswith("**")
+            row = f"| {display} | {mn}-{mx} | {actual} | {diff} | {judge} |"
+            out.append(row)
+        out.append("")
+        return "\n".join(out)
+
+    def render(self) -> str:
+        lines = [f"## Validator: {self.path.as_posix()}\n"]
+        table = self.render_char_table()
+        if table:
+            lines.append(table)
+        if self.star_fails:
+            lines.append("### ❌ ☆ 違反（修正必須）\n")
+            for m in self.star_fails:
+                lines.append(f"- {m}")
+            lines.append("")
+        if self.warnings:
+            lines.append("### ⚠️ 警告\n")
+            for m in self.warnings:
+                lines.append(f"- {m}")
+            lines.append("")
+        if not self.star_fails and not self.warnings:
+            lines.append("### ✅ 全チェックパス\n")
+        return "\n".join(lines)
+
+
+# ─── Parser（YAML frontmatter の最小実装） ─────────────────
+
+def parse_frontmatter(content: str) -> tuple[dict, str]:
+    """YAML frontmatter と本文を分離する。必要最小限の key:value パーサ。"""
+    if not content.startswith("---\n"):
+        return {}, content
+    end = content.find("\n---\n", 4)
+    if end == -1:
+        return {}, content
+    fm_text = content[4:end]
+    body = content[end + 5:]
+    data: dict = {}
+    current_list_key: str | None = None
+    for raw in fm_text.split("\n"):
+        if not raw.strip() or raw.strip().startswith("#"):
+            continue
+        if raw.startswith("  - "):
+            if current_list_key:
+                data.setdefault(current_list_key, []).append(raw[4:].strip())
+            continue
+        m = re.match(r"^([A-Za-z_]\w*):\s*(.*)$", raw)
+        if m:
+            k, v = m.group(1), m.group(2).strip()
+            if v == "":
+                data[k] = []
+                current_list_key = k
+            else:
+                data[k] = v
+                current_list_key = None
+    return data, body
+
+
+# ─── 文字数カウント ─────────────────────────────────
+
+def count_chars(text: str) -> int:
+    """見出し・HTML コメント・Markdown 装飾・空白を除いた実文字数。"""
+    t = re.sub(r"^#+\s.*$", "", text, flags=re.MULTILINE)
+    t = re.sub(r"<!--.*?-->", "", t, flags=re.DOTALL)
+    t = re.sub(r"\*\*([^*]+)\*\*", r"\1", t)
+    t = re.sub(r"^\s*(\d+\.|-)\s*", "", t, flags=re.MULTILINE)
+    t = re.sub(r"[\s\n]+", "", t)
+    return len(t)
+
+
+# ─── チェック関数群 ─────────────────────────────────
+
+def check_yaml(fm: dict, r: Report) -> None:
+    for key in REQUIRED_YAML:
+        if key not in fm or not str(fm[key]).strip():
+            r.star(f"A. YAML: 必須キー `{key}` が欠落")
+    if fm.get("page_layout") and fm["page_layout"] != "spread_v1":
+        r.warn(f"A. YAML: `page_layout` が `spread_v1` 以外（{fm['page_layout']}）")
+
+    # evaluation_date の書式
+    eval_date = str(fm.get("evaluation_date", "")).strip()
+    if eval_date and not re.match(r"^\d{4}-\d{2}-\d{2}$", eval_date):
+        r.warn(f"A. YAML: `evaluation_date` が YYYY-MM-DD 形式でない（{eval_date}）")
+
+
+def check_structure(body: str, r: Report) -> None:
+    for sec in REQUIRED_SECTIONS:
+        if sec not in body:
+            r.star(f"B/C 構造: 必須セクション `{sec}` が無い")
+    found_subs = [s for s in MIHIDOKORO_SUBS if s in body]
+    if len(found_subs) < 6:
+        missing = [s for s in MIHIDOKORO_SUBS if s not in body]
+        r.star(f"C. 見どころ 6 視点: {', '.join(missing)} が無い")
+
+
+def check_author_fields_empty(body: str, r: Report) -> None:
+    """著者欄が空スケルトンのままか。AI が先回り記入していたら ☆ 違反。"""
+    # 非エンジニア視点のつまずき：`-` のみで、語句なしか
+    m = re.search(r"## 非エンジニア視点のつまずき\n(.*?)(?=\n## |\n<!--)", body, re.DOTALL)
+    if m:
+        block = m.group(1).strip()
+        # 各行の `- ` 以降に実質的な文字がないことを確認
+        for line in block.split("\n"):
+            line = line.strip()
+            if line.startswith("-") and len(line) > 1 and line[1:].strip():
+                r.star(f"D. 著者欄: 「非エンジニア視点のつまずき」に AI が記入している箇所あり（{line[:40]}...）")
+                break
+
+    # 私のコメント：🙂 第一印象: などのラベルの後ろに本文があれば違反
+    labels = ["🙂 第一印象", "👍 良い点", "👎 ダメな点", "🎯 誰に向くか"]
+    m = re.search(r"## 私のコメント\n(.*?)(?=\n## |\n<!--)", body, re.DOTALL)
+    if m:
+        block = m.group(1)
+        for label in labels:
+            for line in block.split("\n"):
+                if label in line:
+                    after = line.split(":", 1)[-1].strip() if ":" in line else ""
+                    if after:
+                        r.star(f"D. 著者欄: 「私のコメント」の {label} に AI が記入している（{after[:40]}）")
+                        break
+
+
+def extract_section(body: str, heading: str) -> str:
+    """`## <heading>` の本文を取り出す。次の `## ` またはファイル終端まで。"""
+    m = re.search(re.escape("## " + heading) + r"\n(.*?)(?=\n## |\Z)", body, re.DOTALL)
+    return m.group(1) if m else ""
+
+
+def extract_mihidokoro_body(body: str) -> str:
+    """見どころセクション（### 1〜6 の合計）を取り出す。"""
+    section = extract_section(body, "この用語の見どころ")
+    return section
+
+
+def extract_kaihatsu_flow_body(body: str) -> str:
+    """開発フローセクションを取り出す。"""
+    section = extract_section(body, "開発フローでの位置（必須）")
+    return section
+
+
+def judge_section(actual: int, mn: int, mx: int) -> tuple[str, str]:
+    """個別セクション判定（✅ / ⚠️ のみ）。"""
+    if mn <= actual <= mx:
+        return "✅", ""
+    if actual > mx:
+        return "⚠️", f"+{actual - mx} 字超過"
+    return "⚠️", f"-{mn - actual} 字不足"
+
+
+def judge_total(actual: int, mn: int, mx: int) -> tuple[str, str]:
+    """合計判定（☆ 違反あり）。100 字超過で ❌ ☆。"""
+    if mn <= actual <= mx:
+        return "✅", ""
+    if actual > mx:
+        over = actual - mx
+        if over > TOTAL_STARS_OVER:
+            return "❌ ☆", f"+{over} 字超過（{TOTAL_STARS_OVER} 字超で ☆）"
+        return "⚠️", f"+{over} 字超過"
+    return "⚠️", f"-{mn - actual} 字不足"
+
+
+def check_char_counts(body: str, r: Report) -> None:
+    """各セクションと左右ページ合計を個別に判定。"""
+
+    heading_map = {
+        "tagline": "tagline",
+        "hitotokoto": "ひとことで",
+        "nanishiteku": "何をしてくれるか",
+        "vibe_position": "バイブコーディングでの位置づけ",
+        "related_terms": "関連用語",
+    }
+
+    left_total = 0
+    right_total = 0
+
+    for key, display, mn, mx, page in SECTION_TARGETS:
+        if key in heading_map:
+            text = extract_section(body, heading_map[key])
+        elif key == "mihidokoro":
+            text = extract_mihidokoro_body(body)
+        elif key == "kaihatsu_flow":
+            text = extract_kaihatsu_flow_body(body)
+        else:
+            text = ""
+
+        actual = count_chars(text)
+        if page == "left":
+            left_total += actual
+        else:
+            right_total += actual
+
+        mark, reason = judge_section(actual, mn, mx)
+        judgement = mark + ((" " + reason) if reason else "")
+        r.add_char_row(display, mn, mx, actual, page, judgement)
+
+        if mark.startswith("⚠️"):
+            r.warn(f"H. {display}: {actual} 字（目安 {mn}-{mx}、{reason}）")
+
+    # 左右ページ合計
+    left_mark, left_reason = judge_total(left_total, LEFT_TOTAL_MIN, LEFT_TOTAL_MAX)
+    left_judge = left_mark + ((" " + left_reason) if left_reason else "")
+    r.add_char_row("**左ページ合計**", LEFT_TOTAL_MIN, LEFT_TOTAL_MAX, left_total, "left", left_judge)
+    if left_mark.startswith("❌"):
+        r.star(f"H. 左ページ合計: {left_total} 字（目安 {LEFT_TOTAL_MIN}-{LEFT_TOTAL_MAX}、{left_reason}）")
+    elif left_mark.startswith("⚠️"):
+        r.warn(f"H. 左ページ合計: {left_total} 字（目安 {LEFT_TOTAL_MIN}-{LEFT_TOTAL_MAX}、{left_reason}）")
+
+    right_mark, right_reason = judge_total(right_total, RIGHT_TOTAL_MIN, RIGHT_TOTAL_MAX)
+    right_judge = right_mark + ((" " + right_reason) if right_reason else "")
+    r.add_char_row("**右ページ合計**", RIGHT_TOTAL_MIN, RIGHT_TOTAL_MAX, right_total, "right", right_judge)
+    if right_mark.startswith("❌"):
+        r.star(f"H. 右ページ合計: {right_total} 字（目安 {RIGHT_TOTAL_MIN}-{RIGHT_TOTAL_MAX}、{right_reason}）")
+    elif right_mark.startswith("⚠️"):
+        r.warn(f"H. 右ページ合計: {right_total} 字（目安 {RIGHT_TOTAL_MIN}-{RIGHT_TOTAL_MAX}、{right_reason}）")
+
+
+def check_tone(body: str, r: Report) -> None:
+    # 見出しの「どこで効くか」検出
+    for pat, msg in BAD_HEADING_PATTERNS:
+        if pat in body:
+            r.star(f"F. 見出し: `{pat}` が残っている — {msg}")
+
+    # である調／だ調の検出
+    for rx in NON_DESU_MASU_PATTERNS:
+        matches = rx.findall(body)
+        if matches:
+            # 誤検出しやすいのでサンプルだけ警告
+            sample = str(rx.pattern)
+            r.warn(f"F. トーン: です・ます外れの疑いあり（{sample} のパターン、要目視確認）")
+            break
+
+    # 強い断定語
+    for w in STRONG_ASSERTION_WORDS:
+        if re.search(rf"(?<![「『\w]){re.escape(w)}", body):
+            r.warn(f"F. トーン: 強い断定語「{w}」が入っている可能性（要確認）")
+
+
+def check_sources_date(body: str, fm: dict, r: Report) -> None:
+    """出典メモの `checked YYYY-MM-DD` 形式を確認。time-varying entry のみ。"""
+    pricing = str(fm.get("pricing_note", "")).strip()
+    version = str(fm.get("version_status", "")).strip()
+    time_varying = bool(pricing or version)
+    if not time_varying:
+        return
+
+    m = re.search(r"## 出典メモ\n(.*?)(?=\n## |\Z)", body, re.DOTALL)
+    if not m:
+        r.star("E. 出典メモ: 時変情報を扱うのに `## 出典メモ` セクションが無い")
+        return
+    sources = m.group(1)
+    if not re.search(r"checked\s+\d{4}-\d{2}-\d{2}", sources):
+        r.star("E. 出典メモ: `checked YYYY-MM-DD` 形式の記載が無い（時変情報を扱っているのに）")
+
+
+# ─── メイン ─────────────────────────────────────────
+
+def resolve_path_from_stdin_or_argv() -> Path | None:
+    """Hook (JSON on stdin) か CLI 引数 か。"""
+    # 引数優先
+    if len(sys.argv) > 1:
+        return Path(sys.argv[1])
+
+    # stdin JSON
+    if not sys.stdin.isatty():
+        try:
+            data = sys.stdin.read()
+            if not data.strip():
+                return None
+            payload = json.loads(data)
+            tool_input = payload.get("tool_input", {})
+            file_path = tool_input.get("file_path") or payload.get("tool_response", {}).get("filePath")
+            if file_path:
+                return Path(file_path)
+        except Exception:
+            return None
+    return None
+
+
+def should_validate(path: Path) -> bool:
+    """content/entries/**/*.md のみ対象。"""
+    posix = path.as_posix()
+    return bool(re.search(r"(^|/)content/entries/[^/]+/[^/]+\.md$", posix))
+
+
+def main() -> int:
+    path = resolve_path_from_stdin_or_argv()
+    if path is None:
+        # ファイルが特定できなければ静かに終了（他の Edit/Write には干渉しない）
+        return 0
+
+    if not should_validate(path):
+        return 0
+
+    if not path.exists():
+        print(f"validator: file not found: {path}", file=sys.stderr)
+        return 0
+
+    try:
+        content = path.read_text(encoding="utf-8")
+    except Exception as e:
+        print(f"validator: read error: {e}", file=sys.stderr)
+        return 0
+
+    fm, body = parse_frontmatter(content)
+
+    # archived / sample はチェック対象外
+    status = str(fm.get("status", "")).strip()
+    if status in ("archived", "sample"):
+        return 0
+
+    r = Report(path)
+    check_yaml(fm, r)
+    check_structure(body, r)
+    check_author_fields_empty(body, r)
+    check_char_counts(body, r)
+    check_tone(body, r)
+    check_sources_date(body, fm, r)
+
+    # 出力：☆ 違反は stderr（Claude に見せる）、警告は stdout
+    rendered = r.render()
+    if r.star_fails:
+        print(rendered, file=sys.stderr)
+    else:
+        print(rendered)
+    return r.exit_code
+
+
+if __name__ == "__main__":
+    sys.exit(main())
