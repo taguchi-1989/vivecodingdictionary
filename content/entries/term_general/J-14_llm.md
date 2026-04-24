@@ -112,7 +112,7 @@ Transformer、Attention、MoE、量子化、Fine-tuning、VLM。
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
-## 非エンジニア視点のつまずき
+## 非エンジニアのつまずき
 
 -
 -
@@ -124,7 +124,7 @@ Transformer、Attention、MoE、量子化、Fine-tuning、VLM。
 - 🙂 第一印象:
 - 👍 良い点:
 - 👎 ダメな点:
-- 👥 誰に向くか:
+- 👥 誰向けか:
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

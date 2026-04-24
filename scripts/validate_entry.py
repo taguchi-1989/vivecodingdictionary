@@ -54,7 +54,7 @@ REQUIRED_SECTIONS = [
     "## 関連用語",
     "## この用語の見どころ",
     "## 開発フローでの位置（必須）",
-    "## 非エンジニア視点のつまずき",
+    "## 非エンジニアのつまずき",
     "## 私のコメント",
 ]
 
@@ -73,7 +73,7 @@ DEPRECATED_HEADINGS = [
     ("## ひとことで", "「ひとことで」は v2 で廃止。内容は tagline に合流してください"),
     ("## バイブコーディングでの位置づけ", "「バイブコーディングでの位置づけ」→「どこで出会うか」（v2 改名）"),
     ("### 5. 最初に理解する範囲", "「最初に理解する範囲」→「はじめに」（v2 改名）"),
-    ("🎯 誰に向くか", "「🎯 誰に向くか」→「👥 誰に向くか」（v2 絵文字変更）"),
+    ("🎯 誰向けか", "「🎯 誰向けか」→「👥 誰向けか」（v2 絵文字変更）"),
 ]
 
 # 強い断定語（本文に入ると減点）
@@ -102,7 +102,7 @@ SECTION_TARGETS = [
 
 # 著者記入欄は誌面に出るが、著者本人が後で書く領域。文字数は情報表示のみ（判定しない）。
 AUTHOR_INFO_SECTIONS = [
-    ("tsumazuki",         "非エンジニア視点のつまずき"),
+    ("tsumazuki",         "非エンジニアのつまずき"),
     ("watashino_comment", "私のコメント"),
 ]
 
@@ -262,14 +262,14 @@ def check_author_fields_empty(body: str, status: str, r: Report) -> None:
     """
     is_strict = status in ("drafting", "candidate", "", None)
 
-    # 非エンジニア視点のつまずき：`-` のみで、語句なしか
-    m = re.search(r"## 非エンジニア視点のつまずき\n(.*?)(?=\n## |\n<!--)", body, re.DOTALL)
+    # 非エンジニアのつまずき：`-` のみで、語句なしか
+    m = re.search(r"## 非エンジニアのつまずき\n(.*?)(?=\n## |\n<!--)", body, re.DOTALL)
     if m:
         block = m.group(1).strip()
         for line in block.split("\n"):
             line = line.strip()
             if line.startswith("-") and len(line) > 1 and line[1:].strip():
-                msg = f"D. 著者欄: 「非エンジニア視点のつまずき」に記入あり（{line[:40]}…）"
+                msg = f"D. 著者欄: 「非エンジニアのつまずき」に記入あり（{line[:40]}…）"
                 if is_strict:
                     r.star(msg + " — drafting 中は空スケルトンのままに")
                 else:
@@ -277,7 +277,7 @@ def check_author_fields_empty(body: str, status: str, r: Report) -> None:
                 break
 
     # 私のコメント：4 ラベル（🎯 / 👥 どちらも許容）
-    label_keys = ["第一印象", "良い点", "ダメな点", "誰に向くか"]
+    label_keys = ["第一印象", "良い点", "ダメな点", "誰向けか"]
     m = re.search(r"## 私のコメント\n(.*?)(?=\n## |\n<!--)", body, re.DOTALL)
     if m:
         block = m.group(1)
@@ -343,7 +343,7 @@ def check_char_counts(body: str, r: Report) -> None:
         "related_terms": "関連用語",
     }
     author_heading_map = {
-        "tsumazuki": "非エンジニア視点のつまずき",
+        "tsumazuki": "非エンジニアのつまずき",
         "watashino_comment": "私のコメント",
     }
 
