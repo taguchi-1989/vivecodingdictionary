@@ -55,5 +55,7 @@ mobile_inbox/
 ## 関連ドキュメント
 
 - 要件定義：[../docs/mobile_inbox_requirements.md](../docs/mobile_inbox_requirements.md)
+- 同期セットアップ：[../docs/mobile_setup_guide.md](../docs/mobile_setup_guide.md)
+- 実編集ワークフロー：[../docs/mobile_editing_guide.md](../docs/mobile_editing_guide.md)
 - 取り込みスキル：[../skills/import-comments.md](../skills/import-comments.md)
 - 執筆スキル：[../skills/write-entry.md](../skills/write-entry.md)
