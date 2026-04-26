@@ -141,13 +141,16 @@ Claude Code で：
 
 ## このあと
 
-Phase 1 が回り始めたら、以下の TODO が残っていることだけ把握しておいてください。
+Phase 1 が回り始めたら、次は **実編集ワークフロー**（受信箱への書き溜めだけでなく、著者欄や裏台帳への直接編集）に進みます。手順は [mobile_editing_guide.md](mobile_editing_guide.md) にまとめてあります。
+
+加えて、以下の TODO が残っていることだけ把握しておいてください。
 
 - **スキル実装**：`skills/import-comments.md` は手順書。運用を重ねて、スクリプト化が必要になったら Phase 3 へ
 - **テンプレ化**：スマホ側でのセクション挿入を Obsidian Templates プラグインで 1 タップ化できる（余裕があれば）
 
 ## 関連
 
+- 実編集ワークフロー（次に読む）：[mobile_editing_guide.md](mobile_editing_guide.md)
 - 全体像：[mobile_inbox_requirements.md](mobile_inbox_requirements.md)
 - 取り込みスキル：[../skills/import-comments.md](../skills/import-comments.md)
 - 受信箱 README：[../mobile_inbox/README.md](../mobile_inbox/README.md)
