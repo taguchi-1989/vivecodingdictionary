@@ -31,6 +31,9 @@ out/
 .claude/settings.local.json
 .playwright-mcp/
 
+# Obsidian vault config (端末ローカルの設定。PAT が data.json に保存されるためコミット禁止)
+.obsidian/
+
 # Design System v2 prototype — large fonts copied from zip, re-extractable
 drafts/prototypes/mockups/design_philosophy_v2/fonts/
 

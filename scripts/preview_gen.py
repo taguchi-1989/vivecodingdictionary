@@ -62,6 +62,42 @@ EXPERIENCE_LABELS = {
     "research_only": "調査ベース",
 }
 
+# 物理ページのオフセット。表紙・目次・序章ページの合計をここで決める。
+# 例: 表紙(1) + 目次(2-3) があるなら START_PAGE = 4。
+START_PAGE = 4
+
+# 各エントリの既定消費ページ数（見開き 1 つ＝ 2 ページ）。
+# entries.csv の `pages` 列 または frontmatter の `pages` で個別上書き可能。
+DEFAULT_ENTRY_PAGES = 2
+
+
+def format_entry_id(entry_id: str) -> str:
+    """B-2 → B-02 のように先頭の数値部分をゼロ詰め整形（誌面表示用）。
+
+    URL/ファイル名としては使わない。drawer・index・誌面 chrome の表示で揃えるため。
+    B-2-a のような派生 ID は数値部分だけ整形して "B-02-a" を返す。
+    """
+    if "-" not in entry_id:
+        return entry_id
+    letter, rest = entry_id.split("-", 1)
+    parts = rest.split("-")
+    if parts[0].isdigit():
+        parts[0] = f"{int(parts[0]):02d}"
+        return f"{letter}-{'-'.join(parts)}"
+    return entry_id
+
+
+def split_title(title: str) -> tuple[str, str]:
+    """`Context（コンテキスト）` → (`Context`, `コンテキスト`) のように主・副に分離。
+
+    主タイトルはデカく太く、副タイトルは小さく細く下に置く想定。
+    全角・半角の括弧両方に対応。括弧がなければ副は空文字。
+    """
+    m = re.match(r"^(.+?)\s*[（(]\s*(.+?)\s*[）)]\s*$", title)
+    if m:
+        return m.group(1).strip(), m.group(2).strip()
+    return title, ""
+
 
 # ─── パーサ ────────────────────────────────────────
 
@@ -260,6 +296,63 @@ FLOW_ICONS = [
 ]
 
 
+def count_chars(text: str) -> int:
+    """空白・HTML コメント・Markdown 装飾を除いた実文字数。validate_entry.py と同じ流儀。"""
+    if not text:
+        return 0
+    t = re.sub(r"<!--.*?-->", "", text, flags=re.DOTALL)
+    t = re.sub(r"\*\*([^*]+)\*\*", r"\1", t)
+    t = re.sub(r"`([^`]+)`", r"\1", t)
+    t = re.sub(r"\s+", "", t)
+    return len(t)
+
+
+# v2_rules_summary §2-3 / §2-4 の字数レンジ（許容）
+CHAR_RANGES: dict[str, tuple[int, int]] = {
+    "tagline": (25, 45),
+    "何をしてくれるか": (60, 200),
+    "どこで出会うか": (60, 200),
+    "見どころ1-5": (15, 40),
+    "見どころ6": (15, 50),
+}
+
+
+def grade_chars(count: int, lower: int, upper: int) -> tuple[str, str]:
+    """(状態記号, CSS クラス名) を返す。✓ / ↓少 / ↑多。"""
+    if count == 0:
+        return "—", "char-empty"
+    if count < lower:
+        return f"↓{lower - count}", "char-low"
+    if count > upper:
+        return f"↑{count - upper}", "char-high"
+    return "✓", "char-ok"
+
+
+def render_char_meta(tagline: str, nani: str, dokode: str, seepoints: list[str]) -> str:
+    """preview-meta バー下に出す字数チェック行。範囲超過は赤、不足はオレンジ、OK は緑。"""
+    items: list[str] = []
+
+    def cell(label: str, count: int, lower: int, upper: int) -> str:
+        mark, klass = grade_chars(count, lower, upper)
+        return (
+            f'<span class="char-cell {klass}" title="許容 {lower}〜{upper} 字">'
+            f'{escape(label)} <b>{count}</b><span class="lim">/{lower}-{upper}</span> {mark}'
+            f'</span>'
+        )
+
+    items.append(cell("tagline", count_chars(tagline), *CHAR_RANGES["tagline"]))
+    items.append(cell("何を", count_chars(nani), *CHAR_RANGES["何をしてくれるか"]))
+    items.append(cell("どこで", count_chars(dokode), *CHAR_RANGES["どこで出会うか"]))
+
+    for i, sp in enumerate(seepoints, start=1):
+        rng = CHAR_RANGES["見どころ6"] if i == 6 else CHAR_RANGES["見どころ1-5"]
+        # 「（未記入）」は字数 0 と同等扱い
+        text = "" if sp == "（未記入）" else sp
+        items.append(cell(f"見{i}", count_chars(text), *rng))
+
+    return f'<div class="char-meta">{"".join(items)}</div>'
+
+
 def render_tagline_tags(fm: dict) -> str:
     exp = EXPERIENCE_LABELS.get(fm.get("experience_level", ""), fm.get("experience_level", ""))
     lvl = fm.get("reader_level", "")
@@ -340,7 +433,7 @@ def render_drawer(entries: list[dict], current_id: str) -> str:
             link_class = "is-active" if it["id"] == current_id else ""
             rows.append(
                 f'<li><a class="entry-item is-available {link_class}" href="{escape(it["id"])}.html">'
-                f'<span class="code">{escape(it["id"])}</span>{escape(it["title"])}</a></li>'
+                f'<span class="code">{escape(format_entry_id(it["id"]))}</span>{escape(it["title"])}</a></li>'
             )
         details.append(f'''
       <details{opened}>
@@ -373,11 +466,11 @@ def render_drawer(entries: list[dict], current_id: str) -> str:
 
 def render_prev_next_bar(prev: dict | None, next_: dict | None) -> str:
     prev_html = (
-        f'<a class="nav-prev" href="{prev["id"]}.html">← {escape(prev["id"])} {escape(prev["title"])}</a>'
+        f'<a class="nav-prev" href="{prev["id"]}.html">← {escape(format_entry_id(prev["id"]))} {escape(prev["title"])}</a>'
         if prev else '<span class="nav-prev disabled">← prev</span>'
     )
     next_html = (
-        f'<a class="nav-next" href="{next_["id"]}.html">{escape(next_["id"])} {escape(next_["title"])} →</a>'
+        f'<a class="nav-next" href="{next_["id"]}.html">{escape(format_entry_id(next_["id"]))} {escape(next_["title"])} →</a>'
         if next_ else '<span class="nav-next disabled">next →</span>'
     )
     return f'''
@@ -421,6 +514,100 @@ body {{ margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: va
   max-width: 1500px; margin: 0 auto 12px; padding: 6px 16px; font-size: 11px; color: #6b7a8e;
   font-family: var(--font-jp);
 }}
+
+/* 字数チェック行（preview のみ。本番では出さない） */
+.char-meta {{
+  max-width: 1500px; margin: 0 auto 12px; padding: 6px 12px;
+  font-size: 11px; font-family: var(--font-jp);
+  background: #fff; border: 1px solid #d0d9e6; border-radius: 8px;
+  display: flex; flex-wrap: wrap; gap: 8px;
+}}
+.char-cell {{
+  display: inline-flex; gap: 4px; align-items: baseline;
+  padding: 2px 8px; border-radius: 12px;
+  background: #f3f6fb; color: #4a5568;
+}}
+.char-cell b {{ color: #1A1A1A; font-variant-numeric: tabular-nums; }}
+.char-cell .lim {{ color: #99a3b5; font-size: 10px; }}
+.char-ok {{ background: #e8f4ec; color: #2a6f3f; }}
+.char-ok b {{ color: #1f5b34; }}
+.char-low {{ background: #fff3e0; color: #8a5a14; }}
+.char-low b {{ color: #6f4408; }}
+.char-high {{ background: #fde4e4; color: #9e2a2a; }}
+.char-high b {{ color: #7a1f1f; }}
+.char-empty {{ background: #eef0f3; color: #99a3b5; }}
+
+/* 主タイトル直下の和文サブタイトル（preview のみの inline 拡張） */
+.title-hero-sub {{
+  font-family: var(--font-jp);
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--ink-blue-900);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  margin: -14px 0 18px;
+  opacity: 0.78;
+}}
+
+/* 開発フローのステップ幅を文字数に依存せず等幅にする
+   （overlay.css の flex 等分が文字数で揺れるケース対策） */
+.flow-row {{
+  display: flex !important;
+  align-items: stretch !important;
+}}
+.flow-row .flow-step {{
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+  width: 0 !important;
+}}
+.flow-row .flow-step .flow-label {{
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}}
+.flow-row .flow-arrow {{ flex: 0 0 auto !important; }}
+
+/* ─── PDF 出力（Cmd/Ctrl+P → PDF として保存）───
+   暫定の用紙サイズは preview の CSS が想定する 750×1061px の物理換算（96dpi で 198×280mm）。
+   仕様の本サイズ 150×212mm への厳密縮小は実装担当が Paged.js で対応する想定。
+   開発でしか使わない UI（ドロワー・preview メタ・字数バー・前後リンク）は印刷から除外する。 */
+@page {{
+  size: 198mm 280mm;
+  margin: 0;
+}}
+@media print {{
+  html, body {{
+    background: #fff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }}
+  .proto-nav,
+  .preview-meta,
+  .preview-nav,
+  .char-meta {{ display: none !important; }}
+
+  /* 見開き → 縦並びで各ページを 1 物理ページに割り付け */
+  .spread {{
+    display: block !important;
+    margin: 0 !important;
+    gap: 0 !important;
+    box-shadow: none !important;
+    max-width: none !important;
+  }}
+  .vbcd.page {{
+    margin: 0 !important;
+    box-shadow: none !important;
+    page-break-after: always;
+    page-break-inside: avoid;
+    /* @page と完全に同じ mm 単位で固定（px と mm の換算誤差を回避） */
+    width: 198mm !important;
+    height: 280mm !important;
+    min-height: 280mm !important;
+    max-height: 280mm !important;
+    overflow: hidden !important;
+  }}
+  .vbcd.page:last-of-type {{ page-break-after: auto; }}
+}}
 </style>
 </head>
 <body>
@@ -428,8 +615,9 @@ body {{ margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: va
 {drawer}
 
 <div class="preview-meta">
-  id: <b>{entry_id}</b> · category: {category} · figure_type: {figure_type} · status: {status} · evaluation_date: {evaluation_date}
+  id: <b>{entry_id}</b>（誌面表示: <b>{entry_code}</b>） · 物理ページ: <b>{page_left}–{page_right}</b>（pages={pages}） · category: {category} · figure_type: {figure_type} · status: {status} · evaluation_date: {evaluation_date}
 </div>
+{char_meta}
 {nav_bar}
 
 <div class="spread">
@@ -443,7 +631,8 @@ body {{ margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: va
     </div>
 
     <div class="page-body">
-      <h1 class="title-hero">{title}</h1>
+      <h1 class="title-hero">{title_main}</h1>
+      {title_sub_html}
       <div class="tagline-bar">{tagline}</div>
       {tags}
 
@@ -533,7 +722,7 @@ body {{ margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: va
     </div>
 
     <div class="page-chrome-bottom">
-      <div class="chrome-left-foot"><span class="entry-code">{entry_id}<span class="sep">·</span>{category}</span></div>
+      <div class="chrome-left-foot"><span class="entry-code">{entry_code}<span class="sep">·</span>{category}</span></div>
       <div class="chrome-inline">
         {book_icon}<span class="book-title">バイブコーディング図鑑</span>
       </div>
@@ -604,6 +793,22 @@ def load_md(path: Path) -> dict | None:
     return fm
 
 
+def _resolve_entry_pages(csv_row: dict, fm: dict) -> int:
+    """各エントリの物理ページ消費数を算定。CSV 列 > frontmatter > デフォルト の優先順。
+
+    A 章まえがき・A-9 索引のように見開き 1（2 ページ）に収まらないエントリは、
+    entries.csv の `pages` 列か markdown の frontmatter `pages:` に整数を入れることで上書きする。
+    値は偶数を推奨（左ページ始まり維持のため）だが、奇数も受け付ける。
+    """
+    csv_pages_raw = (csv_row.get("pages") or "").strip()
+    if csv_pages_raw.isdigit():
+        return max(int(csv_pages_raw), 1)
+    fm_pages_raw = str(fm.get("pages", "")).strip()
+    if fm_pages_raw.isdigit():
+        return max(int(fm_pages_raw), 1)
+    return DEFAULT_ENTRY_PAGES
+
+
 def make_entry_record(csv_row: dict) -> dict | None:
     """CSV 行 + md の frontmatter/本文を統合した dict"""
     path = csv_row.get("path", "").strip()
@@ -623,25 +828,33 @@ def make_entry_record(csv_row: dict) -> dict | None:
         "category": csv_row.get("category", "") or fm.get("category", ""),
         "path": path,
         "fm": fm,
+        "pages": _resolve_entry_pages(csv_row, fm),
     }
 
 
-def render_page(entry: dict, prev: dict | None, next_: dict | None, drawer_html: str, page_number: int) -> str:
+def render_page(entry: dict, prev: dict | None, next_: dict | None, drawer_html: str, page_left: int, page_right: int) -> str:
     fm = entry["fm"]
     body = fm["_body"]
     entry_id = entry["id"]
+    entry_id_padded = format_entry_id(entry_id)
     letter = entry_id.split("-", 1)[0]
     chapter = CHAPTER_META.get(letter, {"label": "", "tilde": ""})
 
+    title_main, title_sub = split_title(entry["title"])
+
     tagline = strip_md(extract_section(body, "tagline")) or fm.get("tagline", "")
-    nanishiteku_html = render_body_html(strip_md(extract_section(body, "何をしてくれるか"))) or "<p>（未記入）</p>"
-    dokode_deau_html = render_body_html(strip_md(extract_section(body, "どこで出会うか"))) or "<p>（未記入）</p>"
+    nanishiteku_raw = strip_md(extract_section(body, "何をしてくれるか"))
+    dokode_deau_raw = strip_md(extract_section(body, "どこで出会うか"))
+    nanishiteku_html = render_body_html(nanishiteku_raw) or "<p>（未記入）</p>"
+    dokode_deau_html = render_body_html(dokode_deau_raw) or "<p>（未記入）</p>"
 
     seepoints = [strip_md(extract_subsection(body, "この用語の見どころ", key)) or "（未記入）" for key in SEEPOINT_KEYS]
     seepoint_cells = "\n".join(render_seepoint_cell(i + 1, SEEPOINT_LABELS[i], seepoints[i]) for i in range(6))
 
     flow_steps = extract_flow_steps(body)
     flow_html = render_flow_row(flow_steps)
+
+    char_meta_html = render_char_meta(tagline, nanishiteku_raw, dokode_deau_raw, seepoints)
 
     related = extract_related_terms(body, fm.get("related_terms", []) or [])
     related_html = render_related_pills(related)
@@ -651,9 +864,18 @@ def render_page(entry: dict, prev: dict | None, next_: dict | None, drawer_html:
 
     ref_url, ref_date = extract_reference_url(body)
 
+    title_sub_html = (
+        f'<div class="title-hero-sub">{escape(title_sub)}</div>'
+        if title_sub else ""
+    )
+
     return PAGE_TEMPLATE.format(
         title=escape(entry["title"]),
+        title_main=escape(title_main),
+        title_sub_html=title_sub_html,
         entry_id=escape(entry_id),
+        entry_code=escape(entry_id_padded),
+        char_meta=char_meta_html,
         category=escape(entry["category"]),
         figure_type=escape(fm.get("figure_type", "")),
         status=escape(fm.get("status", "")),
@@ -667,8 +889,9 @@ def render_page(entry: dict, prev: dict | None, next_: dict | None, drawer_html:
         pin_icon=PIN_ICON_SVG,
         ponchi_icon=ponchi_svg,
         ponchi_icon_extra_class="ponchi-icon--real" if ponchi_is_real else "",
-        page_left=f"{page_number * 2:02d}",
-        page_right=f"{page_number * 2 + 1:02d}",
+        page_left=f"{page_left:02d}",
+        page_right=f"{page_right:02d}",
+        pages=entry.get("pages", DEFAULT_ENTRY_PAGES),
         tagline=escape(tagline),
         tags=render_tagline_tags(fm),
         nanishiteku=nanishiteku_html,
@@ -699,7 +922,7 @@ def render_index(entries: list[dict], archived_count: int) -> str:
             continue
         meta = CHAPTER_META[letter]
         rows = "\n".join(
-            f'<li><a href="{escape(e["id"])}.html"><span class="code">{escape(e["id"])}</span>{escape(e["title"])}</a></li>'
+            f'<li><a href="{escape(e["id"])}.html"><span class="code">{escape(format_entry_id(e["id"]))}</span>{escape(e["title"])}</a></li>'
             for e in items
         )
         chapter_blocks.append(
@@ -739,14 +962,22 @@ def main() -> int:
     PREVIEW_DIR.mkdir(parents=True, exist_ok=True)
     drawer_html = None  # 各ページの current_id が違うので毎回再生成
 
+    cursor = START_PAGE
     for idx, entry in enumerate(entries):
         prev = entries[idx - 1] if idx > 0 else None
         next_ = entries[idx + 1] if idx + 1 < len(entries) else None
         drawer_html = render_drawer(entries, entry["id"])
-        html = render_page(entry, prev, next_, drawer_html, page_number=2 + idx)
+        page_left = cursor
+        page_right = cursor + 1
+        html = render_page(entry, prev, next_, drawer_html, page_left=page_left, page_right=page_right)
         out_path = PREVIEW_DIR / f"{entry['id']}.html"
         out_path.write_text(html, encoding="utf-8")
-        print(f"  OK  {out_path.relative_to(ROOT)}")
+        print(
+            f"  OK  {out_path.relative_to(ROOT)}"
+            f"  [{format_entry_id(entry['id'])}]  p.{page_left:02d}-{page_right:02d}"
+            f"  pages={entry['pages']}"
+        )
+        cursor += entry["pages"]
 
     index_html = render_index(entries, archived_count)
     index_path = PREVIEW_DIR / "index.html"
