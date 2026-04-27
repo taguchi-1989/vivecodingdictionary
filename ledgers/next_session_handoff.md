@@ -1,6 +1,29 @@
-# 次セッションへの引き継ぎ（2026-04-25 v5 更新 / iter 22 反映）
+# 次セッションへの引き継ぎ（2026-04-26 v6 更新 / 「会話での使い方例」追加）
 
-*前セッションで v2 レイアウトの 21 世代反復と全エントリ監査・修正が終わり、同日に iter 22 で左右ページの役割再バランスを実施しました。次セッションはこのファイルを最初に開き、続いて [docs/v2_rules_summary.md](../docs/v2_rules_summary.md) を読んでから執筆に入ってください。*
+*前セッションで v2 レイアウトの 21 世代反復と全エントリ監査・修正が終わり、iter 22 で左右ページの役割再バランスを実施。続く 2026-04-26 セッションで「会話での使い方例」セクションを左ページ末尾に正式追加しました。次セッションはこのファイルを最初に開き、続いて [docs/v2_rules_summary.md](../docs/v2_rules_summary.md) を読んでから執筆に入ってください。*
+
+## 2026-04-26: 「会話での使い方例」セクション追加
+
+**誌面追加 1 点**:
+
+「わかってる人風」が自然にこの語を会話で使う 1 例を、左ページ末尾の独立スロット（下チロム右側「（会話での使い方例）」枠）に印字するセクションを正式追加。**25〜50 字（推奨 30〜40）、1 文**。markdown 上は `## メイン図` の後、`<!-- 右ページ -->` の前に置く。
+
+**伝搬済みファイル**:
+
+- [templates/entry_template.md](../templates/entry_template.md) — `## 会話での使い方例` セクション追加
+- [docs/v2_rules_summary.md](../docs/v2_rules_summary.md) §1 / §2-3 / §2-6 / §5 リネーム履歴
+- [docs/entry_schema.yaml](../docs/entry_schema.yaml) — left_page slot ＋ required_sections に追加（schema_version v2.26.0）
+- [docs/quality_checklist.md](../docs/quality_checklist.md) — B 左ページにチェック項目追加
+- [skills/write-entry.md](../skills/write-entry.md) — Step 3 左ページの順序リストに追加
+- [.claude/agents/entry-writer.md](../.claude/agents/entry-writer.md) — Step 3 字数目安テーブルに行追加
+- [scripts/validate_entry.py](../scripts/validate_entry.py) — REQUIRED_SECTIONS / SECTION_TARGETS に追加
+- [drafts/prototypes/mockups/design_philosophy_v2/check_entry.py](../drafts/prototypes/mockups/design_philosophy_v2/check_entry.py) — REQUIRED_SECTIONS / SECTION_RULES に追加
+- [drafts/prototypes/mockups/design_philosophy_v2/writing_spec.md](../drafts/prototypes/mockups/design_philosophy_v2/writing_spec.md) — §1-8 として追加
+- [drafts/prototypes/mockups/design_philosophy_v2.md](../drafts/prototypes/mockups/design_philosophy_v2.md) — §3 紙面構成に項目追加
+
+**既存エントリ**: 既存 20 エントリ（A-1 / A-2 を除く active 13 件 ＋ archived 7 件）に会話での使い方例を 1 文ずつ追加済み。A-1 preface / A-2 reading_guide は本書の序文・読み方ガイドのため対象外。
+
+**字数の決定**: 当初「許容 30-40 / 推奨 30-38」で仮置きしたが、既存エントリ実測（B-2 Claude=29 字、I-1 MCP=42-47 字など）を踏まえて**許容 25-50 / 推奨 30-40** に最終調整。validator は許容外でのみ ⚠️ 警告。
 
 ## iter 22（2026-04-25）: 左右ページの役割再バランス
 

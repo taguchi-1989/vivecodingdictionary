@@ -51,6 +51,10 @@ Claude を作り、最先端モデルを提供する AI 企業です。三大 AI
 - 周辺の要素（4〜5 個）: 三大 AI 企業のポジション／Claude 系製品（Claude.ai / Claude Code / API）／創業者（Dario・Daniela Amodei）／研究領域（Constitutional AI、RSP）／関係先（OpenAI 分派）
 - 関係の描き方: 上に「三大 AI 企業」の帯、右に製品、左に創業者、下に研究、矢印で「研究 → 製品化」の循環
 
+## 会話での使い方例
+
+「Anthropic は安全性と最先端を両立する路線で、Dario の発信が指針になります。」
+
 ## この用語の見どころ
 
 ### 1. 役割

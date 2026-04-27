@@ -30,6 +30,8 @@ SECTION_RULES: dict[str, dict] = {
     "tagline":               {"min": 25, "max": 45},
     "何をしてくれるか":       {"min": 60, "max": 200, "desumasu_required": True},
     "どこで出会うか":         {"min": 60, "max": 200, "desumasu_required": True},
+    # 2026-04-26 追加: 左ページ末尾、下チロム右スロット印字（25-50 字、推奨 30-40、1 文）
+    "会話での使い方例":       {"min": 25, "max": 50, "desumasu_required": True},
     # 右ページ 6 視点
     "1. 役割":               {"min": 15, "max": 40},
     "2. うれしさ":           {"min": 15, "max": 40},
@@ -43,6 +45,7 @@ REQUIRED_SECTIONS = [
     "tagline",
     "何をしてくれるか",
     "どこで出会うか",
+    "会話での使い方例",   # 2026-04-26 追加
     "関連用語",
     "この用語の見どころ",
     "開発フローでの位置",

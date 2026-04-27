@@ -51,6 +51,7 @@ REQUIRED_SECTIONS = [
     "## 何をしてくれるか",
     "## どこで出会うか",
     "## メイン図",
+    "## 会話での使い方例",   # 2026-04-26 追加: 左ページ末尾、下チロム右スロット印字
     "## 関連用語",
     "## この用語の見どころ",
     "## 開発フローでの位置（必須）",
@@ -93,14 +94,17 @@ NON_DESU_MASU_PATTERNS = [
 # ☆（ブロッキング）は左右ページ合計が 100 字超過したときのみ。
 # v2_rules_summary.md §2 の決定版ルールを写したもの。数値変更時は v2_rules_summary を先に動かす。
 # min/max の「推奨範囲」。超過は ⚠️ 警告（☆ は左右合計 + 100 字超でのみ）
+# (key, display, min, max, page, in_total) — in_total=False は左右合計から除外（独立スロット）
 SECTION_TARGETS = [
-    ("tagline",        "tagline",            25,  45, "left"),   # 許容 25-45, 推奨 30-38
-    ("nanishiteku",    "何をしてくれるか",   60, 200, "left"),   # 許容 60-200, 推奨 80-150
-    ("dokode_deau",    "どこで出会うか",     60, 200, "left"),   # 許容 60-200, 推奨 80-150
-    ("mihidokoro",     "見どころ 6 視点",   120, 240, "right"),  # 6 視点合計（各 15-40、深掘り 15-50）
-    ("kaihatsu_flow",  "開発フローでの位置", 80, 180, "right"),
+    ("tagline",        "tagline",            25,  45, "left",  True),   # 許容 25-45, 推奨 30-38
+    ("nanishiteku",    "何をしてくれるか",   60, 200, "left",  True),   # 許容 60-200, 推奨 80-150
+    ("dokode_deau",    "どこで出会うか",     60, 200, "left",  True),   # 許容 60-200, 推奨 80-150
+    # 2026-04-26 追加: 左ページ末尾の独立スロット、下チロム右に印字。左合計には含めない
+    ("kaiwa",          "会話での使い方例",   25,  50, "left",  False),
+    ("mihidokoro",     "見どころ 6 視点",   120, 240, "right", True),   # 6 視点合計（各 15-40、深掘り 15-50）
+    ("kaihatsu_flow",  "開発フローでの位置", 80, 180, "right", True),
     # iter 22（2026-04-25）: 関連用語を左ページから右ページ下段（開発フロー直下）へ移動
-    ("related_terms",  "関連用語",           20,  50, "right"),
+    ("related_terms",  "関連用語",           20,  50, "right", True),
 ]
 
 # 著者記入欄は誌面に出るが、著者本人が後で書く領域。文字数は情報表示のみ（判定しない）。
@@ -344,6 +348,7 @@ def check_char_counts(body: str, r: Report) -> None:
         "tagline": "tagline",
         "nanishiteku": "何をしてくれるか",
         "dokode_deau": "どこで出会うか",
+        "kaiwa": "会話での使い方例",   # 2026-04-26 追加
         "related_terms": "関連用語",
     }
     author_heading_map = {
@@ -355,7 +360,7 @@ def check_char_counts(body: str, r: Report) -> None:
     right_total = 0
 
     # 採点対象セクション
-    for key, display, mn, mx, page in SECTION_TARGETS:
+    for key, display, mn, mx, page, in_total in SECTION_TARGETS:
         if key in heading_map:
             text = extract_section(body, heading_map[key])
         elif key == "mihidokoro":
@@ -366,10 +371,12 @@ def check_char_counts(body: str, r: Report) -> None:
             text = ""
 
         actual = count_chars(text)
-        if page == "left":
-            left_total += actual
-        else:
-            right_total += actual
+        # in_total=False のセクション（会話での使い方例など独立スロット）は左右合計に含めない
+        if in_total:
+            if page == "left":
+                left_total += actual
+            else:
+                right_total += actual
 
         mark, reason = judge_section(actual, mn, mx)
         judgement = mark + ((" " + reason) if reason else "")
