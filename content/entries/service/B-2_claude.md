@@ -1,6 +1,7 @@
 ---
 id: B-2
 title: Claude
+title_reading: クロード
 category: service
 subtype: ai_assistant
 experience_level: hands_on
@@ -30,17 +31,11 @@ Anthropic が提供する AI アシスタントです。対話・文章・コー
 
 ## 何をしてくれるか
 
-自然言語で話しかけると、文章化・コード生成・画像読み取り・長文要約などを返してくれます。同じ「Claude」でも入口で体験が変わります。
-
-- **Claude.ai** — ブラウザから使う標準窓口
-- **Claude Code** — CLI／エージェントとして動かす開発者向け
-- **Claude API** — 社内ツール・アプリに組み込む窓口
+自然言語で話しかけると、文章化・コード生成・画像読み取り・長文要約などを返してくれます。Claude.ai／Claude Code／API の 3 入口があり、同じモデルでも体験が変わります。
 
 ## どこで出会うか
 
-バイブコーディングの現場で日常的に触る主役のひとつです。企画のブレストは Claude.ai、実装は Claude Code、組み込みは API と、同じ Claude を使い分けるのが普通になってきています。
-
-「Claude を使う」と言ったとき、どの窓口の話かを合わせると会話が噛み合います。「最近変わった」と感じたらナーフ（G-46）を疑うと落ち着くことが多いです。
+バイブコーディングの現場で日常的に触る主役のひとつで、ブレストは Claude.ai、実装は Claude Code、組み込みは API と使い分けます。「Claude を使う」と言われたときは、どの窓口の話かを揃えると会話が噛み合います。
 
 ## メイン図
 
@@ -97,11 +92,11 @@ Extended Thinking、Artifacts、MCP、Projects、ナーフ（G-46）。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 関連用語
 
-- Anthropic — Claude を作っている会社
-- Claude Code — Claude を CLI／エージェントとして使う道具（略称 CC）
-- Claude.ai — ブラウザから Claude を使う標準窓口
-- Artifacts — Claude が生成物を独立パネルに出す UI 機能
-- API — Claude をアプリから呼ぶためのインターフェース
+- Anthropic
+- Claude Code
+- Claude.ai
+- Artifacts
+- API
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 

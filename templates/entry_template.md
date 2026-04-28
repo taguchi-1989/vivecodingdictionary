@@ -7,7 +7,8 @@
 #   900-999 保留・実験
 # 一覧と番号は ledgers/entries.csv を正とする（CSV表形式で管理）。
 id:
-title:
+title:                   # 純粋な見出し名のみ（括弧書きの読み・日本語訳は title_reading へ）
+title_reading:           # 任意。タイトル直下に 14px グレーで表示。例: ギット / コンテキスト / Model Context Protocol。読みが自明な日本語タイトルは省略
 category:                # service / model / term / tool / workflow / history / person / benchmark
 subtype:                 # language / framework / linter / ai_assistant / frontier_model など
 

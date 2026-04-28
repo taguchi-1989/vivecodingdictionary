@@ -1,6 +1,7 @@
 ---
 id: J-14
-title: LLM（大規模言語モデル）
+title: LLM
+title_reading: 大規模言語モデル
 category: term_general
 subtype: ml_basic
 experience_level: hands_on
@@ -18,7 +19,7 @@ related_terms:
 status: needs_review
 ---
 
-# LLM（大規模言語モデル）
+# LLM
 
 ## tagline
 
@@ -28,13 +29,11 @@ status: needs_review
 
 ## 何をしてくれるか
 
-乱暴にまとめると「テキストを入れると、続きのテキストを返す」モデルです。この単純な動きから、文章作成・要約・翻訳・対話・コード生成・資料整理・画像説明と幅広い応用が生まれます。骨格は「次に来る単語を予測する」だけで、それを巨大なパラメータ数で訓練したものが現代の LLM です。
+乱暴にまとめると「テキストを入れると、続きのテキストを返す」モデルです。骨格は「次に来る単語を予測する」だけですが、文章作成・要約・翻訳・対話・コード生成・画像説明と幅広い応用が生まれます。
 
 ## どこで出会うか
 
-バイブコーディングの根幹です。「何を LLM に渡して、何を返してもらうか」の設計がすべての出発点になります。
-
-LLM は Context に書いてあるものだけを手がかりに応答します。モデルを変えるより Context を整えるほうが効く場面も多くあります。賢さはパラメータ数だけでなく、訓練データ・アーキテクチャ・ファインチューニング・推論時の工夫で大きく変わります。
+バイブコーディングの根幹で、「何を LLM に渡して、何を返してもらうか」の設計が出発点になります。モデルを変えるより Context を整えるほうが効く場面も多くあります。
 
 ## メイン図
 
@@ -90,11 +89,11 @@ Transformer、Attention、MoE、量子化、Fine-tuning、VLM。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 関連用語
 
-- Transformer — 現代 LLM の基盤アーキテクチャ（2017 論文）
-- Token — Context のサイズを数える単位
-- Neural Network — LLM の土台となる計算構造
-- Context — LLM に渡す情報全体
-- Fine-tuning — 既存モデルに追加学習して特化させる
+- Transformer
+- Token
+- Neural Network
+- Context
+- Fine-tuning
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 

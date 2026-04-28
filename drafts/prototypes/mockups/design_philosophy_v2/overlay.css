@@ -352,6 +352,19 @@
 }
 .vbcd h1.title-hero--right { font-size: 50px; letter-spacing: -0.01em; line-height: 1.1; }
 
+/* タイトル直下の読み・日本語展開スロット（任意、2026-04-28 追加） */
+/* YAML title_reading が空のときは空文字 → 視覚上は非表示（margin-bottom も打ち消す） */
+.vbcd .title-reading {
+  font-family: var(--font-jp);
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--ink-2);
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  margin: -16px 0 18px;  /* タイトル直下に詰める */
+}
+.vbcd .title-reading:empty { display: none; }
+
 /* タグライン帯 — 淡青塗り幅広ピル */
 .tagline-bar {
   display: inline-block;

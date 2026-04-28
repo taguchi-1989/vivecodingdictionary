@@ -1,6 +1,7 @@
 ---
 id: G-1
-title: Context（コンテキスト）
+title: Context
+title_reading: コンテキスト
 category: term_llm
 subtype: basic
 experience_level: hands_on
@@ -18,7 +19,7 @@ related_terms:
 status: needs_review
 ---
 
-# Context（コンテキスト）
+# Context
 
 ## tagline
 
@@ -28,13 +29,11 @@ status: needs_review
 
 ## 何をしてくれるか
 
-LLM は Context に入っている情報だけを手がかりに応答します。記憶を持たないため、同じ LLM でも Context の中身が違えば応答が変わります。
-
-構成は System Prompt／指示／添付資料／会話履歴／ツール結果の 5 要素です。Context Window は 128K から 100 万トークン超に拡大しましたが、入れすぎると応答が劣化します。
+LLM は Context に入っている情報だけを手がかりに応答します。System Prompt／指示／添付資料／会話履歴／ツール結果の 5 要素で構成され、入れすぎても少なすぎても応答が劣化します。
 
 ## どこで出会うか
 
-バイブコーディングの核概念です。AI に同じ質問を投げても、「何を、どの順で、どれだけ」Context に並べたかで結果が大きく変わります。膨らませすぎると応答が劣化し、長い会話を圧縮しすぎても情報が歪みます。「必要なものを必要な分だけ」が原則です。
+バイブコーディングの核概念です。AI に同じ質問を投げても「何を、どの順で、どれだけ」並べたかで結果が大きく変わります。「必要なものを必要な分だけ」が原則です。
 
 ## メイン図
 
@@ -90,11 +89,11 @@ Context Engineering、Prompt Caching、RAG、Memory。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 関連用語
 
-- Context Engineering — Context 全体の設計技法
-- Context Window — Context に入れられる上限（トークン数）
-- System Prompt — Context の先頭に置く役割定義
-- Token — Context のサイズを数える単位
-- Prompt Engineering — 指示テキスト単体の設計術（Context より狭い）
+- Context Engineering
+- Context Window
+- System Prompt
+- Token
+- Prompt Engineering
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
