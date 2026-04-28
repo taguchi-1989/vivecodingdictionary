@@ -1,6 +1,36 @@
-# 次セッションへの引き継ぎ（2026-04-26 v6 更新 / 「会話での使い方例」追加）
+# 次セッションへの引き継ぎ（2026-04-28 v7 更新 / スケルトン先行）
 
-*前セッションで v2 レイアウトの 21 世代反復と全エントリ監査・修正が終わり、iter 22 で左右ページの役割再バランスを実施。続く 2026-04-26 セッションで「会話での使い方例」セクションを左ページ末尾に正式追加しました。次セッションはこのファイルを最初に開き、続いて [docs/v2_rules_summary.md](../docs/v2_rules_summary.md) を読んでから執筆に入ってください。*
+*2026-04-28 セッションで「スケルトン先行運用」へ切り替えました。letter A〜J 計 339 件のうち約 318 件にスケルトン（status: skeleton、本文未着手の枠だけ）を生成済み。次セッションはこのファイルと [docs/v2_rules_summary.md](../docs/v2_rules_summary.md) を読んだあと、書きたいエントリの YAML を `status: skeleton → drafting` に上げて `entry-writer` で本文を埋めてください。*
+
+## 2026-04-28: スケルトン先行運用へ切り替え
+
+**変更内容**:
+
+- 新ステータス `status: skeleton` を追加（[docs/entry_schema.yaml](../docs/entry_schema.yaml) v2.27.0）。validator は archived/sample と同様にスキップ
+- スケルトン専用テンプレ：[templates/skeleton_template.md](../templates/skeleton_template.md)
+- ジェネレータ：[scripts/generate_skeleton.py](../scripts/generate_skeleton.py)
+- B letter 37 件で先にテストし、YAML パーサのインラインコメント問題と既存ファイル上書き事故を発見・修正してから残り 281 件を一括生成
+
+**現状ステータス内訳**（[ledgers/entries.csv](entries.csv)）:
+
+- `needs_review`: 11（A-2, B-1, B-2, C-2, D-12, E-1, F-50, G-1, H-53, I-1, J-14）
+- `drafting`: 1（B-3 ChatGPT）
+- `candidate`: 3（A-1, C-1, D-11 — 既に書かれているが needs_review に上げる前。手で確認・昇格を）
+- `sample`: 6（旧 3 桁 ID、archived 相当）
+- `skeleton`: 318（本文未着手）
+
+**次セッションの最短ルート**:
+
+1. [stage2_briefs.md](stage2_briefs.md) の 46 件から 1 件選ぶ（連関の強い B-4 Cursor、C-1 OpenAI などが入口）
+2. md ファイルを開いて `status: skeleton` → `status: drafting` に変更
+3. `entry-writer` サブエージェント呼び出し（"B-4 Cursor を書いて"）
+4. validator で機械チェック → 著者レビュー → `status: needs_review`
+
+---
+
+## （旧）2026-04-26 v6 更新内容（参考）
+
+*v2 レイアウトの 21 世代反復と全エントリ監査・修正が終わり、iter 22 で左右ページの役割再バランスを実施。続く 2026-04-26 セッションで「会話での使い方例」セクションを左ページ末尾に正式追加しました。*
 
 ## 2026-04-26: 「会話での使い方例」セクション追加
 

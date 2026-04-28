@@ -10,11 +10,14 @@
 # の順で更新し、双方向で整合を取る。本ファイルと v2_rules_summary に差があれば、
 # **本ファイル（schema）を正**とする。
 
-schema_version: "v2.26.0"
-updated_at: "2026-04-26"
+schema_version: "v2.27.0"
+updated_at: "2026-04-28"
 canonical_doc: "docs/v2_rules_summary.md"
 
 # 変更履歴
+# - v2.27.0 (2026-04-28): status enum に `skeleton` を追加。validator は archived/sample と
+#   同様にスキップ。スケルトン先行運用（templates/skeleton_template.md と
+#   scripts/generate_skeleton.py）の根拠。
 # - v2.26.0 (2026-04-26): 「会話での使い方例」セクションを左ページ末尾に追加。
 #   下チロム右側「（会話での使い方例）」スロットに印字。25-50 字（推奨 30-40）、1 文。
 # - v2.22.1 (2026-04-25): iter 22 で関連用語を右ページ下段へ移動、右ページ冒頭タイトル削除。
@@ -55,8 +58,10 @@ frontmatter:
       pattern: "^\\d{4}-\\d{2}-\\d{2}$"
       severity: error
     - key: status
-      enum: [drafting, sample, needs_source, needs_review, ready, archived, candidate]
+      enum: [skeleton, drafting, sample, needs_source, needs_review, ready, archived, candidate]
       severity: error
+      # skeleton: 構造だけ置いた本文未着手の状態（2026-04-28 追加）。
+      # validator はスキップする。skeleton → drafting → needs_review → ready で昇格させる。
     - key: related_terms
       type: list
       min_items: 3
