@@ -1,6 +1,7 @@
 ---
 id: H-53
 title: ChatGPT 登場
+title_reading: チャットジーピーティー登場
 category: history
 subtype: event
 experience_level: hands_on

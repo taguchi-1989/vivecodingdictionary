@@ -1,6 +1,7 @@
 ---
 id: D-11
 title: Claude 3.5 系
+title_reading: クロード サンテンゴ系
 category: model
 subtype: anthropic
 experience_level: hands_on

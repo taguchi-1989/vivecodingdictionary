@@ -1,6 +1,7 @@
 ---
 id: C-2
 title: Anthropic
+title_reading: アンソロピック
 category: person_org
 subtype: company
 experience_level: research_only

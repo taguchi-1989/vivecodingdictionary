@@ -255,6 +255,25 @@ def check_yaml(fm: dict, r: Report) -> None:
     if eval_date and not re.match(r"^\d{4}-\d{2}-\d{2}$", eval_date):
         r.warn(f"A. YAML: `evaluation_date` が YYYY-MM-DD 形式でない（{eval_date}）")
 
+    # 2026-04-28: title 末尾の括弧書き読み・展開を禁止
+    # タイトルは純粋名のみ。読み・日本語訳は title_reading スロットに分離する
+    title = str(fm.get("title", "")).strip()
+    if re.search(r"[（(][^)）]+[)）]\s*$", title):
+        r.warn(
+            "A. YAML: `title` 末尾に括弧書きが含まれます — 読み・展開は "
+            "`title_reading` フィールドへ移動してください"
+            f"（現在: {title}）"
+        )
+
+    # title_reading（任意）の字数目安
+    reading = str(fm.get("title_reading", "")).strip()
+    if reading:
+        n = len(reading)
+        if n < 2 or n > 30:
+            r.warn(
+                f"A. YAML: `title_reading` が {n} 字（目安 2〜30、推奨 3〜15）"
+            )
+
 
 def check_structure(body: str, r: Report) -> None:
     for sec in REQUIRED_SECTIONS:

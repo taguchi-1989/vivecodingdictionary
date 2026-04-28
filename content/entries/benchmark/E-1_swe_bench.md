@@ -1,6 +1,7 @@
 ---
 id: E-1
 title: SWE-Bench
+title_reading: スウィーベンチ
 category: benchmark
 subtype: coding
 experience_level: research_only

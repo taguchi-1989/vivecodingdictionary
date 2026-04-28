@@ -1,6 +1,7 @@
 ---
 id: B-1
 title: Gemini
+title_reading: ジェミニ
 category: service
 subtype: ai_assistant
 experience_level: research_only

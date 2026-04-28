@@ -1,6 +1,7 @@
 ---
 id: C-1
 title: OpenAI
+title_reading: オープンエーアイ
 category: person_org
 subtype: company
 experience_level: research_only

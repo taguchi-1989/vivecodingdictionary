@@ -1,6 +1,7 @@
 ---
 id: {{ID}}
 title: {{TITLE}}
+title_reading:           # 任意。タイトルが英字略称・固有名で読み揺れがある場合に書く（例: ギット / コンテキスト）
 category: {{CATEGORY}}
 subtype: {{SUBTYPE}}
 experience_level:

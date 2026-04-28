@@ -1,6 +1,7 @@
 ---
 id: I-1
-title: MCP（Model Context Protocol）
+title: MCP
+title_reading: Model Context Protocol
 category: mcp
 subtype: protocol
 experience_level: hands_on
@@ -19,7 +20,7 @@ related_terms:
 status: needs_review
 ---
 
-# MCP（Model Context Protocol）
+# MCP
 
 ## tagline
 

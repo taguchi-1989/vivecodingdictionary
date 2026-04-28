@@ -1,6 +1,7 @@
 ---
 id: B-2
 title: Claude
+title_reading: クロード
 category: service
 subtype: ai_assistant
 experience_level: hands_on

@@ -10,11 +10,14 @@
 # の順で更新し、双方向で整合を取る。本ファイルと v2_rules_summary に差があれば、
 # **本ファイル（schema）を正**とする。
 
-schema_version: "v2.27.0"
+schema_version: "v2.28.0"
 updated_at: "2026-04-28"
 canonical_doc: "docs/v2_rules_summary.md"
 
 # 変更履歴
+# - v2.28.0 (2026-04-28): タイトル末尾の括弧書き読み（例: `Context（コンテキスト）`）を
+#   廃止し、新スロット `title_reading`（任意）を追加。タイトルは純粋名のみ、読み・
+#   日本語展開はタイトル直下の独立スロットに表示する。誌面では 14px グレー。
 # - v2.27.0 (2026-04-28): status enum に `skeleton` を追加。validator は archived/sample と
 #   同様にスキップ。スケルトン先行運用（templates/skeleton_template.md と
 #   scripts/generate_skeleton.py）の根拠。
@@ -37,6 +40,8 @@ frontmatter:
       max_chars: 20
       recommended_max_chars: 12
       severity: error
+      # 純粋な見出し名のみ。括弧書きの読み・日本語訳・展開は title_reading へ
+      # （2026-04-28 ルール変更）
     - key: category
       enum: [service, model, term, tool, workflow, history, person, person_org, benchmark, common, mcp, term_general]
       severity: error
@@ -69,6 +74,17 @@ frontmatter:
       severity: error
 
   recommended:
+    - key: title_reading
+      description: |
+        タイトルの読み・日本語展開。誌面ではタイトル直下に 14px グレーで表示。
+        英字略称・固有名で読みが揺れる語、または英字 → 日本語展開を見せたい語に付与。
+        例: `ギット` (git) / `コンテキスト` (Context) / `Model Context Protocol` (MCP)。
+        既に title 自体が日本語で読み補足が不要なら省略する。
+      min_chars: 2
+      max_chars: 30
+      recommended_max_chars: 15
+      severity: warn
+      # 2026-04-28 追加。schema_version v2.28.0
     - key: subtype
       description: language / framework / ai_assistant / anthropic などの下位分類
       severity: info
@@ -98,6 +114,17 @@ left_page:
     max_chars: 20
     recommended_max_chars: 12
     severity: warn
+
+  - slot: title_reading
+    # タイトル直下に 14px グレーで表示。任意（YAML title_reading が無ければ非表示）。
+    # 2026-04-28 追加（schema_version v2.28.0）
+    source: yaml.title_reading
+    optional: true
+    min_chars: 2
+    max_chars: 30
+    recommended_max_chars: 15
+    severity: warn
+    css_component: ".title-reading"
 
   - slot: tagline
     heading: "## tagline"
@@ -350,3 +377,6 @@ legacy_heading_map:
   - old: "右ページ冒頭タイトル"
     new: null                        # iter 22 で削除
     since: iter22
+  - old: "タイトル末尾の括弧書き読み（例: `Context（コンテキスト）`）"
+    new: "title_reading スロット（独立）"
+    since: "2026-04-28"

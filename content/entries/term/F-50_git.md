@@ -1,6 +1,7 @@
 ---
 id: F-50
 title: git
+title_reading: ギット
 category: term_tool
 subtype: git
 experience_level: hands_on
@@ -22,7 +23,7 @@ status: needs_review
 
 ## tagline
 
-読み方は「ギット」です。コードの変更履歴を記録し、いつでも戻れるようにする仕組みです。
+コードの変更履歴を記録し、いつでも過去に戻れるようにする仕組みです。差分が見える基盤。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 

@@ -1,6 +1,7 @@
 ---
 id: D-12
 title: Claude 4 系
+title_reading: クロード ヨン系
 category: model
 subtype: anthropic
 experience_level: hands_on

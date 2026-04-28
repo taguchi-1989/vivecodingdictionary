@@ -1,6 +1,7 @@
 ---
 id: J-14
-title: LLM（大規模言語モデル）
+title: LLM
+title_reading: 大規模言語モデル
 category: term_general
 subtype: ml_basic
 experience_level: hands_on
@@ -18,7 +19,7 @@ related_terms:
 status: needs_review
 ---
 
-# LLM（大規模言語モデル）
+# LLM
 
 ## tagline
 

@@ -1,6 +1,7 @@
 ---
 id: G-1
-title: Context（コンテキスト）
+title: Context
+title_reading: コンテキスト
 category: term_llm
 subtype: basic
 experience_level: hands_on
@@ -18,7 +19,7 @@ related_terms:
 status: needs_review
 ---
 
-# Context（コンテキスト）
+# Context
 
 ## tagline
 

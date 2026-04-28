@@ -1,6 +1,52 @@
-# 次セッションへの引き継ぎ（2026-04-28 v7 更新 / スケルトン先行）
+# 次セッションへの引き継ぎ（2026-04-28 v8 更新 / タイトル読みスロット追加）
 
-*2026-04-28 セッションで「スケルトン先行運用」へ切り替えました。letter A〜J 計 339 件のうち約 318 件にスケルトン（status: skeleton、本文未着手の枠だけ）を生成済み。次セッションはこのファイルと [docs/v2_rules_summary.md](../docs/v2_rules_summary.md) を読んだあと、書きたいエントリの YAML を `status: skeleton → drafting` に上げて `entry-writer` で本文を埋めてください。*
+*2026-04-28 セッションで「スケルトン先行運用」へ切り替え、続けて「タイトル読みスロット（title_reading）」を新設しました。letter A〜J 計 339 件のうち約 318 件にスケルトンを生成済み。次セッションはこのファイルと [docs/v2_rules_summary.md](../docs/v2_rules_summary.md) を読んだあと、書きたいエントリの YAML を `status: skeleton → drafting` に上げて `entry-writer` で本文を埋めてください。*
+
+## 2026-04-28（追記）: タイトル読みスロット `title_reading` を追加
+
+**背景**: 既存サンプルの整合性チェック中に、`Context（コンテキスト）` のような「タイトル文字列に括弧で読みを付ける」表記が、誌面の 96px ヒーロー枠で過剰に大きく出る問題が顕在化。タイトルは純粋名のみ、読みは下に小さく分離する方針に切り替え。
+
+**変更内容**:
+
+- 新 YAML フィールド `title_reading`（任意）— タイトル直下に 14px グレーで表示
+- 誌面: タイトル直下に `.title-reading` スロットを新設（`:empty` で非表示制御）
+- ルール: `title` は純粋名のみ（括弧書き読みを禁止）
+- validator: `title` 末尾の `（…）` を ⚠️ 警告、`title_reading` の字数（2〜30）も ⚠️ 警告
+
+**伝搬済みファイル**（schema_version v2.28.0）:
+
+- [docs/v2_rules_summary.md](../docs/v2_rules_summary.md) §0 / §1 左ページ / §2-2 YAML / §2-3 左ページ本文 / §5 リネーム履歴
+- [docs/entry_schema.yaml](../docs/entry_schema.yaml) frontmatter.recommended に `title_reading`、left_page slot 追加
+- [docs/quality_checklist.md](../docs/quality_checklist.md) §A / §B tagline
+- [templates/entry_template.md](../templates/entry_template.md) YAML コメント追加
+- [templates/skeleton_template.md](../templates/skeleton_template.md) YAML に `title_reading:` 行追加
+- [scripts/validate_entry.py](../scripts/validate_entry.py) `check_yaml` に括弧チェック・字数チェック追加
+- [drafts/prototypes/mockups/design_philosophy_v2/typescript_spread.html](../drafts/prototypes/mockups/design_philosophy_v2/typescript_spread.html) `.title-reading` 要素追加（タイプスクリプト）
+- [drafts/prototypes/mockups/design_philosophy_v2/overlay.css](../drafts/prototypes/mockups/design_philosophy_v2/overlay.css) `.title-reading` スタイル追加
+- [drafts/prototypes/mockups/design_philosophy_v2.md](../drafts/prototypes/mockups/design_philosophy_v2.md) §2-1.5 / §3 紙面構成 / §6 履歴
+- [drafts/prototypes/mockups/design_philosophy_v2/writing_spec.md](../drafts/prototypes/mockups/design_philosophy_v2/writing_spec.md) §1-0 追加
+
+**既存エントリへの適用**: active 13 件すべてに対応済み
+
+| ID | title | title_reading |
+|---|---|---|
+| B-1 | Gemini | ジェミニ |
+| B-2 | Claude | クロード |
+| B-3 | ChatGPT | チャットジーピーティー |
+| C-1 | OpenAI | オープンエーアイ |
+| C-2 | Anthropic | アンソロピック |
+| D-11 | Claude 3.5 系 | クロード サンテンゴ系 |
+| D-12 | Claude 4 系 | クロード ヨン系 |
+| E-1 | SWE-Bench | スウィーベンチ |
+| F-50 | git | ギット（tagline 冒頭の「読み方は…」も削除） |
+| G-1 | Context（旧 `Context（コンテキスト）`） | コンテキスト |
+| H-53 | ChatGPT 登場 | チャットジーピーティー登場 |
+| I-1 | MCP（旧 `MCP（Model Context Protocol）`） | Model Context Protocol |
+| J-14 | LLM（旧 `LLM（大規模言語モデル）`） | 大規模言語モデル |
+
+A-1 / A-2（common/）は validator 除外済みで対象外。読みが自明な日本語タイトル（「ChatGPT 登場」のうち登場部 etc）の運用は entry-writer の判断に任せる。
+
+---
 
 ## 2026-04-28: スケルトン先行運用へ切り替え
 

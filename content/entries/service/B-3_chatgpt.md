@@ -1,6 +1,7 @@
 ---
 id: B-3
 title: ChatGPT
+title_reading: チャットジーピーティー
 category: service
 subtype: ai_assistant
 experience_level: hands_on
