@@ -1,7 +1,7 @@
 ---
 id: J-14
 title: LLM
-title_reading: 大規模言語モデル
+title_reading: ラージランゲージモデル
 category: term_general
 subtype: ml_basic
 experience_level: hands_on
