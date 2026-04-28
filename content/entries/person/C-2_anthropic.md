@@ -29,15 +29,11 @@ Claude を作り、最先端モデルを提供する AI 企業です。三大 AI
 
 ## 何をしてくれるか
 
-2021 年に OpenAI の研究リーダーたちが独立して設立した AI 企業です。Claude シリーズの開発・提供（Claude.ai、Claude Code、API）と AI 安全性の研究（Constitutional AI、RSP）を両輪で進めています。
-
-最先端モデルを継続的に発表し、三大 AI 企業の先頭集団に居続けています。研究の知見が次のモデルに直接反映されやすい会社でもあります。
+2021 年に OpenAI の研究リーダーたちが独立して設立した AI 企業です。Claude シリーズの開発・提供と AI 安全性の研究（Constitutional AI、RSP）を両輪で進め、最先端モデルを出し続けています。
 
 ## どこで出会うか
 
-本書で毎日触る Claude・Claude Code の「作っている本丸」です。Anthropic の方針が、次のモデルの挙動・料金体系・提供機能に直結します。
-
-新モデルの発表ペース、ティアの刻み方、Claude Code の進化方向を追いかけていると、現場の道具のロードマップがそのまま見えるような感覚になります。「Claude が変わった」の背景には、常に Anthropic の判断があります。
+本書で毎日触る Claude・Claude Code の「作っている本丸」です。方針が、次のモデルの挙動・料金・機能に直結します。「Claude が変わった」の背景には、常にこの会社の判断があります。
 
 ## メイン図
 
@@ -93,11 +89,11 @@ Constitutional AI、RSP、Interpretability の論文。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 関連用語
 
-- Claude — Anthropic の主力製品（AI アシスタント）
-- Dario Amodei — Anthropic の CEO、元 OpenAI の研究副社長
-- Claude Code — Claude を CLI で動かす Anthropic 公式ツール
-- OpenAI — Anthropic の創業者たちが元いた会社
-- Google DeepMind — 並ぶ三大 AI 企業の一角
+- Claude
+- Dario Amodei
+- Claude Code
+- OpenAI
+- Google DeepMind
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 

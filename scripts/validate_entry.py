@@ -479,8 +479,14 @@ def resolve_path_from_stdin_or_argv() -> Path | None:
 
 
 def should_validate(path: Path) -> bool:
-    """content/entries/**/*.md のみ対象。"""
+    """content/entries/**/*.md のみ対象。
+
+    common/ ディレクトリ（A-* まえがき・読み方ガイド等）は語彙エントリではなく
+    本書の使い方ガイドのため、別テンプレへ移行予定。当面は validator から除外する。
+    """
     posix = path.as_posix()
+    if "/content/entries/common/" in posix or posix.startswith("content/entries/common/"):
+        return False
     return bool(re.search(r"(^|/)content/entries/[^/]+/[^/]+\.md$", posix))
 
 
