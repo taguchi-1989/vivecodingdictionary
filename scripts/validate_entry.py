@@ -216,6 +216,10 @@ def parse_frontmatter(content: str) -> tuple[dict, str]:
         m = re.match(r"^([A-Za-z_]\w*):\s*(.*)$", raw)
         if m:
             k, v = m.group(1), m.group(2).strip()
+            # インラインコメント ` #...` を除去（簡易 YAML 対応、2026-04-28）
+            # 値の途中にスペース＋# が現れたらそこ以降をコメントとみなす
+            if " #" in v:
+                v = v.split(" #", 1)[0].strip()
             if v == "":
                 data[k] = []
                 current_list_key = k
@@ -501,9 +505,10 @@ def main() -> int:
 
     fm, body = parse_frontmatter(content)
 
-    # archived / sample はチェック対象外
+    # archived / sample / skeleton はチェック対象外
+    # skeleton は本文未着手の枠だけが置かれた状態（2026-04-28 追加）
     status = str(fm.get("status", "")).strip()
-    if status in ("archived", "sample"):
+    if status in ("archived", "sample", "skeleton"):
         return 0
 
     r = Report(path)

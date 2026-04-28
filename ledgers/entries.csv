@@ -1,340 +1,340 @@
 new_id,legacy_id,title,category,subtype,status,notes,path
 A-1,,まえがき,common,intro,candidate,,content/entries/common/A-1_preface.md
 A-2,,この本の読み方,common,intro,needs_review,,content/entries/common/A-2_reading_guide.md
-A-3,,図鑑の歩き方,common,intro,candidate,,
-A-4,,体験区分の凡例,common,meta,candidate,,
-A-5,,読者レベルの凡例,common,meta,candidate,,
-A-6,,評価日・時変情報の見方,common,meta,candidate,,
-A-7,,図のタイプ,common,meta,candidate,,
-A-8,,色・記号の凡例,common,meta,candidate,,
-A-9,,索引,common,meta,candidate,,
-A-10,,更新履歴と更新方針,common,meta,candidate,,
-A-11,,略称表記,common,meta,candidate,,
+A-3,,図鑑の歩き方,common,intro,skeleton,,content/entries/common/A-3_walking_guide.md
+A-4,,体験区分の凡例,common,meta,skeleton,,content/entries/common/A-4_experience_legend.md
+A-5,,読者レベルの凡例,common,meta,skeleton,,content/entries/common/A-5_reader_level_legend.md
+A-6,,評価日・時変情報の見方,common,meta,skeleton,,content/entries/common/A-6_evaluation_date_legend.md
+A-7,,図のタイプ,common,meta,skeleton,,content/entries/common/A-7_figure_types_legend.md
+A-8,,色・記号の凡例,common,meta,skeleton,,content/entries/common/A-8_color_symbol_legend.md
+A-9,,索引,common,meta,skeleton,,content/entries/common/A-9_index.md
+A-10,,更新履歴と更新方針,common,meta,skeleton,,content/entries/common/A-10_changelog.md
+A-11,,略称表記,common,meta,skeleton,,content/entries/common/A-11_abbreviations.md
 B-1,101,Gemini,service,ai_assistant,needs_review,新テンプレ書き起こし済（2026-04-24）。legacy 101 は archived,content/entries/service/B-1_gemini.md
 B-2,,Claude,service,ai_assistant,needs_review,,content/entries/service/B-2_claude.md
-B-3,,ChatGPT,service,ai_assistant,candidate,,content/entries/service/B-3_chatgpt.md
-B-4,,Cursor,service,ai_assistant,candidate,,
-B-5,,GitHub Copilot,service,ai_assistant,candidate,,
-B-6,,Windsurf,service,ai_assistant,candidate,,
-B-7,,Claude Code,service,ai_assistant,candidate,略称CC,
-B-8,,Codex (OpenAI),service,ai_assistant,candidate,,
-B-9,,v0,service,ai_assistant,candidate,,
-B-10,,Devin,service,ai_assistant,candidate,,
-B-11,,Bolt.new,service,ai_assistant,candidate,,
-B-12,,Perplexity,service,ai_assistant,candidate,,
-B-13,,ElevenLabs,service,ai_assistant,candidate,音声系,
-B-14,,Genspark,service,ai_assistant,candidate,,
-B-15,,Microsoft Copilot,service,ai_assistant,candidate,,
-B-16,,Microsoft 365 Copilot,service,ai_assistant,candidate,,
-B-17,,Edge Copilot,service,ai_assistant,candidate,,
-B-18,,Aqua Voice,service,ai_assistant,candidate,,
-B-19,,Claude Cowork,service,ai_assistant,candidate,要確認: 正式名称,
-B-20,,Vercel,service,hosting_cloud,candidate,,
-B-21,,Netlify,service,hosting_cloud,candidate,,
-B-22,,Cloudflare,service,hosting_cloud,candidate,,
-B-23,,AWS,service,hosting_cloud,candidate,,
-B-24,,Google Cloud,service,hosting_cloud,candidate,,
-B-25,,Azure,service,hosting_cloud,candidate,,
-B-26,,Azure OpenAI,service,managed_ai,candidate,,
-B-27,,Vertex AI,service,managed_ai,candidate,,
-B-28,,Render,service,hosting_cloud,candidate,,
-B-29,,Supabase,service,baas,candidate,,
-B-30,,Amazon Bedrock,service,managed_ai,candidate,,
-B-31,,Excalidraw,service,saas_design,candidate,,
-B-32,,Figma,service,saas_design,candidate,,
-B-33,,Canva,service,saas_design,candidate,,
-B-40,,Reddit,service,info_source,candidate,,
-B-41,,arXiv,service,info_source,candidate,,
-B-50,,Claude の料金プラン,service,pricing,candidate,時変情報,
-B-51,,ChatGPT の料金プラン,service,pricing,candidate,時変情報,
-B-52,,Gemini の料金プラン,service,pricing,candidate,時変情報,
-B-60,,Suno,service,creative_media,candidate,音楽生成,
-B-61,,ACE-Step 1.5,service,creative_media,candidate,音楽生成,
+B-3,,ChatGPT,service,ai_assistant,drafting,,content/entries/service/B-3_chatgpt.md
+B-4,,Cursor,service,ai_assistant,skeleton,,content/entries/service/B-4_cursor.md
+B-5,,GitHub Copilot,service,ai_assistant,skeleton,,content/entries/service/B-5_github_copilot.md
+B-6,,Windsurf,service,ai_assistant,skeleton,,content/entries/service/B-6_windsurf.md
+B-7,,Claude Code,service,ai_assistant,skeleton,略称CC,content/entries/service/B-7_claude_code.md
+B-8,,Codex (OpenAI),service,ai_assistant,skeleton,,content/entries/service/B-8_codex.md
+B-9,,v0,service,ai_assistant,skeleton,,content/entries/service/B-9_v0.md
+B-10,,Devin,service,ai_assistant,skeleton,,content/entries/service/B-10_devin.md
+B-11,,Bolt.new,service,ai_assistant,skeleton,,content/entries/service/B-11_bolt_new.md
+B-12,,Perplexity,service,ai_assistant,skeleton,,content/entries/service/B-12_perplexity.md
+B-13,,ElevenLabs,service,ai_assistant,skeleton,音声系,content/entries/service/B-13_elevenlabs.md
+B-14,,Genspark,service,ai_assistant,skeleton,,content/entries/service/B-14_genspark.md
+B-15,,Microsoft Copilot,service,ai_assistant,skeleton,,content/entries/service/B-15_microsoft_copilot.md
+B-16,,Microsoft 365 Copilot,service,ai_assistant,skeleton,,content/entries/service/B-16_microsoft_365_copilot.md
+B-17,,Edge Copilot,service,ai_assistant,skeleton,,content/entries/service/B-17_edge_copilot.md
+B-18,,Aqua Voice,service,ai_assistant,skeleton,,content/entries/service/B-18_aqua_voice.md
+B-19,,Claude Cowork,service,ai_assistant,skeleton,要確認: 正式名称,content/entries/service/B-19_claude_cowork.md
+B-20,,Vercel,service,hosting_cloud,skeleton,,content/entries/service/B-20_vercel.md
+B-21,,Netlify,service,hosting_cloud,skeleton,,content/entries/service/B-21_netlify.md
+B-22,,Cloudflare,service,hosting_cloud,skeleton,,content/entries/service/B-22_cloudflare.md
+B-23,,AWS,service,hosting_cloud,skeleton,,content/entries/service/B-23_aws.md
+B-24,,Google Cloud,service,hosting_cloud,skeleton,,content/entries/service/B-24_google_cloud.md
+B-25,,Azure,service,hosting_cloud,skeleton,,content/entries/service/B-25_azure.md
+B-26,,Azure OpenAI,service,managed_ai,skeleton,,content/entries/service/B-26_azure_openai.md
+B-27,,Vertex AI,service,managed_ai,skeleton,,content/entries/service/B-27_vertex_ai.md
+B-28,,Render,service,hosting_cloud,skeleton,,content/entries/service/B-28_render.md
+B-29,,Supabase,service,baas,skeleton,,content/entries/service/B-29_supabase.md
+B-30,,Amazon Bedrock,service,managed_ai,skeleton,,content/entries/service/B-30_amazon_bedrock.md
+B-31,,Excalidraw,service,saas_design,skeleton,,content/entries/service/B-31_excalidraw.md
+B-32,,Figma,service,saas_design,skeleton,,content/entries/service/B-32_figma.md
+B-33,,Canva,service,saas_design,skeleton,,content/entries/service/B-33_canva.md
+B-40,,Reddit,service,info_source,skeleton,,content/entries/service/B-40_reddit.md
+B-41,,arXiv,service,info_source,skeleton,,content/entries/service/B-41_arxiv.md
+B-50,,Claude の料金プラン,service,pricing,skeleton,時変情報,content/entries/service/B-50_claude_pricing.md
+B-51,,ChatGPT の料金プラン,service,pricing,skeleton,時変情報,content/entries/service/B-51_chatgpt_pricing.md
+B-52,,Gemini の料金プラン,service,pricing,skeleton,時変情報,content/entries/service/B-52_gemini_pricing.md
+B-60,,Suno,service,creative_media,skeleton,音楽生成,content/entries/service/B-60_suno.md
+B-61,,ACE-Step 1.5,service,creative_media,skeleton,音楽生成,content/entries/service/B-61_ace_step_1_5.md
 C-1,,OpenAI,person_org,company,candidate,,content/entries/person/C-1_openai.md
 C-2,,Anthropic,person_org,company,needs_review,,content/entries/person/C-2_anthropic.md
-C-3,,Google DeepMind,person_org,company,candidate,,
-C-4,,Meta AI,person_org,company,candidate,,
-C-5,,xAI,person_org,company,candidate,,
-C-6,,Mistral AI,person_org,company,candidate,,
-C-7,,Hugging Face,person_org,company,candidate,,
-C-8,,Microsoft AI,person_org,company,candidate,,
-C-9,,NVIDIA,person_org,company,candidate,,
-C-10,,Moonshot AI,person_org,company,candidate,,
-C-11,,Z.ai,person_org,company,candidate,旧Zhipu,
-C-12,,TSMC,person_org,company,candidate,半導体ファウンドリ,
-C-13,,Groq,person_org,company,candidate,AI推論チップ,
-C-14,,AMD,person_org,company,candidate,半導体,
-C-50,,Sam Altman,person_org,person,candidate,,
-C-51,,Dario Amodei,person_org,person,candidate,,
-C-52,,Demis Hassabis,person_org,person,candidate,,
-C-53,,Andrej Karpathy,person_org,person,candidate,,
-C-54,,Ilya Sutskever,person_org,person,candidate,,
-C-55,,Mira Murati,person_org,person,candidate,,
-C-56,,Yann LeCun,person_org,person,candidate,,
-C-57,,Geoffrey Hinton,person_org,person,candidate,,
-C-58,,Elon Musk,person_org,person,candidate,,
-C-59,,Jensen Huang,person_org,person,candidate,,
-C-60,,Ray Kurzweil,person_org,person,candidate,,
-C-80,,AI大学,person_org,youtuber,candidate,,
-C-81,,にゃんた,person_org,youtuber,candidate,,
-C-82,,まさお,person_org,youtuber,candidate,,
-C-83,,AIの羅針盤,person_org,youtuber,candidate,,
-D-1,,Gemini 2 系,model,google,candidate,,
-D-2,201,Gemini 2.5 系,model,google,sample,旧3桁ID連携,
-D-3,,Gemini 3 系,model,google,candidate,,
-D-4,,Gemini 3.1 系,model,google,candidate,,
-D-10,,Claude 3 系,model,anthropic,candidate,,
+C-3,,Google DeepMind,person_org,company,skeleton,,content/entries/person/C-3_google_deepmind.md
+C-4,,Meta AI,person_org,company,skeleton,,content/entries/person/C-4_meta_ai.md
+C-5,,xAI,person_org,company,skeleton,,content/entries/person/C-5_xai.md
+C-6,,Mistral AI,person_org,company,skeleton,,content/entries/person/C-6_mistral_ai.md
+C-7,,Hugging Face,person_org,company,skeleton,,content/entries/person/C-7_hugging_face.md
+C-8,,Microsoft AI,person_org,company,skeleton,,content/entries/person/C-8_microsoft_ai.md
+C-9,,NVIDIA,person_org,company,skeleton,,content/entries/person/C-9_nvidia.md
+C-10,,Moonshot AI,person_org,company,skeleton,,content/entries/person/C-10_moonshot_ai.md
+C-11,,Z.ai,person_org,company,skeleton,旧Zhipu,content/entries/person/C-11_z_ai.md
+C-12,,TSMC,person_org,company,skeleton,半導体ファウンドリ,content/entries/person/C-12_tsmc.md
+C-13,,Groq,person_org,company,skeleton,AI推論チップ,content/entries/person/C-13_groq.md
+C-14,,AMD,person_org,company,skeleton,半導体,content/entries/person/C-14_amd.md
+C-50,,Sam Altman,person_org,person,skeleton,,content/entries/person/C-50_sam_altman.md
+C-51,,Dario Amodei,person_org,person,skeleton,,content/entries/person/C-51_dario_amodei.md
+C-52,,Demis Hassabis,person_org,person,skeleton,,content/entries/person/C-52_demis_hassabis.md
+C-53,,Andrej Karpathy,person_org,person,skeleton,,content/entries/person/C-53_andrej_karpathy.md
+C-54,,Ilya Sutskever,person_org,person,skeleton,,content/entries/person/C-54_ilya_sutskever.md
+C-55,,Mira Murati,person_org,person,skeleton,,content/entries/person/C-55_mira_murati.md
+C-56,,Yann LeCun,person_org,person,skeleton,,content/entries/person/C-56_yann_lecun.md
+C-57,,Geoffrey Hinton,person_org,person,skeleton,,content/entries/person/C-57_geoffrey_hinton.md
+C-58,,Elon Musk,person_org,person,skeleton,,content/entries/person/C-58_elon_musk.md
+C-59,,Jensen Huang,person_org,person,skeleton,,content/entries/person/C-59_jensen_huang.md
+C-60,,Ray Kurzweil,person_org,person,skeleton,,content/entries/person/C-60_ray_kurzweil.md
+C-80,,AI大学,person_org,youtuber,skeleton,,content/entries/person/C-80.md
+C-81,,にゃんた,person_org,youtuber,skeleton,,content/entries/person/C-81.md
+C-82,,まさお,person_org,youtuber,skeleton,,content/entries/person/C-82.md
+C-83,,AIの羅針盤,person_org,youtuber,skeleton,,content/entries/person/C-83.md
+D-1,,Gemini 2 系,model,google,skeleton,,content/entries/model/D-1.md
+D-2,201,Gemini 2.5 系,model,google,sample,旧3桁ID連携,content/entries/model/D-2_gemini25.md
+D-3,,Gemini 3 系,model,google,skeleton,,content/entries/model/D-3.md
+D-4,,Gemini 3.1 系,model,google,skeleton,,content/entries/model/D-4.md
+D-10,,Claude 3 系,model,anthropic,skeleton,,content/entries/model/D-10.md
 D-11,,Claude 3.5 系,model,anthropic,candidate,,content/entries/model/D-11_claude35.md
 D-12,,Claude 4 系,model,anthropic,needs_review,,content/entries/model/D-12_claude4.md
-D-13,,Claude 4.5 系,model,anthropic,candidate,,
-D-14,,Claude Mitos モデル,model,anthropic,candidate,要確認: 正式名称,
-D-20,,GPT-5 系,model,openai,candidate,,
-D-21,,GPT-4 系,model,openai,candidate,,
-D-22,,o1 系,model,openai,candidate,推論特化,
-D-23,,o3 系,model,openai,candidate,,
-D-24,,GPT-3 系,model,openai,candidate,,
-D-25,,GPT-1 / GPT-2 系,model,openai,candidate,,
-D-26,,gpt-oss,model,openai,candidate,OpenAI初の公式オープンウェイトモデル 2025-08,
-D-30,,Grok 系,model,xai,candidate,,
-D-35,,Cursor Composer (モデル),model,other_closed,candidate,,
-D-40,,Llama 系,model,open,candidate,,
-D-41,,Mistral 系,model,open,candidate,,
-D-42,,Gemma 系,model,open,candidate,,
-D-43,,Qwen 系,model,open,candidate,,
-D-44,,Kimi,model,open,candidate,,
-D-45,,GLM,model,open,candidate,,
-D-46,,DeepSeek V3,model,open,candidate,,
-D-47,,DeepSeek R1,model,open,candidate,推論特化,
-D-50,,DALL-E,model,image_video,candidate,,
-D-51,,Imagen,model,image_video,candidate,,
-D-52,,Sora,model,image_video,candidate,,
-D-53,,Veo,model,image_video,candidate,,
-D-54,,Stable Diffusion,model,image_video,candidate,,
-D-55,,Nano Banana,model,image_video,candidate,,
-D-56,,Seedance,model,image_video,candidate,,
-D-57,,Flow,model,image_video,candidate,Veoベースツール,
-D-58,,Whisk,model,image_video,candidate,Imagenベースツール,
-D-60,,AlphaGo,model,historical,candidate,,
-D-70,,Amical,model,voice_audio,candidate,著者確認済。URL は執筆時に補足,
-D-71,,Whisper,model,voice_audio,candidate,OpenAI のオープン音声認識モデル,
+D-13,,Claude 4.5 系,model,anthropic,skeleton,,content/entries/model/D-13.md
+D-14,,Claude Mitos モデル,model,anthropic,skeleton,要確認: 正式名称,content/entries/model/D-14.md
+D-20,,GPT-5 系,model,openai,skeleton,,content/entries/model/D-20.md
+D-21,,GPT-4 系,model,openai,skeleton,,content/entries/model/D-21.md
+D-22,,o1 系,model,openai,skeleton,推論特化,content/entries/model/D-22.md
+D-23,,o3 系,model,openai,skeleton,,content/entries/model/D-23.md
+D-24,,GPT-3 系,model,openai,skeleton,,content/entries/model/D-24.md
+D-25,,GPT-1 / GPT-2 系,model,openai,skeleton,,content/entries/model/D-25.md
+D-26,,gpt-oss,model,openai,skeleton,OpenAI初の公式オープンウェイトモデル 2025-08,content/entries/model/D-26_gpt_oss.md
+D-30,,Grok 系,model,xai,skeleton,,content/entries/model/D-30.md
+D-35,,Cursor Composer (モデル),model,other_closed,skeleton,,content/entries/model/D-35_cursor_composer.md
+D-40,,Llama 系,model,open,skeleton,,content/entries/model/D-40.md
+D-41,,Mistral 系,model,open,skeleton,,content/entries/model/D-41.md
+D-42,,Gemma 系,model,open,skeleton,,content/entries/model/D-42.md
+D-43,,Qwen 系,model,open,skeleton,,content/entries/model/D-43.md
+D-44,,Kimi,model,open,skeleton,,content/entries/model/D-44_kimi.md
+D-45,,GLM,model,open,skeleton,,content/entries/model/D-45_glm.md
+D-46,,DeepSeek V3,model,open,skeleton,,content/entries/model/D-46_deepseek_v3.md
+D-47,,DeepSeek R1,model,open,skeleton,推論特化,content/entries/model/D-47_deepseek_r1.md
+D-50,,DALL-E,model,image_video,skeleton,,content/entries/model/D-50_dall_e.md
+D-51,,Imagen,model,image_video,skeleton,,content/entries/model/D-51_imagen.md
+D-52,,Sora,model,image_video,skeleton,,content/entries/model/D-52_sora.md
+D-53,,Veo,model,image_video,skeleton,,content/entries/model/D-53_veo.md
+D-54,,Stable Diffusion,model,image_video,skeleton,,content/entries/model/D-54_stable_diffusion.md
+D-55,,Nano Banana,model,image_video,skeleton,,content/entries/model/D-55_nano_banana.md
+D-56,,Seedance,model,image_video,skeleton,,content/entries/model/D-56_seedance.md
+D-57,,Flow,model,image_video,skeleton,Veoベースツール,content/entries/model/D-57_flow.md
+D-58,,Whisk,model,image_video,skeleton,Imagenベースツール,content/entries/model/D-58_whisk.md
+D-60,,AlphaGo,model,historical,skeleton,,content/entries/model/D-60_alphago.md
+D-70,,Amical,model,voice_audio,skeleton,著者確認済。URL は執筆時に補足,content/entries/model/D-70_amical.md
+D-71,,Whisper,model,voice_audio,skeleton,OpenAI のオープン音声認識モデル,content/entries/model/D-71_whisper.md
 E-1,,SWE-Bench,benchmark,coding,needs_review,,content/entries/benchmark/E-1_swe_bench.md
-E-2,,SWE-Bench Verified,benchmark,coding,candidate,,
-E-3,,Terminal-Bench,benchmark,coding,candidate,,
-E-4,,HumanEval,benchmark,coding,candidate,,
-E-20,,MMLU,benchmark,reasoning,candidate,,
-E-21,,MMLU-Pro,benchmark,reasoning,candidate,,
-E-22,,GPQA,benchmark,reasoning,candidate,,
-E-23,,GSM8K,benchmark,reasoning,candidate,,
-E-24,,MATH,benchmark,reasoning,candidate,,
-E-25,,AIME,benchmark,reasoning,candidate,,
-E-26,,Humanity's Last Exam,benchmark,reasoning,candidate,,
-E-27,,IQ Bench,benchmark,reasoning,candidate,,
-E-30,,TAU-Bench,benchmark,agent,candidate,,
-E-31,,WebArena,benchmark,agent,candidate,,
-E-32,,GAIA,benchmark,agent,candidate,,
-E-33,,AgentBench,benchmark,agent,candidate,,
-E-34,,OSWorld,benchmark,agent,candidate,,
-E-50,,Chatbot Arena,benchmark,general,candidate,,
-E-51,,LMSYS Arena,benchmark,general,candidate,,
-F-1,301,JavaScript,term_tool,language,sample,旧3桁ID連携,
-F-2,302,TypeScript,term_tool,language,sample,旧3桁ID連携,
-F-3,,Python,term_tool,language,candidate,,
-F-4,,HTML,term_tool,language,candidate,,
-F-5,,CSS,term_tool,language,candidate,,
-F-6,,Markdown,term_tool,language,candidate,,
-F-7,,YAML,term_tool,language,candidate,,
-F-8,,JSON,term_tool,language,candidate,,
-F-9,,SVG,term_tool,language,candidate,,
-F-10,304,React,term_tool,framework,sample,旧3桁ID連携,
-F-11,305,Next.js,term_tool,framework,sample,旧3桁ID連携,
-F-12,,Electron,term_tool,framework,candidate,,
-F-13,,Tauri,term_tool,framework,candidate,,
-F-14,,three.js,term_tool,framework,candidate,3Dライブラリ,
-F-15,,shadcn/ui,term_tool,framework,candidate,コピペ配布型 React コンポーネント集,
-F-20,303,ESLint,term_tool,linter,sample,旧3桁ID連携,
-F-21,,Prettier,term_tool,linter,candidate,,
-F-30,,VS Code,term_tool,editor,candidate,,
-F-34,,VS Code 拡張機能,term_tool,editor,candidate,,
-F-35,,Markdown Preview Enhanced,term_tool,editor_ext,candidate,,
-F-36,,Git Graph,term_tool,editor_ext,candidate,,
-F-37,,Japanese Language Pack for VS Code,term_tool,editor_ext,candidate,,
-F-38,,Markdown All in One,term_tool,editor_ext,candidate,,
-F-40,,npm,term_tool,cli_build,candidate,,
-F-41,,Vite,term_tool,cli_build,candidate,,
-F-42,,ビルド,term_tool,cli_build,candidate,,
-F-43,,テスト,term_tool,cli_build,candidate,,
-F-44,,pnpm,term_tool,cli_build,candidate,,
+E-2,,SWE-Bench Verified,benchmark,coding,skeleton,,content/entries/benchmark/E-2_swe_bench_verified.md
+E-3,,Terminal-Bench,benchmark,coding,skeleton,,content/entries/benchmark/E-3_terminal_bench.md
+E-4,,HumanEval,benchmark,coding,skeleton,,content/entries/benchmark/E-4_humaneval.md
+E-20,,MMLU,benchmark,reasoning,skeleton,,content/entries/benchmark/E-20_mmlu.md
+E-21,,MMLU-Pro,benchmark,reasoning,skeleton,,content/entries/benchmark/E-21_mmlu_pro.md
+E-22,,GPQA,benchmark,reasoning,skeleton,,content/entries/benchmark/E-22_gpqa.md
+E-23,,GSM8K,benchmark,reasoning,skeleton,,content/entries/benchmark/E-23_gsm8k.md
+E-24,,MATH,benchmark,reasoning,skeleton,,content/entries/benchmark/E-24_math.md
+E-25,,AIME,benchmark,reasoning,skeleton,,content/entries/benchmark/E-25_aime.md
+E-26,,Humanity's Last Exam,benchmark,reasoning,skeleton,,content/entries/benchmark/E-26_humanity_s_last_exam.md
+E-27,,IQ Bench,benchmark,reasoning,skeleton,,content/entries/benchmark/E-27_iq_bench.md
+E-30,,TAU-Bench,benchmark,agent,skeleton,,content/entries/benchmark/E-30_tau_bench.md
+E-31,,WebArena,benchmark,agent,skeleton,,content/entries/benchmark/E-31_webarena.md
+E-32,,GAIA,benchmark,agent,skeleton,,content/entries/benchmark/E-32_gaia.md
+E-33,,AgentBench,benchmark,agent,skeleton,,content/entries/benchmark/E-33_agentbench.md
+E-34,,OSWorld,benchmark,agent,skeleton,,content/entries/benchmark/E-34_osworld.md
+E-50,,Chatbot Arena,benchmark,general,skeleton,,content/entries/benchmark/E-50_chatbot_arena.md
+E-51,,LMSYS Arena,benchmark,general,skeleton,,content/entries/benchmark/E-51_lmsys_arena.md
+F-1,301,JavaScript,term_tool,language,sample,旧3桁ID連携,content/entries/term_tool/F-1_javascript.md
+F-2,302,TypeScript,term_tool,language,sample,旧3桁ID連携,content/entries/term_tool/F-2_typescript.md
+F-3,,Python,term_tool,language,skeleton,,content/entries/term_tool/F-3_python.md
+F-4,,HTML,term_tool,language,skeleton,,content/entries/term_tool/F-4_html.md
+F-5,,CSS,term_tool,language,skeleton,,content/entries/term_tool/F-5_css.md
+F-6,,Markdown,term_tool,language,skeleton,,content/entries/term_tool/F-6_markdown.md
+F-7,,YAML,term_tool,language,skeleton,,content/entries/term_tool/F-7_yaml.md
+F-8,,JSON,term_tool,language,skeleton,,content/entries/term_tool/F-8_json.md
+F-9,,SVG,term_tool,language,skeleton,,content/entries/term_tool/F-9_svg.md
+F-10,304,React,term_tool,framework,sample,旧3桁ID連携,content/entries/term_tool/F-10_react.md
+F-11,305,Next.js,term_tool,framework,sample,旧3桁ID連携,content/entries/term_tool/F-11_next_js.md
+F-12,,Electron,term_tool,framework,skeleton,,content/entries/term_tool/F-12_electron.md
+F-13,,Tauri,term_tool,framework,skeleton,,content/entries/term_tool/F-13_tauri.md
+F-14,,three.js,term_tool,framework,skeleton,3Dライブラリ,content/entries/term_tool/F-14_three_js.md
+F-15,,shadcn/ui,term_tool,framework,skeleton,コピペ配布型 React コンポーネント集,content/entries/term_tool/F-15_shadcn_ui.md
+F-20,303,ESLint,term_tool,linter,sample,旧3桁ID連携,content/entries/term_tool/F-20_eslint.md
+F-21,,Prettier,term_tool,linter,skeleton,,content/entries/term_tool/F-21_prettier.md
+F-30,,VS Code,term_tool,editor,skeleton,,content/entries/term_tool/F-30_vs_code.md
+F-34,,VS Code 拡張機能,term_tool,editor,skeleton,,content/entries/term_tool/F-34.md
+F-35,,Markdown Preview Enhanced,term_tool,editor_ext,skeleton,,content/entries/term_tool/F-35_markdown_preview_enhanced.md
+F-36,,Git Graph,term_tool,editor_ext,skeleton,,content/entries/term_tool/F-36_git_graph.md
+F-37,,Japanese Language Pack for VS Code,term_tool,editor_ext,skeleton,,content/entries/term_tool/F-37_japanese_language_pack_for_vs_code.md
+F-38,,Markdown All in One,term_tool,editor_ext,skeleton,,content/entries/term_tool/F-38_markdown_all_in_one.md
+F-40,,npm,term_tool,cli_build,skeleton,,content/entries/term_tool/F-40_npm.md
+F-41,,Vite,term_tool,cli_build,skeleton,,content/entries/term_tool/F-41_vite.md
+F-42,,ビルド,term_tool,cli_build,skeleton,,content/entries/term_tool/F-42.md
+F-43,,テスト,term_tool,cli_build,skeleton,,content/entries/term_tool/F-43.md
+F-44,,pnpm,term_tool,cli_build,skeleton,,content/entries/term_tool/F-44_pnpm.md
 F-50,,git,term_tool,git,needs_review,,content/entries/term/F-50_git.md
-F-51,,git push,term_tool,git,candidate,,
-F-52,,git pull,term_tool,git,candidate,,
-F-53,,branch,term_tool,git,candidate,,
-F-54,,commit,term_tool,git,candidate,,
-F-55,,merge,term_tool,git,candidate,,
-F-56,,.gitignore,term_tool,git,candidate,,
-F-57,,リポジトリ,term_tool,git,candidate,,
-F-58,,git stash,term_tool,git,candidate,,
-F-59,,README.md,term_tool,git,candidate,,
-F-60,,GitHub,term_tool,github,candidate,,
-F-61,,Pull Request,term_tool,github,candidate,,
-F-62,,GitHub Actions,term_tool,github,candidate,CI/CD,
-F-71,,ripgrep (rg),term_tool,search,candidate,,
-F-80,,Node.js,term_tool,runtime,candidate,,
-F-81,,bash,term_tool,shell,candidate,,
-F-82,,WSL,term_tool,shell,candidate,,
-F-83,,PowerShell,term_tool,shell,candidate,,
-F-84,,Ghostty,term_tool,terminal,candidate,,
-F-85,,SuperClaude Framework,term_tool,terminal,candidate,Claude Code 拡張 OSS（Anthropic 非公式）,
-F-86,,ollama,term_tool,runtime,candidate,ローカルLLM,
-F-87,,sudo,term_tool,shell,candidate,UNIX 系の権限昇格コマンド,
-F-90,,Docker,term_tool,container,candidate,,
-F-91,,.env,term_tool,env,candidate,,
-F-100,,拡張子早見表,term_tool,file_format,candidate,,
-F-101,,.ico,term_tool,file_format,candidate,,
-F-102,,.mp4,term_tool,file_format,candidate,,
-F-103,,.mp3,term_tool,file_format,candidate,,
-F-104,,.webp,term_tool,file_format,candidate,,
-F-110,,Lighthouse,term_tool,quality,candidate,,
-F-111,,a11y,term_tool,quality,candidate,,
-F-120,,PostgreSQL,term_tool,database,candidate,,
-F-121,,SQLite,term_tool,database,candidate,,
-F-122,,Prisma,term_tool,orm,candidate,,
-F-123,,ORM,term_tool,orm,candidate,,
-F-130,,OAuth,term_tool,auth,candidate,,
-F-140,,Mermaid,term_tool,diagram,candidate,,
-F-141,,PlantUML,term_tool,diagram,candidate,,
-F-150,,MIT ライセンス,term_tool,license,candidate,,
-F-151,,Apache 2.0,term_tool,license,candidate,,
-F-152,,GPL,term_tool,license,candidate,,
-F-153,,Creative Commons (CC),term_tool,license,candidate,,
-F-154,,OSS,term_tool,license,candidate,,
-F-160,,DOM,term_tool,web_foundation,candidate,,
-F-161,,SSR,term_tool,web_foundation,candidate,,
-F-162,,SSG,term_tool,web_foundation,candidate,,
-F-170,,EC2,term_tool,cloud_service,candidate,,
-F-171,,S3,term_tool,cloud_service,candidate,,
-F-172,,IAM,term_tool,cloud_service,candidate,,
-F-180,,OpenGL,term_tool,graphics,candidate,,
-F-181,,WebGL,term_tool,graphics,candidate,,
-F-190,,サブルーチン,term_tool,programming_basic,candidate,古典的概念,
+F-51,,git push,term_tool,git,skeleton,,content/entries/term_tool/F-51_git_push.md
+F-52,,git pull,term_tool,git,skeleton,,content/entries/term_tool/F-52_git_pull.md
+F-53,,branch,term_tool,git,skeleton,,content/entries/term_tool/F-53_branch.md
+F-54,,commit,term_tool,git,skeleton,,content/entries/term_tool/F-54_commit.md
+F-55,,merge,term_tool,git,skeleton,,content/entries/term_tool/F-55_merge.md
+F-56,,.gitignore,term_tool,git,skeleton,,content/entries/term_tool/F-56_gitignore.md
+F-57,,リポジトリ,term_tool,git,skeleton,,content/entries/term_tool/F-57.md
+F-58,,git stash,term_tool,git,skeleton,,content/entries/term_tool/F-58_git_stash.md
+F-59,,README.md,term_tool,git,skeleton,,content/entries/term_tool/F-59_readme_md.md
+F-60,,GitHub,term_tool,github,skeleton,,content/entries/term_tool/F-60_github.md
+F-61,,Pull Request,term_tool,github,skeleton,,content/entries/term_tool/F-61_pull_request.md
+F-62,,GitHub Actions,term_tool,github,skeleton,CI/CD,content/entries/term_tool/F-62_github_actions.md
+F-71,,ripgrep (rg),term_tool,search,skeleton,,content/entries/term_tool/F-71_ripgrep.md
+F-80,,Node.js,term_tool,runtime,skeleton,,content/entries/term_tool/F-80_node_js.md
+F-81,,bash,term_tool,shell,skeleton,,content/entries/term_tool/F-81_bash.md
+F-82,,WSL,term_tool,shell,skeleton,,content/entries/term_tool/F-82_wsl.md
+F-83,,PowerShell,term_tool,shell,skeleton,,content/entries/term_tool/F-83_powershell.md
+F-84,,Ghostty,term_tool,terminal,skeleton,,content/entries/term_tool/F-84_ghostty.md
+F-85,,SuperClaude Framework,term_tool,terminal,skeleton,Claude Code 拡張 OSS（Anthropic 非公式）,content/entries/term_tool/F-85_superclaude_framework.md
+F-86,,ollama,term_tool,runtime,skeleton,ローカルLLM,content/entries/term_tool/F-86_ollama.md
+F-87,,sudo,term_tool,shell,skeleton,UNIX 系の権限昇格コマンド,content/entries/term_tool/F-87_sudo.md
+F-90,,Docker,term_tool,container,skeleton,,content/entries/term_tool/F-90_docker.md
+F-91,,.env,term_tool,env,skeleton,,content/entries/term_tool/F-91_env.md
+F-100,,拡張子早見表,term_tool,file_format,skeleton,,content/entries/term_tool/F-100.md
+F-101,,.ico,term_tool,file_format,skeleton,,content/entries/term_tool/F-101_ico.md
+F-102,,.mp4,term_tool,file_format,skeleton,,content/entries/term_tool/F-102_mp4.md
+F-103,,.mp3,term_tool,file_format,skeleton,,content/entries/term_tool/F-103_mp3.md
+F-104,,.webp,term_tool,file_format,skeleton,,content/entries/term_tool/F-104_webp.md
+F-110,,Lighthouse,term_tool,quality,skeleton,,content/entries/term_tool/F-110_lighthouse.md
+F-111,,a11y,term_tool,quality,skeleton,,content/entries/term_tool/F-111_a11y.md
+F-120,,PostgreSQL,term_tool,database,skeleton,,content/entries/term_tool/F-120_postgresql.md
+F-121,,SQLite,term_tool,database,skeleton,,content/entries/term_tool/F-121_sqlite.md
+F-122,,Prisma,term_tool,orm,skeleton,,content/entries/term_tool/F-122_prisma.md
+F-123,,ORM,term_tool,orm,skeleton,,content/entries/term_tool/F-123_orm.md
+F-130,,OAuth,term_tool,auth,skeleton,,content/entries/term_tool/F-130_oauth.md
+F-140,,Mermaid,term_tool,diagram,skeleton,,content/entries/term_tool/F-140_mermaid.md
+F-141,,PlantUML,term_tool,diagram,skeleton,,content/entries/term_tool/F-141_plantuml.md
+F-150,,MIT ライセンス,term_tool,license,skeleton,,content/entries/term_tool/F-150.md
+F-151,,Apache 2.0,term_tool,license,skeleton,,content/entries/term_tool/F-151_apache_2_0.md
+F-152,,GPL,term_tool,license,skeleton,,content/entries/term_tool/F-152_gpl.md
+F-153,,Creative Commons (CC),term_tool,license,skeleton,,content/entries/term_tool/F-153_creative_commons.md
+F-154,,OSS,term_tool,license,skeleton,,content/entries/term_tool/F-154_oss.md
+F-160,,DOM,term_tool,web_foundation,skeleton,,content/entries/term_tool/F-160_dom.md
+F-161,,SSR,term_tool,web_foundation,skeleton,,content/entries/term_tool/F-161_ssr.md
+F-162,,SSG,term_tool,web_foundation,skeleton,,content/entries/term_tool/F-162_ssg.md
+F-170,,EC2,term_tool,cloud_service,skeleton,,content/entries/term_tool/F-170_ec2.md
+F-171,,S3,term_tool,cloud_service,skeleton,,content/entries/term_tool/F-171_s3.md
+F-172,,IAM,term_tool,cloud_service,skeleton,,content/entries/term_tool/F-172_iam.md
+F-180,,OpenGL,term_tool,graphics,skeleton,,content/entries/term_tool/F-180_opengl.md
+F-181,,WebGL,term_tool,graphics,skeleton,,content/entries/term_tool/F-181_webgl.md
+F-190,,サブルーチン,term_tool,programming_basic,skeleton,古典的概念,content/entries/term_tool/F-190.md
 G-1,,Context (コンテキスト),term_llm,basic,needs_review,,content/entries/term/G-1_context.md
-G-2,,Token,term_llm,basic,candidate,,
-G-3,,Dictation,term_llm,basic,candidate,,
-G-4,,System Prompt,term_llm,basic,candidate,,
-G-5,,Context Window,term_llm,basic,candidate,,
-G-6,,One-shot,term_llm,basic,candidate,,
-G-7,,指示追従性,term_llm,basic,candidate,,
-G-8,,決定論的／非決定論的,term_llm,basic,candidate,,
-G-9,,effort レベル,term_llm,basic,candidate,low/medium/high/xhigh,
-G-10,,Prompt Engineering,term_llm,technique,candidate,,
-G-11,,Context Engineering,term_llm,technique,candidate,,
-G-12,,Agent Design,term_llm,technique,candidate,,
-G-13,,Few-shot Learning,term_llm,technique,candidate,,
-G-14,,Thinking モデル,term_llm,technique,candidate,,
-G-20,,CLAUDE.md,tool_agent,config_file,candidate,,
-G-21,,AGENTS.md,tool_agent,config_file,candidate,,
-G-22,,SKILL.md,tool_agent,config_file,candidate,,
-G-23,,.claude/settings.json,tool_agent,config_file,candidate,,
-G-30,,Tool Use,term_llm,control,candidate,,
-G-31,,Hook,term_llm,control,candidate,,
-G-32,,Slash Command,term_llm,control,candidate,,
-G-33,,Function Calling,term_llm,control,candidate,,
-G-34,,Code Interpreter,term_llm,control,candidate,,
-G-35,,Deep Research,term_llm,control,candidate,,
-G-36,,Artifact,term_llm,control,candidate,,
-G-40,,バイブコーディング,term_llm,ops,candidate,,
-G-41,,Subagent,term_llm,ops,candidate,,
-G-42,,Worktree,term_llm,ops,candidate,,
-G-43,,オーケストレーション,term_llm,ops,candidate,,
-G-44,,マルチエージェント協調,term_llm,ops,candidate,,
-G-45,,段階的開示,term_llm,ops,candidate,,
-G-46,,ナーフ (モデルの劣化),term_llm,ops,candidate,,
-H-1,,TDD,workflow,methodology,candidate,,
-H-2,,ペアプログラミング,workflow,methodology,candidate,,
-H-3,,バイブコーディングの流儀,workflow,methodology,candidate,,
-H-4,,コードレビュー,workflow,methodology,candidate,,
-H-5,,Scrum / Agile,workflow,methodology,candidate,,
-H-6,,Git Flow,workflow,methodology,candidate,,
-H-7,,CI/CD,workflow,methodology,candidate,,
-H-8,,DevOps,workflow,methodology,candidate,,
-H-50,,Bard → Gemini,history,timeline,candidate,,
-H-51,,Preview から正式版への流れ,history,culture,candidate,,
-H-52,,Copilot から Claude Code までの流れ,history,timeline,candidate,,
+G-2,,Token,term_llm,basic,skeleton,,content/entries/term_llm/G-2_token.md
+G-3,,Dictation,term_llm,basic,skeleton,,content/entries/term_llm/G-3_dictation.md
+G-4,,System Prompt,term_llm,basic,skeleton,,content/entries/term_llm/G-4_system_prompt.md
+G-5,,Context Window,term_llm,basic,skeleton,,content/entries/term_llm/G-5_context_window.md
+G-6,,One-shot,term_llm,basic,skeleton,,content/entries/term_llm/G-6_one_shot.md
+G-7,,指示追従性,term_llm,basic,skeleton,,content/entries/term_llm/G-7.md
+G-8,,決定論的／非決定論的,term_llm,basic,skeleton,,content/entries/term_llm/G-8.md
+G-9,,effort レベル,term_llm,basic,skeleton,low/medium/high/xhigh,content/entries/term_llm/G-9.md
+G-10,,Prompt Engineering,term_llm,technique,skeleton,,content/entries/term_llm/G-10_prompt_engineering.md
+G-11,,Context Engineering,term_llm,technique,skeleton,,content/entries/term_llm/G-11_context_engineering.md
+G-12,,Agent Design,term_llm,technique,skeleton,,content/entries/term_llm/G-12_agent_design.md
+G-13,,Few-shot Learning,term_llm,technique,skeleton,,content/entries/term_llm/G-13_few_shot_learning.md
+G-14,,Thinking モデル,term_llm,technique,skeleton,,content/entries/term_llm/G-14.md
+G-20,,CLAUDE.md,tool_agent,config_file,skeleton,,content/entries/tool_agent/G-20_claude_md.md
+G-21,,AGENTS.md,tool_agent,config_file,skeleton,,content/entries/tool_agent/G-21_agents_md.md
+G-22,,SKILL.md,tool_agent,config_file,skeleton,,content/entries/tool_agent/G-22_skill_md.md
+G-23,,.claude/settings.json,tool_agent,config_file,skeleton,,content/entries/tool_agent/G-23_claude_settings_json.md
+G-30,,Tool Use,term_llm,control,skeleton,,content/entries/term_llm/G-30_tool_use.md
+G-31,,Hook,term_llm,control,skeleton,,content/entries/term_llm/G-31_hook.md
+G-32,,Slash Command,term_llm,control,skeleton,,content/entries/term_llm/G-32_slash_command.md
+G-33,,Function Calling,term_llm,control,skeleton,,content/entries/term_llm/G-33_function_calling.md
+G-34,,Code Interpreter,term_llm,control,skeleton,,content/entries/term_llm/G-34_code_interpreter.md
+G-35,,Deep Research,term_llm,control,skeleton,,content/entries/term_llm/G-35_deep_research.md
+G-36,,Artifact,term_llm,control,skeleton,,content/entries/term_llm/G-36_artifact.md
+G-40,,バイブコーディング,term_llm,ops,skeleton,,content/entries/term_llm/G-40.md
+G-41,,Subagent,term_llm,ops,skeleton,,content/entries/term_llm/G-41_subagent.md
+G-42,,Worktree,term_llm,ops,skeleton,,content/entries/term_llm/G-42_worktree.md
+G-43,,オーケストレーション,term_llm,ops,skeleton,,content/entries/term_llm/G-43.md
+G-44,,マルチエージェント協調,term_llm,ops,skeleton,,content/entries/term_llm/G-44.md
+G-45,,段階的開示,term_llm,ops,skeleton,,content/entries/term_llm/G-45.md
+G-46,,ナーフ (モデルの劣化),term_llm,ops,skeleton,,content/entries/term_llm/G-46.md
+H-1,,TDD,workflow,methodology,skeleton,,content/entries/workflow/H-1_tdd.md
+H-2,,ペアプログラミング,workflow,methodology,skeleton,,content/entries/workflow/H-2.md
+H-3,,バイブコーディングの流儀,workflow,methodology,skeleton,,content/entries/workflow/H-3.md
+H-4,,コードレビュー,workflow,methodology,skeleton,,content/entries/workflow/H-4.md
+H-5,,Scrum / Agile,workflow,methodology,skeleton,,content/entries/workflow/H-5_scrum_agile.md
+H-6,,Git Flow,workflow,methodology,skeleton,,content/entries/workflow/H-6_git_flow.md
+H-7,,CI/CD,workflow,methodology,skeleton,,content/entries/workflow/H-7_ci_cd.md
+H-8,,DevOps,workflow,methodology,skeleton,,content/entries/workflow/H-8_devops.md
+H-50,,Bard → Gemini,history,timeline,skeleton,,content/entries/history/H-50.md
+H-51,,Preview から正式版への流れ,history,culture,skeleton,,content/entries/history/H-51.md
+H-52,,Copilot から Claude Code までの流れ,history,timeline,skeleton,,content/entries/history/H-52.md
 H-53,,ChatGPT 登場,history,event,needs_review,2022-11,content/entries/history/H-53_chatgpt_launch.md
-H-54,,GPT-4 リリース,history,event,candidate,2023-03,
-H-55,,LLaMA のオープン化,history,event,candidate,,
-H-56,,Claude のバージョン史,history,timeline,candidate,,
-H-57,,Gemini の命名史,history,timeline,candidate,,
-H-58,,Transformer 論文,history,paper,candidate,2017,
-H-59,,AI エージェント元年,history,era,candidate,2024頃,
-H-60,,Codex → GitHub Copilot の系譜,history,timeline,candidate,,
-H-61,,Preview 版という文化,history,culture,candidate,,
-H-62,,Anthropic 創業の流れ,history,event,candidate,,
+H-54,,GPT-4 リリース,history,event,skeleton,2023-03,content/entries/history/H-54.md
+H-55,,LLaMA のオープン化,history,event,skeleton,,content/entries/history/H-55.md
+H-56,,Claude のバージョン史,history,timeline,skeleton,,content/entries/history/H-56.md
+H-57,,Gemini の命名史,history,timeline,skeleton,,content/entries/history/H-57.md
+H-58,,Transformer 論文,history,paper,skeleton,2017,content/entries/history/H-58.md
+H-59,,AI エージェント元年,history,era,skeleton,2024頃,content/entries/history/H-59.md
+H-60,,Codex → GitHub Copilot の系譜,history,timeline,skeleton,,content/entries/history/H-60.md
+H-61,,Preview 版という文化,history,culture,skeleton,,content/entries/history/H-61.md
+H-62,,Anthropic 創業の流れ,history,event,skeleton,,content/entries/history/H-62.md
 I-1,,MCP,mcp,protocol,needs_review,,content/entries/mcp/I-1_mcp.md
-I-2,,MCP Server,mcp,protocol,candidate,,
-I-3,,MCP Client,mcp,protocol,candidate,,
-I-4,,MCP Transport,mcp,protocol,candidate,,
-I-5,,MCP SDK,mcp,protocol,candidate,,
-I-10,,Filesystem MCP,mcp,reference,candidate,,
-I-11,,GitHub MCP,mcp,reference,candidate,公式,
-I-12,,Git MCP,mcp,reference,candidate,,
-I-13,,Slack MCP,mcp,reference,candidate,,
-I-20,,Playwright MCP,mcp,dev_automation,candidate,,
-I-21,,Puppeteer MCP,mcp,dev_automation,candidate,,
-I-22,,Chrome DevTools MCP,mcp,dev_automation,candidate,,
-I-23,,Serena MCP,mcp,dev_automation,candidate,,
-I-24,,Context7 MCP,mcp,dev_automation,candidate,,
-I-30,,Notion MCP,mcp,collab,candidate,,
-I-41,,SQLite MCP,mcp,data,candidate,,
-I-50,,AWS MCP,mcp,cloud,candidate,,
-I-80,,自作 MCP のテンプレ,mcp,diy,candidate,,
-I-81,,MCP の登録・設定,mcp,diy,candidate,,
-J-1,,AGI,term_general,ai_concept,candidate,,
-J-2,,強い AI ／ 弱い AI,term_general,ai_concept,candidate,,
-J-3,,Singularity,term_general,ai_concept,candidate,シンギュラリティ,
-J-4,,ASI,term_general,ai_concept,candidate,,
-J-10,,Machine Learning,term_general,ml_basic,candidate,,
-J-11,,Deep Learning,term_general,ml_basic,candidate,,
-J-12,,Neural Network,term_general,ml_basic,candidate,,
-J-13,,Transformer,term_general,ml_basic,candidate,,
+I-2,,MCP Server,mcp,protocol,skeleton,,content/entries/mcp/I-2_mcp_server.md
+I-3,,MCP Client,mcp,protocol,skeleton,,content/entries/mcp/I-3_mcp_client.md
+I-4,,MCP Transport,mcp,protocol,skeleton,,content/entries/mcp/I-4_mcp_transport.md
+I-5,,MCP SDK,mcp,protocol,skeleton,,content/entries/mcp/I-5_mcp_sdk.md
+I-10,,Filesystem MCP,mcp,reference,skeleton,,content/entries/mcp/I-10_filesystem_mcp.md
+I-11,,GitHub MCP,mcp,reference,skeleton,公式,content/entries/mcp/I-11_github_mcp.md
+I-12,,Git MCP,mcp,reference,skeleton,,content/entries/mcp/I-12_git_mcp.md
+I-13,,Slack MCP,mcp,reference,skeleton,,content/entries/mcp/I-13_slack_mcp.md
+I-20,,Playwright MCP,mcp,dev_automation,skeleton,,content/entries/mcp/I-20_playwright_mcp.md
+I-21,,Puppeteer MCP,mcp,dev_automation,skeleton,,content/entries/mcp/I-21_puppeteer_mcp.md
+I-22,,Chrome DevTools MCP,mcp,dev_automation,skeleton,,content/entries/mcp/I-22_chrome_devtools_mcp.md
+I-23,,Serena MCP,mcp,dev_automation,skeleton,,content/entries/mcp/I-23_serena_mcp.md
+I-24,,Context7 MCP,mcp,dev_automation,skeleton,,content/entries/mcp/I-24_context7_mcp.md
+I-30,,Notion MCP,mcp,collab,skeleton,,content/entries/mcp/I-30_notion_mcp.md
+I-41,,SQLite MCP,mcp,data,skeleton,,content/entries/mcp/I-41_sqlite_mcp.md
+I-50,,AWS MCP,mcp,cloud,skeleton,,content/entries/mcp/I-50_aws_mcp.md
+I-80,,自作 MCP のテンプレ,mcp,diy,skeleton,,content/entries/mcp/I-80.md
+I-81,,MCP の登録・設定,mcp,diy,skeleton,,content/entries/mcp/I-81.md
+J-1,,AGI,term_general,ai_concept,skeleton,,content/entries/term_general/J-1_agi.md
+J-2,,強い AI ／ 弱い AI,term_general,ai_concept,skeleton,,content/entries/term_general/J-2.md
+J-3,,Singularity,term_general,ai_concept,skeleton,シンギュラリティ,content/entries/term_general/J-3_singularity.md
+J-4,,ASI,term_general,ai_concept,skeleton,,content/entries/term_general/J-4_asi.md
+J-10,,Machine Learning,term_general,ml_basic,skeleton,,content/entries/term_general/J-10_machine_learning.md
+J-11,,Deep Learning,term_general,ml_basic,skeleton,,content/entries/term_general/J-11_deep_learning.md
+J-12,,Neural Network,term_general,ml_basic,skeleton,,content/entries/term_general/J-12_neural_network.md
+J-13,,Transformer,term_general,ml_basic,skeleton,,content/entries/term_general/J-13_transformer.md
 J-14,,LLM,term_general,ml_basic,needs_review,,content/entries/term_general/J-14_llm.md
-J-15,,VLM,term_general,ml_basic,candidate,,
-J-16,,Fine-tuning,term_general,ml_basic,candidate,,
-J-17,,Attention,term_general,ml_basic,candidate,,
-J-18,,MoE,term_general,ml_basic,candidate,,
-J-19,,量子化,term_general,ml_basic,candidate,,
-J-20,,Big Data,term_general,data_learning,candidate,,
-J-21,,LoRA,term_general,data_learning,candidate,,
-J-22,,パラメータ数の単位 (B / T),term_general,data_learning,candidate,,
-J-23,,拡散モデル (Diffusion Model),term_general,data_learning,candidate,画像・動画生成の主流アーキテクチャ,
-J-31,,第 5 世代コンピューター,term_general,computing_history,candidate,,
-J-32,,ノイマン型,term_general,computing_history,candidate,,
-J-33,,量子コンピューター,term_general,computing_history,candidate,,
-J-40,,IoT,term_general,buzzword,candidate,,
-J-41,,DX,term_general,buzzword,candidate,,
-J-42,,Web3,term_general,buzzword,candidate,,
-J-43,,SaaS,term_general,buzzword,candidate,,
-J-50,,AI 倫理,term_general,ethics_law,candidate,,
-J-51,,Hallucination,term_general,ethics_law,candidate,,
-J-52,,Sycophancy,term_general,ethics_law,candidate,,
-J-53,,著作権法 30 条の 4 (日本),term_general,ethics_law,candidate,,
-J-54,,ISO/IEC 42001,term_general,ethics_law,candidate,AIMS,
-J-55,,特定商取引法,term_general,ethics_law,candidate,,
-J-56,,GDPR,term_general,ethics_law,candidate,,
-J-62,,チューリングテスト,term_general,peripheral,candidate,,
-J-70,,VRAM,term_general,hardware,candidate,,
-J-71,,RAM (メモリ),term_general,hardware,candidate,,
-J-72,,H100,term_general,hardware,candidate,,
-J-73,,Blackwell,term_general,hardware,candidate,,
-J-74,,RTX シリーズ,term_general,hardware,candidate,,
-J-75,,Tensor コア,term_general,hardware,candidate,,
-J-76,,CPU,term_general,hardware,candidate,,
-J-77,,GPU (概念),term_general,hardware,candidate,,
-J-78,,HDD,term_general,hardware,candidate,,
-J-79,,SSD,term_general,hardware,candidate,,
-J-80,,SATA,term_general,hardware,candidate,,
-J-81,,M.2,term_general,hardware,candidate,,
-J-90,,GUI,term_general,ui_os,candidate,,
-J-91,,CLI,term_general,ui_os,candidate,,
-J-92,,Linux,term_general,ui_os,candidate,,
-J-93,,Ubuntu,term_general,ui_os,candidate,,
-J-100,,驚き屋,term_general,community,candidate,,
+J-15,,VLM,term_general,ml_basic,skeleton,,content/entries/term_general/J-15_vlm.md
+J-16,,Fine-tuning,term_general,ml_basic,skeleton,,content/entries/term_general/J-16_fine_tuning.md
+J-17,,Attention,term_general,ml_basic,skeleton,,content/entries/term_general/J-17_attention.md
+J-18,,MoE,term_general,ml_basic,skeleton,,content/entries/term_general/J-18_moe.md
+J-19,,量子化,term_general,ml_basic,skeleton,,content/entries/term_general/J-19.md
+J-20,,Big Data,term_general,data_learning,skeleton,,content/entries/term_general/J-20_big_data.md
+J-21,,LoRA,term_general,data_learning,skeleton,,content/entries/term_general/J-21_lora.md
+J-22,,パラメータ数の単位 (B / T),term_general,data_learning,skeleton,,content/entries/term_general/J-22.md
+J-23,,拡散モデル (Diffusion Model),term_general,data_learning,skeleton,画像・動画生成の主流アーキテクチャ,content/entries/term_general/J-23.md
+J-31,,第 5 世代コンピューター,term_general,computing_history,skeleton,,content/entries/term_general/J-31.md
+J-32,,ノイマン型,term_general,computing_history,skeleton,,content/entries/term_general/J-32.md
+J-33,,量子コンピューター,term_general,computing_history,skeleton,,content/entries/term_general/J-33.md
+J-40,,IoT,term_general,buzzword,skeleton,,content/entries/term_general/J-40_iot.md
+J-41,,DX,term_general,buzzword,skeleton,,content/entries/term_general/J-41_dx.md
+J-42,,Web3,term_general,buzzword,skeleton,,content/entries/term_general/J-42_web3.md
+J-43,,SaaS,term_general,buzzword,skeleton,,content/entries/term_general/J-43_saas.md
+J-50,,AI 倫理,term_general,ethics_law,skeleton,,content/entries/term_general/J-50.md
+J-51,,Hallucination,term_general,ethics_law,skeleton,,content/entries/term_general/J-51_hallucination.md
+J-52,,Sycophancy,term_general,ethics_law,skeleton,,content/entries/term_general/J-52_sycophancy.md
+J-53,,著作権法 30 条の 4 (日本),term_general,ethics_law,skeleton,,content/entries/term_general/J-53.md
+J-54,,ISO/IEC 42001,term_general,ethics_law,skeleton,AIMS,content/entries/term_general/J-54_iso_iec_42001.md
+J-55,,特定商取引法,term_general,ethics_law,skeleton,,content/entries/term_general/J-55.md
+J-56,,GDPR,term_general,ethics_law,skeleton,,content/entries/term_general/J-56_gdpr.md
+J-62,,チューリングテスト,term_general,peripheral,skeleton,,content/entries/term_general/J-62.md
+J-70,,VRAM,term_general,hardware,skeleton,,content/entries/term_general/J-70_vram.md
+J-71,,RAM (メモリ),term_general,hardware,skeleton,,content/entries/term_general/J-71_ram.md
+J-72,,H100,term_general,hardware,skeleton,,content/entries/term_general/J-72_h100.md
+J-73,,Blackwell,term_general,hardware,skeleton,,content/entries/term_general/J-73_blackwell.md
+J-74,,RTX シリーズ,term_general,hardware,skeleton,,content/entries/term_general/J-74.md
+J-75,,Tensor コア,term_general,hardware,skeleton,,content/entries/term_general/J-75.md
+J-76,,CPU,term_general,hardware,skeleton,,content/entries/term_general/J-76_cpu.md
+J-77,,GPU (概念),term_general,hardware,skeleton,,content/entries/term_general/J-77_gpu.md
+J-78,,HDD,term_general,hardware,skeleton,,content/entries/term_general/J-78_hdd.md
+J-79,,SSD,term_general,hardware,skeleton,,content/entries/term_general/J-79_ssd.md
+J-80,,SATA,term_general,hardware,skeleton,,content/entries/term_general/J-80_sata.md
+J-81,,M.2,term_general,hardware,skeleton,,content/entries/term_general/J-81_m_2.md
+J-90,,GUI,term_general,ui_os,skeleton,,content/entries/term_general/J-90_gui.md
+J-91,,CLI,term_general,ui_os,skeleton,,content/entries/term_general/J-91_cli.md
+J-92,,Linux,term_general,ui_os,skeleton,,content/entries/term_general/J-92_linux.md
+J-93,,Ubuntu,term_general,ui_os,skeleton,,content/entries/term_general/J-93_ubuntu.md
+J-100,,驚き屋,term_general,community,skeleton,,content/entries/term_general/J-100.md

@@ -95,6 +95,9 @@ def parse_frontmatter(text: str) -> tuple[dict, str]:
         if m2:
             key = m2.group(1).strip()
             val = m2.group(2).strip()
+            # インラインコメント ` #...` を除去（簡易 YAML 対応、2026-04-28）
+            if " #" in val:
+                val = val.split(" #", 1)[0].strip()
             if val == "" or val == "[]":
                 fm[key] = []
                 current_list_key = key
@@ -170,8 +173,9 @@ def validate_file(path: Path) -> tuple[list[str], list[str]]:
 
     fm, body = parse_frontmatter(text)
 
-    # archived は v2 仕様の検証対象外（参照素材として凍結）
-    if fm.get("status") == "archived":
+    # archived / skeleton は v2 仕様の検証対象外
+    # archived: 参照素材として凍結。skeleton: 本文未着手の枠だけ（2026-04-28 追加）
+    if fm.get("status") in ("archived", "skeleton"):
         return [], []
 
     # YAML 必須フィールド
