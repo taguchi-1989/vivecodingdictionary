@@ -1,69 +1,58 @@
 ---
 id: F-3
 title: Python
+title_reading: パイソン
 category: term_tool
 subtype: language
-experience_level:
-reader_level:
+experience_level: partial
+reader_level: "2-3"
 figure_type: structure
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
+version_status: active
 pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+evaluation_date: 2026-04-29
+related_terms:
+  - JavaScript
+  - NumPy
+  - pip
+  - Jupyter
+  - PyTorch
+status: needs_review
 ---
 
 # Python
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-AI やスクリプトで広く使用
-
+英語に近い書き味を持つプログラミング言語で、AI／ML 分野の事実上の標準です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+データ分析・機械学習・自動化スクリプトを短いコードで書けるプログラミング言語です。1991 年公開で、豊富なライブラリ（ライブラリ＝追加機能の部品群）がそのまま使えます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+AI にコードを頼むと「Python で書きます」と出力される場面が多く、バイブコーディングで最初に触れる言語になることがあります。AI ツールの設定ファイルやサンプルコードにも頻繁に登場します。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+Python を中心に据え、データ分析・機械学習・自動化という 3 つの用途と、その外側に広がるライブラリ群の位置を概念図で見せます。
 
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: Python（言語本体）
+- 周辺の要素: データ分析（NumPy / pandas）／ 機械学習（PyTorch / scikit-learn）／ 自動化スクリプト（標準ライブラリ）／ パッケージ管理（pip）／ 対話環境（Jupyter）
+- 関係の描き方: 中心から 3 本の矢印（用途別）、各矢印の先にライブラリ名ラベルを添える
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「pip でインストールして Jupyter で確かめると、NumPy も pandas もすぐ試せます。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,54 +61,45 @@ AI やスクリプトで広く使用
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+データ処理・機械学習・自動化の 3 領域をカバーする汎用言語です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+文法がシンプルで読みやすく、AI が書いたコードを人が読んで理解しやすいです。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+JavaScript など Web 系の言語とは別物で、用途と環境が異なります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI ツールの出力コードを読む・動かす場面や、データ整形の自動化に役立ちます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+変数・ループ・関数の 3 つと、pip によるライブラリ追加の手順。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+NumPy、pandas、PyTorch、pip、Jupyter。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. 環境構築 — Python をインストールし、pip で必要なライブラリを追加する
+2. コード生成 — AI に「Python で書いて」と依頼し、スクリプトを受け取る
+3. 実行・確認 — Jupyter（ジュピター）やターミナルで動作を確かめる
+4. 修正・再依頼 — エラーや出力を AI に貼り、改善を繰り返す
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- JavaScript
+- NumPy
+- pip
+- Jupyter
+- PyTorch
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
@@ -143,31 +123,33 @@ AI やスクリプトで広く使用
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 中央に「Python」ロゴ風の円、外側に 3 方向の矢印と用途ラベル（データ分析・機械学習・自動化）、各矢印の先にライブラリ名の小ラベル
+- 登場人物: 非エンジニアの人物 1 人が画面を見ている。画面に「Python で書いて」と入力している
+- 吹き出し・心の声: 「AI が Python で書いてくれた。pip で入れて動かしてみよう」
+- 中央に置くキーワード/ラベル: Python
+- Before / After の場合の対比ポイント: （概念図のため不要）
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: ダウンロード矢印（環境構築）
+- Step 2 のアイコン/絵柄: チャット吹き出し（AI にコード依頼）
+- Step 3 のアイコン/絵柄: 再生ボタン（実行・確認）
+- Step 4 のアイコン/絵柄: 回転矢印（修正・再依頼のループ）
+- 矢印で示す流れの意図: 環境整備 → AI 活用 → 実行確認 → 改善ループ の 4 ステップ
 
 
 ## コミュニティ補完メモ
 
+NumPy（数値計算）・pandas（表データ操作）・PyTorch（機械学習フレームワーク）は別エントリに譲ります。本エントリは Python 言語本体のスコープ（特徴・用途・エコシステムの全体像）に絞ります。pip（パッケージ管理）や Jupyter（対話環境）はそれぞれ別エントリ候補として深掘りします。JavaScript（F-1）との住み分け：Web フロントエンドは JavaScript、データ・AI 処理は Python が主戦場です。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- https://www.python.org — checked 2026-04-29
 
 ## 備考
+
+Python のバージョン（3.x 系が現行主流、2.x 系は 2020 年にサポート終了）は時変情報ですが、本エントリでは言語の特性・用途に絞るため version_status: active とし、バージョン差分には踏み込みません。AI/ML での主流性も現時点の状況であり、将来変化する可能性があります。

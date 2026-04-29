@@ -45,7 +45,7 @@ B-32,,Figma,service,saas_design,skeleton,,content/entries/service/B-32_figma.md
 B-33,,Canva,service,saas_design,skeleton,,content/entries/service/B-33_canva.md
 B-40,,Reddit,service,info_source,skeleton,,content/entries/service/B-40_reddit.md
 B-41,,arXiv,service,info_source,skeleton,,content/entries/service/B-41_arxiv.md
-B-50,,Claude の料金プラン,service,pricing,skeleton,時変情報,content/entries/service/B-50_claude_pricing.md
+B-50,,Claude の料金プラン,service,pricing,needs_review,時変情報 evaluation_date:2026-04-29,content/entries/service/B-50_claude_pricing.md
 B-51,,ChatGPT の料金プラン,service,pricing,skeleton,時変情報,content/entries/service/B-51_chatgpt_pricing.md
 B-52,,Gemini の料金プラン,service,pricing,skeleton,時変情報,content/entries/service/B-52_gemini_pricing.md
 B-60,,Suno,service,creative_media,skeleton,音楽生成,content/entries/service/B-60_suno.md
@@ -65,7 +65,7 @@ C-12,,TSMC,person_org,company,skeleton,半導体ファウンドリ,content/entri
 C-13,,Groq,person_org,company,skeleton,AI推論チップ,content/entries/person/C-13_groq.md
 C-14,,AMD,person_org,company,skeleton,半導体,content/entries/person/C-14_amd.md
 C-50,,Sam Altman,person_org,person,needs_review,,content/entries/person/C-50_sam_altman.md
-C-51,,Dario Amodei,person_org,person,skeleton,,content/entries/person/C-51_dario_amodei.md
+C-51,,Dario Amodei,person_org,person,drafting,,content/entries/person/C-51_dario_amodei.md
 C-52,,Demis Hassabis,person_org,person,skeleton,,content/entries/person/C-52_demis_hassabis.md
 C-53,,Andrej Karpathy,person_org,person,skeleton,,content/entries/person/C-53_andrej_karpathy.md
 C-54,,Ilya Sutskever,person_org,person,skeleton,,content/entries/person/C-54_ilya_sutskever.md
@@ -88,7 +88,7 @@ D-11,,Claude 3.5 系,model,anthropic,candidate,,content/entries/model/D-11_claud
 D-12,,Claude 4 系,model,anthropic,needs_review,,content/entries/model/D-12_claude4.md
 D-13,,Claude 4.5 系,model,anthropic,skeleton,,content/entries/model/D-13.md
 D-14,,Claude Mitos モデル,model,anthropic,skeleton,要確認: 正式名称,content/entries/model/D-14.md
-D-20,,GPT-5 系,model,openai,skeleton,,content/entries/model/D-20.md
+D-20,,GPT-5 系,model,openai,needs_review,本書き済み（2026-04-29）。旧スケルトン D-20.md は archived,content/entries/model/D-20_gpt5.md
 D-21,,GPT-4 系,model,openai,skeleton,,content/entries/model/D-21.md
 D-22,,o1 系,model,openai,skeleton,推論特化,content/entries/model/D-22.md
 D-23,,o3 系,model,openai,skeleton,,content/entries/model/D-23.md
@@ -138,7 +138,7 @@ E-50,,Chatbot Arena,benchmark,general,skeleton,,content/entries/benchmark/E-50_c
 E-51,,LMSYS Arena,benchmark,general,skeleton,,content/entries/benchmark/E-51_lmsys_arena.md
 F-1,301,JavaScript,term_tool,language,sample,旧3桁ID連携,content/entries/term_tool/F-1_javascript.md
 F-2,302,TypeScript,term_tool,language,sample,旧3桁ID連携,content/entries/term_tool/F-2_typescript.md
-F-3,,Python,term_tool,language,skeleton,,content/entries/term_tool/F-3_python.md
+F-3,,Python,term_tool,language,needs_review,,content/entries/term_tool/F-3_python.md
 F-4,,HTML,term_tool,language,skeleton,,content/entries/term_tool/F-4_html.md
 F-5,,CSS,term_tool,language,skeleton,,content/entries/term_tool/F-5_css.md
 F-6,,Markdown,term_tool,language,skeleton,,content/entries/term_tool/F-6_markdown.md

@@ -1,70 +1,63 @@
 ---
 id: C-51
 title: Dario Amodei
+title_reading: ダリオ アモデイ
 category: person_org
 subtype: person
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: research_only
+reader_level: "2-3"
+figure_type: timeline
 page_layout: spread_v1
 start_date:
 end_date:
 version_status:
 pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+evaluation_date: 2026-04-29
+related_terms:
+  - Anthropic
+  - Constitutional AI
+  - Claude
+  - RSP
+status: needs_review
 ---
 
 # Dario Amodei
 
 <!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
+バイブコーディング図鑑 エントリー v2（spread_v1、2026-04-29 執筆）
 -->
 
 ## tagline
 
-Anthropic CEO。元 OpenAI の VP of Research
-
+Anthropic の CEO・共同創業者。AI 安全性の研究と実用化を両立させようとしている論者です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+Anthropic を共同創業し、Constitutional AI（憲法的 AI）や RSP（責任ある拡張方針）を推進しています。長文エッセイで AI の未来像を公に言語化する役割を担っています。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+Anthropic の公式ブログや発表文に名前が出るほか、エッセイ「Machines of Loving Grace」がニュースで取り上げられることがあります。議会証言や国際会議でも発言が参照されます。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+読者がニュースで出会う Dario Amodei の「4 つの節目」を時系列で並べ、どの文脈で名前が出るかを示します。
 
+### B. 登場シーン（figure_type: timeline）
+
+- シーン1: 2021年 — OpenAI の VP of Research（研究副社長）を退き、妹 Daniela と Anthropic を共同創業
+- シーン2: 2022年〜 — Constitutional AI を提唱。モデルが自己改善できる安全性アプローチの研究を公開
+- シーン3: 2023年〜 — 長文エッセイ「Machines of Loving Grace」で AI が医療・経済に与える楽観的な将来像を提示
+- シーン4: 2024年〜 — 米議会証言・国際会議で AI 規制と安全性の議論に参加。RSP を業界標準の参照軸として発信
+- 並べる基準: 時系列（読者がニュースや記事で出会う順）
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「Dario のエッセイは公式で読めるので、Claude の設計背景として参照できます。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,54 +65,44 @@ Anthropic CEO。元 OpenAI の VP of Research
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Anthropic の CEO として AI 安全性の研究と製品開発を統括します。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+長文エッセイで AI の未来像が整理されており文脈理解に役立ちます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+個人発言と Anthropic 公式方針は別物のことがあり分けて読みます。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI 安全性の議論や Anthropic 製品の設計方針を追うときに役立ちます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+元 OpenAI VP、Anthropic 共同創業者、Constitutional AI 推進者の 3 点で。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Anthropic（C-2）、Constitutional AI、RSP、Claude。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. Anthropic 共同創業 — 2021 年、OpenAI 退職後に妹 Daniela と設立し CEO に就任
+2. Constitutional AI 提唱 — AI が自己改善できる安全性の仕組みを公開
+3. エッセイで楽観論を発信 — 「Machines of Loving Grace」で将来像を言語化
+4. 議会証言・規制議論 — 安全性基準や規制の必要性を公に主張
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- Anthropic
+- Constitutional AI
+- Claude
+- RSP
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
@@ -141,33 +124,44 @@ Anthropic CEO。元 OpenAI の VP of Research
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: timeline）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 横一列の時系列バー。左から「Anthropic 創業（2021）」「Constitutional AI 公開（2022〜）」「Machines of Loving Grace エッセイ（2023〜）」「議会証言・規制議論（2024〜）」の 4 点
+- 登場人物: スーツまたはシャツ姿の男性シルエット（Dario のイメージ）。各節目の吹き出しで語りかける
+- 吹き出し・心の声: 「AI を安全に作ります」（創業）／「AI が自己改善できる仕組みです」（Constitutional AI）／「医療・経済を変えられます」（エッセイ）／「安全基準が必要です」（議会）
+- 中央に置くキーワード: Dario Amodei ＝ AI 安全性と将来像を語り続ける発言者
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 会社ビル・握手（Anthropic 創業）
+- Step 2 のアイコン/絵柄: 盾・ロボット（Constitutional AI 安全研究）
+- Step 3 のアイコン/絵柄: 本・ペン（エッセイ発信）
+- Step 4 のアイコン/絵柄: 議事堂・マイク（議会証言）
+- 矢印で示す流れの意図: 時系列で「創業 → 研究公開 → 発信 → 規制議論」の流れを示す
 
 
 ## コミュニティ補完メモ
 
+- Anthropic の組織・事業構造は C-2 Anthropic で扱います。本エントリは「個人としての発言者の位置」に絞ります
+- Constitutional AI の技術詳細は専用エントリが設けられれば誘導。ここでは「Dario が推進者」という事実のみ
+- RSP（Responsible Scaling Policy）の概念詳細も同様。本エントリでは名称と役割の言及にとどめます
+- 妹 Daniela Amodei は Anthropic の社長（President）として共同創業者ですが、本エントリでは創業の事実として言及するにとどめ、個別エントリは別
+
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- https://www.anthropic.com/company — checked 2026-04-29
+- https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback — checked 2026-04-29
+- https://www.darioamodei.com/machines-of-loving-grace — checked 2026-04-29
 
 
 ## 備考
+
+- experience_level を research_only に設定。本書著者は Dario Amodei に直接会っておらず、公開情報ベースの調査です
+- 「Machines of Loving Grace」は Dario のブログ（darioamodei.com）で公開された長文エッセイ。AI が医療・経済に与える楽観的な将来像を論じています
+- 議会証言・規制議論への参加は 2024 年以降に複数回あり、詳細は時変情報のため最小限の言及にとどめています
+- RSP（Responsible Scaling Policy）は Anthropic が公開した AI 開発の安全基準文書で、Dario が主導した取り組みです
