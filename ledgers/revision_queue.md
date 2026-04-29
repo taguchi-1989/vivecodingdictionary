@@ -1,14 +1,14 @@
 # 要直しキュー（revision queue）
 
-*自動生成: 2026-04-29 07:51 / `scripts/update_review_queue.py`*
+*自動生成: 2026-04-29 08:55 / `scripts/update_review_queue.py`*
 
 1 画面で「次やるべき・見直すべき・適合済み」が見えるダッシュボード。`scripts/validate_entry.py` のチェックを全件で走らせた結果を集計して再生成しています。手で編集しないでください。
 
 ## status 内訳
 
-- **skeleton**: 320 件
+- **skeleton**: 315 件
 - **drafting**: 1 件
-- **needs_review**: 18 件
+- **needs_review**: 23 件
 - **archived**: 7 件
 - **合計**: 346 件
 
@@ -28,16 +28,21 @@ _なし_
 
 _なし（drafting で全パスしたものは自動で needs_review に上がります）_
 
-## 📝 著者レビュー待ち（needs_review・全パス）（14 件）
+## 📝 著者レビュー待ち（needs_review・全パス）（19 件）
 
 | ID | title | status | 概要 |
 | :-- | :-- | :-- | :-- |
 | B-2 | Claude | needs_review | — |
+| B-20 | Vercel | needs_review | — |
+| B-23 | AWS | needs_review | — |
 | B-3 | ChatGPT | needs_review | — |
 | B-4 | Cursor | needs_review | — |
 | B-5 | GitHub Copilot | needs_review | — |
 | C-1 | OpenAI | needs_review | — |
 | C-2 | Anthropic | needs_review | — |
+| C-3 | Google DeepMind | needs_review | — |
+| C-50 | Sam Altman | needs_review | — |
+| C-9 | NVIDIA | needs_review | — |
 | D-11 | Claude 3.5 系 | needs_review | — |
 | D-12 | Claude 4 系 | needs_review | — |
 | E-1 | SWE-Bench | needs_review | — |
