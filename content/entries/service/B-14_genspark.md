@@ -1,70 +1,57 @@
 ---
 id: B-14
 title: Genspark
+title_reading: ジェンスパーク
 category: service
 subtype: ai_assistant
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: partial
+reader_level: 2-3
+figure_type: comparison
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2024-05
+version_status: active
+pricing_note: freemium
+evaluation_date: 2026-04-30
+related_terms:
+  - Perplexity
+  - ChatGPT
+  - Gemini
+  - Deep Research
+status: drafting
 ---
 
 # Genspark
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-AI 検索・生成のオールインワン系サービス
-
+複数 LLM と Web 検索を統合し、Sparkpage と呼ばれる回答ページを自動生成するサービスです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+質問を入力すると複数の LLM（大規模言語モデル）と Web 検索を組み合わせ、1 つの Sparkpage（回答ページ）としてまとめて返してくれます。AI Slides によるスライド生成や Super Agent によるタスク実行など、回答の形を選べるのが特徴です。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+「Perplexity（パープレキシティ）のように検索 AI を試したい、でもスライド出力や複合エージェントも使いたい」と思ったときに名前が挙がるサービスです。AI ツールのニュースや比較記事でも Perplexity や ChatGPT Search と並んで紹介されることがあります。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+質問から Sparkpage 生成・各ツールへの分岐までの流れを示し、「複数の出力形式を選べる」ことを伝えます。
 
+### B. 登場シーン（figure_type: comparison）
+
+- シーン1: 担当者が「競合他社の動向をまとめて」と入力する
+- シーン2: 複数 LLM と Web 検索が並列で走り Sparkpage が組み上がる
+- シーン3: Sparkpage を読む ／ AI Slides でスライドを生成する
+- 並べる基準: 入力→処理→出力選択の時系列
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「Genspark でスライド作って Claude に詰めさせると提案資料がすぐ揃いますね。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,102 +59,96 @@ AI 検索・生成のオールインワン系サービス
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+複数 LLM と Web 検索を統合して回答ページを動的生成します。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+スライドや資料など、出力の形を目的に合わせて切り替えられます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+料金・機能は時変情報で、無料枠の制限は変わることがあります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+調査まとめや提案準備など、アウトプットを素早く形にする場面。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Sparkpage の仕組みと Perplexity との違いを押さえると使い分けやすいです。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Perplexity（B-12）、Deep Research（G-35）、Super Agent。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. 調査フェーズ — Genspark に質問して Sparkpage で概況を把握する
+2. アウトプット選択 — AI Slides でそのままスライド化して共有する
+3. 深掘り — Claude や ChatGPT に Sparkpage の内容を貼って詰める
+4. 成果物確認 — 出典元を Perplexity で引用付き確認して信頼性を補う
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
-
+- Perplexity
+- ChatGPT
+- Gemini
+- Deep Research
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: comparison）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 中央に「Genspark」ロゴ、左から「質問入力 → 複数 LLM＋Web 検索 → 出力分岐（Sparkpage / AI Slides / Super Agent）」の横並びフロー
+- 登場人物: ノートPC 前に座るビジネスパーソン 1 名
+- 吹き出し・心の声: 入力時「調査とスライド一気にできるかな」、Sparkpage 表示後「まとまってる、そのままスライドにしよう」
+- 中央に置くキーワード/ラベル: Sparkpage（スパークページ）
 
 ### 6 視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 虫眼鏡＋Sparkpage アイコン
+- Step 2 のアイコン/絵柄: スライドファイル＋矢印
+- Step 3 のアイコン/絵柄: チャットバブル（Claude / ChatGPT ロゴ）
+- Step 4 のアイコン/絵柄: チェックマーク＋Perplexity 引用アイコン
+- 矢印で示す流れの意図: 調査→形成→深掘り→確認の一方向フロー
 
 
 ## コミュニティ補完メモ
 
+- Perplexity（B-12）との住み分け：Perplexity は引用付き検索回答に特化。Genspark は Sparkpage という独自まとめページや AI Slides・Super Agent など出力形式の幅が広い。
+- ChatGPT（B-3）との住み分け：ChatGPT は汎用チャット、ChatGPT Search は検索連携。Genspark は複数 LLM を統合しアウトプット生成に重点を置く点で異なる。
+- Deep Research（G-35）との住み分け：Deep Research は深く多段推論するワークフロー。Genspark はより即時性・出力形式の多様さを優先した位置づけ。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- genspark.ai — checked 2026-04-30
 
 ## 備考
+
+- 料金は無料プランあり、有料は Plus $24.99/月（時変情報）。本文には記載せず evaluation_date で管理。
+- 経営陣は元 Baidu の Eric Jing 氏ら。拠点は Hong Kong / Palo Alto。
+- AI Slides / Genspark Browser / Super Agent / AI Sheets / Voice Call などは随時追加中の機能で構成は時変情報。

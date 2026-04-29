@@ -1,69 +1,61 @@
 ---
 id: B-8
-title: Codex (OpenAI)
+title: Codex
+title_reading: コデックス
 category: service
 subtype: ai_assistant
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: research_only
+reader_level: 2-3
+figure_type: comparison
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2025-05-01
+version_status: active
+pricing_note: paid
+evaluation_date: 2026-04-30
+related_terms:
+  - OpenAI
+  - ChatGPT
+  - GitHub Copilot
+  - Claude Code
+status: drafting
 ---
 
-# Codex (OpenAI)
+# Codex
 
 <!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
+バイブコーディング図鑑 エントリー v2（spread_v1 準拠）
 -->
 
 ## tagline
 
-OpenAI の開発者向けエージェント（2025 再登場）
-
+OpenAI 製のコーディングエージェントです。2025 年に再始動し、リポジトリを操作して PR まで作れます。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+ChatGPT に組み込まれたクラウド版と、ローカルで動く CLI（コマンドラインインターフェース）版の 2 系統があります。クラウド版はリモートのコンテナ上でリポジトリを自律的に操作し、コード修正から PR（プルリクエスト）作成まで自動化します。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+ChatGPT Pro・Team・Enterprise の画面で「Codex」エージェントとして登場します。技術記事では「OpenAI のコーディングエージェント比較」の文脈でよく名前を見かけます。GitHub Copilot（B-5）が Microsoft 系、Claude Code（B-7）が Anthropic 系であるのと並ぶ、OpenAI 系の代表格です。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+Codex のクラウド版と CLI 版の 2 系統と、主要 3 強（Copilot / Claude Code / Codex）の位置関係を並べて示します。
 
+### B. 登場シーン（figure_type: comparison）
+
+- シーン1: ChatGPT 上でユーザーが「このバグを直して PR を出して」と依頼し、Codex がリポジトリを操作する
+- シーン2: Codex CLI をターミナルで起動し、ローカルコードに対して修正を依頼する
+- シーン3: チームが「Copilot・Claude Code・Codex どれにする？」と選択する比較場面
+- 並べる基準: 使う場所（クラウド／ローカル）と比較対象の 2 軸
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Codex に PR を作らせると、Claude Code とはクセが違いますよね。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,81 +64,71 @@ OpenAI の開発者向けエージェント（2025 再登場）
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ChatGPT 経由でリポジトリを操作するコーディングエージェントです。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+PR 作成まで自動化でき、コーディング作業を外出しできます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+旧 Codex（2021 年のエンジン）と同名のため、記事の年代に注意が必要です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+単発のバグ修正や小機能追加を ChatGPT から指示したい場面に向いています。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ChatGPT Pro プランで使えるエージェントと、OSS の CLI 版の 2 種類があります。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+OpenAI（C-1）、ChatGPT（B-3）、Claude Code（B-7）
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. タスク定義 — 「どのバグを直すか」「どの機能を追加するか」を自然言語で整理します
+2. Codex に依頼 — ChatGPT 上または CLI でリポジトリを渡して指示を出します
+3. 自律実行 — Codex がコンテナ内でコードを読み書きし、修正を進めます
+4. PR 確認 — 自動作成された PR を人が確認し、問題なければマージします
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- OpenAI
+- ChatGPT
+- GitHub Copilot
+- Claude Code
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: comparison）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左右 2 列の比較図。左列「クラウド版」（ChatGPT 画面 → Codex コンテナ → GitHub PR）、右列「CLI 版」（ターミナル → ローカルコード）
+- 登場人物: 開発者 1 名。画面に向かって指示を打っている姿
+- 吹き出し・心の声: 開発者「PR 作って」/ Codex「コンテナ起動中…」/ GitHub「PR が届きました！」
+- 中央に置くキーワード/ラベル: Codex ＝ クラウド版 ＋ CLI 版
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +136,27 @@ OpenAI の開発者向けエージェント（2025 再登場）
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: メモ帳アイコン — タスク定義
+- Step 2 のアイコン/絵柄: チャット吹き出し — 依頼
+- Step 3 のアイコン/絵柄: 歯車ループ — 自律実行
+- Step 4 のアイコン/絵柄: PR マージアイコン — 確認・マージ
+- 矢印で示す流れの意図: 人が定義 → 機械が実行 → 人が承認という役割分担
 
 ## コミュニティ補完メモ
 
+- OpenAI（C-1）との住み分け：OpenAI はサービス提供会社全体。本エントリはその中の Codex に絞ります
+- ChatGPT（B-3）との住み分け：ChatGPT は汎用チャット。Codex はその中のコーディング特化エージェント機能を指します
+- GitHub Copilot（B-5）との住み分け：Copilot は Microsoft / GitHub 系で補完中心。Codex は OpenAI 系でエージェント型（PR 作成まで）です
+- Claude Code（B-7）との住み分け：Claude Code は Anthropic 製の CLI エージェント。Codex は OpenAI 製で ChatGPT 組み込み型が主体です
+- 旧 Codex（2021 年）については備考に記載。本エントリは 2025 年再始動版を主に扱います
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- openai.com/codex — checked 2026-04-30
+- github.com/openai/codex — checked 2026-04-30
 
 ## 備考
+
+- 旧 Codex（2021 年）は GPT-3 ベースのコード補完モデルで、GitHub Copilot の初期エンジンとして使われた。2023 年に API 提供終了。2025 年 5 月に「Codex」ブランドが再始動し、コーディングエージェントとして再登場した。本エントリは 2025 年版を主に扱う
+- 料金は ChatGPT Pro/Team/Enterprise プランに依存。時変情報のため本文への詳細記載は最小限にしています
+- CLI 版（codex-cli）はオープンソースで公開されており、API キーを用意すれば無料で試せますが、API 費用は別途発生します

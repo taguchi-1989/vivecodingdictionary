@@ -1,70 +1,59 @@
 ---
 id: B-16
 title: Microsoft 365 Copilot
+title_reading: マイクロソフト サンロクゴ コパイロット
 category: service
 subtype: ai_assistant
-experience_level:
-reader_level:
+experience_level: hands_on
+reader_level: 2-3
 figure_type: structure
 page_layout: spread_v1
-start_date:
+start_date: 2023-11-01
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: paid
+evaluation_date: 2026-04-30
+related_terms:
+  - Microsoft Copilot
+  - Microsoft
+  - GitHub Copilot
+  - Azure
+status: drafting
 ---
 
 # Microsoft 365 Copilot
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
+<!-- バイブコーディング図鑑 エントリー雛形 v2（2ページ見開き想定、iter 22 準拠） -->
 
 ## tagline
 
-Office（Word／Excel／PowerPoint 等）に組み込まれた Copilot
-
+Word・Excel・Teams などに組み込まれた業務統合 AI です。月額 $30 の有料追加サービスになります。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+Microsoft 365 の各アプリ内で AI が直接動きます。Word ではドラフト生成・要約、Excel では関数提案・データ分析、PowerPoint ではスライド自動生成、Outlook ではメール下書き、Teams では会議要約が使えます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+社内の Microsoft 365 環境を使う職場で「Copilot を契約した」と案内されたときが最初の出会いです。Microsoft Graph 経由で自社メール・ファイルを参照した回答を返してくれる点が、無料の B-15 と大きく異なります。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+「Microsoft 365 の各アプリの中に AI が入っている」構造を、アプリと Copilot の関係図で示す。
 
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: Microsoft 365 Copilot
+- 周辺の要素（4個）: Word ／ Excel ／ PowerPoint ／ Teams
+- 関係の描き方: 中央の Copilot から各アプリへ矢印が伸びる放射状
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「Excel の Copilot で売上を分析して、PowerPoint で資料化までやらせました。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,69 +61,58 @@ Office（Word／Excel／PowerPoint 等）に組み込まれた Copilot
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Microsoft 365 アプリに組み込まれた業務向け AI アシスタントです。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+使い慣れた Office アプリのまま AI 支援が受けられます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+無料の Microsoft Copilot（B-15）とは別サービスで、月額 $30 が追加でかかります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+会議要約・スライド作成・メール下書きなど日常業務の自動化に向きます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+「業務アプリ統合の有料版 Copilot」と認識すると B-15 との混乱が避けられます。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Microsoft Copilot、Microsoft Graph、Azure
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. 情報収集 — Teams の会議録を Copilot に要約させ、要点を整理する
+2. 分析 — Excel で売上データを渡し、関数提案と傾向分析を依頼する
+3. 資料作成 — PowerPoint に「スライド自動生成」を指示してたたき台を作る
+4. 仕上げ・送付 — Outlook でメール下書きを生成し、内容を確認して送信する
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- Microsoft Copilot
+- Microsoft
+- GitHub Copilot
+- Azure
 
-- 用語A —
-- 用語B —
-- 用語C —
-
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,31 +121,39 @@ Office（Word／Excel／PowerPoint 等）に組み込まれた Copilot
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 中央に「Microsoft 365 Copilot」のロゴを置き、Word・Excel・PowerPoint・Teams の 4 つのアプリアイコンに矢印が伸びる放射状の構造図
+- 登場人物（いれば）: オフィスワーカー風の人物が Excel 画面を見ながら Copilot を呼び出している
+- 吹き出し・心の声: 「会議の要約まで自動でやってくれるの？」
+- 中央に置くキーワード/ラベル: Microsoft 365 Copilot
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
 - 共通アイコン流用（個別演出が要るときだけ書き足す）
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: マイク（会議・要約）
+- Step 2 のアイコン/絵柄: グラフ（データ分析）
+- Step 3 のアイコン/絵柄: スライド（資料作成）
+- Step 4 のアイコン/絵柄: 封筒（メール送付）
+- 矢印で示す流れの意図: 「集めて → 分析して → 資料化して → 送る」という業務フロー
 
 ## コミュニティ補完メモ
 
+- B-15（Microsoft Copilot）との住み分け：B-15 は無償の汎用チャット版（Windows・Edge から使える）。B-16 は Word・Excel・Teams 等の Microsoft 365 アプリ内に統合された有料版（月額 $30 追加）。Microsoft Graph によるテナント内データ参照ができるかどうかが分かれ目
+- B-5（GitHub Copilot）との住み分け：B-5 はコードエディタ内の補完特化。B-16 は Office 系アプリの業務タスク全般が対象
+- B-25（Azure）との関係：B-16 の基盤インフラは Azure が担う。エンタープライズのデータ管理・セキュリティポリシーは Azure AD / Microsoft Entra と連動する
+- C-8（Microsoft）との関係：企業・会社としての Microsoft のエントリ。B-16 はその主要 AI サービスの 1 製品
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- <https://www.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot> — checked 2026-04-30
+- <https://blogs.microsoft.com/blog/2023/11/01/introducing-microsoft-365-copilot-your-copilot-for-work/> — checked 2026-04-30
 
 ## 備考
+
+- 2023-11: 企業向け（Microsoft 365 E3/E5 保有の 300 ユーザー以上）に提供開始
+- 2024-01: 小規模事業者・個人事業主向けにも開放（最低ユーザー数制限の撤廃）
+- 価格：ユーザーあたり月 $30（Microsoft 365 E3/E5 等の有償プランに追加で購入）（evaluation_date: 2026-04-30 時点の情報。変動可能性あり）
+- Microsoft Graph 経由でテナント内のメール・予定表・ファイルにアクセスして回答を生成する点が無料版との最大の差分
+- Copilot Studio によるカスタムエージェント拡張も可能だが、本エントリの範囲外

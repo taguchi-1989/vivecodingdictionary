@@ -1,69 +1,61 @@
 ---
 id: D-57
 title: Flow
+title_reading: フロー
 category: model
 subtype: image_video
-experience_level:
-reader_level:
+experience_level: partial
+reader_level: 2-3
 figure_type: structure
 page_layout: spread_v1
-start_date:
+start_date: 2025-05-14
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: paid
+evaluation_date: 2026-04-30
+related_terms:
+  - Veo
+  - Imagen
+  - Gemini
+  - Whisk
+status: drafting
 ---
 
 # Flow
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-Google Labs の動画作成ツール（Veo ベース）
-
+Veo と Imagen を組み合わせた Google の映像制作スタジオです。テキストや画像から動画クリップを生成できます。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
+テキストや画像を入力として動画クリップを生成するツールです。シーン単位で構成を組む Scene Builder（シーンビルダー）、カメラアングルの指定、素材管理の Asset Management（アセット管理）を 1 つの画面に統合しています。
 
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
+Google AI の有償プランである AI Pro（月額 $19.99 程度）や AI Ultra（月額 $249.99 程度）に同梱されており、Web ブラウザから利用します。Veo（D-53）を API 経由で使う開発者とは異なり、クリエイター層が映像を組み立てる入口として登場します。
 
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+Flow の 3 機能（Scene Builder／Camera Controls／Asset Management）が 1 つのスタジオ画面に収まっている構造を示します。
+
+### B. 登場シーン（figure_type: structure）
+
+- シーン1: クリエイターがテキスト指示でシーンを並べて短編動画を組む
+- シーン2: カメラアングルをスライダーで調整し、Veo が動画を再生成する
+- シーン3: 作成済み素材をアセット管理画面から呼び出して別シーンに流用する
+- 並べる基準: 制作フローの時系列（指示 → 調整 → 再利用）
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Flow で複数シーンを組んで、Veo で部分修正をかけました。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +64,43 @@ Google Labs の動画作成ツール（Veo ベース）
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Veo と Imagen を束ねる映像制作スタジオの UI です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+コード不要でシーン構成から動画出力まで完結できます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI Pro 以上の有償プランが必要で、無料枠はありません。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+広告・SNS 向け短編動画を素早く量産したい場面に向きます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Veo が動画生成モデル、Flow はそれを操作する UI と理解します。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
+Veo、Imagen、Whisk
 
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. 素材準備 — テキストや参照画像を用意して Flow にアップロードします
+2. シーン構成 — Scene Builder でシーンの順序と内容を指定します
+3. 動画生成 — Veo が各シーンの動画クリップを生成します
+4. 調整・書き出し — カメラ設定を変えて再生成し、完成したクリップを書き出します
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- Veo
+- Imagen
+- Gemini
+- Whisk
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,18 +108,17 @@ Google Labs の動画作成ツール（Veo ベース）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
-
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
@@ -143,10 +126,10 @@ Google Labs の動画作成ツール（Veo ベース）
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 画面中央に「Flow スタジオ」のウィンドウ枠を置き、左に Scene Builder・右上に Camera Controls・右下に Asset Management を配置した構成図
+- 登場人物: クリエイター風の人物がスタジオ画面を操作している
+- 吹き出し・心の声: 「シーン 3 つ、テキストだけで組めた！」
+- 中央に置くキーワード/ラベル: Flow
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +137,26 @@ Google Labs の動画作成ツール（Veo ベース）
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: 画像・テキストのアップロードアイコン
+- Step 2 のアイコン/絵柄: シーンリストのパネル
+- Step 3 のアイコン/絵柄: 動画フィルムのロールアイコン
+- Step 4 のアイコン/絵柄: 書き出し（ダウンロード矢印）アイコン
+- 矢印で示す流れの意図: 素材 → 構成 → 生成 → 完成の 4 段階を左から右へ
 
 ## コミュニティ補完メモ
+
+- Veo（D-53）との住み分け: Veo は動画生成モデル本体で API 利用が中心。Flow は Veo を操作するクリエイター向け UI スタジオ。「Veo を直接呼ぶ」と「Flow 越しに使う」の違いを本文で補完している
+- Whisk（D-58）との住み分け: Whisk は静止画のスタイル合成ツール。Flow は動画クリップの構成ツールで用途が異なる
+- Runway・Sora との比較: 同ジャンルの競合として Runway（動画生成 SaaS）と Sora（OpenAI の映像生成）が存在するが、本エントリでは Google エコシステムに限定して扱う
 
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- Google I/O 2025 発表ブログ — checked 2026-04-30
+- [flow.google](https://flow.google/) — checked 2026-04-30
 
 
 ## 備考
+
+- AI Pro は月 $19.99、AI Ultra は月 $249.99 程度（2026-04-30 時点）。価格は変動する可能性があるため、出版前に再確認が必要
+- 2025 年 5 月 Google I/O で発表。「Flow」は一般語として使われるため、検索時に他の意味と混ざりやすい点を読者に注記する

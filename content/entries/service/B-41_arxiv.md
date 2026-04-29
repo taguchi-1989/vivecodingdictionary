@@ -1,70 +1,56 @@
 ---
 id: B-41
 title: arXiv
+title_reading: アーカイヴ
 category: service
 subtype: info_source
-experience_level:
-reader_level:
+experience_level: research_only
+reader_level: 3-5
 figure_type: structure
 page_layout: spread_v1
-start_date:
+start_date: 1991-08-14
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-30
+related_terms:
+  - Transformer 論文
+  - Deep Learning
+  - Reddit
+  - Papers With Code
+status: drafting
 ---
-
-# arXiv
-
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
 
 ## tagline
 
-AI／物理／数学の論文プレプリントサーバー
-
+査読前の論文を無料で公開するプレプリントサーバです。AI 分野の新手法はここで先に出ます。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+物理・数学・コンピュータサイエンスなどの論文を、査読（専門家によるチェック）が完了する前に無料で公開するサーバです。研究者は成果をすぐに共有でき、読者はジャーナル掲載を待たずに内容を確認できます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+「Attention Is All You Need」（Transformer、J-13）や GPT 系・DeepSeek 系の技術報告など、AI 業界の話題になった論文の出所として名前を見かけます。Hugging Face Papers や Papers With Code を経由して arXiv の個別論文に辿り着くことが多いです。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+arXiv が研究者・AI サービス・実務者をどうつなぐかを 1 枚で示します。
 
+### 登場シーン
+
+- シーン1: 研究者が新モデルの論文を arXiv に投稿し、翌日には世界中で読まれる
+- シーン2: エンジニアが「DeepSeek-R1」を検索し、論文 PDF を Claude に貼り付けて要約依頼
+- シーン3: 非エンジニアが Hugging Face Papers の「今週の注目」リンクから arXiv 論文に到達
+- 並べる基準: 読者が arXiv に辿り着くルートの違い
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「arXiv の DeepSeek 論文を Claude に要約させて、再現計画を立てました。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,70 +58,59 @@ AI／物理／数学の論文プレプリントサーバー
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI 分野の研究成果を、査読前に無料で届ける一次情報源です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+新モデルや手法の詳細を、ジャーナル掲載より数か月早く確認できます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+査読前のため、主張が後で覆されることがあります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+「この手法はどういう仕組みか」を原著から確認したいときに役立ちます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+arxiv.org で論文タイトルを検索し、PDF を開く操作だけで使えます。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Papers With Code、Hugging Face Papers、Semantic Scholar
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. 話題のモデル名を検索 — Twitter / Hugging Face の投稿に arXiv リンクが貼られていることが多いです
+2. 論文 PDF を開く — abstract（要旨）だけ読めば概要は掴めます
+3. AI に要約を依頼 — PDF を Claude や ChatGPT に貼り付けて「3 行で要約して」と頼みます
+4. 実装例を探す — Papers With Code で同じ論文の GitHub リポジトリを探します
+5. 引用文献を辿る — 関連論文の arXiv 番号を手がかりに背景知識を補います
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- Transformer 論文
+- Deep Learning
+- Reddit
+- Papers With Code
 
-- 用語A —
-- 用語B —
-- 用語C —
-
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
-
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
@@ -143,31 +118,38 @@ AI／物理／数学の論文プレプリントサーバー
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 中央に「arXiv」ロゴ文字ラベルを置き、左から研究者が PDF をアップロード、右側に「Claude」「エンジニア」「非エンジニア」が矢印で受け取る構造図
+- 登場人物: 研究者（投稿側）1 名 ／ 読み手として非エンジニア会社員 1 名
+- 吹き出し・心の声: 研究者「論文を公開しました」／非エンジニア「AI に要約してもらおう」
+- 中央に置くキーワード/ラベル: arXiv（プレプリントサーバ）
+- Before / After の場合の対比ポイント: 該当なし（structure 図）
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: 虫眼鏡（検索）
+- Step 2 のアイコン/絵柄: PDF ファイルアイコン
+- Step 3 のアイコン/絵柄: AI チャット吹き出し
+- Step 4 のアイコン/絵柄: GitHub ロゴ
+- Step 5 のアイコン/絵柄: 連鎖する論文リンク
+- 矢印で示す流れの意図: 話題を知る → 原著を読む → AI で補助 → 実装を探す → 深掘りする
 
 ## コミュニティ補完メモ
 
+- B-40 Reddit との住み分け：Reddit は議論・感想・実験報告の場。arXiv は論文の一次公開場所。「Reddit で話題になった arXiv 論文を読む」という順序が典型的な使い方です。
+- J-13 Transformer との住み分け：J-13 は Transformer という技術概念のエントリ。B-41 arXiv は「論文が公開される場所」として Transformer 論文（"Attention Is All You Need"）を例として参照する関係です。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- <https://arxiv.org/about> — checked 2026-04-30
+- <https://info.arxiv.org/about/history.html> — checked 2026-04-30
+- <https://paperswithcode.com> — checked 2026-04-30
 
 ## 備考
+
+- 1991 年、Paul Ginsparg（コーネル大学）が物理学プレプリント共有のために立ち上げ。後に数学・コンピュータサイエンス・統計・電気工学などへ拡張。
+- cs.CL（自然言語処理）/ cs.AI（人工知能）/ cs.LG（機械学習）の 3 カテゴリが AI 業界では特によく参照されます。
+- 査読なし公開のリスク：再現性・主張の確からしさは GitHub での追試や後続論文の引用数でも補完するとよいです。

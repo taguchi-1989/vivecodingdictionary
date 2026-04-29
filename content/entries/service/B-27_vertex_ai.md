@@ -1,69 +1,58 @@
 ---
 id: B-27
 title: Vertex AI
+title_reading: バーテックス エーアイ
 category: service
 subtype: managed_ai
-experience_level:
-reader_level:
+experience_level: partial
+reader_level: 3-5
 figure_type: structure
 page_layout: spread_v1
-start_date:
+start_date: 2021-05-18
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: paid
+evaluation_date: 2026-04-30
+related_terms:
+  - Google Cloud
+  - Gemini
+  - Azure OpenAI
+  - Amazon Bedrock
+status: drafting
 ---
 
 # Vertex AI
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
+<!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## tagline
 
-Google Cloud 上で Gemini 等を業務利用する窓口
-
-
-<!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
+Google Cloud（B-24）が提供する AI・機械学習のフルマネージドプラットフォームです。
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+Gemini（B-1）や Imagen（D-51）などの Google モデルに加え、Llama・Mistral・Claude などパートナーモデルも API で呼び出せます。Model Garden でモデルを選び、Vertex AI Studio でプロンプトを試作してそのまま本番 API に接続できます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+業務システムに AI を組み込む設計をするとき、Google Cloud を使う組織の選択肢として名前が出ます。BigQuery や Cloud Storage と直接つながるため、社内データ基盤が Google Cloud にある場合に採用しやすいサービスです。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+Vertex AI がモデルの「選ぶ・試す・使う」3 ステップを 1 プラットフォームで完結させる構造を示す。
 
+### B. 登場シーン（figure_type: structure）
+
+- シーン1: エンジニアが Model Garden で Gemini と Claude を並べて精度比較する
+- シーン2: プロダクトマネージャーが Vertex AI Studio でプロンプトを試作し、API に昇格させる
+- シーン3: データエンジニアが BigQuery のデータを Vertex AI Pipelines に流して推論バッチを動かす
+- 並べる基準: 職種別の利用シーン
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Vertex AI で Gemini と Claude を切り替えて精度比較しました。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,69 +61,61 @@ Google Cloud 上で Gemini 等を業務利用する窓口
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Google Cloud 上で AI モデルを選定・試作・本番運用する統合基盤です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+複数モデルを 1 画面で比較でき、同じ API 形式で切り替えられます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Google AI Studio（個人向け試作）と混同しやすく、用途と料金が異なります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Google データ基盤を持つ企業が AI を業務システムへ組み込む場面に向きます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+個人向けの Google AI Studio との違い（本番 Cloud サービス）を押さえます。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Model Garden、Vertex AI Studio、BigQuery ML
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. 要件整理 — AI に任せるタスクと必要なデータを洗い出す
+2. モデル選定 — Model Garden で候補モデルを比較・試作する
+3. プロンプト調整 — Vertex AI Studio で入出力を繰り返し確認する
+4. API 接続 — 本番システムから Vertex AI のエンドポイントを呼び出す
+5. 監視・更新 — Pipelines でバッチ実行を管理し、モデルを差し替える
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- Google Cloud
+- Gemini
+- Azure OpenAI
+- Amazon Bedrock
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,10 +124,10 @@ Google Cloud 上で Gemini 等を業務利用する窓口
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: Vertex AI を中心に、左から「モデル群（Gemini / Claude / Llama）」、上に「Model Garden（選ぶ）」、右に「Vertex AI Studio（試す）」、下に「BigQuery / API エンドポイント（使う）」が放射状に配置された構造図
+- 登場人物: 企業のエンジニアが画面を指差している様子、背後に Google Cloud のロゴ入りサーバー棚
+- 吹き出し・心の声: 「どのモデルが合うか、ここで全部試せます」
+- 中央に置くキーワード/ラベル: Vertex AI
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +135,28 @@ Google Cloud 上で Gemini 等を業務利用する窓口
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: クリップボードに要件メモを書く人
+- Step 2 のアイコン/絵柄: モデルカードを並べて比較する画面
+- Step 3 のアイコン/絵柄: プロンプト入力ボックスと出力結果
+- Step 4 のアイコン/絵柄: API の矢印がシステムに刺さる図
+- Step 5 のアイコン/絵柄: パイプライン監視ダッシュボード
 
 
 ## コミュニティ補完メモ
 
+- Azure OpenAI（B-26）との住み分け：Azure OpenAI は Microsoft Azure 上で OpenAI モデル（GPT 系）を使う。Vertex AI は Google Cloud 上で Google モデル＋パートナーモデルを使う。組織のクラウド基盤がどちらかで選ばれることが多い
+- Amazon Bedrock（B-30）との住み分け：Bedrock は AWS 上で複数モデルを API 呼び出しする。三者は「クラウド経由で LLM を呼ぶ」三本柱として並べて説明可能
+- Google AI Studio との混同注意：Google AI Studio は個人が Gemini を無料で試す画面。Vertex AI は企業向けの有料 Cloud サービスで、本番運用・アクセス制御・SLA あり
+
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- <https://cloud.google.com/vertex-ai> — checked 2026-04-30
+- <https://cloud.google.com/vertex-ai/docs/start/introduction-unified-platform> — checked 2026-04-30
 
 
 ## 備考
+
+- Vertex AI は 2021-05-18 に GA（General Availability）。旧 Google AI Platform と AutoML を統合した後継サービス
+- 料金は使ったモデル・リクエスト数・Pipelines 実行時間などで変わる従量課金。evaluation_date での確認を推奨
+- Codey（コード補完 API）も Vertex AI 経由で呼び出せるが、Gemini 1.5 以降は Gemini コード機能に統合されつつある（2026-04 時点）

@@ -1,69 +1,59 @@
 ---
 id: B-28
 title: Render
+title_reading: レンダー
 category: service
 subtype: hosting_cloud
-experience_level:
-reader_level:
+experience_level: partial
+reader_level: "2-3"
 figure_type: structure
 page_layout: spread_v1
-start_date:
+start_date: 2018-01-01
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: freemium
+evaluation_date: 2026-04-30
+related_terms:
+  - Vercel
+  - GitHub
+  - デプロイ
+  - Heroku
+status: drafting
 ---
 
 # Render
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-シンプルなアプリ／DB のホスティング（Heroku 系）
-
+GitHub（ギットハブ）に push するだけでアプリ・DB をまとめて公開できる汎用 PaaS です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+Web サービス・静的サイト・API サーバ・バックグラウンドワーカー・Cron Job・PostgreSQL（ポストグレスキューエル）・Redis（レディス）を 1 つの管理画面で扱えます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+AI が書いたサンプルアプリを世界に公開する手順を調べると名前が出てきます。Heroku（ヘロク）より安価な代替として個人開発コミュニティでも紹介されることがあります。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+「GitHub への push 1 回でアプリと DB が公開状態になる」流れと、Render が引き受けるサービス群を 1 枚で掴んでもらいます。
+
+### B. 登場シーン（figure_type: structure）
+
+- シーン1: 開発者が GitHub に push → Render が自動でビルド・デプロイを実行する
+- シーン2: PR を出すとプレビュー環境が自動生成され、URL が届く
+- シーン3: PostgreSQL や Redis も同じ管理画面でプロビジョニングして接続する
+- 並べる基準: push → プレビュー → 本番 + DB 追加の時系列
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Claude が書いた API を Render にデプロイして、フロントは Vercel にしました。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,69 +62,60 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Web サービスから DB まで一元管理できる汎用ホスティング基盤です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+push するだけで本番 URL が出て、DB も同じ画面で用意できます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+無料プランは一定時間で休止するため、常時稼働が必要な場合は有料プランが必要です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI 生成のバックエンド API を素早く公開したい個人開発に向いています。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Vercel はフロント特化、Render はバックエンド・DB まで含む汎用 PaaS と押さえます。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Vercel、GitHub、Heroku、デプロイ。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. コード編集 — AI の助けでアプリ・API コードをローカルで作成する
+2. GitHub push — コードを push すると Render が自動でビルドを開始する
+3. プレビュー確認 — PR ごとに発行される URL で動作を確認する
+4. 本番リリース — マージ後に本番 URL に自動昇格して公開完了
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- Vercel
+- GitHub
+- デプロイ
+- Heroku
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,31 +124,39 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左から「GitHub push」「Render 自動ビルド」「本番 URL 発行」の矢印フローを中央に置き、右側に「PostgreSQL・Redis」のアイコンを同じ管理画面内として囲む
+- 登場人物: 開発者（ノート PC を操作する人）1 名
+- 吹き出し・心の声: 開発者「push したら API も DB もまとめて動いた」
+- 中央に置くキーワード/ラベル: push → ビルド → 公開
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: ノート PC ＋ AI アシスタント（コード生成）
+- Step 2 のアイコン/絵柄: 矢印付き Git ブランチ（push）
+- Step 3 のアイコン/絵柄: スマホ画面にチェックマーク（プレビュー確認）
+- Step 4 のアイコン/絵柄: ロケット（本番リリース）
+- 矢印で示す流れの意図: push 1 回でアプリと DB が同時に立ち上がる速さを強調
 
 
 ## コミュニティ補完メモ
 
+- Vercel（B-20）との住み分け：Vercel は Next.js など SSR/SSG フロントエンドに最適化、Render はバックエンド API・Worker・DB まで含む汎用 PaaS。組み合わせて使う構成が多い
+- Netlify（B-21）との住み分け：Netlify も静的サイトに強いが、Render は PostgreSQL・Redis などバックエンドリソースを同一管理画面で扱える点で異なる
+- Heroku との比較は読者がよく気にするため「どこで出会うか」に 1 句入れた。Heroku 詳細は独立エントリ候補
+
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- <https://render.com> — checked 2026-04-30
+- <https://render.com/pricing> — checked 2026-04-30
 
 
 ## 備考
+
+- 無料プランは一定時間アクセスがないとインスタンスが休止する仕様（スピンダウン）。起動に数十秒かかることがある。常時稼働には Starter（$7/月）以上が必要
+- 料金：無料プラン / Starter $7/月 / Standard $25/月（2026-04-30 時点）。時変情報のため evaluation_date を付けた
+- Heroku は 2022 年に無料プランを廃止したことで Render への移行が広まった経緯がある

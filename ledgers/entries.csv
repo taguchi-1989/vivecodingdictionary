@@ -15,20 +15,20 @@ B-2,,Claude,service,ai_assistant,needs_review,,content/entries/service/B-2_claud
 B-3,,ChatGPT,service,ai_assistant,drafting,,content/entries/service/B-3_chatgpt.md
 B-4,,Cursor,service,ai_assistant,needs_review,,content/entries/service/B-4_cursor.md
 B-5,,GitHub Copilot,service,ai_assistant,needs_review,,content/entries/service/B-5_github_copilot.md
-B-6,,Windsurf,service,ai_assistant,skeleton,,content/entries/service/B-6_windsurf.md
+B-6,,Windsurf,service,ai_assistant,needs_review,,content/entries/service/B-6_windsurf.md
 B-7,,Claude Code,service,ai_assistant,skeleton,略称CC,content/entries/service/B-7_claude_code.md
-B-8,,Codex (OpenAI),service,ai_assistant,skeleton,,content/entries/service/B-8_codex.md
+B-8,,Codex,service,ai_assistant,needs_review,旧 title Codex (OpenAI) を Codex に変更（2026-04-30）,content/entries/service/B-8_codex.md
 B-9,,v0,service,ai_assistant,skeleton,,content/entries/service/B-9_v0.md
 B-10,,Devin,service,ai_assistant,skeleton,,content/entries/service/B-10_devin.md
 B-11,,Bolt.new,service,ai_assistant,skeleton,,content/entries/service/B-11_bolt_new.md
 B-12,,Perplexity,service,ai_assistant,skeleton,,content/entries/service/B-12_perplexity.md
-B-13,,ElevenLabs,service,ai_assistant,skeleton,音声系,content/entries/service/B-13_elevenlabs.md
-B-14,,Genspark,service,ai_assistant,skeleton,,content/entries/service/B-14_genspark.md
-B-15,,Microsoft Copilot,service,ai_assistant,skeleton,,content/entries/service/B-15_microsoft_copilot.md
-B-16,,Microsoft 365 Copilot,service,ai_assistant,skeleton,,content/entries/service/B-16_microsoft_365_copilot.md
-B-17,,Edge Copilot,service,ai_assistant,skeleton,,content/entries/service/B-17_edge_copilot.md
-B-18,,Aqua Voice,service,ai_assistant,skeleton,,content/entries/service/B-18_aqua_voice.md
-B-19,,Claude Cowork,service,ai_assistant,skeleton,要確認: 正式名称,content/entries/service/B-19_claude_cowork.md
+B-13,,ElevenLabs,service,tts_service,drafting,音声系 TTS・Voice Cloning,content/entries/service/B-13_elevenlabs.md
+B-14,,Genspark,service,ai_assistant,needs_review,,content/entries/service/B-14_genspark.md
+B-15,,Microsoft Copilot,service,ai_assistant,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-15_microsoft_copilot.md
+B-16,,Microsoft 365 Copilot,service,ai_assistant,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-16_microsoft_365_copilot.md
+B-17,,Edge Copilot,service,ai_assistant,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-17_edge_copilot.md
+B-18,,Aqua Voice,service,voice_input_saas,drafting,v2テンプレ書き起こし済（2026-04-29）,content/entries/service/B-18_aqua_voice.md
+B-19,,Claude Cowork,service,collaboration_service,drafting,v2テンプレ書き起こし済（2026-04-30）。正式名称は出版前に要確認,content/entries/service/B-19_claude_cowork.md
 B-20,,Vercel,service,hosting_cloud,needs_review,,content/entries/service/B-20_vercel.md
 B-21,,Netlify,service,hosting_cloud,skeleton,,content/entries/service/B-21_netlify.md
 B-22,,Cloudflare,service,hosting_cloud,skeleton,,content/entries/service/B-22_cloudflare.md
@@ -36,20 +36,20 @@ B-23,,AWS,service,hosting_cloud,needs_review,,content/entries/service/B-23_aws.m
 B-24,,Google Cloud,service,hosting_cloud,needs_review,,content/entries/service/B-24_google_cloud.md
 B-25,,Azure,service,hosting_cloud,skeleton,,content/entries/service/B-25_azure.md
 B-26,,Azure OpenAI,service,managed_ai,skeleton,,content/entries/service/B-26_azure_openai.md
-B-27,,Vertex AI,service,managed_ai,skeleton,,content/entries/service/B-27_vertex_ai.md
-B-28,,Render,service,hosting_cloud,skeleton,,content/entries/service/B-28_render.md
-B-29,,Supabase,service,baas,skeleton,,content/entries/service/B-29_supabase.md
+B-27,,Vertex AI,service,managed_ai,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-27_vertex_ai.md
+B-28,,Render,service,hosting_cloud,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-28_render.md
+B-29,,Supabase,service,baas,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-29_supabase.md
 B-30,,Amazon Bedrock,service,managed_ai,drafting,,content/entries/service/B-30_amazon_bedrock.md
-B-31,,Excalidraw,service,saas_design,skeleton,,content/entries/service/B-31_excalidraw.md
-B-32,,Figma,service,saas_design,skeleton,,content/entries/service/B-32_figma.md
-B-33,,Canva,service,saas_design,skeleton,,content/entries/service/B-33_canva.md
-B-40,,Reddit,service,info_source,skeleton,,content/entries/service/B-40_reddit.md
-B-41,,arXiv,service,info_source,skeleton,,content/entries/service/B-41_arxiv.md
+B-31,,Excalidraw,service,saas_design,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-31_excalidraw.md
+B-32,,Figma,service,saas_design,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-32_figma.md
+B-33,,Canva,service,saas_design,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-33_canva.md
+B-40,,Reddit,service,info_source,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-40_reddit.md
+B-41,,arXiv,service,info_source,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-41_arxiv.md
 B-50,,Claude の料金プラン,service,pricing,needs_review,時変情報 evaluation_date:2026-04-29,content/entries/service/B-50_claude_pricing.md
 B-51,,ChatGPT の料金プラン,service,pricing,needs_review,時変情報 evaluation_date:2026-04-29,content/entries/service/B-51_chatgpt_pricing.md
 B-52,,Gemini の料金プラン,service,pricing,drafting,時変情報 evaluation_date:2026-04-29,content/entries/service/B-52_gemini_pricing.md
-B-60,,Suno,service,creative_media,skeleton,音楽生成,content/entries/service/B-60_suno.md
-B-61,,ACE-Step 1.5,service,creative_media,skeleton,音楽生成,content/entries/service/B-61_ace_step_1_5.md
+B-60,,Suno,service,creative_media,drafting,音楽生成 v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-60_suno.md
+B-61,,ACE-Step 1.5,service,creative_media,needs_review,音楽生成 v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-61_ace_step_1_5.md
 C-1,,OpenAI,person_org,company,candidate,,content/entries/person/C-1_openai.md
 C-2,,Anthropic,person_org,company,needs_review,,content/entries/person/C-2_anthropic.md
 C-3,,Google DeepMind,person_org,company,drafting,,content/entries/person/C-3_google_deepmind.md
@@ -80,7 +80,7 @@ C-81,,にゃんた,person_org,youtuber,skeleton,,content/entries/person/C-81.md
 C-82,,まさお,person_org,youtuber,skeleton,,content/entries/person/C-82.md
 C-83,,AIの羅針盤,person_org,youtuber,skeleton,,content/entries/person/C-83.md
 D-1,,Gemini 2 系,model,google,drafting,v2テンプレで D-1_gemini2.md に書き起こし済（2026-04-29）。旧D-1.md は archived,content/entries/model/D-1_gemini2.md
-D-2,201,Gemini 2.5 系,model,google,sample,旧3桁ID連携,content/entries/model/D-2_gemini25.md
+D-2,201,Gemini 2.5 系,model,google,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/model/D-2_gemini25.md
 D-3,,Gemini 3 系,model,google,skeleton,,content/entries/model/D-3.md
 D-4,,Gemini 3.1 系,model,google,skeleton,,content/entries/model/D-4.md
 D-10,,Claude 3 系,model,anthropic,skeleton,,content/entries/model/D-10.md
@@ -96,26 +96,26 @@ D-24,,GPT-3 系,model,openai,drafting,,content/entries/model/D-24_gpt3.md
 D-25,,GPT-1 / GPT-2 系,model,openai,skeleton,,content/entries/model/D-25.md
 D-26,,gpt-oss,model,openai,skeleton,OpenAI初の公式オープンウェイトモデル 2025-08,content/entries/model/D-26_gpt_oss.md
 D-30,,Grok 系,model,xai,drafting,,content/entries/model/D-30_grok.md
-D-35,,Cursor Composer (モデル),model,other_closed,skeleton,,content/entries/model/D-35_cursor_composer.md
+D-35,,Cursor Composer,model,other_closed,drafting,title を Cursor Composer に更新（2026-04-30）,content/entries/model/D-35_cursor_composer.md
 D-40,,Llama 系,model,open,drafting,,content/entries/model/D-40_llama.md
 D-41,,Mistral 系,model,open,drafting,,content/entries/model/D-41_mistral.md
 D-42,,Gemma 系,model,open,drafting,,content/entries/model/D-42_gemma.md
 D-43,,Qwen 系,model,open,drafting,,content/entries/model/D-43_qwen.md
 D-44,,Kimi,model,open,skeleton,,content/entries/model/D-44_kimi.md
-D-45,,GLM,model,open,skeleton,,content/entries/model/D-45_glm.md
+D-45,,GLM,model,open_weight_llm,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/model/D-45_glm.md
 D-46,,DeepSeek V3,model,open,needs_review,,content/entries/model/D-46_deepseek_v3.md
 D-47,,DeepSeek R1,model,open,needs_review,推論特化,content/entries/model/D-47_deepseek_r1.md
 D-50,,DALL-E,model,image_video,skeleton,,content/entries/model/D-50_dall_e.md
 D-51,,Imagen,model,image_video,skeleton,,content/entries/model/D-51_imagen.md
 D-52,,Sora,model,image_video,needs_review,,content/entries/model/D-52_sora.md
-D-53,,Veo,model,image_video,skeleton,,content/entries/model/D-53_veo.md
+D-53,,Veo,model,video_generation,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/model/D-53_veo.md
 D-54,,Stable Diffusion,model,image_video,skeleton,,content/entries/model/D-54_stable_diffusion.md
-D-55,,Nano Banana,model,image_video,skeleton,,content/entries/model/D-55_nano_banana.md
-D-56,,Seedance,model,image_video,skeleton,,content/entries/model/D-56_seedance.md
-D-57,,Flow,model,image_video,skeleton,Veoベースツール,content/entries/model/D-57_flow.md
-D-58,,Whisk,model,image_video,skeleton,Imagenベースツール,content/entries/model/D-58_whisk.md
+D-55,,Nano Banana,model,image_video,needs_review,,content/entries/model/D-55_nano_banana.md
+D-56,,Seedance,model,video_generation,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/model/D-56_seedance.md
+D-57,,Flow,model,image_video,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/model/D-57_flow.md
+D-58,,Whisk,model,image_video,needs_review,,content/entries/model/D-58_whisk.md
 D-60,,AlphaGo,model,historical,skeleton,,content/entries/model/D-60_alphago.md
-D-70,,Amical,model,voice_audio,skeleton,著者確認済。URL は執筆時に補足,content/entries/model/D-70_amical.md
+D-70,,Amical,model,ai_solution,drafting,情報限定的。公式確認が必要（2026-04-30）,content/entries/model/D-70_amical.md
 D-71,,Whisper,model,voice_audio,skeleton,OpenAI のオープン音声認識モデル,content/entries/model/D-71_whisper.md
 E-1,,SWE-Bench,benchmark,coding,needs_review,,content/entries/benchmark/E-1_swe_bench.md
 E-2,,SWE-Bench Verified,benchmark,coding,drafting,,content/entries/benchmark/E-2_swe_bench_verified.md

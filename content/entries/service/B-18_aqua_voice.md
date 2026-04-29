@@ -1,70 +1,60 @@
 ---
 id: B-18
 title: Aqua Voice
+title_reading: アクア ボイス
 category: service
-subtype: ai_assistant
-experience_level:
-reader_level:
-figure_type: structure
+subtype: voice_input_saas
+experience_level: hands_on
+reader_level: 2-4
+figure_type: before_after
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: freemium
+evaluation_date: 2026-04-30
+related_terms:
+  - Whisper
+  - Dictation
+  - ElevenLabs
+  - バイブコーディング
+status: drafting
 ---
-
-# Aqua Voice
-
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
 
 ## tagline
 
-AI への入力に向いた高速な音声書き起こしツール
-
+声で喋るとAIが言いよどみを除去し、整った文章に変換してくれる音声入力SaaSです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+音声をリアルタイムでテキストに変換するだけでなく、「えーと」「あの」といった言いよどみを自動で除去します。喋りながら「リスト形式で」「英語に翻訳して」と命じると、その指示として解釈して整形してくれます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+macOS・Windows のデスクトップアプリとブラウザ拡張として提供されており、メール・Slack・コードエディタなど画面上のテキストフィールドに直接書き込めます。バイブコーディングで自然言語をAIに渡す最初の入口として使われることがあります。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+音声入力の「素の書き起こし」と「Aqua Voice 経由の整形済みテキスト」を並べて、言いよどみ除去と文体整形の効果を伝える。
 
+### A. Before / After（figure_type: before_after）
+
+- Before
+  - 状況: マイクに向かって喋ったまま
+  - 視覚要素: 「えーと、つまりその、リスト形式で、まあ、整理してほしいんですけど」
+  - つまずき: 言いよどみや口癖がそのまま残り、AIへの指示として使いにくい
+- After
+  - 状況: Aqua Voice 経由で整形
+  - 視覚要素: 「以下をリスト形式で整理してください。」
+  - うれしさ: そのままAIチャットやエディタに貼り付けられる
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「Aqua Voice で喋ってそのまま Claude に投げたら、思考速度でプロンプトが出せました。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,81 +62,71 @@ AI への入力に向いた高速な音声書き起こしツール
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+音声をテキストに変換しつつ、言いよどみ除去と指示解釈を行うSaaSです。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+キーボードを使わずに整ったプロンプトを作れます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+専門用語の誤認識は辞書登録で補う必要があることがあります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+長文プロンプトや議事録の口述、バイブコーディングの起点で役立ちます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+「音声書き起こし＋整形SaaS」と覚えると、他ツールとの違いが掴めます。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Whisper、Dictation、バイブコーディング
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. 音声入力 — マイクに向かって思考を喋り出す起点
+2. 言いよどみ除去 — AIが口癖・フィラーを自動カットして整形する
+3. テキスト貼り付け — メール・Slack・エディタのフィールドに直接書き込む
+4. AIへの投入 — 整ったテキストをClaude・ChatGPTなどのプロンプトに使う
+5. 反復改善 — コマンドや辞書を育てて精度を高める
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
-
+- Whisper
+- Dictation
+- ElevenLabs
+- バイブコーディング
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
-
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: before_after）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左側に言いよどみだらけの吹き出し、右側にAqua Voiceロゴを経由して整形済みテキストが出力される矢印図
+- 登場人物: 口述中のビジネスパーソン（PC前でマイクに向かっている）
+- 吹き出し・心の声: 「えーと…あの…リスト形式で…」→（Aqua Voice）→「以下をリスト形式で整理してください。」
+- 中央に置くキーワード/ラベル: Aqua Voice / 言いよどみ除去
+- Before / After の場合の対比ポイント: 口語の乱れ vs 整ったプロンプト文
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +134,24 @@ AI への入力に向いた高速な音声書き起こしツール
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: マイクアイコン
+- Step 2 のアイコン/絵柄: AIチップ・フィルターアイコン
+- Step 3 のアイコン/絵柄: クリップボード・テキストフィールドアイコン
+- Step 4 のアイコン/絵柄: AIチャットウィンドウアイコン
+- Step 5 のアイコン/絵柄: 辞書・設定アイコン
+- 矢印で示す流れの意図: 音声→整形→貼り付け→AI投入の直線フロー
 
 ## コミュニティ補完メモ
 
+- Whisper（D-71）との住み分け：Whisperは素の音声→テキスト変換ライブラリ。Aqua Voiceはその変換に言いよどみ除去・コマンド解釈・テキストフィールド直接書き込みを組み合わせたSaaS製品。APIではなくデスクトップアプリとして使う点でも異なる。
+- ElevenLabs（B-13）との住み分け：ElevenLabsはテキスト→音声（TTS）方向。Aqua Voiceは音声→テキスト（STT＋整形）方向で逆。
+- Dictation（G-3）との住み分け：DictationはOS標準の音声入力機能。Aqua Voiceは整形・コマンド解釈・辞書管理を付加した有料SaaSとして位置づける。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- [aqua.cx 公式サイト](https://aqua.cx) — checked 2026-04-29
 
 ## 備考
+
+- 価格は個人向け Pro が月 $24 程度、無料プランあり（2026-04-30 時点）。時変情報のため evaluation_date を記載。
+- subtype を ai_assistant から voice_input_saas に変更。既存の audio/speech 系エントリとのカテゴリ整合は後で確認する。

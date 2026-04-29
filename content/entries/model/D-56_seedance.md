@@ -1,70 +1,58 @@
 ---
 id: D-56
 title: Seedance
+title_reading: シードダンス
 category: model
-subtype: image_video
-experience_level:
-reader_level:
-figure_type: structure
+subtype: video_generation
+experience_level: partial
+reader_level: 3-4
+figure_type: comparison
 page_layout: spread_v1
-start_date:
+start_date: 2025-06-01
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: freemium
+evaluation_date: 2026-04-30
+related_terms:
+  - Sora
+  - Veo
+  - Kling
+  - fal.ai
+status: drafting
 ---
 
 # Seedance
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-ByteDance の動画生成モデル
-
+ByteDance（中国）の AI ラボが開発する動画生成モデルです。テキストや画像から最大 1080p の動画を生成します。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+テキストや画像を入力すると、5〜10 秒前後の動画を生成します。表情の細やかさやカメラ移動、物理的な自然さが評価されており、広告素材やコンテ確認など短尺動画の試作に使われます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+中国では Doubao（豆包）や Jimeng（即梦）アプリ経由で利用できます。海外では fal.ai や Replicate などの MaaS（モデルアズアサービス）経由で API が公開されており、コスト比較の話題が出る場面でよく名前が挙がります。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+Seedance がテキスト・画像から動画を出力するまでの流れと、競合モデルとのコスト・品質の位置づけを示します。
 
+### B. 登場シーン（figure_type: comparison）
+
+- シーン1: マーケターが fal.ai で 6 秒広告素材を試作する
+- シーン2: クリエイターが Sora／Veo と画質・価格を横比較する
+- シーン3: 開発者が API を呼んで動画生成をプロトタイプに組み込む
+- 並べる基準: 用途（試作／比較／組み込み）
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「Seedance Pro で広告 6 秒動画を試作したら、Veo より安く出ました。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,102 +60,96 @@ ByteDance の動画生成モデル
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+テキスト・画像から短尺動画を生成するモデルです。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+表情やカメラ移動の自然さをコスパよく得られます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+生成できるのは 10 秒前後の短尺動画が中心です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+広告・SNS 向け短尺素材の試作フェーズに向いています。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ByteDance が開発し、fal.ai 経由で試せることを押さえましょう。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Sora, Veo, Kling
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. 企画・構成 — 動画の尺・カット・セリフをテキストで整理します
+2. プロンプト入力 — fal.ai 等で Seedance にテキストや参照画像を送ります
+3. 生成・確認 — 出力動画の表情・動き・物理感を目視でチェックします
+4. 比較・採用判断 — Sora や Veo と品質・コストを比べて素材を選定します
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
-
+- Sora
+- Veo
+- Kling
+- fal.ai
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
-
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: comparison）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: テキスト入力 → Seedance → 動画出力の流れと、Sora・Veo・Kling との比較表（品質 / コスト）
+- 登場人物（いれば）: マーケター担当者がスマホで広告動画を確認している様子
+- 吹き出し・心の声: 「Veo より安くできた！」「表情の動きが自然ですね」
+- 中央に置くキーワード/ラベル: Seedance 1.0 Pro
 
 ### 6 視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: 企画メモ・テキスト
+- Step 2 のアイコン/絵柄: fal.ai の入力画面
+- Step 3 のアイコン/絵柄: 動画再生プレビュー
+- Step 4 のアイコン/絵柄: Sora / Veo との比較スコア
+- 矢印で示す流れの意図: 試作から採用判断までの一連のサイクル
 
 ## コミュニティ補完メモ
 
+- Sora（D-52）との住み分け：Sora は OpenAI 製で品質面が先行するが価格が高い。Seedance はコスパ比較の文脈で登場することが多い
+- Veo（D-53）との住み分け：Veo は Google DeepMind 製。Seedance と Veo はともに「Sora 対抗」として英語圏で比較される
+- Kling（Kuaishou 製）との住み分け：同じ中国系動画生成モデル。Kling との比較がコミュニティで頻出する
+- Doubao・Jimeng との関係：ByteDance の総合 AI ブランドが Doubao。Jimeng は画像・動画特化アプリ。Seedance はその動画生成モデル名
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- fal.ai Seedance モデルページ — checked 2026-04-30
+- ByteDance Seedance 1.0 公式アナウンス — checked 2026-04-30
 
 ## 備考
+
+- Seedance 1.0 / 1.0 Pro が 2025 年中盤に公開。Pro は高品質版
+- 中国本土向けは Doubao・Jimeng 経由、海外向けは Volcano Engine / fal.ai / Replicate で API 提供
+- 生成動画の最大解像度は 1080p、尺は 5〜10 秒前後（evaluation_date: 2026-04-30 時点）

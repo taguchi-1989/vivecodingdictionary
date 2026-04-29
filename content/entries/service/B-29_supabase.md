@@ -1,69 +1,60 @@
 ---
 id: B-29
 title: Supabase
+title_reading: スーパーベース
 category: service
 subtype: baas
-experience_level:
-reader_level:
+experience_level: hands_on
+reader_level: 2-4
 figure_type: structure
 page_layout: spread_v1
-start_date:
+start_date: 2020-01-01
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: freemium
+evaluation_date: 2026-04-30
+related_terms:
+  - PostgreSQL
+  - Vercel
+  - OAuth
+  - v0
+status: drafting
 ---
 
 # Supabase
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-OSS の BaaS（Postgres ベース。Firebase 代替）
-
+OSS の BaaS（Backend as a Service）です。PostgreSQL を中核に据えた Firebase 代替サービスです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
+DB・認証・ストレージ・Edge Functions・Realtime を 1 サービスにまとめて提供します。PostgreSQL（SQL）ベースで、型生成対応のクライアント SDK から操作できます。
 
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
+v0（B-9）や Bolt.new（B-11）がフルスタック雛形を生成するとき、Supabase を DB ＋ Auth のバックエンドに選ぶことがあります。「Supabase のプロジェクト URL を教えて」と AI に聞かれたら、ここで出会うサインです。
 
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+Supabase が提供する機能群とフロントエンドの接続関係を 1 枚で示す。
+
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: Supabase（Postgres）
+- 周辺の要素（4個）: Auth / Storage / Edge Functions / Realtime
+- 関係の描き方（矢印・包含・比較）: 中心から外に向かう放射状の矢印
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Supabase に Auth と DB をまとめて、フロントは Claude に書かせたら 1 日で動きました。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +63,44 @@ OSS の BaaS（Postgres ベース。Firebase 代替）
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+DB・認証・ストレージを 1 サービスで担う BaaS です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+PostgreSQL の SQL 構文と型生成で安全に開発できます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+RLS（行レベルセキュリティ）の設定漏れが認可抜けにつながります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+MVP・中規模 SaaS の初期バックエンド構築で役立ちます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Firebase との違い（OSS・SQL・RLS）を押さえると入りやすいです。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
+PostgreSQL、Row Level Security、pgvector
 
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. プロジェクト作成 — Supabase ダッシュボードで DB と Auth を初期化します
+2. スキーマ設計 — SQL エディタかマイグレーションファイルでテーブルを定義します
+3. SDK 接続 — TypeScript クライアントを生成し、フロントから CRUD を呼び出します
+4. 認証設定 — OAuth（B-130）プロバイダを有効化し、RLS ポリシーを追加します
+5. デプロイ連携 — Vercel（B-20）の環境変数に URL と API キーを渡して本番化します
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- PostgreSQL
+- Vercel
+- OAuth
+- v0
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,18 +108,17 @@ OSS の BaaS（Postgres ベース。Firebase 代替）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
-
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
@@ -143,10 +126,10 @@ OSS の BaaS（Postgres ベース。Firebase 代替）
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: Supabase を中心に Auth・Storage・Edge Functions・Realtime が放射状に広がる構成図
+- 登場人物（いれば）: スタートアップ開発者（1名）がノートPC を操作している
+- 吹き出し・心の声: 「DB も認証もこれ 1 つで足りる」
+- 中央に置くキーワード/ラベル: Supabase（Postgres）
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +137,26 @@ OSS の BaaS（Postgres ベース。Firebase 代替）
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: ダッシュボードのブラウザ画面
+- Step 2 のアイコン/絵柄: テーブル設計の SQL コード断片
+- Step 3 のアイコン/絵柄: TypeScript の関数呼び出し
+- Step 4 のアイコン/絵柄: 鍵マーク（認証・RLS）
+- Step 5 のアイコン/絵柄: Vercel ロゴと矢印
 
 ## コミュニティ補完メモ
 
+- Firebase との住み分け：Firebase（Google・NoSQL・Firestore 中心）と Supabase（OSS・PostgreSQL・SQL 中心）は対照的な選択肢。B-29 は SQL を扱いたいケースに絞って説明し、Firebase との比較は「注意点」の補足として備考へ逃がす。
+- B-20 Vercel との関係：Vercel はフロントエンドのホスティング、Supabase はバックエンドの DB ＋ Auth 担当として住み分け。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- [supabase.com/docs](https://supabase.com/docs) — checked 2026-04-30
+- [supabase.com/pricing](https://supabase.com/pricing) — checked 2026-04-30
 
 
 ## 備考
+
+- Firebase との違いは読者がつまずきやすい点。Firebase は NoSQL（Firestore）中心、Supabase は PostgreSQL（SQL）中心。セルフホストも可（Apache 2.0）。
+- RLS（Row Level Security）はテーブル単位の認可制御で、設定漏れが致命的なセキュリティ穴になるため注意点に明記した。
+- pgvector 拡張を使うと RAG（Retrieval Augmented Generation）に必要なベクトル検索が Postgres 内で完結する（Deep 読者向け補足）。
+- pricing_note: freemium（Free プランあり、Pro $25/月〜。evaluation_date: 2026-04-30 時点）。

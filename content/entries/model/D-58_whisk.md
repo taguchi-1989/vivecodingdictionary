@@ -1,69 +1,58 @@
 ---
 id: D-58
 title: Whisk
+title_reading: ウィスク
 category: model
 subtype: image_video
-experience_level:
-reader_level:
+experience_level: partial
+reader_level: 2-3
 figure_type: structure
 page_layout: spread_v1
-start_date:
+start_date: 2024-12
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: preview
+pricing_note: none
+evaluation_date: 2026-04-30
+related_terms:
+  - Imagen
+  - DALL-E
+  - Gemini
+  - Whisk Animate
+status: drafting
 ---
 
 # Whisk
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-Google Labs の画像作成ツール（Imagen ベース）
-
+画像を「主題・シーン・スタイル」の 3 枚で指定して新しい画像を生成する、Google Labs の実験ツールです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+参照画像を 3 枚ドラッグ＆ドロップするだけで、Imagen 3 と Gemini が組み合わさり新しい画像を生成します。テキストでは伝えにくい「雰囲気」や「質感」を視覚的に指定できます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+Google Labs のページから無料で試せる実験プログラムです。SNS でキャラクター画像のアレンジ事例が流れてくるとき、Whisk が使われていることがあります。Whisk Animate（短尺動画生成版）も追加されています。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+3 種類の参照画像（主題・シーン・スタイル）を組み合わせて出力が生まれる流れを示します。
+
+### B. 登場シーン（figure_type: structure）
+
+- シーン1: デザイナーがキャラ写真＋背景写真＋画風画像を投入し、ハロウィン版イラストを生成する
+- シーン2: マーケターが商品写真＋シーン写真を組み合わせ、広告素材のバリエーションを作る
+- 並べる基準: 入力（3 枚の参照画像）→ 処理（Imagen 3 + Gemini）→ 出力（合成画像）の流れ
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Whisk にキャラの写真とシーン画像を投げて、ハロウィン版を生成しました。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +61,42 @@ Google Labs の画像作成ツール（Imagen ベース）
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+画像 3 枚で「主題・シーン・スタイル」を指定し新画像を生成します。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+テキストより直感的に意図を伝えられ、試行錯誤が減ります。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Google Labs の実験段階で、利用地域や継続性は変わることがあります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+アイデアスケッチや SNS 用ビジュアル制作の初稿生成に向いています。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+「3 枚の参照画像を混ぜて生成する」という UI の仕組みを把握することが出発点です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Imagen、DALL-E、Gemini
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. 素材収集 — 主題・シーン・スタイルの参照画像をそれぞれ 1 枚用意します
+2. 画像投入 — Whisk の画面に 3 枚をドラッグ＆ドロップして生成を開始します
+3. 結果確認 — 生成された画像の主題・シーン・スタイルを個別に調整して再生成します
+4. 仕上げ — 気に入った出力を保存し、他ツールで後処理や用途に合わせた編集をします
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- Imagen
+- DALL-E
+- Gemini
+- Whisk Animate
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,17 +104,17 @@ Google Labs の画像作成ツール（Imagen ベース）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,31 +123,40 @@ Google Labs の画像作成ツール（Imagen ベース）
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 3 枚の参照画像（主題の写真・シーンの写真・スタイルの絵）が矢印でつながり、中央の「Whisk」ボックスを経由して 1 枚の生成画像が出力される構成図
+- 登場人物: スマホを持つ女性（デザイナー想定）が画像を投入している場面
+- 吹き出し・心の声: 「この 3 枚を合わせるとどんな絵になるかな？」
+- 中央に置くキーワード/ラベル: Whisk（Imagen 3 × Gemini）
 
 ### 6 視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: フォルダ・写真アイコン（素材収集）
+- Step 2 のアイコン/絵柄: ドラッグ＆ドロップの手のアイコン
+- Step 3 のアイコン/絵柄: スライダー・調整アイコン
+- Step 4 のアイコン/絵柄: 保存・ダウンロードアイコン
+- 矢印で示す流れの意図: 素材準備 → 投入 → 微調整 → 保存という線形フロー
 
 
 ## コミュニティ補完メモ
 
+- DALL-E（D-50）との住み分け：DALL-E はテキストプロンプト主導の生成が中心。Whisk は参照画像主導の UI が特徴で、「テキストを書かずに視覚で指示する」体験の違いを強調する
+- Imagen（D-51）との関係：Whisk の生成エンジンとして Imagen 3 が動いているが、エントリのスコープは「UI としての Whisk 体験」に絞る。エンジン詳細は D-51 へ誘導
+- Midjourney の --cref（キャラクター参照）との違い：Midjourney は CLI コマンド操作が必要だが、Whisk はドラッグ＆ドロップのみで完結する点を差別化ポイントとして補足メモに留める
+
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- [labs.google/experiments/whisk](https://labs.google/experiments/whisk) — checked 2026-04-30
+- Google Labs Whisk 公式案内 — checked 2026-04-30
 
 
 ## 備考
+
+- 2024 年 12 月に Google Labs から公開された実験プログラム。米国を中心とした一部地域で提供
+- Whisk Animate は静止画生成に加え短尺動画生成を可能にした派生版
+- 「Whisk」は英語で調理器具（泡立て器）の意味だが、本書では Google Labs のツールを指す
+- 実験プログラムのため、将来的に正式サービス化・終了・仕様変更の可能性がある（evaluation_date 参照）

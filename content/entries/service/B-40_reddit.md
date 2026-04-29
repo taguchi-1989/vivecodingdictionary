@@ -1,69 +1,60 @@
 ---
 id: B-40
 title: Reddit
+title_reading: レディット
 category: service
 subtype: info_source
-experience_level:
-reader_level:
+experience_level: research_only
+reader_level: 2-4
 figure_type: structure
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2005-06-23
+version_status: active
+pricing_note: freemium
+evaluation_date: 2026-04-30
+related_terms:
+  - Perplexity
+  - ChatGPT
+  - Llama
+  - arXiv
+status: drafting
 ---
 
 # Reddit
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-AI の話題・速報・議論が集まる英語コミュニティ
-
+テーマ別の板（subreddit）に分かれた大型コミュニティ掲示板です。AI 話題の一次情報が集まります。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
+ユーザーが投稿・コメント・upvote（賛成票）/ downvote（反対票）で話題の優先順を決めます。r/ChatGPT や r/LocalLLaMA のように AI ツール別の板があり、実際に使った人の体感レビューやバグ報告が集まります。
 
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
+新モデルのリリース直後に「実際どうなの？」と検索すると、Reddit のスレッドが上位に出ることがあります。AI ツールを業務に選ぶ際、公式情報では分からない地域差や初期不具合の報告をここで確認できます。
 
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+主要な AI 関連サブレディットが「どんな話題を扱う板か」で整理されることを示し、使い分けのイメージを伝えます。
+
+### B. 登場シーン（figure_type: structure）
+
+- シーン1: 非エンジニアが r/ChatGPT で「このプロンプト効果があった」を探している
+- シーン2: 開発者が r/LocalLLaMA で Llama 4 の実機ベンチを確認している
+- シーン3: AI 業界ウォッチャーが r/MachineLearning で論文リリースの反応を読んでいる
+- 並べる基準: 読者層・目的別
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「r/LocalLLaMA を眺めて、Llama 4 の体感を社内に共有しました。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +63,43 @@ AI の話題・速報・議論が集まる英語コミュニティ
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+板ごとに AI ツールの体感レポートや議論が集まる情報源です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+公式リリースより早く不具合や使用感が把握できます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+個人の感想が多く、情報の精度にばらつきがあります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+業務で AI ツールを選ぶ前の評判調査に向いています。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+subreddit の検索と upvote の仕組みを把握すれば使えます。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
+arXiv、Perplexity、Llama
 
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. 調査 — 新モデルや AI ツールの評判を r/ChatGPT 等で検索する
+2. 比較 — 複数ツールの使用感スレッドを読み、候補を絞る
+3. 検証 — 自分の環境での不具合例や地域差を r/LocalLLaMA 等で確認する
+4. 共有 — 得た情報を社内にまとめて報告する
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- Perplexity
+- ChatGPT
+- Llama
+- arXiv
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,17 +107,17 @@ AI の話題・速報・議論が集まる英語コミュニティ
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,10 +126,10 @@ AI の話題・速報・議論が集まる英語コミュニティ
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: Reddit のロゴを中心に、主要サブレディット名（r/ChatGPT / r/LocalLLaMA / r/MachineLearning）を周囲に配置した放射状の図
+- 登場人物: PC の前で Reddit を眺めているビジネスパーソン（1 名）
+- 吹き出し・心の声: 「公式より早い…！」
+- 中央に置くキーワード/ラベル: Reddit（コミュニティの声）
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +137,27 @@ AI の話題・速報・議論が集まる英語コミュニティ
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 虫眼鏡（調査）
+- Step 2 のアイコン/絵柄: てんびん（比較）
+- Step 3 のアイコン/絵柄: パソコン（検証）
+- Step 4 のアイコン/絵柄: 資料を渡す人（共有）
+- 矢印で示す流れの意図: 情報収集から社内展開までの流れ
 
 
 ## コミュニティ補完メモ
 
+- B-41 arXiv との住み分け: arXiv は査読前の研究論文アーカイブ、Reddit は実際の使用体験・業界反応の集積地。対象が「論文」か「使用感」かで分かれる。
+- B-12 Perplexity との住み分け: Perplexity は AI 検索エンジンで情報をまとめて提示するもの、Reddit は生のコミュニティ議論の場。Perplexity の情報源として Reddit が引用されることもある。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- reddit.com/subreddits — checked 2026-04-30
+- Reddit API 有償化（2023年6月）報道: The Verge など各メディア — checked 2026-04-30
+- Reddit × Google / OpenAI LLM データ契約報道: Bloomberg など — checked 2026-04-30
 
 
 ## 備考
+
+- Reddit の API は 2023 年 6 月に有償化され、サードパーティ製クライアントの多くが終了した。
+- Google・OpenAI との LLM 学習データ提供契約は年間数千万ドル規模と報道されているが、正確な金額は非公表のため「数千万ドル規模」止まりで記述する。
+- 主要 AI サブレディット: r/ChatGPT / r/ClaudeAI / r/LocalLLaMA / r/singularity / r/MachineLearning / r/StableDiffusion / r/cursor / r/OpenAI / r/Anthropic（本文には列挙しすぎず、代表例にとどめた）。

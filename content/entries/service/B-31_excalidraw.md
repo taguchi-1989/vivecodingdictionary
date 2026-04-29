@@ -1,70 +1,61 @@
 ---
 id: B-31
 title: Excalidraw
+title_reading: エクスカリドロー
 category: service
 subtype: saas_design
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: hands_on
+reader_level: 1-3
+figure_type: before_after
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2020-01-01
+version_status: active
+pricing_note: freemium
+evaluation_date: 2026-04-30
+related_terms:
+  - Mermaid
+  - PlantUML
+  - Figma
+  - SVG
+status: drafting
 ---
 
 # Excalidraw
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-手描き風で素早く描ける共同作図ツール
-
+手書き風スタイルで素早くラフ図を描ける無料の作図ツールです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+フローチャートやアーキテクチャ図を、手書き風フォントと図形で素早く描けるツールです。ブラウザだけで動き、ログイン不要で使えます。ファイルは `.excalidraw`（JSON 形式）で保存でき、PNG や SVG（スケーラブル・ベクター・グラフィックス）へのエクスポートにも対応しています。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+AI に設計を相談する前の「整理メモ」として使われる場面が多いです。Excalidraw で描いたアーキテクチャ図をスクリーンショットして Claude や ChatGPT に貼ると、図の意図ごと議論できます。VS Code 拡張でエディタ内から開く使い方も広まっています。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+「ラフで描く → AI に貼る」という作業の流れを Before / After で示し、Excalidraw が何の入口になるかを伝えます。
 
+### A. Before / After（figure_type: before_after）
+
+- Before
+  - 状況: 設計の頭の中がまとまっていない
+  - 視覚要素（コード or 概念）: 箇条書きのテキストメモのみ
+  - つまずき: 何を AI に伝えればよいか分からない
+- After
+  - 状況: Excalidraw でラフ図を 5 分で描いた
+  - 視覚要素: 手書き風のブロック図とフロー矢印
+  - うれしさ: スクリーンショットを AI に渡して意図ごと議論できる
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「Excalidraw でアーキテクチャをラフに描いて、Claude に説明させました。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,102 +63,100 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ブラウザで動く手書き風ラフ図ツールです。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ログイン不要で即使えて、AI への説明下書きになります。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+厳密な仕様書向けではなく、ラフを描く用途に限られます。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI に設計を相談する前の図解整理に向いています。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Web 版（excalidraw.com）でログイン不要の体験から始めます。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Mermaid、Figma、PlantUML
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. 頭出し — 設計の全体像をホワイトボード感覚でラフに描きます
+2. AI 相談 — スクリーンショットを Claude や GPT に貼り付けて議論します
+3. 修正 — AI のフィードバックを受けて図を手早く書き直します
+4. 共有 — PNG または SVG でエクスポートして資料に貼り込みます
+5. チーム協働 — Excalidraw+（SaaS 版）でリアルタイム共同編集できます
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
-
+- Mermaid
+- PlantUML
+- Figma
+- SVG
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
-
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: before_after）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左半分にテキストメモだけで困る人物、右半分に Excalidraw の手書き風ブロック図を描いた人物
+- 登場人物（いれば）: 設計者（非エンジニア）が画面の前でメモを見ながら悩む左シーン、図を描いて AI に投げる右シーン
+- 吹き出し・心の声: 左「何から説明すればいいんだろう…」、右「これで伝わりそう！」
+- 中央に置くキーワード/ラベル: Excalidraw ロゴ風の手書き文字
+- Before / After の対比ポイント: テキストのみ vs. 図付きで AI に相談できる状態
 
 ### 6 視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: ホワイトボード・ペン
+- Step 2 のアイコン/絵柄: スクリーンショット・チャットバブル
+- Step 3 のアイコン/絵柄: 矢印で修正を加える図
+- Step 4 のアイコン/絵柄: PNG/SVG ファイルアイコン
+- Step 5 のアイコン/絵柄: 複数人カーソル（協働編集）
+- 矢印で示す流れの意図: 「ラフ描写 → AI 相談 → 修正 → 出力 → 共有」の一方向フロー
 
 ## コミュニティ補完メモ
 
+- Figma（B-32）との住み分け：Figma はデザインシステム・高精度 UI 作成向け。Excalidraw は設計の初期ラフ・ホワイトボード向けで用途が異なります
+- Mermaid（F-140）との住み分け：Mermaid はコードで図を生成するテキストベースのアプローチ。Excalidraw は手で直感的に描くビジュアルアプローチです。Excalidraw は Mermaid からの取り込みにも対応しているため、両方の入口になれます
+- PlantUML（F-141）との住み分け：PlantUML は UML 図のコード生成向けで、厳密な仕様記述に向きます。Excalidraw はそこまで厳密さを求めない場面に向きます
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- [excalidraw.com](https://excalidraw.com/) — checked 2026-04-30
+- [github.com/excalidraw/excalidraw](https://github.com/excalidraw/excalidraw) — checked 2026-04-30
+- [plus.excalidraw.com](https://plus.excalidraw.com/) — checked 2026-04-30
 
 ## 備考
+
+- Excalidraw はオープンソース（MIT ライセンス）。SaaS 版は Excalidraw+（チーム協働・有料）
+- 開発者は Christopher Chedeau（元 Facebook）ら。公開は 2020 年
+- ファイル形式 `.excalidraw` は JSON のため、Git で diff が取れる点が開発者に好まれる理由の一つ
+- 「ちゃんとした図が作れない」という不満は用途のミスマッチ。製品仕様書や厳密な図には draw.io / Figma / PlantUML が向く

@@ -1,69 +1,58 @@
 ---
 id: D-45
 title: GLM
+title_reading: ジーエルエム
 category: model
-subtype: open
-experience_level:
-reader_level:
-figure_type: structure
+subtype: open_weight_llm
+experience_level: research_only
+reader_level: 3-5
+figure_type: comparison
 page_layout: spread_v1
-start_date:
+start_date: 2023-03-01
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: freemium
+evaluation_date: 2026-04-30
+related_terms:
+  - Z.ai
+  - DeepSeek V3
+  - Qwen
+  - Kimi
+status: drafting
 ---
 
 # GLM
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-Z.ai のモデル
-
+General Language Model の略。中国・Z.ai が開発するオープンウェイト LLM ファミリーです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+中国語と英語の両言語に強い LLM（大規模言語モデル）を提供します。コーディング特化の CodeGeeX や画像入力対応の GLM-4V など派生モデルも多く、用途に合わせて選べます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+Hugging Face でオープンウェイト版が公開されており、ローカル GPU で動かす構成を試みる際に名前を見かけます。Cursor や Roo Code などのエディタ連携でも GLM-4.6 が選択肢として挙がります。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+GLM ファミリーの系譜と派生モデルの広がりを一覧で示し、「どのバージョンが何に向くか」を掴んでもらいます。
 
+### B. 登場シーン（figure_type: comparison）
+
+- シーン1: 開発者がローカル環境で GLM-4.6 をセットアップし、社内チャットを試作している
+- シーン2: Cursor の設定画面でモデル一覧を開き、GLM-4.6 を選んでコード補完を確認している
+- シーン3: Hugging Face の GLM-4V ページで画像入力デモを動かしている
+- 並べる基準: 利用環境（ローカル／エディタ統合／ウェブデモ）の違い
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「GLM-4.6 をローカル GPU で動かして、社内チャットを試作しました。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +61,41 @@ Z.ai のモデル
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Z.ai が提供する中国語・英語対応のオープンウェイト LLM です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ローカルで動かせるためデータを外部送信せずに利用できます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+統計分野の GLM（一般化線形モデル）と同名で混同しやすいです。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+中国語を含む文書処理やローカル LLM 構成での検討に向きます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Z.ai 開発・Hugging Face 公開・派生モデルの種類を把握します。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+DeepSeek V3、Qwen、CodeGeeX
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. モデル選定 — Hugging Face で GLM のバージョンと量子化形式を確認します
+2. ローカル環境構築 — GPU ドライバと推論ライブラリ（llama.cpp 等）を準備します
+3. エディタ連携 — Cursor や Roo Code にエンドポイントを設定してコード補完を試みます
+4. 用途別派生選択 — コードなら CodeGeeX、画像入力なら GLM-4V を選びます
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- Z.ai
+- DeepSeek V3
+- Qwen
+- Kimi
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,29 +103,29 @@ Z.ai のモデル
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: comparison）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: GLM ファミリーの系譜を縦に並べた比較図。ChatGLM → GLM-4 → GLM-4.5/4.6 の流れと、CodeGeeX・GLM-4V・GLM-4-Voice の派生ラインを枝分かれで示す
+- 登場人物（いれば）: エンジニア風の人物が Hugging Face のモデルカードを見ながら「どれを使おう」と考えている
+- 吹き出し・心の声: 「中国語も英語もいけるのか」「ローカルで動くのが魅力」
+- 中央に置くキーワード/ラベル: GLM-4.6
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +133,29 @@ Z.ai のモデル
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 虫眼鏡で Hugging Face ページを検索
+- Step 2 のアイコン/絵柄: GPU サーバーにインストール中の画面
+- Step 3 のアイコン/絵柄: エディタのモデル選択ドロップダウン
+- Step 4 のアイコン/絵柄: コード補完と画像入力の 2 つのアイコンを並置
+- 矢印で示す流れの意図: モデル選定から実利用まで 4 段階で進む流れ
 
 
 ## コミュニティ補完メモ
 
+- Z.ai（C-11）との住み分け：C-11 は企業・開発元の説明、D-45 はモデルファミリーの技術的特性を扱います
+- DeepSeek V3（D-46）との住み分け：同じ中国系オープンウェイト勢だが、DeepSeek は深度求（DeepSeek 社）、GLM は Z.ai と開発元が異なります
+- Qwen（D-43）との住み分け：Qwen はアリババ系、GLM は清華大学発スピンアウト Z.ai 系で、言語特性のターゲットが一部重なります
+- 統計分野の GLM（一般化線形モデル、Generalized Linear Model）とは別物。本書では Z.ai の LLM ファミリーを指します
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- <https://huggingface.co/THUDM> — GLM モデル一覧 checked 2026-04-30
+- <https://zhipuai.cn> — Z.ai 公式（旧 Zhipu AI） checked 2026-04-30
 
 
 ## 備考
+
+- GLM-4.5 は 2025 年中盤にエージェンティック性能を強化したバージョン
+- GLM-4.6 は 2025 年後半に公開、Cursor・Roo Code 等エディタ連携を意識した設計
+- 統計の GLM（Generalized Linear Model）とは別物。読者への注意を「非エンジニアのつまずき」欄に残す想定
+- pricing_note: freemium（Hugging Face 公開のオープンウェイト版は無償、Z.ai の API 版は有償プランあり）
