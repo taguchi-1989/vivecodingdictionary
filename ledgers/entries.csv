@@ -241,7 +241,7 @@ G-33,,Function Calling,term_llm,control,skeleton,,content/entries/term_llm/G-33_
 G-34,,Code Interpreter,term_llm,control,skeleton,,content/entries/term_llm/G-34_code_interpreter.md
 G-35,,Deep Research,term_llm,control,skeleton,,content/entries/term_llm/G-35_deep_research.md
 G-36,,Artifact,term_llm,control,skeleton,,content/entries/term_llm/G-36_artifact.md
-G-40,,バイブコーディング,term_llm,ops,skeleton,,content/entries/term_llm/G-40.md
+G-40,,バイブコーディング,term_llm,ops,skeleton,,content/entries/term_llm/G-40_vibe_coding.md
 G-41,,Subagent,term_llm,ops,skeleton,,content/entries/term_llm/G-41_subagent.md
 G-42,,Worktree,term_llm,ops,skeleton,,content/entries/term_llm/G-42_worktree.md
 G-43,,オーケストレーション,term_llm,ops,skeleton,,content/entries/term_llm/G-43.md

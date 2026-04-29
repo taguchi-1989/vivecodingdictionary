@@ -1,70 +1,62 @@
 ---
 id: G-2
 title: Token
+title_reading: トークン
 category: term_llm
 subtype: basic
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: research_only
+reader_level: 2
+figure_type: before_after
 page_layout: spread_v1
 start_date:
 end_date:
 version_status:
 pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+evaluation_date: 2026-04-29
+related_terms:
+  - Context
+  - Context Window
+  - Prompt Engineering
+  - LLM
+status: drafting
 ---
 
 # Token
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-LLM が数える最小単位（≒単語未満）
-
+LLM が文章を読み書きするときの最小単位で、単語より小さいこともあります。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+LLM（大規模言語モデル）は文章を文字単位ではなくトークン（Token）という塊で処理します。1 トークンはおよそ英語 4 文字・日本語 1〜2 文字が目安で、処理量と料金の計算単位です。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+API の利用ダッシュボードやエラーメッセージで「X tokens used」と表示されるのが初対面です。Context Window（コンテキストウィンドウ）の上限も「〇〇K トークン」と表記されるため、長い会話や大量のファイルを扱うときに意識します。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+「Hello World」という文字列がトークン分割されると何個になるかを Before/After で見せ、「文字数ではなくトークン数」で LLM は考えている、という感覚を掴んでもらいます。
 
+### A. Before / After（figure_type: before_after）
+
+- Before
+  - 状況: ユーザーが入力した文字列そのまま
+  - 視覚要素: `こんにちは、世界！` という一続きのテキスト
+  - つまずき: 「文字数で切ればいいのでは？」
+- After
+  - 状況: LLM 内部でトークン分割された状態
+  - 視覚要素: `こん` / `にちは` / `、` / `世界` / `！` のように色付きブロックで区切る
+  - うれしさ: 「これが 5 トークン、英語より日本語が消費しやすいと分かった」
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「日本語は英語より同じ文章でもトークン数が多くなりがちですよね。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,52 +64,41 @@ LLM が数える最小単位（≒単語未満）
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+LLM が処理する情報量を数える最小単位です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+トークン数を意識すると、Context の使い方と費用を見通せます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+日本語は英語より同文でもトークン数が多くなることがあります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+長文処理や多ファイル読込で Context が詰まる前に気づけます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+「1 トークン ≒ 英語 4 文字・日本語 1〜2 文字」という感覚を掴むことです。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Context Window、Prompt Engineering、料金プラン（B-50〜52）。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. 入力を準備する — ファイル・指示・会話履歴を Context に積む
+2. トークン数を確認する — Tokenizer ツールで実際の消費量を見積もる
+3. LLM に送る — 上限を超えていれば分割か要約で調整する
+4. 出力を受け取る — 出力トークンも合算して利用量と費用を把握する
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
-
+- Context（G-1）
+- Context Window
+- Prompt Engineering
+- LLM
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
 
@@ -141,33 +122,39 @@ LLM が数える最小単位（≒単語未満）
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: before_after）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 「こんにちは、世界！」を Before（一続きのテキスト）→ After（色付きブロックで区切ったトークン列）で並べる。右側のブロックに「5 トークン」とラベルを付ける
+- 登場人物: 画面を覗き込む読者キャラクター（驚いた表情）。「え、ここで切れるの？」という吹き出しを添える
+- 吹き出し・心の声: Before 側：「文字の塊？」／ After 側：「あ、日本語って 1 文字 1 トークンじゃないんだ」
+- 中央に置くキーワード/ラベル: Token ＝ LLM の数え方
+- Before / After の対比ポイント: 「見た目は同じ文章でも、LLM には色分けされたブロック列として届く」
 
 ### 6 視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 書類スタック（Context に積む）
+- Step 2 のアイコン/絵柄: 電卓・メーター（トークン数を確認）
+- Step 3 のアイコン/絵柄: 送信矢印＋ハサミ（分割・要約して送る）
+- Step 4 のアイコン/絵柄: 受信ボックス＋コイン（出力受取と費用確認）
+- 矢印で示す流れの意図: 「積む → 測る → 送る → 受け取る」の一往復
 
 
 ## コミュニティ補完メモ
 
+G-1 Context は「何を入れるか」という設計視点で書かれています。本エントリ G-2 Token は「LLM が情報をどう数えるか」という単位の説明に絞ります。料金との関係（1 トークンあたりの費用・プラン上限）は B-50〜B-52 の料金プランエントリに送ります。Context Window の上限値（〇〇K トークン）は Context Window エントリへ送ります。
+
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- https://platform.openai.com/tokenizer — checked 2026-04-29
+- https://docs.anthropic.com/en/docs/resources/glossary — checked 2026-04-29
+- https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them — checked 2026-04-29
 
 
 ## 備考
+
+日本語テキストは英語より同文でのトークン消費量が多くなる傾向があります（tiktoken の cl100k_base で「こんにちは」は 3 トークン、"hello" は 1 トークン）。ただし tiktoken と Anthropic の tokenizer は実装が異なるため、同じ文章でもカウントが変わる場合があります。料金と直結する情報なので evaluation_date を定期的に更新してください。
