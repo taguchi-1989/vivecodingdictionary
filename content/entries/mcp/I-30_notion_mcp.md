@@ -1,69 +1,56 @@
 ---
 id: I-30
 title: Notion MCP
+title_reading: ノーションエムシーピー
 category: mcp
 subtype: collab
-experience_level:
-reader_level:
+experience_level: hands_on
+reader_level: 3-4
 figure_type: structure
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2024-11
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - MCP
+  - MCP Server
+  - Slack MCP
+  - AWS MCP
+status: drafting
 ---
 
 # Notion MCP
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-Notion 連携
-
+Notion ワークスペースを AI クライアントから操作できる MCP server です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+ページ検索・取得・子ページ作成・データベース問い合わせ・コメント投稿など、Notion API の操作を AI クライアントへのツールとして提供します。公式パッケージ `@notionhq/notion-mcp-server` を stdio で起動して使います。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+仕様書を Notion に書き溜めている組織で、Claude Code に「このページの要件を読んで実装して」と渡すときに登場します。逆に AI に議事録をまとめさせて Notion ページへ自動で書き出す用途でも使います。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+AI クライアント → Notion MCP Server → Notion ワークスペースという 3 層の接続と、Integration Token が橋渡しになっていることを示します。
 
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: Notion MCP Server
+- 周辺の要素: Claude（AI クライアント）／Internal Integration Token／ページ検索・取得／コメント投稿／Notion ワークスペース
+- 関係の描き方: 左から右への矢印。Claude → Notion MCP → Notion の 3 層構造
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Notion MCP で要件ページを拾わせて、そのまま Claude Code に実装させました。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +59,43 @@ Notion 連携
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Notion ワークスペースを AI から操作する MCP server です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+仕様書の読み込みやページ作成をコード不要で AI に任せられます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Integration をページに「招待」しないとアクセスできない点に注意です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+仕様管理を Notion で行う組織での AI 連携に向いています。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Internal Integration Token の発行と、対象ページへの招待手順を把握します。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+MCP、MCP Server、Slack MCP
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. Integration 作成 — Notion の設定画面で Internal Integration Token を発行します
+2. ページに招待 — 対象ページ・データベースにその Integration を接続（招待）します
+3. サーバー起動 — `npx -y @notionhq/notion-mcp-server` を実行します
+4. Claude 設定 — 設定ファイルに `NOTION_API_KEY` を環境変数として登録します
+5. 動作確認 — まず検索・取得のみ試し、書き込みは権限を確認してから使います
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- MCP
+- MCP Server
+- Slack MCP
+- AWS MCP
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,17 +103,17 @@ Notion 連携
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,10 +122,10 @@ Notion 連携
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: Claude（左）→ Notion MCP Server（中央）→ Notion ワークスペース（右）の 3 層フロー図
+- 登場人物: 男性担当者が Claude に「この仕様ページを読んで実装して」と話しかけている
+- 吹き出し・心の声: 担当者「Notion の要件をコピペしなくて済む！」→ Notion MCP 経由で仕様が自動で渡される様子
+- 中央に置くキーワード/ラベル: Notion MCP Server／Internal Integration Token
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +133,33 @@ Notion 連携
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: Notion ロゴ + 鍵アイコン（Token 発行）
+- Step 2 のアイコン/絵柄: ページアイコン + プラスボタン（招待）
+- Step 3 のアイコン/絵柄: ターミナル + npx コマンド
+- Step 4 のアイコン/絵柄: 設定ファイル（JSON）
+- Step 5 のアイコン/絵柄: Notion ページ + 虫眼鏡（読み取り確認）
+- 矢印で示す流れの意図: 認証準備 → 権限付与 → 起動 → 接続 → 確認の段階を示す
 
 ## コミュニティ補完メモ
+
+- I-1 MCP との住み分け：I-1 は規格の全体像。I-30 は Notion に特化した実装例
+- I-2 MCP Server との住み分け：I-2 は server の概念と構造。I-30 は Notion の具体ユースケース
+- I-13 Slack MCP との住み分け：同じ reference server 系。ドキュメント管理（Notion）かコミュニケーション（Slack）かで使い分ける
+- I-50 AWS MCP との住み分け：I-50 はクラウドインフラ操作。I-30 はドキュメント管理・知識ベース連携
+- 公式（`@notionhq/notion-mcp-server`）とコミュニティ製が並立しているが、本エントリは公式を主体として扱う
+- URL から Page ID を取り出す方法（末尾の 32 文字）は「読者のつまずき」の典型。ブロック ID と混同しやすい点を備考に記載
 
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- <https://github.com/makenotion/notion-mcp-server> — checked 2026-04-29
+- <https://developers.notion.com/docs/create-a-notion-integration> — checked 2026-04-29
+- <https://modelcontextprotocol.io/introduction> — checked 2026-04-29
 
 
 ## 備考
+
+- Internal Integration Token は `secret_` で始まる。External Integration（OAuth）とは別物
+- ページ ID は Notion の URL 末尾の 32 文字（ハイフンを除く）。ブロック ID と形式が同じなので、URL のどの部分を使うかで混乱しやすい
+- `@notionhq/notion-mcp-server` は 2024 年後半に Notion 公式がリリース。コミュニティ製（`notion-mcp` 等）も複数存在するが、公式が推奨される
+- Integration をページに「招待」しないと「Could not find page with ID」や「No access」エラーになる。エラーメッセージだけでは原因が判断しづらいため注意

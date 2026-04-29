@@ -1,70 +1,58 @@
 ---
 id: C-54
 title: Ilya Sutskever
-category: person_org
+title_reading: イリヤ・サツケバー
+category: person
 subtype: person
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: research_only
+reader_level: 3-5
+figure_type: timeline
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - OpenAI
+  - Sam Altman
+  - Geoffrey Hinton
+  - ASI
+status: drafting
 ---
 
-# Ilya Sutskever
-
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
+<!-- バイブコーディング図鑑 エントリー v2（2ページ見開き想定、iter 22 準拠） -->
 
 ## tagline
 
-元 OpenAI 共同創業者・チーフサイエンティスト。Safe Superintelligence 創業
-
+OpenAI 共同創業者・元チーフサイエンティストで、SSI 創業者です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+2012 年に AlexNet の主著者の一人として深層学習ブームの起点を作り、OpenAI では GPT 系モデル設計に関与しました。2024 年に同社を退職後、SSI（Safe Superintelligence Inc.）を設立し「安全な ASI 実現に集中する」と表明しています。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+AI 安全性や ASI に関するニュース記事で名前を見ます。OpenAI のガバナンス騒動（2023 年 11 月の Sam Altman 解任・復帰）でも中心人物として報じられ、Geoffrey Hinton（C-57）の系譜を継ぐ研究者として言及されます。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+Ilya Sutskever の主要な足跡を時系列で示し、AI 研究史における位置を掴んでもらいます。
+
+### C. 概念図（figure_type: timeline）
+
+- 中心に置く概念: Ilya Sutskever の研究者キャリア年表
+- 周辺の要素: AlexNet（2012）/ OpenAI 設立（2015）/ GPT 設計参画 / ガバナンス騒動（2023）/ SSI 設立（2024）
+- 関係の描き方: 時系列の矢印で上から下へ順に並べる
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「Ilya が SSI を立ち上げた件、Anthropic と安全性への向き合い方が似ていますよね。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,102 +60,98 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+深層学習の普及と AI 安全性研究を両立してきた研究者です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI 安全性議論の背景を知ると、SSI や Anthropic の方針が理解しやすくなります。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+SSI（会社名）と ASI（概念）は略称が似ており混同しやすい点に注意が必要です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI 業界のニュースを読む際に、登場人物の立場や関係を把握するのに役立ちます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+OpenAI 共同創業者でありながら安全性を重視して独立した経緯を押さえます。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+OpenAI、ASI、Geoffrey Hinton
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. 学術研究 — トロント大学で Geoffrey Hinton 指導のもと博士号を取得し、AlexNet を共著
+2. 基盤モデル設計 — OpenAI チーフサイエンティストとして GPT 系モデルの研究開発を主導
+3. ガバナンス関与 — 2023 年 11 月の OpenAI 取締役会での Sam Altman 解任決定に関与
+4. 安全研究会社設立 — 2024 年 6 月に SSI を設立し、ASI 安全研究に特化する方針を表明
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- OpenAI
+- Sam Altman
+- Geoffrey Hinton
+- ASI
 
-- 用語A —
-- 用語B —
-- 用語C —
-
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
-
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: timeline）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: Ilya Sutskever のキャリア年表（2012〜2024 の主要出来事を縦に並べる）
+- 登場人物: スーツ姿の研究者（Ilya）が年表の横に立つ
+- 吹き出し・心の声: 「製品より安全性を」（SSI 設立時点の吹き出し）
+- 中央に置くキーワード/ラベル: AlexNet → OpenAI → SSI
+- Before / After の場合の対比ポイント: 年表形式なので不要
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
 - 共通アイコン流用（個別演出が要るときだけ書き足す）
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: 論文・学術帽
+- Step 2 のアイコン/絵柄: ロケット（OpenAI ロゴ風）
+- Step 3 のアイコン/絵柄: 会議室・ハンマー（ガバナンス）
+- Step 4 のアイコン/絵柄: 盾（安全性・SSI）
+- 矢印で示す流れの意図: 研究者からガバナンス関与、そして安全研究特化への移行
 
 ## コミュニティ補完メモ
 
+- C-50 Sam Altman との住み分け：Sam Altman は CEO・経営・プロダクト視点、Ilya は研究・安全性視点で分担。ガバナンス騒動では両者の対立軸として登場する
+- C-57 Geoffrey Hinton との住み分け：Hinton は「AI のゴッドファーザー」として深層学習の源流、Ilya はその直弟子として実用化を担った世代として位置づけ
+- J-4 ASI との住み分け：ASI は概念エントリ、SSI（Safe Superintelligence Inc.）は会社エントリとして Ilya の元で扱う。略称の混同注意を両エントリでクロス補足する
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- Wikipedia: Ilya Sutskever — checked 2026-04-29
+- OpenAI ブログ: Ilya Sutskever 退職アナウンス（2024-05）— checked 2026-04-29
+- SSI 公式サイト: ssi.inc — checked 2026-04-29
 
 ## 備考
+
+- SSI（Safe Superintelligence Inc.）の略称は ASI（Artificial Superintelligence、J-4）と混同されやすいため、両エントリで注記を入れることを推奨
+- 2024 年 11 月のガバナンス騒動について「決定を悔いている」と発信した件は主観評価になるため、事実として「発信があった」のみ記録し、評価は著者欄に委ねる
+- OpenAI 退職時期：2024 年 5 月。SSI 設立：2024 年 6 月（Daniel Gross らと共同創業）

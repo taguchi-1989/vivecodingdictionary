@@ -1,69 +1,56 @@
 ---
 id: I-41
 title: SQLite MCP
+title_reading: エスキューライトエムシーピー
 category: mcp
 subtype: data
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: hands_on
+reader_level: 3
+figure_type: workflow
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2024-11
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - MCP
+  - MCP Server
+  - Python
+  - AWS MCP
+status: drafting
 ---
 
 # SQLite MCP
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-SQLite DB 操作
-
+ローカルの SQLite データベースを AI クライアントから自然言語で操作できる MCP Server です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+MCP 公式の reference server `mcp-server-sqlite` が、手元の `.db` ファイルに対して SQL 実行・テーブル一覧・スキーマ参照などを提供します。コードを書かずに「先月の売上だけ集計して」と自然言語で指示できます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+「Claude に DB を集計させたい」と思ったとき、MCP 公式ドキュメントや `modelcontextprotocol/servers` リポジトリで紹介されています。`uvx mcp-server-sqlite --db-path ./data.db` の 1 行で使い始められます。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+AI クライアントが SQLite MCP を経由してローカル `.db` ファイルを操作する流れを示し、「AI に DB を渡す」イメージを具体化します。
 
+### C. 概念図（figure_type: workflow）
+
+- 中心に置く概念: SQLite MCP Server（`.db` ファイルへのゲート役）
+- 周辺の要素: AI クライアント（Claude など）／自然言語指示／SQL 変換／`.db` ファイル／結果（表・CSV）
+- 関係の描き方: 左から AI クライアント → SQLite MCP → `.db` ファイルへの矢印。read-only モード時は書き込み矢印に × を添える
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「SQLite MCP に集計させて、MCP Server 経由で結果を CSV に書き出してもらいました。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +59,43 @@ SQLite DB 操作
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ローカル `.db` ファイルを AI クライアントが SQL で操作する窓口です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+自然言語の指示だけでデータ集計やマイグレーションができます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+書き込み系操作はバックアップ必須で、read-only モードの利用が安全です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ローカル在庫 DB や売上ログを AI で即席分析したい場面に向きます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+`.db` ファイルを用意し `uvx` コマンドで起動できれば試せます。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+MCP Server、MCP、Filesystem MCP
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. DB 準備 — ローカルに `.db` ファイルを用意し、必要ならコピーを取っておきます
+2. Server 起動 — `uvx mcp-server-sqlite --db-path ./data.db` で stdio モードで起動します
+3. クライアント接続 — Claude Desktop などの設定ファイルにパスを登録して接続します
+4. 自然言語で操作 — 「このテーブルを集計して」「カラムを追加して」と指示するだけです
+5. 結果確認 — SELECT 結果や変更後のスキーマを AI が返してくれます
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- MCP
+- MCP Server
+- Python
+- AWS MCP
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -141,12 +120,13 @@ SQLite DB 操作
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: workflow）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: AI クライアントが SQLite MCP を介してローカル `.db` を操作する 3 段構造（AI → MCP → DB）
+- 登場人物: ノートPC前の人物（「集計して」と話しかけている）
+- 吹き出し・心の声: 人物「先月の売上だけ出して」／MCP「SELECT で拾います」
+- 中央に置くキーワード/ラベル: SQLite MCP
+- Before / After の場合の対比ポイント: （不使用）
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +134,30 @@ SQLite DB 操作
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: DB ファイルアイコン（コピーマーク付き）
+- Step 2 のアイコン/絵柄: ターミナル画面（uvx コマンド）
+- Step 3 のアイコン/絵柄: 設定ファイル（json アイコン）
+- Step 4 のアイコン/絵柄: チャット吹き出し（自然言語指示）
+- 矢印で示す流れの意図: 準備 → 起動 → 接続 → 操作の順序を示す
 
 
 ## コミュニティ補完メモ
 
+- I-1 MCP との住み分け：MCP はプロトコル全体の定義。SQLite MCP は MCP の具体的な実装例（data 操作特化）
+- I-2 MCP Server との住み分け：MCP Server は概念・仕組みの説明。SQLite MCP はその具体サーバーの 1 つ
+- I-10 Filesystem MCP との住み分け：Filesystem MCP はファイル読み書き全般。SQLite MCP は `.db` ファイル内を SQL で操作する点が異なる
+- I-50 AWS MCP との住み分け：AWS MCP はクラウドリソース操作。SQLite MCP はローカル DB 専用
+- PostgreSQL や MySQL 向け MCP（postgres / mysql）が公式・コミュニティで存在するが、それらは別エントリ扱い
+
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- https://github.com/modelcontextprotocol/servers — checked 2026-04-29
+- https://modelcontextprotocol.io/docs — checked 2026-04-29
 
 
 ## 備考
+
+- read-only モードはブリーフ記載の安心材料。起動オプションでの制御なので、正確なフラグ名は公式 README で要確認（時変情報）
+- SQLite は Python 標準ライブラリに含まれるため、`mcp-server-sqlite` の Python 実装との相性が自然
+- PostgreSQL・MySQL 向けには別 MCP server が存在するが、本エントリのスコープはローカル SQLite のみ

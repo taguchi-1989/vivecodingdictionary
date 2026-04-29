@@ -1,69 +1,57 @@
 ---
 id: I-4
 title: MCP Transport
+title_reading: エムシーピートランスポート
 category: mcp
 subtype: protocol
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: partial
+reader_level: 3-4
+figure_type: comparison
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - MCP
+  - MCP Server
+  - MCP Client
+  - MCP SDK
+status: drafting
 ---
 
 # MCP Transport
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
+<!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## tagline
 
-通信方式（stdio / SSE / HTTP）
-
-
-<!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
+AI クライアントと MCP Server をつなぐ通信路の規格。stdio と HTTP の 2 系統が基本です。
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+MCP（Model Context Protocol）でクライアントとサーバがメッセージをやり取りする経路を定めた仕組みです。ローカル動作には stdio、リモート接続には HTTP/SSE を使い、Transport が違うと起動方法や設定の書き方も変わります。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+MCP Server を設定ファイルに追加するとき、`command`/`args` を書く欄（stdio）か `url` の欄（HTTP）かで Transport が決まります。Claude Code や Claude Desktop で「動かない」と感じたら、まず種別を確認すると切り分けが早いです。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+stdio（ローカル子プロセス起動）と HTTP（リモート接続）の 2 系統を並べて、どちらをいつ選ぶかが一目でわかるようにする。
 
+### B. 登場シーン（figure_type: comparison）
+
+- シーン1: ローカル MCP — `node` や `uvx` でプロセスを起動、stdio で JSON-RPC をやり取り
+- シーン2: リモート MCP — クラウドサービスが提供する URL に HTTP（SSE）で接続
+- 並べる基準: ローカル vs リモートの Transport 選択軸
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「この MCP Server は stdio なので、ローカルで `node` を起動しないと動きません。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +60,42 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+クライアントとサーバ間の通信経路を stdio / HTTP の 2 系統から選ぶ仕組みです。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Transport を把握すると、MCP Server が動かない原因を素早く切り分けられます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+stdio 専用サーバに HTTP の URL を設定しても接続できません。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+MCP Server の導入時に設定ファイルの記述形式を選ぶ場面で使います。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+stdio はローカル起動、HTTP はリモート URL 接続という 2 区分を押さえましょう。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+MCP Server、JSON-RPC、SSE（Server-Sent Events）
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. MCP Server を選ぶ — stdio 専用か HTTP 対応かを確認する
+2. 設定ファイルに記入 — stdio なら `command`／`args`、HTTP なら `url` を書く
+3. クライアントが起動 — stdio はサーバをローカル子プロセスとして立ち上げる
+4. 通信開始 — JSON-RPC メッセージが選んだ Transport 経由で流れる
+5. トラブル時の確認 — Transport の種別ミスがないか設定を見直す
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- MCP
+- MCP Server
+- MCP Client
+- MCP SDK
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,50 +103,55 @@ YAML 補足（本書きで埋める／見直す欄）:
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: comparison）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左列に stdio（ローカル）、右列に HTTP/SSE（リモート）の 2 系統を並べた比較図
+- 登場人物: 開発者が設定ファイルを見ながら「どっちで動くんだ？」と首をかしげている
+- 吹き出し・心の声: 左「node で起動 → stdio 接続」、右「URL 貼るだけ → HTTP 接続」
+- 中央に置くキーワード/ラベル: Transport
 
 ### 6 視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: サーバのアイコン（種類確認）
+- Step 2 のアイコン/絵柄: 設定ファイル・鉛筆
+- Step 3 のアイコン/絵柄: コンピューター・起動矢印
+- Step 4 のアイコン/絵柄: 双方向矢印（通信）
+- 矢印で示す流れの意図: 選択 → 設定 → 起動 → 通信の一連の流れ
 
 
 ## コミュニティ補完メモ
 
+- I-1 MCP との住み分け：MCP はプロトコル全体。本エントリは通信路の種別に絞ったスコープ
+- I-2 MCP Server との住み分け：サーバ側の機能・設定方法は I-2 へ。本エントリは「どの Transport を使うか」の選択と設定記述に絞る
+- I-3 MCP Client との住み分け：クライアント側の実装詳細は I-3 へ
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- <https://modelcontextprotocol.io/docs/concepts/transports> — checked 2026-04-29
+- <https://docs.anthropic.com/en/docs/claude-code/mcp> — checked 2026-04-29
 
 ## 備考
+
+- streamable HTTP は SSE の後継として策定が進んでいる方式。2026-04-29 時点では両方に対応するクライアントが増えつつある
+- stdio 専用サーバと HTTP 対応サーバを混在させた設定は可能（設定ファイル内で複数エントリを持てる）

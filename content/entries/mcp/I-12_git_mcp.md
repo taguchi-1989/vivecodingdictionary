@@ -1,69 +1,68 @@
 ---
 id: I-12
 title: Git MCP
+title_reading: ギットエムシーピー
 category: mcp
 subtype: reference
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: partial
+reader_level: 3-4
+figure_type: before_after
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - MCP
+  - MCP Server
+  - GitHub MCP
+  - git
+status: drafting
 ---
 
 # Git MCP
 
 <!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
+バイブコーディング図鑑 エントリー雛形 v2（2ページ見開き想定、iter 22 準拠）
 -->
 
 ## tagline
 
-git 操作
+ローカルの git 操作を AI が直接呼び出せる MCP 公式 reference server です。
 
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+`git status` / `git diff` / `git log` / `git commit` など主要な操作を、Claude が「git 専用ツール群」として宣言的に呼び出せます。Python 製の `mcp-server-git` として MCP 公式リポジトリで提供されています。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+Bash の全権限を Claude に渡せない職場や CI 環境で、git 操作だけ MCP 経由に絞りたいときに登場します。`uvx mcp-server-git --repository /path/to/repo` と起動し、stdio transport で Claude に接続します。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+Bash 全許可と Git MCP 利用の権限範囲の違いを示し、なぜ Git MCP が選ばれるかを掴んでもらいます。
+
+### A. Before / After（figure_type: before_after）
+
+- Before
+  - 状況: Claude に Bash ツールで git を叩かせている
+  - 視覚要素: Claude → Bash（全権限）→ git / rm / curl など
+  - つまずき: 権限が広すぎてセキュリティポリシーに引っかかる
+- After
+  - 状況: Git MCP で git 専用ツール群だけ渡す
+  - 視覚要素: Claude → Git MCP（git 操作のみ）→ ローカルリポジトリ
+  - うれしさ: 権限を絞り込んだまま commit まで自動化できる
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Bash を切っている環境でも、Git MCP を使えば commit まで任せられます。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,54 +71,47 @@ git 操作
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+git 操作専用の MCP ツール群を Claude に提供します。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Bash 許可なしで commit・branch が自動化できます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+I-11 GitHub MCP とは別物で、ローカル操作専用です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+権限を厳しく管理する職場や CI 環境で効果があります。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+MCP の基本（I-1）と GitHub MCP との違いを先に押さえます。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
+MCP Server、GitHub MCP、git
 
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. 環境準備 — `uvx mcp-server-git` をインストールして起動設定を書きます
+2. 接続確認 — Claude が git ツール一覧を認識しているか確認します
+3. 操作委任 — status・diff・log を Claude に呼ばせて動作を検証します
+4. commit 自動化 — add / commit を AI に任せて変更を記録します
+5. branch 運用 — branch 作成・切り替えまで委任して開発サイクルを回します
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- MCP
+- MCP Server
+- GitHub MCP
+- git
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
@@ -141,33 +133,42 @@ git 操作
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: before_after）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左に「Bash 全権限」の広い矢印、右に「Git MCP のみ」の細い矢印。権限の絞り込みを視覚化する
+- 登場人物: 開発者（30 代、腕組みして画面を見ている）
+- 吹き出し・心の声: Before「git 以外も全部触れてしまう…」After「git だけ渡せば安心です。」
+- 中央に置くキーワード/ラベル: 「権限スコープ」
+- Before / After の対比ポイント: 許可ツールの範囲（広い vs 狭い）
 
 ### 6 視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: ターミナルと設定ファイル
+- Step 2 のアイコン/絵柄: チェックマーク・接続確認
+- Step 3 のアイコン/絵柄: 虫眼鏡・diff 確認
+- Step 4 のアイコン/絵柄: コミットアイコン（git ブランチマーク）
+- 矢印で示す流れの意図: 環境構築 → 確認 → 委任 → 自動化の段階的な信頼構築
 
 
 ## コミュニティ補完メモ
 
+- I-11 GitHub MCP との住み分け：GitHub MCP はリモートの GitHub API（Issue・PR・Repository 操作）を担い、Git MCP はローカルリポジトリの git コマンド操作を担います。「GitHub = リモート、Git MCP = ローカル」が最短の区別です
+- F-50 git との住み分け：F-50 は git コマンド自体の概念解説。I-12 は git を MCP 経由で AI に使わせる運用方法の話です
+- I-2 MCP Server との関係：I-12 は MCP Server の具体例の 1 つ。MCP Server の仕組みを知りたい読者は I-2 へ誘導します
+
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- https://github.com/modelcontextprotocol/servers/tree/main/src/git — checked 2026-04-29
+- MCP 公式ドキュメント（modelcontextprotocol.io） — checked 2026-04-29
 
 
 ## 備考
+
+- `mcp-server-git` は Python 製。`uvx` コマンド（uv ツール）で手軽にインストールできます
+- transport は stdio のみ（2026-04-29 時点）
+- Claude Code はデフォルトで Bash 経由の git 操作が可能なため、Git MCP が必要になるのは「Bash 許可を絞り込んだ環境」に限られます。一般的なバイブコーディング環境では Claude Code の Bash ツールで十分なケースが多いです

@@ -1,70 +1,64 @@
 ---
 id: C-6
 title: Mistral AI
+title_reading: ミストラルエーアイ
 category: person_org
 subtype: company
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: partial
+reader_level: 2-4
+figure_type: comparison
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2023-04-01
+version_status: active
+pricing_note: freemium
+evaluation_date: 2026-04-29
+related_terms:
+  - D-41 Mistral 系モデル
+  - B-25 Azure
+  - C-1 OpenAI
+  - C-2 Anthropic
+status: drafting
 ---
 
 # Mistral AI
 
 <!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
+バイブコーディング図鑑 エントリー雛形 v2（2ページ見開き想定、iter 22 準拠）
+- 左ページ：読者が初めて読む側。短い段落で物語的に書く。
+- 右ページ：辞書引き側。6視点の見どころ → つまずき／私のコメント → 開発フロー → 関連用語。
+- 「非エンジニアのつまずき」「私のコメント」は著者本人が記入する欄。AI は原則触らない。
 -->
 
 ## tagline
 
-仏発のオープンモデル企業
-
+2023 年設立のフランス発 AI スタートアップ。オープンウェイトモデルと商用モデルを両輪で展開します。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+LLM（大規模言語モデル）のオープンウェイトモデルと商用 API を提供する AI 企業です。Mistral 7B・Mixtral 8x7B などを Apache 2.0 ライセンスで公開し、ローカル環境での利用も可能にしています。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+ローカル LLM を試す場面や、Azure 経由で API を利用する場面で名前を目にします。「Mistral」はモデル名と会社名を兼ねるため、会話では文脈で使い分けが必要です。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+オープンウェイトモデルと商用モデルという 2 路線の並立構造を示し、米系 3 社との位置関係を把握してもらいます。
 
+### B. 登場シーン（figure_type: comparison）
+
+- シーン1: ローカル PC にモデルをダウンロードして動かす（Mistral 7B など）
+- シーン2: API 経由で商用利用する（Mistral Large・Codestral）
+- シーン3: Azure 上のマネージドサービスとして利用する
+- 並べる基準: 利用形態（ローカル／クラウド API／マネージド）の違い
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「Mistral の Codestral、ローカルで試しましたが思ったより速く動きますよ。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,81 +66,69 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ヨーロッパ発の独立系 LLM プロバイダとして開発・提供を担います。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+オープンウェイトモデルを無償公開するため、ローカルで自由に試せます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+「Mistral」が会社名・モデル名の両方を指すため文脈の読み取りが必要です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+コスト抑制やデータ管理の観点でオープンモデルを選ぶ場面に向きます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+会社が Mistral AI、代表モデルが Mistral 7B・Mixtral という対応を押さえます。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+D-41 Mistral 系モデル、B-25 Azure、C-1 OpenAI
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. モデル選定 — 用途に合わせてオープンウェイトか商用 API かを判断します
+2. 環境準備 — ローカル実行なら Ollama 等、API なら Mistral Console でキーを取得します
+3. 組み込み — Codestral などコード特化モデルをエディタ連携で呼び出します
+4. 運用評価 — 精度・速度・コストをほかのモデルと比べて継続か切り替えかを判断します
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- D-41 Mistral 系モデル
+- B-25 Azure
+- C-1 OpenAI
+- C-2 Anthropic
 
-- 用語A —
-- 用語B —
-- 用語C —
-
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
-
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: comparison）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左側にローカル PC を持つ人物、右側にクラウド（Azure）に接続する人物を並べる。中央に「Mistral AI」のロゴ帯を置き、上から「オープンウェイト」「商用 API」の 2 路線が下に伸びる構図
+- 登場人物: ローカル検証をする開発者（1 人）とクラウド API を使う開発者（1 人）
+- 吹き出し・心の声: 「ローカルで動く！」「API 料金が安い」
+- 中央に置くキーワード/ラベル: Mistral AI / オープンウェイト / 商用 API
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +136,25 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: 天秤（モデル選定）
+- Step 2 のアイコン/絵柄: 環境構築の歯車
+- Step 3 のアイコン/絵柄: コードエディタ画面
+- Step 4 のアイコン/絵柄: グラフ・評価表
+- 矢印で示す流れの意図: 選定 → 準備 → 組み込み → 評価のサイクル
 
 ## コミュニティ補完メモ
 
+- D-41（Mistral 系モデル）との住み分け：本エントリは会社・組織の紹介。個々のモデルアーキテクチャやパラメータ規模の詳細は D-41 を参照。
+- C-1（OpenAI）・C-2（Anthropic）との住み分け：米系 3 強に対するヨーロッパからの独立系対抗軸という位置づけ。AI ソブリンティ（主権）の観点も補足できるが、字数の都合で備考へ。
+- B-25（Azure）との住み分け：Azure はクラウドインフラ全般。本エントリは Mistral AI のモデルが Azure でも提供される事実を触れる程度にとどめる。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- <https://mistral.ai/company> — checked 2026-04-29
+- <https://azure.microsoft.com/ja-jp/blog/microsoft-and-mistral-ai> — checked 2026-04-29
 
 ## 備考
+
+- 2024 年に Microsoft との戦略的提携を発表。Azure Marketplace 経由でのモデル提供が可能になっています（時変情報）。
+- 「AI ソブリンティ（主権）」という文脈でヨーロッパ市場の代表として語られることがあります。誌面字数の都合で本文には含めませんでしたが、重要な背景です。
+- モデルのライセンスは初期の Apache 2.0 から Mistral AI 独自ライセンスに変更されたものもあります（evaluation_date 時点）。

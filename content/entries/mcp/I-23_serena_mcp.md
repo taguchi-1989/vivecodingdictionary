@@ -1,70 +1,63 @@
 ---
 id: I-23
 title: Serena MCP
+title_reading: セレーナエムシーピー
 category: mcp
 subtype: dev_automation
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: hands_on
+reader_level: 3-4
+figure_type: before_after
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - MCP
+  - MCP Server
+  - LSP
+  - Context Engineering
+  - VS Code
+status: drafting
 ---
 
 # Serena MCP
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-セマンティックなコード編集を LLM に与える MCP
-
+LSP（Language Server Protocol）でシンボル単位のコード操作を LLM に提供する MCP Server です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+Oraios AI が公開するオープンソースの MCP Server です。関数・クラス・変数といったシンボルの定義位置や参照先を LSP 経由で正確に取得し、Claude や Cursor が「ファイル全体を読まずに必要な箇所だけ参照・書き換え」できるようになります。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+大規模リポジトリでリファクタや影響範囲調査を行うときに名前を見かけます。`uvx` コマンドで起動して MCP Client の設定に登録するだけで利用でき、Python・TypeScript・Rust・Go などの言語に対応しています。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+grep による全文検索と LSP 経由のシンボル解析の違いを対比し、Serena がコンテキスト消費を抑えながら精度を上げる仕組みを伝えます。
 
+### A. Before / After（figure_type: before_after）
+
+- Before
+  - 状況: Claude が grep でリポジトリ全体を検索
+  - 視覚要素: 大量のファイルが赤くハイライトされたコンテキスト枠
+  - つまずき: 関係ないファイルまで読み込み、コンテキストが圧迫される
+- After
+  - 状況: Serena MCP 経由でシンボル参照を取得
+  - 視覚要素: 対象の関数定義と参照箇所だけが青くピックアップされた図
+  - うれしさ: 必要箇所だけ取得でき、型情報込みの精度の高い参照が得られる
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「Serena で `parseJSON` の参照を全部洗ってから修正箇所を絞り込みました。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,102 +65,99 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+LSP を介してシンボル単位のコード情報を LLM に渡す MCP Server です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+grep より正確な参照解析で、リファクタ時の影響範囲を素早く把握できます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+LSP サーバーが対応する言語でないと動作しない点に注意が必要です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+大規模リポジトリの関数改名や依存関係の調査で効果が出やすいです。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+MCP（I-1）と LSP の基本的な役割を押さえると理解が早まります。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+MCP Server、LSP、Context Engineering
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. 環境構築 — `uvx` コマンドで Serena を起動し、MCP Client の設定ファイルに登録します
+2. シンボル参照 — 調べたい関数名やクラス名を指定し、定義位置と呼び出し箇所を取得します
+3. 影響範囲の確認 — 変更対象のシンボルを参照しているすべての箇所を一覧で確認します
+4. 安全な書き換え — 影響範囲を把握した上で、関数単位で安全にコードを修正します
+5. 動作確認 — 修正後にシンボル参照を再実行し、残存する参照がないかを確認します
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
-
+- MCP
+- MCP Server
+- LSP
+- Context Engineering
+- VS Code
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
-
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: before_after）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左に「Claude が grep で大量ファイルを読む」図、右に「Serena MCP 経由でシンボルだけ取得」図を並べた Before/After
+- 登場人物: 画面の前で困り顔のエンジニア（Before）と、すっきりした表情で必要箇所だけ見ているエンジニア（After）
+- 吹き出し・心の声: Before「また関係ないファイルまで読んでる…」 After「`parseJSON` の参照だけ全部出た！」
+- 中央に置くキーワード/ラベル: Serena MCP（LSP 経由）
+- Before / After の対比ポイント: コンテキスト枠の占有量（Before=赤く満杯 / After=青く必要箇所のみ）
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: ターミナルアイコン（起動・設定）
+- Step 2 のアイコン/絵柄: 虫眼鏡アイコン（シンボル参照）
+- Step 3 のアイコン/絵柄: ネットワーク図アイコン（影響範囲）
+- Step 4 のアイコン/絵柄: 鉛筆アイコン（書き換え）
+- Step 5 のアイコン/絵柄: チェックマークアイコン（動作確認）
+- 矢印で示す流れの意図: 「設定 → 調査 → 把握 → 修正 → 確認」という安全なリファクタの順序
 
 ## コミュニティ補完メモ
 
+- I-1 MCP との住み分け：I-1 は MCP という規格・概念全体の解説。Serena MCP はその規格を使った具体的なコード解析ツールの紹介。
+- I-2 MCP Server との住み分け：I-2 は「MCP Server とは何か（構造・役割）」の総論。Serena MCP はその具体例の 1 つ。
+- G-11 Context Engineering との住み分け：G-11 はコンテキスト設計の考え方全体。Serena はコンテキスト消費の削減手段として補完的に参照される。
+- 「Claude Code が grep すれば良くない？」という読者の疑問については、LSP 経由の型情報付き参照と grep の全文検索では精度が根本的に異なることを備考に補足。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- [oraios/serena GitHub リポジトリ](https://github.com/oraios/serena) — checked 2026-04-29
 
 ## 備考
+
+- Serena MCP は Oraios AI（スイス）が公開するオープンソースプロジェクト。
+- grep との違い：grep はテキストマッチのため同名の変数や文字列リテラルも拾う。LSP 経由の参照は言語の型情報と構文木を利用するため、「本当にその関数を呼んでいる箇所」だけを正確に抽出できる。
+- 対応言語は Python / TypeScript / JavaScript / Java / Kotlin / Rust / Go / C / C++ など（2026-04-29 時点）。

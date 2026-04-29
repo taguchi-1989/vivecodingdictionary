@@ -1,69 +1,59 @@
 ---
 id: C-8
 title: Microsoft AI
+title_reading: マイクロソフトエーアイ
 category: person_org
 subtype: company
-experience_level:
-reader_level:
+experience_level: research_only
+reader_level: 2-4
 figure_type: structure
 page_layout: spread_v1
-start_date:
+start_date: 2024-03
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: freemium
+evaluation_date: 2026-04-29
+related_terms:
+  - OpenAI
+  - GitHub Copilot
+  - Azure
+  - Copilot Studio
+status: drafting
 ---
 
 # Microsoft AI
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-MS の AI 部門（Copilot 等）
-
+Microsoft 社内の AI 統括組織です。Copilot 系プロダクト群を束ねます。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+Microsoft 365 Copilot・GitHub Copilot（ギットハブコパイロット）・Copilot Studio など Copilot 系プロダクト群と、Bing・Edge の AI 機能を統括します。Azure（アジュール）上で OpenAI モデルを企業向けに提供する Azure OpenAI Service も管轄します。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+GitHub Copilot や Microsoft 365 Copilot を使う場面で、その裏側の組織として名前が出てきます。AI 業界ニュースでは OpenAI との提携動向や Phi 系（ファイ系）の独自モデル発表の文脈でよく登場します。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+Microsoft AI が Copilot 系プロダクト群と OpenAI・Azure・独自モデルをどう束ねているかを俯瞰する。
+
+### B. 登場シーン（figure_type: structure）
+
+- シーン1: GitHub Copilot でコード補完 → 裏側は Microsoft AI が管轄
+- シーン2: Microsoft 365 で Copilot が文書要約 → 同組織が統括
+- シーン3: Azure OpenAI Service を企業が利用 → Microsoft AI が窓口
+- 並べる基準: Copilot 系プロダクトを入口に、組織の役割を示す
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Suleyman 体制の Microsoft AI、Copilot 統合の動きがやっと見えてきました。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +62,43 @@ MS の AI 部門（Copilot 等）
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Copilot 系プロダクトと Azure AI 基盤を一元統括する組織です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+GitHub Copilot などの利用者は、背後の組織戦略を把握しやすくなります。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Microsoft AI は組織名で、OpenAI は別会社です。出資先と自社部門を混同しやすい点に注意が必要です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI ツール選定や業界動向の把握が必要なビジネス職に役立ちます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+OpenAI との関係と Copilot 系の管轄範囲を押さえると見通しが立ちます。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
+OpenAI、Azure OpenAI Service、Phi
 
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. ツール選定 — GitHub Copilot や Copilot Studio を候補に挙げる段階で名前が出ます
+2. 基盤選択 — Azure 上で OpenAI モデルを使う場合、Microsoft AI の管轄サービスを選びます
+3. 実装・利用 — Copilot 系ツールをエディタや Office に組み込んで使います
+4. 動向確認 — Phi 系モデルなど独自路線の発表を追うことで技術選定に活かします
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- OpenAI
+- GitHub Copilot
+- Azure
+- Copilot Studio
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,17 +106,17 @@ MS の AI 部門（Copilot 等）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,10 +125,10 @@ MS の AI 部門（Copilot 等）
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 中央に「Microsoft AI」のロゴ風ラベルを置き、GitHub Copilot・Microsoft 365 Copilot・Azure OpenAI Service・Phi モデルを周囲に配置した放射状の構造図
+- 登場人物: ビジネスパーソン（男性）が画面を見ながら「これ全部 Microsoft AI の管轄なんだ」と気づく場面
+- 吹き出し・心の声: 「OpenAI とは別の組織だったのか」
+- 中央に置くキーワード/ラベル: Microsoft AI（Satya Nadella / Mustafa Suleyman 体制）
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +136,28 @@ MS の AI 部門（Copilot 等）
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 虫眼鏡（ツール選定）
+- Step 2 のアイコン/絵柄: クラウドと矢印（基盤選択）
+- Step 3 のアイコン/絵柄: エディタ画面（実装・利用）
+- Step 4 のアイコン/絵柄: ニュース紙（動向確認）
+- 矢印で示す流れの意図: 選定 → 接続 → 活用 → 継続追跡の順
 
 
 ## コミュニティ補完メモ
 
+- C-1 OpenAI との住み分け: OpenAI は別会社（独立 AI 企業、出資先）。Microsoft AI は Microsoft 社内の AI 統括組織。Azure OpenAI Service 経由で OpenAI モデルを使う点が接点。
+- B-5 GitHub Copilot との住み分け: GitHub Copilot は具体的な製品エントリ。Microsoft AI はその供給元組織の説明。
+- B-15 Microsoft Copilot との住み分け: Microsoft Copilot は消費者向け AI アシスタント製品。Microsoft AI はその管轄組織。
+
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- Microsoft Blog「Introducing the new Microsoft AI」— checked 2026-04-29
+- Microsoft Investor Relations（Satya Nadella 発表資料）— checked 2026-04-29
 
 
 ## 備考
+
+- 2024 年 3 月に CEO Satya Nadella の指揮下で「Microsoft AI」として独立組織化。Mustafa Suleyman（DeepMind 共同創業者・元 Inflection AI CEO）が責任者に就任。
+- 独自モデル路線: Phi 系（小型効率モデル）・MAI（中型モデル）は OpenAI とは別系統の自社開発。
+- 時変情報: 組織体制・責任者・モデルラインアップは変更される可能性があります（evaluation_date: 2026-04-29）。

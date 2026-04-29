@@ -1,69 +1,62 @@
 ---
 id: I-24
 title: Context7 MCP
+title_reading: コンテキストセブン エムシーピー
 category: mcp
 subtype: dev_automation
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: hands_on
+reader_level: 2-3
+figure_type: before_after
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - MCP
+  - MCP Server
+  - Context Window
+  - Prompt Engineering
+status: drafting
 ---
 
 # Context7 MCP
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
+<!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## tagline
 
-最新のライブラリドキュメントを取ってくる MCP
-
-
-<!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
+LLM の学習データより新しいライブラリの公式 docs を、プロンプトひとつで取り込む MCP Server です。
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+Upstash が公開している MCP Server（エムシーピーサーバー）で、React や Next.js など 1,000 以上のライブラリの公式ドキュメントをプロンプトから直接取得できます。`use context7` と書くだけで Claude や Cursor が自動でドキュメントを参照し、回答に反映します。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+LLM が古い書き方を提案してきた場面で出会います。フレームワークが破壊的変更をしたのに旧 API を返してくる、`next/font` の使い方が 1 年前のまま、といったときの解毒剤として紹介されます。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+`use context7` を書く前後で回答の出どころがどう変わるかを示します。
 
+### A. Before / After（figure_type: before_after）
+
+- Before
+  - 状況: LLM の学習データのみで回答する
+  - 視覚要素（コード or 概念）: プロンプト → LLM 学習データ（カットオフ済み） → 旧 API の回答
+  - つまずき: フレームワークの破壊的変更を反映できない
+- After
+  - 状況: Context7 が公式 docs を取得して回答に注入する
+  - 視覚要素: プロンプト（`use context7`）→ Context7 MCP → 公式ドキュメント → 現在の API の回答
+  - うれしさ: 公開中のドキュメントをそのまま参照した回答が返ってくる
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「`use context7` で Next 15 の app router を聞き直したらちゃんと動く書き方が返ってきました。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +65,43 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+LLM のカットオフより後の公式 docs を取得して回答を補強します。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+`use context7` の一言で、公開中のドキュメントを参照した回答に切り替わります。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Context7 が未対応のライブラリでは通常の LLM 回答にとどまります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+破壊的変更が多いフレームワークを扱うバイブコーディングの場面。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+MCP Server の仕組みと、stdio（スタンダードIO）接続の概念を押さえると理解しやすいです。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+MCP、MCP Server、Context Window
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. 環境に追加する — `npx -y @upstash/context7-mcp` で MCP Server を起動します
+2. AI エディタに登録する — Claude Code や Cursor の MCP 設定に追記します
+3. プロンプトに書く — 質問の末尾に `use context7` と加えます
+4. 公式 docs が注入される — Context7 がドキュメントを取得し、LLM の回答に反映します
+5. 回答を受け取る — 公開中のドキュメントを根拠にした回答が返ってきます
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- MCP
+- MCP Server
+- Context Window
+- Prompt Engineering
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,50 +109,57 @@ YAML 補足（本書きで埋める／見直す欄）:
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: before_after）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左半分に「Before」としてプロンプトが LLM（脳みそアイコン、カットオフ済みの黄色テープが貼ってある）に届き、古い API コードが返ってくる構図。右半分に「After」として `use context7` のプロンプトが Context7 MCP Server を経由し、公式ドキュメントから現在の API コードが返ってくる構図
+- 登場人物: 困った顔の開発者キャラクター（Before）、安堵の顔の同一キャラクター（After）
+- 吹き出し・心の声: Before 「なぜ古い書き方が返ってくる？」／After 「`use context7` ひとつで解決した」
+- 中央に置くキーワード/ラベル: Context7 MCP
+- Before / After の対比ポイント: 回答の根拠が「LLM の記憶」か「公開中の公式 docs」か
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: ターミナルアイコン（npx 起動）
+- Step 2 のアイコン/絵柄: 設定ファイルアイコン（MCP 登録）
+- Step 3 のアイコン/絵柄: チャットバブルアイコン（`use context7` 入力）
+- Step 4 のアイコン/絵柄: ドキュメントアイコン（公式 docs 取得）
+- Step 5 のアイコン/絵柄: チェックアイコン（現在の回答）
+- 矢印で示す流れの意図: セットアップ → 登録 → 呼び出し → 取得 → 受け取り
 
 ## コミュニティ補完メモ
 
+- I-1 MCP との住み分け：MCP はプロトコルの総論、Context7 MCP は「ライブラリ docs 取得」に特化した個別 Server 事例
+- I-2 MCP Server との住み分け：MCP Server は Server の概念説明、Context7 MCP は具体的な 1 Server の紹介
+- G-5 Context Window との関係：Context7 は docs を Context Window に注入することで LLM の知識を補う。補完関係にある概念として触れるとよい
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- [https://github.com/upstash/context7](https://github.com/upstash/context7) — checked 2026-04-29
+- [https://context7.com](https://context7.com) — checked 2026-04-29
 
 ## 備考
+
+- Context7 が対応するライブラリ数（1,000 以上）は執筆時点の数字です。評価日以降に増減する可能性があります
+- Upstash は Redis 互換のサーバーレスデータサービスを提供する企業でもあります（Context7 は別サービスとして展開）
+- transport は stdio。`npx -y @upstash/context7-mcp` で追加インストール不要で起動できます

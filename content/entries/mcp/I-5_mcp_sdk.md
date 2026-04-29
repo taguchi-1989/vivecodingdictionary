@@ -1,69 +1,62 @@
 ---
 id: I-5
 title: MCP SDK
+title_reading: エムシーピーエスディーケー
 category: mcp
 subtype: protocol
-experience_level:
-reader_level:
+experience_level: hands_on
+reader_level: 3-5
 figure_type: structure
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - MCP
+  - MCP Server
+  - MCP Client
+  - 自作 MCP
+status: drafting
 ---
 
 # MCP SDK
 
 <!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
+バイブコーディング図鑑 エントリー雛形 v2（2ページ見開き想定、iter 22 準拠）
 -->
 
 ## tagline
 
-MCP 実装用の開発キット
-
+MCP サーバ・クライアントを自作するための公式開発キット。TypeScript 版と Python 版があります。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+MCP サーバ／クライアントを実装するとき、JSON-RPC 通信やライフサイクル管理（initialize / tools/list / tools/call）を SDK が肩代わりします。Tool・Resource・Prompt の 3 機能を、デコレータや register 関数で宣言するだけで動かせます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+「社内 API を Claude から呼べるようにしたい」「自作 MCP（I-80）を書きたい」場面で登場します。TypeScript は `npm i @modelcontextprotocol/sdk`、Python は `pip install mcp` で導入でき、公式サンプルが揃っています。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+SDK が担う通信レイヤと、開発者が宣言するだけでよいサーバ機能の関係を示します。
+
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: MCP SDK
+- 周辺の要素（3〜6個）: Tool 登録 / Resource 登録 / Prompt 登録 / JSON-RPC 処理 / ライフサイクル管理
+- 関係の描き方（矢印・包含）: SDK が通信を内包し、開発者の宣言を受け取る矢印で示す
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「社内 API を MCP 化したいなら、Python SDK のサンプルから始めるのが一番早いです。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,70 +65,60 @@ MCP 実装用の開発キット
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+MCP サーバ・クライアント自作の基盤ライブラリです。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+通信処理を書かずに Tool 登録だけに集中できます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+MCP 概念（I-1）を先に把握しないと初期設定で詰まりやすいです。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+組織内 API や DB を LLM に繋ぐ自作サーバを作る場面です。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+TypeScript か Python かを選び、公式サンプルの tools/list を動かします。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+MCP Server（I-2）、MCP Client（I-3）、自作 MCP（I-80）
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. 概念把握 — MCP（I-1）でサーバ・クライアントの関係を理解します
+2. SDK 導入 — `npm i @modelcontextprotocol/sdk` または `pip install mcp` を実行します
+3. Tool 宣言 — register 関数やデコレータで呼び出し可能な関数を登録します
+4. 動作確認 — tools/list を叩いて Claude が関数を認識できているか確認します
+5. 接続テスト — MCP Client（I-3）から実際に tools/call を発行して通信を検証します
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- MCP
+- MCP Server
+- MCP Client
+- 自作 MCP
 
-- 用語A —
-- 用語B —
-- 用語C —
-
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
-
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
@@ -143,10 +126,10 @@ MCP 実装用の開発キット
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 中央に「MCP SDK」のボックスを置き、上から「Tool 登録」「Resource 登録」「Prompt 登録」の 3 つが矢印で流れ込む。SDK の下からは「JSON-RPC」「ライフサイクル管理」が伸びてサーバ・クライアント間の通信を担う
+- 登場人物: 開発者（エンジニア）が SDK に向かってコードを書いている姿
+- 吹き出し・心の声: 「JSON-RPC はお任せ！あとは Tool を登録するだけです」
+- 中央に置くキーワード/ラベル: MCP SDK
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +137,28 @@ MCP 実装用の開発キット
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: 本（概念把握）
+- Step 2 のアイコン/絵柄: ターミナル（パッケージ導入）
+- Step 3 のアイコン/絵柄: コードエディタ（Tool 宣言）
+- Step 4 のアイコン/絵柄: チェックマーク（動作確認）
+- 矢印で示す流れの意図: SDK 導入からサーバ公開までの一連の手順
 
 ## コミュニティ補完メモ
 
+- MCP（I-1）との住み分け：I-1 は概念・規格の説明。I-5 は「実際に実装するとき使うライブラリ」の話
+- MCP Server（I-2）との住み分け：I-2 はサーバの役割・動き方の概念。I-5 はそのサーバを作る道具
+- 自作 MCP（I-80）との住み分け：I-80 は自作する理由・ユースケース中心。I-5 は実装手段の説明
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- [MCP Tools ドキュメント](https://modelcontextprotocol.io/docs/concepts/tools) — checked 2026-04-29
+- [Python SDK（GitHub）](https://github.com/modelcontextprotocol/python-sdk) — checked 2026-04-29
+- [TypeScript SDK（GitHub）](https://github.com/modelcontextprotocol/typescript-sdk) — checked 2026-04-29
 
 
 ## 備考
+
+- TypeScript SDK パッケージ名：`@modelcontextprotocol/sdk`（npm）
+- Python SDK パッケージ名：`mcp`（PyPI）
+- ライフサイクルの 3 フェーズ：initialize / tools/list / tools/call
+- サーバが提供できる機能種別：Tool・Resource・Prompt の 3 種類

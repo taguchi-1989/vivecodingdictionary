@@ -1,69 +1,58 @@
 ---
 id: I-22
 title: Chrome DevTools MCP
+title_reading: クロームデブツールズエムシーピー
 category: mcp
 subtype: dev_automation
-experience_level:
-reader_level:
+experience_level: hands_on
+reader_level: 3-5
 figure_type: structure
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - MCP
+  - MCP Server
+  - Playwright MCP
+  - VS Code
+status: drafting
 ---
 
 # Chrome DevTools MCP
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-Chrome 開発者ツール操作
-
+Chrome に特化した MCP Server（エムシーピーサーバー）です。コンソールログ取得やパフォーマンス計測を AI から直接操作できます。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+Google 公式の `chrome-devtools-mcp` を使い、Chrome DevTools Protocol（CDP）経由でブラウザを操作します。コンソールログの取得・ネットワーク監視・DOM スナップショット・スクリーンショット・パフォーマンストレースを AI の指示で実行できます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+フロントエンドのバグ調査や LCP（最大コンテンツ描画）などの速度計測を AI に任せたい場面で登場します。`npx chrome-devtools-mcp@latest` で起動し、実行中の Chrome に接続するか、自動で起動した Chrome を制御します。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+AI エージェントが Chrome DevTools MCP を通じて Chrome を操作し、計測結果を受け取る流れを示します。
+
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: Chrome DevTools MCP（仲介役）
+- 周辺の要素: AI エージェント / Chrome ブラウザ / DevTools Protocol（CDP）/ コンソールログ・パフォーマンストレース
+- 関係の描き方: AI → MCP → CDP → Chrome の矢印で接続
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「LCP の遅さを Chrome DevTools MCP で計測してもらえると助かります。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +61,43 @@ Chrome 開発者ツール操作
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Chrome を AI から操作し、低レベルな計測データを取得する仲介役です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+パフォーマンストレースやコンソールログを AI が自動収集できます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Chrome 専用のため、Firefox や Safari の動作確認には使えません。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+フロントエンドの速度改善やバグ調査の作業で役立ちます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Playwright MCP との違いは「クロスブラウザか Chrome 特化計測か」です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+MCP Server、Playwright MCP、Chrome DevTools Protocol
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. 環境準備 — `npx chrome-devtools-mcp@latest` でサーバーを起動します
+2. 接続確立 — 実行中の Chrome または自動起動した Chrome に CDP で接続します
+3. AI に指示 — コンソールログ取得・パフォーマンス計測などを AI エージェントへ依頼します
+4. 結果受け取り — トレースデータやスクリーンショットを確認して改善策を検討します
+5. 修正と再計測 — コード修正後に同じ手順で再計測して効果を確かめます
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- MCP
+- MCP Server
+- Playwright MCP
+- VS Code
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,17 +105,17 @@ Chrome 開発者ツール操作
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,10 +124,10 @@ Chrome 開発者ツール操作
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: AI エージェントが Chrome DevTools MCP 経由で Chrome ブラウザを操作する構造図
+- 登場人物（いれば）: フロントエンド開発者がノート PC の前に座り、AI チャット画面を見ている
+- 吹き出し・心の声: 「LCP が遅い原因を調べてください」→ MCP が Chrome に接続 → 「3.2 秒です。画像が原因です」
+- 中央に置くキーワード/ラベル: Chrome DevTools MCP
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +135,27 @@ Chrome 開発者ツール操作
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: ターミナルアイコン（npx 起動）
+- Step 2 のアイコン/絵柄: 接続プラグアイコン（CDP 接続）
+- Step 3 のアイコン/絵柄: AI チャットアイコン（指示）
+- Step 4 のアイコン/絵柄: グラフ・スクリーンショットアイコン（結果）
+- 矢印で示す流れの意図: 起動 → 接続 → 計測依頼 → 結果確認 → 改善の PDCA
 
 
 ## コミュニティ補完メモ
 
+I-20 Playwright MCP との住み分け：Playwright MCP はクロスブラウザ（Chrome・Firefox・Safari）の自動化と E2E テスト向け。Chrome DevTools MCP は Chrome に特化し、Performance タブ相当の低レベル計測（LCP・FCP・トレース取得）に強みがある。「ブラウザを動かしたいだけ」なら Playwright MCP、「Chrome の計測データを AI に分析させたい」なら Chrome DevTools MCP を選ぶ。
+
+I-1 MCP・I-2 MCP Server との関係：Chrome DevTools MCP は MCP のプロトコルに則って作られた具体的な Server 実装の 1 つ。MCP の仕組みを理解してからこのエントリを読むと理解しやすい。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- <https://github.com/ModelContextProtocol/servers> — checked 2026-04-29
+- <https://developer.chrome.com/docs/devtools/protocol> — checked 2026-04-29
 
 
 ## 備考
+
+- `chrome-devtools-mcp` は Google 公式提供の OSS（2026-04-29 時点で active）
+- 起動オプションで「実行中の Chrome に接続」か「自動で headed Chrome を起動」かを選べる（時変情報あり、evaluation_date で管理）
+- CDP は Chrome DevTools Protocol の略称

@@ -1,69 +1,58 @@
 ---
 id: C-10
 title: Moonshot AI
+title_reading: ムーンショットエーアイ
 category: person_org
 subtype: company
-experience_level:
-reader_level:
+experience_level: research_only
+reader_level: 2-4
 figure_type: structure
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2023-03
+version_status: active
+pricing_note: freemium
+evaluation_date: 2026-04-29
+related_terms:
+  - Kimi
+  - DeepSeek V3
+  - Qwen
+  - Anthropic
+status: drafting
 ---
 
 # Moonshot AI
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-中国 AI 企業、Kimi モデルを提供
-
+2023 年創業の中国 AI 企業。長文処理に強い LLM「Kimi」シリーズを開発しています。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+LLM（大規模言語モデル）の研究・開発を行う企業です。主力製品 Kimi は長文コンテキスト（文脈）処理に強みを持ち、200 万字級の入力に対応してきました。2025 年にはオープンウェイトモデル Kimi K2 を公開しています。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+中国系 AI の動向を追う記事や、オープンウェイトモデルの性能比較で名前を目にすることがあります。「六小虎」と呼ばれる中国 AI 新興企業群の一角として紹介される場合が多く、Kimi を試す文脈で社名が登場します。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+Moonshot AI（会社）と Kimi（モデル）の関係、および六小虎の中での位置づけを示します。
+
+### B. 登場シーン（figure_type: structure）
+
+- シーン1: 技術記事で中国 AI スタートアップを比較する場面
+- シーン2: Kimi K2 のオープンウェイトモデルを評価・選定する場面
+- シーン3: 長文コンテキスト処理が必要な用途でモデルを探す場面
+- 並べる基準: 読者が Moonshot AI という社名に遭遇する入口の多様性
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Moonshot の Kimi K2、オープンウェイトで DeepSeek 系と並ぶ評価らしいですよね。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +61,43 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+長文処理に強い LLM を開発する中国 AI スタートアップです。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+オープンウェイトの Kimi K2 は無償で試せるモデルの選択肢になります。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Moonshot AI（会社）と Kimi（モデル名）は別物なので区別が必要です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+モデル選定や中国系 AI 動向のリサーチ場面で参照することがあります。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+会社名 Moonshot AI と製品名 Kimi の対応関係を押さえれば充分です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
+Kimi（D-44）、DeepSeek V3（D-46）、Qwen（D-43）
 
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. モデル選定 — 長文処理やエージェンティック用途に適したモデルを探す段階で Kimi K2 が候補になります
+2. 評価・比較 — DeepSeek 系などと並べてベンチマーク結果を確認します
+3. API 利用 — Kimi の API または公開ウェイトを自前環境に組み込みます
+4. 継続モニタリング — 企業としての動向（資金調達・新モデル）を定期的に確認します
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- Kimi
+- DeepSeek V3
+- Qwen
+- Anthropic
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,17 +105,17 @@ YAML 補足（本書きで埋める／見直す欄）:
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,31 +124,39 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 中央に「Moonshot AI」のロゴ風ラベル、下に「Kimi」モデルシリーズへの矢印。右側に六小虎の他社名を薄く並べて Moonshot AI の位置を示す
+- 登場人物: 技術者風の人物が Kimi K2 のスコアシートを手にしている
+- 吹き出し・心の声: 「会社と製品、名前が違うんですよね」
+- 中央に置くキーワード/ラベル: Moonshot AI → Kimi
 
 ### 6 視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 虫眼鏡（モデル選定）
+- Step 2 のアイコン/絵柄: 棒グラフ（評価・比較）
+- Step 3 のアイコン/絵柄: プラグ（API 利用）
+- Step 4 のアイコン/絵柄: カレンダー（継続モニタリング）
+- 矢印で示す流れの意図: 選定 → 評価 → 採用 → 継続観察の順
 
 
 ## コミュニティ補完メモ
 
+- D-44 Kimi との住み分け: 本エントリは企業としての Moonshot AI を扱います。モデルの仕様・使い方は D-44 Kimi へ誘導します
+- C-2 Anthropic との住み分け: どちらも AI 企業エントリですが、Anthropic は Claude（B-2）の開発元として別エントリで扱います
+- D-46 DeepSeek V3 との住み分け: Kimi K2 と DeepSeek 系の性能比較は D-46 側で触れるのが自然です。本エントリは企業紹介にとどめます
+
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- Moonshot AI 公式サイト <https://www.moonshot.cn> — checked 2026-04-29
+- Kimi K2 発表ブログ（Moonshot AI）— checked 2026-04-29
 
 
 ## 備考
+
+- 「六小虎」の構成: Zhipu AI / MiniMax / Baichuan Intelligence / 01.AI / Moonshot AI / StepFun の 6 社。記事によって表記ゆれがあります
+- Kimi K2 は 2025 年公開のオープンウェイトモデル。コーディング・エージェンティック性能で注目されました（evaluation_date 以降の動向は再確認が必要）
+- 共同創業者: Yang Zhilin（楊植麟、CEO）/ Zhou Xinyu / Wu Yuxin。Alibaba・Tencent などが出資しています

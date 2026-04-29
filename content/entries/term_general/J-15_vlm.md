@@ -1,69 +1,58 @@
 ---
 id: J-15
 title: VLM
+title_reading: ビジョン ランゲージ モデル
 category: term_general
 subtype: ml_basic
-experience_level:
-reader_level:
+experience_level: partial
+reader_level: 3-4
 figure_type: structure
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - LLM
+  - Attention
+  - DALL-E
+  - Playwright MCP
+status: drafting
 ---
 
 # VLM
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-Vision Language Model。画像も理解できる言語モデル
-
+Vision Language Model の略。画像とテキストを同時に理解できる言語モデルです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+画像をトークン列に変換して LLM（大規模言語モデル）に流し込み、「この図は何を示すか」「スクリーンショットのどこがおかしいか」をテキストで答えます。OCR 的なドキュメント解析やグラフの数値読み取りも得意です。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+ChatGPT や Claude に画像を貼り付けたとき、その背後で動いています。バイブコーディングでは UI のスクリーンショットを渡してレイアウト崩れを指摘させたり、Playwright MCP と組み合わせてブラウザ操作のデバッグに使う場面で登場します。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+画像が VLM に入力されてテキストで答えが返るまでの流れを一目で示します。
+
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: VLM（Vision Language Model）
+- 周辺の要素: 画像入力 / 画像エンコーダ（ViT）/ テキストトークン / LLM / テキスト出力
+- 関係の描き方: 矢印（画像→エンコーダ→埋め込み→LLM→出力）
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Claude に UI のスクショを渡して、VLM 機能でレイアウト崩れを指摘してもらいました。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,69 +61,60 @@ Vision Language Model。画像も理解できる言語モデル
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+画像とテキストを統合して理解する言語モデルです。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+「見せて説明させる」操作でデバッグや解析を自動化できます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+VLM / LMM / LVM は別概念で、業界で混在しています。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+UI 確認・グラフ読み取り・OCR 代替など視覚処理全般で活躍します。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+「画像も読める LLM」と認識しておけば入門として十分です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+LLM、ViT（Vision Transformer）、マルチモーダル
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. 入力準備 — スクリーンショットや画像ファイルを用意する
+2. 画像エンコード — ViT（Vision Transformer）で画像を埋め込みベクトルに変換する
+3. LLM 統合 — 埋め込みをテキストトークンと結合して LLM に渡す
+4. テキスト出力 — 「バグの箇所」「グラフの数値」など言語で結果を返す
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- LLM
+- Attention
+- DALL-E
+- Playwright MCP
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,10 +123,11 @@ Vision Language Model。画像も理解できる言語モデル
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 画像がカメラアイコンから入り、エンコーダを経て LLM ブロックに流れ込み、テキストが出てくる流れ
+- 登場人物: 画面を見つめるエンジニア（女性）が「このスクショ、どこが崩れてる？」と聞いている
+- 吹き出し・心の声: VLM（ロボット）「左カラムの幅が 320px を超えています。」
+- 中央に置くキーワード/ラベル: VLM
+- Before / After の場合の対比ポイント: なし（構造図）
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +135,29 @@ Vision Language Model。画像も理解できる言語モデル
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: カメラ・画像ファイルアイコン
+- Step 2 のアイコン/絵柄: メッシュ格子（ViT パッチ分割）
+- Step 3 のアイコン/絵柄: LLM ブロック（テキストと画像が合流する矢印）
+- Step 4 のアイコン/絵柄: テキストバルーン（出力）
+- 矢印で示す流れの意図: 画像が言語として処理される変換ステップを示す
 
 
 ## コミュニティ補完メモ
 
+- J-14 LLM との住み分け：LLM はテキストのみのモデル全般。VLM は画像入力を加えた拡張版で、上位互換関係。
+- D-50 DALL-E との住み分け：DALL-E は「テキスト → 画像生成」。VLM は逆方向の「画像 → テキスト理解」が主軸。混同しやすいが方向が逆。
+- LMM（Large Multimodal Model）は VLM より広い概念（音声・動画なども含む）。LVM（Large Vision Model）は画像のみで言語を扱わないモデル。この整理はコミュニティ内でも混乱があるため、備考にも記載。
+- I-20 Playwright MCP との住み分け：Playwright MCP はブラウザ自動操作ツール。VLM はその「目」として組み合わせて使う関係。
+
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- OpenAI GPT-4V 発表ブログ — checked 2026-04-29
+- Anthropic Claude 3 Vision 発表ブログ — checked 2026-04-29
+- "LLaVA: Visual Instruction Tuning" (NeurIPS 2023) — checked 2026-04-29
 
 
 ## 備考
+
+- VLM / LMM / LVM の用語並立：業界標準は固まっておらず、論文によって呼び方が異なります。本エントリでは「画像 + 言語」を扱うモデルを VLM と表記し、音声等を含む広義は LMM、画像のみの大規模モデルは LVM と整理しています（2026-04-29 時点）。
+- 動画対応の VLM（Video-Language Model）も同じ略称を使うことがありますが、本エントリは静止画像 + 言語を中心に扱います。
