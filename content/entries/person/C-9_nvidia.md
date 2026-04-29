@@ -1,69 +1,58 @@
 ---
 id: C-9
 title: NVIDIA
+title_reading: エヌビディア
 category: person_org
 subtype: company
-experience_level:
-reader_level:
+experience_level: research_only
+reader_level: "2-3"
 figure_type: structure
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
+start_date: 1993
+version_status: active
 pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+evaluation_date: 2026-04-29
+related_terms:
+  - GPU
+  - CUDA
+  - H100
+  - Hopper
+  - LLM
+status: needs_review
 ---
 
 # NVIDIA
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-GPU 供給で AI の物理層を握る
-
+AI 学習・推論を支える GPU（グラフィックス処理ユニット）を作る半導体メーカーです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+1993 年設立の半導体企業で、AI 学習・推論に欠かせない GPU と、その上で動く統合プラットフォーム CUDA（クーダ）を提供しています。H100 や B200 といった AI 専用 GPU がクラウド各社に供給されています。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+ChatGPT・Claude・Gemini などのサービスを支える計算インフラとして、ニュースや業界記事で名前が出ます。AI 関連の株価・調達報道・GPU 不足の話題でも必ず登場し、AI の「物理層」を担う企業です。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+NVIDIA という会社が「GPU → CUDA → AI クラウド」という順で AI 基盤を支えている構造を 1 枚で示します。
+
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: NVIDIA（GPU メーカー）
+- 周辺の要素（4 個）: GPU ハードウェア（H100 / B200）／CUDA プラットフォーム／DGX サーバー（AI 専用機）／クラウド AI 基盤（AWS / Azure / Google Cloud 等に供給）
+- 関係の描き方: 中央に NVIDIA ロゴ、下段に GPU ハードを置き、CUDA が橋渡しし、上段にクラウド AI 各社が並ぶ積み上げ図。矢印は「NVIDIA → CUDA → AI サービス」の方向で
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「結局どの LLM も裏では H100 が動いてるから、GPU 不足は他人事じゃないですね。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,54 +61,45 @@ GPU 供給で AI の物理層を握る
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI 学習・推論を動かす GPU と CUDA を供給するインフラ企業です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+主要 AI サービスの裏側を GPU が支え、AI の実力と直結します。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+GPU 需給の逼迫でクラウドの AI コストに影響することがあります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI のコスト・制限構造を理解したいビジネス担当者に役立ちます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+「GPU を作る会社」「AI の計算を担う物理層」の 2 点で十分です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+GPU（J-77）、CUDA、H100、クラウド AI 基盤。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. AI ニュースで名前を見る — 「NVIDIA 株高騰」「GPU 不足」の記事で最初に出会う
+2. GPU が AI 学習に必要と知る — LLM の大規模学習に GPU が不可欠と理解する
+3. CUDA や H100 の単語に遭遇 — クラウド料金や API 仕様の文脈で具体名が出てくる
+4. クラウド料金と GPU 需要を読む — AI サービスのコスト構造を把握し調達判断に使う
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- GPU
+- CUDA
+- H100
+- Hopper
+- LLM
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
@@ -143,31 +123,33 @@ GPU 供給で AI の物理層を握る
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 中央に「NVIDIA」の会社ブロック、下段に GPU ハードウェア（H100 のサーバーラック簡略図）、中段に CUDA のプラットフォーム帯、上段に AWS / Azure / Google Cloud の 3 クラウドロゴが並ぶ積み上げ構造。NVIDIA から CUDA を通じてクラウドへ矢印
+- 登場人物: 若手ビジネスパーソン（20 代）が AI サービスの画面を見て「なんで重いんだろう…」と思っている横で、ラックに「H100」のラベルが貼られているイメージ
+- 吹き出し・心の声: 「全部 NVIDIA の GPU が動かしてるんだ」
+- 中央に置くキーワード/ラベル: NVIDIA = AI の物理インフラ
+- Before / After の場合の対比ポイント: （構造図のため不要）
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 新聞・ニュースアイコン（AI ニュースで名前を見る）
+- Step 2 のアイコン/絵柄: CPU/GPU チップアイコン（GPU が学習に必要と知る）
+- Step 3 のアイコン/絵柄: タグ・仕様書アイコン（CUDA や H100 の単語に遭遇）
+- Step 4 のアイコン/絵柄: 天秤・コストアイコン（クラウド料金と GPU 需要を読む）
+- 矢印で示す流れの意図: ニュース → 仕組み理解 → 具体名把握 → コスト判断 の読者旅程
 
 
 ## コミュニティ補完メモ
 
+GPU の概念と詳細は J-77 GPU エントリで扱います。CUDA の詳細解説は別エントリ候補（未採番）。本エントリは「会社としての NVIDIA」と「AI インフラにおける立ち位置」に集中し、個々の GPU アーキテクチャや CUDA のプログラミング詳細には踏み込みません。H100・B200 などのモデル名は「世代名」として触れる程度に留めます。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- https://www.nvidia.com — checked 2026-04-29
 
 ## 備考
+
+GPU 世代名（H100 / A100 / B200 等）は時変情報で、新アーキテクチャが頻繁に発表されます。evaluation_date を参照してください。NVIDIA の市場シェアや業績数値は本文で断定せず「独占に近い形で握っている」等の表現に留めます。
