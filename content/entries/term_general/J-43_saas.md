@@ -1,70 +1,63 @@
 ---
 id: J-43
 title: SaaS
+title_reading: サース
 category: term_general
 subtype: buzzword
-experience_level:
-reader_level:
+experience_level: partial
+reader_level: 1-2
 figure_type: structure
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: freemium
+evaluation_date: 2026-04-30
+related_terms:
+  - PaaS
+  - IaaS
+  - フリーミアム
+  - サブスクリプション
+  - クラウド
+status: drafting
 ---
 
 # SaaS
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-クラウド上のソフトウェア提供形式
-
+Software as a Service の略。ソフトウェアをインストールせず、Web ブラウザ経由でサブスクリプション利用する形態です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+購入・インストール不要で、ブラウザから即座にソフトウェアを使える仕組みを指します。提供者側がサーバー管理・更新・セキュリティを担うため、利用者は「使うだけ」に集中できます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+Notion・Figma・Slack・ChatGPT・Claude など、業務で日常的に使うツールの多くが SaaS です。バイブコーディングで使う Cursor・Windsurf・Claude Code もすべて SaaS の形をとっています。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+「インストール型」と「SaaS（ブラウザ型）」の対比で、SaaS が何を変えたかを示す。
 
+### A. Before / After（figure_type: before_after）
+
+- Before
+  - 状況: パッケージソフトを購入・インストール
+  - 視覚要素（コード or 概念）: CD-ROM → PC にインストール → 手動バージョンアップ
+  - つまずき: 更新のたびに費用と手間がかかる
+- After
+  - 状況: ブラウザで URL を開くだけ
+  - 視覚要素: ブラウザ → クラウドサーバー → 常に最新版
+  - うれしさ: どのデバイスでも同じ環境、更新は自動
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「うちはほぼ SaaS で構成していて、AI 系もサブスクで揃えています。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,70 +65,59 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ソフトウェアをクラウド経由でサービスとして届ける提供形態です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+インストール不要・自動更新で、すぐ使い始められます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+月額費用が積み重なるため、複数契約時の総コストに注意が必要です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+チームで同一ツールを共有する場面や、AI サービスの導入判断で役立ちます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+「完成品をブラウザで使う」が SaaS、と覚えると PaaS・IaaS との区別がつきます。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+PaaS、IaaS、フリーミアム
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. 要件整理 — 必要な機能を SaaS で賄えるか確認する
+2. 契約・導入 — フリーミアムや無料トライアルで試してから契約する
+3. 日常利用 — ブラウザやアプリから更新不要で使い続ける
+4. コスト見直し — シート数・利用量に応じてプランを定期的に評価する
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
-
+- PaaS
+- IaaS
+- フリーミアム
+- サブスクリプション
+- クラウド
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
-
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
@@ -143,10 +125,11 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左側に「CD-ROM＋PC」のインストール型、右側に「ブラウザ＋クラウド」の SaaS 型を並置する比較図
+- 登場人物（いれば）: 画面の前で操作するビジネスパーソン（男女各 1 名）
+- 吹き出し・心の声: 左「また更新ファイルのダウンロードが…」、右「ブラウザを開けばいつでも最新版です。」
+- 中央に置くキーワード/ラベル: SaaS
+- Before / After の場合の対比ポイント: インストール型 vs ブラウザ型の手間の差
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +137,25 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: チェックリスト（要件整理）
+- Step 2 のアイコン/絵柄: 契約書・クレジットカード（導入）
+- Step 3 のアイコン/絵柄: ブラウザウィンドウ（日常利用）
+- Step 4 のアイコン/絵柄: グラフ・計算機（コスト見直し）
+- 矢印で示す流れの意図: 導入から継続利用・見直しの循環
 
 ## コミュニティ補完メモ
 
+- PaaS（Platform as a Service）との住み分け：SaaS は「完成品ソフトをそのまま使う」形。PaaS は「アプリを動かす土台を借りる」形で、開発者が主な対象。本エントリは非エンジニア読者向けに SaaS の使う側の視点に絞る
+- IaaS（Infrastructure as a Service）：OS やサーバー構成から自分で組む形態。エンジニア向けの説明は別エントリに委ねる
+- Figma（B-32）・Canva（B-33）・ChatGPT（B-3）・Claude（B-2）は SaaS の代表例。各エントリとの重複を避け、本エントリでは「SaaS という枠組み」の説明に集中する
+- J-40 IoT・J-41 DX・J-42 Web3 と同じ J 章（一般用語）の隣接エントリ。DX（J-41）との関係では「DX を実現する道具の 1 つが SaaS」という文脈整理を補完メモに留める
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- Salesforce 公式サイト「What is SaaS?」— checked 2026-04-30
+- Wikipedia「Software as a service」— checked 2026-04-30
 
 ## 備考
+
+- 価格モデルは per seat（ユーザー単価×月）、usage-based（利用量×単価）、フリーミアムの 3 種が主流。evaluation_date 時点での主要 AI サービスはフリーミアムが多い
+- MaaS（Model as a Service）は SaaS の派生概念。AI モデルを API 経由で使う形態を指す場合があり、別エントリで扱う候補

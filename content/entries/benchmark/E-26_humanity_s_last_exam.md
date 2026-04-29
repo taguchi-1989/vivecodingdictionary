@@ -1,69 +1,57 @@
 ---
 id: E-26
 title: Humanity's Last Exam
+title_reading: ヒューマニティーズ ラスト エグザム
 category: benchmark
 subtype: reasoning
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: research_only
+reader_level: 2-3
+figure_type: comparison
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2025-01
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-30
+related_terms:
+  - GPQA
+  - SWE-Bench Verified
+  - AGI
+  - Thinking モデル
+status: drafting
 ---
 
 # Humanity's Last Exam
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-現時点で最難関とされる総合ベンチ
-
+略称 HLE。専門家が「これ以上難しい問題は作れない」と判断したレベルを集めた、学術総合ベンチマークです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+Center for AI Safety と Scale AI が 2025 年 1 月に公開した 3,000 問のテスト群です。数学・物理・化学・生物・人文・コンピュータ科学など 100 以上の分野を横断し、AI の総合的な学力を測ります。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+AI モデルの発表記事や比較記事でスコアが引用されます。公開当初は大半のモデルが正答率 10% 未満でした。その後 o3 や Gemini 2.5 Pro などが 20〜30% 台に達し、進歩の速さを示す指標として注目されています。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+「正答率 3〜9%（2025 年初）から 20〜30% 台（2026 年初）」という急速な上昇を時系列で示し、AI の進歩が実感できる図にします。
 
+### B. 登場シーン（figure_type: comparison）
+
+- シーン1: 研究者が発表資料でモデル別 HLE スコアを比較表で示す
+- シーン2: 業界ニュースで「o3 が HLE で 30% 超え」と見出しが立つ
+- シーン3: AGI 議論の場で「まだ 30% なら距離がある」と判断材料に使われる
+- 並べる基準: 発表時期と正答率の変化（時系列）
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Claude 4.5 が HLE で 30% 超え、Thinking モデルの進化が見えてきましたね。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,102 +60,100 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+100 以上の学術分野を横断して AI の総合学力を測る指標です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+「満点が遠い」設計なので、しばらくモデル進化の物差しとして機能します。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+コーディング実務への直結度は低く、GPQA や SWE-Bench と用途が異なります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AGI の到達距離を推し量る議論や、モデル選定の参考情報として。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+公開時スコア（GPT-4o ≈ 3%）と現状の変化幅を押さえると文脈が見えます。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+GPQA、SWE-Bench Verified、AGI
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. モデル選定の情報収集 — 発表資料や比較記事で HLE スコアを確認する
+2. ベンチマーク読み解き — 正答率と他ベンチ（GPQA 等）との違いを把握する
+3. 業界動向のウォッチ — スコア改善ニュースを AGI 進捗の目安として追う
+4. モデル更新の判断材料 — 新モデルの HLE スコアを既存モデルと比較して採用を検討する
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- GPQA
+- SWE-Bench Verified
+- AGI
+- Thinking モデル
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: comparison）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 横軸を時期（2025 年 1 月 / 2025 年末 / 2026 年初）、縦軸を正答率（%）にした折れ線比較グラフ。各モデル（GPT-4o・o1・o3・Claude 4.5・Gemini 2.5 Pro）のラインを並べる
+- 登場人物: 研究者風の人物が折れ線グラフを指差しながら「まだ 30% か」と観察している
+- 吹き出し・心の声: 「GPT-4o は 3%、o3 は 30% 台… 急ピッチですね」
+- 中央に置くキーワード/ラベル: Humanity's Last Exam スコア推移
+- Before / After の場合の対比ポイント: 2025 年 1 月（10% 未満）→ 2026 年初（20〜30% 台）
 
 ### 6 視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 虫眼鏡（情報収集）
+- Step 2 のアイコン/絵柄: グラフ棒（スコア読み解き）
+- Step 3 のアイコン/絵柄: 時計・カレンダー（継続ウォッチ）
+- Step 4 のアイコン/絵柄: チェックリスト（採用判断）
+- 矢印で示す流れの意図: 情報収集 → 解釈 → 継続観察 → 意思決定
 
 
 ## コミュニティ補完メモ
 
+- GPQA（E-22）との住み分け：GPQA は生物・物理・化学の専門推論に特化した 448 問。HLE は 100 以上の分野を横断する 3,000 問で、より広い総合学力を対象とする。両者は補完関係で、ベンチマーク比較記事では並記されることが多い
+- SWE-Bench Verified（E-2）との住み分け：SWE-Bench はコーディング実務能力の指標。HLE は学術推論力の指標。実務採用では SWE-Bench、AGI 議論では HLE が主に引用される
+- AGI（J-1）との関係：HLE のスコアは AGI までの距離感を語る際の代表的な数値として引用される
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- <https://agi.safe.ai/> — Center for AI Safety の HLE 公式ページ — checked 2026-04-30
+- <https://scale.com/blog/humanitys-last-exam> — Scale AI ブログ — checked 2026-04-30
 
 
 ## 備考
+
+- スコアは時変情報。公開時（2025-01）は大半のモデルが 10% 未満だったが、2026-04 時点では o3 / Claude 4.5 / Gemini 2.5 Pro 等が 20〜30% 台に達している。出版前に要再確認
+- HLE と略称が使われることが多いが、本書では正式名称を採用し tagline で HLE を補う

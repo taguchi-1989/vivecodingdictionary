@@ -1,69 +1,57 @@
 ---
 id: E-33
 title: AgentBench
+title_reading: エージェントベンチ
 category: benchmark
-subtype: agent
-experience_level:
-reader_level:
-figure_type: structure
+subtype: agent_benchmark
+experience_level: research_only
+reader_level: 4-5
+figure_type: comparison
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2023-08-07
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-30
+related_terms:
+  - WebArena
+  - GAIA
+  - OSWorld
+  - Z.ai
+status: drafting
 ---
 
 # AgentBench
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-エージェント総合評価
-
+LLM がエージェントとして複数環境で行動できるかを多面的に測るベンチマークです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+OS 操作・データベース・Web ショッピングなど 8 種の環境でマルチターンのタスクを LLM に解かせ、チャット応答ではなくエージェントとしての実行力を数値化します。清華大学・Z.ai（旧 Zhipu AI）が 2023 年に公開しました。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+「GPT-4 や Claude の新バージョンがエージェント性能でどこまで伸びたか」を報じる論文や業界記事でよく引用されます。WebArena（E-31）・GAIA（E-32）・OSWorld（E-34）と並ぶエージェント能力ベンチの主要 4 本のひとつです。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+8 種の評価環境とそのスコアを横並びにして「どの能力を測っているか」を一覧できるようにします。
 
+### B. 登場シーン（figure_type: comparison）
+
+- シーン1: 研究者が論文で複数モデルの AgentBench スコアを表として比較する
+- シーン2: エンジニアがモデル選定の根拠に OS 環境の平均スコアを引用する
+- シーン3: 業界観察者がブログで「GLM-4 が OS 環境で伸びた」と解説する
+- 並べる基準: 評価環境 8 種を横軸、モデル名を縦軸にした比較表
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「AgentBench の OS 環境で GLM-4.6 が伸びていました。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +60,41 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+LLM のエージェント実行力を 8 環境で多面的に評価します。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+単一タスクでなく多環境の平均で比べるため偏りが出にくいです。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+比較は同じ環境同士が正確で、全体平均のみでの判断は誤解を招きます。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+モデル採用の検討や論文の性能比較を読み解く場面で活用できます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+8 環境の構成と「Avg. は参考値」という読み方を押さえると十分です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+WebArena、OSWorld、GAIA
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. モデル候補の選定 — エージェント性能の客観指標として AgentBench スコアを参照します
+2. 環境別スコアの確認 — OS / DB / Web などタスクに近い環境のスコアを選んで比較します
+3. 他ベンチとの照合 — WebArena や GAIA と併読し、苦手領域がないか確認します
+4. 採用可否の判断 — 複数ベンチの結果を総合してモデルを絞り込みます
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- WebArena
+- GAIA
+- OSWorld
+- Z.ai
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,29 +102,29 @@ YAML 補足（本書きで埋める／見直す欄）:
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: comparison）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 8 種の評価環境アイコンを横に並べ、それぞれにスコアバーを添えた比較表
+- 登場人物（いれば）: 研究者風の人物がスコア表を眺めている
+- 吹き出し・心の声: 「OS 環境だけで判断しても意味ないか…全部見ないと」
+- 中央に置くキーワード/ラベル: 8 Environments
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +132,28 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 虫眼鏡でモデル一覧を見るアイコン
+- Step 2 のアイコン/絵柄: バーグラフ（環境別スコア）
+- Step 3 のアイコン/絵柄: 複数のグラフを並べる比較アイコン
+- Step 4 のアイコン/絵柄: チェックマーク（採用決定）
+- 矢印で示す流れの意図: 「選定 → 絞り込み → 検証 → 決定」の直線フロー
 
 
 ## コミュニティ補完メモ
 
+- WebArena（E-31）との住み分け：WebArena は Web ブラウザ操作に特化。AgentBench は 8 環境を横断する多面評価で、より広い能力比較に使います
+- GAIA（E-32）との住み分け：GAIA は汎用アシスタント能力を問う。AgentBench はツール実行・環境操作に重点を置きます
+- OSWorld（E-34）との住み分け：OSWorld は OS デスクトップ操作の専門特化。AgentBench の OS 環境とは重なりがありますが、OSWorld のほうが操作の粒度が細かいです
+- 中国研究機関発のベンチとして GLM（Z.ai）や Qwen の改善報告とセットで引用されることが多いです
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- AgentBench: Evaluating LLMs as Agents (arXiv:2308.03688) — checked 2026-04-30
+- GitHub THUDM/AgentBench — checked 2026-04-30
 
 ## 備考
+
+- 2023-08 に清華大学・Zhipu AI（現 Z.ai）が公開。論文は arXiv:2308.03688
+- 8 環境の内訳：OS、Database、Knowledge Graph、Card Game、Lateral Thinking Puzzles、House Holding、Web Shopping、Web Browsing
+- スコア比較時は「Avg.（全環境平均）」と「環境別スコア」を区別して引用するのが正確。同じ環境同士の比較が前提
+- GPT-4 が初期に高成績を記録し、その後 Claude・Gemini・GLM・Qwen 系が追随する形で更新が続いています

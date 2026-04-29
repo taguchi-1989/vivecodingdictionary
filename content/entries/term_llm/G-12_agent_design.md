@@ -1,69 +1,58 @@
 ---
 id: G-12
 title: Agent Design
+title_reading: エージェント デザイン
 category: term_llm
 subtype: technique
-experience_level:
-reader_level:
+experience_level: research_only
+reader_level: 3-5
 figure_type: structure
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-30
+related_terms:
+  - Tool Use
+  - マルチエージェント協調
+  - Subagent
+  - オーケストレーション
+status: drafting
 ---
 
 # Agent Design
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-AI エージェントの振る舞い設計
-
+LLM が自律的に判断・行動するエージェントを組み立てる設計指針の総称です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+System Prompt（指示書）・Tool Use（外部操作）・メモリ・プランニングを組み合わせ、LLM（大規模言語モデル）が複数ステップを自律実行できる AI システムの構造を定義します。代表パターンに ReAct や Plan-and-Execute があります。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+Claude Code・Cursor・Devin などのコーディングエージェントの裏側で使われている設計思想です。「なぜ AI が自分でコマンドを打てるのか」を理解したいときに、この言葉に行き着くことがあります。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+「単発の質問応答」と「複数ステップの自律実行」の違いを、処理の流れで示す。
+
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: Agent（エージェント）ループ
+- 周辺の要素: System Prompt / Tool Use / メモリ / プランニング / 自己評価（Reflexion）
+- 関係の描き方: 中央ループから各要素への矢印（入力・出力・フィードバック）
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Agent Design の ReAct パターンで Claude にツール選択を任せています。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,70 +61,62 @@ AI エージェントの振る舞い設計
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+LLM を単発応答から自律実行システムへ変える設計指針です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+設計パターンを再利用でき、試行錯誤のコストが下がります。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+「Agent」の定義は業界により異なり、強化学習文脈とは別物です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+コーディングエージェントや業務自動化ツールの構築時に役立ちます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ReAct パターンとツール呼び出しの流れを掴むのが出発点です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
+Tool Use、オーケストレーション、マルチエージェント協調
 
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. 目的定義 — 解かせるタスクのスコープと自律度を決めます
+2. 設計パターン選択 — ReAct / Plan-and-Execute など用途に合わせて選びます
+3. ツール・メモリ設計 — Tool Use と短期・長期メモリの接続を組みます
+4. ループ実装 — フレームワーク（LangChain / AutoGen 等）でエージェントループを構築します
+5. 評価・改善 — Reflexion 的な自己評価ステップで品質を上げます
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- Tool Use
+- マルチエージェント協調
+- Subagent
+- オーケストレーション
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
-
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
@@ -143,10 +124,10 @@ AI エージェントの振る舞い設計
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 中央に「エージェントループ」の円形フロー。外側に System Prompt・Tool Use・メモリ・プランニングの 4 要素を配置し、矢印で入力・出力・フィードバックを示す
+- 登場人物: 開発者らしい人物が右端でループを眺めている姿
+- 吹き出し・心の声: 「自分で判断して動いてる…」「何回もループしてタスクを終わらせてくれる」
+- 中央に置くキーワード/ラベル: Agent Loop
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +135,29 @@ AI エージェントの振る舞い設計
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: ターゲット・スコープ定義
+- Step 2 のアイコン/絵柄: パターン選択（分岐アイコン）
+- Step 3 のアイコン/絵柄: ツール接続（プラグ）
+- Step 4 のアイコン/絵柄: ループ実装（歯車）
+- Step 5 のアイコン/絵柄: 評価・フィードバック（矢印サイクル）
+- 矢印で示す流れの意図: 設計から実装・改善へと繰り返すサイクルを表す
 
 
 ## コミュニティ補完メモ
 
+- G-30 Tool Use との住み分け：Tool Use は「LLM がツールを呼ぶ仕組み」の 1 要素。Agent Design はその Tool Use を含む設計全体の話。
+- G-41 Subagent との住み分け：Subagent はマルチエージェント構成での下位エージェントの呼称。Agent Design はシングル・マルチ両方の設計を含む上位概念。
+- G-44 マルチエージェント協調との住み分け：協調パターン（Multi-Agent Debate 等）は Agent Design の 1 サブカテゴリとして位置づける。
+- 強化学習エージェントとの混同注意：本書では「LLM ベースで自律実行する AI システム」に限定して使用する。
+
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- Anthropic: Building effective agents — <https://www.anthropic.com/engineering/building-effective-agents> — checked 2026-04-30
+- ReAct: Synergizing Reasoning and Acting in Language Models (Yao et al., 2022) — <https://arxiv.org/abs/2210.03629> — checked 2026-04-30
+- Reflexion (Shinn et al., 2023) — <https://arxiv.org/abs/2303.11366> — checked 2026-04-30
 
 ## 備考
+
+- 本エントリは「Agent Design」という設計指針の総称を扱う。特定フレームワーク（LangChain 等）の詳細は別エントリへ逃がす。
+- evaluation_date は 2026-04-30 時点。フレームワーク名やパターン名は今後追加されることがあります。

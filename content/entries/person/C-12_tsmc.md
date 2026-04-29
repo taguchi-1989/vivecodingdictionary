@@ -1,69 +1,58 @@
 ---
 id: C-12
 title: TSMC
+title_reading: ティーエスエムシー
 category: person_org
 subtype: company
-experience_level:
-reader_level:
+experience_level: research_only
+reader_level: 2-4
 figure_type: structure
 page_layout: spread_v1
-start_date:
+start_date: 1987-01-01
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-30
+related_terms:
+  - NVIDIA
+  - AMD
+  - H100
+  - GPU
+status: drafting
 ---
 
 # TSMC
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-台湾の半導体ファウンドリ世界首位。AI チップの実製造を担う
-
+Taiwan Semiconductor Manufacturing Company の略。他社の設計をもとに半導体を製造するファウンドリ専業の代表企業です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+自社で半導体を設計せず、NVIDIA・Apple・AMD 等の設計データを受け取り、製造だけを請け負います。世界の高性能半導体の大半を製造しており、AI チップの供給量を左右します。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+AI 関連ニュースで「H100（J-72）の供給不足」や「次世代チップの歩留まり」が話題になるとき、必ずその製造元として登場します。地政学的リスクの議論でも台湾有事の文脈で頻繁に名前が出ます。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+「設計と製造が分離している」という半導体産業の構造を、人物と矢印で示す。
 
+### B. 登場シーン（figure_type: structure）
+
+- シーン1: NVIDIA が GPU を設計し、製造を TSMC に発注する
+- シーン2: Apple が Apple Silicon を設計し、TSMC の N3 プロセスで製造する
+- シーン3: AMD が CPU/GPU を設計し、TSMC に製造委託する
+- 並べる基準: 「設計会社 → TSMC → 完成チップ」の流れを横置きで示す
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「H100 の供給がボトルネックで、結局 TSMC の製造能力次第ですね。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +61,42 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+半導体の製造専業（ファウンドリ）として他社設計を生産します。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+製造に特化することで、設計会社が開発に集中できます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+台湾への地理的集中が地政学リスクとして議論されています。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI チップの供給量・価格を把握したいときに必ず登場します。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+IDM 型（Intel 等）と異なりファウンドリ専業という区分を押さえます。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+NVIDIA、H100、GPU
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. 設計 — NVIDIA・AMD 等がチップを設計し、回路データを作成します
+2. 製造委託 — 設計データを TSMC に渡し、製造プロセスを指定します
+3. 製造 — TSMC が N3/N2 等のプロセスでウェハを加工します
+4. 出荷 — 完成チップが NVIDIA 等に渡り、GPU として製品に組まれます
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- NVIDIA
+- AMD
+- H100
+- GPU
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,17 +104,17 @@ YAML 補足（本書きで埋める／見直す欄）:
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,31 +123,38 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 横一列に「設計会社（NVIDIA / Apple / AMD）→ TSMC → 完成チップ」の流れを示す構造図
+- 登場人物: エンジニア風の人物が「設計図」を持ち、工場（TSMC）に矢印で渡す。工場出口からチップが出てくる
+- 吹き出し・心の声: 設計者「製造はお任せします」／TSMC 側「指定プロセスで量産します」
+- 中央に置くキーワード/ラベル: TSMC（ファウンドリ専業）
+- Before / After の場合の対比ポイント: 該当なし（structure 図）
 
 ### 6 視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 設計図・ペン
+- Step 2 のアイコン/絵柄: ファイル転送・矢印
+- Step 3 のアイコン/絵柄: 工場・歯車
+- Step 4 のアイコン/絵柄: チップ・出荷箱
+- 矢印で示す流れの意図: 設計（委託元）→ 製造（TSMC）→ 完成品（戻り先）の一方向フロー
 
 
 ## コミュニティ補完メモ
 
+NVIDIA（C-9）との住み分け：NVIDIA は設計会社・GPU ベンダーとして扱い、TSMC は製造サプライヤーとして扱う。「NVIDIA が作った GPU」と言うときの「作った」が実際は TSMC 製造であることをこのエントリで補完する。AMD（C-14）も同様に設計のみ。H100（J-72）は製品エントリとして TSMC 製造プロセスの参照先になる。
+
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- TSMC 公式サイト (tsmc.com) Technology Overview — checked 2026-04-30
+- TSMC 2024 Annual Report — checked 2026-04-30
 
 
 ## 備考
+
+- プロセス世代は時変情報。N3/N3E（3nm）が 2023 年量産、N2（2nm）が 2025 年量産予定、A16（1.6nm）が 2026 年予定（evaluation_date 時点）
+- IDM（Intel 等）との区別は非エンジニア読者がつまずきやすい。「設計 ≠ 製造」の分離モデルを図で示すと効果的
+- AI 文脈での地政学リスク（台湾海峡情勢）については主観的評価を避け、「議論で登場する」という事実の記述にとどめた

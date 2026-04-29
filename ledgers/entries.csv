@@ -60,10 +60,10 @@ C-7,,Hugging Face,person_org,company,skeleton,,content/entries/person/C-7_huggin
 C-8,,Microsoft AI,person_org,company,needs_review,,content/entries/person/C-8_microsoft_ai.md
 C-9,,NVIDIA,person_org,company,needs_review,,content/entries/person/C-9_nvidia.md
 C-10,,Moonshot AI,person_org,company,drafting,,content/entries/person/C-10_moonshot_ai.md
-C-11,,Z.ai,person_org,company,skeleton,旧Zhipu,content/entries/person/C-11_z_ai.md
-C-12,,TSMC,person_org,company,skeleton,半導体ファウンドリ,content/entries/person/C-12_tsmc.md
-C-13,,Groq,person_org,company,skeleton,AI推論チップ,content/entries/person/C-13_groq.md
-C-14,,AMD,person_org,company,skeleton,半導体,content/entries/person/C-14_amd.md
+C-11,,Z.ai,person_org,company,drafting,旧Zhipu AI→Z.ai リブランド 2025年,content/entries/person/C-11_z_ai.md
+C-12,,TSMC,person_org,company,drafting,半導体ファウンドリ v2テンプレ書き起こし済（2026-04-30）,content/entries/person/C-12_tsmc.md
+C-13,,Groq,person_org,company,drafting,AI推論チップ LPU v2テンプレ書き起こし済（2026-04-30）,content/entries/person/C-13_groq.md
+C-14,,AMD,person_org,company,drafting,半導体,content/entries/person/C-14_amd.md
 C-50,,Sam Altman,person_org,person,needs_review,,content/entries/person/C-50_sam_altman.md
 C-51,,Dario Amodei,person_org,person,needs_review,,content/entries/person/C-51_dario_amodei.md
 C-52,,Demis Hassabis,person_org,person,drafting,,content/entries/person/C-52_demis_hassabis.md
@@ -124,18 +124,18 @@ E-4,,HumanEval,benchmark,coding,skeleton,,content/entries/benchmark/E-4_humaneva
 E-20,,MMLU,benchmark,reasoning,skeleton,,content/entries/benchmark/E-20_mmlu.md
 E-21,,MMLU-Pro,benchmark,reasoning,skeleton,,content/entries/benchmark/E-21_mmlu_pro.md
 E-22,,GPQA,benchmark,reasoning,skeleton,,content/entries/benchmark/E-22_gpqa.md
-E-23,,GSM8K,benchmark,reasoning,skeleton,,content/entries/benchmark/E-23_gsm8k.md
-E-24,,MATH,benchmark,reasoning,skeleton,,content/entries/benchmark/E-24_math.md
-E-25,,AIME,benchmark,reasoning,skeleton,,content/entries/benchmark/E-25_aime.md
-E-26,,Humanity's Last Exam,benchmark,reasoning,skeleton,,content/entries/benchmark/E-26_humanity_s_last_exam.md
-E-27,,IQ Bench,benchmark,reasoning,skeleton,,content/entries/benchmark/E-27_iq_bench.md
+E-23,,GSM8K,benchmark,reasoning,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-23_gsm8k.md
+E-24,,MATH,benchmark,reasoning,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-24_math.md
+E-25,,AIME,benchmark,reasoning,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-25_aime.md
+E-26,,Humanity's Last Exam,benchmark,reasoning,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-26_humanity_s_last_exam.md
+E-27,,IQ Bench,benchmark,reasoning,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-27_iq_bench.md
 E-30,,TAU-Bench,benchmark,agent,skeleton,,content/entries/benchmark/E-30_tau_bench.md
-E-31,,WebArena,benchmark,agent,skeleton,,content/entries/benchmark/E-31_webarena.md
-E-32,,GAIA,benchmark,agent,skeleton,,content/entries/benchmark/E-32_gaia.md
-E-33,,AgentBench,benchmark,agent,skeleton,,content/entries/benchmark/E-33_agentbench.md
-E-34,,OSWorld,benchmark,agent,skeleton,,content/entries/benchmark/E-34_osworld.md
+E-31,,WebArena,benchmark,agent,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-31_webarena.md
+E-32,,GAIA,benchmark,agent,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-32_gaia.md
+E-33,,AgentBench,benchmark,agent_benchmark,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-33_agentbench.md
+E-34,,OSWorld,benchmark,agent,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-34_osworld.md
 E-50,,Chatbot Arena,benchmark,general,needs_review,,content/entries/benchmark/E-50_chatbot_arena.md
-E-51,,LMSYS Arena,benchmark,general,skeleton,,content/entries/benchmark/E-51_lmsys_arena.md
+E-51,,LMSYS Arena,benchmark,general,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-51_lmsys_arena.md
 F-1,301,JavaScript,term_tool,language,needs_review,旧3桁ID連携→F-1に取り込み済み,content/entries/term_tool/F-1_javascript.md
 F-2,302,TypeScript,term_tool,language,drafting,旧3桁ID連携 / v2テンプレ書き起こし済（2026-04-29）,content/entries/term_tool/F-2_typescript.md
 F-3,,Python,term_tool,language,needs_review,,content/entries/term_tool/F-3_python.md
@@ -230,7 +230,7 @@ G-8,,決定論的／非決定論的,term_llm,basic,skeleton,,content/entries/ter
 G-9,,effort レベル,term_llm,basic,skeleton,low/medium/high/xhigh,content/entries/term_llm/G-9.md
 G-10,,Prompt Engineering,term_llm,technique,drafting,,content/entries/term_llm/G-10_prompt_engineering.md
 G-11,,Context Engineering,term_llm,technique,drafting,,content/entries/term_llm/G-11_context_engineering.md
-G-12,,Agent Design,term_llm,technique,skeleton,,content/entries/term_llm/G-12_agent_design.md
+G-12,,Agent Design,term_llm,technique,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-12_agent_design.md
 G-13,,Few-shot Learning,term_llm,technique,skeleton,,content/entries/term_llm/G-13_few_shot_learning.md
 G-14,,Thinking モデル,term_llm,technique,drafting,新テンプレ書き起こし済（2026-04-29）。旧G-14.mdはarchived,content/entries/term_llm/G-14_thinking_model.md
 G-15,,RAG,term_llm,technique,skeleton,Retrieval-Augmented Generation。検索注入の代表,content/entries/term_llm/G-15_rag.md
@@ -241,12 +241,12 @@ G-19,,Prompt Caching,term_llm,technique,skeleton,プロンプト断片を再利�
 G-20,,CLAUDE.md,tool_agent,config_file,skeleton,,content/entries/tool_agent/G-20_claude_md.md
 G-21,,AGENTS.md,tool_agent,config_file,drafting,,content/entries/tool_agent/G-21_agents_md.md
 G-22,,SKILL.md,tool_agent,config_file,drafting,,content/entries/tool_agent/G-22_skill_md.md
-G-23,,.claude/settings.json,tool_agent,config_file,skeleton,,content/entries/tool_agent/G-23_claude_settings_json.md
+G-23,,.claude/settings.json,tool_agent,config_file,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/tool_agent/G-23_claude_settings_json.md
 G-30,,Tool Use,term_llm,control,drafting,,content/entries/term_llm/G-30_tool_use.md
 G-31,,Hook,term_llm,control,drafting,,content/entries/term_llm/G-31_hook.md
 G-32,,Slash Command,term_llm,control,needs_review,,content/entries/term_llm/G-32_slash_command.md
 G-33,,Function Calling,term_llm,control,skeleton,,content/entries/term_llm/G-33_function_calling.md
-G-34,,Code Interpreter,term_llm,control,skeleton,,content/entries/term_llm/G-34_code_interpreter.md
+G-34,,Code Interpreter,term_llm,code_execution,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-34_code_interpreter.md
 G-35,,Deep Research,term_llm,control,skeleton,,content/entries/term_llm/G-35_deep_research.md
 G-36,,Artifact,term_llm,control,skeleton,,content/entries/term_llm/G-36_artifact.md
 G-38,,Plan Mode,term_llm,control,skeleton,Claude Code の実装前計画モード,content/entries/term_llm/G-38_plan_mode.md
@@ -263,10 +263,10 @@ H-1,,TDD,workflow,methodology,skeleton,,content/entries/workflow/H-1_tdd.md
 H-2,,ペアプログラミング,workflow,methodology,skeleton,,content/entries/workflow/H-2.md
 H-3,,バイブコーディングの流儀,workflow,methodology,drafting,,content/entries/workflow/H-3.md
 H-4,,コードレビュー,workflow,methodology,skeleton,,content/entries/workflow/H-4.md
-H-5,,Scrum / Agile,workflow,methodology,skeleton,,content/entries/workflow/H-5_scrum_agile.md
-H-6,,Git Flow,workflow,methodology,skeleton,,content/entries/workflow/H-6_git_flow.md
+H-5,,Scrum / Agile,workflow,methodology,drafting,,content/entries/workflow/H-5_scrum_agile.md
+H-6,,Git Flow,workflow,methodology,drafting,,content/entries/workflow/H-6_git_flow.md
 H-7,,CI/CD,workflow,methodology,needs_review,,content/entries/workflow/H-7_ci_cd.md
-H-8,,DevOps,workflow,methodology,skeleton,,content/entries/workflow/H-8_devops.md
+H-8,,DevOps,workflow,methodology,drafting,,content/entries/workflow/H-8_devops.md
 H-50,,Bard → Gemini,history,timeline,skeleton,,content/entries/history/H-50.md
 H-51,,Preview から正式版への流れ,history,culture,skeleton,,content/entries/history/H-51.md
 H-52,,Copilot から Claude Code までの流れ,history,timeline,skeleton,,content/entries/history/H-52.md
@@ -291,7 +291,7 @@ I-11,,GitHub MCP,mcp,reference,needs_review,公式,content/entries/mcp/I-11_gith
 I-12,,Git MCP,mcp,reference,needs_review,,content/entries/mcp/I-12_git_mcp.md
 I-13,,Slack MCP,mcp,reference,drafting,,content/entries/mcp/I-13_slack_mcp.md
 I-20,,Playwright MCP,mcp,dev_automation,skeleton,,content/entries/mcp/I-20_playwright_mcp.md
-I-21,,Puppeteer MCP,mcp,dev_automation,skeleton,,content/entries/mcp/I-21_puppeteer_mcp.md
+I-21,,Puppeteer MCP,mcp,dev_automation,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/mcp/I-21_puppeteer_mcp.md
 I-22,,Chrome DevTools MCP,mcp,dev_automation,needs_review,,content/entries/mcp/I-22_chrome_devtools_mcp.md
 I-23,,Serena MCP,mcp,dev_automation,skeleton,,content/entries/mcp/I-23_serena_mcp.md
 I-24,,Context7 MCP,mcp,dev_automation,needs_review,,content/entries/mcp/I-24_context7_mcp.md
@@ -314,7 +314,7 @@ J-16,,Fine-tuning,term_general,ml_basic,needs_review,,content/entries/term_gener
 J-17,,Attention,term_general,ml_basic,drafting,,content/entries/term_general/J-17_attention.md
 J-18,,MoE,term_general,ml_basic,skeleton,,content/entries/term_general/J-18_moe.md
 J-19,,量子化,term_general,ml_basic,skeleton,,content/entries/term_general/J-19.md
-J-20,,Big Data,term_general,data_learning,skeleton,,content/entries/term_general/J-20_big_data.md
+J-20,,Big Data,term_general,data_learning,drafting,,content/entries/term_general/J-20_big_data.md
 J-21,,LoRA,term_general,data_learning,needs_review,,content/entries/term_general/J-21_lora.md
 J-22,,パラメータ数の単位 (B / T),term_general,data_learning,skeleton,,content/entries/term_general/J-22.md
 J-23,,拡散モデル,term_general,data_learning,drafting,画像・動画生成の主流アーキテクチャ,content/entries/term_general/J-23_diffusion_model.md
@@ -323,23 +323,23 @@ J-32,,ノイマン型,term_general,computing_history,skeleton,,content/entries/t
 J-33,,量子コンピューター,term_general,computing_history,skeleton,,content/entries/term_general/J-33.md
 J-40,,IoT,term_general,buzzword,skeleton,,content/entries/term_general/J-40_iot.md
 J-41,,DX,term_general,buzzword,skeleton,,content/entries/term_general/J-41_dx.md
-J-42,,Web3,term_general,buzzword,skeleton,,content/entries/term_general/J-42_web3.md
-J-43,,SaaS,term_general,buzzword,skeleton,,content/entries/term_general/J-43_saas.md
+J-42,,Web3,term_general,buzzword,needs_review,,content/entries/term_general/J-42_web3.md
+J-43,,SaaS,term_general,buzzword,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_general/J-43_saas.md
 J-50,,AI 倫理,term_general,ethics_law,skeleton,,content/entries/term_general/J-50.md
 J-51,,Hallucination,term_general,ethics_law,drafting,,content/entries/term_general/J-51_hallucination.md
 J-52,,Sycophancy,term_general,ethics_law,needs_review,,content/entries/term_general/J-52_sycophancy.md
 J-53,,著作権法 30 条の 4 (日本),term_general,ethics_law,skeleton,,content/entries/term_general/J-53.md
-J-54,,ISO/IEC 42001,term_general,ethics_law,skeleton,AIMS,content/entries/term_general/J-54_iso_iec_42001.md
+J-54,,ISO/IEC 42001,term_general,ethics_law,drafting,AIMS v2テンプレ書き起こし済（2026-04-29）,content/entries/term_general/J-54_iso_iec_42001.md
 J-55,,特定商取引法,term_general,ethics_law,skeleton,,content/entries/term_general/J-55.md
-J-56,,GDPR,term_general,ethics_law,skeleton,,content/entries/term_general/J-56_gdpr.md
+J-56,,GDPR,term_general,ethics_law,needs_review,,content/entries/term_general/J-56_gdpr.md
 J-62,,チューリングテスト,term_general,peripheral,skeleton,,content/entries/term_general/J-62.md
 J-70,,VRAM,term_general,hardware,drafting,2026-04-29 entry-writer 執筆,content/entries/term_general/J-70_vram.md
-J-71,,RAM (メモリ),term_general,hardware,skeleton,,content/entries/term_general/J-71_ram.md
+J-71,,RAM,term_general,hardware,drafting,2026-04-30 entry-writer 執筆,content/entries/term_general/J-71_ram.md
 J-72,,H100,term_general,hardware,drafting,,content/entries/term_general/J-72_h100.md
-J-73,,Blackwell,term_general,hardware,skeleton,,content/entries/term_general/J-73_blackwell.md
+J-73,,Blackwell,term_general,hardware,drafting,2026-04-30 entry-writer 執筆,content/entries/term_general/J-73_blackwell.md
 J-74,,RTX シリーズ,term_general,hardware,skeleton,,content/entries/term_general/J-74.md
 J-75,,Tensor コア,term_general,hardware,skeleton,,content/entries/term_general/J-75.md
-J-76,,CPU,term_general,hardware,skeleton,,content/entries/term_general/J-76_cpu.md
+J-76,,CPU,term_general,hardware,drafting,,content/entries/term_general/J-76_cpu.md
 J-77,,GPU (概念),term_general,hardware,skeleton,,content/entries/term_general/J-77_gpu.md
 J-78,,HDD,term_general,hardware,skeleton,,content/entries/term_general/J-78_hdd.md
 J-79,,SSD,term_general,hardware,skeleton,,content/entries/term_general/J-79_ssd.md

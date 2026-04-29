@@ -1,69 +1,58 @@
 ---
 id: C-11
 title: Z.ai
+title_reading: ズィー エーアイ
 category: person_org
 subtype: company
-experience_level:
-reader_level:
+experience_level: research_only
+reader_level: 3-4
 figure_type: structure
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2019-01-01
+version_status: active
+pricing_note: freemium
+evaluation_date: 2026-04-30
+related_terms:
+  - GLM
+  - Moonshot AI
+  - Hugging Face
+  - Anthropic
+status: drafting
 ---
 
 # Z.ai
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-中国 AI 企業、GLM モデルを提供（旧 Zhipu）
-
+旧称 Zhipu AI（智譜 AI）、清華大学発の中国 AI 企業です。GLM 系モデルを中心にオープンウェイト公開も進めています。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+GLM（General Language Model）系の LLM（大規模言語モデル）を開発・提供する中国の AI 企業です。テキスト・コード・画像・音声に対応したモデルファミリーをそろえ、API とオープンウェイト（重みが公開された形式）の両方で展開しています。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+Hugging Face（C-7）で GLM モデルを検索するとヒットします。中国系 LLM の動向を扱う記事では「六小虎」として Moonshot AI（C-10）などと並んで言及されます。米国財務省の制裁リスト（Entity List）に 2025 年 1 月に追加された経緯から、規制関連の報道でも名前を見かけます。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+Z.ai（旧 Zhipu AI）が提供するモデルファミリーの構成と、各モデルがどの用途に対応するかを整理して示します。
+
+### B. 登場シーン（figure_type: structure）
+
+- シーン1: 研究者が Hugging Face で GLM-4 の重みをダウンロードしてローカルで推論する
+- シーン2: 開発者が CodeGeeX API をコーディング補完用途で組み込む
+- シーン3: AI 業界ニュースで「中国 LLM 六小虎の一角」として企業名が挙がる
+- 並べる基準: 用途（チャット／コーディング／画像／音声／エージェント）別
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Z.ai の GLM-4.6、ローカルで動かすと意外と速いです。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +61,42 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+清華大学発、GLM 系 LLM を開発する中国の AI 企業です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+オープンウェイト公開が多く、ローカル実行で試せます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+米国の制裁リスト入りにより、米国企業との直接取引が制限されます。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+中国語対応や多言語 LLM の選択肢を比較する場面で参照します。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+旧社名 Zhipu AI と Z.ai が同一企業を指すと把握するだけで十分です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+GLM、CodeGeeX、AutoGLM
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. モデル選定 — GLM-4 系をローカルまたは API で利用するか検討する
+2. 重み取得 — Hugging Face から GLM のオープンウェイトをダウンロードする
+3. 環境構築 — ローカル推論環境（vLLM など）を用意してモデルを読み込む
+4. 実行・評価 — チャット・コーディング・画像などタスク別に出力を確認する
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- GLM
+- Moonshot AI
+- Hugging Face
+- Anthropic
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,18 +104,17 @@ YAML 補足（本書きで埋める／見直す欄）:
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
-
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
@@ -143,10 +122,10 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 中央に「Z.ai」ロゴ、周囲に 5 つのモデル（ChatGLM・CodeGeeX・GLM-4V・GLM-4-Voice・AutoGLM）を放射状に配置する構成図
+- 登場人物: 開発者キャラクターが Hugging Face のページを見ながら「どれを選ぼう」と考えている様子
+- 吹き出し・心の声: 「ローカルで動くの？」「API と両方ある！」
+- 中央に置くキーワード/ラベル: Z.ai（旧 Zhipu AI）
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +133,29 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 虫眼鏡（モデル選定）
+- Step 2 のアイコン/絵柄: ダウンロード矢印（重み取得）
+- Step 3 のアイコン/絵柄: サーバー（環境構築）
+- Step 4 のアイコン/絵柄: チェックリスト（実行・評価）
+- 矢印で示す流れの意図: 選定 → 取得 → 構築 → 評価の一方向フロー
 
 
 ## コミュニティ補完メモ
 
+- C-10 Moonshot AI との住み分け: C-10 はキャラクター AI やチャットサービスが主軸。C-11 Z.ai は LLM 研究開発・オープンウェイト公開が軸で、コーディング（CodeGeeX）やエージェント（AutoGLM）用途のモデルファミリーが特徴
+- D-45 GLM との住み分け: D-45 は GLM モデルシリーズ自体（アーキテクチャ・バージョン展開）を扱うエントリ。C-11 は GLM を提供する企業としての Z.ai に焦点を当てる
+- 「六小虎」の他メンバー（Moonshot / MiniMax / Baichuan / 01.AI / StepFun）については各エントリ側で言及し、C-11 では Z.ai 固有の情報に絞る
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- Z.ai 公式サイト <https://z.ai/> — checked 2026-04-30
+- Zhipu AI GitHub <https://github.com/THUDM> — checked 2026-04-30
+- 米国財務省 Entity List 追加報道（2025 年 1 月）— checked 2026-04-30
+- Hugging Face GLM モデルページ <https://huggingface.co/THUDM> — checked 2026-04-30
 
 
 ## 備考
+
+- 社名リブランド: 2025 年に「Zhipu AI（智譜 AI）」から「Z.ai」に改称。ニュース・論文では Zhipu 表記が残り、製品サイトでは Z.ai 表記が主流。読者混乱を避けるため tagline に「旧称 Zhipu AI」を明記した
+- 制裁リストの影響: 米国財務省の制裁（2025 年 1 月追加）により、米国企業が Z.ai と直接取引する際に制限が生じる。オープンウェイトの利用自体が直ちに禁止されるわけではないが、商用契約・投資は影響を受ける可能性がある（出版前に最新規制状況を要確認）
+- バージョン展開: GLM-4 → GLM-4.5 → GLM-4.6 と进化中。評価日時点の最新は GLM-4.6（2026-04-30 評価）

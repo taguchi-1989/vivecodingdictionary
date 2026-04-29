@@ -1,69 +1,61 @@
 ---
 id: G-34
 title: Code Interpreter
+title_reading: コード インタプリタ
 category: term_llm
-subtype: control
-experience_level:
-reader_level:
-figure_type: structure
+subtype: code_execution
+experience_level: hands_on
+reader_level: 2-4
+figure_type: before_after
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2023-07-01
+version_status: active
+pricing_note: freemium
+evaluation_date: 2026-04-30
+related_terms:
+  - Tool Use
+  - Function Calling
+  - Python
+  - Deep Research
+status: drafting
 ---
 
 # Code Interpreter
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-LLM が Python 等を実行して結果を返す機能（ChatGPT 由来）
-
+LLM がサンドボックス内で Python コードを実行して結果を返す機能です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+自然言語で「この CSV を分析して」と頼むと、AI が裏で Python コードを書いて実行し、グラフや数値結果を画面に返してくれます。コードを読む必要はありません。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+ChatGPT（B-3）にファイルをアップロードしたときや、Claude（B-2）の code execution 機能として登場します。「売上データを分析して」と話しかけると自動で動きます。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+「自然言語で頼む → AI が Python を書いて実行 → 結果が返る」という一連の流れを、コードを書かずに使える体験として示す。
 
+### A. Before / After（figure_type: before_after）
+
+- Before
+  - 状況: 表計算ソフトで手動グラフを作っている
+  - 視覚要素（コード or 概念）: CSV ファイルと格闘するビジネスパーソン
+  - つまずき: Python を知らないと自動化できない
+- After
+  - 状況: Code Interpreter に CSV を投げて「月別グラフを出して」と入力
+  - 視覚要素: チャットに折れ線グラフが表示される
+  - うれしさ: コードを書かずに分析結果が手に入る
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Code Interpreter で売上 CSV を投げたら、月別グラフまで自動で出ました。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +64,42 @@ LLM が Python 等を実行して結果を返す機能（ChatGPT 由来）
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI が Python コードを書いて実行し、結果を返す機能です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+コードを書かずにデータ分析やグラフ作成ができます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+コードを「書く」だけの機能ではなく「実行」まで行います。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+営業・マーケターがデータを素早く可視化したい場面です。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+「AI が裏で Python を動かしている」と覚えれば十分です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Tool Use、Function Calling、Python
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. ファイル準備 — CSV・Excel・画像ファイルをチャットにアップロードします
+2. 自然言語で依頼 — 「月別集計してグラフ化して」と入力します
+3. AI がコード生成・実行 — サンドボックス内で Python が自動実行されます
+4. 結果を受け取る — グラフや数値・変換ファイルが画面に表示されます
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- Tool Use
+- Function Calling
+- Python
+- Deep Research
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,29 +107,30 @@ LLM が Python 等を実行して結果を返す機能（ChatGPT 由来）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: before_after）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左に CSV ファイルを持って困るビジネスパーソン、右にチャット画面でグラフが出た様子
+- 登場人物: 営業職風の人物（スーツ、表計算ソフトの前）
+- 吹き出し・心の声: Before「Python 書けないと無理か…」、After「送っただけでグラフになった！」
+- 中央に置くキーワード/ラベル: Code Interpreter
+- Before / After の場合の対比ポイント: コードを書く手間 vs チャットで完結
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +138,26 @@ LLM が Python 等を実行して結果を返す機能（ChatGPT 由来）
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: ファイルアップロードアイコン
+- Step 2 のアイコン/絵柄: チャット吹き出し
+- Step 3 のアイコン/絵柄: 歯車（実行中）
+- Step 4 のアイコン/絵柄: グラフ・チャートアイコン
+- 矢印で示す流れの意図: ユーザー入力から自動実行・結果返却までのシンプルな一方向フロー
 
 
 ## コミュニティ補完メモ
 
+- Tool Use（G-30）との住み分け：Tool Use は LLM がツールを呼び出す仕組みの総称。Code Interpreter はその中でもコード実行に特化した具体的な機能の呼び名。
+- Function Calling（G-33）との住み分け：Function Calling は外部 API を呼ぶ機構で、Code Interpreter は Python 実行環境に特化。概念は近いが用途が異なる。
+- Deep Research（G-35）との住み分け：Deep Research は検索・情報収集の自律実行。Code Interpreter はデータ処理・可視化に特化。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- OpenAI Blog "ChatGPT Code Interpreter" — checked 2026-04-30
+- OpenAI Help "Advanced data analysis" — checked 2026-04-30
 
 
 ## 備考
+
+- 2023-07 ChatGPT Plus に「Code Interpreter」として登場。その後「Advanced Data Analysis」に改名されたが、2024 年以降は再び Code Interpreter / Python tool と呼ばれるようになった。
+- 名称は提供サービスによって異なる：ChatGPT では「Python tool」、Claude では「code execution」、Gemini では「Code Execution」。
