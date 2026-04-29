@@ -19,7 +19,7 @@ related_terms:
   - G-10 Prompt Engineering
   - H-3 バイブコーディングの流儀
   - B-7 Claude Code
-status: drafting
+status: needs_review
 ---
 
 # バイブコーディング

@@ -8,17 +8,13 @@ experience_level: research_only
 reader_level: 2
 figure_type: before_after
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
 evaluation_date: 2026-04-29
 related_terms:
   - Context
   - Context Window
   - Prompt Engineering
   - LLM
-status: drafting
+status: needs_review
 ---
 
 # Token
