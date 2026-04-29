@@ -1,6 +1,72 @@
-# 次セッションへの引き継ぎ（2026-04-28 v8 更新 / タイトル読みスロット追加）
+# 次セッションへの引き継ぎ（2026-04-29 v9 更新 / 並列 95 件本書きラウンド完走）
 
-*2026-04-28 セッションで「スケルトン先行運用」へ切り替え、続けて「タイトル読みスロット（title_reading）」を新設しました。letter A〜J 計 339 件のうち約 318 件にスケルトンを生成済み。次セッションはこのファイルと [docs/v2_rules_summary.md](../docs/v2_rules_summary.md) を読んだあと、書きたいエントリの YAML を `status: skeleton → drafting` に上げて `entry-writer` で本文を埋めてください。*
+*2026-04-29 セッションで `entry-writer` 5 並列バッチ × 19 回 で letter 横断 95 件を本書き。skeleton 305 → 210（−95）、drafting 5 → 92、needs_review 29 → 37、archived 8 → 21、☆ 違反 0 で着地。次セッションはこのファイルの「2026-04-29 セッション成果」を確認し、続きの 30 件束を `entry-writer` で進めるか、needs_review に積まれた 37 件の著者欄記入に進むか選んでください。*
+
+## 2026-04-29: 並列 95 件本書きラウンド（5 並列 × 19 バッチ）
+
+### コミット 4 本（古い順）
+
+- `a3784b7` brief entry-writer with parallel-run warning patterns（並列警告パターン §5 を恒久化）
+- `79da9f9` write 35 stage-2/3 entries: F-51〜55 git subcommands + 30 across 6 batches
+- `6477f41` write 30 more stage-2/3 entries (B/C/D/F/G across batches 7-12)
+- `3b91c5e` write 30 more stage-3 entries (D/E/G/H/J across batches 13-18)
+
+### 書いた 95 件の内訳
+
+| ラウンド | バッチ | 件数 | エントリ |
+| :-- | :-- | --: | :-- |
+| R1 先行 | 1 | 5 | F-51 git push / F-52 git pull / F-53 branch / F-54 commit / F-55 merge |
+| R1 batch1 | 1 | 5 | E-2 SWE-Bench Verified / E-20 MMLU / E-50 Chatbot Arena / B-51 ChatGPT 料金 / B-52 Gemini 料金 |
+| R1 batch2 | 2 | 5 | D-30 Grok 系 / D-40 Llama 系 / D-1 Gemini 2 系 / D-21 GPT-4 系 / D-22 o1 系 |
+| R1 batch3 | 3 | 5 | F-4 HTML / F-5 CSS / F-6 Markdown / F-30 VS Code / F-60 GitHub |
+| R1 batch4 | 4 | 5 | G-30 Tool Use / G-20 CLAUDE.md / G-4 System Prompt / G-5 Context Window / G-11 Context Engineering |
+| R1 batch5 | 5 | 5 | I-2 MCP Server / I-3 MCP Client / I-11 GitHub MCP / I-10 Filesystem MCP / I-20 Playwright MCP |
+| R1 batch6 | 6 | 5 | J-11 Deep Learning / J-10 Machine Learning / J-51 Hallucination / J-77 GPU / H-50 Bard → Gemini |
+| R2 batch7 | 7 | 5 | B-7 Claude Code / B-9 v0 / B-10 Devin / B-11 Bolt.new / B-12 Perplexity |
+| R2 batch8 | 8 | 5 | B-21 Netlify / B-22 Cloudflare / B-24 Google Cloud / B-25 Azure / B-30 Amazon Bedrock |
+| R2 batch9 | 9 | 5 | C-4 Meta AI / C-5 xAI / C-7 Hugging Face / C-52 Demis Hassabis / C-53 Andrej Karpathy |
+| R2 batch10 | 10 | 5 | D-10 Claude 3 系 / D-23 o3 系 / D-24 GPT-3 系 / D-41 Mistral 系 / D-42 Gemma 系 |
+| R2 batch11 | 11 | 5 | F-7 YAML / F-8 JSON / F-40 npm / F-41 Vite / F-90 Docker |
+| R2 batch12 | 12 | 5 | G-3 Dictation / G-13 Few-shot Learning / G-14 Thinking モデル / G-21 AGENTS.md / G-22 SKILL.md |
+| R3 batch13 | 13 | 5 | D-50 DALL-E / D-51 Imagen / D-52 Sora / D-54 Stable Diffusion / D-71 Whisper |
+| R3 batch14 | 14 | 5 | D-26 gpt-oss / D-43 Qwen 系 / D-44 Kimi / D-46 DeepSeek V3 / D-47 DeepSeek R1 |
+| R3 batch15 | 15 | 5 | E-3 Terminal-Bench / E-4 HumanEval / E-21 MMLU-Pro / E-22 GPQA / E-30 TAU-Bench |
+| R3 batch16 | 16 | 5 | G-31 Hook / G-32 Slash Command / G-33 Function Calling / G-41 Subagent / G-42 Worktree |
+| R3 batch17 | 17 | 5 | H-1 TDD / H-3 バイブコーディングの流儀 / H-7 CI/CD / H-54 GPT-4 リリース / H-58 Transformer 論文 |
+| R3 batch18 | 18 | 5 | J-12 Neural Network / J-17 Attention / J-18 MoE / J-23 拡散モデル / J-41 DX |
+
+### 並列実行の知見（次回も使える）
+
+1. **5 並列 × N バッチが安定**：6 並列以上は警告制御が効きにくい印象
+2. **status は Python ワンライナーで一括変更**：30 件の `skeleton → drafting` を Edit 30 回ではなく `re.sub` 1 回で。スケルトンテンプレ内コメントに `status: skeleton` が 3 つあるので必ずフロントマター 1 つだけを置換する正規表現（`^status: skeleton\s*$` + flags=MULTILINE + count=1）を使う
+3. **頻発した ☆ 違反パターン**（合計 6 件発生・全件その場で並列トリム解消）
+   - 左ページ合計 +100 字超過（G-11 / G-20 / D-41 / G-22 / G-31）— entry-writer に「左ページ合計 250 字以内」を毎回伝えるべき
+   - 旧スケルトンの archive 漏れ（D-40）— 新ファイル名へ移行した entry は entries.csv の path も合わせて更新すべき。スケルトン側の `status: drafting` を放置すると ☆ 違反として再検出される
+4. **D 系モデルで「新ファイル名にせず元のままで書く」と頼んでも、entry-writer は新ファイル名にリネームする傾向**（D-43 → D-43_qwen.md / D-54 → D-54_stable_diffusion.md など）。実害はない（旧スケルトンを archive 化するので validator はスキップする）が、entries.csv の path は手で見直す価値あり
+5. **「進んだ N 本」のような連体修飾の「だ」が validator の `(?<![すまりぞ])だ[。\s]` 正規表現で誤検出される**。「進んでいる」など現在進行に書き換える指示を毎回プロンプトに入れている
+
+### 残タスク
+
+- **次の 30 件束（候補）**：
+  - **A 系メタ全件 9 件**（A-3 歩き方 / A-4 体験区分 / A-5 読者レベル / A-6 評価日 / A-7 図のタイプ / A-8 色記号 / A-9 索引 / A-10 更新履歴 / A-11 略称表記）— 序文・凡例の整備、本書の入口
+  - **F 系言語・ツール残り**（F-12 Electron / F-13 Tauri / F-15 shadcn/ui / F-21 Prettier / F-44 pnpm / F-56 .gitignore / F-57 リポジトリ / F-58 git stash / F-59 README.md / F-61 Pull Request / F-62 GitHub Actions / F-80 Node.js / F-81 bash ほか多数）
+  - **I 系 MCP 残り**（I-4 MCP Transport / I-5 MCP SDK / I-12 Git MCP / I-13 Slack MCP / I-22 Chrome DevTools MCP / I-23 Serena MCP / I-24 Context7 MCP / I-30 Notion MCP / I-41 SQLite MCP / I-50 AWS MCP / I-80 自作 MCP / I-81 MCP の登録設定）
+  - **J 系残り**（J-1 AGI / J-3 Singularity / J-4 ASI / J-15 VLM / J-16 Fine-tuning / J-19 量子化 / J-21 LoRA / J-22 パラメータ数 / J-40 IoT / J-42 Web3 / J-43 SaaS / J-50 AI 倫理 / J-52 Sycophancy / J-56 GDPR / J-70 VRAM / J-72 H100 / J-76 CPU ほか多数）
+  - **G 系残り**（G-6 One-shot / G-7 指示追従性 / G-8 決定論的非決定論的 / G-9 effort レベル / G-12 Agent Design / G-23 settings.json / G-34 Code Interpreter / G-35 Deep Research / G-36 Artifact / G-43 オーケストレーション / G-44 マルチエージェント協調 / G-45 段階的開示 / G-46 ナーフ）
+  - **H 系残り**（H-2 ペアプログラミング / H-4 コードレビュー / H-5 Scrum/Agile / H-6 Git Flow / H-8 DevOps / H-51 Preview→正式版 / H-52 Copilot→Claude Code / H-55 LLaMA オープン化 / H-56 Claude バージョン史 / H-57 Gemini 命名史 / H-59 AI エージェント元年 / H-60 Codex→Copilot 系譜 / H-61 Preview 文化 / H-62 Anthropic 創業）
+  - **C 系人物残り**（C-54 Ilya Sutskever / C-55 Mira Murati / C-56 Yann LeCun / C-57 Geoffrey Hinton / C-58 Elon Musk / C-59 Jensen Huang / C-60 Ray Kurzweil ほか）
+- **既書き 37 件の著者欄記入**（needs_review → ready 昇格は著者本人のみ可能）
+- **要直しキューの ⚠ 軽微超過 79 件**：著者欄記入のついでに削るのが効率的
+- **新ファイル名 ↔ entries.csv path の整合性確認**：D-43_qwen.md など、書き換え時に path 更新が漏れている可能性あり
+
+### 次セッションの最短ルート
+
+1. このファイルの「2026-04-29 セッション成果」と最新の `ledgers/revision_queue.md` を見る
+2. 次の 30 件束を選ぶ（A 系メタ 9 件 + F/I/J/G/H/C のどれか組み合わせ）
+3. `python3 -c "..."` で skeleton → drafting 一括フリップ
+4. `Agent` を 5 並列で起動 × 6 バッチ
+5. 完走後に `python3 scripts/update_review_queue.py` で確認、☆ 違反があれば並列トリム
+6. コミット
 
 ## 2026-04-28（追記）: タイトル読みスロット `title_reading` を追加
 
