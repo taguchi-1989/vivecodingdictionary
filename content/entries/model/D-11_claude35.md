@@ -16,7 +16,7 @@ related_terms:
   - Sonnet
   - Artifacts
   - Computer use
-status: drafting
+status: needs_review
 ---
 
 # Claude 3.5 系

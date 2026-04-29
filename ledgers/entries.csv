@@ -217,7 +217,7 @@ F-180,,OpenGL,term_tool,graphics,skeleton,,content/entries/term_tool/F-180_openg
 F-181,,WebGL,term_tool,graphics,skeleton,,content/entries/term_tool/F-181_webgl.md
 F-190,,サブルーチン,term_tool,programming_basic,skeleton,古典的概念,content/entries/term_tool/F-190.md
 G-1,,Context (コンテキスト),term_llm,basic,needs_review,,content/entries/term/G-1_context.md
-G-2,,Token,term_llm,basic,skeleton,,content/entries/term_llm/G-2_token.md
+G-2,,Token,term_llm,basic,needs_review,,content/entries/term_llm/G-2_token.md
 G-3,,Dictation,term_llm,basic,skeleton,,content/entries/term_llm/G-3_dictation.md
 G-4,,System Prompt,term_llm,basic,skeleton,,content/entries/term_llm/G-4_system_prompt.md
 G-5,,Context Window,term_llm,basic,skeleton,,content/entries/term_llm/G-5_context_window.md
@@ -241,7 +241,7 @@ G-33,,Function Calling,term_llm,control,skeleton,,content/entries/term_llm/G-33_
 G-34,,Code Interpreter,term_llm,control,skeleton,,content/entries/term_llm/G-34_code_interpreter.md
 G-35,,Deep Research,term_llm,control,skeleton,,content/entries/term_llm/G-35_deep_research.md
 G-36,,Artifact,term_llm,control,skeleton,,content/entries/term_llm/G-36_artifact.md
-G-40,,バイブコーディング,term_llm,ops,skeleton,,content/entries/term_llm/G-40.md
+G-40,,バイブコーディング,term_llm,ops,skeleton,,content/entries/term_llm/G-40_vibe_coding.md
 G-41,,Subagent,term_llm,ops,skeleton,,content/entries/term_llm/G-41_subagent.md
 G-42,,Worktree,term_llm,ops,skeleton,,content/entries/term_llm/G-42_worktree.md
 G-43,,オーケストレーション,term_llm,ops,skeleton,,content/entries/term_llm/G-43.md
