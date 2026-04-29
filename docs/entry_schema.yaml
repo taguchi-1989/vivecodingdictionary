@@ -76,15 +76,18 @@ frontmatter:
   recommended:
     - key: title_reading
       description: |
-        タイトルの読み・日本語展開。誌面ではタイトル直下に 14px グレーで表示。
-        英字略称・固有名で読みが揺れる語、または英字 → 日本語展開を見せたい語に付与。
-        例: `ギット` (git) / `コンテキスト` (Context) / `Model Context Protocol` (MCP)。
+        タイトルの読み（読み専用スロット）。誌面ではタイトル直下に 14px グレーで表示。
+        英字略称・英字タイトルは「英単語をカタカナで並べた読み」を入れる。
+        例: `ギット` (Git) / `コンテキスト` (Context) / `モデルコンテキストプロトコル` (MCP) /
+            `ラージランゲージモデル` (LLM) / `アクセシビリティ` (a11y)。
+        略称音読み（`えむしーぴー` 等）や日本語訳（`大規模言語モデル` 等）は入れない。
+        正式名称は tagline 冒頭へ回す（`Model Context Protocol の略。…`）。
         既に title 自体が日本語で読み補足が不要なら省略する。
       min_chars: 2
       max_chars: 30
       recommended_max_chars: 15
       severity: warn
-      # 2026-04-28 追加。schema_version v2.28.0
+      # 2026-04-28 追加・改訂。schema_version v2.28.1（title_reading は読み専用、略称展開は tagline へ）
     - key: subtype
       description: language / framework / ai_assistant / anthropic などの下位分類
       severity: info

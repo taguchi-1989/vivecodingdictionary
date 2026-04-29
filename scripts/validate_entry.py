@@ -96,7 +96,9 @@ NON_DESU_MASU_PATTERNS = [
 # min/max の「推奨範囲」。超過は ⚠️ 警告（☆ は左右合計 + 100 字超でのみ）
 # (key, display, min, max, page, in_total) — in_total=False は左右合計から除外（独立スロット）
 SECTION_TARGETS = [
-    ("tagline",        "tagline",            25,  45, "left",  True),   # 許容 25-45, 推奨 30-38
+    # tagline 許容上限 45→60（2026-04-28）：略称・ヌメロニム（MCP / a11y / LLM 等）の
+    # tagline 冒頭に正式名称を入れるルール追加に追随。詳細は docs/v2_rules_summary.md §2-3。
+    ("tagline",        "tagline",            25,  60, "left",  True),   # 許容 25-60, 推奨 30-38（略称展開含む場合 35-50）
     ("nanishiteku",    "何をしてくれるか",   60, 200, "left",  True),   # 許容 60-200, 推奨 80-150
     ("dokode_deau",    "どこで出会うか",     60, 200, "left",  True),   # 許容 60-200, 推奨 80-150
     # 2026-04-26 追加: 左ページ末尾の独立スロット、下チロム右に印字。左合計には含めない

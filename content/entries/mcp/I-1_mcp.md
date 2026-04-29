@@ -1,7 +1,7 @@
 ---
 id: I-1
 title: MCP
-title_reading: Model Context Protocol
+title_reading: モデルコンテキストプロトコル
 category: mcp
 subtype: protocol
 experience_level: hands_on
@@ -24,7 +24,7 @@ status: needs_review
 
 ## tagline
 
-LLM とツール・データをつなぐ標準規格。「AI の USB-C」と呼ばれる共通コネクタです。
+Model Context Protocol の略。LLM とツールをつなぐ「AI の USB-C」と呼ばれる標準規格です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
