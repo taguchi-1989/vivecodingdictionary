@@ -13,8 +13,8 @@ A-11,,略称表記,common,meta,skeleton,,content/entries/common/A-11_abbreviatio
 B-1,101,Gemini,service,ai_assistant,needs_review,新テンプレ書き起こし済（2026-04-24）。legacy 101 は archived,content/entries/service/B-1_gemini.md
 B-2,,Claude,service,ai_assistant,needs_review,,content/entries/service/B-2_claude.md
 B-3,,ChatGPT,service,ai_assistant,drafting,,content/entries/service/B-3_chatgpt.md
-B-4,,Cursor,service,ai_assistant,skeleton,,content/entries/service/B-4_cursor.md
-B-5,,GitHub Copilot,service,ai_assistant,skeleton,,content/entries/service/B-5_github_copilot.md
+B-4,,Cursor,service,ai_assistant,needs_review,,content/entries/service/B-4_cursor.md
+B-5,,GitHub Copilot,service,ai_assistant,needs_review,,content/entries/service/B-5_github_copilot.md
 B-6,,Windsurf,service,ai_assistant,skeleton,,content/entries/service/B-6_windsurf.md
 B-7,,Claude Code,service,ai_assistant,skeleton,略称CC,content/entries/service/B-7_claude_code.md
 B-8,,Codex (OpenAI),service,ai_assistant,skeleton,,content/entries/service/B-8_codex.md
