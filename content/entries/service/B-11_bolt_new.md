@@ -1,69 +1,58 @@
 ---
 id: B-11
 title: Bolt.new
+title_reading: ボルトニュー
 category: service
 subtype: ai_assistant
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: hands_on
+reader_level: 2
+figure_type: workflow
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2023-10-01
+version_status: active
+pricing_note: freemium
+evaluation_date: 2026-04-29
+related_terms:
+  - StackBlitz
+  - WebContainers
+  - Vite
+  - v0
+  - Prompt Engineering
+status: drafting
 ---
 
 # Bolt.new
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-StackBlitz のフルスタック AI アプリ生成
-
+プロンプトを入力するとフルスタックアプリがブラウザ内で動き出すサービスです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+テキストで要件を伝えると、Vite（ヴァイト）＋React などのフルスタック構成をブラウザ内で自動生成・起動してくれます。StackBlitz 社の WebContainers（ウェブコンテナーズ）技術でブラウザ内に Node.js 実行環境を持ち、インストール不要ですぐにプレビューできます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+「環境構築なしでアプリを試したい」というシーンで名前が上がります。「Bolt.new でプロトタイプを作って見せた」「ブラウザだけで動いた」という形で、バイブコーディングの入門記事や SNS の作例投稿でよく見かけます。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+プロンプトを入れてからプレビューが出るまでのワンフローを、左から右に流れる形で示します。
 
+### C. 概念図（figure_type: workflow）
+
+- 中心に置く概念: ブラウザ内でプロンプト → ビルド → プレビューが完結するループ
+- 登場シーン 1: 人物がブラウザに「ログイン機能付きのタスク管理アプリ」と入力
+- 登場シーン 2: Bolt.new が Vite + React のコードを生成・自動インストール
+- 登場シーン 3: 同じブラウザ上でプレビューが起動し、そのままデプロイボタンを押す
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Bolt.new にプロンプトを渡したら Vite 環境がブラウザで立ち上がりました。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,81 +61,73 @@ StackBlitz のフルスタック AI アプリ生成
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+プロンプトからフルスタック環境をブラウザ内で起動するサービスです。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ローカルへのインストールや環境構築なしにアプリが動かせます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+無料枠の月次トークン上限を超えると有料プランへの切り替えが必要です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+プロトタイプ制作や、アイデアをすぐ動かして確認したい場面に向きます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+bolt.new を開きプロンプトを入力するだけで始められる段階。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+WebContainers、Vite（F-41）、v0（B-9）
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. プロンプト入力 — bolt.new でアプリの要件をテキストで伝えます
+2. コード生成 — Bolt.new が Vite + React 等の構成を自動で組みます
+3. ブラウザ内プレビュー — WebContainers が起動し、同タブでアプリが動きます
+4. 修正指示 — 動作を見ながらチャットで追加変更を依頼します
+5. デプロイ — 問題なければそのまま公開リンクを発行します
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- StackBlitz
+- WebContainers
+- Vite
+- v0
+- Prompt Engineering
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: workflow）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左から右へ「入力 → 生成 → プレビュー → デプロイ」の 4 ステップを横フロー矢印で示す
+- 登場人物: ブラウザの前に座った人物が左端でテキストを打ち込む。右端で同じ人物がプレビュー画面を見て「動いた！」と驚く
+- 吹き出し・心の声: 左「タスク管理アプリを作って」／右「インストールなしで動いた！」
+- 中央に置くキーワード/ラベル: WebContainers がブラウザ内に Node.js を内蔵している点を小ラベルで示す
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +135,27 @@ StackBlitz のフルスタック AI アプリ生成
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: テキスト入力ボックス — プロンプト
+- Step 2 のアイコン/絵柄: 歯車マーク — コード生成
+- Step 3 のアイコン/絵柄: ブラウザウィンドウ — プレビュー
+- Step 4 のアイコン/絵柄: チャット吹き出し — 修正指示
+- Step 5 のアイコン/絵柄: ロケットアイコン — デプロイ
+- 矢印で示す流れの意図: プロンプトから公開までがブラウザ完結であることを強調する
 
 
 ## コミュニティ補完メモ
 
+- v0（B-9）との住み分け：v0 は UI コンポーネント生成が主軸。Bolt.new はバックエンドも含むフルスタックをブラウザ内で動かす点が独自色
+- Cursor（B-4）との住み分け：Cursor はローカルエディタに AI を統合する形。Bolt.new はブラウザだけで完結し、インストール不要が最大の違い
+- Devin（B-10）との住み分け：Devin は自律型エージェントで長時間タスク向き。Bolt.new はプロンプト即プレビューの即時性が特徴
+- Vite（F-41）は Bolt.new が内部で採用するビルドツール。Vite 自体の説明は F-41 で扱う
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- bolt.new — checked 2026-04-29
+- stackblitz.com/blog（Bolt.new 関連記事）— checked 2026-04-29
 
 ## 備考
+
+- 料金は無料プランとトークン制有料プランが基本だが変動があるため本文に料金数値は入れず evaluation_date で管理
+- WebContainers はブラウザ内で Node.js を動かす StackBlitz 独自技術で、これが「インストール不要」の技術的根拠になっている

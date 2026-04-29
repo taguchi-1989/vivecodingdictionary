@@ -1,44 +1,69 @@
 # 要直しキュー（revision queue）
 
-*自動生成: 2026-04-29 20:33 / `scripts/update_review_queue.py`*
+*自動生成: 2026-04-29 20:56 / `scripts/update_review_queue.py`*
 
 1 画面で「次やるべき・見直すべき・適合済み」が見えるダッシュボード。`scripts/validate_entry.py` のチェックを全件で走らせた結果を集計して再生成しています。手で編集しないでください。
 
 ## status 内訳
 
-- **skeleton**: 270 件
-- **drafting**: 33 件
-- **needs_review**: 36 件
-- **archived**: 13 件
-- **合計**: 352 件
+- **skeleton**: 240 件
+- **drafting**: 62 件
+- **needs_review**: 37 件
+- **archived**: 17 件
+- **合計**: 356 件
 
 ## ☆ 違反あり（最優先で直す）（0 件）
 
 _なし_
 
-## ⚠️ 警告あり（軽微超過 / 著者か entry-writer で手当て）（33 件）
+## ⚠️ 警告あり（軽微超過 / 著者か entry-writer で手当て）（58 件）
 
 | ID | title | status | 概要 |
 | :-- | :-- | :-- | :-- |
 | B-1 | Gemini | needs_review | ⚠ 58 字（目安 20-50、+8 字超過） |
+| B-10 | Devin | drafting | ⚠ 294 字（目安 155-250、+44 字超過） |
+| B-11 | Bolt.new | drafting | ⚠ 288 字（目安 155-250、+38 字超過） |
+| B-12 | Perplexity | drafting | ⚠ 強い断定語「最新」が入っている可能性（要確認） |
+| B-21 | Netlify | drafting | ⚠ 258 字（目安 155-250、+8 字超過） |
+| B-22 | Cloudflare | drafting | ⚠ 274 字（目安 155-250、+24 字超過） |
+| B-24 | Google Cloud | drafting | ⚠ 52 字（目安 25-50、+2 字超過） |
+| B-25 | Azure | drafting | ⚠ 68 字（目安 25-60、+8 字超過）; ⚠ 58 字（目安 25-50、+8 字超過）; ⚠ 333 字（目安 155-250、+83 字超過） |
 | B-52 | Gemini の料金プラン | drafting | ⚠ 252 字（目安 155-250、+2 字超過） |
+| B-7 | Claude Code | drafting | ⚠ 67 字（目安 25-60、+7 字超過）; ⚠ 297 字（目安 155-250、+47 字超過） |
+| B-9 | v0 | drafting | ⚠ 76 字（目安 25-60、+16 字超過）; ⚠ 190 字（目安 80-180、+10 字超過）; ⚠ 263 字（目安 155-250、+13 字超過） |
+| C-5 | xAI | drafting | ⚠ 強い断定語「最新」が入っている可能性（要確認） |
+| C-52 | Demis Hassabis | drafting | ⚠ 57 字（目安 25-50、+7 字超過）; ⚠ 264 字（目安 155-250、+14 字超過） |
+| C-53 | Andrej Karpathy | needs_review | ⚠ 56 字（目安 20-50、+6 字超過）; ⚠ 253 字（目安 155-250、+3 字超過） |
+| C-7 | Hugging Face | drafting | ⚠ 191 字（目安 80-180、+11 字超過） |
 | D-21 | GPT-4 系 | drafting | ⚠ 311 字（目安 155-250、+61 字超過） |
 | D-22 | o1 系 | drafting | ⚠ 273 字（目安 155-250、+23 字超過） |
+| D-23 | o3 系 | drafting | ⚠ 276 字（目安 155-250、+26 字超過） |
+| D-24 | GPT-3 系 | drafting | ⚠ 55 字（目安 25-50、+5 字超過）; ⚠ 317 字（目安 155-250、+67 字超過） |
 | D-30 | Grok 系 | drafting | ⚠ 256 字（目安 155-250、+6 字超過） |
 | D-40 | Llama 系 | drafting | ⚠ 296 字（目安 155-250、+46 字超過） |
+| D-41 | Mistral 系 | drafting | ⚠ 253 字（目安 155-250、+3 字超過） |
+| D-42 | Gemma 系 | drafting | ⚠ 311 字（目安 155-250、+61 字超過） |
 | E-20 | MMLU | drafting | ⚠ 73 字（目安 25-60、+13 字超過）; ⚠ 265 字（目安 155-250、+15 字超過） |
 | F-1 | JavaScript | drafting | ⚠ 255 字（目安 155-250、+5 字超過）; ⚠ です・ます外れの疑いあり（(?<![すまりぞ])だ[。\s] のパターン、要目視確認） |
 | F-10 | React | drafting | ⚠ 245 字（目安 120-240、+5 字超過） |
 | F-11 | Next.js | needs_review | ⚠ 197 字（目安 80-180、+17 字超過）; ⚠ 268 字（目安 155-250、+18 字超過）; ⚠ 469 字（目安 220-430、+39 字超過） |
 | F-30 | VS Code | drafting | ⚠ 294 字（目安 155-250、+44 字超過） |
 | F-4 | HTML | drafting | ⚠ 70 字（目安 25-60、+10 字超過）; ⚠ 200 字（目安 80-180、+20 字超過）; ⚠ 318 字（目安 155-250、+68 字超過） |
+| F-40 | npm | drafting | ⚠ 184 字（目安 80-180、+4 字超過）; ⚠ 268 字（目安 155-250、+18 字超過）; ⚠ 446 字（目安 220-430、+16 字超過） |
+| F-41 | Vite | drafting | ⚠ 274 字（目安 155-250、+24 字超過） |
 | F-5 | CSS | drafting | ⚠ 24 字（目安 25-50、-1 字不足）; ⚠ 257 字（目安 155-250、+7 字超過） |
 | F-6 | Markdown | drafting | ⚠ 271 字（目安 155-250、+21 字超過） |
 | F-60 | GitHub | drafting | ⚠ 298 字（目安 155-250、+48 字超過） |
+| F-7 | YAML | drafting | ⚠ 263 字（目安 155-250、+13 字超過）; ⚠ 439 字（目安 220-430、+9 字超過） |
+| F-8 | JSON | drafting | ⚠ 263 字（目安 155-250、+13 字超過） |
+| F-90 | Docker | drafting | ⚠ 303 字（目安 155-250、+53 字超過） |
 | G-1 | Context | needs_review | ⚠ 65 字（目安 20-50、+15 字超過） |
 | G-10 | Prompt Engineering | drafting | ⚠ 275 字（目安 120-240、+35 字超過）; ⚠ 293 字（目安 155-250、+43 字超過）; ⚠ 489 字（目安 220-430、+59 字超過） |
 | G-11 | Context Engineering | drafting | ⚠ 51 字（目安 25-50、+1 字超過）; ⚠ 52 字（目安 20-50、+2 字超過）; ⚠ 275 字（目安 155-250、+25 字超過） |
+| G-13 | Few-shot Learning | drafting | ⚠ 63 字（目安 20-50、+13 字超過）; ⚠ 272 字（目安 155-250、+22 字超過）; ⚠ 446 字（目安 220-430、+16 字超過） |
+| G-14 | Thinking モデル | drafting | ⚠ 254 字（目安 155-250、+4 字超過） |
 | G-20 | CLAUDE.md | drafting | ⚠ 185 字（目安 80-180、+5 字超過）; ⚠ 263 字（目安 155-250、+13 字超過） |
+| G-21 | AGENTS.md | drafting | ⚠ 254 字（目安 155-250、+4 字超過） |
 | G-30 | Tool Use | drafting | ⚠ 297 字（目安 155-250、+47 字超過） |
 | G-4 | System Prompt | drafting | ⚠ 181 字（目安 80-180、+1 字超過）; ⚠ 329 字（目安 155-250、+79 字超過） |
 | G-5 | Context Window | drafting | ⚠ 58 字（目安 25-50、+8 字超過）; ⚠ 266 字（目安 155-250、+16 字超過） |
@@ -54,13 +79,18 @@ _なし_
 | J-51 | Hallucination | drafting | ⚠ 51 字（目安 25-50、+1 字超過）; ⚠ 183 字（目安 80-180、+3 字超過）; ⚠ 267 字（目安 155-250、+17 字超過） |
 | J-77 | GPU (概念) | drafting | ⚠ `title` 末尾に括弧書きが含まれます — 読み・展開は `title_reading` フィー; ⚠ 255 字（目安 155-250、+5 字超過） |
 
-## ✍️ 書きかけ（drafting・全パス済み・自動昇格漏れ）（4 件）
+## ✍️ 書きかけ（drafting・全パス済み・自動昇格漏れ）（9 件）
 
 | ID | title | status | 概要 |
 | :-- | :-- | :-- | :-- |
+| B-30 | Amazon Bedrock | drafting | — |
+| C-4 | Meta AI | drafting | — |
 | D-1 | Gemini 2 系 | drafting | — |
+| D-10 | Claude 3 系 | drafting | — |
 | E-2 | SWE-Bench Verified | drafting | — |
 | E-50 | Chatbot Arena | drafting | — |
+| G-22 | SKILL.md | drafting | — |
+| G-3 | Dictation | drafting | — |
 | J-13 | Transformer | drafting | — |
 
 ## 📝 著者レビュー待ち（needs_review・全パス）（30 件）

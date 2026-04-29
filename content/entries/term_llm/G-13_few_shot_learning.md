@@ -1,70 +1,63 @@
 ---
 id: G-13
 title: Few-shot Learning
+title_reading: フューショットラーニング
 category: term_llm
 subtype: technique
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: partial
+reader_level: 3
+figure_type: comparison
 page_layout: spread_v1
 start_date:
 end_date:
 version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - Prompt Engineering
+  - Zero-shot
+  - One-shot
+  - Context Engineering
+  - Fine-tuning
+status: drafting
 ---
 
 # Few-shot Learning
 
 <!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
+バイブコーディング図鑑 エントリー雛形 v2（2ページ見開き想定、iter 22 準拠）
 -->
 
 ## tagline
 
-少数の例示で学習させる手法
-
+数個の例示を渡すだけで AI の出力を意図した形に近づける手法です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+Few-shot Learning（フューショットラーニング、少数例示学習）とは、LLM（大規模言語モデル）への入力に「入力と出力の例」を数件添えることで、モデルを再学習させずに望む形式・スタイルへ誘導する技術です。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+プロンプトに「例：質問→回答」のペアをいくつか書くとき、あるいは ChatGPT や Claude に「以下の形式で答えてください。例1…例2…」と伝えるときに使っています。Context Engineering（G-11）の代表的な実装例として紹介されることが多い概念です。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+Zero-shot・One-shot・Few-shot の 3 パターンを横に並べ、例示の数が増えるほど出力が整うことを視覚的に伝える。
 
+### B. 登場シーン（figure_type: comparison）
+
+- シーン1（Zero-shot）: 例なしで「ポジティブかネガティブか答えて」と入力する人物。AI が形式不定の返答をする
+- シーン2（One-shot）: 1 件の例を添えて送る人物。AI が例に沿った形式で返す
+- シーン3（Few-shot）: 3 件の例を添えて送る人物。AI が安定してラベルのみを返す
+- 並べる基準: 例示の件数と出力の安定度の対比
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「Few-shot で例を 3 件渡したら、出力形式がきれいに揃いますよ。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,81 +65,72 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+例示をプロンプトに含めて、LLM の出力形式やスタイルを誘導します。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+モデルの重みを変えずに挙動を調整できるため、手軽さとコスト効率が両立します。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+例示が偏ると出力も偏るため、例の質と多様性が精度を左右します。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+定型フォーマットの分類・抽出タスクで例示効果が特に出やすいです。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Zero-shot との対比で「例あり・なし」の差を試すと効果を体感できます。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Prompt Engineering, Context Engineering（G-11）, Zero-shot
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. タスク定義 — 期待する入力と出力の形式をゴールとして整理する
+2. 例の準備 — 実際の入出力ペアを 2〜5 件選び、質と多様性を確認する
+3. プロンプトに組み込む — 例示をシステムまたはユーザー指示の冒頭に配置する
+4. 出力を評価 — Zero-shot との比較で例示の効果を確認する
+5. 例数を調整 — 例が多すぎると Token を消費するため、必要最小数に絞る
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- Prompt Engineering
+- Zero-shot
+- One-shot
+- Context Engineering
+- Fine-tuning
 
-- 用語A —
-- 用語B —
-- 用語C —
-
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: comparison）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左から右へ「Zero-shot／One-shot／Few-shot」の 3 列を並べた対比図。列ごとにプロンプト欄と AI の返答欄を示す
+- 登場人物: ノート PC に向かうビジネスパーソン（1 人）。3 列とも同じ人物が例示の数だけ異なる入力をする演出
+- 吹き出し・心の声: Zero-shot 列「形式がバラバラ…」、Few-shot 列「毎回同じ形式で返ってくる！」
+- 中央に置くキーワード/ラベル: 「例示の数が精度を決める」
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +138,27 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: ゴールと出力形式を付箋に書く人
+- Step 2 のアイコン/絵柄: 入出力ペアのカードを選ぶ手
+- Step 3 のアイコン/絵柄: プロンプト欄に例を貼り付けるキーボード操作
+- Step 4 のアイコン/絵柄: Zero-shot と Few-shot の出力を並べて見るルーペ
+- Step 5 のアイコン/絵柄: 不要な例を削るハサミ
+- 矢印で示す流れの意図: 「定義 → 例の選定 → 組み込み → 評価 → 最適化」の順で進む
 
 ## コミュニティ補完メモ
 
+- G-10 Prompt Engineering との住み分け：Few-shot は Prompt Engineering の中核技術の 1 つ。本エントリは「例示を使う」という操作に絞る。指示文全体の設計原則は G-10 へ誘導する
+- G-11 Context Engineering との住み分け：Few-shot は Context に例を置く実装手段。Context 全体の設計思想は G-11 へ誘導する
+- G-6 One-shot との住み分け：One-shot は例示が 1 件の特殊ケース。Few-shot（複数例）との連続性を示す兄弟エントリ
+- J-16 Fine-tuning との違い：Few-shot は重みを変えず例示で誘導。Fine-tuning はモデルの重みを更新する別アプローチ
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- arXiv:2005.14165 "Language Models are Few-Shot Learners"（GPT-3 論文）— checked 2026-04-29
+- docs.anthropic.com（Anthropic プロンプトガイド） — checked 2026-04-29
+- platform.openai.com/docs/guides/prompt-engineering — checked 2026-04-29
 
 ## 備考
+
+- Few-shot の「few」は文脈により 2〜10 件程度を指すことが多いが、明確な定義はなく、One-shot（1 件）・Zero-shot（0 件）との連続体として理解するのが自然
+- 例示の件数が増えると Token を消費するため、長い文書タスクでは件数と Context 長のトレードオフが生じる

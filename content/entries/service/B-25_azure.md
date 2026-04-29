@@ -1,69 +1,59 @@
 ---
 id: B-25
 title: Azure
+title_reading: マイクロソフトアジュール
 category: service
 subtype: hosting_cloud
-experience_level:
-reader_level:
+experience_level: research_only
+reader_level: "2-4"
 figure_type: structure
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: paid
+evaluation_date: 2026-04-29
+related_terms:
+  - AWS
+  - Google Cloud
+  - Azure OpenAI
+  - Microsoft 365
+  - App Service
+status: drafting
 ---
 
 # Azure
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-Microsoft のクラウド
-
+Microsoft Azure の略称。VM・App Service・Functions など 200 以上のサービスを傘下に持つクラウド基盤です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+仮想マシン（VM）・App Service（Web アプリ実行）・Functions（サーバーレス）・AKS（コンテナ管理）・Cosmos DB（データベース）など、アプリ運用のインフラをクラウドで提供します。AI モデル呼び出しには Azure OpenAI を使います。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+Microsoft 製品を多く使う企業では、既存の Microsoft 365 や Active Directory との統合しやすさから Azure が選ばれることがあります。開発チームから「デプロイ先は Azure」「App Service に載せています」と聞いたときが最初の接触点です。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+Azure という傘の下に VM・App Service・Functions・Azure OpenAI が並ぶ構造を示し、「どのサービスが何をしているか」を 1 枚で掴めるようにします。
+
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: Azure（Microsoft Azure）
+- 周辺の要素: VM（仮想サーバー）／App Service（Web アプリ実行）／Functions（サーバーレス実行）／Azure OpenAI（AI モデル呼び出し）／Cosmos DB（データベース）
+- 関係の描き方: 中央に Azure ロゴ、4 方向に各サービスが枝として伸びる。非エンジニアの担当者が「うちのサービスの裏側」を見ている構図
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「本番環境は Azure の App Service で動いているので、Azure OpenAI の接続設定も確認しておきます。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,69 +62,60 @@ Microsoft のクラウド
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+クラウド上でインフラを一式提供するサービス群です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Microsoft 365 や Active Directory と連携しやすいです。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+サービスが多く、どれを選ぶか迷うことがあります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Web 運用・AI 組み込み・企業認証基盤に使えます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+VM・App Service・Functions の 3 つが入口として理解しやすいです。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Azure OpenAI、AWS、Google Cloud。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. インフラ設計 — Azure の中から必要なサービスを選定します
+2. 環境構築 — VM や App Service を立ち上げ、Cosmos DB に置き場を作ります
+3. アプリデプロイ — コードを Azure 上に載せて公開できる状態にします
+4. AI 機能の追加 — Azure OpenAI 経由でモデルを呼び出しアプリに組み込みます
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- AWS
+- Google Cloud
+- Azure OpenAI
+- Microsoft 365
+- App Service
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,31 +124,41 @@ Microsoft のクラウド
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 中央に「Azure」のロゴノード。四方向に枝が伸び、VM（サーバーアイコン）・App Service（Web アイコン）・Functions（稲妻アイコン）・Azure OpenAI（脳／AI アイコン）が並ぶ。手前に非エンジニアの担当者が「これがうちの会社のシステムか…」と眺めている構図
+- 登場人物: 非エンジニアの担当者（ノート PC を持って Azure ポータルを眺める人）
+- 吹き出し・心の声: 「これがうちのサービスの裏側か…」「Microsoft のだから設定がつながってる」
+- 中央に置くキーワード/ラベル: Azure ＝ クラウドの傘
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 設計図アイコン — インフラ設計
+- Step 2 のアイコン/絵柄: サーバー＋DB アイコン — 環境構築
+- Step 3 のアイコン/絵柄: ロケット／デプロイアイコン — アプリデプロイ
+- Step 4 のアイコン/絵柄: 脳／AI アイコン＋矢印 — Azure OpenAI で AI 追加
+- 矢印で示す流れの意図: 設計 → 構築 → デプロイ → AI 追加 の開発の進行
 
 
 ## コミュニティ補完メモ
 
+- Azure OpenAI（AI モデルの呼び出し）は B-26 で個別に扱います。本エントリは「Azure 全体の傘と代表サービス」に絞ります
+- AWS（B-23）・Google Cloud（B-24）との対比は各エントリに任せ、本エントリでは言及を最小限にします
+- Microsoft 365 との統合は Azure の独自色として 1 文だけ「どこで出会うか」で触れ、詳細は本エントリのスコープ外とします
+- Microsoft AI（C-8）・Microsoft Copilot（B-15）との住み分け: Azure はインフラ基盤、Copilot は AI アシスタント体験、Azure OpenAI は企業向けモデル API と役割が異なります
+- AKS（Azure Kubernetes Service）・Cosmos DB・Active Directory 連携などの詳細は本文に入れず、誌面ポンチ絵の補足候補として備考に保存します
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- [azure.microsoft.com](https://azure.microsoft.com) — checked 2026-04-29
+- [azure.microsoft.com/ja-jp/overview/](https://azure.microsoft.com/ja-jp/overview/) — checked 2026-04-29
 
 
 ## 備考
+
+- モデル・料金・提供状況は時変情報です。evaluation_date: 2026-04-29 を持たせます
+- Azure は experience_level: research_only（著者はインフラ管理者ではなく、利用側の立場）
+- 正式名称は Microsoft Azure。略称「Azure」が一般的。title_reading には「英単語をカタカナで並べた読み」としてマイクロソフトアジュールを入れています（2026-04-29）
+- 3 大クラウド（AWS・Azure・Google Cloud）の一角として位置づけ、エンタープライズ・Microsoft 製品ユーザー層に強みを持つ点が B-23 / B-24 との差分

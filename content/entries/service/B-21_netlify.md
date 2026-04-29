@@ -1,69 +1,52 @@
 ---
 id: B-21
 title: Netlify
+title_reading: ネットリファイ
 category: service
 subtype: hosting_cloud
-experience_level:
-reader_level:
+experience_level: partial
+reader_level: "2-3"
 figure_type: structure
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: freemium
+evaluation_date: 2026-04-29
+related_terms:
+  - デプロイ
+  - CI/CD
+  - Jamstack
+  - サーバレス
+  - GitHub
+status: drafting
 ---
 
 # Netlify
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-静的サイト／JAMStack ホスティング
-
+Git push で静的サイトが自動公開される、Jamstack（ジャムスタック）対応のホスティングサービスです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+Git リポジトリに push すると、自動でビルド・デプロイし、グローバル CDN（コンテンツ配信ネットワーク）でサイトを配信します。フォームや認証などの周辺機能も追加でき、静的サイトに動きを持たせることができます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+個人ブログや社内向けドキュメントサイトを「無料で公開したい」という場面で登場します。AI に「静的サイトを公開する方法は」と尋ねると、Netlify と GitHub の連携手順が出てくることがあります。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
-
+「push したらサイトが世界に届く」という流れを 3 段で示し、Netlify がどこで動いているかを掴んでもらいます。
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Netlify は GitHub に push するだけで静的サイトが公開できます。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,69 +55,61 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+push をトリガーにビルド・デプロイ・CDN 配信を自動化します。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+無料枠で個人サイトが立ち、設定ファイルも最小限で済みます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+動的処理は Functions（サーバレス）利用で、制限があります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ブログや LP など静的サイトの公開・共有に向いています。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+GitHub 連携と自動デプロイの流れを最初に押さえます。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Jamstack、CI/CD、サーバレス、Vercel（バーセル）。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. コード編集 — ローカルでサイトの内容を変更し、動作を確認する
+2. Git push — GitHub にコードを送ると Netlify が自動で検知する
+3. 自動ビルド — Netlify がビルドを実行し、成果物を生成する
+4. CDN 配信 — グローバル CDN にデプロイされ、URL でアクセスできる状態になる
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- デプロイ
+- CI/CD
+- Jamstack
+- サーバレス
+- GitHub
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,31 +118,36 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左から「Git push」「Netlify 自動ビルド」「CDN 配信」の 3 段フローを矢印でつなぐ
+- 登場人物: 開発者（ノート PC で push する人）とサイト閲覧者（スマホでサイトを開く人）の 2 名
+- 吹き出し・心の声: 開発者「push しました！」、閲覧者「もう公開されてる、早いですね」
+- 中央に置くキーワード/ラベル: push → ビルド → CDN 配信
 
 ### 6 視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: ノート PC ＋ 鉛筆（コード編集）
+- Step 2 のアイコン/絵柄: 矢印付き Git ブランチ（push）
+- Step 3 のアイコン/絵柄: 歯車（自動ビルド）
+- Step 4 のアイコン/絵柄: 地球儀＋矢印（CDN 配信）
 
 
 ## コミュニティ補完メモ
 
+- Vercel（B-20）との住み分け：Vercel は Next.js 親和性が高くフロントエンド特化。Netlify は Jamstack 全般に対応し Forms / Identity / Edge Functions などの周辺機能も持つ
+- Cloudflare Pages（B-22）との住み分け：Cloudflare は CDN・セキュリティ機能が強み。Netlify は Forms や Identity など独自機能で差別化している
+- Forms / Identity / Edge Functions などの周辺機能は本エントリでは名称のみに留め、詳細は各機能エントリへ
+
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- netlify.com — checked 2026-04-29
 
 
 ## 備考
+
+- 料金プラン（Starter 無料 / Pro / Enterprise）は時変情報です。evaluation_date を必ず持たせます
+- 2010 年代後半に Jamstack という用語の普及とともに広まったサービスです

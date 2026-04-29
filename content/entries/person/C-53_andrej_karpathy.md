@@ -1,70 +1,64 @@
 ---
 id: C-53
 title: Andrej Karpathy
+title_reading: アンドレイ カルパシー
 category: person_org
 subtype: person
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: research_only
+reader_level: "2-3"
+figure_type: timeline
 page_layout: spread_v1
 start_date:
 end_date:
 version_status:
 pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+evaluation_date: 2026-04-29
+related_terms:
+  - バイブコーディング
+  - nanoGPT
+  - Neural Networks Zero to Hero
+  - OpenAI
+  - Eureka Labs
+status: needs_review
 ---
 
 # Andrej Karpathy
 
 <!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
+バイブコーディング図鑑 エントリー v2（spread_v1、2026-04-29 執筆）
 -->
 
 ## tagline
 
-元 OpenAI／Tesla の AI リーダー。YouTube で LLM 教育を発信
-
+深層学習の教育者・概念発信者。「バイブコーディング」の語を広めた研究者です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+YouTube の「Neural Networks: Zero to Hero」シリーズや nanoGPT などの教育的 OSS を通じて、LLM（大規模言語モデル）の仕組みを分かりやすく解説しています。AI 入門者が概念を掴むための起点として機能します。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+「バイブコーディング」という語を 2025 年初頭に X（旧 Twitter）で発信したキーパーソンとして本書に登場します。AI 学習の文脈では YouTube や GitHub で名前が出ることが多い存在です。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+読者が目にする Andrej Karpathy の「4 つの役割の節目」を時系列で並べ、AI 教育の文脈でどう登場するかを示します。
 
+### B. 登場シーン（figure_type: timeline）
+
+- シーン1: 2014〜2022年 — Stanford CS231n 講師・OpenAI 共同創業期メンバー・Tesla Director of AI として AI 開発の実務と研究を牽引
+- シーン2: 2022〜 — nanoGPT・micrograd などの教育的 OSS を公開。LLM の仕組みを最小構成のコードで可視化
+- シーン3: 2023〜 — OpenAI に復帰後、YouTube「Neural Networks: Zero to Hero」を更新。深層学習の入門教材として広く参照される
+- シーン4: 2025〜 — X に「バイブコーディング」を投稿して普及。Eureka Labs を創業し AI 教育プラットフォームを構築中
+- 並べる基準: 時系列（読者が記事・動画・X で出会う順）
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「Karpathy の nanoGPT は LLM の仕組みを学ぶ教材として参照できます。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,54 +66,45 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI 教育・概念発信のキーパーソンとして業界に影響を与えています。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+動画・OSS で LLM の仕組みを無料で学べる入口を提供しています。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+個人発言と所属組織の方針は別物のことがあります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+LLM の仕組みを学ぶ入門段階や語彙の背景理解に役立ちます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+「バイブコーディング」の発信者・nanoGPT 作者という 2 点を押さえます。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+バイブコーディング（G-40）、nanoGPT、Eureka Labs。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. 教育 OSS の公開 — nanoGPT・micrograd で LLM の最小実装を公開
+2. YouTube シリーズ更新 — 「Zero to Hero」で LLM の仕組みを段階的に解説
+3. 「バイブコーディング」発信 — 2025 年初頭、X への投稿で語が普及
+4. Eureka Labs 創業 — AI 教育プラットフォームの構築を開始
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- バイブコーディング
+- nanoGPT
+- Neural Networks Zero to Hero
+- OpenAI
+- Eureka Labs
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
@@ -141,33 +126,46 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: timeline）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 横一列の時系列バー。左から「Stanford 講師・Tesla AI（〜2022）」「教育 OSS 公開（2022〜）」「YouTube Zero to Hero（2023〜）」「バイブコーディング発信・Eureka Labs（2025〜）」の 4 点
+- 登場人物: カジュアルなシャツ姿の男性シルエット（Karpathy のイメージ）。各節目の吹き出しで語りかける
+- 吹き出し・心の声: 「最小のコードで理解できます」（nanoGPT）／「ゼロから英雄へ」（YouTube）／「バイブコーディングです」（X 投稿）／「AI で教育を変えます」（Eureka Labs）
+- 中央に置くキーワード: Andrej Karpathy ＝ 深層学習の教育者・概念の発信者
 
 ### 6 視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: コード・GitHub マーク（教育 OSS）
+- Step 2 のアイコン/絵柄: 再生ボタン・動画（YouTube シリーズ）
+- Step 3 のアイコン/絵柄: X（旧 Twitter）ロゴ・吹き出し（バイブコーディング投稿）
+- Step 4 のアイコン/絵柄: 会社ビル・電球（Eureka Labs 創業）
+- 矢印で示す流れの意図: 時系列で「OSS → 動画 → 概念発信 → 教育プラットフォーム」の流れを示す
 
 
 ## コミュニティ補完メモ
 
+- 「バイブコーディング」の概念詳細は G-40 バイブコーディングで扱います。本エントリは「発信者としての Karpathy の位置」に絞ります
+- OpenAI の組織・事業構造は C-1 OpenAI で扱います。Karpathy の在籍期間はここでは経歴の事実として言及するにとどめます
+- nanoGPT・micrograd の技術詳細は本エントリのスコープ外。「教育的 OSS として公開した」事実のみ記述します
+- Stanford CS231n（コンピュータビジョン）の授業としての詳細は記述しない。ここでは教育者としての実績の一つとして言及するにとどめます
+
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- https://karpathy.ai — checked 2026-04-29
+- https://github.com/karpathy/nanoGPT — checked 2026-04-29
+- https://www.youtube.com/@AndrejKarpathy — checked 2026-04-29
+- https://x.com/karpathy — checked 2026-04-29
 
 
 ## 備考
+
+- experience_level を research_only に設定。本書著者は Andrej Karpathy に直接会っておらず、公開情報ベースの調査です
+- 「バイブコーディング」の X 投稿は 2025 年 2 月ごろとされています。語の普及は投稿後のコミュニティ拡散によるものです
+- Tesla Director of AI としての在籍期間（2017〜2022 年）、OpenAI 復帰（2023 年）、退職（2024 年）は主要な経歴の事実として扱います
+- Eureka Labs は 2024 年創業のスタートアップで、AI を使った教育プラットフォームを開発中。詳細は時変情報のため最小限の言及にとどめます
+- figure_type を timeline に設定。人物系エントリの文体は C-50 Sam Altman / C-51 Dario Amodei に揃えています

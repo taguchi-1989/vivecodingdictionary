@@ -1,69 +1,57 @@
 ---
 id: C-7
 title: Hugging Face
+title_reading: ハギングフェイス
 category: person_org
 subtype: company
-experience_level:
-reader_level:
+experience_level: partial
+reader_level: "2-3"
 figure_type: structure
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2016
+version_status: active
+pricing_note: freemium
+evaluation_date: 2026-04-29
+related_terms:
+  - オープンモデル
+  - transformers
+  - Spaces
+  - Llama
+  - Mistral
+status: drafting
 ---
 
 # Hugging Face
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-モデル・データセット共有のプラットフォーム
-
+AI モデルとデータセットを誰でも共有できるプラットフォームです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+オープンモデル・データセット・デモアプリを集めた共有基盤です。Models / Datasets / Spaces / transformers ライブラリの 4 本柱で構成され、「AI の GitHub」と呼ばれます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+Llama や Mistral などのオープンモデルを探すとき、最初に行き着く場所です。transformers ライブラリは Python で AI を扱う事実上の標準で、コードサンプルを検索すると高頻度で登場します。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+Hugging Face が「1 つのプラットフォームに何を束ねているか」を 4 本柱で示します。会社名より「場所」として覚えてもらうのが目的です。
 
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: Hugging Face（2016 年設立）
+- 周辺の要素（4 個）: Models（公開モデル置き場）／Datasets（学習データ置き場）／Spaces（デモホスティング）／transformers（Python ライブラリ）
+- 関係の描き方: 中央に HF ロゴ、四方に 4 本柱アイコンを配置し、包含の丸で囲む
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Llama はまず Hugging Face で配布モデルを確認してから使うのが定番です。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,69 +60,61 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+オープンモデルとデータセットの中心的な流通プラットフォームです。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+無料で最新のオープンモデルをすぐ試せて、Spaces でデモも確認できます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+モデルの品質はまちまちで、ライセンスは個別に確認が必要です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+自前で AI を動かしたい人がモデル選定と動作確認をするとき。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Models 検索と transformers ライブラリの関係をまず把握します。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+transformers、Llama、Mistral、Gradio。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. モデルを探す — huggingface.co の Models でキーワード検索し候補を絞る
+2. ライセンス確認 — 商用利用可否を README と Model Card で確認する
+3. Spaces で試す — Gradio デモで動作を確認してから導入を判断する
+4. ローカルに取得 — transformers でモデルをダウンロードして推論を実行する
+5. データセット活用 — Datasets からファインチューニング用データを取得する
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- オープンモデル
+- transformers
+- Spaces
+- Llama
+- Mistral
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,31 +123,41 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 中央に HF のロゴ（抱き合うロボットのアイコン）を置き、四方に 4 本柱を示すアイコンを配置。Models（モデルの箱）、Datasets（テーブルアイコン）、Spaces（ブラウザ画面アイコン）、transformers（Python ヘビアイコン）
+- 登場人物: 若い研究者（20 代男性）がラップトップで HF のモデル検索ページを見ている
+- 吹き出し・心の声: 「Llama がここで全部揃う！モデルもデータもデモも」
+- 中央に置くキーワード/ラベル: Hugging Face = AI モデルの流通ハブ
 
 ### 6 視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 検索アイコン（モデルを探す）
+- Step 2 のアイコン/絵柄: 書類・ライセンスアイコン（ライセンス確認）
+- Step 3 のアイコン/絵柄: 再生ボタン（Spaces で試す）
+- Step 4 のアイコン/絵柄: ダウンロード矢印（ローカルに取得）
+- Step 5 のアイコン/絵柄: データベースアイコン（データセット活用）
+- 矢印で示す流れの意図: 「探す → 確認 → 試す → 取得 → 活用」の導入サイクル
 
 
 ## コミュニティ補完メモ
 
+- Llama（D-40）との住み分け：Llama はモデル自体の解説、Hugging Face（C-7）はその配布先・流通プラットフォームとして扱います
+- Mistral（D-41）も同様の位置づけです
+- transformers ライブラリは Hugging Face 社が開発した Python（F-3）向けライブラリです。個別エントリが立つ場合は F 系で扱い、C-7 は「ライブラリの提供元」の説明に留めます
+- Spaces は Gradio / Streamlit ベースのデモホスティング機能。Gradio 個別エントリとの重複を避けるため、C-7 では「デモ確認の場所」程度の言及に留めます
+- GitHub（I-11）との住み分け：コードのバージョン管理は GitHub、AI モデル・データセットの共有は Hugging Face と整理します
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- <https://huggingface.co> — checked 2026-04-29
+- <https://huggingface.co/docs/transformers> — checked 2026-04-29
 
 ## 備考
+
+- 2016 年設立、本社はニューヨーク。当初はチャットボット会社として出発し、のちに AI コミュニティプラットフォームへ転換しました
+- 無料 / Pro / Enterprise の 3 段階プランがあり、料金は変動することがあります。evaluation_date を参照してください
+- 「Hugging Face」の社名は、テキストのニュアンスをとらえる NLP 技術への親しみを表した名前です（顔文字の :hugging_face: に由来）
+- Enterprise Hub などの法人向け機能は時変情報のため本文では触れていません

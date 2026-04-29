@@ -1,69 +1,62 @@
 ---
 id: B-7
 title: Claude Code
+title_reading: クロードコード
 category: service
 subtype: ai_assistant
-experience_level:
-reader_level:
+experience_level: hands_on
+reader_level: 2
 figure_type: structure
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2025-02-01
+version_status: active
+pricing_note: paid
+evaluation_date: 2026-04-29
+related_terms:
+  - Claude
+  - Anthropic
+  - CLAUDE.md
+  - MCP
+  - エージェント
+status: drafting
 ---
 
 # Claude Code
 
 <!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
+バイブコーディング図鑑 エントリー v2（spread_v1 準拠）
 -->
 
 ## tagline
 
-Anthropic の CLI／エージェント型開発支援
-
+Anthropic が提供するエージェント型の AI コーディングツールです。ターミナルからファイル編集・実行・Git 操作まで任せられます。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+ターミナル（CLI）上で動き、コードの新規生成・ファイル編集・テスト実行・Git 操作をひとつながりでこなします。Cursor（カーソル）のようなエディタ統合型とは異なり、コマンドラインから直接プロジェクト全体を操作できます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+「Claude Code で実装した」「CC で直してもらった」という表現で技術記事や SNS によく登場します。本書自体も Claude Code を使って執筆しており、プロンプトを渡すだけでファイルが更新される体験がバイブコーディングの典型例です。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+CLI・エディタ拡張・Claude モデル・ツール群という 4 層の関係を整理し、「Claude Code がどこで何をしているか」を全体像で示します。
 
+### B. 登場シーン（figure_type: structure）
+
+- シーン1: 開発者がターミナルで `claude` を起動し、自然言語で「この関数をリファクタリングして」と指示する
+- シーン2: 内部の Claude モデルがファイル読み取り・編集・実行を順番にこなす（エージェントループ）
+- シーン3: MCP（Model Context Protocol）経由で外部ツールやデータベースとも接続できる
+- 並べる基準: 操作者の目線 → 内部の動き → 拡張性の順
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Claude Code に CLAUDE.md を置いておくと、毎回指示しなくて楽ですよね。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,69 +65,61 @@ Anthropic の CLI／エージェント型開発支援
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+CLI から動くエージェント型の AI コーディングツールです。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ファイル読み取り・編集・実行を連続指示でき、手作業が減ります。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+API 従量課金のため、複雑な指示では費用が積み上がることがあります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+リファクタリングや複数ファイルにまたがる変更に効果が出やすいです。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+`npm install -g @anthropic-ai/claude-code` で入れて試せる段階。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+CLAUDE.md（G-20）、MCP（I-1）、エージェント（D-40）
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. インストール — npm で入れて `claude` コマンドが使えるようにします
+2. CLAUDE.md を置く — プロジェクト固有のルールを読み込ませます
+3. 自然言語で指示 — 「この機能を追加して」とチャット形式で伝えます
+4. エージェントが実行 — ファイル編集・テスト・Git を自律的にこなします
+5. 差分を確認 — 変更内容を人が目視して承認します
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- Claude
+- Anthropic
+- CLAUDE.md
+- MCP
+- エージェント
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,10 +128,10 @@ Anthropic の CLI／エージェント型開発支援
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 4 層の縦積み構造。上から「開発者（人物）」→「CLI ターミナル画面」→「Claude モデル（思考中のアイコン）」→「ツール群（ファイル・Git・テスト・MCP）」
+- 登場人物: 開発者 1 名。ターミナルに向かって指示を打っている姿
+- 吹き出し・心の声: 開発者「リファクタリングして」/ Claude「ファイル確認中…」/ ツール「実行完了！」
+- 中央に置くキーワード/ラベル: Claude Code ＝ CLI + エージェントループ
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +139,28 @@ Anthropic の CLI／エージェント型開発支援
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: ダウンロード矢印 — インストール
+- Step 2 のアイコン/絵柄: 設定ファイルアイコン — CLAUDE.md
+- Step 3 のアイコン/絵柄: チャット吹き出し — 自然言語指示
+- Step 4 のアイコン/絵柄: 歯車ループ — エージェント実行
+- Step 5 のアイコン/絵柄: 差分（diff）アイコン — 人による確認
+- 矢印で示す流れの意図: セットアップ → 設定 → 指示 → 自律実行 → 確認の一方向ループ
 
 ## コミュニティ補完メモ
 
+- Claude 本体（B-2）との住み分け：Claude は AI モデルのブランド全体。Claude Code はそのうちの CLI／エージェント型ツールに絞った入口です
+- Cursor（B-4）との住み分け：Cursor はエディタ統合型（GUI）。Claude Code はターミナル操作型（CLI）で、エディタに縛られない点が特徴です
+- GitHub Copilot（B-5）との住み分け：Copilot は補完中心でエディタ内完結。Claude Code はファイル横断・コマンド実行まで踏み込むエージェント型です
+- CLAUDE.md（G-20）との住み分け：CLAUDE.md は Claude Code が読む設定ファイル。本エントリはツール本体を扱い、設定ファイルの詳細は G-20 に任せます
+- 略称 CC は本書プロジェクト内の慣習表現。一般読者向けの本文では略称より「Claude Code」と書き続けます
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- docs.anthropic.com/en/docs/claude-code — checked 2026-04-29
+- claude.ai/claude-code — checked 2026-04-29
+- github.com/anthropics/claude-code — checked 2026-04-29
 
 ## 備考
+
+- 料金は Claude API の従量課金。Anthropic の API キーが必要です。時変情報のため本文への記載は最小限にしています
+- 2025 年 2 月にベータ公開、同年後半に正式リリース。提供形態・機能は変動があるため evaluation_date で管理します

@@ -1,70 +1,59 @@
 ---
 id: B-12
 title: Perplexity
+title_reading: パープレキシティ
 category: service
 subtype: ai_assistant
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: hands_on
+reader_level: 2
+figure_type: workflow
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2022-08
+version_status: active
+pricing_note: freemium
+evaluation_date: 2026-04-29
+related_terms:
+  - Web 検索
+  - 引用
+  - ChatGPT
+  - Deep Research
+  - Sonar
+status: drafting
 ---
 
 # Perplexity
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-AI 検索・回答サービス
-
+質問を入力するとWeb検索して引用付きで答えるAI検索エンジンです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+質問文を送ると、Web上の複数ページをリアルタイムで検索し、内容をまとめて引用リンク付きで返してくれます。情報のソースがその場で確認できるため、回答の信頼性を自分で判断しやすくなります。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+「最新情報をAIに調べさせたい」と思ったときに候補に挙がるサービスです。リリースノートや技術動向など、ChatGPTやClaudeでは学習済みデータ頼みになりがちな質問に使われます。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+質問から引用付き回答までの4ステップを示し、「どこからの情報か」が見えることを伝えます。
 
+### B. 登場シーン（figure_type: workflow）
+
+- シーン1: 担当者が「〇〇の最新価格は？」と入力する
+- シーン2: Perplexityが複数のWebページを検索する — 画面に検索中の様子
+- シーン3: 引用番号付きで回答が表示される — 「①によると…」
+- シーン4: 担当者が引用リンクをクリックして一次ソースを確認する
+- 並べる基準: 検索→生成→確認の時系列
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「Perplexityで調べると引用元がすぐ見えて確認が楽ですね。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,102 +61,96 @@ AI 検索・回答サービス
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Web検索結果を引用付きでまとめて返すAI検索エンジンです。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+回答と一緒に出典リンクが並ぶため、情報源をすぐ辿れます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+引用元の質に依存し、誤情報を正確に引用する場合もあります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+最新動向の調査や、一次ソースを示した上での報告書作成。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Free で使え、内部モデルと引用の仕組みを把握すると安心です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Deep Research（G-35）、Sonar API、Prompt Engineering。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. 調査フェーズ — 技術動向・ライブラリの最新版をPerplexityで確認
+2. 要件整理 — 引用付き回答をそのまま議事メモに貼り付け
+3. 実装中 — エラーコードや仕様変更をリアルタイム検索で確認
+4. レポート作成 — 出典URL付きの要約を報告書の参考資料に活用
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
-
+- Web 検索
+- 引用
+- ChatGPT
+- Deep Research
+- Sonar
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: workflow）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左から「質問入力 → Web検索 → 引用付き回答 → ソース確認」の4コマ横並び
+- 登場人物: ノートPCの前に座るビジネスパーソン（担当者）1名
+- 吹き出し・心の声: Step1「最新情報を調べたい」、Step4「これが元の記事か」
+- 中央に置くキーワード: 引用①②③ のナンバリングが回答文に並ぶ様子
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 虫眼鏡＋Webグローブ
+- Step 2 のアイコン/絵柄: 書類＋クリップ（議事メモ）
+- Step 3 のアイコン/絵柄: ターミナル＋エラーマーク
+- Step 4 のアイコン/絵柄: レポート＋リンクアイコン
+- 矢印で示す流れの意図: 調査から成果物活用までの一方向フロー
 
 
 ## コミュニティ補完メモ
 
+- ChatGPT（B-3）／Claude（B-2）との住み分け：汎用チャットと違い、Web検索と引用表示が主機能。最新情報の調査用途に特化した位置づけ。
+- Deep Research（G-35）との住み分け：Deep Researchは長時間かけて複数ソースを深掘りする上位機能。本エントリはPerplexityの基本的な「質問→検索→引用回答」フローに絞る。
+- 内部モデル（GPT-4系／Claude／自社Sonar等）の詳細はSonar APIエントリで扱う想定。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- perplexity.ai — checked 2026-04-29
 
 ## 備考
+
+- 料金は Free / Pro / Enterprise の3段階。Pro月額料金は時変情報のため本文に記載せず。
+- 内部で利用するモデルはユーザーが切り替え可能（自社Sonar、GPT-4o、Claude等）。モデル詳細は時変情報。

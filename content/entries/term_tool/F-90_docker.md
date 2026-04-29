@@ -1,69 +1,56 @@
 ---
 id: F-90
 title: Docker
+title_reading: ドッカー
 category: term_tool
 subtype: container
-experience_level:
-reader_level:
+experience_level: partial
+reader_level: 3
 figure_type: structure
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: freemium
+evaluation_date: 2026-04-29
+related_terms:
+  - コンテナ
+  - イメージ
+  - Dockerfile
+  - Docker Compose
+  - WSL
+status: drafting
 ---
 
 # Docker
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-コンテナ仮想化。AI 実行環境も一式で配れる
-
+環境差異を封じ込めるコンテナ型仮想化ツールです。「私のマシンでは動く」問題の定番解決策。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+アプリケーションの実行環境をコンテナ（Container）と呼ぶ軽量な箱にまとめ、どの OS でも同じ状態で動かせるようにするツールです。Dockerfile（設定ファイル）を書けば、イメージ（Image）という配布用の雛形を作り、誰でも再現できる環境を配れます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+AI ツールのローカル実行手順や、チームで開発環境を揃えるときに「Docker で動かしてください」という案内を見かけます。WSL（Windows Subsystem for Linux）と組み合わせると Windows でも Linux 向けのコンテナをそのまま動かせます。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+Dockerfile → イメージ → コンテナという 3 段階の流れを 1 枚で見せ、「どの環境でも同じ箱が動く」ことを伝えます。
 
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: コンテナ（どこでも同じ箱）
+- 周辺の要素: Dockerfile（設計図）→ Image（雛形）→ Container（実行）、Mac / Windows / Linux / クラウドの各 OS
+- 関係の描き方: 左から右への矢印で Dockerfile → Image → Container を並べ、Container から各 OS 環境への「動く」矢印を出す
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Dockerfile を書いておけば、環境差異を気にせずチームに配れますよ。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +59,42 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+実行環境をコンテナに封じ込め、どこでも再現できるようにします。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+「私のマシンでは動く」を撲滅し、環境構築の手順書が不要になります。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+初回はイメージのビルド時間がかかります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI ツールのローカル実行や、チームの環境統一に役立ちます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Dockerfile・イメージ・コンテナの 3 語の関係を掴むと入口に立てます。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Docker Compose、Kubernetes、レジストリ（Docker Hub）。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. Dockerfile を書く — 使うミドルウェアや設定を 1 ファイルに記述する
+2. `docker build` — Dockerfile からイメージを生成する
+3. `docker run` — イメージからコンテナを起動し、アプリが動く状態にする
+4. イメージを配布 — チームやクラウドへ渡してどこでも同じ環境を再現する
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- コンテナ
+- イメージ
+- Dockerfile
+- Docker Compose
+- WSL
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,17 +102,17 @@ YAML 補足（本書きで埋める／見直す欄）:
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,31 +121,36 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左に「Dockerfile（設計図アイコン）」→ 中央に「Image（箱の雛形）」→ 右に「Container（実行中の箱）」を矢印でつなぐ。Container の下に Mac・Windows・Linux・クラウドのロゴを並べ、同じ箱が乗っている絵
+- 登場人物: 開発者（1 名）が左端で Dockerfile をパソコンに打ち込んでいる
+- 吹き出し・心の声: 開発者「Dockerfile 1 枚書いたら、どこでも同じ環境が動いた」／右端「私のマシンでは動く、を卒業」
+- 中央に置くキーワード/ラベル: Dockerfile → Image → Container → どこでも動く
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 設計図アイコン（Dockerfile を書く）
+- Step 2 のアイコン/絵柄: ハンマー・ビルドアイコン（docker build）
+- Step 3 のアイコン/絵柄: 再生ボタン（docker run）
+- Step 4 のアイコン/絵柄: 配布・シェアアイコン（イメージを配る）
+- 矢印で示す流れの意図: 設計 → 生成 → 実行 → 共有 のループ
 
 
 ## コミュニティ補完メモ
 
+- Docker Compose（複数コンテナの管理）は本エントリでは深掘り先として 1 語の言及のみ。詳細は別エントリ候補。
+- Kubernetes（コンテナオーケストレーション）は規模が大きく別エントリ候補。本エントリは単体 Docker の概念に絞る。
+- WSL（F-82）は組み合わせシーンとして「どこで出会うか」に言及。Windows ユーザーへの入口として有効。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- docker.com — checked 2026-04-29
+- docs.docker.com — checked 2026-04-29
 
 ## 備考
+
+- Docker Desktop は個人利用は無料、企業利用は有料プラン（pricing_note: freemium）。2026-04-29 時点。
+- OCI（Open Container Initiative）準拠のコンテナランタイムとして Podman なども存在するが、入門語彙として Docker を代名詞として扱う。

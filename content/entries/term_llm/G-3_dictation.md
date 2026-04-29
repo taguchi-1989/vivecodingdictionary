@@ -1,70 +1,59 @@
 ---
 id: G-3
 title: Dictation
+title_reading: ディクテーション
 category: term_llm
 subtype: basic
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: hands_on
+reader_level: 1
+figure_type: workflow
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+evaluation_date: 2026-04-29
+related_terms:
+  - Whisper
+  - Aqua Voice
+  - Prompt Engineering
+  - LLM
+  - Voice Input
+status: drafting
 ---
 
 # Dictation
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-音声入力。会議や指示をテキスト化
-
+キーボードの代わりに声で文字を入力する機能で、AI への指示にも使えます。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+話した言葉をリアルタイムでテキストに変換します。OS 標準機能（macOS・iOS の音声入力、Windows の音声認識）や Whisper（OpenAI の音声認識モデル）などが担い手です。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+バイブコーディングの場面では、AI チャット欄に直接声で指示を送るスタイルが広がっています。Aqua Voice のような専用アプリを使うと、どのアプリでも音声入力が使えます。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+「声で話す → テキスト化 → AI に送る」という 3 ステップの流れを見せ、Dictation が AI 指示の入口になっていることを伝えます。
 
+### A. Before / After（figure_type: workflow）
+
+- Before
+  - 状況: キーボードで長い指示をタイピングしている
+  - 視覚要素: 手を置いたキーボードと長いテキスト
+  - つまずき: 「考えながら打つのが遅い、思考が途切れる」
+- After
+  - 状況: マイクに向かって話すと指示がテキスト化される
+  - 視覚要素: マイクアイコン → テキスト → AI チャット欄
+  - うれしさ: 「頭の中にある指示をそのまま流し込める」
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「Dictation を使うと、Prompt もキーボードなしで書けて速いですよね。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,102 +61,101 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+声をテキストに変換して AI への入力経路を広げます。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+手が塞がっていても、思いついた指示をすぐに送れます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+誤認識が混じるため、送信前に確認が必要なことがあります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+長い Prompt を口述で下書きするときに使い勝手がよいです。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+OS 標準の音声入力をオンにするだけで今日から試せます。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Whisper、Aqua Voice、Prompt Engineering。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. 指示を考える — 頭の中の要件を声で話し始める
+2. テキスト化する — Dictation が音声をリアルタイムで文字に起こす
+3. 確認・修正する — 誤認識箇所を軽く直してから送信する
+4. AI に送る — 清書した Prompt を LLM に入力して回答を得る
+5. 繰り返す — 返答を見ながら次の指示をまた声で追加する
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
-
+- Whisper
+- Aqua Voice
+- Prompt Engineering
+- LLM
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: workflow）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左から「話す人（マイク）」→「テキスト変換（波形アイコン）」→「AI チャット欄（画面）」の 3 ステップを横矢印でつなぐ
+- 登場人物: マイクに向かって話している人（立ち姿、軽くリラックスした表情）
+- 吹き出し・心の声: 人物の吹き出し「要件を声で整理中…」／テキスト化後の画面に「指示：〇〇を作って」という文字列が現れるイメージ
+- 中央に置くキーワード/ラベル: Dictation ＝ 声 → テキスト
 
 ### 6 視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 人物＋吹き出し（考えている）
+- Step 2 のアイコン/絵柄: マイク＋音波（音声入力中）
+- Step 3 のアイコン/絵柄: 鉛筆＋画面（軽く確認）
+- Step 4 のアイコン/絵柄: 送信矢印＋ロボット（AI に送る）
+- Step 5 のアイコン/絵柄: ループ矢印（繰り返し）
+- 矢印で示す流れの意図: 「考える → 話す → 直す → 送る → 繰り返す」のサイクル
 
 
 ## コミュニティ補完メモ
 
+- Whisper（D-71）：OpenAI の音声認識モデルそのもの。本エントリ G-3 は「音声入力というアクション・機能カテゴリ」として書き、特定モデルの詳細は D-71 へ送る。
+- Aqua Voice（B-18）：Dictation を強化する専用サービス。G-3 では名称だけ言及し、詳細は B-18 へ送る。
+- Amical（D-70）：別の音声入力強化ツール。G-3 では言及不要。
+- Voice Input との区別：「Voice Input」は広い概念。Dictation はその中でも「テキスト変換を目的とした音声入力」に絞った語として扱う。
+
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- <https://openai.com/research/whisper> — checked 2026-04-29
+- <https://support.apple.com/en-us/111773> (Apple Dictation) — checked 2026-04-29
+- <https://aqua.computer> (Aqua Voice) — checked 2026-04-29
 
 
 ## 備考
+
+OS 標準機能の認識精度はデバイス・言語・ノイズ環境によって差があります。日本語の認識精度は英語より劣ることがある旨を承知のうえで使用を推奨します。Whisper API を用いた専用アプリは精度が高い傾向がありますが、有料・要セットアップのため本文では言及を最小限にとどめています。

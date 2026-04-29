@@ -1,70 +1,56 @@
 ---
 id: F-40
 title: npm
+title_reading: エヌピーエム
 category: term_tool
 subtype: cli_build
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: hands_on
+reader_level: 2
+figure_type: workflow
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - Node.js
+  - package.json
+  - JavaScript
+  - pnpm
+  - Vite
+status: drafting
 ---
 
 # npm
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-Node.js のパッケージ管理
-
+Node Package Manager の略。JavaScript のライブラリを一括で管理するツールです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+JavaScript や Node.js のプロジェクトで使うライブラリ（部品）を、コマンド 1 つでインストール・更新・削除できるツールです。`package.json` に依存関係が記録され、チームで同じ環境を再現できます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+Vite や TypeScript など、ほぼすべての JavaScript ツールが npm 経由でインストールされます。AI にプロジェクト作成を頼むと、ターミナルで `npm install` を実行するよう案内されることがあります。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+`npm install` を起点に、ライブラリが `node_modules` へ展開され、スクリプトが実行されるまでの流れを 1 枚で見せます。
 
+### C. 概念図（figure_type: workflow）
+
+- 中心に置く概念: npm コマンド（install / run / publish）
+- 周辺の要素: package.json、node_modules、npmjs.com レジストリ、スクリプト実行
+- 関係の描き方: npmjs.com からライブラリを取得 → node_modules に展開 → スクリプトで利用する矢印フロー
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「npm install してから npm run dev を叩けば、すぐ起動できますよ。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,102 +58,99 @@ Node.js のパッケージ管理
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+JavaScript ライブラリの取得・管理・実行をコマンド 1 つで担います。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+依存関係が package.json に記録され、環境を再現しやすくなります。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+node_modules は容量が大きく、Git 管理対象から外す設定が必要です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+JavaScript 系プロジェクトのセットアップや CI 環境で使います。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+install / run / init の 3 コマンドと package.json の役割。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+pnpm、yarn、package-lock.json、npmjs.com。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. `npm init` — package.json を生成してプロジェクトを初期化する
+2. `npm install {ライブラリ}` — npmjs.com からライブラリを取得して node_modules に展開する
+3. `npm run dev` — package.json に書いたスクリプトを実行して開発サーバーを起動する
+4. `npm run build` — 本番向けにビルドしてデプロイ用の成果物を生成する
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
-
+- Node.js
+- package.json
+- JavaScript
+- pnpm
+- Vite
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: workflow）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左に npmjs.com のロゴ風アイコン、中央に「npm install」コマンドを打つ人物、右に node_modules フォルダと package.json が並ぶ。矢印でライブラリが流れてくる様子を示す
+- 登場人物: ターミナルの前に座る人物 1 名（初心者感のある表情）
+- 吹き出し・心の声: 「npm install って打つだけで全部入るんですか？」「はい、package.json に書いたものが全部入ります」
+- 中央に置くキーワード/ラベル: npm install → node_modules 展開 → 開発スタート
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: ファイルアイコン（package.json 初期化）
+- Step 2 のアイコン/絵柄: ダウンロード矢印（ライブラリ取得）
+- Step 3 のアイコン/絵柄: 再生ボタン（開発サーバー起動）
+- Step 4 のアイコン/絵柄: 箱アイコン（ビルド成果物）
+- 矢印で示す流れの意図: 初期化 → 取得 → 開発 → 本番化 のライフサイクル
 
 
 ## コミュニティ補完メモ
 
+- Node.js（F-80）との住み分け：Node.js は npm の実行環境（ランタイム）。npm はそのエコシステムのパッケージ管理層。Node.js がインストール済みであることが前提
+- pnpm（F-44）との住み分け：pnpm は npm の代替ツールで高速・省容量。操作感は似ているが内部の依存解決方式が異なる。本エントリは npm の基本概念に集中し、比較は pnpm エントリへ逃がす
+- Vite（F-41）との住み分け：Vite は npm 経由でインストールして使うビルドツール。「npm で入れる」対象の代表例として言及できる関係
+- JavaScript（F-1）との住み分け：npm は JavaScript エコシステムの管理層。言語自体の説明は F-1 に委ねる
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- npmjs.com — checked 2026-04-29
+- docs.npmjs.com — checked 2026-04-29
 
 ## 備考
+
+- npm は Node.js に同梱されており、Node.js をインストールすると自動的に使えるようになります
+- `node_modules` ディレクトリは `.gitignore` に記載して Git 管理から除外するのが慣例です
+- npm v7 以降、`package-lock.json` が自動生成され、依存関係の固定がより厳密になっています
