@@ -1,70 +1,57 @@
 ---
 id: D-44
 title: Kimi
+title_reading: キミ
 category: model
 subtype: open
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: research_only
+reader_level: 3
+figure_type: timeline
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2023
+version_status: active
+pricing_note: freemium
+evaluation_date: 2026-04-29
+related_terms:
+  - Moonshot AI
+  - オープンウェイト
+  - DeepSeek
+  - Qwen
+  - 長文 Context
+status: drafting
 ---
 
 # Kimi
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-Moonshot AI のモデル
-
+中国 Moonshot AI が開発するモデル。超長文 Context（コンテキスト）と中国語対応が特徴です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+Moonshot AI が開発するテキスト生成モデル群です。K1・K1.5・K2 と世代を重ね、K2 はオープンウェイト（modified MIT）で公開されています。200 万 tokens 級の長文 Context 処理に強みがあります。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+中国語圏の AI 動向を調べる記事や、オープンモデルの比較表で名前が出ます。kimi.com のチャットサービスとして一般向けにも公開されており、DeepSeek や Qwen と並んで「中国系モデル」として言及されることが多いです。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+K1 から K2 への世代推移と、各世代の特色をタイムラインで示し、「中国発モデルがどう進化してきたか」を 1 枚で把握してもらいます。
 
+### A. 時系列タイムライン（figure_type: timeline）
+
+- K1（2023 年末〜）: Moonshot AI の初代モデル。長文 Context 処理を前面に打ち出す
+- K1.5（2025 年初頭〜）: 推論能力を強化。思考連鎖（Chain-of-Thought）系の改良版
+- K2（2025 年〜）: MoE（Mixture of Experts）構造で大規模化。modified MIT でオープンウェイト公開
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「Kimi K2 はオープンウェイトなので、DeepSeek と同じ感覚で試せますよ。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,102 +59,101 @@ Moonshot AI のモデル
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+中国 Moonshot AI が開発する長文 Context 特化のモデル群です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+K2 がオープンウェイト公開のため、手元で動かして検証できます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+中国企業製のためデータ規制や利用規約の確認が必要です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+長文の要約や翻訳タスクで 200 万 tokens 級の恩恵が出ます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+K1 から K2 への世代推移とオープン公開の有無が要点です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+DeepSeek、Qwen、Moonshot AI
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. モデルを選ぶ — K2 など用途に合う世代とサイズを確認する
+2. ウェイトを取得 — Hugging Face の MoonshotAI リポジトリからダウンロード
+3. ローカルで実行 — Ollama 等の対応ランタイムで起動して動作確認
+4. API で試す — kimi.com の API エンドポイントを使うクラウド利用も選べる
+5. 評価する — DeepSeek や Qwen と並べてタスク別の性能を比較する
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
-
+- Moonshot AI
+- オープンウェイト
+- DeepSeek
+- Qwen
+- 長文 Context
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: timeline）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 横軸に時系列で「K1 → K1.5 → K2」を矢印で結ぶ。各世代の下に「長文 Context」「推論強化」「オープンウェイト公開」のラベルを添える
+- 登場人物: 画面脇に研究者風の人物。K2 の箇所を指差して「これ手元で動かせます」と吹き出し
+- 吹き出し・心の声: 「200 万 tokens って何ができるんだろう？」（読者の疑問を代弁）
+- 中央に置くキーワード: Kimi ＝ 超長文 × オープンウェイトの中国系モデル
 
 ### 6 視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: モデルカード（世代選択）
+- Step 2 のアイコン/絵柄: ダウンロード矢印（Hugging Face）
+- Step 3 のアイコン/絵柄: PC + 歯車（ローカル起動）
+- Step 4 のアイコン/絵柄: クラウドアイコン（API 利用）
+- Step 5 のアイコン/絵柄: スケール天秤（他モデルとの比較）
+- 矢印で示す流れの意図: 選択 → 取得 → 起動 → 試用 → 評価 の一方通行
 
 
 ## コミュニティ補完メモ
 
+- DeepSeek（D-46/D-47）との住み分け：DeepSeek は推論特化・R1 系が著名。Kimi は「超長文 Context」が独自色。同じ「中国系オープンモデル」として比較表に並ぶが、得意領域が異なる
+- Qwen（D-43）との住み分け：Qwen は Alibaba Cloud 製で多言語・コード対応を前面に出す。Kimi は Moonshot AI 製で長文処理に的を絞る
+- GLM（D-45）との住み分け：GLM は Tsinghua 大学発の系譜。Kimi は商用スタートアップ（Moonshot AI）発。どちらも中国語特化だが開発母体が異なる
+- Moonshot AI（C-10）との関係：Kimi は Moonshot AI が提供するモデル・サービスの名称。会社エントリ（C-10 スケルトン）と役割を分けて参照し合う
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- moonshot.cn — checked 2026-04-29
+- kimi.com — checked 2026-04-29
+- github.com/MoonshotAI — checked 2026-04-29
+- Hugging Face: MoonshotAI/Kimi-K2-Instruct — checked 2026-04-29
 
 ## 備考
+
+モデル名・ライセンス条件・公開範囲は時変情報です。K2 の modified MIT ライセンスは evaluation_date 2026-04-29 時点の情報であり、商用利用前に公式リポジトリを再確認します。kimi.com のチャットサービスは中国語が主軸ですが、英語インターフェースも提供されています。「200 万 tokens」はモデルによって上限が異なる可能性があるため、利用時は公式ドキュメントで確認が必要です。

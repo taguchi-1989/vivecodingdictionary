@@ -1,70 +1,56 @@
 ---
 id: E-4
 title: HumanEval
+title_reading: ヒューマンイーバル
 category: benchmark
 subtype: coding
-experience_level:
-reader_level:
+experience_level: research_only
+reader_level: 2
 figure_type: structure
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2021
+version_status: active
+evaluation_date: 2026-04-29
+related_terms:
+  - pass@k
+  - SWE-Bench
+  - MBPP
+  - Codex
+  - Python
+status: drafting
 ---
 
 # HumanEval
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-関数実装の正解率（古典）
-
+AI が Python の関数を正しく書ける割合を測る古典ベンチマークです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+164 個の Python 関数生成課題で構成され、AI が書いたコードが隠しテストを通るかどうかで採点します。合格率は pass@1（1 回の出力で通る確率）という指標で表します。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+新モデルの発表記事や論文で「HumanEval スコア XX%」という形で登場します。最新の主要モデルでは 90% 以上を達成するものも多く、飽和気味になっているため、スコアの絶対値よりも他ベンチとの比較で読むのが現実的です。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+「問題文（docstring）を与えると AI が関数本体を埋める」という仕組みと、pass@1 の評価ループを 1 枚で示します。「点数が高いほど良い、でも飽和している」という読み方も添えます。
 
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: 関数の穴埋め → テスト実行 → pass@1 スコア
+- 周辺の要素（3〜6 個）: docstring（問題文）／AI 生成コード／隠しテストケース／合否判定／164 問という規模感
+- 関係の描き方: 左から右への一本線フロー。右端に「最新モデルは 90%+ 帯」のスコアバーを小さく添える
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「HumanEval は飽和気味なので、SWE-Bench も合わせて見るのが現実的です。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,69 +58,60 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI のコード生成力を pass@1 で数値化する基準です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+164 問という規模で、モデル間の比較が簡単にできます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Python 限定で、最新モデルでは 90%+ に達し飽和しています。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+モデル選定の最初の足場、比較の共通言語として。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+pass@1 の意味と、164 問・Python 限定というスコープ。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+SWE-Bench、MBPP、pass@k
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. モデル発表を確認 — HumanEval スコアが提示されることが多い
+2. スコアの文脈を読む — Python 限定・飽和傾向を念頭に置く
+3. 他ベンチと比較する — SWE-Bench や MBPP と並べて総合判断
+4. 自分のタスクに近いか評価 — 関数単位か、リポジトリ規模かを区別する
+5. 採用モデルを決める — 単一指標に頼らず複数スコアで判断
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
-
+- pass@k
+- SWE-Bench
+- MBPP
+- Codex
+- Python
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,31 +120,38 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左から「問題文（docstring）アイコン」→「AI（ロボット頭部）が関数を書く」→「隠しテスト実行（✓/✗）」→「pass@1 スコア」の一本線フロー。右端にスコアバーを置き、90%+ 帯に「最新モデルが集まる帯」を斜線で示す
+- 登場人物: AI エージェントの簡略アイコン 1 体、エンジニアが課題を渡す手のひら
+- 吹き出し・心の声: AI の頭上に「この関数、こう書けばいいですね。」、テスト段階で「✓ 通過 / ✗ 不合格」を両方描く
+- 中央に置くキーワード/ラベル: pass@1、164 問、Python 限定
 
 ### 6 視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: 吹き出し＋数字（モデル発表）
+- Step 2 のアイコン/絵柄: 拡大鏡（スコアの文脈を読む）
+- Step 3 のアイコン/絵柄: 比較表（他ベンチと並べる）
+- Step 4 のアイコン/絵柄: ふるい（自分のタスクに近いか）
+- Step 5 のアイコン/絵柄: ✓ チェック（採用モデル決定）
+- 矢印: 発表 → 読む → 比較 → 評価 → 決定
 
 ## コミュニティ補完メモ
 
+- SWE-Bench（E-1）との住み分け：HumanEval は「単一関数の穴埋め」、SWE-Bench は「実リポジトリへのパッチ作成」。難度・スコープともに別物として読む
+- MBPP は HumanEval の後継候補として登場した別セット。両者の違いは問題数・難度・出典の違い（Google Research 製）
+- Codex（OpenAI の初期コード特化モデル）の評価用に作られた経緯が背景知識として重要。2021 年発表の古典という位置づけ
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- github.com/openai/human-eval — checked 2026-04-29
+- arXiv:2107.03374 "Evaluating Large Language Models Trained on Code" — checked 2026-04-29
 
 ## 備考
+
+- HumanEval は 2021 年発表の古典ベンチで、Codex 評価のために作られた
+- 最新モデルでは 90%+ を達成するものが多く、「飽和」が議論される段階にある
+- Python 限定という制約が実務評価の参考値としての限界でもある
+- 後継として MBPP、難度の高い実務向けとして SWE-Bench が存在する

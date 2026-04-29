@@ -1,70 +1,57 @@
 ---
 id: D-46
 title: DeepSeek V3
+title_reading: ディープシークブイスリー
 category: model
 subtype: open
-experience_level:
-reader_level:
+experience_level: research_only
+reader_level: 3
 figure_type: structure
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2024-12
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - Mixture of Experts
+  - オープンモデル
+  - DeepSeek R1
+  - MIT ライセンス
+  - Llama 系
+status: drafting
 ---
 
 # DeepSeek V3
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-DeepSeek の大規模言語モデル（V3 世代、オープン公開）
-
+中国 DeepSeek 発の大規模オープンモデル。コスト効率で注目されています。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+DeepSeek が公開する汎用テキスト生成モデルです。総パラメータ 671B のうち推論時は 37B だけを使う MoE（Mixture of Experts、混合専門家）構造で、高性能と低コストを両立しています。MIT ライセンスで商用利用できます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+学習コスト約 558 万ドル（当時の GPT-4 比で約 1/10 以下）という報道で注目を集め、AI コスト論の文脈でよく名前が出ます。Hugging Face でウェイトが公開されており、ローカル実行を試す場面でも登場します。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+671B 全体と 37B アクティブという MoE の構造を 1 枚で示し、「大きいが軽い」仕組みを掴んでもらいます。
 
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: 671B 総パラメータ ／ 推論時アクティブ 37B
+- 周辺の要素: 専門家ブロック群（MoE）、ルーターが選択する流れ、MIT ライセンスのラベル
+- 関係の描き方: 全体を大きな円、アクティブ部分を内側の小さな円で包含表示し、ルーターから矢印で選ばれる専門家を強調
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「DeepSeek V3 は MoE で 37B しか動かさないので、コストが思ったより抑えられますよ。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,69 +59,60 @@ DeepSeek の大規模言語モデル（V3 世代、オープン公開）
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+DeepSeek 製の汎用オープンウェイトモデルです。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+MIT ライセンスで商用利用でき、コストも低めです。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+中国発で学習データの詳細は非公開のため要確認です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+低コストで高性能なモデルをローカル実行したい場面です。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+MoE 構造と MIT ライセンスの 2 点が最初のポイントです。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Mixture of Experts、DeepSeek R1、ファインチューニング
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. モデルを選ぶ — 汎用タスクなら V3、推論特化なら R1 と用途で選ぶ
+2. ウェイトを取得 — Hugging Face から公開ウェイトをダウンロードする
+3. ローカルで実行 — Ollama 等を使って MoE 構造のまま起動する
+4. API で呼ぶ — DeepSeek 公式 API から低コストで利用する手もあります
+5. 用途に応じて調整 — プロンプトやファインチューニングで精度を高める
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
-
+- Mixture of Experts
+- オープンモデル
+- DeepSeek R1
+- MIT ライセンス
+- Llama 系
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,31 +121,38 @@ DeepSeek の大規模言語モデル（V3 世代、オープン公開）
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 大きな円（671B 全パラメータ）の内側に小さな円（37B アクティブ）を描き、MoE のルーターが専門家を選ぶ矢印を追加する
+- 登場人物: 画面脇に研究者風のキャラクター。「これだけしか動かさないの？」と驚いた吹き出し
+- 吹き出し・心の声: 「37B だけ使う、だから速い」（ルーターから選ばれた専門家ブロックに向かって矢印）
+- 中央に置くキーワード/ラベル: 671B 全体 ／ アクティブ 37B ／ MIT ライセンス
 
 ### 6 視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 天秤（V3 vs R1 の選択）
+- Step 2 のアイコン/絵柄: ダウンロード矢印
+- Step 3 のアイコン/絵柄: PC + 歯車（ローカル起動）
+- Step 4 のアイコン/絵柄: API コネクタ
+- Step 5 のアイコン/絵柄: スライダー（調整）
+- 矢印で示す流れの意図: 選択 → 取得 → 起動 → 利用 → 調整 の一方通行
 
 
 ## コミュニティ補完メモ
 
+- DeepSeek R1（D-47）との住み分け：V3 は汎用、R1 は推論特化（Chain-of-Thought 強化）。同社系列だが用途が異なるため別エントリ
+- Llama 系（D-40）との住み分け：Llama は Meta 製の最参照系統。DeepSeek V3 は「コスト効率の革新」という別の文脈で登場する
+- Qwen（D-43）・Kimi（D-44）との関係：いずれも中国発のオープンモデルだが開発元・アーキテクチャが異なる。「中国発モデル群の一覧」的な言及はコミュニティ補完メモに留め、本文では V3 固有の特徴に絞る
+- 学習コスト 558 万ドルの数字は DeepSeek 公式 technical report に基づく。評価日以降に更新版が出た場合は要差し替え
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- github.com/deepseek-ai/DeepSeek-V3 — checked 2026-04-29
+- deepseek.com — checked 2026-04-29
+- DeepSeek-V3 Technical Report（arxiv.org/abs/2412.19437）— checked 2026-04-29
 
 ## 備考
+
+学習コスト・パラメータ数・ライセンス条件はいずれも時変情報です。evaluation_date 2026-04-29 時点の情報であり、本番利用前に公式リポジトリを再確認してください。MoE の「アクティブ 37B」という数字はトークンごとに動的に変わります（ルーターが毎回選ぶ）。「最強」「最高性能」などの断定は避け、「コスト効率」という観点で評価した事実として扱います。

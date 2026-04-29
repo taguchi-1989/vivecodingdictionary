@@ -1,70 +1,58 @@
 ---
 id: G-33
 title: Function Calling
+title_reading: ファンクションコーリング
 category: term_llm
 subtype: control
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: partial
+reader_level: 3
+figure_type: workflow
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - Tool Use
+  - MCP
+  - Agent
+  - JSON
+status: drafting
 ---
 
 # Function Calling
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-LLM から関数を呼ぶ API 機能
-
+LLM が関数名と引数を JSON で返す API 機能です。OpenAI が 2023 年に命名した呼称です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+Function Calling（ファンクションコーリング）は、LLM（大規模言語モデル）がテキストの代わりに「呼び出す関数名と引数」を JSON で返す仕組みです。アプリ側がその JSON を受け取って関数を実行し、結果を LLM に戻すと、最終回答が生成されます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+OpenAI の API ドキュメントや ChatGPT Plugins の解説記事で「Function Calling」という用語を見かけます。Anthropic の Claude API では同じ仕組みを「Tool Use」と呼んでいるため、両方の呼称が並ぶドキュメントやブログ記事で混乱しやすい箇所です。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+LLM が関数呼び出しを JSON で返し、ホストが実行して結果を戻す往復フローを一目で示す。
 
+### A. Workflow（figure_type: workflow）
+
+- Step 1: ユーザーが質問を送る
+- Step 2: LLM が関数名と引数を JSON で返す
+- Step 3: ホストが関数を実行して結果を LLM に戻す
+- Step 4: LLM が結果を踏まえて最終回答を生成する
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「Function Calling で LLM が JSON を返すので、ホスト側で関数を実行できます。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,81 +60,71 @@ LLM から関数を呼ぶ API 機能
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+LLM が関数名・引数を JSON で返す呼び出し規約です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+自然文ではなく構造化 JSON で返るので解析が安定します。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+関数の実行はホスト側が担い、LLM は指示するだけです。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+天気取得や検索など外部 API を AI に連携する場面です。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Tool Use と同義で、呼称が OpenAI 由来という点を把握します。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Tool Use（G-30）、MCP（I-1）、Agent。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. 関数を定義する — 名前・引数・説明を JSON スキーマで LLM に渡す
+2. LLM にリクエストを送る — ユーザー入力と関数定義を API に送信する
+3. JSON レスポンスを受け取る — LLM が返した関数名と引数を取り出す
+4. 関数を実行する — ホスト側で実際の処理を行い結果を取得する
+5. 結果を LLM に戻す — 実行結果を追加して再度 API を呼び最終回答を得る
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- Tool Use
+- MCP
+- Agent
+- JSON
 
-- 用語A —
-- 用語B —
-- 用語C —
-
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: workflow）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 「ユーザー → LLM → ホスト（関数実行） → LLM → 最終回答」の左右往復フロー
+- 登場人物: ノート PC を操作する人物（ユーザー）とサーバーを示すアイコン（ホスト）の 2 者を左右に配置する
+- 吹き出し・心の声: LLM の箱に「{"function":"get_weather","args":{"city":"Tokyo"}} を返します」という吹き出し。ホストの箱に「実行して結果を渡します」という吹き出し
+- 中央に置くキーワード/ラベル: JSON ↔ 結果（Result）
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +132,28 @@ LLM から関数を呼ぶ API 機能
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: JSON スキーマを渡す手
+- Step 2 のアイコン/絵柄: 送信矢印（API リクエスト）
+- Step 3 のアイコン/絵柄: ダウンロード矢印（JSON レスポンス受け取り）
+- Step 4 のアイコン/絵柄: 歯車（関数実行）
+- Step 5 のアイコン/絵柄: チェックマーク付き回答用紙（最終回答）
+- 矢印で示す流れの意図: 「定義 → 送信 → 受取 → 実行 → 回答」の一往復
 
 
 ## コミュニティ補完メモ
 
+- Tool Use（G-30）との住み分け：Function Calling は OpenAI が 2023 年 6 月に命名した用語。Anthropic はほぼ同義の機能を「Tool Use」と呼ぶ。本エントリは用語史的経緯（OpenAI 由来）と JSON 返却という具体的なプロトコルに焦点を当てる。概念全体は G-30 Tool Use で扱う。
+- MCP（I-1）との住み分け：MCP は Function Calling / Tool Use の接続方法を標準化する規格。「呼び方の仕組み vs 接続の規格」として分担する。
+- Agent（G-41 並列実行中）との住み分け：Agent は Function Calling を繰り返す高次の仕組み。Function Calling は 1 往復の呼び出しに焦点を当てる。
+
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- platform.openai.com/docs/guides/function-calling — checked 2026-04-29
+- docs.anthropic.com/en/docs/build-with-claude/tool-use — checked 2026-04-29
 
 
 ## 備考
+
+- Function Calling は OpenAI が 2023 年 6 月（gpt-3.5-turbo-0613 / gpt-4-0613）で初めて実装・命名した。Anthropic はほぼ同義の機能を「Tool Use」と呼ぶ。現在では「Function Calling」が両社共通の通称として広まっている側面もある。
+- JSON スキーマで関数を定義する点が一般的なプロンプト指示とは異なる。構造化された出力が得られるため、後続処理の実装が安定しやすい。

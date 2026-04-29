@@ -1,70 +1,57 @@
 ---
 id: D-50
 title: DALL-E
+title_reading: ダリ
 category: model
 subtype: image_video
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: partial
+reader_level: 2
+figure_type: timeline
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2021
+version_status: active
+pricing_note: freemium
+evaluation_date: 2026-04-29
+related_terms:
+  - OpenAI
+  - ChatGPT
+  - 拡散モデル
+  - Stable Diffusion
+  - Imagen
+status: drafting
 ---
 
 # DALL-E
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-OpenAI の画像生成
-
+OpenAI のテキストから画像を生成するモデルです。指示文を書くだけで画像が出力されます。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+テキストの指示文（プロンプト）を送ると、それに合った画像を生成します。拡散モデル（Diffusion Model）という仕組みを使い、ノイズから目的の画像を段階的に作り出します。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+ChatGPT のチャット画面から「猫が宇宙服を着た絵を描いて」と頼むと DALL-E が動きます。画像つき資料の下書き作成や SNS 投稿用の素材づくりで使われることがあります。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+DALL-E 1（2021）→ DALL-E 2（2022）→ DALL-E 3（2023）の 3 世代を時系列で示し、各世代でどう精度と利便性が上がってきたかを 1 枚で把握できるようにします。
 
+### タイムライン（figure_type: timeline）
+
+- DALL-E 1（2021年1月）：テキストから画像生成の概念実証。品質はまだ荒削り
+- DALL-E 2（2022年4月）：解像度と写実性が大幅に向上。インペインティング（部分修正）も対応
+- DALL-E 3（2023年10月）：ChatGPT との統合。プロンプトの読み取り精度が向上し、指示通りの画像が出やすくなりました
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「DALL-E に頼めば ChatGPT から直接画像が生成できます。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,102 +59,97 @@ OpenAI の画像生成
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+テキスト指示から画像を生成する OpenAI の画像モデルです。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+文章だけで画像が作れるので、デザイン素材を素早く試せます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+生成画像の著作権・商用利用のルールは利用規約で都度確認が必要です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+資料の挿絵や SNS 投稿用素材の下書き作成に使えます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ChatGPT 統合済みの DALL-E 3 が現在の入口です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+拡散モデル、Stable Diffusion、Imagen、プロンプトエンジニアリング
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. 用途を決める — 挿絵・アイコン・背景など目的を絞る
+2. プロンプトを書く — 画風・構図・色味を文章で指示する
+3. 生成・確認 — ChatGPT 画面または API で画像を受け取る
+4. 修正指示 — 気に入らない箇所を追加プロンプトで調整する
+5. 利用規約を確認 — 商用利用の可否を OpenAI の規約で確認する
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
-
+- OpenAI
+- ChatGPT
+- 拡散モデル
+- Stable Diffusion
+- Imagen
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: timeline）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 横軸に「2021 DALL-E 1」→「2022 DALL-E 2」→「2023 DALL-E 3」を矢印で結ぶ。各世代の代表的な変化（荒削り→高解像度→ChatGPT 統合）を吹き出しで添える
+- 登場人物: 画面脇に人物キャラクター（著者）が DALL-E 3 の時系列を指差している
+- 吹き出し・心の声: DALL-E 3 の箇所に「ChatGPT から直接指示できます」と吹き出し
+- 中央に置くキーワード: テキスト → 画像
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: 目標アイコン（用途を決める）
+- Step 2 のアイコン/絵柄: 鉛筆アイコン（プロンプトを書く）
+- Step 3 のアイコン/絵柄: 画像フレームアイコン（生成・確認）
+- Step 4 のアイコン/絵柄: ループ矢印（修正指示）
+- 矢印で示す流れの意図: 一方向の流れ＋修正ループを示す
 
 ## コミュニティ補完メモ
 
+- Stable Diffusion（D-54）との住み分け：D-54 はオープンソースで自前環境構築・細かいパラメータ制御が中心。DALL-E は ChatGPT 経由で気軽に試せる「入口」として位置づける
+- Imagen（D-51）との住み分け：D-51 は Google のモデル。本エントリは OpenAI 系の文脈で書く
+- Sora（D-52）との住み分け：D-52 は動画生成。本エントリは静止画のみ扱う
+- 拡散モデル（J-23）の詳細な仕組みは J-23 に委ねる。本エントリでは「ノイズから段階的に生成」の一句に留める
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- openai.com/dall-e-3 — checked 2026-04-29
+- OpenAI blog "DALL-E 3 is now available in ChatGPT Plus" — checked 2026-04-29
 
 ## 備考
+
+モデル名・提供形態・商用利用条件は時変情報です。API 経由の単独提供は後継サービス（GPT-Image 系）に移行中で、評価日時点では ChatGPT 統合が主な利用経路です。商用利用前に最新の利用規約を確認してください。

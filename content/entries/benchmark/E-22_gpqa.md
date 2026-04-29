@@ -1,70 +1,56 @@
 ---
 id: E-22
 title: GPQA
+title_reading: ジーピーキューエー
 category: benchmark
 subtype: reasoning
-experience_level:
-reader_level:
+experience_level: research_only
+reader_level: 2
 figure_type: structure
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2023
+version_status: active
+evaluation_date: 2026-04-29
+related_terms:
+  - MMLU
+  - MMLU-Pro
+  - reasoning モデル
+  - o1
+  - SWE-Bench
+status: drafting
 ---
 
 # GPQA
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-大学院レベル科学（特に STEM）
-
+Graduate-Level Google-Proof Q&A の略。大学院レベルの科学問題で AI の深い推論力を測るベンチマークです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+生物・物理・化学の難問 448 問を AI に解かせ、正答率で採点します。問題は PhD（博士）保持者でも 65% 程度しか正解できないよう設計されており、広く浅い知識ではなく深い推論力を測ります。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+o1 や o3 などの reasoning（推論特化）モデルが台頭したころ、その実力を示す指標として注目されました。モデル発表資料や論文比較表で GPQA Diamond（最難サブセット）のスコアを見ることが多いです。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+GPQA の「深さ優先」という性格と、MMLU との住み分けを 1 枚で示します。「Google 検索でも解けない」という難易度の意味を人物の視点から見せます。
 
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: PhD レベルの難問を解こうとする人物と AI
+- 周辺の要素: 448 問・生物・物理・化学・Diamond サブセット・正答率 65%
+- 関係の描き方: 人物が問題を前に困惑し、AI が解答を試みる対比
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「GPQA Diamond は PhD レベルの深い推論を測るので、reasoning モデルの比較に使えます。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,69 +58,59 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI の深い専門推論力を科学難問で測る指標です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Google 検索でも解けない問題なので、丸暗記対策が効きません。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+科学分野特化のため、コードや日常タスクの実力とは別物です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+reasoning モデル同士の比較や選定の判断材料として。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Diamond サブセットが標準指標で、PhD 正答率 65% が比較の基準です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+MMLU-Pro、o1、arXiv:2311.12022
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. 新モデル発表 — GPQA Diamond スコアが提示される
+2. スコアの文脈を確認 — PhD 正答率 65% を基準に読む
+3. 自分の用途と照合 — 科学推論か、それ以外かを見極める
+4. 他指標と併用 — コード系は SWE-Bench など別軸で補完する
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
-
+- MMLU
+- MMLU-Pro
+- reasoning モデル
+- o1
+- SWE-Bench
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,31 +119,37 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左に難問 3 枚（生物・物理・化学のアイコン付き）、中央に考え込む人物と AI が並ぶ構図。右に正答率の棒グラフ（PhD 65%・非専門家 34%・AI 上位モデルの 3 本）
+- 登場人物: 博士帽をかぶった人物 1 名、AI アイコン 1 体
+- 吹き出し・心の声: 人物「Google で調べても分からない…」、AI「推論で考えます」
+- 中央に置くキーワード/ラベル: 「Google-Proof」「PhD 正答率 65%」
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 発表資料（スライドアイコン）
+- Step 2 のアイコン/絵柄: 拡大鏡（スコアの文脈確認）
+- Step 3 のアイコン/絵柄: 天秤（用途との照合）
+- Step 4 のアイコン/絵柄: 複数グラフ（他指標との並列比較）
+- 矢印で示す流れの意図: 発表 → 読み方の確認 → 用途判断 → 多角評価
 
 
 ## コミュニティ補完メモ
 
+- MMLU（E-20）／MMLU-Pro（E-21）との住み分け：MMLU は広く浅い多分野知識の測定、GPQA は深い専門推論の測定。「広さ vs 深さ」で対比が明快。
+- o1・o3 系 reasoning モデルが GPQA で大きくスコアを伸ばした経緯は備考に収める。
+- Diamond サブセット（448 問中の最難問群）が事実上の標準比較指標として使われる点を本文に残し、サブセット詳細は本メモへ逃がす。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- github.com/idavidrein/gpqa — checked 2026-04-29
+- arXiv:2311.12022 — checked 2026-04-29
 
 ## 備考
+
+- Diamond サブセットは GPQA 全 448 問の中でも特に難しい問題群で、公式ベンチとして広く使われています。
+- PhD 保持者の正答率 65% は原論文（arXiv:2311.12022）に基づく数値です（時変情報ではないが参照元明記）。
+- o1・o3 系モデルが GPQA Diamond で大幅にスコアを上げたことが reasoning モデル評価の転換点になっています。科学推論以外への一般化については別途確認が必要です。

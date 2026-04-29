@@ -100,14 +100,14 @@ D-35,,Cursor Composer (モデル),model,other_closed,skeleton,,content/entries/m
 D-40,,Llama 系,model,open,drafting,,content/entries/model/D-40_llama.md
 D-41,,Mistral 系,model,open,drafting,,content/entries/model/D-41_mistral.md
 D-42,,Gemma 系,model,open,drafting,,content/entries/model/D-42_gemma.md
-D-43,,Qwen 系,model,open,skeleton,,content/entries/model/D-43.md
+D-43,,Qwen 系,model,open,drafting,,content/entries/model/D-43_qwen.md
 D-44,,Kimi,model,open,skeleton,,content/entries/model/D-44_kimi.md
 D-45,,GLM,model,open,skeleton,,content/entries/model/D-45_glm.md
-D-46,,DeepSeek V3,model,open,skeleton,,content/entries/model/D-46_deepseek_v3.md
-D-47,,DeepSeek R1,model,open,skeleton,推論特化,content/entries/model/D-47_deepseek_r1.md
+D-46,,DeepSeek V3,model,open,needs_review,,content/entries/model/D-46_deepseek_v3.md
+D-47,,DeepSeek R1,model,open,needs_review,推論特化,content/entries/model/D-47_deepseek_r1.md
 D-50,,DALL-E,model,image_video,skeleton,,content/entries/model/D-50_dall_e.md
 D-51,,Imagen,model,image_video,skeleton,,content/entries/model/D-51_imagen.md
-D-52,,Sora,model,image_video,skeleton,,content/entries/model/D-52_sora.md
+D-52,,Sora,model,image_video,needs_review,,content/entries/model/D-52_sora.md
 D-53,,Veo,model,image_video,skeleton,,content/entries/model/D-53_veo.md
 D-54,,Stable Diffusion,model,image_video,skeleton,,content/entries/model/D-54_stable_diffusion.md
 D-55,,Nano Banana,model,image_video,skeleton,,content/entries/model/D-55_nano_banana.md
@@ -235,36 +235,36 @@ G-21,,AGENTS.md,tool_agent,config_file,drafting,,content/entries/tool_agent/G-21
 G-22,,SKILL.md,tool_agent,config_file,drafting,,content/entries/tool_agent/G-22_skill_md.md
 G-23,,.claude/settings.json,tool_agent,config_file,skeleton,,content/entries/tool_agent/G-23_claude_settings_json.md
 G-30,,Tool Use,term_llm,control,drafting,,content/entries/term_llm/G-30_tool_use.md
-G-31,,Hook,term_llm,control,skeleton,,content/entries/term_llm/G-31_hook.md
-G-32,,Slash Command,term_llm,control,skeleton,,content/entries/term_llm/G-32_slash_command.md
+G-31,,Hook,term_llm,control,drafting,,content/entries/term_llm/G-31_hook.md
+G-32,,Slash Command,term_llm,control,needs_review,,content/entries/term_llm/G-32_slash_command.md
 G-33,,Function Calling,term_llm,control,skeleton,,content/entries/term_llm/G-33_function_calling.md
 G-34,,Code Interpreter,term_llm,control,skeleton,,content/entries/term_llm/G-34_code_interpreter.md
 G-35,,Deep Research,term_llm,control,skeleton,,content/entries/term_llm/G-35_deep_research.md
 G-36,,Artifact,term_llm,control,skeleton,,content/entries/term_llm/G-36_artifact.md
 G-40,,バイブコーディング,term_llm,ops,skeleton,,content/entries/term_llm/G-40_vibe_coding.md
-G-41,,Subagent,term_llm,ops,skeleton,,content/entries/term_llm/G-41_subagent.md
-G-42,,Worktree,term_llm,ops,skeleton,,content/entries/term_llm/G-42_worktree.md
+G-41,,Subagent,term_llm,ops,drafting,,content/entries/term_llm/G-41_subagent.md
+G-42,,Worktree,term_llm,ops,needs_review,,content/entries/term_llm/G-42_worktree.md
 G-43,,オーケストレーション,term_llm,ops,skeleton,,content/entries/term_llm/G-43.md
 G-44,,マルチエージェント協調,term_llm,ops,skeleton,,content/entries/term_llm/G-44.md
 G-45,,段階的開示,term_llm,ops,skeleton,,content/entries/term_llm/G-45.md
 G-46,,ナーフ (モデルの劣化),term_llm,ops,skeleton,,content/entries/term_llm/G-46.md
 H-1,,TDD,workflow,methodology,skeleton,,content/entries/workflow/H-1_tdd.md
 H-2,,ペアプログラミング,workflow,methodology,skeleton,,content/entries/workflow/H-2.md
-H-3,,バイブコーディングの流儀,workflow,methodology,skeleton,,content/entries/workflow/H-3.md
+H-3,,バイブコーディングの流儀,workflow,methodology,drafting,,content/entries/workflow/H-3.md
 H-4,,コードレビュー,workflow,methodology,skeleton,,content/entries/workflow/H-4.md
 H-5,,Scrum / Agile,workflow,methodology,skeleton,,content/entries/workflow/H-5_scrum_agile.md
 H-6,,Git Flow,workflow,methodology,skeleton,,content/entries/workflow/H-6_git_flow.md
-H-7,,CI/CD,workflow,methodology,skeleton,,content/entries/workflow/H-7_ci_cd.md
+H-7,,CI/CD,workflow,methodology,needs_review,,content/entries/workflow/H-7_ci_cd.md
 H-8,,DevOps,workflow,methodology,skeleton,,content/entries/workflow/H-8_devops.md
 H-50,,Bard → Gemini,history,timeline,skeleton,,content/entries/history/H-50.md
 H-51,,Preview から正式版への流れ,history,culture,skeleton,,content/entries/history/H-51.md
 H-52,,Copilot から Claude Code までの流れ,history,timeline,skeleton,,content/entries/history/H-52.md
 H-53,,ChatGPT 登場,history,event,needs_review,2022-11,content/entries/history/H-53_chatgpt_launch.md
-H-54,,GPT-4 リリース,history,event,skeleton,2023-03,content/entries/history/H-54.md
+H-54,,GPT-4 リリース,history,event,drafting,,content/entries/history/H-54_gpt4_release.md
 H-55,,LLaMA のオープン化,history,event,skeleton,,content/entries/history/H-55.md
 H-56,,Claude のバージョン史,history,timeline,skeleton,,content/entries/history/H-56.md
 H-57,,Gemini の命名史,history,timeline,skeleton,,content/entries/history/H-57.md
-H-58,,Transformer 論文,history,paper,skeleton,2017,content/entries/history/H-58.md
+H-58,,Transformer 論文,history,paper,drafting,2017,content/entries/history/H-58_transformer_paper.md
 H-59,,AI エージェント元年,history,era,skeleton,2024頃,content/entries/history/H-59.md
 H-60,,Codex → GitHub Copilot の系譜,history,timeline,skeleton,,content/entries/history/H-60.md
 H-61,,Preview 版という文化,history,culture,skeleton,,content/entries/history/H-61.md
@@ -299,13 +299,13 @@ J-13,,Transformer,term_general,ml_basic,drafting,,content/entries/term_general/J
 J-14,,LLM,term_general,ml_basic,needs_review,,content/entries/term_general/J-14_llm.md
 J-15,,VLM,term_general,ml_basic,skeleton,,content/entries/term_general/J-15_vlm.md
 J-16,,Fine-tuning,term_general,ml_basic,skeleton,,content/entries/term_general/J-16_fine_tuning.md
-J-17,,Attention,term_general,ml_basic,skeleton,,content/entries/term_general/J-17_attention.md
+J-17,,Attention,term_general,ml_basic,drafting,,content/entries/term_general/J-17_attention.md
 J-18,,MoE,term_general,ml_basic,skeleton,,content/entries/term_general/J-18_moe.md
 J-19,,量子化,term_general,ml_basic,skeleton,,content/entries/term_general/J-19.md
 J-20,,Big Data,term_general,data_learning,skeleton,,content/entries/term_general/J-20_big_data.md
 J-21,,LoRA,term_general,data_learning,skeleton,,content/entries/term_general/J-21_lora.md
 J-22,,パラメータ数の単位 (B / T),term_general,data_learning,skeleton,,content/entries/term_general/J-22.md
-J-23,,拡散モデル (Diffusion Model),term_general,data_learning,skeleton,画像・動画生成の主流アーキテクチャ,content/entries/term_general/J-23.md
+J-23,,拡散モデル,term_general,data_learning,drafting,画像・動画生成の主流アーキテクチャ,content/entries/term_general/J-23_diffusion_model.md
 J-31,,第 5 世代コンピューター,term_general,computing_history,skeleton,,content/entries/term_general/J-31.md
 J-32,,ノイマン型,term_general,computing_history,skeleton,,content/entries/term_general/J-32.md
 J-33,,量子コンピューター,term_general,computing_history,skeleton,,content/entries/term_general/J-33.md

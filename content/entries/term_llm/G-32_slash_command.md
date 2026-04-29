@@ -1,70 +1,58 @@
 ---
 id: G-32
 title: Slash Command
+title_reading: スラッシュコマンド
 category: term_llm
 subtype: control
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: hands_on
+reader_level: 3
+figure_type: workflow
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - Claude Code
+  - Prompt
+  - CLAUDE.md
+  - Hook
+  - Skill
+status: drafting
 ---
 
 # Slash Command
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
+<!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## tagline
 
-`/` で呼ぶ短縮コマンド
-
-
-<!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
+`/` を打つと事前定義済みのプロンプトが展開され、Claude が実行します。
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+チャット欄に `/foo` と入力すると、`.claude/commands/foo.md` に書いたプロンプトが自動で展開されます。繰り返し使う指示を 1 行で呼び出せるため、伝え忘れを減らせます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+Claude Code のチャット欄で `/` と入力すると候補一覧が表示されます。組み込みの `/clear` や `/help` のほか、プロジェクト内の `.claude/commands/` フォルダにファイルを置くと独自コマンドを追加できます。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+ユーザーが `/foo` と打つ → ファイルからプロンプトが展開 → Claude が実行、という 3 ステップの流れを掴んでもらう。
 
+### C. 概念図（figure_type: workflow）
+
+- 中心に置く概念: `/foo` の入力 → プロンプト展開 → 実行
+- 周辺の要素: `.claude/commands/foo.md`（テンプレート）／チャット欄（入力点）／Claude（実行者）
+- 関係の描き方: 左から右への矢印フロー。ユーザー → ファイル → Claude の順に流れる
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「Slash Command を定義しておくと、毎回同じ指示を書かなくて済みます。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,102 +60,99 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+繰り返し使う指示をワンライナーで呼び出す UI パターンです。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+定型プロンプトを 1 行に短縮でき、指示の書き忘れを防げます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+コマンド名が増えると管理が煩雑になることがあります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+テスト生成やコードレビューなど、繰り返す作業に効果的です。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+`.claude/commands/` へのファイル配置とコマンド名の規則が基本です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Hook、Skill、CLAUDE.md
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. 定型指示を洗い出す — 毎回打っているプロンプトをリストアップする
+2. コマンドファイルを作成 — `.claude/commands/<name>.md` にプロンプトを書く
+3. チャット欄で呼び出す — `/name` を入力して展開を確認する
+4. チームで共有 — ファイルを Git に入れてコマンドを揃える
+5. 定期的に整理 — 使わなくなったコマンドを削除して管理コストを抑える
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- Claude Code
+- Prompt
+- CLAUDE.md
+- Hook
+- Skill
 
-- 用語A —
-- 用語B —
-- 用語C —
-
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: workflow）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 3 ブロックの横フロー図。左ブロックにユーザーがチャット欄へ `/foo` を入力する場面、中央ブロックに `.claude/commands/foo.md` が開かれプロンプトが現れる場面、右ブロックに Claude がプロンプトを受けとり実行する場面
+- 登場人物: 左ブロックにキーボードを打つ人物。右ブロックに Claude のアイコン（ロボット風）
+- 吹き出し・心の声: ユーザー「また同じ指示を書かなくていい」、Claude「コマンド受信、実行します」
+- 中央に置くキーワード/ラベル: `/foo` → 展開 → 実行
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: 付箋に定型文をリストアップする人
+- Step 2 のアイコン/絵柄: フォルダにファイルを作る人
+- Step 3 のアイコン/絵柄: チャット欄で `/` を打つ人
+- Step 4 のアイコン/絵柄: チームで Git のファイルを共有する人たち
+- Step 5 のアイコン/絵柄: ハサミで不要なファイルを整理する人
+- 矢印で示す流れの意図: 「洗い出し → 作成 → 呼び出し → 共有 → 整理」の一方向フロー
 
 ## コミュニティ補完メモ
 
+- Skill（G-22）との住み分け: Slash Command は「ユーザーが明示的に `/name` と打って呼び出す」操作起点の仕組み。Skill は「Claude が必要と判断したときに参照する」エージェント起点の仕組み。操作主体が違う。
+- Hook（G-31）との住み分け: Hook は保存・実行などのイベントに自動反応する仕組み。Slash Command はユーザーが手動で呼ぶ点で異なる。
+- CLAUDE.md（G-20）との住み分け: CLAUDE.md はセッション開始時に毎回自動読み込まれる常設指示。Slash Command は任意のタイミングで呼ぶ一時的な操作。
+- 組み込みコマンド（`/clear` `/help` `/compact` 等）と、ユーザー定義コマンドの 2 種類がある点はコミュニティ向けに補足できる。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- docs.anthropic.com/en/docs/claude-code/slash-commands — checked 2026-04-29
 
 ## 備考
+
+- `.claude/commands/<name>.md` に置くとプロジェクトスコープで有効になる。`~/.claude/commands/<name>.md` に置くとグローバルスコープ（全プロジェクト共通）になる。
+- コマンドファイル内で `$ARGUMENTS` プレースホルダーを使うと、呼び出し時に引数を渡せる（例: `/foo bar` で `$ARGUMENTS` が `bar` に展開される）。
+- 組み込みコマンドは上書き不可。同名のユーザー定義は回避が必要。

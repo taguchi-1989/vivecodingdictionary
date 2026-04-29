@@ -1,70 +1,58 @@
 ---
 id: J-17
 title: Attention
+title_reading: アテンション
 category: term_general
 subtype: ml_basic
-experience_level:
-reader_level:
+experience_level: research_only
+reader_level: 3
 figure_type: structure
 page_layout: spread_v1
 start_date:
 end_date:
 version_status:
 pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+evaluation_date: 2026-04-29
+related_terms:
+  - Transformer
+  - LLM
+  - Self-Attention
+  - Deep Learning
+  - エンコーダー
+status: drafting
 ---
 
 # Attention
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-Transformer の核。入力のどこに注目するかを決める仕組み
-
+Transformer の核。入力のどの単語に注目するかを重みで計算する仕組みです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+文章内の各単語が、他のどの単語と関係が深いかを数値の重み（Weight）で表します。Query（クエリ、問い合わせ）・Key（キー、索引）・Value（バリュー、値）の 3 つの要素を掛け合わせて計算し、重要な単語ほど強く参照する仕組みです。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+AI モデルの解説記事や論文で「Self-Attention（自己注意機構）」「Multi-Head Attention（多頭注意機構）」という形で目にします。ChatGPT や Claude が長い文脈を掴めるのも、この機構が並列計算で文全体を一度に処理しているためです。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+「ある単語が文中の他の単語にどれだけ注目するか」を矢印の太さで視覚化し、Attention の直感を掴んでもらいます。
 
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: Attention（注意機構）
+- 周辺の要素: Query・Key・Value の 3 ベクトル、重みの矢印、入力トークン列
+- 関係の描き方: 各トークンから Query/Key の掛け合わせで重みが生まれ、Value を加重合計する流れ
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「Attention が文脈の鍵で、Query と Key の組み合わせで重みが変わるんですよね。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,70 +60,60 @@ Transformer の核。入力のどこに注目するかを決める仕組み
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+文中の単語どうしの関係強度を数値の重みで計算します。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+全単語を並列処理できるため、長い文脈も落とさず扱えます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+仕組みの詳細より「何に注目するか」の概念把握が先決です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+LLM の動作原理を理解したいときの最初の足がかりになります。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Query・Key・Value の 3 語と「重みで参照する」イメージで十分です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Transformer（J-13）、LLM（J-14）、Deep Learning（J-11）
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. 入力のトークン化 — 文章を単語単位のトークンに分割します。
+2. Attention の計算 — Query・Key・Value で各トークンの関係強度を計算します。
+3. 重みづけ集約 — 重要度に応じて Value を加重合計し、文脈を反映した表現を得ます。
+4. 多層スタック — Attention 層を重ねて深い文脈理解を積み上げます。
+5. 出力生成 — 文脈を反映したベクトルをもとに次トークンを予測します。
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- Transformer
+- LLM
+- Self-Attention
+- Deep Learning
+- エンコーダー
 
-- 用語A —
-- 用語B —
-- 用語C —
-
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
-
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
@@ -143,10 +121,10 @@ Transformer の核。入力のどこに注目するかを決める仕組み
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 「今日の天気は？」という文の各単語が横一列に並び、「天気」という単語から他の単語へ矢印が伸び、「今日」と「は」には細い矢印、「天気」自身と「？」には太い矢印が向かう構図。矢印の太さが Attention の重みを表す。
+- 登場人物: 非エンジニアの人物が図を見ながら「どの単語に注目しているの？」と疑問を持つシーン
+- 吹き出し・心の声: 人物「矢印が太いほど注目してるんだ」、太い矢印のそばに「重み大」ラベル
+- 中央に置くキーワード/ラベル: Attention（注意機構）
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +132,28 @@ Transformer の核。入力のどこに注目するかを決める仕組み
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: テキスト分割アイコン（トークン化）
+- Step 2 のアイコン/絵柄: Q・K・V の 3 つのブロックアイコン（Attention 計算）
+- Step 3 のアイコン/絵柄: 加重合計の天秤アイコン（重みづけ集約）
+- Step 4 のアイコン/絵柄: 積み上げ層アイコン（多層スタック）
+- Step 5 のアイコン/絵柄: 出力テキストアイコン（出力生成）
+- 矢印で示す流れの意図: 入力 → 計算 → 集約 → 深化 → 出力という Attention の処理順
 
 ## コミュニティ補完メモ
 
+- Transformer（J-13）との住み分け：J-13 は Transformer アーキテクチャ全体（Encoder/Decoder の構造・歴史的意義）を扱う。J-17 は Attention 機構そのもの（Q/K/V の計算方法・重みの概念）に絞る。
+- Self-Attention / Multi-Head Attention などの変種：本エントリでは概念紹介に留め、詳細は「深掘り先」でJ-13へ誘導する。
+- 元祖は Bahdanau Attention（2015年、機械翻訳向け）で、2017年「Attention Is All You Need」で現在の形に確立された経緯は備考に記す。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- Vaswani et al., "Attention Is All You Need", arXiv:1706.03762 (2017) — checked 2026-04-29
+- Jay Alammar, "The Illustrated Transformer", jalammar.github.io — checked 2026-04-29
+- Bahdanau et al., "Neural Machine Translation by Jointly Learning to Align and Translate", arXiv:1409.0473 (2015) — checked 2026-04-29
 
 ## 備考
+
+- Attention は固有語のため略称展開なし。Query・Key・Value は初出で日本語訳（問い合わせ・索引・値）を括弧で補った。
+- Self-Attention（自己注意機構）・Multi-Head Attention（多頭注意機構）は変種として言及するに留め、詳細は別エントリへ回す。
+- 数式（softmax(QK^T/√d_k)V 等）は非エンジニア向けのため省略。「重みで参照する」という概念のみ記述。
+- 元祖の Bahdanau Attention（2015）から 2017 年論文で「Self-Attention のみ」の構造へ進化した点は、深掘り関心層向けに出典メモに記す。

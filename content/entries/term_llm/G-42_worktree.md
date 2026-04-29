@@ -1,70 +1,58 @@
 ---
 id: G-42
 title: Worktree
+title_reading: ワークツリー
 category: term_llm
 subtype: ops
-experience_level:
-reader_level:
+experience_level: partial
+reader_level: 3
 figure_type: structure
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - git
+  - branch
+  - Subagent
+  - 並列実行
+  - Claude Code
+status: drafting
 ---
 
 # Worktree
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-git の並行作業用別ディレクトリ
-
+同じリポジトリのブランチを別ディレクトリで並列展開できる git の仕組みです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+1 つのリポジトリに紐づいた複数の作業ディレクトリ（Worktree）を作成し、ブランチを切り替えずに並列で作業できます。AI エージェントが複数タスクを同時進行するときも、この仕組みが衝突を防ぎます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+Claude Code や Cursor で「複数の機能を同時に開発したい」「Subagent（サブエージェント）が別ブランチを並行して触れるようにしたい」という場面で登場します。バイブコーディングの並列実行を支える土台の一つです。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+1 つのリポジトリから複数の Worktree が枝分かれし、AI エージェントがそれぞれ別の作業を同時進行している構造を示します。
 
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: リポジトリ（1 つの .git）
+- 周辺の要素: worktree-A（feature/login）、worktree-B（feature/payment）、worktree-C（hotfix/bug）、Subagent A・B・C
+- 関係の描き方: 中心から矢印で各 worktree へ放射、各 worktree に AI キャラクターが座っている
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「Worktree を使えば、Subagent 同士がブランチを取り合わずに並列で動けますよ。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,69 +60,60 @@ git の並行作業用別ディレクトリ
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+同一リポジトリで複数ブランチを並列展開する仕組みです。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI が複数タスクを同時進行でき、衝突しません。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Worktree の数が増えるとディスクと管理コストが増えます。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+並列 AI 開発や大規模マルチエージェント構成で役立ちます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+`git worktree add` コマンドと branch の関係を掴みます。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+branch、Subagent、並列実行、Claude Code。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. リポジトリ準備 — git リポジトリとブランチを用意します
+2. Worktree 作成 — `git worktree add` でブランチを別ディレクトリに展開します
+3. 並列作業 — 各 Worktree で AI エージェントが独立して作業します
+4. マージ — 各ブランチの成果を main へ取り込みます
+5. Worktree 削除 — 不要になったら `git worktree remove` で片付けます
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
-
+- git
+- branch
+- Subagent
+- 並列実行
+- Claude Code
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,31 +122,35 @@ git の並行作業用別ディレクトリ
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 中心に 1 つの「リポジトリ（.git）」ボックスを置き、放射状に worktree-A / B / C の 3 ディレクトリへ矢印を引く。各ディレクトリには小さな AI キャラクターが座り、それぞれ別作業中
+- 登場人物: AI エージェントを擬人化した小キャラクター 3 体（色違い）
+- 吹き出し・心の声: worktree-A「feature/login を開発中」/ worktree-B「feature/payment を開発中」/ worktree-C「hotfix を修正中」
+- 中央キーワード: Worktree ＝ 並列実行の土台
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: リポジトリアイコン
+- Step 2 のアイコン/絵柄: フォルダ＋プラスアイコン
+- Step 3 のアイコン/絵柄: AI キャラクター 3 体が横並びで作業中
+- Step 4 のアイコン/絵柄: マージ矢印（合流）
+- Step 5 のアイコン/絵柄: ゴミ箱アイコン（クリーンアップ）
+- 矢印で示す流れの意図: 準備 → 展開 → 並列作業 → 統合 → 後片付け のループ
 
 ## コミュニティ補完メモ
 
+- F-50 git との住み分け: F-50 は git 全体（コミット・差分・履歴）を扱い、G-42 は「Worktree で並列展開する AI 開発の土台」に絞る
+- G-41 Subagent との住み分け: G-41 は「複数の AI エージェントを起動する仕組み」を扱い、G-42 はそのエージェントが衝突しないためのディレクトリ基盤側を扱う
+- branch（F-53）との住み分け: branch は分岐の概念、worktree はその branch を物理的に別ディレクトリで実体化する手段
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- git-scm.com/docs/git-worktree — checked 2026-04-29
+- Claude Code ドキュメント（worktree 統合）— checked 2026-04-29
 
 ## 備考
+
+Worktree は git 2.5（2015 年）から使えますが、AI エージェントの並列実行（Subagent / background task）の普及で 2024〜2025 年ごろから注目が高まった機能です。複数 AI が同じファイルを同時に編集する衝突を防ぐ手段として、Claude Code など AI ネイティブ環境が推奨するパターンになっています。

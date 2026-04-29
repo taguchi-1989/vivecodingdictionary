@@ -1,70 +1,57 @@
 ---
 id: D-52
 title: Sora
+title_reading: ソラ
 category: model
 subtype: image_video
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: partial
+reader_level: 2
+figure_type: timeline
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2024
+version_status: active
+pricing_note: freemium
+evaluation_date: 2026-04-29
+related_terms:
+  - OpenAI
+  - ChatGPT
+  - DALL-E
+  - Veo
+  - 動画生成 AI
+status: drafting
 ---
 
 # Sora
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-OpenAI の動画生成
-
+OpenAI の動画生成モデルです。テキストから最大 60 秒の動画を作れます。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+テキストの指示から動画を生成します。人物の動き・光の変化・物理的な挙動を一貫させる設計で、数秒〜60 秒の映像をプロンプト 1 つで作れます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+ChatGPT Pro・Plus プランから sora.com にアクセスして利用します。マーケティング素材の試作や、映像企画の叩き台を AI で手軽に作る場面で名前を聞くことが多いです。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+Sora の発表から一般公開・Sora 2 登場までの流れを時系列で示し、どの段階でどんな変化があったかを掴んでもらいます。
 
+### A. タイムライン（figure_type: timeline）
+
+- 2024-02：Sora 発表（研究プレビュー）— テキスト→動画の衝撃デモが公開
+- 2024-12：一般公開（ChatGPT Pro / Plus 経由）— sora.com がローンチ
+- 2025：Sora 2 発表 — 品質・制御性の向上
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「Sora と ChatGPT Pro があれば動画の叩き台はすぐ作れます。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,51 +59,43 @@ OpenAI の動画生成
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+OpenAI の動画生成モデルで、テキストから映像を作ります。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+撮影や編集なしに動画の叩き台を素早く作れます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+生成物の著作権扱いや利用規約は定期的に確認が必要です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+企画・広告・教材の動画素材を素早く試したい場面。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ChatGPT Pro / Plus 経由で使え、sora.com が入口です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+DALL-E、Veo、動画生成 AI の比較。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. 動画の要件を決める — 長さ・雰囲気・登場物を言語化する
+2. プロンプトを書く — 場面・カメラアングル・時間帯を含める
+3. sora.com で生成 — ChatGPT Pro / Plus プランが必要
+4. 結果を確認・修正 — プロンプトを調整して再生成する
+5. 素材として書き出す — 企画書・プレゼン・SNS への利用
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- OpenAI
+- ChatGPT
+- DALL-E
+- Veo
+- 動画生成 AI
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,50 +103,55 @@ OpenAI の動画生成
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: timeline）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 横軸に「2024-02 発表 → 2024-12 一般公開 → 2025 Sora 2」の 3 点を矢印でつなぐタイムライン
+- 登場人物: 画面を覗き込む人物キャラクターを脇に配置
+- 吹き出し・心の声: 2024-12 の一般公開地点に「ついに使える」という吹き出し
+- 中央に置くキーワード/ラベル: Sora ＝ テキスト → 動画
 
 ### 6 視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: メモ帳（要件メモ）
+- Step 2 のアイコン/絵柄: テキスト入力ボックス
+- Step 3 のアイコン/絵柄: sora.com ロゴ風の再生ボタン
+- Step 4 のアイコン/絵柄: 再生ボタン＋ループ矢印
+- Step 5 のアイコン/絵柄: 書き出しアイコン（ダウンロード）
+- 矢印で示す流れの意図: 要件→プロンプト→生成→確認→書き出しの 1 周ループ
 
 
 ## コミュニティ補完メモ
 
+- 静止画生成は D-50 DALL-E（OpenAI）が担当。動画は Sora、静止画は DALL-E と明確に分担。
+- Google の動画生成モデルは D-53 Veo で扱う。Seedance は D-56、Runway は競合の別エントリ候補。
+- ChatGPT（B-3）との関係：Sora は ChatGPT Pro / Plus 経由でアクセスするが、モデルとしては別エントリ。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- openai.com/sora — checked 2026-04-29
+- sora.com — checked 2026-04-29
 
 ## 備考
+
+モデル性能・プラン要件・利用規約は時変情報です。evaluation_date（2026-04-29）以降の変更は公式ページで確認が必要です。Sora 2 の詳細仕様は 2025 時点のアナウンスに基づいており、今後更新される可能性があります。

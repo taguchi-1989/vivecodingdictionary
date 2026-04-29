@@ -1,70 +1,52 @@
 ---
 id: J-12
 title: Neural Network
+title_reading: ニューラルネットワーク
 category: term_general
 subtype: ml_basic
-experience_level:
-reader_level:
+experience_level: partial
+reader_level: 3
 figure_type: structure
 page_layout: spread_v1
 start_date:
 end_date:
 version_status:
 pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+evaluation_date: 2026-04-29
+related_terms:
+  - Deep Learning
+  - Machine Learning
+  - Transformer
+  - 重み
+  - 層
+status: drafting
 ---
 
 # Neural Network
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-神経細胞を模した計算構造
-
+神経細胞を模した計算の仕組みで、AI が「学ぶ」土台になります。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+入力層・隠れ層・出力層という複数の層を通じて、データを変換して答えを出します。各層のニューロン（神経細胞に相当する計算単位）は「重み」を持ち、学習で少しずつ調整されます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+Machine Learning（機械学習）の手法を説明する場面で登場します。Deep Learning（深層学習）は Neural Network を多層化した形で、Transformer や ChatGPT もこの構造の延長にあります。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
-
+入力層 → 隠れ層 → 出力層という 3 層の流れを人物の視点で見せ、「データが変換されていく」感覚を伝えます。
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「Neural Network は層を重ねて重みを学習する仕組みで、Deep Learning の土台ですよね。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,70 +54,59 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+データを層で変換し、重みの更新を通じて「答え」を学習する計算構造です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+複雑なパターンも層を重ねることで表現でき、画像・音声・文章に対応できます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+層が増えるほど学習に時間とデータが必要で、大量の計算資源も要します。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI の仕組みを説明する文脈で基礎語として使われます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+入力・隠れ・出力の 3 層と「重みの更新」の意味を掴むだけで十分です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Deep Learning（J-11）、Transformer（J-13）、Machine Learning（J-10）
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. 問題定義 — 解きたい課題に合わせて入力と出力の形を決めます。
+2. モデル設計 — 層の数・ニューロン数などの構造を選択します。
+3. 学習 — データを流して重みを繰り返し更新していきます。
+4. 評価 — テストデータで精度を確認し、必要なら再調整します。
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- Deep Learning
+- Machine Learning
+- Transformer
+- 重み
+- 層
 
-- 用語A —
-- 用語B —
-- 用語C —
-
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
-
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
@@ -143,10 +114,10 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左から「入力層（数値や文字）」→「隠れ層（複数のニューロンが円で並ぶ）」→「出力層（予測結果）」の 3 ブロックを矢印でつないだ横フロー図。ニューロン間の接続線に「重み」ラベルを添える。
+- 登場人物: 非エンジニアの人物が図の前に立ち「どこで学んでいるの？」と疑問を持つシーン。
+- 吹き出し・心の声: 人物の吹き出し「重みが変わるから学べるんだ」、隠れ層ブロックに「ここで変換」ラベル。
+- 中央に置くキーワード/ラベル: 隠れ層（Hidden Layer）
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +125,23 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: 目標アイコン（問題定義）
+- Step 2 のアイコン/絵柄: 設計図アイコン（モデル設計）
+- Step 3 のアイコン/絵柄: 回転する矢印アイコン（学習ループ）
+- Step 4 のアイコン/絵柄: チェックマークアイコン（評価）
 
 ## コミュニティ補完メモ
 
+- Machine Learning（J-10）との住み分け：J-10 は機械学習全体の概念・種類の整理が主。J-12 は Neural Network という特定の計算構造に絞り「なぜ層と重みが鍵か」を説明する。
+- Deep Learning（J-11）との住み分け：J-11 は Neural Network を多層化した「深層学習」という大きなトレンドの話。J-12 は Neural Network の構造そのものの基礎説明に留める。
+- Transformer（J-13）との住み分け：J-13 は 2017 年以降の特定アーキテクチャ。J-12 はより古典的な構造概念として、Transformer の前提知識として位置づける。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- Goodfellow et al., "Deep Learning", MIT Press, deeplearningbook.org — checked 2026-04-29
+- 3Blue1Brown "Neural Networks" YouTube series — checked 2026-04-29
 
 ## 備考
+
+- 数式・バックプロパゲーションの詳細は非エンジニア向けのため省略。「層と重みの更新」という骨格のみ記述。
+- Activation Function（活性化関数）などの内部詳細は別エントリの深掘り先として扱い、本エントリでは触れない。

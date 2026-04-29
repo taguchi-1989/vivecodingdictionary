@@ -1,70 +1,59 @@
 ---
 id: D-54
 title: Stable Diffusion
+title_reading: ステーブルディフュージョン
 category: model
 subtype: image_video
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: partial
+reader_level: 3
+figure_type: timeline
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2022
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - 拡散モデル
+  - LoRA
+  - Stability AI
+  - Hugging Face
+  - ファインチューニング
+status: drafting
 ---
 
 # Stable Diffusion
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-Stability AI の画像生成
-
+ウェイトが公開された画像生成モデルの代表格。自由に改造できます。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+テキストから画像を生成するオープンウェイトモデルです。Stability AI が公開しており、ウェイト（重みファイル）をダウンロードして手元で動かせます。コミュニティ製の派生モデルが何千とあり、LoRA（追加学習ファイル）で絵柄や人物を細かく調整できます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+画像生成ツールの話題で「SD」と略されて登場することが多いです。ComfyUI や AUTOMATIC1111 といったローカル実行 UI と一緒に紹介される場面や、「閉じた API」の DALL-E・Imagen と比較される記事でよく名前を見ます。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+SD 1.4 から SD3.5・Flux 系まで世代を追い、「ウェイト公開のモデルがどう進化してきたか」を一目で捉えてもらいます。
 
+### A. 時系列タイムライン（figure_type: timeline）
+
+- SD 1.4 / 1.5（2022）: 初期の公開版。512px 中心、コミュニティの原点
+- SD 2.0 / 2.x（2022 末）: 解像度向上。ただし 1.5 系の派生モデルが主流に
+- SDXL（2023）: 1024px 対応。基本モデルと Refiner の 2 段構成
+- SD3 / SD3.5（2024）: マルチモーダル Diffusion Transformer 採用
+- Flux 系（2024〜）: Black Forest Labs 製。SD チームが中心となり開発、高品質で注目
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「SD は LoRA を重ねると絵柄をかなり細かく調整できますよ。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,102 +61,101 @@ Stability AI の画像生成
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ウェイト公開の画像生成モデル群。手元で動かせる代表格です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+派生モデルや LoRA が豊富で、絵柄の細かい調整が自由にできます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+商用利用はバージョンごとにライセンスが異なり、要確認です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+キャラクター・背景の量産や、社外に送れない素材の生成に有効です。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+「オープンウェイト」と「API 型」の違いを把握するのが出発点です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+拡散モデル、LoRA、ComfyUI
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. モデルを選ぶ — SDXL・SD3.5・Flux など用途と GPU に合わせて版を選ぶ
+2. ウェイトを取得 — Hugging Face や Civitai からダウンロードする
+3. UI で実行 — ComfyUI や AUTOMATIC1111 で起動して画像を生成する
+4. LoRA で調整 — 追加学習ファイルを重ねて絵柄や人物を調整する
+5. パイプラインに組み込む — API サーバー化して他ツールから呼び出す
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
-
+- 拡散モデル
+- LoRA
+- Stability AI
+- Hugging Face
+- ファインチューニング
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: timeline）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 横軸に時系列で「SD 1.5 → SDXL → SD3 → Flux」を矢印で結ぶ。各世代の上下にキャッチコピーラベルを添える
+- 登場人物: 画面左に小さくクリエイターキャラクター。SDXL を指差して「ここから高解像度になった」と吹き出し
+- 吹き出し・心の声: 「ウェイト公開なので手元で改造し放題」（オープンウェイトの利点を短く）
+- 中央に置くキーワード: Stable Diffusion ＝ 世代を重ねるオープンウェイト画像生成の代表
 
 ### 6 視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: モデルカードのアイコン（版選択）
+- Step 2 のアイコン/絵柄: ダウンロード矢印
+- Step 3 のアイコン/絵柄: 画面 + 歯車（UI 起動）
+- Step 4 のアイコン/絵柄: スライダー（LoRA 調整）
+- Step 5 のアイコン/絵柄: プラグアイコン（パイプライン組み込み）
+- 矢印で示す流れの意図: 選択 → 取得 → 起動 → 調整 → 活用 の一方通行
 
 
 ## コミュニティ補完メモ
 
+- DALL-E（D-50）との住み分け：DALL-E は閉じた API 型で OpenAI が管理。SD は「ウェイト公開・自分で動かせる」点が独自色。比較軸は「クローズ API vs オープンウェイト」
+- Imagen（D-51）との住み分け：Imagen も Google 管理の閉じた API 型。同様に「クローズ vs オープン」の対比で言及する程度に留める
+- Flux 系は Black Forest Labs 製であり Stability AI 製ではないが、SD チームが中心となって開発した経緯でコミュニティ上では SD の後継として紹介されることが多い。本エントリではその経緯を備考に補記
+- LoRA（J-21）との関係：LoRA は SD の最大の活用シーンの一つ。LoRA エントリと参照し合う
+- 拡散モデル（J-23）との関係：SD は拡散モデルの代表的実装。仕組みの深掘りは拡散モデルエントリへ誘導
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- stability.ai — checked 2026-04-29
+- huggingface.co/stabilityai — checked 2026-04-29
+- blackforestlabs.ai（Flux 系の出典）— checked 2026-04-29
 
 ## 備考
+
+モデル名・ライセンス条件はバージョンごとに異なり時変情報です。SD 1.x / 2.x は CreativeML Open RAIL-M ライセンス、SDXL は別ライセンス、SD3 系はさらに異なる条件で提供されている場合があります。商用利用前は必ず公式ライセンスを再確認してください。Flux 系は Black Forest Labs（BFL）が開発・公開しており、Stability AI 直接の製品ではありませんが、SD チームの中心メンバーが関与しているためコミュニティ上で SD の文脈で語られることが多いです。evaluation_date 2026-04-29 時点の情報です。
