@@ -1,69 +1,63 @@
 ---
 id: F-5
 title: CSS
+title_reading: シーエスエス
 category: term_tool
 subtype: language
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: partial
+reader_level: "2"
+figure_type: before_after
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - HTML
+  - JavaScript
+  - Tailwind CSS
+  - VS Code
+  - Figma
+status: drafting
 ---
 
 # CSS
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-Web ページの見た目を書くスタイル言語
-
+Cascading Style Sheets の略。HTML の見た目（色・サイズ・配置）を整えるスタイル言語です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+文字色・背景色・余白・レイアウトなど、Web ページのすべての見た目をコードで制御するスタイル言語です。HTML（エイチティーエムエル）が「骨格」なら、CSS（シーエスエス）は「外見の装飾」を担います。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+AI にデザイン修正を依頼すると `.css` ファイルや `style=` 属性が返ってくる場面で目にします。Figma（フィグマ）のデザイン案を Web に反映する工程でも「CSS に書き出す」という言葉が出てきます。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+CSS を当てる前（無装飾の素の HTML）と当てた後（色・余白・レイアウトが整った画面）を並べて、CSS が担う役割を視覚的に示します。
 
+### A. Before / After（figure_type: before_after）
+
+- Before
+  - 状況: CSS なしの素の HTML ページ
+  - 視覚要素（コード or 概念）: 白背景・黒テキストが詰まって並ぶ状態
+  - つまずき: 「HTML だけでは見た目がまったく整わない」
+- After
+  - 状況: CSS を適用した同じページ
+  - 視覚要素: 背景色・ボタンの色・余白が揃い、読みやすくなった画面
+  - うれしさ: 「同じ HTML なのに見た目が別物になる」
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「このボタンの色、CSS で変えてもらえますか？」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,102 +66,102 @@ Web ページの見た目を書くスタイル言語
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+HTML の構造を変えずに、色・余白・配置だけを制御します。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+デザインの変更が CSS 1 か所で済み、AI への修正依頼も簡潔になります。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+HTML と CSS は別ファイルになることが多く、どちらを直すか判断が必要です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI 生成画面の見た目を微調整する指示を出すときに役立ちます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+「HTML が骨格、CSS が装飾」という役割分担と `.css` ファイルの存在。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+HTML（F-4）、Tailwind CSS、Figma。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. デザイン確認 — Figma 等で完成イメージを把握し、変えたい見た目を特定する
+2. CSS 修正依頼 — AI に「この要素の色と余白を CSS で変えて」と指示する
+3. ファイル確認 — `.css` ファイルまたは `style=` 属性の変更箇所を受け取る
+4. ブラウザ確認 — 変更後の画面をブラウザで開き、意図通りか確かめる
+5. 再依頼 — ずれがあれば画面の状態を AI に伝えて調整を繰り返す
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- HTML
+- JavaScript
+- Tailwind CSS
+- VS Code
+- Figma
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: before_after）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左半分に素の HTML ページ（白背景・黒テキスト・無装飾ボタン）、右半分に CSS 適用後の同ページ（青ヘッダー・余白あり・色付きボタン）を並べた 2 画面対比
+- 登場人物: 非エンジニアの人物 1 人が Before 画面と After 画面を見比べている
+- 吹き出し・心の声: 「中身（HTML）は同じなのに、CSS を足すとこんなに変わるんですね」
+- 中央に置くキーワード/ラベル: CSS を当てる前 / CSS を当てた後
+- Before / After の対比ポイント: 無装飾の素の状態 vs 色・余白・レイアウトが整った状態
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: Figma 画面（デザイン確認）
+- Step 2 のアイコン/絵柄: チャット吹き出し（AI への CSS 修正依頼）
+- Step 3 のアイコン/絵柄: コードファイル（.css ファイル受け取り）
+- Step 4 のアイコン/絵柄: ブラウザウィンドウ（画面確認）
+- Step 5 のアイコン/絵柄: 回転矢印（再依頼ループ）
+- 矢印で示す流れの意図: デザイン把握 → AI 指示 → コード受け取り → 確認 → 調整ループ の 5 ステップ
 
 ## コミュニティ補完メモ
+
+- HTML（F-4）との住み分け：HTML が「構造・骨格」、CSS が「見た目・装飾」。F-4 では HTML の要素・タグの話に絞り、CSS のスタイル指定は本エントリへ。
+- JavaScript（F-1）との住み分け：CSS はアニメーションの簡単なものをカバーできるが、動的なインタラクション（クリック反応・データ連動）は JS の領域。F-1 へ。
+- Tailwind CSS との住み分け：CSS のユーティリティフレームワークで「クラス名を書くだけ」のアプローチ。フレームワーク固有の話は別エントリへ。本エントリは素の CSS（標準仕様）のスコープ。
+- Sass / styled-components 等のプリプロセッサ・CSS-in-JS は別エントリ候補として住み分ける。
 
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- MDN Web Docs: CSS — <https://developer.mozilla.org/ja/docs/Web/CSS> — checked 2026-04-29
 
 
 ## 備考
+
+- CSS の仕様は W3C（World Wide Web Consortium）が策定し、各ブラウザが順次実装する形で進化している。バージョン番号は「CSS3」以降はモジュール単位での更新となっており、単一バージョン番号はなくなっている（時変情報）。本エントリはバージョン差分には踏み込まず、言語としての役割に絞った。
+- Cascading（カスケーディング）は「複数のスタイルが重なったとき、どれを優先するかを決める仕組み」を指す。CSS の名前の由来だが、詳細は深掘り先に譲る。

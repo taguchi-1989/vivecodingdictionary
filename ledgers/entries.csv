@@ -46,8 +46,8 @@ B-33,,Canva,service,saas_design,skeleton,,content/entries/service/B-33_canva.md
 B-40,,Reddit,service,info_source,skeleton,,content/entries/service/B-40_reddit.md
 B-41,,arXiv,service,info_source,skeleton,,content/entries/service/B-41_arxiv.md
 B-50,,Claude の料金プラン,service,pricing,needs_review,時変情報 evaluation_date:2026-04-29,content/entries/service/B-50_claude_pricing.md
-B-51,,ChatGPT の料金プラン,service,pricing,skeleton,時変情報,content/entries/service/B-51_chatgpt_pricing.md
-B-52,,Gemini の料金プラン,service,pricing,skeleton,時変情報,content/entries/service/B-52_gemini_pricing.md
+B-51,,ChatGPT の料金プラン,service,pricing,needs_review,時変情報 evaluation_date:2026-04-29,content/entries/service/B-51_chatgpt_pricing.md
+B-52,,Gemini の料金プラン,service,pricing,drafting,時変情報 evaluation_date:2026-04-29,content/entries/service/B-52_gemini_pricing.md
 B-60,,Suno,service,creative_media,skeleton,音楽生成,content/entries/service/B-60_suno.md
 B-61,,ACE-Step 1.5,service,creative_media,skeleton,音楽生成,content/entries/service/B-61_ace_step_1_5.md
 C-1,,OpenAI,person_org,company,candidate,,content/entries/person/C-1_openai.md
@@ -79,7 +79,7 @@ C-80,,AI大学,person_org,youtuber,skeleton,,content/entries/person/C-80.md
 C-81,,にゃんた,person_org,youtuber,skeleton,,content/entries/person/C-81.md
 C-82,,まさお,person_org,youtuber,skeleton,,content/entries/person/C-82.md
 C-83,,AIの羅針盤,person_org,youtuber,skeleton,,content/entries/person/C-83.md
-D-1,,Gemini 2 系,model,google,skeleton,,content/entries/model/D-1.md
+D-1,,Gemini 2 系,model,google,drafting,v2テンプレで D-1_gemini2.md に書き起こし済（2026-04-29）。旧D-1.md は archived,content/entries/model/D-1_gemini2.md
 D-2,201,Gemini 2.5 系,model,google,sample,旧3桁ID連携,content/entries/model/D-2_gemini25.md
 D-3,,Gemini 3 系,model,google,skeleton,,content/entries/model/D-3.md
 D-4,,Gemini 3.1 系,model,google,skeleton,,content/entries/model/D-4.md
@@ -89,15 +89,15 @@ D-12,,Claude 4 系,model,anthropic,needs_review,,content/entries/model/D-12_clau
 D-13,,Claude 4.5 系,model,anthropic,skeleton,,content/entries/model/D-13.md
 D-14,,Claude Mitos モデル,model,anthropic,skeleton,要確認: 正式名称,content/entries/model/D-14.md
 D-20,,GPT-5 系,model,openai,needs_review,本書き済み（2026-04-29）。旧スケルトン D-20.md は archived,content/entries/model/D-20_gpt5.md
-D-21,,GPT-4 系,model,openai,skeleton,,content/entries/model/D-21.md
-D-22,,o1 系,model,openai,skeleton,推論特化,content/entries/model/D-22.md
+D-21,,GPT-4 系,model,openai,drafting,本書き済み（2026-04-29）。旧スケルトン D-21.md は archived,content/entries/model/D-21_gpt4.md
+D-22,,o1 系,model,openai,drafting,本書き済み（2026-04-29）。旧スケルトン D-22.md は archived,content/entries/model/D-22_o1.md
 D-23,,o3 系,model,openai,skeleton,,content/entries/model/D-23.md
 D-24,,GPT-3 系,model,openai,skeleton,,content/entries/model/D-24.md
 D-25,,GPT-1 / GPT-2 系,model,openai,skeleton,,content/entries/model/D-25.md
 D-26,,gpt-oss,model,openai,skeleton,OpenAI初の公式オープンウェイトモデル 2025-08,content/entries/model/D-26_gpt_oss.md
-D-30,,Grok 系,model,xai,skeleton,,content/entries/model/D-30.md
+D-30,,Grok 系,model,xai,drafting,,content/entries/model/D-30_grok.md
 D-35,,Cursor Composer (モデル),model,other_closed,skeleton,,content/entries/model/D-35_cursor_composer.md
-D-40,,Llama 系,model,open,skeleton,,content/entries/model/D-40.md
+D-40,,Llama 系,model,open,drafting,,content/entries/model/D-40_llama.md
 D-41,,Mistral 系,model,open,skeleton,,content/entries/model/D-41.md
 D-42,,Gemma 系,model,open,skeleton,,content/entries/model/D-42.md
 D-43,,Qwen 系,model,open,skeleton,,content/entries/model/D-43.md
@@ -118,7 +118,7 @@ D-60,,AlphaGo,model,historical,skeleton,,content/entries/model/D-60_alphago.md
 D-70,,Amical,model,voice_audio,skeleton,著者確認済。URL は執筆時に補足,content/entries/model/D-70_amical.md
 D-71,,Whisper,model,voice_audio,skeleton,OpenAI のオープン音声認識モデル,content/entries/model/D-71_whisper.md
 E-1,,SWE-Bench,benchmark,coding,needs_review,,content/entries/benchmark/E-1_swe_bench.md
-E-2,,SWE-Bench Verified,benchmark,coding,skeleton,,content/entries/benchmark/E-2_swe_bench_verified.md
+E-2,,SWE-Bench Verified,benchmark,coding,drafting,,content/entries/benchmark/E-2_swe_bench_verified.md
 E-3,,Terminal-Bench,benchmark,coding,skeleton,,content/entries/benchmark/E-3_terminal_bench.md
 E-4,,HumanEval,benchmark,coding,skeleton,,content/entries/benchmark/E-4_humaneval.md
 E-20,,MMLU,benchmark,reasoning,skeleton,,content/entries/benchmark/E-20_mmlu.md
@@ -134,7 +134,7 @@ E-31,,WebArena,benchmark,agent,skeleton,,content/entries/benchmark/E-31_webarena
 E-32,,GAIA,benchmark,agent,skeleton,,content/entries/benchmark/E-32_gaia.md
 E-33,,AgentBench,benchmark,agent,skeleton,,content/entries/benchmark/E-33_agentbench.md
 E-34,,OSWorld,benchmark,agent,skeleton,,content/entries/benchmark/E-34_osworld.md
-E-50,,Chatbot Arena,benchmark,general,skeleton,,content/entries/benchmark/E-50_chatbot_arena.md
+E-50,,Chatbot Arena,benchmark,general,needs_review,,content/entries/benchmark/E-50_chatbot_arena.md
 E-51,,LMSYS Arena,benchmark,general,skeleton,,content/entries/benchmark/E-51_lmsys_arena.md
 F-1,301,JavaScript,term_tool,language,needs_review,旧3桁ID連携→F-1に取り込み済み,content/entries/term_tool/F-1_javascript.md
 F-2,302,TypeScript,term_tool,language,sample,旧3桁ID連携,content/entries/term_tool/F-2_typescript.md
@@ -153,7 +153,7 @@ F-14,,three.js,term_tool,framework,skeleton,3Dライブラリ,content/entries/te
 F-15,,shadcn/ui,term_tool,framework,skeleton,コピペ配布型 React コンポーネント集,content/entries/term_tool/F-15_shadcn_ui.md
 F-20,303,ESLint,term_tool,linter,sample,旧3桁ID連携,content/entries/term_tool/F-20_eslint.md
 F-21,,Prettier,term_tool,linter,skeleton,,content/entries/term_tool/F-21_prettier.md
-F-30,,VS Code,term_tool,editor,skeleton,,content/entries/term_tool/F-30_vs_code.md
+F-30,,VS Code,term_tool,editor,drafting,,content/entries/term_tool/F-30_vs_code.md
 F-34,,VS Code 拡張機能,term_tool,editor,skeleton,,content/entries/term_tool/F-34.md
 F-35,,Markdown Preview Enhanced,term_tool,editor_ext,skeleton,,content/entries/term_tool/F-35_markdown_preview_enhanced.md
 F-36,,Git Graph,term_tool,editor_ext,skeleton,,content/entries/term_tool/F-36_git_graph.md
@@ -166,15 +166,15 @@ F-43,,テスト,term_tool,cli_build,skeleton,,content/entries/term_tool/F-43.md
 F-44,,pnpm,term_tool,cli_build,skeleton,,content/entries/term_tool/F-44_pnpm.md
 F-50,,git,term_tool,git,needs_review,,content/entries/term/F-50_git.md
 F-51,,git push,term_tool,git,skeleton,,content/entries/term_tool/F-51_git_push.md
-F-52,,git pull,term_tool,git,skeleton,,content/entries/term_tool/F-52_git_pull.md
+F-52,,git pull,term_tool,git,needs_review,,content/entries/term_tool/F-52_git_pull.md
 F-53,,branch,term_tool,git,skeleton,,content/entries/term_tool/F-53_branch.md
-F-54,,commit,term_tool,git,skeleton,,content/entries/term_tool/F-54_commit.md
+F-54,,commit,term_tool,git,needs_review,,content/entries/term_tool/F-54_commit.md
 F-55,,merge,term_tool,git,skeleton,,content/entries/term_tool/F-55_merge.md
 F-56,,.gitignore,term_tool,git,skeleton,,content/entries/term_tool/F-56_gitignore.md
 F-57,,リポジトリ,term_tool,git,skeleton,,content/entries/term_tool/F-57.md
 F-58,,git stash,term_tool,git,skeleton,,content/entries/term_tool/F-58_git_stash.md
 F-59,,README.md,term_tool,git,skeleton,,content/entries/term_tool/F-59_readme_md.md
-F-60,,GitHub,term_tool,github,skeleton,,content/entries/term_tool/F-60_github.md
+F-60,,GitHub,term_tool,github,needs_review,,content/entries/term_tool/F-60_github.md
 F-61,,Pull Request,term_tool,github,skeleton,,content/entries/term_tool/F-61_pull_request.md
 F-62,,GitHub Actions,term_tool,github,skeleton,CI/CD,content/entries/term_tool/F-62_github_actions.md
 F-71,,ripgrep (rg),term_tool,search,skeleton,,content/entries/term_tool/F-71_ripgrep.md
@@ -219,14 +219,14 @@ F-190,,サブルーチン,term_tool,programming_basic,skeleton,古典的概念,c
 G-1,,Context (コンテキスト),term_llm,basic,needs_review,,content/entries/term/G-1_context.md
 G-2,,Token,term_llm,basic,needs_review,,content/entries/term_llm/G-2_token.md
 G-3,,Dictation,term_llm,basic,skeleton,,content/entries/term_llm/G-3_dictation.md
-G-4,,System Prompt,term_llm,basic,skeleton,,content/entries/term_llm/G-4_system_prompt.md
+G-4,,System Prompt,term_llm,basic,drafting,,content/entries/term_llm/G-4_system_prompt.md
 G-5,,Context Window,term_llm,basic,skeleton,,content/entries/term_llm/G-5_context_window.md
 G-6,,One-shot,term_llm,basic,skeleton,,content/entries/term_llm/G-6_one_shot.md
 G-7,,指示追従性,term_llm,basic,skeleton,,content/entries/term_llm/G-7.md
 G-8,,決定論的／非決定論的,term_llm,basic,skeleton,,content/entries/term_llm/G-8.md
 G-9,,effort レベル,term_llm,basic,skeleton,low/medium/high/xhigh,content/entries/term_llm/G-9.md
 G-10,,Prompt Engineering,term_llm,technique,drafting,,content/entries/term_llm/G-10_prompt_engineering.md
-G-11,,Context Engineering,term_llm,technique,skeleton,,content/entries/term_llm/G-11_context_engineering.md
+G-11,,Context Engineering,term_llm,technique,drafting,,content/entries/term_llm/G-11_context_engineering.md
 G-12,,Agent Design,term_llm,technique,skeleton,,content/entries/term_llm/G-12_agent_design.md
 G-13,,Few-shot Learning,term_llm,technique,skeleton,,content/entries/term_llm/G-13_few_shot_learning.md
 G-14,,Thinking モデル,term_llm,technique,skeleton,,content/entries/term_llm/G-14.md
@@ -234,7 +234,7 @@ G-20,,CLAUDE.md,tool_agent,config_file,skeleton,,content/entries/tool_agent/G-20
 G-21,,AGENTS.md,tool_agent,config_file,skeleton,,content/entries/tool_agent/G-21_agents_md.md
 G-22,,SKILL.md,tool_agent,config_file,skeleton,,content/entries/tool_agent/G-22_skill_md.md
 G-23,,.claude/settings.json,tool_agent,config_file,skeleton,,content/entries/tool_agent/G-23_claude_settings_json.md
-G-30,,Tool Use,term_llm,control,skeleton,,content/entries/term_llm/G-30_tool_use.md
+G-30,,Tool Use,term_llm,control,drafting,,content/entries/term_llm/G-30_tool_use.md
 G-31,,Hook,term_llm,control,skeleton,,content/entries/term_llm/G-31_hook.md
 G-32,,Slash Command,term_llm,control,skeleton,,content/entries/term_llm/G-32_slash_command.md
 G-33,,Function Calling,term_llm,control,skeleton,,content/entries/term_llm/G-33_function_calling.md
@@ -271,11 +271,11 @@ H-61,,Preview 版という文化,history,culture,skeleton,,content/entries/histo
 H-62,,Anthropic 創業の流れ,history,event,skeleton,,content/entries/history/H-62.md
 I-1,,MCP,mcp,protocol,needs_review,,content/entries/mcp/I-1_mcp.md
 I-2,,MCP Server,mcp,protocol,skeleton,,content/entries/mcp/I-2_mcp_server.md
-I-3,,MCP Client,mcp,protocol,skeleton,,content/entries/mcp/I-3_mcp_client.md
+I-3,,MCP Client,mcp,protocol,drafting,,content/entries/mcp/I-3_mcp_client.md
 I-4,,MCP Transport,mcp,protocol,skeleton,,content/entries/mcp/I-4_mcp_transport.md
 I-5,,MCP SDK,mcp,protocol,skeleton,,content/entries/mcp/I-5_mcp_sdk.md
-I-10,,Filesystem MCP,mcp,reference,skeleton,,content/entries/mcp/I-10_filesystem_mcp.md
-I-11,,GitHub MCP,mcp,reference,skeleton,公式,content/entries/mcp/I-11_github_mcp.md
+I-10,,Filesystem MCP,mcp,reference,needs_review,,content/entries/mcp/I-10_filesystem_mcp.md
+I-11,,GitHub MCP,mcp,reference,needs_review,公式,content/entries/mcp/I-11_github_mcp.md
 I-12,,Git MCP,mcp,reference,skeleton,,content/entries/mcp/I-12_git_mcp.md
 I-13,,Slack MCP,mcp,reference,skeleton,,content/entries/mcp/I-13_slack_mcp.md
 I-20,,Playwright MCP,mcp,dev_automation,skeleton,,content/entries/mcp/I-20_playwright_mcp.md
@@ -314,7 +314,7 @@ J-41,,DX,term_general,buzzword,skeleton,,content/entries/term_general/J-41_dx.md
 J-42,,Web3,term_general,buzzword,skeleton,,content/entries/term_general/J-42_web3.md
 J-43,,SaaS,term_general,buzzword,skeleton,,content/entries/term_general/J-43_saas.md
 J-50,,AI 倫理,term_general,ethics_law,skeleton,,content/entries/term_general/J-50.md
-J-51,,Hallucination,term_general,ethics_law,skeleton,,content/entries/term_general/J-51_hallucination.md
+J-51,,Hallucination,term_general,ethics_law,drafting,,content/entries/term_general/J-51_hallucination.md
 J-52,,Sycophancy,term_general,ethics_law,skeleton,,content/entries/term_general/J-52_sycophancy.md
 J-53,,著作権法 30 条の 4 (日本),term_general,ethics_law,skeleton,,content/entries/term_general/J-53.md
 J-54,,ISO/IEC 42001,term_general,ethics_law,skeleton,AIMS,content/entries/term_general/J-54_iso_iec_42001.md

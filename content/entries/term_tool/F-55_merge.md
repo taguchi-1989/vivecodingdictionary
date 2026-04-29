@@ -1,70 +1,60 @@
 ---
 id: F-55
 title: merge
+title_reading: マージ
 category: term_tool
 subtype: git
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: hands_on
+reader_level: 2
+figure_type: before_after
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+evaluation_date: 2026-04-29
+related_terms:
+  - branch
+  - commit
+  - git pull
+  - conflict
+  - rebase
+status: needs_review
 ---
 
 # merge
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-別の枝を取り込む
-
+別の branch（枝）の変更を、今いる枝に取り込む操作です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+`git merge` は、分岐して別々に進んでいる 2 本の branch を 1 本に合流させます。取り込んだ変更は新しい commit として履歴に残り、どこで合流したかが後から追えます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+feature branch（機能開発用の枝）での作業が終わり、main（本線）に取り込む場面で登場します。`git pull` も内部で merge を呼ぶため、他の人の変更を取り込むたびに使われます。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+「merge 前に 2 本の枝が分かれている状態」と「merge 後に 1 本に合流した状態」を左右に並べ、変更が合流するイメージを掴んでもらいます。
 
+### A. Before / After（figure_type: before_after）
+
+- Before
+  - 状況: main と feature が分岐して、それぞれ commit が進んでいる
+  - 視覚要素（コード or 概念）: main から枝が 2 本伸び、それぞれに commit が積まれている図
+  - つまずき: 2 つの枝がどこで何が違うか分からず、取り込み方が見えない
+- After
+  - 状況: `git merge feature` を実行し、feature の変更が main に取り込まれた
+  - 視覚要素: 2 本の枝が 1 点に合流し、merge commit が生まれた図
+  - うれしさ: 変更が 1 本になり、どの枝の何が合流したか履歴で追える
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「feature branch で作った機能、確認できたので main に merge しておきますね。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,51 +62,44 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+2 本の branch を合流させ、変更を 1 本の履歴にまとめます。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+並行開発した変更を安全に統合でき、経緯が履歴に残ります。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+同じ箇所を両方で変えると conflict（競合）が起きて手動解消が必要です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+機能ブランチの統合、pull request のマージ、共同開発に役立ちます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+branch が何かと、merge commit が履歴に残る仕組みを押さえます。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+rebase、conflict 解消、fast-forward merge、pull request。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. branch を作る — feature branch で作業を開始する（F-53）
+2. commit を積む — 変更を記録しながら開発を進める（F-54）
+3. main に切り替える — `git checkout main` で本線へ戻る
+4. merge を実行する — `git merge feature` で変更を取り込む
+5. conflict を解消する — 競合があれば手動で解決して commit する
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- branch
+- commit
+- git pull
+- conflict
+- rebase
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,50 +107,58 @@ YAML 補足（本書きで埋める／見直す欄）:
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
-
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: before_after）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左に 2 本の枝が分岐したまま伸びている状態、右に 2 本が 1 点に合流して merge commit が生まれた状態
+- 登場人物: キャラクター 1 人。Before で困り顔（「どっちが正しい？」）、After で安心顔（「1 本にまとまった」）
+- 吹き出し・心の声: Before「branch が 2 本ある、どうやって合わせるんだろう」／After「merge commit で合流した、履歴にも残ってる」
+- 中央に置くキーワード/ラベル: `git merge` ＝ 枝を合流させる
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: 枝分かれアイコン（branch 作成）
+- Step 2 のアイコン/絵柄: スタンプアイコン（commit）
+- Step 3 のアイコン/絵柄: 矢印で main へ切り替え
+- Step 4 のアイコン/絵柄: 合流アイコン（2 本の線が 1 点に集まる）
+- Step 5 のアイコン/絵柄: レンチ・解消アイコン（conflict 解消）
+- 矢印で示す流れの意図: 枝で作って → 記録して → 本線に戻って → 合流させる、の一連の流れ
 
 ## コミュニティ補完メモ
+
+- merge の上位概念は F-50 git。git 全体（差分・履歴・責任の所在）は F-50 で扱い、merge は「2 本の枝を合流させる操作」に絞る。
+- branch（F-53）は「枝を作る」、merge（F-55）は「枝を合流させる」のペア関係。相互に関連用語で参照する。
+- git pull（F-52）は内部で merge を呼ぶが、pull の「リモートから取ってくる」操作は F-52 に任せ、本エントリは merge 単体の「2 本を合流させる」に集中する。
+- conflict（競合）の詳細な解消手順は別エントリへ逃がす。本エントリでは「起きる可能性がある」程度に留める。
+- rebase は「歴史を直線にする派」で別エントリ。merge は「合流の証跡を残す派」として対比の一言だけ触れる程度にする。
 
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- git-scm.com/docs/git-merge — checked 2026-04-29
+- Pro Git book（git-scm.com/book）— checked 2026-04-29
 
 
 ## 備考
+
+- title は "merge" のまま使用（F-50 git のスタイルに合わせ、コマンド名をそのまま title にする方針）。
+- git pull（F-52）との相互参照が重要。pull を説明するとき「内部で merge を使います」と参照できる。

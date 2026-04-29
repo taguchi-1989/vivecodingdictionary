@@ -1,69 +1,59 @@
 ---
 id: B-52
 title: Gemini の料金プラン
+title_reading: ジェミニのりょうきんプラン
 category: service
 subtype: pricing
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: hands_on
+reader_level: "2-3"
+figure_type: comparison
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: freemium
+evaluation_date: 2026-04-29
+related_terms:
+  - Gemini
+  - Google AI Pro
+  - Google AI Ultra
+  - Google One
+  - Vertex AI
+status: drafting
 ---
 
 # Gemini の料金プラン
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
+<!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## tagline
 
-無料／AI Pro（$20）／AI Ultra（$200 前後）
-
-
-<!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
+無料から始め、上位モデルや長い Context（コンテキスト）が必要なら有料プランへ移行する体系です。
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+使用量や目的に合わせてプランを選ぶことで、Gemini の利用できるモデルや機能の範囲が変わります。無料の Free から始め、Google AI Pro・Google AI Ultra へと段階的に移行できます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+gemini.google.com や Google One のプランページでプラン比較表に出会います。Gemini を日常的に使い始め「より高性能なモデルを試したい」と感じたとき、有料プランの選択肢が目に入ります。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+無料・Pro・Ultra の 3 段の違いを、使える機能とモデルの観点から一目で把握できるようにします。
 
+### B. 登場シーン（figure_type: comparison）
+
+- シーン1: 無料で試したいユーザー — Free で Gemini の基本機能を使う
+- シーン2: 日常的に高性能モデルを使いたいユーザー — Google AI Pro で上位モデルにアクセスする
+- シーン3: 最上位モデルや長い Context が必要なユーザー — Google AI Ultra で制限なく使う
+- 並べる基準: 利用量・用途別（軽め / 普通 / ヘビー）
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Google AI Pro に入ると Gemini 2.5 Pro が使えるようになりますよね。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,81 +62,73 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+モデル・機能・利用量の上限を段階的に設定するプラン体系です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Free から始めて必要なときだけ上位プランへ移れるため、固定費を抑えやすいです。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+料金と提供モデルは変動しやすく、改定が頻繁にあります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+高性能モデルを日常的に使う場合、Pro プランが最初の選択肢です。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Free・Pro・Ultra の 3 段の構成と相対的な立ち位置を把握します。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Gemini、Google One、Vertex AI。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. 試用 — Free で Gemini の基本機能と対話品質を確認する
+2. 個人活用 — Google AI Pro で上位モデルへのアクセスを得る
+3. 重い活用 — Google AI Ultra で最上位モデルと長い Context を活用する
+4. 法人展開 — Vertex AI 経由の API 利用（B-27）へ移行する
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- Gemini
+- Google AI Pro
+- Google AI Ultra
+- Google One
+- Vertex AI
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: comparison）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: Free・Google AI Pro・Google AI Ultra の 3 段を縦に並べた比較表。左列にプラン名、右列に使えるモデルと機能範囲のイメージ（棒グラフ風）を配置
+- 登場人物: 左側に「たまに使う人」と「毎日ヘビーに使う人」の 2 人のキャラクターを置く
+- 吹き出し・心の声: ライトユーザー「無料で十分かな」、ヘビーユーザー「Ultra じゃないと物足りない…」
+- 中央に置くキーワード/ラベル: Free / Google AI Pro / Google AI Ultra の 3 段ラベル
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +136,29 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 「試」のラベル、虫眼鏡アイコン
+- Step 2 のアイコン/絵柄: 個人ユーザーアイコン、上矢印（Pro へ）
+- Step 3 のアイコン/絵柄: ロケットアイコン（Ultra）
+- Step 4 のアイコン/絵柄: ビルアイコン（法人・Vertex AI）
+- 矢印で示す流れの意図: 利用量の増加に伴ってプランをステップアップしていく流れ
 
 
 ## コミュニティ補完メモ
 
+- Gemini（B-1）との住み分け：B-1 はサービス自体の説明。本エントリは料金体系の詳細
+- Vertex AI（B-27）は法人向け API 利用の別系統。本エントリでは「法人展開先」として一言誘導のみ
+- Claude 料金（B-50）・ChatGPT 料金（B-51）と合わせて「3 大料金トリオ」を構成。プラン段数の比較は各エントリに委ねる
+- Workspace 向け Gemini（Google Workspace プラン内包）は別系統。本エントリでは扱わず、備考に留める
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- gemini.google.com — checked 2026-04-29
+- one.google.com/about/google-ai-plans — checked 2026-04-29
 
 
 ## 備考
+
+- 料金・上限の具体数値（月額・メッセージ上限等）は時変性が高いため本文には入れない。誌面の比較図キャプションに数値を載せ、evaluation_date で管理する
+- Google AI Pro は月額 $20 前後、Google AI Ultra は月額 $200 前後（checked 2026-04-29）。具体額は改定が頻繁なため誌面キャプション管理とする
+- Google Workspace に含まれる Gemini 機能は別プラン系統（Workspace Business/Enterprise）。本エントリのスコープ外
+- Vertex AI 経由の法人 API 利用は per-token 課金体系で、個人プランとは別系統（B-27 へ誘導）

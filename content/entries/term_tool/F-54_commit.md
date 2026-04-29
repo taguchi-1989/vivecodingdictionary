@@ -1,70 +1,60 @@
 ---
 id: F-54
 title: commit
+title_reading: コミット
 category: term_tool
 subtype: git
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: hands_on
+reader_level: 2
+figure_type: workflow
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+evaluation_date: 2026-04-29
+related_terms:
+  - git
+  - branch
+  - push
+  - merge
+  - リポジトリ
+status: needs_review
 ---
 
 # commit
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-変更を記録する単位
-
+変更を「記録の単位」として刻む操作です。git の時系列を積み上げる基本の一手。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+`git commit` を実行すると、その時点の変更スナップショットが履歴に永続保存されます。誰が・いつ・何を変えたかがメッセージとともに記録され、後から差分を確認したり過去に戻したりできます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+AI にコードを書かせた直後や、機能を 1 つ完成させた節目に打つのが commit です。「commit を刻んでから push しましょう」という流れで、チームの指示や記事でよく出てきます。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+commit が積み重なって履歴になる様子を、タイムライン上のチェックポイントとして見せます。
 
+### A. Before / After（figure_type: workflow）
+
+- Before
+  - 状況: 変更を commit せずに作業を続ける
+  - 視覚要素（コード or 概念）: ファイルが次々上書きされ、どこが変わったか追えない
+  - つまずき: 「どこまで戻ればいいか」の基点がない
+- After
+  - 状況: 節目ごとに commit を打つ
+  - 視覚要素: タイムライン上に commit A → B → C と並び、各点にメッセージが付く
+  - うれしさ: どの commit にでも戻れる。差分も 1 コマンドで確認できる
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「ひとまず動いたので commit を打っておきます。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,102 +62,101 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+変更を履歴の 1 点として永続保存します。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+「戻れる基点」が増えるので、迷わず次の変更に進めます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+まとめすぎると差分が大きくなり、レビューが難しくなります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+機能追加、バグ修正、AI 提案の採用判断どれにも使います。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+`git add` で変更を選んで `git commit` で記録する 2 ステップ。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+commit message 規約、rebase、cherry-pick。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. コードを書く — 機能追加やバグ修正を行う
+2. `git add` — commit に含める変更ファイルを選ぶ
+3. `git commit -m "..."` — メッセージを付けて変更を記録する
+4. `git push` — リモート（F-51）へ送り、チームと共有する
+5. レビュー → merge — 差分を確認して本線に取り込む（F-55）
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
-
+- git
+- branch
+- push
+- merge
+- リポジトリ
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: workflow）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 横向きのタイムライン上に commit A・B・C が丸ポイントで並び、各点から吹き出しでメッセージが出る。右端のキャラクターが「好きな点に戻れる」と安心している
+- 登場人物: 1 人のキャラクター（開発者）、右端で微笑み
+- 吹き出し・心の声: commit A「ログイン追加」/ commit B「バグ修正」/ commit C「UI 調整」/ キャラクター「ここまで戻れる！」
+- 中央に置くキーワード/ラベル: commit ＝ 戻れる基点
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 鉛筆（コード書く）
+- Step 2 のアイコン/絵柄: チェックボックス（add で選ぶ）
+- Step 3 のアイコン/絵柄: スタンプ・印鑑（commit で記録）
+- Step 4 のアイコン/絵柄: クラウド矢印（push で送る）
+- Step 5 のアイコン/絵柄: 合流矢印（merge）
+- 矢印で示す流れの意図: 書く → 選ぶ → 記録 → 送る → 取り込む の 1 サイクル
 
 
 ## コミュニティ補完メモ
 
+- git（F-50）との住み分け：F-50 は git 全体の概念・差分の仕組みを扱う。本エントリは commit 操作そのものに絞り、「いつ打つか」「メッセージをどう書くか」の粒度。
+- push（F-51）との住み分け：commit はローカル保存まで。リモートへの送信は push が担当。本文で「commit してから push」の流れに触れる程度にとどめる。
+- branch（F-53）との住み分け：どのブランチに commit するかは F-53 が扱う。
+- merge（F-55）との住み分け：commit 履歴を合流させる操作は F-55 が担当。
+- Conventional Commits などの commit message 規約は触れる程度（深掘り先に記載）。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- git-scm.com/docs/git-commit — checked 2026-04-29
+- Pro Git book (git-scm.com/book) — checked 2026-04-29
 
 ## 備考
+
+- commit message の書き方（Conventional Commits: feat / fix / chore 等のプレフィックス）は深掘り先に留め、本文では言及しない。
+- `git commit --amend`（直前 commit の修正）は応用操作のため省略。

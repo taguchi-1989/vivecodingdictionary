@@ -1,69 +1,58 @@
 ---
 id: F-30
 title: VS Code
+title_reading: ヴイエスコード
 category: term_tool
 subtype: editor
-experience_level:
-reader_level:
+experience_level: hands_on
+reader_level: "2-3"
 figure_type: structure
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - Cursor
+  - GitHub Copilot
+  - 拡張機能
+  - GitHub
+  - Terminal
+status: drafting
 ---
 
 # VS Code
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-Microsoft のエディタ（業界標準）
-
+Microsoft が無料で提供するコードエディタです。拡張機能でほぼ何にでも育てられます。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+コードを書いて保存するエディタ本体に、拡張機能（Extension）を後から足せるプラットフォームです。AI 補完・リンター・デバッガーなど数万本の拡張が公式マーケットプレイスで配布されており、目的に合った構成を自分で組めます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+バイブコーディングの入門記事で「まず VS Code を入れましょう」と最初に名前が出るエディタです。Cursor（カーソル）や Windsurf（ウィンドサーフ）といった AI エディタが VS Code をフォーク（改造して派生させること）しているため、その比較記事でも必ず登場します。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+VS Code 本体と拡張機能の関係を「プラットフォーム ＋ プラグイン」の構造として見せ、何を足せば何ができるかを把握してもらいます。
 
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: VS Code 本体（編集・ターミナル・ファイル管理）
+- 周辺の要素: GitHub Copilot 拡張 / Python 拡張 / ESLint 拡張 / Prettier 拡張 / Remote-SSH 拡張
+- 関係の描き方: 中央の本体を囲む円形に各拡張が刺さる形（ハブ＆スポーク）
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「VS Code に Copilot 拡張を入れるだけで、補完がすぐ使えるようになりますよ。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,69 +61,61 @@ Microsoft のエディタ（業界標準）
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+拡張機能でどんな言語・ツールにも対応できるエディタ基盤です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+無料でインストールでき、AI 補完も拡張 1 本で追加できます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+拡張を増やしすぎると起動が遅くなることがあります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Web・Python・AI 開発など言語を問わず最初の選択肢になります。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+インストール後に拡張マーケットプレイスの使い方を押さえる段階です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Cursor（B-4）、GitHub Copilot（B-5）、拡張機能
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. インストール — code.visualstudio.com から無料で入手します
+2. 拡張を追加 — マーケットプレイスで AI 補完や言語サポートを足します
+3. コードを書く — シンタックスハイライトと補完を使いながら編集します
+4. ターミナルを開く — エディタ内で git コマンドやテストを実行します
+5. デバッグ — ブレークポイントを置いてエラーの原因を確かめます
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- Cursor
+- GitHub Copilot
+- 拡張機能
+- GitHub
+- Terminal
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,10 +124,10 @@ Microsoft のエディタ（業界標準）
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 中央に「VS Code 本体」のロゴ型ブロックを置き、周囲に拡張機能カードが放射状に並ぶハブ＆スポーク構造。各カードに拡張名と用途アイコン（AI / Python / Lint 等）を添える
+- 登場人物: PC の前に座る人物が「この拡張を追加しよう」と指差す姿
+- 吹き出し・心の声: 「目的に合わせて拡張を足すだけで自分仕様になります」
+- 中央に置くキーワード/ラベル: VS Code（エディタ本体）
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +135,28 @@ Microsoft のエディタ（業界標準）
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: ダウンロード矢印 — インストール
+- Step 2 のアイコン/絵柄: パズルピース — 拡張追加
+- Step 3 のアイコン/絵柄: 鉛筆 — コード編集
+- Step 4 のアイコン/絵柄: ターミナル画面 — コマンド実行
+- Step 5 のアイコン/絵柄: 虫眼鏡 — デバッグ
+- 矢印で示す流れの意図: 入手 → 環境構築 → 編集 → 実行 → 検証の開発サイクルを示す
 
 
 ## コミュニティ補完メモ
 
+- Cursor（B-4）との住み分け：Cursor は VS Code をフォークした AI 常駐エディタ。本エントリは VS Code 本体の構造・拡張エコシステムに絞り、AI エディタとしての比較は B-4 で扱います
+- GitHub Copilot（B-5）との住み分け：Copilot は VS Code 拡張として動く代表例。拡張の入れ方の具体例として名前を出す程度にとどめ、詳細は B-5 で扱います
+- 個別拡張機能（F-34〜F-38）：拡張の種類・使い方は各エントリに任せ、本エントリは「拡張を足せるプラットフォーム」という構造理解に絞ります
+- VS Code Insiders / Codium / Windsurf 等のフォーク派生は「深掘り先」で軽く触れるにとどめます
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- code.visualstudio.com — checked 2026-04-29
+- marketplace.visualstudio.com — checked 2026-04-29
 
 ## 備考
+
+- 正式名称は「Visual Studio Code」。「Visual Studio」（別製品）と混同されやすいため、本エントリでは略称「VS Code」を統一表記として使います
+- フォーク派生：Cursor / Windsurf / VSCodium など複数が存在します。本エントリは本家 VS Code の機能・エコシステムに絞ります
+- 価格：本体は無料。一部拡張機能（GitHub Copilot 等）は有料プランが別途必要です

@@ -1,69 +1,56 @@
 ---
 id: F-51
 title: git push
+title_reading: ギットプッシュ
 category: term_tool
 subtype: git
-experience_level:
-reader_level:
+experience_level: hands_on
+reader_level: 2
 figure_type: structure
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - git
+  - commit
+  - branch
+  - GitHub
+  - git pull
+status: needs_review
 ---
 
 # git push
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-ローカル変更をリモートへ送る
-
+ローカルの commit をリモートへ送り届けるコマンドです。作業を公開する最後の一押し。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+自分のマシン（ローカル）に積み上げた commit を、GitHub などのリモートリポジトリへ転送します。push するまでは変更が手元だけに留まり、チームや CI には届きません。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+AI にコードを生成させて commit を積み終えたあと、リモートへ反映するタイミングで使います。Pull Request を開く前、デプロイをトリガーする直前など、作業の「公開ボタン」として登場します。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+「ローカルの commit 群が矢印でリモートへ飛んでいく」構造を 1 枚で示し、push がローカルとリモートをつなぐ橋であることを掴んでもらいます。
 
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: `git push` の矢印（ローカル → リモート）
+- 周辺の要素: ローカルリポジトリ（commit 済み）／ネット回線のアイコン／リモートリポジトリ（GitHub）／ブランチ名ラベル
+- 関係の描き方: 左にローカル、右にリモートを置き、太矢印で push を示す。ブランチ名を矢印ラベルに添える
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「commit は積んであるので、あとは push すれば PR が開けます。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +59,43 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ローカルの commit をリモートへ送る転送コマンドです。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+push 一発でチームや CI に変更が届き、作業が共有できます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+push 前に pull で最新を取らないと競合が起きます。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+PR 作成前・デプロイ直前の「公開」ステップで必ず使います。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ブランチ名と `origin` の意味、push と pull の方向の違い。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+force push、upstream 設定、push フック、CI トリガー。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. コードを書く — エディタや AI ツールで変更を加える
+2. `git add` → `git commit` — 変更をローカル履歴に記録する（F-54）
+3. `git push` — ローカルの commit をリモートへ転送する
+4. Pull Request を開く — GitHub 上でチームへレビューを依頼する（F-60）
+5. `git merge` → デプロイ — レビュー通過後に本線へ取り込む（F-55）
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- git
+- commit
+- branch
+- GitHub
+- git pull
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,17 +103,17 @@ YAML 補足（本書きで埋める／見直す欄）:
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,31 +122,39 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左にローカルPCと commit スタック、右にクラウド（GitHub）アイコン、中央に太矢印と「git push」ラベル
+- 登場人物: キャラクター1人がPCの前に座り、push ボタンを押す瞬間
+- 吹き出し・心の声: 「送った！これでチームに届く」
+- 中央に置くキーワード/ラベル: git push ＝ ローカル → リモート
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 鉛筆（コード編集）
+- Step 2 のアイコン/絵柄: スタンプ（commit）
+- Step 3 のアイコン/絵柄: 送信矢印・クラウド（push）
+- Step 4 のアイコン/絵柄: プルリクエストアイコン（PR）
+- Step 5 のアイコン/絵柄: 合流矢印（merge・デプロイ）
+- 矢印で示す流れの意図: 書く → 記録 → 公開 → レビュー → 取り込む の一方向フロー
 
 
 ## コミュニティ補完メモ
 
+- git 全体（F-50）との住み分け：F-50 は git の概念・差分・責任の所在を扱う。本エントリは push コマンド単体に絞る。
+- git pull（F-52）との住み分け：push はローカル→リモートの送信、pull はリモート→ローカルの受信。方向が逆で対になる。
+- commit（F-54）との住み分け：commit はローカル記録の完了。push はその記録をリモートへ転送する次のステップ。
+- branch（F-53）との住み分け：push 先のブランチ名（例：`origin/feature-xxx`）の概念は F-53 で扱う。
+- GitHub（F-60）との住み分け：push 先のホスティングサービスとしての GitHub は F-60 で扱う。本エントリは push コマンドの動作に限定。
+
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- git-scm.com/docs/git-push — checked 2026-04-29
 
 
 ## 備考
+
+`git push --force` は履歴を上書きするため、チーム開発では原則禁止です。詳細な force push の使い分けはコミュニティ補完メモ・深掘り先で扱います。

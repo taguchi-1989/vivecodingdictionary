@@ -1,69 +1,57 @@
 ---
 id: I-20
 title: Playwright MCP
+title_reading: プレイライトエムシーピー
 category: mcp
 subtype: dev_automation
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: hands_on
+reader_level: 3
+figure_type: workflow
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2024-11
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - MCP
+  - MCP Server
+  - Claude Code
+  - Playwright
+  - E2E テスト
+status: drafting
 ---
 
 # Playwright MCP
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-ブラウザ自動操作
-
+LLM が実ブラウザを直接操作できる MCP です。クリック・入力・スクショをコードなしで実行します。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+Microsoft が公開する MCP Server で、Claude Code などの LLM にブラウザ操作ツールを提供します。Accessibility（アクセシビリティ）ツリーをもとにセマンティックな操作を行うため、画像認識に頼らず要素を正確に特定できます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+Claude Code の設定に Playwright MCP を追加すると、チャット上で「このページのフォームを入力して送信して」と頼むだけで実ブラウザが動きます。E2E テストの自動化や UI レビュー、Web スクレイピングの場面で名前を見かけます。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+Claude Code → Playwright MCP → 実ブラウザ の 3 段構造を示し、「指示を打つだけでブラウザが動く」流れを視覚で伝えます。
 
+### C. 概念図（figure_type: workflow）
+
+- 中心に置く概念: Playwright MCP（LLM とブラウザの橋渡し）
+- 周辺の要素: Claude Code（LLM）／Playwright MCP Server／実ブラウザ（Chromium など）／操作結果（スクショ・DOM）
+- 関係の描き方: 左に Claude Code、中央に Playwright MCP、右に実ブラウザを配置し、左→中→右の矢印で操作フローを示す
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Playwright MCP を使えば Claude Code からブラウザを直接動かせますね、E2E テストが楽になります。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +60,42 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+LLM にブラウザ操作ツールを渡す MCP Server です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+コードを書かず自然言語でブラウザを動かせます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+アクセシビリティツリーがない要素は操作が難しいです。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+E2E テスト、UI 確認、Web スクレイピングに使えます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+MCP の仕組みと Playwright の役割を先に押さえると理解が早いです。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Playwright、MCP Server、E2E テスト。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. Playwright MCP を設定に追加する — Claude Code の設定ファイルに Server を登録します
+2. LLM に操作したいページと手順を伝える — チャットで URL と操作内容を指示します
+3. Playwright MCP がブラウザを操作する — クリック・入力・スクロールをセマンティックに実行します
+4. 結果を受け取る — スクリーンショットや DOM の状態が LLM に返ります
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- MCP
+- MCP Server
+- Claude Code
+- Playwright
+- E2E テスト
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,50 +103,55 @@ YAML 補足（本書きで埋める／見直す欄）:
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: workflow）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左に開発者キャラクターがチャット画面で指示を打つ様子、中央に「Playwright MCP」のボックス、右に実ブラウザのウィンドウ（フォームが入力されている画面）を配置。左→中→右の矢印でフローを示す
+- 登場人物: 開発者 1 人（チャット画面を見ている）
+- 吹き出し・心の声: 「フォームを入力して送信して」という指示の吹き出しと、ブラウザ側に「操作完了！スクショ返します」の応答
+- 中央に置くキーワード/ラベル: Playwright MCP ＝ LLM とブラウザの橋渡し
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 設定ファイルのアイコン（歯車）
+- Step 2 のアイコン/絵柄: チャット吹き出しのアイコン
+- Step 3 のアイコン/絵柄: ブラウザ操作のアイコン（カーソル）
+- Step 4 のアイコン/絵柄: スクリーンショットのアイコン（カメラ）
+- 矢印で示す流れの意図: 設定 → 指示 → 操作 → 確認
 
 
 ## コミュニティ補完メモ
 
+- MCP プロトコル全体は I-1、MCP Server の仕組みは I-2 で扱う。本エントリは「ブラウザ操作に特化した具体的 MCP」に絞ります
+- Puppeteer MCP（I-21）との住み分け：Playwright MCP は Accessibility ツリーベースのセマンティック操作、Puppeteer MCP は DOM 直接操作が中心。どちらも「LLM がブラウザを動かす」点は同じですが、操作の方式が異なります
+- Chrome DevTools MCP（I-22）とは：DevTools プロトコル経由のデバッグ・ネットワーク検査が主で、ブラウザ UI 操作とは目的が異なります
+- Filesystem MCP（I-10）・GitHub MCP（I-11）と兄弟エントリ。「具体的な MCP の使われ方」シリーズとして位置づけ
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- github.com/microsoft/playwright-mcp（Microsoft 公式）— checked 2026-04-29
+- playwright.dev — checked 2026-04-29
 
 ## 備考
+
+Playwright MCP の仕様・対応ブラウザは更新中です。evaluation_date を持たせて時変情報として扱います。Microsoft 公式リポジトリの README が最新の動作確認として信頼できます。

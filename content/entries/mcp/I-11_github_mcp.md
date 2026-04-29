@@ -1,70 +1,57 @@
 ---
 id: I-11
 title: GitHub MCP
+title_reading: ギットハブエムシーピー
 category: mcp
 subtype: reference
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: hands_on
+reader_level: 3
+figure_type: workflow
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2024-11
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - MCP
+  - MCP Server
+  - GitHub
+  - Claude Code
+  - Tool Use
+status: needs_review
 ---
 
 # GitHub MCP
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-GitHub 連携（公式）
-
+GitHub 公式が提供する MCP Server です。AI から Issue・PR・コードを直接操作できます。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+Claude Code などの MCP Client から GitHub の Issue 作成・PR 作成・コード検索・ブランチ操作を呼び出せる MCP Server（仲介役）です。GitHub が公式にメンテナンスしており、AI エージェントから GitHub API を安全に使えます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+Claude Code や Cursor で「GitHub の Issue を AI に作らせたい」と調べると名前が出てきます。MCP の設定ファイルに GitHub MCP の定義を追加するだけで、エージェントが GitHub 操作を自動で行えるようになります。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+Claude Code から GitHub MCP を経由して GitHub API にリクエストが流れ、Issue や PR が操作される一連の流れを見せます。「AI が直接 GitHub を動かす」経路を視覚で伝えます。
 
+### C. 概念図（figure_type: workflow）
+
+- 中心に置く概念: GitHub MCP Server（AI と GitHub API の仲介役）
+- 周辺の要素（4〜5 個）: Claude Code（MCP Client）／GitHub MCP Server／GitHub API／Issue・PR・コード／ブランチ
+- 関係の描き方: 左に Claude Code、中央に GitHub MCP Server、右に GitHub API と操作対象を並べる。矢印は左から右へ流れる
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「GitHub MCP を入れると、Claude Code から PR を直接作れて便利ですね。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,102 +59,96 @@ GitHub 連携（公式）
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI から GitHub を操作するための公式 MCP Server です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Issue や PR の作成をエージェントに任せられます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+GitHub Token の権限設定を誤ると意図しない操作が起きます。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Issue 整理や PR 作成を自動化したい開発フローで役立ちます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+GitHub Token の取得と MCP 設定ファイルへの追記が出発点です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+MCP Server、GitHub API、Tool Use。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. GitHub Token を取得する — 操作に必要な権限スコープを設定します
+2. MCP 設定ファイルに追記する — GitHub MCP Server のエンドポイントを登録します
+3. Claude Code から呼び出す — Issue 作成や PR 操作を指示します
+4. 結果を GitHub 上で確認する — AI が操作した内容を実際のリポジトリで確かめます
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
-
+- MCP
+- MCP Server
+- GitHub
+- Claude Code
+- Tool Use
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: workflow）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左から「Claude Code（ターミナル画面）」→「GitHub MCP Server（六角形バッジ）」→「GitHub API（クラウドアイコン）」→「Issue / PR / コード（カードアイコン群）」の横並びフロー図
+- 登場人物: 左端に開発者キャラクター 1 人。「PR 作って」と吹き出しを出している
+- 吹き出し・心の声: 開発者「GitHub に頼まなくていいんだ」／Claude Code「わかりました、PR を作ります」
+- 中央に置くキーワード/ラベル: GitHub MCP ＝ AI と GitHub をつなぐ公式仲介役
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: 鍵アイコン（Token 取得）
+- Step 2 のアイコン/絵柄: 設定ファイルアイコン（追記）
+- Step 3 のアイコン/絵柄: ターミナルアイコン（呼び出し）
+- Step 4 のアイコン/絵柄: GitHub ロゴ（確認）
+- 矢印で示す流れの意図: 準備 → 設定 → 実行 → 確認
 
 ## コミュニティ補完メモ
 
+- GitHub 本体（F-60）との住み分け：F-60 は GitHub というサービス全体を扱う。I-11 は GitHub を AI から操作する MCP Server の役割に絞る
+- MCP プロトコル全体（I-1）との住み分け：I-1 は「プロトコルの総論」。I-11 は GitHub という具体的な MCP Server の 1 例
+- MCP Server 総論（I-2）との住み分け：I-2 は MCP Server の設計・構造。I-11 は GitHub MCP という既製品の使い方
+- I-10 Filesystem MCP・I-20 Playwright MCP と兄弟エントリ。3 件とも「具体的 MCP の使い方」として構造を揃えている
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- github.com/github/github-mcp-server — checked 2026-04-29
+- modelcontextprotocol.io/examples — checked 2026-04-29
 
 ## 備考
+
+GitHub MCP は GitHub 公式がメンテナンスしており、機能追加が活発です。evaluation_date を必ず持たせて時変情報として扱います。Token の権限スコープは操作内容に応じて最小権限を原則とします。

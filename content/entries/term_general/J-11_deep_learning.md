@@ -1,70 +1,58 @@
 ---
 id: J-11
 title: Deep Learning
+title_reading: ディープラーニング
 category: term_general
 subtype: ml_basic
-experience_level:
-reader_level:
+experience_level: research_only
+reader_level: 3
 figure_type: structure
 page_layout: spread_v1
 start_date:
 end_date:
 version_status:
 pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+evaluation_date: 2026-04-29
+related_terms:
+  - Machine Learning
+  - Neural Network
+  - Transformer
+  - LLM
+  - GPU
+status: drafting
 ---
 
 # Deep Learning
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-層の深いニューラルネットによる機械学習
-
+多層のニューラルネットワークによる機械学習の手法で、現代の LLM の土台です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+大量のデータからパターンを自動で学習します。人間が特徴を手で設計しなくても、層を重ねたニューラルネットワーク（Neural Network）が画像・音声・テキストの特徴を段階的に抽出します。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+「Deep Learning モデルを使っています」という説明で、AI ツールや研究紹介記事でよく目にします。LLM（J-14）や画像生成 AI の仕組みを調べると必ず登場し、Machine Learning（J-10）の中でも特に今の AI ブームを牽引してきた手法です。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+Machine Learning という大きな枠の中に Deep Learning があり、その中核に Neural Network の多層構造があることを入れ子の図で示します。
 
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: Neural Network の多層構造（入力層 → 隠れ層 × 複数 → 出力層）
+- 周辺の要素: Machine Learning（包含の外枠）、Deep Learning（中間枠）、LLM / 画像認識（応用例）、GPU（計算基盤）
+- 関係の描き方: 同心の入れ子円（Machine Learning ⊃ Deep Learning ⊃ Neural Network）と右側に応用例の矢印
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「LLM も Deep Learning の一種で、層を重ねた Neural Network が言語パターンを学んでいます。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,70 +60,60 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Machine Learning の中で、多層構造により複雑なパターンを学ぶ手法です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+特徴量の設計を人間が行わなくて済み、精度が大幅に上がります。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+大量のデータと GPU 計算資源が必要で、学習コストが高くなります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+LLM・画像認識・音声認識など、現代 AI の主要タスクに広く使われます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+「層を重ねるほど複雑な特徴を掴める」という直感だけで十分です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Neural Network（J-12）、Transformer（J-13）、GPU（J-77）
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. データを集める — 画像・テキスト・音声など大量の学習データを用意します。
+2. モデル構造を選ぶ — 層数やアーキテクチャを目的に合わせて決めます。
+3. GPU で学習する — Neural Network の重みをデータから繰り返し更新します。
+4. 評価・調整する — 精度を測り、層の深さや学習率を調整します。
+5. 推論に使う — 学習済みモデルを LLM や画像認識ツールとして呼び出します。
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- Machine Learning
+- Neural Network
+- Transformer
+- LLM
+- GPU
 
-- 用語A —
-- 用語B —
-- 用語C —
-
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
-
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
@@ -143,10 +121,10 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 同心の入れ子円。最外円に「Machine Learning」、中円に「Deep Learning」、内円に「Neural Network（多層）」。右側に LLM・画像認識・音声認識の応用例アイコンを矢印で接続。
+- 登場人物: 非エンジニアの人物が入れ子図を指差し「層を重ねるほど賢くなるんだ」と驚くシーン
+- 吹き出し・心の声: 「特徴を自分で設計しなくていいの？」「層が深いほどパターンが細かく掴める」
+- 中央に置くキーワード/ラベル: Neural Network（多層構造）
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +132,28 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: データの山（学習データ収集）
+- Step 2 のアイコン/絵柄: 積み重なった層のアイコン（モデル構造選択）
+- Step 3 のアイコン/絵柄: GPU チップアイコン（学習）
+- Step 4 のアイコン/絵柄: チューニングダイヤル（評価・調整）
+- Step 5 のアイコン/絵柄: API コールの矢印（推論利用）
+- 矢印で示す流れの意図: データ → 設計 → 学習 → 改善 → 活用のサイクル
 
 ## コミュニティ補完メモ
 
+- Machine Learning（J-10）との住み分け：J-10 は機械学習全体の概念。J-11 は「多層ニューラルネット」という具体手法に絞る。
+- Neural Network（J-12）との住み分け：J-12 はニューラルネットの構造そのもの。J-11 は「それを深く積んだ手法」という位置づけ。
+- Transformer（J-13）との住み分け：J-13 は Deep Learning の特定アーキテクチャ（2017 年以降の主流）。J-11 はその土台概念として、Transformer が Deep Learning の一形態であることを示す。
+- LLM（J-14）との住み分け：J-14 は応用サービス視点。J-11 は「LLM が Deep Learning の産物」という概念説明に徹する。
+- 「2012 ImageNet 革命（AlexNet）」「2017 Transformer 論文」などのマイルストーンは本文には入れず、深掘り先や備考に留める。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- Goodfellow et al., "Deep Learning", MIT Press (2016) — checked 2026-04-29
+- DeepMind, "What is deep learning?", deepmind.google — checked 2026-04-29
+- LeCun, Bengio, Hinton, "Deep learning", Nature 521 (2015) — checked 2026-04-29
 
 ## 備考
+
+- 2012 年 ImageNet コンペでの AlexNet の躍進が Deep Learning ブームの起点とされますが、本エントリでは技術史の細部には踏み込まず「層を重ねる手法」の概念紹介に徹しています。歴史的経緯は J-10 または timeline 系エントリへ参照。
+- 「深層学習」という日本語訳も広く使われますが、業界では "Deep Learning" のカタカナ表記が主流のため本エントリでは英語表記を title とし、title_reading に「ディープラーニング」を入れています。

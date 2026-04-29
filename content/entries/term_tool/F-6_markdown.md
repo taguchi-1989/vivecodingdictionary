@@ -1,69 +1,63 @@
 ---
 id: F-6
 title: Markdown
+title_reading: マークダウン
 category: term_tool
 subtype: language
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: partial
+reader_level: "2"
+figure_type: before_after
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - HTML
+  - README
+  - GitHub
+  - CommonMark
+  - LLM
+status: drafting
 ---
 
 # Markdown
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-軽量な文書記法。README や本書のソースにも使う
-
+記号だけで見出し・箇条書き・太字を表現できる軽量な文書記法です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+プレーンテキストに `#` や `-` などの記号を加えるだけで、整形された文書をブラウザや各種ツールで表示できます。本書自身も Markdown で書かれており、AI へのプロンプトやドキュメントの標準フォーマットとして広く使われています。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+GitHub（ギットハブ）のリポジトリ画面や README ファイル、Claude Code の設定ファイル CLAUDE.md などで日常的に目にします。LLM（大規模言語モデル）は回答を Markdown 形式で返すことが多く、AI との会話でも頻繁に登場します。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+「記号だらけのテキスト」が整形された文書へ変わる Before / After を並べて、Markdown の変換の仕組みを直感で掴んでもらいます。
 
+### A. Before / After（figure_type: before_after）
+
+- Before
+  - 状況: `#` や `-` の記号が並ぶプレーンテキスト
+  - 視覚要素（コード）: `# 見出し` / `- 箇条書き` / `**太字**`
+  - つまずき: 記号が邪魔で読みにくく感じる
+- After
+  - 状況: ブラウザや GitHub の画面で整形・表示された状態
+  - 視覚要素: 大きな見出し・箇条書きリスト・太字テキスト
+  - うれしさ: HTML を書かなくてもきれいな文書になる
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「CLAUDE.md は Markdown で書けば、見出しも箇条書きも自動で整います。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,102 +66,101 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+記号でテキストを構造化し、整形された文書に変換する軽量記法です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+HTML を書かなくても見出し・箇条書き・リンクが手軽に表現できます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+方言（GFM・CommonMark 等）が複数あり、見え方がツールで変わります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+README・設定ファイル・AI プロンプトなど、文書を書く場面全般で使えます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+`#` で見出し、`-` で箇条書き、`**太字**` の 3 記法で十分です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+GFM（GitHub Flavored Markdown）、CommonMark、Mermaid。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. ドキュメント作成 — README や設定ファイルを Markdown で書き、構造をわかりやすくする
+2. AI への指示 — プロンプトや CLAUDE.md を Markdown で整えると AI が意図を読みやすくなる
+3. AI からの受け取り — LLM が返す回答の多くは Markdown 形式で構造化されている
+4. レンダリング確認 — GitHub や VS Code のプレビュー機能で表示を確かめる
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- HTML
+- README
+- GitHub
+- CommonMark
+- LLM
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: before_after）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左半分にプレーンテキスト（`# 見出し` / `- 箇条書き` / `**太字**` が並ぶ画面）、右半分に整形後の文書画面を並べた Before / After 対比
+- 登場人物: 非エンジニアの人物 1 人がノートパソコン画面を見比べている
+- 吹き出し・心の声: 「記号を書いただけなのに、ちゃんとした文書になっています。」
+- 中央に置くキーワード/ラベル: Markdown → 変換 → 文書
+- Before / After の場合の対比ポイント: 記号が並ぶ生テキスト（Before）と整形された見出し・箇条書き画面（After）
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: 鉛筆（ドキュメント作成）
+- Step 2 のアイコン/絵柄: チャット吹き出し（AI への指示）
+- Step 3 のアイコン/絵柄: ロボットアイコン（AI からの受け取り）
+- Step 4 のアイコン/絵柄: ブラウザウィンドウ（レンダリング確認）
+- 矢印で示す流れの意図: 書く → AI に渡す → AI から受け取る → 表示確認 の 4 ステップ
 
 ## コミュニティ補完メモ
 
+- HTML（F-4）との住み分け：HTML はブラウザが直接解釈するマークアップ言語。Markdown は HTML に変換されて表示される上位の記法。HTML の詳細な文法は F-4 へ。
+- README（F-59）との住み分け：README はプロジェクトの説明ファイルそのもので、Markdown で書かれることが多い。ファイルとしての役割・書き方は F-59 へ。
+- CLAUDE.md（G-20）との住み分け：CLAUDE.md は Claude Code 向けの設定ファイル。Markdown 形式で書くが、設定ファイルとしての意味は G-20 へ。
+- GFM（GitHub Flavored Markdown）はテーブル・チェックボックスなど GitHub 独自の拡張を含む方言。本エントリは記法の基礎に絞り、GFM の拡張は深掘り先に留める。
+- Mermaid はコードブロックで図を描く拡張記法。GitHub や一部の Markdown レンダラーで対応しているが、本エントリのスコープ外として深掘り先に留める。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- daringfireball.net/projects/markdown — checked 2026-04-29
+- CommonMark Spec: <https://spec.commonmark.org> — checked 2026-04-29
 
 ## 備考
+
+- Markdown は 2004 年に John Gruber が公開した軽量マークアップ言語。実装が複数あり CommonMark が仕様統一を試みている。
+- LLM が回答を Markdown で返す挙動は、モデルや API の設定で変わる時変情報。本エントリは記法の特性に絞り、モデル依存の挙動差分には踏み込まない。
+- GFM（GitHub Flavored Markdown）は CommonMark の上位互換で、GitHub が定義。テーブル・打ち消し線・自動リンクなどを追加している。

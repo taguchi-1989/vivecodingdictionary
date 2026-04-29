@@ -1,70 +1,56 @@
 ---
 id: I-2
 title: MCP Server
+title_reading: エムシーピーサーバー
 category: mcp
 subtype: protocol
-experience_level:
-reader_level:
+experience_level: hands_on
+reader_level: 2
 figure_type: structure
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2024-11
+version_status: active
+evaluation_date: 2026-04-29
+related_terms:
+  - MCP
+  - MCP Client
+  - Tool Use
+  - Filesystem MCP
+  - GitHub MCP
+status: drafting
 ---
 
 # MCP Server
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-MCP を提供する側（ツール・データを出す）
-
+ツールやデータを LLM に提供する「橋の向こう側」の役割です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+MCP Client（Claude Code など）からのリクエストを受け取り、外部サービスやファイルシステムを操作して結果を返します。GitHub や Slack など「連携したい相手」ごとに 1 つの Server が用意され、LLM は Server を呼ぶだけで個別実装を意識しなくて済みます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+Claude Code の設定画面や `claude_desktop_config.json` で「どの MCP Server を使うか」を登録するときに登場します。Filesystem MCP（I-10）・GitHub MCP（I-11）・Playwright MCP（I-20）のように、目的ごとに個別の Server が存在します。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+MCP Client ⇔ MCP Server ⇔ External Service の 3 層構造を見せ、Server が「橋渡し役」として中央に立つことを伝えます。
 
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: MCP Server（橋渡し役）
+- 周辺の要素: MCP Client（Claude Code など）／External Service（GitHub, Filesystem, Slack）／MCP Protocol（通信規格）／Tool（操作できる機能）
+- 関係の描き方: 左に MCP Client、右に External Service 群を並べ、中央の MCP Server が両者を仲介する矢印で繋ぐ
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「GitHub MCP は MCP Server の一種で、Client から呼び出すだけで PR 操作ができます。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,69 +58,60 @@ MCP を提供する側（ツール・データを出す）
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Client のリクエストを受け、外部サービスを操作して返す担当です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+1 つ用意すれば、MCP 対応のどの Client からも同じように呼べます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ローカル動作とリモート動作で信頼範囲が変わります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ファイル操作・API 連携・DB 参照を LLM に渡したい場面です。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+「Client からリクエストを受け取り外部に繋ぐ」役割の 1 点です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+MCP Client、Filesystem MCP、GitHub MCP、MCP Transport。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. 連携したい外部サービスを決める — GitHub / Filesystem / Slack などを選ぶ
+2. 対応 MCP Server を探す — 公式・コミュニティのカタログから入手する
+3. 設定ファイルに登録する — `claude_desktop_config.json` 等に Server の起動方法を書く
+4. MCP Client から呼び出す — Claude Code が Server に Tool リクエストを送る
+5. 結果が LLM に返る — Server が処理結果を Client 経由で LLM に渡す
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
-
+- MCP
+- MCP Client
+- Tool Use
+- Filesystem MCP
+- GitHub MCP
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,31 +120,37 @@ MCP を提供する側（ツール・データを出す）
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左に「MCP Client（Claude Code）」の端末アイコン、中央に「MCP Server」の大きめブロック（橋の欄干風）、右に External Service 群（GitHub・Filesystem・Slack のアイコン）を並べ、双方向の矢印で繋ぐ
+- 登場人物: 左側に開発者キャラクター 1 人（「呼ぶ側」）、右側に「データ持ってる側」のサーバーアイコン
+- 吹き出し・心の声: 「MCP Server が橋渡しするから、LLM は外部を直接知らなくていい」
+- 中央に置くキーワード/ラベル: MCP Server ＝ ツール・データを提供する橋渡し役
 
 ### 6 視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: 外部サービス選択（チェックアイコン）
+- Step 2 のアイコン/絵柄: カタログ検索（虫眼鏡）
+- Step 3 のアイコン/絵柄: 設定ファイル（歯車 or ファイルアイコン）
+- Step 4 のアイコン/絵柄: 呼び出し矢印（Client → Server）
+- Step 5 のアイコン/絵柄: 結果が返る矢印（Server → LLM）
 
 ## コミュニティ補完メモ
 
+- MCP プロトコル全体（I-1）との住み分け：I-1 はプロトコルの総論。I-2 は「提供する側（Server）」の役割に絞る。
+- MCP Client（I-3）との対比：Client が「呼ぶ側」、Server が「応える側」。セットで読むと理解が深まる。
+- 個別 Server（I-10 Filesystem MCP / I-11 GitHub MCP / I-20 Playwright MCP）：具体的な実装例として参照。本エントリでは「Server とは何か」の構造説明に集中する。
+- OpenAPI との類比：Server が外部に公開する Tool 定義は OpenAPI の operationId に近い発想。エンジニア向けの補足として備考に記載。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- modelcontextprotocol.io/specification — checked 2026-04-29
+- anthropic.com/news/model-context-protocol — checked 2026-04-29
 
 ## 備考
+
+- MCP Server はローカル（stdio 通信）とリモート（SSE / HTTP 通信）の両方の動作モードがあります。ローカルは開発機内のみで動き、リモートは外部ホスト上に置けます。信頼範囲が変わるため注意点として 3. に記載しました。
+- OpenAPI に近い役割という観点は本文には入れず、エンジニア向け補足としてここに留めています。
+- MCP エコシステムは急成長中。evaluation_date を更新しながら追跡が必要です。

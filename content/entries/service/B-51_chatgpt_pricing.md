@@ -1,69 +1,59 @@
 ---
 id: B-51
 title: ChatGPT の料金プラン
+title_reading: チャットジーピーティーのりょうきんプラン
 category: service
 subtype: pricing
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: hands_on
+reader_level: "2-3"
+figure_type: comparison
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: paid
+evaluation_date: 2026-04-29
+related_terms:
+  - ChatGPT
+  - Plus
+  - Pro
+  - OpenAI
+  - API
+status: needs_review
 ---
 
 # ChatGPT の料金プラン
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
+<!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## tagline
 
-無料／Plus（$20）／Pro（$200）の 3 段階
-
-
-<!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
+Free から Pro（$200/月）まで 5 段階で選べる ChatGPT の利用プランです。
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+使用量・目的・チーム規模に合わせてプランを選ぶことで、利用できるモデルや操作上限が変わります。無料の Free から試し、必要に応じて上位プランへ移行できます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+chatgpt.com にアクセスすると料金ページで複数プランが並んでいます。無料利用中に「制限に達しました」と表示されたとき、Plus や Pro へのアップグレード案内が目に入ります。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+Free・Plus・Pro・Team・Enterprise・Edu の 6 プランの相対的な位置づけを、一目で比較できるようにします。
 
+### B. 登場シーン（figure_type: comparison）
+
+- シーン1: 軽い使い方をする個人ユーザー — Free プランで基本的な会話と補助タスクをこなす
+- シーン2: 日常業務で活用する個人ユーザー — Plus（$20/月）でより高機能なモデルを使う
+- シーン3: 専門的・大量タスクに使うユーザー — Pro（$200/月）で上限を大幅に緩めて利用する
+- 並べる基準: 利用量・用途別（軽め / 普通 / ヘビー / 法人・教育）
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Plus で十分か Pro が要るかは、使用頻度と予算で変わります。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,81 +62,74 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+使用量と目的に応じた上限・モデル・機能を段階的に提供するプラン体系です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Free で始めて必要なときだけ上位に移れるため、初期コストを抑えやすいです。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+料金・上限・対応モデルは変動しやすく、改定が入ることがあります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+業務で毎日 ChatGPT を使うなら、Plus か Pro の検討が現実的です。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+個人 3 段（Free・Plus・Pro）と法人 3 段（Team・Enterprise・Edu）の構成を把握します。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+ChatGPT、OpenAI、API、GPT-5。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. 試用 — Free で基本機能と会話品質を確認する
+2. 個人活用 — Plus（$20/月）で上限を緩め、日常の文章・コード補助に使う
+3. 本格利用 — Pro（$200/月）でモデル上限を大幅に引き上げる
+4. チーム展開 — Team でメンバー管理とデータ保護を整える
+5. 法人・教育 — Enterprise / Edu で個別契約や学術向け機能を利用する
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- ChatGPT
+- Plus
+- Pro
+- OpenAI
+- API
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: comparison）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 6 プランを縦に並べた比較表。左列にプラン名、右列に相対的な利用量イメージ（棒グラフ風）を配置
+- 登場人物: 左側に「週数回だけ使う人」と「毎日大量に使う人」の 2 人のキャラクターを置く
+- 吹き出し・心の声: 軽めユーザー「Free で十分かな」、ヘビーユーザー「Pro じゃないと追いつかない…」
+- 中央に置くキーワード/ラベル: Free / Plus / Pro / Team / Enterprise / Edu の 6 段ラベル
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +137,30 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: 虫眼鏡アイコン（試用）
+- Step 2 のアイコン/絵柄: 個人ユーザーアイコン、上矢印（Plus へ）
+- Step 3 のアイコン/絵柄: 稲妻バッジ（Pro）
+- Step 4 のアイコン/絵柄: グループ人物アイコン（Team）
+- Step 5 のアイコン/絵柄: ビルアイコン（Enterprise / Edu）
+- 矢印で示す流れの意図: 利用量の増加とチーム拡大に伴ってプランをステップアップする流れ
 
 ## コミュニティ補完メモ
 
+- API の per-token 料金は本エントリでは扱わず、「API 料金は別枠」と一言だけ触れる方針
+- Claude 料金との比較は B-50 へ、Gemini 料金との比較は B-52 へ譲る
+- Pro（$200/月）と Plus（$20/月）の具体的な上限値は時変情報のため誌面の比較図キャプションに置き、本文には段数と相対関係のみ記述する
+- Edu プランは一般個人向けではなく教育機関向けのため、本文での言及は最小限にとどめる
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- openai.com/chatgpt/pricing — checked 2026-04-29
 
 
 ## 備考
+
+- 料金・上限の具体数値（月額・メッセージ上限等）は時変性が高いため本文には入れない。誌面の比較図キャプションに数値を載せ、evaluation_date で管理する
+- Plus は $20/月、Pro は $200/月（checked 2026-04-29）
+- Team は 1 席あたりの月額固定で、組織単位のデータ保護や管理機能が付く
+- Enterprise および Edu は個別契約のため公開料金なし
+- API 料金（per-token）は chatgpt.com/pricing とは別枠で管理される。本エントリのスコープ外
+- モデルごとの能力差（GPT-5 系）は D-20 へ譲る
