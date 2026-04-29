@@ -81,7 +81,7 @@ AI 安全性の議論や Anthropic 製品の設計方針を追うときに役立
 
 ### 5. はじめに
 
-元 OpenAI VP、Anthropic 共同創業者、Constitutional AI 推進者の 3 点で。
+元 OpenAI VP、Anthropic 共同創業者、Constitutional AI 推進者という 3 点を押さえます。
 
 ### 6. 深掘り先
 
