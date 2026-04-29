@@ -1,70 +1,62 @@
 ---
 id: G-10
 title: Prompt Engineering
+title_reading: プロンプトエンジニアリング
 category: term_llm
 subtype: technique
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: partial
+reader_level: 3
+figure_type: comparison
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - Context
+  - System Prompt
+  - Few-shot
+  - Context Engineering
+  - Token
+status: drafting
 ---
 
 # Prompt Engineering
 
 <!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
+バイブコーディング図鑑 エントリー雛形 v2（2ページ見開き想定、iter 22 準拠）
 -->
 
 ## tagline
 
-プロンプトの設計術
-
+AI への指示文を設計・改善する技術です。伝え方を変えるだけで出力の質が大きく変わります。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+Prompt Engineering（プロンプトエンジニアリング、指示文の設計）とは、LLM（大規模言語モデル）への入力テキストを意図した出力が得られるように整える技術です。役割・手順・制約を明示するだけで、同じモデルでも回答の正確さと再現性が上がります。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+「プロンプトを工夫してね」と言われたとき、あるいは AI の回答が期待と外れたときに意識します。Claude や ChatGPT の利用ガイドや社内マニュアルで「効果的な聞き方」として紹介されることが多く、実務では指示の改善を繰り返す作業として現れます。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+雑な指示と整えた指示を左右に並べ、同じモデルでも出力の精度が変わることを視覚的に伝える。
 
+### B. 登場シーン（figure_type: comparison）
+
+- シーン1（雑な指示）: 「まとめて」だけを送った人物、AI が曖昧な要約を返す
+- シーン2（整えた指示）: 「箇条書き 3 点・100 字以内・敬語で」と送った人物、AI が意図通りの出力を返す
+- 並べる基準: 指示の具体性が異なる同一タスク
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「System Prompt にロールと制約を書くのが Prompt Engineering の基本ですよ。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,81 +64,71 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+指示文の構造・語順・具体性を調整して、LLM の出力を意図した方向へ誘導します。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+モデルを変えずに回答品質を上げられるため、コストを抑えながら精度改善できます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+指示テキスト単体の設計が対象で、Context（文脈）全体の設計は G-11 Context Engineering が扱います。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+定型タスクの自動化や、チームで同じ AI を使うときに指示テンプレを共有する場面で特に効果が出ます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+「役割・手順・出力形式を明示する」という 3 点を指示に含めるだけで効果を体感できます。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Few-shot, Context Engineering（G-11）, System Prompt
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. タスク定義 — AI に依頼したいことをゴールと制約に分けて整理する
+2. 初回プロンプト作成 — 役割・手順・出力形式を盛り込んだ指示文を書く
+3. 出力確認・比較 — 期待と外れた箇所を記録し、雑な指示との差分を比べる
+4. 指示の改善 — Few-shot（例示）や System Prompt への移行で再現性を高める
+5. テンプレ化 — チームで使い回せる形に整理して共有する
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- Context
+- System Prompt
+- Few-shot
+- Context Engineering
+- Token
 
-- 用語A —
-- 用語B —
-- 用語C —
-
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
-
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: comparison）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左右 2 コマの対比。左は「まとめて」とだけ入力する人物、右は「箇条書き 3 点・100 字・敬語」と入力する人物
+- 登場人物: 非エンジニアのビジネスパーソン（男女どちらでも可）がノート PC に向かう姿
+- 吹き出し・心の声: 左「なんか違う…」、右「これが欲しかったやつ！」
+- 中央に置くキーワード/ラベル: 「指示の質が出力の質を決める」
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +136,25 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: 付箋にゴールと制約を書く人
+- Step 2 のアイコン/絵柄: キーボードを打ちながら指示文を組み立てる人
+- Step 3 のアイコン/絵柄: 出力を読み比べるルーペ
+- Step 4 のアイコン/絵柄: 鉛筆で指示を書き直す人
+- Step 5 のアイコン/絵柄: テンプレートを仲間に渡す人
+- 矢印で示す流れの意図: 「定義 → 書く → 確認 → 改善 → 共有」の反復サイクル
 
 ## コミュニティ補完メモ
 
+- G-11 Context Engineering との住み分け：本エントリは「指示テキスト単体の設計」に絞る。System Prompt / Few-shot / Role 定義など指示文レイヤーの工夫が中心。Context 全体（メモリ・RAG・ファイル添付など）の設計は G-11 へ誘導する。
+- G-1 Context（済）：本エントリでは「Context（文脈）全体の設計は G-11 が扱う」と一言触れる程度に留める。
+- System Prompt は別エントリ候補。本エントリではプロンプト設計技術の一要素として言及するにとどめる。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- docs.anthropic.com（Anthropic プロンプト設計指針） — checked 2026-04-29
+- platform.openai.com/docs/guides/prompt-engineering（OpenAI cookbook） — checked 2026-04-29
 
 ## 備考
+
+- Prompt Engineering は時変情報を直接含まないが、モデルの世代によって有効な技法が変わることがある。evaluation_date を定期的に見直すことを推奨。
+- 「プロンプトエンジニアリング」という職種名も存在するが、本エントリでは技術概念としての意味に絞る。

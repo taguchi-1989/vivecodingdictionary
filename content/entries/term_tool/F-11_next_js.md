@@ -1,69 +1,70 @@
 ---
 id: F-11
 title: Next.js
+title_reading: ネクストジェイエス
 category: term_tool
 subtype: framework
-experience_level:
-reader_level:
+experience_level: partial
+reader_level: 2
 figure_type: structure
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - React
+  - Vercel
+  - TypeScript
+  - JavaScript
+  - App Router
+status: needs_review
 ---
 
 # Next.js
 
 <!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
+バイブコーディング図鑑 エントリー雛形 v2（2ページ見開き想定、iter 22 準拠）
+- 左ページ：読者が初めて読む側。短い段落で物語的に書く。
+- 右ページ：辞書引き側。6視点の見どころ → つまずき／私のコメント → 開発フロー → 関連用語 → 参考 URL。
+- 「非エンジニアのつまずき」「私のコメント」は著者本人が記入する欄。AI は原則触らない。
 -->
 
 ## tagline
 
-React ベースのフルスタック FW
+React（リアクト）を土台にした Web アプリ向けフレームワークです。ルーティングやサーバー処理まで一式をカバーします。
 
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
+React は画面部品を作る道具ですが、Web アプリとして動かすには別途ページ管理やサーバー処理が必要です。Next.js はそれらをまとめて引き受け、ファイル構成だけでルーティングが決まる仕組みなどを提供します。
 
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
+AI に「Next.js で作って」と頼んだり、Vercel（バーセル）へのデプロイ手順を調べたりする場面で登場します。生成コードのフォルダ構成に `app/` ディレクトリがあるときも、Next.js の仕様です。
 
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+React を中心に据えつつ、Next.js が傘のようにルーティング・サーバー処理・デプロイ設定を包んでいる構造を示します。
+
+### B. 登場シーン（figure_type: structure）
+
+- シーン1: AI が生成したコードに `app/page.tsx` が含まれている → Next.js のファイルルーティング
+- シーン2: 「Vercel にデプロイして」と頼む → Next.js プロジェクトをそのままホスティング
+- シーン3: 「SSR で表示速度を上げたい」と言われる → サーバーサイドレンダリング機能を持つ Next.js の話
+- 並べる基準（誰視点か、用途か、時系列か）: 読者が「このワードを聞く・見る場面」順
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Next.js で作ると Vercel へのデプロイが一番シンプルですよね。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,54 +73,48 @@ React ベースのフルスタック FW
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+React を使った Web アプリ全体の枠組みを担うフレームワークです。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ルーティングやサーバー処理の設定が少なく、AI との共同開発が進みやすいです。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+App Router と Pages Router の 2 系統があり、古い記事のコードが合わないことがあります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI にアプリを作らせてそのまま公開したい場面で選ばれることが多いです。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+「React の上にある、アプリ全体の枠組み」と把握しておけば読み解きが早まります。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
+React（F-10）、Vercel（B-20）、App Router
 
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. 要件整理 — 「何を作るか」を決め、Next.js を使うかどうかも方針に含まれます
+2. AI にコード生成を依頼 — プロジェクト構成・コンポーネント・API ルートが一括で出てきます
+3. ローカル確認 — `npm run dev` で動作を確認し、AI に修正を頼みます
+4. Vercel へデプロイ — リポジトリを連携するだけで公開 URL が発行されます
+5. 保守・更新 — バージョンや Router の違いを意識しながら AI に追加修正を依頼します
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- React
+- Vercel
+- TypeScript
+- JavaScript
+- App Router
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
@@ -143,31 +138,41 @@ React ベースのフルスタック FW
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: Next.js の傘アイコンを中央に大きく置き、その下に React・ルーティング・サーバー処理・デプロイの 4 要素を包む構造図
+- 登場人物（いれば）: ノートPC の前に座る非エンジニアが「どこまでが Next.js の仕事？」と首をかしげている
+- 吹き出し・心の声: 「React だけじゃないの？」→ 傘の中を指差して「これ全部 Next.js が面倒を見てくれてます」
+- 中央に置くキーワード/ラベル: Next.js（フレームワーク）
 
 ### 6 視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 吹き出し（要件会話）
+- Step 2 のアイコン/絵柄: AI ロボット＋コードファイル
+- Step 3 のアイコン/絵柄: ブラウザプレビュー画面
+- Step 4 のアイコン/絵柄: 雲へのアップロード矢印（Vercel ロゴ）
+- 矢印で示す流れの意図: 企画 → 生成 → 確認 → 公開 の一方向フロー
 
 
 ## コミュニティ補完メモ
 
+- React 全般（F-10）との分担：React は「UI 部品を作る仕組み」に絞り、Next.js はその外側の「アプリ全体の枠組み・デプロイまで」を担当する
+- Vercel（B-20）との分担：Vercel はホスティングサービス本体の説明、Next.js はコードフレームワーク側の説明。両者が連携する構図は本エントリの「どこで出会うか」で触れる
+- v0（B-9）との分担：v0 は UI 生成ツール。生成物が Next.js 向けコードになることが多いが、v0 自体の説明は B-9 へ
+- SSR/SSG/ISR の実装詳細・App Router 仕様の深追いはスコープ外（本エントリは「枠組みと立ち位置の把握」まで）
+- JavaScript 全般（F-1）との分担：言語の説明は F-1 へ、Next.js エントリでは言語として JS/TS を使うことの言及に留める
+
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- https://nextjs.org/docs — checked 2026-04-29
+- https://vercel.com/docs/frameworks/nextjs — checked 2026-04-29
 
 
 ## 備考
+
+- App Router（Next.js 13 以降）と Pages Router（旧来）の 2 系統が現存。AI が生成するコードはどちらを使っているか確認が必要
+- バージョンによる書き方の差が大きく、古い記事の手順が動かないケースが多い（旧素材 305 にも同様の指摘あり）
+- 旧 3 桁 ID：305_nextjs.md（status: archived）を参照素材として使用。内容を F-11 に取り込み済み

@@ -1,70 +1,58 @@
 ---
 id: J-13
 title: Transformer
+title_reading: トランスフォーマー
 category: term_general
 subtype: ml_basic
-experience_level:
-reader_level:
+experience_level: research_only
+reader_level: 3
 figure_type: structure
 page_layout: spread_v1
 start_date:
 end_date:
 version_status:
 pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+evaluation_date: 2026-04-29
+related_terms:
+  - Attention
+  - LLM
+  - Deep Learning
+  - エンコーダー
+  - デコーダー
+status: drafting
 ---
 
 # Transformer
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-現代 LLM の基盤アーキテクチャ
-
+2017 年に発表された AI アーキテクチャ（設計の骨格）で、現代の LLM（大規模言語モデル）の基盤です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+文章全体の単語どうしの関連を一度に計算する Attention（注意機構、注目すべき場所を選ぶ仕組み）を積み重ねて、意味を捉えます。この構造が ChatGPT や Claude の中心に使われています。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+「Transformer ベースのモデル」という表現で、AI ツールの技術紹介記事や論文解説で目にすることがあります。LLM（J-14）を学ぶ際に「なぜ今の AI が文脈を掴めるのか」を説明するキーワードです。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+入力された文章が Encoder（エンコーダー、意味を読み取る部分）と Decoder（デコーダー、文章を生成する部分）を通って出力になる流れを、人物の視点で見せます。
 
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: Attention（注意機構）
+- 周辺の要素: 入力トークン、Encoder 層、Decoder 層、出力トークン、多層スタック
+- 関係の描き方: 入力 → Encoder → Attention → Decoder → 出力の矢印フロー
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「今の LLM はほぼ Transformer ベースで、Attention が文脈を掴む要なんですよね。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,70 +60,59 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+文章の意味を多層の Attention で捉え、生成モデルの骨格を担います。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+単語の前後関係だけでなく文全体を並列に処理でき、長い文脈も扱えます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+アーキテクチャの名前であり、特定サービスや製品の名前ではありません。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+LLM の仕組みを概念として理解したいとき、最初に押さえると全体像が整います。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+「Encoder が読み取り、Decoder が出力する」という大枠だけで十分です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Attention、LLM（J-14）、Deep Learning（J-11）
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. 学習前の設計 — Transformer のアーキテクチャを選択し、層数やヘッド数を決めます。
+2. 事前学習 — 大量のテキストで Attention の重みを調整していきます。
+3. ファインチューニング — 用途に合わせた追加学習で応答品質を高めます。
+4. 推論・利用 — LLM として API やサービスで呼び出し、文章生成に使います。
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- Attention
+- LLM
+- Deep Learning
+- エンコーダー
+- デコーダー
 
-- 用語A —
-- 用語B —
-- 用語C —
-
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
-
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
@@ -143,10 +120,10 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 入力文「今日の天気は？」が Encoder → Attention 層 → Decoder を通り、出力文「晴れです」になるフロー。多層の Attention ブロックを縦に積み重ねたイメージ。
+- 登場人物: 非エンジニアの人物が画面を見ながら「どこが文脈を掴んでいるの？」と疑問を持つシーン
+- 吹き出し・心の声: 人物の吹き出し「Attention がここで動いてるんだ」、Encoder ブロックに「意味を読む」、Decoder ブロックに「文を作る」ラベル
+- 中央に置くキーワード/ラベル: Attention（注意機構）
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +131,25 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: 設計図アイコン（アーキテクチャ選択）
+- Step 2 のアイコン/絵柄: 本・テキストの山アイコン（事前学習）
+- Step 3 のアイコン/絵柄: チューニングダイヤルアイコン（ファインチューニング）
+- Step 4 のアイコン/絵柄: API コールの矢印アイコン（推論・利用）
+- 矢印で示す流れの意図: 設計 → 学習 → 調整 → 利用という AI モデル開発の大まかな流れ
 
 ## コミュニティ補完メモ
 
+- LLM 全体（J-14）との住み分け：J-14 は「LLM とは何か・どう使うか」のサービス視点。J-13 は「なぜ LLM が文脈を掴めるのか」の構造視点に絞る。
+- Deep Learning（J-11）との住み分け：J-11 はニューラルネットワーク全体の概念。J-13 は 2017 年の Transformer 論文以降の特定アーキテクチャに絞る。
+- Attention 単独エントリが将来追加された場合：J-13 では「Attention を使っている」という概念紹介に留め、仕組みの詳細は Attention エントリへ参照させる。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- Vaswani et al., "Attention Is All You Need", arXiv:1706.03762 (2017) — checked 2026-04-29
+- Jay Alammar, "The Illustrated Transformer", jalammar.github.io — checked 2026-04-29
 
 ## 備考
+
+- Transformer は固有語のため略称展開なし。ただし Attention（注意機構）、Encoder（エンコーダー）、Decoder（デコーダー）は初出で日本語訳を付けた。
+- 数式（Self-Attention の Q/K/V 行列等）は非エンジニア向けのため一切省略。「なぜ革命的か」の骨格のみ記述。
+- MoE（Mixture of Experts）等の派生アーキテクチャは J-18 等の別エントリへ参照。

@@ -17,6 +17,7 @@ related_terms:
   - Next.js
   - Node.js
 status: archived
+# 2026-04-29: 内容を F-1_javascript.md（spread_v1）に取り込み済み
 # 旧 3 桁 ID。v0.5 renumber 以降は letter-ID 体系のため本エントリは参照素材として凍結。
 ---
 

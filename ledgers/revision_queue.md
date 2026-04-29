@@ -1,14 +1,14 @@
 # 要直しキュー（revision queue）
 
-*自動生成: 2026-04-29 18:33 / `scripts/update_review_queue.py`*
+*自動生成: 2026-04-29 18:59 / `scripts/update_review_queue.py`*
 
 1 画面で「次やるべき・見直すべき・適合済み」が見えるダッシュボード。`scripts/validate_entry.py` のチェックを全件で走らせた結果を集計して再生成しています。手で編集しないでください。
 
 ## status 内訳
 
-- **skeleton**: 310 件
-- **drafting**: 1 件
-- **needs_review**: 28 件
+- **skeleton**: 305 件
+- **drafting**: 5 件
+- **needs_review**: 29 件
 - **archived**: 8 件
 - **合計**: 347 件
 
@@ -16,17 +16,23 @@
 
 _なし_
 
-## ⚠️ 警告あり（軽微超過 / 著者か entry-writer で手当て）（3 件）
+## ⚠️ 警告あり（軽微超過 / 著者か entry-writer で手当て）（7 件）
 
 | ID | title | status | 概要 |
 | :-- | :-- | :-- | :-- |
 | B-1 | Gemini | needs_review | ⚠ 58 字（目安 20-50、+8 字超過） |
+| F-1 | JavaScript | drafting | ⚠ 255 字（目安 155-250、+5 字超過）; ⚠ です・ます外れの疑いあり（(?<![すまりぞ])だ[。\s] のパターン、要目視確認） |
+| F-10 | React | drafting | ⚠ 245 字（目安 120-240、+5 字超過） |
+| F-11 | Next.js | needs_review | ⚠ 197 字（目安 80-180、+17 字超過）; ⚠ 268 字（目安 155-250、+18 字超過）; ⚠ 469 字（目安 220-430、+39 字超過） |
 | G-1 | Context | needs_review | ⚠ 65 字（目安 20-50、+15 字超過） |
+| G-10 | Prompt Engineering | drafting | ⚠ 275 字（目安 120-240、+35 字超過）; ⚠ 293 字（目安 155-250、+43 字超過）; ⚠ 489 字（目安 220-430、+59 字超過） |
 | I-1 | MCP | needs_review | ⚠ 262 字（目安 155-250、+12 字超過） |
 
-## ✍️ 書きかけ（drafting・全パス済み・自動昇格漏れ）（0 件）
+## ✍️ 書きかけ（drafting・全パス済み・自動昇格漏れ）（1 件）
 
-_なし（drafting で全パスしたものは自動で needs_review に上がります）_
+| ID | title | status | 概要 |
+| :-- | :-- | :-- | :-- |
+| J-13 | Transformer | drafting | — |
 
 ## 📝 著者レビュー待ち（needs_review・全パス）（24 件）
 

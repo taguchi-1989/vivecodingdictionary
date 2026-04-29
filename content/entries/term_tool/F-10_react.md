@@ -1,70 +1,58 @@
 ---
 id: F-10
 title: React
+title_reading: リアクト
 category: term_tool
 subtype: framework
-experience_level:
-reader_level:
+experience_level: partial
+reader_level: 2
 figure_type: structure
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - JavaScript
+  - JSX
+  - コンポーネント
+  - Next.js
+  - TypeScript
+status: drafting
 ---
 
 # React
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-UI を部品で作る JS ライブラリ
-
+画面を部品（コンポーネント）に分けて組み立てる JavaScript ライブラリです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+ボタン・カード・フォームなど画面の各パーツをコンポーネント（部品）として独立して作り、組み合わせてアプリ全体を構成します。状態（State）が変わると関係する部品だけ自動で画面を更新します。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+AI への修正依頼でよく出てきます。「このコンポーネントの表示を変えて」「Props（親から子への値の受け渡し）が足りない」など、粒度を部品単位で指定する会話になります。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+ページ全体をコンポーネントの入れ子に分解した構造図で「部品で考える」発想を 1 枚で見せます。
 
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: App コンポーネント（ページ全体）
+- 周辺の要素: Header、SearchBar、ProductCard（×3）、Footer の 5 部品
+- 関係の描き方: 包含（親 → 子のツリー構造）、矢印で Props の流れを示す
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「React のコンポーネント単位で指定すると、AI への修正依頼が伝わりやすいですよ。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,69 +60,60 @@ UI を部品で作る JS ライブラリ
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+UI を部品（コンポーネント）に分けて再利用しながらアプリを組み立てます。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+部品単位で AI に修正を依頼できるので、指示の粒度が揃えやすくなります。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ページ遷移やサーバー処理は React 単体では扱えず、Next.js などと組み合わせることがあります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Web アプリの画面開発全般と、AI への UI 修正指示の粒度を合わせる場面で役立ちます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+コンポーネント・Props・State の 3 概念と、JSX という HTML に似た記法が出発点です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Next.js、JSX、State、Props、TypeScript。
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. 画面設計 — 「何の部品が要るか」をコンポーネント単位で整理します。
+2. コンポーネント実装 — JSX で部品の見た目と State を書き、AI に生成させます。
+3. Props でつなぐ — 親から子に値を渡して部品を組み合わせます。
+4. ブラウザ確認 — State が変わった部分だけ自動更新されることを確認します。
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- JavaScript
+- JSX
+- コンポーネント
+- Next.js
+- TypeScript
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,31 +122,38 @@ UI を部品で作る JS ライブラリ
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: ページ全体（App）を囲む外枠の中に、Header・SearchBar・ProductCard×3・Footer が入れ子で並ぶツリー構造図
+- 登場人物: 非エンジニアの担当者 1 人がページを指差している
+- 吹き出し・心の声: 「この検索フォームだけ直せばいいんだ」と気づいた表情
+- 中央に置くキーワード/ラベル: コンポーネント（部品）
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 付箋に部品名を書いて並べるアイコン（設計）
+- Step 2 のアイコン/絵柄: コードブロック＋AI 吹き出し（実装）
+- Step 3 のアイコン/絵柄: 矢印でつながれた部品 2 つ（Props）
+- Step 4 のアイコン/絵柄: ブラウザウィンドウ＋チェックマーク（確認）
+- 矢印で示す流れの意図: 設計 → 実装 → 組み合わせ → 確認 の一方向ループ
 
 
 ## コミュニティ補完メモ
 
+- JavaScript 全体（F-1）との住み分け：F-1 は言語全般。F-10 は React ライブラリとコンポーネント概念に絞る。
+- TypeScript（F-2）との住み分け：F-2 は型システム。F-10 では「TypeScript と組み合わせることが多い」程度に触れるだけ。
+- Next.js（F-11）との住み分け：F-11 はページ遷移・SSR など周辺機能まで扱うフレームワーク。F-10 は UI 組み立てのコア概念に限定。
+- 状態管理ライブラリ（Redux 等）・React Native はスコープ外。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- react.dev（公式ドキュメント） — checked 2026-04-29
+- react.dev/learn/describing-the-ui — checked 2026-04-29
 
 ## 備考
+
+- React 自体は Meta（旧 Facebook）が開発・オープンソース公開しているライブラリ（2013 年〜）。
+- バージョンは頻繁に更新されるため、Hooks（useState 等）の挙動が古い情報と異なることがあります。
+- version_status: active（2026-04-29 時点）、pricing_note: none（MIT ライセンス、無償）。

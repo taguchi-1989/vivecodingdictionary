@@ -136,7 +136,7 @@ E-33,,AgentBench,benchmark,agent,skeleton,,content/entries/benchmark/E-33_agentb
 E-34,,OSWorld,benchmark,agent,skeleton,,content/entries/benchmark/E-34_osworld.md
 E-50,,Chatbot Arena,benchmark,general,skeleton,,content/entries/benchmark/E-50_chatbot_arena.md
 E-51,,LMSYS Arena,benchmark,general,skeleton,,content/entries/benchmark/E-51_lmsys_arena.md
-F-1,301,JavaScript,term_tool,language,sample,旧3桁ID連携,content/entries/term_tool/F-1_javascript.md
+F-1,301,JavaScript,term_tool,language,needs_review,旧3桁ID連携→F-1に取り込み済み,content/entries/term_tool/F-1_javascript.md
 F-2,302,TypeScript,term_tool,language,sample,旧3桁ID連携,content/entries/term_tool/F-2_typescript.md
 F-3,,Python,term_tool,language,needs_review,,content/entries/term_tool/F-3_python.md
 F-4,,HTML,term_tool,language,skeleton,,content/entries/term_tool/F-4_html.md
@@ -145,8 +145,8 @@ F-6,,Markdown,term_tool,language,skeleton,,content/entries/term_tool/F-6_markdow
 F-7,,YAML,term_tool,language,skeleton,,content/entries/term_tool/F-7_yaml.md
 F-8,,JSON,term_tool,language,skeleton,,content/entries/term_tool/F-8_json.md
 F-9,,SVG,term_tool,language,skeleton,,content/entries/term_tool/F-9_svg.md
-F-10,304,React,term_tool,framework,sample,旧3桁ID連携,content/entries/term_tool/F-10_react.md
-F-11,305,Next.js,term_tool,framework,sample,旧3桁ID連携,content/entries/term_tool/F-11_next_js.md
+F-10,304,React,term_tool,framework,drafting,旧3桁ID 304 の素材を取り込み新テンプレ書き起こし済（2026-04-29）,content/entries/term_tool/F-10_react.md
+F-11,305,Next.js,term_tool,framework,needs_review,旧3桁ID 305 の素材を取り込み新テンプレ書き起こし済（2026-04-29）,content/entries/term_tool/F-11_next_js.md
 F-12,,Electron,term_tool,framework,skeleton,,content/entries/term_tool/F-12_electron.md
 F-13,,Tauri,term_tool,framework,skeleton,,content/entries/term_tool/F-13_tauri.md
 F-14,,three.js,term_tool,framework,skeleton,3Dライブラリ,content/entries/term_tool/F-14_three_js.md
@@ -225,7 +225,7 @@ G-6,,One-shot,term_llm,basic,skeleton,,content/entries/term_llm/G-6_one_shot.md
 G-7,,指示追従性,term_llm,basic,skeleton,,content/entries/term_llm/G-7.md
 G-8,,決定論的／非決定論的,term_llm,basic,skeleton,,content/entries/term_llm/G-8.md
 G-9,,effort レベル,term_llm,basic,skeleton,low/medium/high/xhigh,content/entries/term_llm/G-9.md
-G-10,,Prompt Engineering,term_llm,technique,skeleton,,content/entries/term_llm/G-10_prompt_engineering.md
+G-10,,Prompt Engineering,term_llm,technique,drafting,,content/entries/term_llm/G-10_prompt_engineering.md
 G-11,,Context Engineering,term_llm,technique,skeleton,,content/entries/term_llm/G-11_context_engineering.md
 G-12,,Agent Design,term_llm,technique,skeleton,,content/entries/term_llm/G-12_agent_design.md
 G-13,,Few-shot Learning,term_llm,technique,skeleton,,content/entries/term_llm/G-13_few_shot_learning.md
@@ -295,7 +295,7 @@ J-4,,ASI,term_general,ai_concept,skeleton,,content/entries/term_general/J-4_asi.
 J-10,,Machine Learning,term_general,ml_basic,skeleton,,content/entries/term_general/J-10_machine_learning.md
 J-11,,Deep Learning,term_general,ml_basic,skeleton,,content/entries/term_general/J-11_deep_learning.md
 J-12,,Neural Network,term_general,ml_basic,skeleton,,content/entries/term_general/J-12_neural_network.md
-J-13,,Transformer,term_general,ml_basic,skeleton,,content/entries/term_general/J-13_transformer.md
+J-13,,Transformer,term_general,ml_basic,drafting,,content/entries/term_general/J-13_transformer.md
 J-14,,LLM,term_general,ml_basic,needs_review,,content/entries/term_general/J-14_llm.md
 J-15,,VLM,term_general,ml_basic,skeleton,,content/entries/term_general/J-15_vlm.md
 J-16,,Fine-tuning,term_general,ml_basic,skeleton,,content/entries/term_general/J-16_fine_tuning.md
