@@ -1,69 +1,60 @@
 ---
 id: F-56
 title: .gitignore
+title_reading: ドットギットイグノア
 category: term_tool
 subtype: git
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: hands_on
+reader_level: 2
+figure_type: before_after
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - git
+  - .env
+  - GitHub
+  - README.md
+status: drafting
 ---
-
-# .gitignore
-
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
 
 ## tagline
 
-git の追跡除外ルールを書くファイル
-
+git（バージョン管理ツール）に「このファイルは追跡しない」と伝える設定ファイルです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+リポジトリのルートに `.gitignore` を置くと、そこに書いたパターンに一致するファイルやフォルダを git の管理対象から除外します。ビルド成果物（`dist/`）や依存ライブラリ（`node_modules/`）、秘密情報（`.env`）などが対象です。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+新しいプロジェクトを始めたとき、または GitHub でリポジトリを作成したときに自動生成されます。AI エディタで作業する際も、`.gitignore` が整っていないと AI が `node_modules/` のような巨大フォルダを誤って読み込もうとすることがあります。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+`.gitignore` がある場合とない場合で、git の追跡対象がどう変わるかを対比します。
 
+### A. Before / After（figure_type: before_after）
+
+- Before
+  - 状況: `.gitignore` なし
+  - 視覚要素（コード or 概念）: `node_modules/`、`.env`、`dist/` がすべて git に追跡される
+  - つまずき: 秘密情報がリポジトリに混入し、巨大な差分が生まれる
+- After
+  - 状況: `.gitignore` あり（`node_modules/`、`.env`、`dist/` を記載）
+  - 視覚要素: 上記 3 つが追跡対象から外れ、必要なファイルだけがコミットされる
+  - うれしさ: 秘密情報の漏えいを防ぎ、差分がすっきりする
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「`.env` は `.gitignore` に必ず入れてから Claude Code に作業させましょう。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +63,43 @@ git の追跡除外ルールを書くファイル
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+git の追跡から除外するファイルのルールを記述します。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+秘密情報の漏えい防止と、不要ファイルの管理コスト削減ができます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+コミット済みのファイルは後から書いても除外できず、別途 `git rm --cached` が必要です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI に作業させる前に整えると、巨大フォルダの誤読み込みを防げます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+1 行 1 パターンの書き方と、`node_modules/`・`.env` の除外が基本です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
+git、.env、GitHub の gitignore テンプレリポジトリ
 
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. リポジトリ作成 — プロジェクト開始時または GitHub でのリポジトリ新規作成時に配置します。
+2. パターン追記 — 除外したいファイル名や glob パターンを 1 行ずつ書き加えます。
+3. AI 作業前の確認 — `.env` や `node_modules/` の除外を確認してから AI に依頼します。
+4. コミット — `.gitignore` 自体はリポジトリに含めてチームで共有します。
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- git
+- .env
+- GitHub
+- README.md
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,29 +107,30 @@ git の追跡除外ルールを書くファイル
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: before_after）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左に「.gitignore なし」の画面（node_modules / .env / dist が赤く追跡マーク）、右に「.gitignore あり」の画面（3 つがグレーアウトして除外マーク）
+- 登場人物（いれば）: 開発者 1 人（左でヒヤリ顔、右で安堵顔）
+- 吹き出し・心の声: 左「え、.env までコミットされてる…」 右「これで秘密情報は守られます。」
+- 中央に置くキーワード/ラベル: `.gitignore`
+- Before / After の対比ポイント: 追跡対象ファイルの色分け（赤→グレー）
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +138,24 @@ git の追跡除外ルールを書くファイル
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: フォルダ新規作成アイコン
+- Step 2 のアイコン/絵柄: テキストファイルに書き込むペンアイコン
+- Step 3 のアイコン/絵柄: AI ロボットと確認チェックマーク
+- Step 4 のアイコン/絵柄: git コミットのアイコン（ブランチ）
+- 矢印で示す流れの意図: 設定 → 記述 → 確認 → 共有の順序を示す
 
 ## コミュニティ補完メモ
 
+- F-50 git との住み分け：F-50 は git 全体（バージョン管理の仕組み）を扱い、F-56 はその設定ファイルの 1 つ。git を知らない読者は F-50 を先に読む。
+- F-91 .env との住み分け：.env は「秘密情報を書くファイル」で、.gitignore は「それを追跡対象外にする設定ファイル」。セットで紹介する。
+- グローバル gitignore（`~/.gitignore_global`）については、OS 固有の設定（macOS の `.DS_Store` 等）に関心がある読者向けに備考で補足する。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- <https://github.com/github/gitignore> — checked 2026-04-29
+- <https://git-scm.com/docs/gitignore> — checked 2026-04-29
 
 ## 備考
+
+- コミット済みファイルは `.gitignore` に追記しても追跡が続く。除外するには `git rm --cached <file>` が必要。これは読者のつまずき頻出なので、右ページ「注意点」に盛り込んだ。
+- グローバル gitignore はプロジェクト固有でなく個人 OS の設定（`.DS_Store` 等）に使う。本エントリはプロジェクト固有の `.gitignore` に絞り、グローバル設定の詳細はコミュニティ補完メモに留める。

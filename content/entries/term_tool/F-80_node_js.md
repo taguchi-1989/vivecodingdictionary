@@ -1,70 +1,61 @@
 ---
 id: F-80
 title: Node.js
+title_reading: ノードジェイエス
 category: term_tool
 subtype: runtime
-experience_level:
-reader_level:
+experience_level: partial
+reader_level: 2-3
 figure_type: structure
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2009-05-27
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - JavaScript
+  - npm
+  - pnpm
+  - TypeScript
+status: drafting
 ---
 
-# Node.js
-
 <!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
+バイブコーディング図鑑 エントリー雛形 v2（2ページ見開き想定、iter 22 準拠）
+- 左ページ：読者が初めて読む側。短い段落で物語的に書く。
+- 右ページ：辞書引き側。6視点の見どころ → つまずき／私のコメント → 開発フロー → 関連用語 → 参考 URL。
+- 「非エンジニアのつまずき」「私のコメント」は著者本人が記入する欄。AI は原則触らない。
 -->
 
 ## tagline
 
-JavaScript のサーバー／CLI 実行環境
-
+JavaScript（F-1）をブラウザの外で動かすランタイムです。サーバや CLI ツールの基盤として広く使われています。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+Chrome の V8 エンジンを内蔵し、JavaScript をサーバ・CLI・デスクトップアプリで実行できます。非同期 I/O ライブラリ（libuv）を組み合わせることで、多数のリクエストを効率よく捌く構造になっています。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+AI ツールの CLI を導入するとき、`npx claude` のようなコマンドを打つ場面で登場します。MCP サーバや Vite（F-41）などのビルドツールも Node.js 上で動くため、エラーメッセージや README に頻繁に名前が出てきます。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+「ブラウザの外でも JS が動く」という構造を、ランタイムと実行対象の関係で示す。
 
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: Node.js ランタイム
+- 周辺の要素（3〜6個）: V8 エンジン / libuv / npm パッケージ / サーバアプリ / CLI ツール / MCP サーバ
+- 関係の描き方（矢印・包含・比較）: Node.js が中心にあり、各用途へ矢印で展開する包含図
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「Node.js さえあれば `npx` で AI ツールをすぐ動かせます。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,70 +63,59 @@ JavaScript のサーバー／CLI 実行環境
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+JavaScript をサーバや CLI で実行するランタイムです。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+`npx` 1 行で AI ツールの CLI をすぐ試せます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+`window` や `document` などブラウザ専用 API は使えません。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI ツール CLI の導入やビルドツールの実行で役立ちます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+LTS 版（偶数番号）が安定版で、現行は Node.js 22 です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+npm（F-40）、pnpm（F-44）、TypeScript（F-2）
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. 環境準備 — Node.js をインストールして実行基盤を整える
+2. パッケージ導入 — npm や pnpm で依存ライブラリを追加する
+3. ツール実行 — `npx` コマンドで AI ツール CLI を起動する
+4. サーバ構築 — バックエンドや MCP サーバの実行環境として利用する
+5. ビルド処理 — Vite 等のビルドツールを Node.js 上で走らせる
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- JavaScript
+- npm
+- pnpm
+- TypeScript
 
-- 用語A —
-- 用語B —
-- 用語C —
-
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
-
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
@@ -143,31 +123,38 @@ JavaScript のサーバー／CLI 実行環境
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 中央に Node.js のロゴと「ランタイム」ラベルを置き、周囲に V8 / libuv / npm / CLI ツール / MCP サーバ / Web サーバを配置した包含図
+- 登場人物（いれば）: 非エンジニアの人物が端末の前に座り、`npx claude` を打鍵している様子
+- 吹き出し・心の声: 「これだけで動くの？」という驚き
+- 中央に置くキーワード/ラベル: Node.js ランタイム
+- Before / After の場合の対比ポイント: （構造図のため不要）
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
 - 共通アイコン流用（個別演出が要るときだけ書き足す）
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: インストール（ダウンロード矢印）
+- Step 2 のアイコン/絵柄: パッケージ箱
+- Step 3 のアイコン/絵柄: ターミナル画面
+- Step 4 のアイコン/絵柄: サーバラック
+- Step 5 のアイコン/絵柄: 歯車（ビルド）
+- 矢印で示す流れの意図: 導入から実行・構築まで順方向で進む
 
 ## コミュニティ補完メモ
 
+- JavaScript（F-1）との住み分け：F-1 は「言語仕様（ECMAScript）」を扱い、F-80 は「ブラウザ外の実行環境」を扱う。`window`/`document` 等のブラウザ API は Node.js では使えない点が最大の分岐点。
+- npm（F-40）との住み分け：F-80 はランタイム本体、F-40 はパッケージ管理ツール。Node.js に同梱されているが概念は別。
+- Deno・Bun との関係：Node.js の代替ランタイムとして Deno / Bun が存在するが、業界シェアでは Node.js が依然主流。備考に記載。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- [nodejs.org/en/about](https://nodejs.org/en/about) — checked 2026-04-29
+- [github.com/nodejs/node](https://github.com/nodejs/node) — checked 2026-04-29
 
 ## 備考
+
+- 2026-04 時点の LTS は Node.js 22。LTS は偶数番号のリリースが担当し、約 30 か月のサポート期間がある。
+- Deno（Ryan Dahl が Node.js の反省を踏まえて開発）や Bun（高速を売りにした新興ランタイム）が存在するが、現時点では AI ツール CLI の多くが Node.js を前提としている。
+- `npx` は Node.js に同梱の npm 経由で動く実行コマンド。パッケージをインストールせずにワンショット実行できる点が AI ツール導入のハードルを下げている。

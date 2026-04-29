@@ -1,69 +1,58 @@
 ---
 id: F-9
 title: SVG
+title_reading: エスブイジー
 category: term_tool
 subtype: language
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: partial
+reader_level: 2-3
+figure_type: comparison
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - HTML
+  - CSS
+  - JavaScript
+  - Mermaid
+status: drafting
 ---
 
 # SVG
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-文字で書けるベクター画像形式
-
+Scalable Vector Graphics の略。XML タグで図形を文字として記述するベクター画像形式です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+`<circle cx="50" cy="50" r="40" fill="blue"/>` のように、XML タグで図形の座標・色・形を記述します。テキスト形式なので拡大・縮小しても劣化せず、アイコン・ロゴ・グラフに向いています。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+AI に「丸い青いアイコンを作って」と頼むと SVG コードを返してくることがあります。Web サイトのロゴや図表、データ可視化ツールにも多用されており、HTML（F-4）に直接埋め込んで使うシーンで目にします。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+ラスター（PNG・JPEG）との対比で、SVG がテキストで書かれた図形であることを示します。
+
+### B. 登場シーン（figure_type: comparison）
+
+- シーン1: PNG — ピクセルの集合、拡大すると粗くなる
+- シーン2: SVG — XML タグの集合、拡大しても線が滑らか
+- 並べる基準: 拡大耐性と編集可能性の違い
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「SVG なら Claude に直接生成してもらえるから、図のたたき台に向きます。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +61,44 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+XML タグで図形を記述するベクター画像形式です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+テキストなので diff・検索・AI 生成が可能です。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+写真など複雑な画像は PNG や JPEG のほうが適しています。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+アイコン・ロゴ・グラフ・データ可視化に向きます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+HTML へのインライン埋め込みと、CSS での色変更の 2 点が基礎です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
+HTML（F-4）、CSS（F-5）、JavaScript（F-1）
 
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. 要件整理 — アイコンや図表が必要なシーンを特定する
+2. AI 生成 — Claude や ChatGPT に SVG コードを出力させる
+3. HTML 埋め込み — `<svg>` タグをページに貼り付ける
+4. CSS 調整 — fill・stroke を CSS で変更してスタイルを整える
+5. 確認 — 拡大・縮小して劣化がないことをブラウザで確認する
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- HTML
+- CSS
+- JavaScript
+- Mermaid
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,50 +106,55 @@ YAML 補足（本書きで埋める／見直す欄）:
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
-
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: comparison）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左に PNG の拡大粗れ（ピクセルがブロック状に見える）、右に SVG の拡大（線が滑らか）の対比
+- 登場人物: デザイナー風の人物がロゴを拡大ルーペで確認している
+- 吹き出し・心の声: 「拡大しても崩れない！」
+- 中央に置くキーワード/ラベル: PNG vs SVG
+- Before / After の場合の対比ポイント: ラスター（劣化）× ベクター（綺麗）
 
 ### 6 視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: メモ帳（要件）
+- Step 2 のアイコン/絵柄: AI チャット画面（生成）
+- Step 3 のアイコン/絵柄: HTML ファイル（埋め込み）
+- Step 4 のアイコン/絵柄: CSS ブラシ（スタイル調整）
+- 矢印で示す流れの意図: AI 生成 → 組み込み → 仕上げ の一方通行
 
 
 ## コミュニティ補完メモ
 
+- Mermaid（F-140）との住み分け：Mermaid はフローチャート・シーケンス図など「関係図」専門で AI が Markdown 記法で生成。SVG は汎用の図形描画で、Mermaid が最終的に SVG を出力する下位形式でもある。
+- PNG・JPEG との住み分け：写真や複雑な画像はラスター形式が適切。SVG はアイコン・ロゴ・図表など「幾何学的な図形」向け。
+
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- MDN Web Docs: SVG — <https://developer.mozilla.org/ja/docs/Web/SVG> — checked 2026-04-29
+- W3C SVG 仕様 — <https://www.w3.org/TR/SVG2/> — checked 2026-04-29
 
 ## 備考
+
+- SVG は W3C 標準規格で、ほぼすべての主要ブラウザがネイティブ対応済み。
+- AI（Claude / ChatGPT など）は `<svg>` タグ付きのコードを直接出力できるため、バイブコーディング文脈では「たたき台をすぐ作れる画像形式」として注目されています。

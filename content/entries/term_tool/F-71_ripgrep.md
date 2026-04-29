@@ -1,69 +1,63 @@
 ---
 id: F-71
 title: ripgrep (rg)
+title_reading: リップグレップ
 category: term_tool
 subtype: search
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: hands_on
+reader_level: 3-4
+figure_type: before_after
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - Rust
+  - git
+  - VS Code
+  - bash
+status: needs_review
 ---
 
 # ripgrep (rg)
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-高速 grep。Claude Code 等が裏で使う
-
+grep の現代的な代替。Rust 製の高速文字列検索ツールです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+ファイルやディレクトリを横断して、キーワードや正規表現にマッチする行を一覧表示します。Rust（F-200）と SIMD 命令による並列処理で、従来の grep より 2〜10 倍速く動くことがあります。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+VS Code（F-30）の「ファイル横断検索」バックエンドとして採用されており、エディタ内の検索が速い理由の一端を担っています。Claude Code の `Grep` ツールも内部で ripgrep を呼ぶため、AI エージェントが大規模リポジトリを調査する際にも動いています。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+grep と ripgrep の速度差と `.gitignore` 尊重の違いを対比で示す。
+
+### A. Before / After（figure_type: before_after）
+
+- Before
+  - 状況: 従来の grep でリポジトリ全体を検索
+  - 視覚要素: `grep -r "keyword" .` → node_modules や `.git` まで走査、時間がかかる
+  - つまずき: 結果に不要なファイルが混じり、速度も遅い
+- After
+  - 状況: ripgrep（rg）で同じ検索
+  - 視覚要素: `rg "keyword"` → `.gitignore` を自動尊重、一瞬で結果が出る
+  - うれしさ: 誤ヒットが減り、探索が数秒から数十ミリ秒に縮む
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「ripgrep を許可しておくとリポジトリ横断の調査が秒で終わります。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +66,43 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ファイル横断の文字列検索を高速に実行します。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+`.gitignore` を自動尊重し、不要ファイルへの誤ヒットが減ります。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+grep とオプション体系が一部異なるため、慣れが必要なことがあります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+大規模リポジトリでの関数名・定数の一括検索に効きます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+コマンド `rg "検索語"` だけで即使えます。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
+Rust、bash、VS Code
 
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. リポジトリ調査 — `rg "関数名"` でコードベース全体から該当箇所を素早く洗い出します
+2. AI エージェント連携 — Claude Code の Grep ツールが内部で rg を呼び、指示に応じて検索します
+3. エディタ検索 — VS Code の検索バックエンドとして動き、Ctrl+Shift+F の速度を支えます
+4. 保守・リファクタリング — `--type ts` 等でファイル種別を絞り、変更箇所の特定を効率化します
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- Rust
+- git
+- VS Code
+- bash
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,50 +110,56 @@ YAML 補足（本書きで埋める／見直す欄）:
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
-
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: before_after）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左に grep を使う人、右に rg を使う人の対比。左は砂時計が降り注ぐイメージ、右は一瞬で結果が出るイメージ
+- 登場人物: 検索中のエンジニア風の人物（1 名）。Before 側は眉をひそめ待ち状態、After 側は満足の表情
+- 吹き出し・心の声: Before「node_modules も全部調べてる…遅い」After「.gitignore を無視してくれるから速い！」
+- 中央に置くキーワード/ラベル: `rg "keyword"` vs `grep -r "keyword" .`
+- Before / After の対比ポイント: 走査対象のファイル量と処理時間の差
 
 ### 6 視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: 虫眼鏡
+- Step 2 のアイコン/絵柄: ロボット（AI エージェント）
+- Step 3 のアイコン/絵柄: VS Code ロゴ風のエディタ
+- Step 4 のアイコン/絵柄: スパナ（リファクタリング）
+- 矢印で示す流れの意図: 調査→エージェント活用→エディタ検索→保守の順に用途が広がる
 
 ## コミュニティ補完メモ
 
+- bash（F-81）との住み分け：bash は shell 全般の文法・実行環境。ripgrep は grep 系ツールの高速代替であり、bash スクリプト内から呼ばれる道具の 1 つとして補完関係にある
+- git（F-50）との住み分け：git は版管理。ripgrep は git 管理リポジトリの検索に特化した恩恵（.gitignore 尊重）があり、利用場面が重なる
+- VS Code（F-30）との住み分け：VS Code はエディタ全体。ripgrep は VS Code が内部で使う検索エンジンの一部として依存関係にある
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep) — checked 2026-04-29
+- [VS Code: Advanced search options](https://code.visualstudio.com/docs/editor/codebasics#_advanced-search-options) — checked 2026-04-29
 
 
 ## 備考
+
+- コマンド名は `rg`（ripgrep の略）。インストール後は `rg` で呼び出す
+- Andrew Gallant（GitHub 名 BurntSushi）が 2016 年に公開
+- Claude Code の Grep ツールは内部的に ripgrep を呼ぶ（Claude Code の仕様として公開情報に基づく）

@@ -1,69 +1,77 @@
 ---
+# ── 識別・分類 ──
 id: F-58
 title: git stash
+title_reading: ギット スタッシュ
 category: term_tool
 subtype: git
-experience_level:
-reader_level:
-figure_type: structure
+
+# ── 読者・体験 ──
+experience_level: hands_on
+reader_level: 2-3
+
+# ── 誌面形式 ──
+figure_type: before_after
 page_layout: spread_v1
+
+# ── 時変情報 ──
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+
+# ── 関係 ──
+related_terms:
+  - git
+  - branch
+  - commit
+  - merge
+
+# ── 制作状態 ──
+status: drafting
 ---
 
 # git stash
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-作業中の変更を一時退避する機能
+作業中の未コミット変更を棚上げして、ワークツリーを一時的にきれいな状態に戻すコマンドです。
 
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
+`git stash` は、コミットしたくない状態の変更を一時退避します。`git stash`（保存）・`git stash pop`（戻して削除）・`git stash list`（一覧確認）の 3 つが基本操作で、退避した変更は後から何度でも確認・復元できます。
 
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
+別ブランチへ緊急で切り替えたいときに登場します。Claude Code（クロードコード）が競合回避の提案として stash を提示することもあります。
 
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+「変更を stash で逃がす → 別ブランチで作業 → stash から戻す」という退避と復元の流れを対比で示します。
+
+### A. Before / After（figure_type: before_after）
+
+- Before
+  - 状況: 作業途中の変更がある状態でブランチを切り替えようとしている
+  - 視覚要素（コード or 概念）: ワークツリーに差分ファイルが散らかっている
+  - つまずき: 「コミットしたくないのに切り替えられない」
+- After
+  - 状況: `git stash` で変更を退避し、ワークツリーがきれいな状態
+  - 視覚要素: 棚（stash）に変更が収まり、ブランチ切り替えが完了
+  - うれしさ: 安全に別作業ができ、後で変更を呼び戻せる
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「`git stash` で今の変更を逃がしてから、AI に別ブランチで作業させると安全です。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,54 +80,47 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+未コミットの変更を一時退避して、ワークツリーを clean に保ちます。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+コミット不要のまま作業を中断・再開でき、ブランチ切り替えがスムーズになります。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+stash は積み重なりやすく、放置すると内容を忘れがちです。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+緊急修正や AI への別タスク依頼前の退避場面で役立ちます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+`git stash` と `git stash pop` の往復だけ覚えれば基本は足ります。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
+git branch、git commit、git merge
 
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. 作業中断 — コミットしたくない変更がある状態で別作業が発生する
+2. 退避 — `git stash` を実行して変更を棚に乗せ、ワークツリーをきれいにする
+3. 別作業 — ブランチ切り替えや AI への依頼など、割り込み作業を完了する
+4. 復元 — `git stash pop` で棚から変更を取り出して作業を再開する
+5. 棚卸し — `git stash list` で不要な退避が残っていれば `git stash drop` で削除する
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- git
+- branch
+- commit
+- merge
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
@@ -141,12 +142,13 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: before_after）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左側に変更ファイルが散らかったワークツリー、右側に棚（stash）に変更が収まったすっきりした状態。棚のイメージは本物の棚や引き出しで表現する
+- 登場人物: 開発者（人物）が棚に箱を置く動作
+- 吹き出し・心の声: 「あとで戻せばいい、今は別の作業を先に！」
+- 中央に置くキーワード/ラベル: git stash
+- Before / After の対比ポイント: ワークツリーの散らかり具合 vs. stash 棚にまとまった状態
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +156,30 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 作業中の人物と散らかったファイルアイコン
+- Step 2 のアイコン/絵柄: 棚に箱を収める動作
+- Step 3 のアイコン/絵柄: ブランチを切り替えるアイコン（分岐矢印）
+- Step 4 のアイコン/絵柄: 棚から箱を取り出す動作
+- Step 5 のアイコン/絵柄: ゴミ箱アイコン（不要な stash を drop）
+- 矢印で示す流れの意図: 退避 → 別作業 → 復元 の往復サイクル
 
 
 ## コミュニティ補完メモ
 
+- F-50 git との住み分け: F-50 は git 全体の仕組みと基本操作を扱い、F-58 は stash という特定の退避機能に絞った掘り下げ
+- F-53 branch との住み分け: branch はコード履歴の分岐管理。stash はコミットしない変更の一時保存であり、ブランチをまたぐ前の準備として組み合わせる
+- F-54 commit との住み分け: commit は変更を確定させる操作。stash はあえてコミットしない「保留」の手段
+- stash -u（untracked ファイルも含める）や `git stash push -m "message"` など派生オプションは本文では省略し、備考に記載
+
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- git 公式ドキュメント https://git-scm.com/docs/git-stash — checked 2026-04-29
 
 
 ## 備考
+
+- `git stash -u` は untracked ファイル（追跡対象外のファイル）も一緒に退避できる派生オプション
+- `git stash push -m "作業メモ"` で説明付き stash を作ると、`git stash list` での管理がしやすい
+- `git stash branch newbranch` で stash の内容から新しいブランチを切ることもできる
+- stash の積み重なり事故は非エンジニアのつまずき筆頭。`git stash list` で定期棚卸しし、不要なものは `git stash drop` する習慣をつけると安全

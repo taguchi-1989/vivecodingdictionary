@@ -1,69 +1,72 @@
 ---
+# ── 識別・分類 ──
 id: F-140
 title: Mermaid
+title_reading: マーメイド
 category: term_tool
 subtype: diagram
-experience_level:
-reader_level:
-figure_type: structure
+
+# ── 読者・体験 ──
+experience_level: partial
+reader_level: 2-4
+
+# ── 誌面形式 ──
+figure_type: before_after
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+
+# ── 時変情報 ──
+start_date: 2014-01-01
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-30
+
+# ── 関係 ──
+related_terms:
+  - Markdown
+  - PlantUML
+  - GitHub
+  - SVG
+
+# ── 制作状態 ──
+status: drafting
 ---
 
 # Mermaid
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-テキストで描くダイアグラム（GitHub も対応）
-
+テキストを書くだけでフローチャートや構成図を生成できる記法です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+Markdown のコードブロックに `mermaid` と指定するだけで、フローチャート・シーケンス図・ガントチャートなどをブラウザ上で描画してくれます。図のソースがテキストなので、Git で差分管理ができるのも特徴です。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+GitHub のリポジトリページや Notion のドキュメント、Obsidian のノートで見かけることがあります。AI に「Mermaid で構成図を出して」と頼むと、そのまま README や PR に貼り付けられる状態で返ってきます。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+テキスト数行から図が生まれる流れを Before / After で示し、手書きや画像編集が不要になる感覚を掴んでもらいます。
 
+### A. Before / After（figure_type: before_after）
+
+- Before
+  - 状況: 構成図を画像として描いてドキュメントに貼っていた
+  - 視覚要素（コード or 概念）: スクリーンショットや PNG ファイルを毎回更新する手間
+  - つまずき: 図を変更するたびに画像を作り直して貼り替える必要がある
+- After
+  - 状況: Mermaid の記法でテキストを編集するだけで図が更新される
+  - 視覚要素: `graph TD; A-->B; B-->C;` の 1 行が即座に矢印図になる
+  - うれしさ: Git の差分でどこを変えたか分かり、AI にも頼みやすい
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Mermaid で構成図を Claude に書いてもらって、PR にそのまま貼りました。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,102 +75,100 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+テキストから図を自動生成する軽量な記法です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+図がテキストなので Git 管理でき、AI にも生成を頼めます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+細かいレイアウト調整は苦手で、複雑な図には不向きです。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+README・PR・仕様書など、テキスト主体のドキュメントで役立ちます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+GitHub でのレンダリングと `graph TD` の基本構文を把握すれば使えます。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+PlantUML、Excalidraw、Markdown
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. 設計・議論 — システム構成や処理の流れを Mermaid でテキスト化して共有します
+2. ドキュメント作成 — README や仕様書に記法をそのまま埋め込みます
+3. AI への依頼 — 「Mermaid で書いて」と指示すると図のテキストが返ってきます
+4. レビュー・更新 — テキスト差分だけで図の変更が分かり、PR レビューが楽になります
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- Markdown
+- PlantUML
+- GitHub
+- SVG
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: before_after）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左に「PNG を差し替える人（困り顔）」、右に「3 行テキストから矢印図が自動生成される画面」
+- 登場人物: ノートPCを前に苦笑いしている人物（左 Before）と、スッキリした顔でテキストを入力している人物（右 After）
+- 吹き出し・心の声: Before「また画像貼り替えだ…」/ After「テキスト変えるだけで更新できた！」
+- 中央に置くキーワード/ラベル: `graph TD; A-->B;` → 矢印図
+- Before / After の対比ポイント: 画像管理の手間 vs テキスト 1 行の即時反映
 
 ### 6 視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 吹き出し（設計議論）
+- Step 2 のアイコン/絵柄: ドキュメントアイコン
+- Step 3 のアイコン/絵柄: AI ロボット（依頼）
+- Step 4 のアイコン/絵柄: Git の差分アイコン
+- 矢印で示す流れの意図: 設計 → 文書化 → AI 生成 → レビューの一方向フロー
 
 
 ## コミュニティ補完メモ
 
+- PlantUML（F-141）との住み分け：Mermaid は手軽さと GitHub ネイティブ対応が強み。PlantUML は複雑なシーケンス図や厳密な UML が必要な場面向き。
+- Excalidraw（B-31）との住み分け：Excalidraw は手書き風の自由なキャンバス。Mermaid はテキスト管理・AI 連携向き。
+- SVG（F-9）との関係：Mermaid のレンダリング出力は SVG 形式で書き出せる。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- https://mermaid.js.org/intro/ — checked 2026-04-30
+- https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/ — checked 2026-04-30
 
 
 ## 備考
+
+- GitHub の Mermaid サポートは 2022 年 2 月に正式対応（Markdown のコードブロックで自動レンダリング）。
+- Notion は Mermaid コードブロックをネイティブ表示（2023 年以降）。対応状況はアプリのバージョンによって異なる場合があります。
+- 細かいノード位置の指定は Mermaid の仕様上難しい。レイアウトをコントロールしたい場合は Graphviz や D2 が選択肢になります。

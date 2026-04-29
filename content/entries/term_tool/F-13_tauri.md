@@ -1,70 +1,67 @@
 ---
+# ── 識別・分類 ──
 id: F-13
 title: Tauri
+title_reading: タウリ
 category: term_tool
 subtype: framework
-experience_level:
-reader_level:
-figure_type: structure
+
+# ── 読者・体験 ──
+experience_level: partial
+reader_level: 3-4
+
+# ── 誌面形式 ──
+figure_type: comparison
 page_layout: spread_v1
-start_date:
+
+# ── 時変情報 ──
+start_date: 2022-06-19
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+
+# ── 関係 ──
+related_terms:
+  - Electron
+  - Rust
+  - VS Code
+  - shadcn/ui
+
+# ── 制作状態 ──
+status: drafting
 ---
-
-# Tauri
-
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
 
 ## tagline
 
-Rust ベースの軽量デスクトップアプリ FW
-
+Rust ベースの軽量デスクトップ・モバイルアプリ開発フレームワークです。OS 標準の WebView（ウェブビュー）を使うため、Electron より大幅に軽く動きます。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+React・Vue・Svelte などのフロントエンドを使いつつ、バックエンドを Rust（ラスト）で動かすデスクトップアプリを作れるフレームワークです。OS 標準の WebView を利用するため、最終バイナリが数 MB〜十数 MB に収まります。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+「Electron は重い」という話題で Tauri の名前が出ることがあります。AI 関連のスタートアップがデスクトップアプリを配布する場面や、1Password 8 の移行事例として記事で登場します。バイブコーディングで軽量 AI アプリを作る選択肢として紹介されることもあります。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+Electron と Tauri のバイナリサイズ・構成の違いを並べて、Tauri が軽い理由を直感的に示します。
 
+### B. 登場シーン（figure_type: comparison）
+
+- シーン1: Electron — Chromium（クロミウム）エンジンを同梱するため、アプリ単体で 100〜150 MB になることがあります
+- シーン2: Tauri — OS 標準の WebView を使うため、同等のアプリが数 MB〜十数 MB に収まります
+- シーン3: フロントエンドは JS/TS、バックエンドは Rust という分業構成で動きます
+- 並べる基準: 構成要素とバイナリサイズの比較
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「Tauri なら Electron より軽い AI デスクトップアプリが作れますよね。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,102 +69,95 @@ Rust ベースの軽量デスクトップアプリ FW
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+OS 標準 WebView でデスクトップ・モバイルアプリを動かすフレームワークです。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Electron 比で 1/10〜1/30 のバイナリサイズで配布できます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+バックエンドが Rust のため、深い機能追加では Rust の知識が必要になることがあります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+軽量 AI デスクトップアプリやオフライン動作ツールの配布に向いています。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+フロントエンドは普通の JS/TS で書けて、`tauri create` で雛形が立ち上がります。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Electron、Rust、shadcn/ui
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. プロジェクト作成 — `npm create tauri-app` でフロントエンド選択から雛形を生成します
+2. UI 開発 — React・Vue 等で画面を組み、通常の Web 開発と同じ感覚で進めます
+3. バックエンド連携 — Rust 側でファイル操作・通信などの機能を API として宣言します
+4. ビルド・配布 — `tauri build` で各 OS 向けの軽量バイナリを生成して配布します
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- Electron
+- Rust
+- VS Code
+- shadcn/ui
 
-- 用語A —
-- 用語B —
-- 用語C —
-
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
-
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: comparison）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: Electron と Tauri の構成を左右に並べた比較図。Electron 側は Chromium の大きなブロック、Tauri 側は OS WebView の小さなブロックを示す
+- 登場人物: 開発者が「こっちにしよう」と指差しているシーン
+- 吹き出し・心の声: 「100 MB → 5 MB に！」「Rust が動いてるけど、UI は普通の React でした。」
+- 中央に置くキーワード/ラベル: Electron vs Tauri バイナリサイズ比較
 
 ### 6 視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: ターミナル画面（雛形生成）
+- Step 2 のアイコン/絵柄: ブラウザ風の UI 編集画面
+- Step 3 のアイコン/絵柄: 歯車（Rust バックエンド API）
+- Step 4 のアイコン/絵柄: パッケージ箱（配布バイナリ）
+- 矢印で示す流れの意図: 作成 → UI 開発 → 連携 → 配布の順で進む
 
 ## コミュニティ補完メモ
 
+- Electron（F-12）との住み分け：Electron は Node.js を同梱する重厚なフレームワーク、Tauri は OS WebView を使う軽量代替。サイズと起動速度を重視するなら Tauri、Node.js エコシステム依存が深いなら Electron という選び方になります。
+- Rust（F-200）との住み分け：Tauri のバックエンドが Rust であることに触れるが、Rust 自体の説明は F-200 に委ねます。
+- VS Code（F-30）は Electron 製であるため、Tauri の対比例として言及しています。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- <https://tauri.app/blog/tauri_2_0_0_released/> — checked 2026-04-29
+- <https://v2.tauri.app/> — checked 2026-04-29
 
 ## 備考
+
+- Tauri 1.0 は 2022-06-19 リリース、Tauri 2.0 は 2024-10 リリース（モバイル対応追加）
+- 1Password 8 デスクトップ版が Tauri 採用の代表事例として引用されることがあります
+- WebView の実装差（Windows: WebView2、macOS: WKWebView、Linux: WebKitGTK）で挙動が微妙に異なることがあります

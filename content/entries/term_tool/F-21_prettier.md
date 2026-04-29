@@ -1,69 +1,63 @@
 ---
 id: F-21
 title: Prettier
+title_reading: プリティア
 category: term_tool
-subtype: linter
-experience_level:
-reader_level:
-figure_type: structure
+subtype: formatter
+experience_level: hands_on
+reader_level: 2-3
+figure_type: before_after
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - JavaScript
+  - TypeScript
+  - ESLint
+  - VS Code
+status: drafting
 ---
 
 # Prettier
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-書式整形ツール
-
+ソースコードの書式を自動で統一するフォーマッタです。インデントや引用符の揺れを一掃します。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+保存のたびにインデント・改行・引用符などの書式を自動で整えます。JavaScript（ジャバスクリプト）や TypeScript（タイプスクリプト）をはじめ、CSS・HTML・Markdown・JSON など Web 系の主要言語に対応しています。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+VS Code（ブイエスコード）の拡張機能として導入するのが最も一般的な場面です。AI が生成したコードを貼り付けた直後に保存すると、書式が自動で自分のプロジェクト標準に揃うため、バイブコーディング中に自然に活躍します。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+Prettier を入れる前後のコードの見た目を並べて、書式の揺れが消える変化を示します。
+
+### A. Before / After（figure_type: before_after）
+
+- Before
+  - 状況: AI が生成したコードを貼り付けた直後
+  - 視覚要素（コード）: インデントがバラバラ、引用符が混在した JavaScript 数行
+  - つまずき: チームの書式と合わずレビューで指摘される
+- After
+  - 状況: 保存と同時に Prettier が自動整形
+  - 視覚要素: インデント 2 スペース・シングルクォートで統一されたコード
+  - うれしさ: 書式の議論がなくなり、レビューがロジックの話だけになる
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Prettier を保存時にかけておけば、Claude が出すコードも自分の書式に揃います。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +66,43 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+コードの書式を自動で統一するフォーマッタです。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+保存するだけで書式が整い、レビューの指摘が減ります。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+設定の自由度は低く、細かいルールは変えられない設計です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+複数人開発やバイブコーディングで書式の揺れを防ぎます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+VS Code 拡張を入れて「保存時に整形」を有効化するだけです。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
+ESLint、VS Code、TypeScript
 
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. 環境構築 — VS Code 拡張「Prettier」をインストールして保存時整形をオンにします
+2. コード生成 — AI や手書きでコードを追加するたびに保存で自動整形されます
+3. ESLint 連携 — `eslint-config-prettier` で ESLint との衝突箇所を無効化します
+4. レビュー — 書式の差分がなくなり、ロジックに集中したレビューができます
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- JavaScript
+- TypeScript
+- ESLint
+- VS Code
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,29 +110,30 @@ YAML 補足（本書きで埋める／見直す欄）:
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: before_after）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左に書式バラバラなコード、右に Prettier 整形後のコード。中央に「保存」ボタンの矢印
+- 登場人物: コードを貼り付けた開発者（困り顔）→ 保存後（すっきり顔）
+- 吹き出し・心の声: Before「AI のコード、インデントがバラバラ…」After「保存したら揃った！」
+- 中央に置くキーワード/ラベル: Prettier（自動整形）
+- Before / After の対比ポイント: インデント幅と引用符の種類が揃うビジュアル差
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +141,24 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: 拡張インストールのアイコン
+- Step 2 のアイコン/絵柄: 保存キーの絵文字（フロッピーまたは Ctrl+S）
+- Step 3 のアイコン/絵柄: ESLint との歯車連携
+- Step 4 のアイコン/絵柄: チェックマーク付きコードレビュー
 
 ## コミュニティ補完メモ
+
+ESLint（F-20）との住み分け：ESLint はバグや品質ルールを検出・警告する役割、Prettier はインデント・引用符などの見た目を整える役割です。両者は補完関係にあり、衝突箇所は `eslint-config-prettier` で解消するのが定番運用です。VS Code（F-30）との関係：Prettier は VS Code 拡張として動作するのが最も普及した使い方で、「保存時に整形」設定が核心です。
 
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- <https://prettier.io/> — checked 2026-04-29
+- VS Code Marketplace: Prettier - Code formatter（インストール数 4,000 万超）— checked 2026-04-29
 
 
 ## 備考
+
+- 2017 年に James Long が公開。現在は Vercel などが複数スポンサーとして支援するオープンソースプロジェクト
+- 「opinionated（意見が強い）」設計思想：設定の選択肢をあえて絞ることでチーム内のフォーマット議論を終わらせる狙いがある
+- subtype を `linter` から `formatter` に修正（Prettier はリンタではなくフォーマッタ）

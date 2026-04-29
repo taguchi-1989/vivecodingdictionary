@@ -137,7 +137,7 @@ E-34,,OSWorld,benchmark,agent,skeleton,,content/entries/benchmark/E-34_osworld.m
 E-50,,Chatbot Arena,benchmark,general,needs_review,,content/entries/benchmark/E-50_chatbot_arena.md
 E-51,,LMSYS Arena,benchmark,general,skeleton,,content/entries/benchmark/E-51_lmsys_arena.md
 F-1,301,JavaScript,term_tool,language,needs_review,旧3桁ID連携→F-1に取り込み済み,content/entries/term_tool/F-1_javascript.md
-F-2,302,TypeScript,term_tool,language,sample,旧3桁ID連携,content/entries/term_tool/F-2_typescript.md
+F-2,302,TypeScript,term_tool,language,drafting,旧3桁ID連携 / v2テンプレ書き起こし済（2026-04-29）,content/entries/term_tool/F-2_typescript.md
 F-3,,Python,term_tool,language,needs_review,,content/entries/term_tool/F-3_python.md
 F-4,,HTML,term_tool,language,skeleton,,content/entries/term_tool/F-4_html.md
 F-5,,CSS,term_tool,language,skeleton,,content/entries/term_tool/F-5_css.md
@@ -149,12 +149,12 @@ F-10,304,React,term_tool,framework,drafting,旧3桁ID 304 の素材を取り込�
 F-11,305,Next.js,term_tool,framework,needs_review,旧3桁ID 305 の素材を取り込み新テンプレ書き起こし済（2026-04-29）,content/entries/term_tool/F-11_next_js.md
 F-12,,Electron,term_tool,framework,skeleton,,content/entries/term_tool/F-12_electron.md
 F-13,,Tauri,term_tool,framework,skeleton,,content/entries/term_tool/F-13_tauri.md
-F-14,,three.js,term_tool,framework,skeleton,3Dライブラリ,content/entries/term_tool/F-14_three_js.md
-F-15,,shadcn/ui,term_tool,framework,skeleton,コピペ配布型 React コンポーネント集,content/entries/term_tool/F-15_shadcn_ui.md
+F-14,,three.js,term_tool,framework,needs_review,3Dライブラリ,content/entries/term_tool/F-14_three_js.md
+F-15,,shadcn/ui,term_tool,framework,drafting,コピペ配布型 React コンポーネント集,content/entries/term_tool/F-15_shadcn_ui.md
 F-16,,Tailwind CSS,term_tool,framework,skeleton,ユーティリティクラス主義の CSS フレームワーク,content/entries/term_tool/F-16_tailwind_css.md
 F-17,,Astro,term_tool,framework,skeleton,アイランドアーキテクチャの Web フレームワーク,content/entries/term_tool/F-17_astro.md
-F-20,303,ESLint,term_tool,linter,sample,旧3桁ID連携,content/entries/term_tool/F-20_eslint.md
-F-21,,Prettier,term_tool,linter,skeleton,,content/entries/term_tool/F-21_prettier.md
+F-20,303,ESLint,term_tool,linter,needs_review,旧3桁ID連携・v2テンプレで書き直し済（2026-04-29）,content/entries/term_tool/F-20_eslint.md
+F-21,,Prettier,term_tool,formatter,drafting,,content/entries/term_tool/F-21_prettier.md
 F-30,,VS Code,term_tool,editor,drafting,,content/entries/term_tool/F-30_vs_code.md
 F-34,,VS Code 拡張機能,term_tool,editor,skeleton,,content/entries/term_tool/F-34.md
 F-35,,Markdown Preview Enhanced,term_tool,editor_ext,skeleton,,content/entries/term_tool/F-35_markdown_preview_enhanced.md
@@ -165,31 +165,31 @@ F-40,,npm,term_tool,cli_build,skeleton,,content/entries/term_tool/F-40_npm.md
 F-41,,Vite,term_tool,cli_build,drafting,,content/entries/term_tool/F-41_vite.md
 F-42,,ビルド,term_tool,cli_build,skeleton,,content/entries/term_tool/F-42.md
 F-43,,テスト,term_tool,cli_build,skeleton,,content/entries/term_tool/F-43.md
-F-44,,pnpm,term_tool,cli_build,skeleton,,content/entries/term_tool/F-44_pnpm.md
+F-44,,pnpm,term_tool,cli_build,drafting,,content/entries/term_tool/F-44_pnpm.md
 F-50,,git,term_tool,git,needs_review,,content/entries/term/F-50_git.md
 F-51,,git push,term_tool,git,skeleton,,content/entries/term_tool/F-51_git_push.md
 F-52,,git pull,term_tool,git,needs_review,,content/entries/term_tool/F-52_git_pull.md
 F-53,,branch,term_tool,git,skeleton,,content/entries/term_tool/F-53_branch.md
 F-54,,commit,term_tool,git,needs_review,,content/entries/term_tool/F-54_commit.md
 F-55,,merge,term_tool,git,skeleton,,content/entries/term_tool/F-55_merge.md
-F-56,,.gitignore,term_tool,git,skeleton,,content/entries/term_tool/F-56_gitignore.md
+F-56,,.gitignore,term_tool,git,drafting,,content/entries/term_tool/F-56_gitignore.md
 F-57,,リポジトリ,term_tool,git,skeleton,,content/entries/term_tool/F-57.md
 F-58,,git stash,term_tool,git,skeleton,,content/entries/term_tool/F-58_git_stash.md
-F-59,,README.md,term_tool,git,skeleton,,content/entries/term_tool/F-59_readme_md.md
+F-59,,README.md,term_tool,git,needs_review,,content/entries/term_tool/F-59_readme_md.md
 F-60,,GitHub,term_tool,github,needs_review,,content/entries/term_tool/F-60_github.md
-F-61,,Pull Request,term_tool,github,skeleton,,content/entries/term_tool/F-61_pull_request.md
+F-61,,Pull Request,term_tool,github,needs_review,,content/entries/term_tool/F-61_pull_request.md
 F-62,,GitHub Actions,term_tool,github,skeleton,CI/CD,content/entries/term_tool/F-62_github_actions.md
-F-71,,ripgrep (rg),term_tool,search,skeleton,,content/entries/term_tool/F-71_ripgrep.md
-F-80,,Node.js,term_tool,runtime,skeleton,,content/entries/term_tool/F-80_node_js.md
-F-81,,bash,term_tool,shell,skeleton,,content/entries/term_tool/F-81_bash.md
-F-82,,WSL,term_tool,shell,skeleton,,content/entries/term_tool/F-82_wsl.md
-F-83,,PowerShell,term_tool,shell,skeleton,,content/entries/term_tool/F-83_powershell.md
+F-71,,ripgrep (rg),term_tool,search,needs_review,,content/entries/term_tool/F-71_ripgrep.md
+F-80,,Node.js,term_tool,runtime,drafting,,content/entries/term_tool/F-80_node_js.md
+F-81,,bash,term_tool,shell,drafting,,content/entries/term_tool/F-81_bash.md
+F-82,,WSL,term_tool,shell,needs_review,,content/entries/term_tool/F-82_wsl.md
+F-83,,PowerShell,term_tool,shell,drafting,,content/entries/term_tool/F-83_powershell.md
 F-84,,Ghostty,term_tool,terminal,skeleton,,content/entries/term_tool/F-84_ghostty.md
 F-85,,SuperClaude Framework,term_tool,terminal,skeleton,Claude Code 拡張 OSS（Anthropic 非公式）,content/entries/term_tool/F-85_superclaude_framework.md
-F-86,,ollama,term_tool,runtime,skeleton,ローカルLLM,content/entries/term_tool/F-86_ollama.md
+F-86,,ollama,term_tool,runtime,drafting,ローカルLLM,content/entries/term_tool/F-86_ollama.md
 F-87,,sudo,term_tool,shell,skeleton,UNIX 系の権限昇格コマンド,content/entries/term_tool/F-87_sudo.md
 F-90,,Docker,term_tool,container,skeleton,,content/entries/term_tool/F-90_docker.md
-F-91,,.env,term_tool,env,skeleton,,content/entries/term_tool/F-91_env.md
+F-91,,.env,term_tool,env,needs_review,,content/entries/term_tool/F-91_env.md
 F-100,,拡張子早見表,term_tool,file_format,skeleton,,content/entries/term_tool/F-100.md
 F-101,,.ico,term_tool,file_format,skeleton,,content/entries/term_tool/F-101_ico.md
 F-102,,.mp4,term_tool,file_format,skeleton,,content/entries/term_tool/F-102_mp4.md
@@ -197,13 +197,13 @@ F-103,,.mp3,term_tool,file_format,skeleton,,content/entries/term_tool/F-103_mp3.
 F-104,,.webp,term_tool,file_format,skeleton,,content/entries/term_tool/F-104_webp.md
 F-110,,Lighthouse,term_tool,quality,skeleton,,content/entries/term_tool/F-110_lighthouse.md
 F-111,,a11y,term_tool,quality,skeleton,,content/entries/term_tool/F-111_a11y.md
-F-120,,PostgreSQL,term_tool,database,skeleton,,content/entries/term_tool/F-120_postgresql.md
+F-120,,PostgreSQL,term_tool,database,drafting,,content/entries/term_tool/F-120_postgresql.md
 F-121,,SQLite,term_tool,database,skeleton,,content/entries/term_tool/F-121_sqlite.md
-F-122,,Prisma,term_tool,orm,skeleton,,content/entries/term_tool/F-122_prisma.md
-F-123,,ORM,term_tool,orm,skeleton,,content/entries/term_tool/F-123_orm.md
-F-130,,OAuth,term_tool,auth,skeleton,,content/entries/term_tool/F-130_oauth.md
+F-122,,Prisma,term_tool,orm,needs_review,,content/entries/term_tool/F-122_prisma.md
+F-123,,ORM,term_tool,orm,drafting,,content/entries/term_tool/F-123_orm.md
+F-130,,OAuth,term_tool,auth,needs_review,,content/entries/term_tool/F-130_oauth.md
 F-140,,Mermaid,term_tool,diagram,skeleton,,content/entries/term_tool/F-140_mermaid.md
-F-141,,PlantUML,term_tool,diagram,skeleton,,content/entries/term_tool/F-141_plantuml.md
+F-141,,PlantUML,term_tool,diagram,drafting,,content/entries/term_tool/F-141_plantuml.md
 F-150,,MIT ライセンス,term_tool,license,skeleton,,content/entries/term_tool/F-150.md
 F-151,,Apache 2.0,term_tool,license,skeleton,,content/entries/term_tool/F-151_apache_2_0.md
 F-152,,GPL,term_tool,license,skeleton,,content/entries/term_tool/F-152_gpl.md

@@ -1,69 +1,58 @@
 ---
 id: F-82
 title: WSL
+title_reading: ダブリュー エス エル
 category: term_tool
 subtype: shell
-experience_level:
-reader_level:
+experience_level: hands_on
+reader_level: 2-3
 figure_type: structure
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-29
+related_terms:
+  - bash
+  - PowerShell
+  - git
+  - Docker
+status: drafting
 ---
 
 # WSL
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-Windows 上で Linux を動かす仕組み
-
+Windows Subsystem for Linux の略。Windows の中で本物の Linux 環境を動かす仕組みです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+WSL2 は軽量な仮想マシンで Linux カーネルを起動し、Ubuntu や Debian などのディストリビューション（Linux の配布形態）を Windows 上で利用できるようにします。Windows のファイルとも相互にアクセスできます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+Claude Code や bash スクリプト関連の記事を読むと、手順が Linux 前提で書かれていることがよくあります。Windows ユーザーが「まず WSL を入れてから」という案内に出会うのが典型的な接点です。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+Windows の中に Linux の層が入れ子になっている構造を示し、「仮想マシンより軽く、ネイティブとは別の層」という位置づけを伝えます。
+
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: WSL2 レイヤー（Windows の中の Linux 領域）
+- 周辺の要素: Windows OS / Linux カーネル / Ubuntu ターミナル / VS Code Remote / ファイル共有パス
+- 関係の描き方: Windows を外側の枠、その内側に WSL2 の領域を入れ子で配置し、ファイル共有の矢印を双方向で示す
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「WSL を入れてから Claude Code を使うと、bash 前提の記事がそのまま動きます。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +61,44 @@ Windows 上で Linux を動かす仕組み
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Windows 上で Linux コマンドやツールを動かす互換レイヤーです。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Linux 専用ツールを再起動なしで試せます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ファイルパスの形式が Windows と Linux で異なるため注意が必要です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+bash スクリプトや Docker を Windows 機で扱う場面で役立ちます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+WSL2 は軽量仮想マシンで動き、WSL1 より Linux 互換性が高い点を押さえます。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
+bash、Docker、VS Code Remote
 
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. 環境セットアップ — PowerShell で `wsl --install` を 1 行実行してインストールします。
+2. ディストリ選択 — Ubuntu など使いたい Linux 配布形態を Microsoft Store で追加します。
+3. ツール導入 — bash や git、uv、ollama など Linux 専用ツールを WSL 内で使えるようにします。
+4. エディタ連携 — VS Code の Remote 拡張で Windows 側エディタから WSL 内ファイルを編集します。
+5. 日常利用 — Claude Code など bash 前提のツールを WSL ターミナルから普段通り操作します。
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- bash
+- PowerShell
+- git
+- Docker
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,17 +106,17 @@ Windows 上で Linux を動かす仕組み
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,10 +125,10 @@ Windows 上で Linux を動かす仕組み
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: Windows の外枠の中に WSL2 領域を入れ子で描く。Ubuntu ターミナルウィンドウが WSL 内で開いている図
+- 登場人物: Windows ユーザー（人物）が画面の前に座り、ターミナルを覗き込んでいる
+- 吹き出し・心の声: 「Linux なのに Windows から動かせる？」→ 「WSL2 が橋渡しします」
+- 中央に置くキーワード/ラベル: WSL2
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +136,26 @@ Windows 上で Linux を動かす仕組み
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: PowerShell ウィンドウとコマンド入力
+- Step 2 のアイコン/絵柄: Microsoft Store の Ubuntu ロゴ
+- Step 3 のアイコン/絵柄: ターミナルとパッケージアイコン群
+- Step 4 のアイコン/絵柄: VS Code と WSL バッジ
+- Step 5 のアイコン/絵柄: Claude Code ロゴとターミナル
 
 
 ## コミュニティ補完メモ
 
+- F-81 bash との住み分け：bash はシェル言語・コマンドの仕組みそのもの、WSL は bash を Windows で動かすための土台。「bash を使うには WSL が要る（Windows の場合）」という関係。
+- F-83 PowerShell との住み分け：PowerShell は Windows ネイティブのシェル。WSL は Linux 系ツールを使いたいときの追加レイヤー。どちらを使うかは目的次第。
+- F-90 Docker との住み分け：Docker Desktop on Windows は WSL2 バックエンドを推奨しており、WSL を入れると Docker の動作が安定しやすい。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- Microsoft Learn「WSL のインストール」 — checked 2026-04-29
+- [Microsoft Learn WSL install](https://learn.microsoft.com/ja-jp/windows/wsl/install) — checked 2026-04-29
 
 
 ## 備考
+
+- WSL1 と WSL2 は並存できる。WSL2 のほうが Linux カーネル互換性が高く、現在の主流。
+- Windows 11 / Windows 10 バージョン 2004 以降で利用可能。

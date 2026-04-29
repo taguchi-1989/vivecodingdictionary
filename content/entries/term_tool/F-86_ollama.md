@@ -1,69 +1,76 @@
 ---
+# ── 識別・分類 ──
 id: F-86
 title: ollama
+title_reading: オラマ
 category: term_tool
 subtype: runtime
-experience_level:
-reader_level:
+
+# ── 読者・体験 ──
+experience_level: hands_on
+reader_level: 3-5
+
+# ── 誌面形式 ──
 figure_type: structure
 page_layout: spread_v1
+
+# ── 時変情報 ──
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+
+evaluation_date: 2026-04-30
+
+# ── 関係 ──
+related_terms:
+  - VRAM
+  - Llama 系
+  - Mistral 系
+  - Qwen 系
+  - llama.cpp
+
+# ── 制作状態 ──
+status: drafting
 ---
 
 # ollama
 
 <!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
+バイブコーディング図鑑 エントリー雛形 v2（2ページ見開き想定、iter 22 準拠）
 -->
 
 ## tagline
 
-ローカルで LLM を動かす実行環境／CLI
+ローカル PC で LLM を 1 コマンド実行できる配布・実行ツールです。
 
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+`ollama run llama3` の 1 行でモデルを取得・起動します。内部では llama.cpp を使い、NVIDIA CUDA・Mac Metal などの GPU 高速化にも対応します。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+API 課金なしでローカル LLM を試したい場面で登場します。Claude Code や MCP サーバーの呼び出し先として設定されることがあり、OpenAI 互換の HTTP API も提供します。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+ollama がモデルの取得から API 提供までを一手に担う様子を、人物視点で示します。
+
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: ollama（実行ランタイム）
+- 周辺の要素: モデルファイル（GGUF）／llama.cpp バックエンド／GPU（Metal / CUDA / ROCm）／HTTP API（OpenAI 互換）／CLI
+- 関係の描き方: ollama を中心に、左から「モデル取得」、下から「GPU 高速化」、右へ「API 出力」の矢印
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「ollama でローカルに Llama 3 を入れたら、API 課金なしで補助が効きました。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,54 +79,46 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ローカル PC 上で LLM を取得・実行する配布ランタイムです。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+API 課金なしでモデルを試せ、オフライン環境でも動作します。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+大きいモデルは VRAM 不足でクラッシュするため、量子化バリアント選びが重要です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Claude Code や MCP サーバーのローカル LLM 連携先として機能します。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+`ollama run llama3` の 1 行で動作確認、次に `ollama list` でサイズ確認の手順です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
+llama.cpp、VRAM、GGUF 量子化
 
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. モデル取得 — `ollama pull qwen2.5:7b` で量子化バリアントを指定してダウンロードします
+2. 起動確認 — `ollama run` でモデルを対話起動し、VRAM 内に収まるか確かめます
+3. API 接続 — OpenAI 互換の HTTP API をアプリや MCP サーバーから呼び出します
+4. ツール連携 — Claude Code や Cursor のローカル LLM バックエンドとして設定します
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- VRAM
+- Llama 系
+- Mistral 系
+- Qwen 系
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
@@ -143,10 +142,10 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: ollama を中心に置き、左からモデルファイル（GGUF）が流れ込み、下から GPU が支え、右へ HTTP API と CLI が出ていく構造図
+- 登場人物（いれば）: PC の前に座る開発者（男女どちらでも可）
+- 吹き出し・心の声: 「コマンド 1 行でモデルが動いた！」
+- 中央に置くキーワード/ラベル: ollama
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +153,27 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: ダウンロード矢印（モデル取得）
+- Step 2 のアイコン/絵柄: ターミナル画面（起動確認）
+- Step 3 のアイコン/絵柄: API プラグアイコン（HTTP 連携）
+- Step 4 のアイコン/絵柄: ツール連携（エディタ + サーバー）
+- 矢印で示す流れの意図: 取得 → 確認 → 連携 → 管理の一方向フロー
 
 
 ## コミュニティ補完メモ
 
+- llama.cpp（F 系列）との住み分け：llama.cpp は ollama の内部エンジン。エンドユーザーは ollama を入口として使い、llama.cpp を直接触ることは少ない
+- LM Studio との住み分け：LM Studio は GUI 中心のローカル LLM ツール。ollama は CLI・API 中心でスクリプト連携向き
+- VRAM（J-70）との関係：モデルサイズが VRAM を超えるとクラッシュするため、`ollama list` でサイズ確認が必須。量子化バリアント（`:7b` `:3b` 等）を選ぶことで回避できる
+
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- https://ollama.com — checked 2026-04-30
+- https://github.com/ollama/ollama — checked 2026-04-30
 
 
 ## 備考
+
+- モデルの提供状況（対応モデル名・バリアント）は頻繁に変わる時変情報のため、具体的なモデル名列挙は避けブリーフ記載の代表例にとどめた
+- OpenAI 互換エンドポイントのデフォルトポートは `11434`（2026-04-30 時点）
