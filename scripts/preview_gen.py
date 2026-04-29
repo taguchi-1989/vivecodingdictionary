@@ -39,6 +39,7 @@ ENTRIES_DIR = ROOT / "content" / "entries"
 PREVIEW_DIR = ROOT / "drafts" / "prototypes" / "preview"
 PONCHI_SVG_DIR = ROOT / "drafts" / "ponchi"
 OVERLAY_CSS_REL = "../mockups/design_philosophy_v2/overlay.css"
+OVERLAY_TIGHT_CSS_REL = "../mockups/design_philosophy_v2/overlay-tight.css"
 BASE_CSS_REL = "../mockups/design_philosophy_v2/base.css"
 
 # ─── 章定義（chapters.yaml の簡易読み込み、PyYAML 非依存） ──────────
@@ -314,6 +315,7 @@ CHAR_RANGES: dict[str, tuple[int, int]] = {
     "どこで出会うか": (60, 200),
     "見どころ1-5": (15, 40),
     "見どころ6": (15, 50),
+    "会話での使い方例": (25, 50),  # 2026-04-26 追加: 左ページ末尾の独立スロット
 }
 
 
@@ -328,7 +330,7 @@ def grade_chars(count: int, lower: int, upper: int) -> tuple[str, str]:
     return "✓", "char-ok"
 
 
-def render_char_meta(tagline: str, nani: str, dokode: str, seepoints: list[str]) -> str:
+def render_char_meta(tagline: str, nani: str, dokode: str, seepoints: list[str], kaiwa: str = "") -> str:
     """preview-meta バー下に出す字数チェック行。範囲超過は赤、不足はオレンジ、OK は緑。"""
     items: list[str] = []
 
@@ -343,6 +345,7 @@ def render_char_meta(tagline: str, nani: str, dokode: str, seepoints: list[str])
     items.append(cell("tagline", count_chars(tagline), *CHAR_RANGES["tagline"]))
     items.append(cell("何を", count_chars(nani), *CHAR_RANGES["何をしてくれるか"]))
     items.append(cell("どこで", count_chars(dokode), *CHAR_RANGES["どこで出会うか"]))
+    items.append(cell("会話例", count_chars(kaiwa), *CHAR_RANGES["会話での使い方例"]))
 
     for i, sp in enumerate(seepoints, start=1):
         rng = CHAR_RANGES["見どころ6"] if i == 6 else CHAR_RANGES["見どころ1-5"]
@@ -353,13 +356,23 @@ def render_char_meta(tagline: str, nani: str, dokode: str, seepoints: list[str])
     return f'<div class="char-meta">{"".join(items)}</div>'
 
 
+def _scalar(v) -> str:
+    """frontmatter 値を str に正規化。空 list（スケルトン未記入の experience_level: 等）は空文字。"""
+    if v is None or v == [] or v == "":
+        return ""
+    if isinstance(v, list):
+        return ", ".join(str(x) for x in v)
+    return str(v)
+
+
 def render_tagline_tags(fm: dict) -> str:
-    exp = EXPERIENCE_LABELS.get(fm.get("experience_level", ""), fm.get("experience_level", ""))
-    lvl = fm.get("reader_level", "")
+    exp_raw = _scalar(fm.get("experience_level"))
+    exp = EXPERIENCE_LABELS.get(exp_raw, exp_raw) or "（未記入）"
+    lvl = _scalar(fm.get("reader_level")) or "（未記入）"
     return f'''
       <div class="tag-row">
-        <span class="tag-chip">{USER_ICON_SVG}体験区分：{escape(str(exp))}</span>
-        <span class="tag-chip">{LEVEL_ICON_SVG}推奨読者レベル：Level {escape(str(lvl))}</span>
+        <span class="tag-chip">{USER_ICON_SVG}体験区分：{escape(exp)}</span>
+        <span class="tag-chip">{LEVEL_ICON_SVG}推奨読者レベル：Level {escape(lvl)}</span>
       </div>'''
 
 
@@ -491,6 +504,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 <title>{title} — バイブコーディング図鑑 preview</title>
 <link rel="stylesheet" href="{base_css}">
 <link rel="stylesheet" href="{overlay_css}">
+<link rel="stylesheet" href="{overlay_tight_css}">
 <style>
 body {{ margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: var(--font-jp); }}
 /* 本文内の箇条書き・段落（preview のみ。本番は Astro primitive 側で制御） */
@@ -568,11 +582,11 @@ body {{ margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: va
 .flow-row .flow-arrow {{ flex: 0 0 auto !important; }}
 
 /* ─── PDF 出力（Cmd/Ctrl+P → PDF として保存）───
-   暫定の用紙サイズは preview の CSS が想定する 750×1061px の物理換算（96dpi で 198×280mm）。
-   仕様の本サイズ 150×212mm への厳密縮小は実装担当が Paged.js で対応する想定。
+   2026-04-28 W 案: ポンチ絵スロットを iter 22 前の旧サイズに戻し、書籍判型 A 系 √2 に収める方向。
+   @page は CSS 設計値 750×1061px の物理換算（≒199×281mm）。
    開発でしか使わない UI（ドロワー・preview メタ・字数バー・前後リンク）は印刷から除外する。 */
 @page {{
-  size: 198mm 280mm;
+  size: 199mm 281mm;
   margin: 0;
 }}
 @media print {{
@@ -599,11 +613,12 @@ body {{ margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: va
     box-shadow: none !important;
     page-break-after: always;
     page-break-inside: avoid;
-    /* @page と完全に同じ mm 単位で固定（px と mm の換算誤差を回避） */
-    width: 198mm !important;
-    height: 280mm !important;
-    min-height: 280mm !important;
-    max-height: 280mm !important;
+    /* CSS 設計値 750×1061px（≒198.4×280.7mm）に合わせて 199×281mm 固定。
+       はみ出したら overflow: hidden で切る（W 案の検証用に残す） */
+    width: 199mm !important;
+    height: 281mm !important;
+    min-height: 281mm !important;
+    max-height: 281mm !important;
     overflow: hidden !important;
   }}
   .vbcd.page:last-of-type {{ page-break-after: auto; }}
@@ -666,7 +681,7 @@ body {{ margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: va
 
     <div class="page-chrome-bottom">
       <div class="chrome-left-foot">{evaluation_month}<span class="sep">·</span>{status}</div>
-      <div class="chrome-right-foot"><span class="slot-placeholder">（会話での使い方例）</span></div>
+      <div class="chrome-right-foot">{kaiwa_slot}</div>
     </div>
   </section>
 
@@ -742,6 +757,7 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
 <title>バイブコーディング図鑑 preview 目次</title>
 <link rel="stylesheet" href="{base_css}">
 <link rel="stylesheet" href="{overlay_css}">
+<link rel="stylesheet" href="{overlay_tight_css}">
 <style>
 body {{ margin: 0; padding: 40px 20px; background: #f3f6fb; font-family: var(--font-jp); color: var(--ink); }}
 main {{ max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; padding: 40px; border: 1px solid #dfe6ef; }}
@@ -840,7 +856,14 @@ def render_page(entry: dict, prev: dict | None, next_: dict | None, drawer_html:
     letter = entry_id.split("-", 1)[0]
     chapter = CHAPTER_META.get(letter, {"label": "", "tilde": ""})
 
-    title_main, title_sub = split_title(entry["title"])
+    # 主・副タイトルの解決:
+    #   1. frontmatter の title_reading（iter 23 で正式採用）を最優先
+    #   2. なければ title 内の `（...）` を分離する後方互換ロジック（split_title）
+    title_reading = (fm.get("title_reading") or "").strip()
+    if title_reading:
+        title_main, title_sub = entry["title"], title_reading
+    else:
+        title_main, title_sub = split_title(entry["title"])
 
     tagline = strip_md(extract_section(body, "tagline")) or fm.get("tagline", "")
     nanishiteku_raw = strip_md(extract_section(body, "何をしてくれるか"))
@@ -848,13 +871,17 @@ def render_page(entry: dict, prev: dict | None, next_: dict | None, drawer_html:
     nanishiteku_html = render_body_html(nanishiteku_raw) or "<p>（未記入）</p>"
     dokode_deau_html = render_body_html(dokode_deau_raw) or "<p>（未記入）</p>"
 
+    # 2026-04-26 追加: 左ページ末尾の「会話での使い方例」スロット
+    # 25-50 字（推奨 30-40）の 1 文。誌面では下チロム右に印字される
+    kaiwa_raw = strip_md(extract_section(body, "会話での使い方例"))
+
     seepoints = [strip_md(extract_subsection(body, "この用語の見どころ", key)) or "（未記入）" for key in SEEPOINT_KEYS]
     seepoint_cells = "\n".join(render_seepoint_cell(i + 1, SEEPOINT_LABELS[i], seepoints[i]) for i in range(6))
 
     flow_steps = extract_flow_steps(body)
     flow_html = render_flow_row(flow_steps)
 
-    char_meta_html = render_char_meta(tagline, nanishiteku_raw, dokode_deau_raw, seepoints)
+    char_meta_html = render_char_meta(tagline, nanishiteku_raw, dokode_deau_raw, seepoints, kaiwa_raw)
 
     related = extract_related_terms(body, fm.get("related_terms", []) or [])
     related_html = render_related_pills(related)
@@ -869,10 +896,18 @@ def render_page(entry: dict, prev: dict | None, next_: dict | None, drawer_html:
         if title_sub else ""
     )
 
+    # 会話での使い方例: 本文があれば直接表示、なければプレースホルダ
+    kaiwa_slot_html = (
+        f'<span class="slot-kaiwa">{escape(kaiwa_raw)}</span>'
+        if kaiwa_raw else
+        '<span class="slot-placeholder">（会話での使い方例）</span>'
+    )
+
     return PAGE_TEMPLATE.format(
         title=escape(entry["title"]),
         title_main=escape(title_main),
         title_sub_html=title_sub_html,
+        kaiwa_slot=kaiwa_slot_html,
         entry_id=escape(entry_id),
         entry_code=escape(entry_id_padded),
         char_meta=char_meta_html,
@@ -884,6 +919,7 @@ def render_page(entry: dict, prev: dict | None, next_: dict | None, drawer_html:
         tilde_top=escape(chapter["tilde"]),
         base_css=BASE_CSS_REL,
         overlay_css=OVERLAY_CSS_REL,
+        overlay_tight_css=OVERLAY_TIGHT_CSS_REL,
         book_icon=BOOK_ICON_SVG,
         code_icon=CODE_ICON_SVG,
         pin_icon=PIN_ICON_SVG,
@@ -936,6 +972,7 @@ def render_index(entries: list[dict], archived_count: int) -> str:
         chapters="\n".join(chapter_blocks),
         base_css=BASE_CSS_REL,
         overlay_css=OVERLAY_CSS_REL,
+        overlay_tight_css=OVERLAY_TIGHT_CSS_REL,
     )
 
 

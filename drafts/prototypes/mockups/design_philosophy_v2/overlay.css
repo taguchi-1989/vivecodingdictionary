@@ -535,22 +535,27 @@
 .figure-ba .ba-caption.ok { color: var(--ink-blue-700); }
 .figure-ba .ba-caption.warn { color: #B24E3F; }
 
-/* 擬人化ポンチ絵スロット（左ページ メインビジュアル／後日差し込み枠） */
+/* 擬人化ポンチ絵スロット（左ページ／後日差し込み枠）
+ *
+ * 2026-04-28: iter 22 の「メインビジュアル化」（min-height 340 / アイコン 200 等）を取り下げ、
+ * 旧サイズ（min-height 150 / アイコン 96）に戻す。理由: ポンチ絵拡大により左ページの
+ * 実描画高さが 1061 → 1424 px に膨らみ、書籍判型 A 系 √2（1:1.41）に収まらなくなったため。
+ * 詳細は v2_rules_summary §5 リネーム履歴の 2026-04-28 行を参照。 */
 .ponchi-slot {
   margin-top: 20px;
   border: 1.5px dashed var(--ink-blue);
   border-radius: var(--radius-lg);
-  padding: 28px 24px;
+  padding: 20px 16px;
   background: var(--paper-2);
   display: flex;
   align-items: center;
-  gap: 24px;
-  min-height: 340px;
+  gap: 16px;
+  min-height: 150px;
 }
 .ponchi-slot .ponchi-icon {
   flex-shrink: 0;
-  width: 200px;
-  height: 200px;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   background: var(--paper);
   border: 1.5px dashed var(--ink-blue);
@@ -559,20 +564,20 @@
   justify-content: center;
   color: var(--ink-blue);
 }
-.ponchi-slot .ponchi-icon svg { width: 104px; height: 104px; }
+.ponchi-slot .ponchi-icon svg { width: 48px; height: 48px; }
 .ponchi-slot .ponchi-caption {
   flex: 1;
 }
 .ponchi-slot .ponchi-title {
   font-family: var(--font-jp);
   font-weight: 700;
-  font-size: 18px;
+  font-size: 15px;
   color: var(--ink-blue-700);
-  margin: 0 0 8px;
+  margin: 0 0 5px;
 }
 .ponchi-slot .ponchi-hint {
   font-family: var(--font-jp);
-  font-size: 15px;
+  font-size: 14px;
   color: var(--ink-2);
   line-height: 1.7;
   margin: 0;

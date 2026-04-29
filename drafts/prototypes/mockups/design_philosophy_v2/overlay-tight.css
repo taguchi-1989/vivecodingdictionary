@@ -1,0 +1,139 @@
+/* overlay-tight.css ── W' 案検証用の圧縮レイヤー（2026-04-28）
+ *
+ * 目的: 書籍判型 A 系 √2（150×212mm、CSS 上は 750×1061px）に左右 1 ページずつを収める
+ * ことを暫定的に実現するための CSS。`overlay.css` の上に重ねる前提で書き、preview
+ * 専用に適用する。本番（typescript_spread.html / Astro 移行後）には影響させない。
+ *
+ * 設計方針:
+ *  - 既存 overlay.css は触らず、上書き専用ルールだけをここに集約
+ *  - 上書きはすべて !important で明示し、後段ルールに干渉しないようセレクタを必要十分に絞る
+ *  - 数値は仮置き。実装担当（Astro 移行時）が定常版を作る前に「収まりそうか」を試す段階
+ *
+ * 主な圧縮ポイント:
+ *  1. 左ページ: メイン図（.figure）とポンチ絵（.ponchi-slot）の上下枠線を融合し、
+ *     一体のメインビジュアルとして見せる。間の余白も詰める
+ *  2. 左右ページ: page-body の上下 padding を削減し、本文のスタート位置を上げる
+ *  3. 右ページ: 6 視点グリッドの min-height・padding・font を圧縮
+ *  4. 右ページ: bottom-row、flow-row の余白・min-height を圧縮
+ */
+
+
+/* ===== 共通: ページ body の余白圧縮 ===== */
+
+.spread .vbcd.page:first-child .page-body,
+.spread .vbcd.page:last-child  .page-body {
+  padding-top: 28px !important;     /* 元 40 → 28 */
+  padding-bottom: 64px !important;  /* 元 100 → 64 */
+}
+
+
+/* ===== 左ページ ===== */
+
+/* タイトル・タグライン・タグ行 */
+.title-hero {
+  font-size: 80px !important;        /* 96 → 80 */
+  letter-spacing: -0.02em;
+  margin: 0 0 14px !important;       /* 22 → 14 */
+}
+.title-hero-sub {
+  font-size: 22px !important;        /* preview の sub もちょい小さく */
+  margin: -10px 0 14px !important;
+}
+.tagline-bar {
+  padding: 12px 16px !important;
+  margin-bottom: 12px !important;
+}
+.tag-row { margin-bottom: 10px !important; }
+
+/* 本文セクション */
+.body-section { padding: 10px 0 !important; gap: 12px !important; }
+.body-section .body-heading { margin-bottom: 4px !important; }
+.body-section .body-text,
+.body-section .body-text p { font-size: 14.5px !important; line-height: 1.65 !important; }
+
+/* メイン図 + ポンチ絵を一体化（共有枠）
+ * 構造的には .figure（中身）→ .ponchi-slot（中身）の縦並び。
+ * .figure の下枠線・下角丸を削除、.ponchi-slot の上枠線・上角丸を削除して
+ * 1 つの大きな囲み枠に見せる。section-heading（小見出し）は維持してよい。 */
+.section-heading { margin: 8px 0 6px !important; }
+
+.figure {
+  margin-top: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-bottom: 0 !important;
+  padding: 14px 16px !important;
+  min-height: 110px !important;
+}
+
+.ponchi-slot {
+  /* iter 22 前の旧サイズ（min-height 150 / アイコン 96）が前提。
+     ここで上枠を消して上の .figure と連結 */
+  margin-top: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-top: 1.5px dashed transparent !important;
+  padding: 12px 16px !important;
+  min-height: 130px !important;     /* 150 → 130 */
+  background: var(--paper-2) !important;
+}
+.ponchi-slot .ponchi-icon {
+  width: 80px !important;
+  height: 80px !important;
+}
+.ponchi-slot .ponchi-icon svg { width: 40px !important; height: 40px !important; }
+.ponchi-slot .ponchi-title { font-size: 14px !important; margin: 0 0 4px !important; }
+.ponchi-slot .ponchi-hint  { font-size: 13px !important; line-height: 1.55 !important; }
+
+
+/* ===== 右ページ ===== */
+
+/* 「この用語の見どころ」を上から開始するために、最初の section-heading の上余白を 0 に */
+.spread .vbcd.page:last-child .page-body > .section-heading:first-child {
+  margin-top: 0 !important;
+}
+
+/* 6 視点グリッド: セルを縮める */
+.seepoint-grid { gap: 6px !important; margin-top: 4px !important; }
+.seepoint-cell {
+  min-height: 158px !important;             /* 210 → 158 */
+  padding: 38px 10px 12px !important;       /* 54/14/18 → 38/10/12 */
+}
+.seepoint-cell .badge-num {
+  width: 24px !important;
+  height: 24px !important;
+  top: 10px !important;
+  left: 10px !important;
+  font-size: 12px !important;
+}
+.seepoint-cell .seepoint-icon {
+  width: 36px !important;
+  height: 36px !important;
+  margin: 0 0 6px !important;
+}
+.seepoint-cell .seepoint-title {
+  font-size: 16px !important;               /* 20 → 16 */
+  margin: 4px 0 6px !important;
+}
+.seepoint-cell .seepoint-body {
+  font-size: 13px !important;               /* 14.5 → 13 */
+  line-height: 1.55 !important;
+}
+
+/* bottom-row（つまずき 4 : コメント 6）の余白圧縮 */
+.bottom-row { gap: 14px !important; margin-top: 12px !important; }
+.bottom-row .list-block ul,
+.bottom-row .comment-block ul { margin: 6px 0 !important; }
+
+/* 開発フロー */
+.flow-row { margin-top: 10px !important; gap: 6px !important; }
+.flow-step { min-height: 86px !important; padding: 10px 8px !important; gap: 6px !important; }
+.flow-step svg { width: 24px !important; height: 24px !important; }
+.flow-step .flow-label { font-size: 12.5px !important; line-height: 1.35 !important; }
+
+/* 関連用語ピル */
+.related-row { gap: 6px !important; margin-top: 4px !important; }
+.related-pill { padding: 6px 12px !important; font-size: 13px !important; }
+
+/* 参考 URL */
+.references-row { margin-top: 8px !important; font-size: 11.5px !important; }

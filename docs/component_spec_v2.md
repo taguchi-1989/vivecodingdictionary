@@ -209,7 +209,7 @@ B-3 ChatGPT（structure）を既存テンプレで描画してみた結果、**B
 - **共通コンテナ `.figure`**: 青枠＋角丸＋ padding 18px/16px＋上 margin 6px
 - **タイトル下段**: `.figure` の直上に `<div class="section-heading"><span class="label">{図タイトル}</span></div>` を置く。図のタイトル（「Before/After」「3 つの入口」等）は図ごとに自由
 - **色トークン**: `--ink-blue` 主青、`--ink-blue-100` 淡青塗り、`--paper-2` セル下地
-- **印刷対応**: primitive ごとの高さは概ね 180〜240px。ポンチ絵スロット（340px）との合算で左ページが 1061px に収まるよう調整
+- **印刷対応**: primitive ごとの高さは概ね 180〜240px。当初設計ではポンチ絵スロット（iter 22 の 340px）との合算で左ページが 1061px に収まる想定だったが、2026-04-28 に実描画が 1424 px に膨らんでいることが判明。**ポンチ絵を旧サイズ（150 / icon 96）に戻し、preview 専用 `overlay-tight.css`（構造図とポンチ絵の枠線融合・6 視点グリッド圧縮・各種余白削減）を新設して 1061px に再収束**（W 案、[v2_rules_summary §4](v2_rules_summary.md#4-ビジュアルトークンcss-側の確定値) 参照）。実装担当は overlay-tight のルールを Paged.js 側でどう扱うか検討してください
 - **data 属性**: 実装担当はカード数を `--st-cols-count: 4;` のような CSS カスタムプロパティで外から制御できるようにする
 
 ### 2-6-2. 開発フロー（`.flow-row`）の幅ルール
@@ -320,7 +320,7 @@ type MainFigure =
 ### 4-3. PDF 生成（書籍化）
 
 - Paged.js で見開きレイアウト
-- `@page { size: 150mm 212mm; }`（A 系 √2 準拠、750×1061px の実寸近似）
+- 想定 `@page { size: 150mm 212mm; }`（A 系 √2 準拠、750×1061px の実寸近似）。preview 段階では `@page 199mm 281mm` ＋ `overlay-tight.css`（W 案）で 750×1061px を維持しているため、Paged.js 側では (a) `overlay-tight.css` のルールを正式化して 150×212mm にスケール、または (b) 別の縮小戦略を採用、を実装担当が選択する
 - ノド非対称 margin を `@page :left` / `@page :right` で制御
 - PDF/X-1a 出力は印刷所に依存（次の段階で検討）
 

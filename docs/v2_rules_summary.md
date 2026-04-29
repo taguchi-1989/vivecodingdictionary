@@ -196,7 +196,23 @@
 
 ## 4. ビジュアル・トークン（CSS 側の確定値）
 
-ページ寸法: 750 × **1061 px**（ISO A/B 系 √2 準拠）
+ページ寸法: 750 × **1061 px**（ISO A/B 系 √2 準拠、≒ 199 × 281mm）
+
+> **2026-04-28 W 案**: 一時的に実描画が 750 × 1424 px（1:1.90、A 系から外れる）まで
+> 膨らんでいたため、（i）iter 22 のポンチ絵スロット拡大（150→340px）を取り下げて
+> 旧サイズ（min-height 150 / icon 96）に戻し、（ii）preview 専用の圧縮レイヤー
+> [overlay-tight.css](../drafts/prototypes/mockups/design_philosophy_v2/overlay-tight.css)
+> を追加して、構造図とポンチ絵の枠線融合・6 視点グリッドの圧縮・各種余白の削減で
+> 本来の **750 × 1061 px（≒ 199×281mm、A 系 √2）に再収束**させました。
+>
+> preview の PDF 出力は `@page 199mm 281mm` 固定。`scripts/preview_to_pdf.py` での
+> 自動検査では active 15 件中 14 件が左右ページとも 1062 × 1062 px ぴったりに収まり、
+> 残り 1 件（E-1）は左ページ +43px 残（overflow: hidden で印刷上は切られる）。
+>
+> 重要: 圧縮レイヤー（overlay-tight.css）は **preview のみで適用**。本番
+> （typescript_spread.html や Astro 移行後の React コンポーネント）には影響しません。
+> 実装担当は Paged.js でレンダリングする際、overlay-tight.css のルールを正式版に
+> 組み込むか、別の縮小戦略を取るかを再検討してください。
 
 ### カラー
 
@@ -267,6 +283,7 @@
 | 左ページ下段「関連用語」ピル | **右ページ下段（開発フローの下）**へ移動（iter 22） | 2026-04-25 |
 | 擬人化ポンチ絵スロット（min-height 150px / アイコン円 96px） | **メインビジュアル化**（min-height 340px / アイコン円 200px）（iter 22） | 2026-04-25 |
 | （新規）`## 会話での使い方例` | **追加**（左ページ末尾・下チロム右スロットに印字、30〜40 字 1 文） | 2026-04-26 |
+| iter 22 の擬人化ポンチ絵拡大（min-height 340 / icon 200） | **取り下げて旧サイズに戻す**（min-height 150 / icon 96）。あわせて preview 専用の `overlay-tight.css`（構造図とポンチ絵の枠線融合・6 視点グリッド圧縮・各種余白削減）を新設し、ページ寸法 750×1061px（A 系 √2）を維持する W 案を採用 | 2026-04-28 |
 
 右ページサブタイトル「定義だけでなく、役割・つまずき・実務上の意味をセットで見ると…」は**各エントリから削除**（iter 8）。`A-2 この本の読み方` に集約。
 
@@ -303,13 +320,15 @@ python drafts/prototypes/mockups/design_philosophy_v2/check_entry.py --dir conte
 
 詳細は [book_readiness_review.md](../drafts/prototypes/mockups/design_philosophy_v2/book_readiness_review.md)。要点のみ:
 
-- ✅ 縦横比 1:1.4142（ISO A 系）準拠
+- ✅ 縦横比 1:1.4142（ISO A 系 √2）準拠（W 案で復帰、preview は overlay-tight.css 併用で確認）
 - ✅ ノド非対称 margin
 - ☐ bleed 3〜5mm（印刷用 PDF 生成時）
 - ☐ CMYK 色校正（実刷り前必須）
 - ☐ 実イラスト／写真の差し込み（ポンチ絵スロット・擬人化）
 - ☐ 章ごとの視覚的変化点（335 entry 同型の単調さ緩和）
 - ☐ フォント埋め込み確認（SIL OFL の Zen Maru Gothic）
+- ☐ E-1 SWE-Bench の左ページ +43px 残（次回の本文圧縮 or overlay-tight.css 微調整で解消）
+- ☐ overlay-tight.css の本番組み込み判断（preview の縮小ルールを Paged.js 側でどう扱うか）
 
 ---
 

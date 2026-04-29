@@ -323,7 +323,7 @@
 | Before/After 箱内 padding | 14/16 | iter 2 |
 | フローステップ | padding 16/12, min-height 110 | iter 2 |
 | ページ body padding | 40/44/100（ノド非対称あり） | iter 2, 16 |
-| 縦横比 | 750×1061（√2、ISO A/B系） | iter 16 |
+| 縦横比 | 750×1061（√2、ISO A/B 系）。2026-04-28 に一時 1424px に膨らむ問題が表面化したが、ポンチ絵 rollback ＋ preview 専用 `overlay-tight.css`（W 案）で本来寸法に再収束 | iter 16, 2026-04-28 |
 | ノド margin | 左ページは右 +14、右ページは左 +14 | iter 16 |
 | 擬人化ポンチ絵スロット | 左ページ、青 dashed 枠 placeholder | iter 16 |
 | 「最初に理解する範囲」→ | 「はじめに」 | iter 6 |
