@@ -18,7 +18,7 @@ related_terms:
   - Claude
   - Gemini
   - Custom GPT
-status: drafting
+status: needs_review
 ---
 
 # ChatGPT

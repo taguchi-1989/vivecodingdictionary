@@ -511,6 +511,39 @@ def should_validate(path: Path) -> bool:
     return bool(re.search(r"(^|/)content/entries/[^/]+/[^/]+\.md$", posix))
 
 
+def promote_to_needs_review(path: Path) -> bool:
+    """drafting → needs_review に YAML を直接書き換える。
+
+    - validator の全チェックがパスしたエントリのみで呼ばれる
+    - YAML frontmatter 内の `status: drafting` だけを置換（本文・コメントは触らない）
+    - Python の直接書き込みなので Edit/Write フックは再発火しない（ループしない）
+    """
+    try:
+        text = path.read_text(encoding="utf-8")
+    except Exception:
+        return False
+    if not text.startswith("---\n"):
+        return False
+    end = text.find("\n---\n", 4)
+    if end == -1:
+        return False
+    fm_text = text[4:end]
+    rest = text[end:]
+    new_fm = re.sub(
+        r"^status:\s*drafting\s*$",
+        "status: needs_review",
+        fm_text,
+        flags=re.MULTILINE,
+    )
+    if new_fm == fm_text:
+        return False
+    try:
+        path.write_text("---\n" + new_fm + rest, encoding="utf-8")
+    except Exception:
+        return False
+    return True
+
+
 def main() -> int:
     path = resolve_path_from_stdin_or_argv()
     if path is None:
@@ -546,8 +579,15 @@ def main() -> int:
     check_tone(body, r)
     check_sources_date(body, fm, r)
 
+    # 自動昇格ゲート：drafting + ☆違反0 + 警告0 のときだけ needs_review に上げる
+    promoted = False
+    if status == "drafting" and not r.star_fails and not r.warnings:
+        promoted = promote_to_needs_review(path)
+
     # 出力：☆ 違反は stderr（Claude に見せる）、警告は stdout
     rendered = r.render()
+    if promoted:
+        rendered += "\n### 🆙 自動昇格\n\n- status: `drafting` → `needs_review`（全チェックパスのため）\n"
     if r.star_fails:
         print(rendered, file=sys.stderr)
     else:

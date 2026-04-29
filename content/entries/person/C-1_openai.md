@@ -17,7 +17,7 @@ related_terms:
   - DALL·E
   - Sora
   - Sam Altman
-status: drafting
+status: needs_review
 ---
 
 # OpenAI
