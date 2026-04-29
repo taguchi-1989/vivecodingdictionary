@@ -1,69 +1,67 @@
 ---
 id: B-4
 title: Cursor
+title_reading: カーソル
 category: service
 subtype: ai_assistant
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: partial
+reader_level: "2-3"
+figure_type: before_after
 page_layout: spread_v1
-start_date:
+start_date: 2023-01-01
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: freemium
+evaluation_date: 2026-04-29
+related_terms:
+  - VS Code
+  - GitHub Copilot
+  - Composer
+  - バイブコーディング
+  - Tab 補完
+status: needs_review
 ---
 
 # Cursor
 
 <!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
+バイブコーディング図鑑 エントリー v2（spread_v1 準拠）
 -->
 
 ## tagline
 
-AI を中核にしたエディタ／IDE サービス
-
+VS Code をフォークした AI 常駐エディタです。チャット・補完・マルチファイル編集を 1 つの画面に統合しています。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+コードを書く・チャットする・次の行を先読みする 3 つの AI 操作を 1 画面でこなします。Cmd-K でインライン生成、Cmd-L でチャット、Tab で補完受け入れが基本セットです。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+「エディタ自体に AI を入れてしまおう」という発想で登場したサービスです。GitHub Copilot（コパイロット）との比較記事や、バイブコーディングの入門記事でよく名前が出てきます。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+VS Code 単体で手打ちしていた状態と、Cursor で AI が常駐した状態を対比し、同じエディタ環境で何が変わるかを示します。
 
+### A. Before / After（figure_type: before_after）
+
+- Before
+  - 状況: VS Code 単体で作業。AI は外部タブで別に開く
+  - 視覚要素（コード or 概念）: エディタウィンドウ横に別ブラウザタブで ChatGPT を開いた図
+  - つまずき: コードとチャットを行き来するたびにコピーペーストが発生する
+- After
+  - 状況: Cursor でエディタ内に AI が常駐。Tab で補完、Cmd-L でチャット、Cmd-K でインライン編集
+  - 視覚要素: 同じウィンドウ内にサイドチャットとインライン提案が同居する図
+  - うれしさ: コードを離れずに AI と対話でき、編集・確認がその場で完結します
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Cursor の Composer でマルチファイルをまとめて直してもらったら早かったです。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,54 +70,46 @@ AI を中核にしたエディタ／IDE サービス
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI 補完・チャット・インライン編集を統合したコードエディタです。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+エディタを離れずに AI と往復でき、コピペの手間がなくなります。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+無料枠には月あたりの使用上限があり、超過すると有料プランが必要です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+コードの新規生成より、既存ファイルの修正・リファクタリング場面で効果が出やすいです。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+cursor.com からインストールし、既存の VS Code 設定を引き継いで起動できる段階。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Composer（D-35）、VS Code（F-30）、GitHub Copilot（B-5）
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. インストール — cursor.com から入手し、VS Code 設定を引き継いで起動します
+2. Cmd-K で生成 — 選択範囲にその場でコードを書いてもらいます
+3. Cmd-L でチャット — ファイルを参照して修正方針を確認します
+4. Tab で補完 — 次行の続きを Tab で受け入れて進めます
+5. Composer で横断編集 — 複数ファイルの変更を一括指示します
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- VS Code
+- GitHub Copilot
+- Composer
+- バイブコーディング
+- Tab 補完
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
@@ -141,12 +131,13 @@ AI を中核にしたエディタ／IDE サービス
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: before_after）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左半分（Before）にエディタ画面とブラウザタブが並ぶ様子、右半分（After）に Cursor のエディタ内チャットとインライン提案が同居する様子を横並びで対比する
+- 登場人物: 開発者（PC の前に座り、2 つの画面を行き来して困り顔）→ Cursor 導入後は同じ人物が 1 画面に集中してスムーズな表情
+- 吹き出し・心の声: Before「またコピペして貼り直しか…」 / After「そのままここで頼める！」
+- 中央に置くキーワード/ラベル: Before = 「エディタ ＋ 外部 AI」 / After = 「Cursor（統合）」
+- Before / After の対比ポイント: 画面の切り替え回数・コピペの有無
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +145,26 @@ AI を中核にしたエディタ／IDE サービス
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: ダウンロード矢印 — インストール
+- Step 2 のアイコン/絵柄: 稲妻マーク — Cmd-K インライン生成
+- Step 3 のアイコン/絵柄: チャット吹き出し — Cmd-L サイドチャット
+- Step 4 のアイコン/絵柄: Tab キーアイコン — Tab 補完
+- Step 5 のアイコン/絵柄: 複数ファイルアイコン — Composer 横断編集
+- 矢印で示す流れの意図: インストール → コード生成 → チャット → 補完 → 横断編集という使い込む順を示す
 
 
 ## コミュニティ補完メモ
 
+- VS Code（F-30）との住み分け：Cursor は VS Code をフォークしたサービスの説明。VS Code 自体の機能・拡張・エコシステムは F-30 で扱います
+- GitHub Copilot（B-5）との住み分け：Copilot は既存エディタへの追加拡張。Cursor はエディタ自体が AI 統合済みという違いを本文では触れるにとどめ、詳細比較は B-5 側で扱います
+- Composer / cursor-tab-3 等の独自モデル・機能詳細は D-35 へ。本エントリはサービスとしての Cursor（画面・操作感・入口）にとどめます
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- cursor.com — checked 2026-04-29
+- cursor.com/features — checked 2026-04-29
 
 ## 備考
+
+- 料金プランは Hobby（無料）/ Pro（月 $20 前後）/ Business の 3 段構成が基本ですが変動があるため本文には入れず、evaluation_date で管理します
+- 「AI エディタ」カテゴリは競合（Windsurf 等）が多く時変性が高いため、サービスの本質的な仕組み（VS Code フォーク × AI 統合）を中心に書き、具体的な機能名や料金の言及は最小限にしています

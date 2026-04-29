@@ -1,69 +1,68 @@
 ---
 id: B-5
 title: GitHub Copilot
+title_reading: ギットハブ コパイロット
 category: service
 subtype: ai_assistant
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: partial
+reader_level: "2-3"
+figure_type: before_after
 page_layout: spread_v1
-start_date:
+start_date: 2021-10-29
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: freemium
+evaluation_date: 2026-04-29
+related_terms:
+  - VS Code
+  - Cursor
+  - Tab 補完
+  - GitHub
+status: needs_review
 ---
 
 # GitHub Copilot
 
 <!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
+バイブコーディング図鑑 エントリー v2（spread_v1 準拠）
 -->
 
 ## tagline
 
-GitHub × OpenAI のコード補完
+今使っているエディタに追加する AI コード補完拡張です。Tab を押すだけで次の行を先読みします。
 
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+コードの続きをリアルタイムで提案し、Tab キー 1 つで受け入れられます。関数名・コメント・テスト・ドキュメントまで幅広く補完し、書く量を減らします。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+VS Code（ブイエスコード）や JetBrains（ジェットブレインズ）などの既存エディタに拡張として追加して使います。GitHub（ギットハブ）アカウントでサインインするのが前提で、個人向けの無料枠もあります。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+Copilot なしで手打ちしていた状態と、Copilot が提案を出している状態を対比して、「追加するだけで補完が手に入る」ことを示します。
+
+### A. Before / After（figure_type: before_after）
+
+- Before
+  - 状況: エディタ単体で 1 行ずつ手打ち
+  - 視覚要素（コード or 概念）: カーソルが止まった空白行
+  - つまずき: 関数の骨格を毎回ゼロから書く手間がかかる
+- After
+  - 状況: Copilot 拡張を追加した同じエディタで作業
+  - 視覚要素: グレーのゴースト文字で次行の提案が表示されている
+  - うれしさ: Tab を押すだけで続きが入り、思考の流れを止めずに進めます
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Copilot が入ってれば Tab で補完できるので、骨格は秒で出ますよ。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,54 +71,46 @@ GitHub × OpenAI のコード補完
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+既存エディタに後付けで AI 補完を追加する拡張です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+エディタを替えずに Tab 補完が使え、書く量が減ります。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+GitHub アカウントが必要で、無料枠は月あたりの補完数に上限があります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+定型コードや繰り返しパターンが多い場面で提案精度が上がります。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+VS Code に Copilot 拡張を入れ、Tab で補完を受け入れてみる段階です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
+Cursor（B-4）、VS Code（F-30）、GitHub（F-60）
 
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. 拡張を追加 — VS Code の拡張マーケットから GitHub Copilot をインストールします
+2. ログイン — GitHub アカウントでサインインし、補完を有効にします
+3. コードを書く — 関数名やコメントを書くと次行の提案がグレーで表示されます
+4. Tab で受け入れ — 提案が適切なら Tab を押してコードに取り込みます
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- VS Code
+- Cursor
+- Tab 補完
+- GitHub
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
@@ -141,12 +132,13 @@ GitHub × OpenAI のコード補完
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: before_after）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左半分（Before）に手打ちで止まった開発者、右半分（After）に同じエディタでグレーの補完提案が表示されている様子を対比
+- 登場人物: 開発者（PC の前に座り、画面のカーソルで手が止まっている）→ After では Tab キーを押そうとしている同じ人物
+- 吹き出し・心の声: Before「また同じ骨格を書くのか…」 / After「Tab 押すだけで入った！」
+- 中央に置くキーワード/ラベル: Before = 「手打ち」 / After = 「Copilot 補完」
+- Before / After の対比ポイント: 手が止まる回数・Tab 一押しでの受け入れ
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +146,25 @@ GitHub × OpenAI のコード補完
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: パズルピース — 拡張追加
+- Step 2 のアイコン/絵柄: 鍵マーク — GitHub ログイン
+- Step 3 のアイコン/絵柄: 鉛筆＋点線 — 補完提案表示
+- Step 4 のアイコン/絵柄: Tab キー — 受け入れ
+- 矢印で示す流れの意図: 準備（拡張＋ログイン）→ 実際の補完サイクル（提案→受け入れ）を示す
 
 
 ## コミュニティ補完メモ
 
+- Cursor（B-4）との住み分け：Copilot は「既存エディタへの追加拡張」。Cursor は「エディタ自体が AI 統合済み」。どちらも Tab 補完を持つが入手経路が違う点を本文で触れました
+- GitHub 本体（F-60）との住み分け：GitHub のリポジトリ管理・CI/CD 機能は F-60 で扱います。本エントリは Copilot サービス（補完機能）のみです
+- Copilot Chat・Agent モードなどの派生機能は本エントリのスコープ外です。拡充が続いているため evaluation_date で管理します
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- https://github.com/features/copilot — checked 2026-04-29
 
 ## 備考
+
+- 料金：個人向け Free（月 2,000 補完まで）/ Pro（月 $10）/ Pro+（月 $19）/ Business・Enterprise の多段プランがあり時変性が高いため、本文では触れず evaluation_date で管理します
+- 2021-10 に GitHub Next のプレビュー公開、2022-06 に GA（一般提供開始）。本エントリは現行サービスとしての機能説明を主眼とし、歴史は最小限です
+- Microsoft（マイクロソフト）が GitHub を所有しており、OpenAI との連携で GPT 系モデルを補完に使っています。モデル詳細は本エントリのスコープ外です
