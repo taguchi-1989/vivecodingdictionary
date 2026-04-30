@@ -1,69 +1,57 @@
 ---
 id: A-4
 title: 体験区分の凡例
+title_reading:
 category: common
 subtype: meta
-experience_level:
-reader_level:
+experience_level: hands_on
+reader_level: 1
 figure_type: structure
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-30
+related_terms:
+  - まえがき
+  - 図鑑の歩き方
+  - 読者レベルの凡例
+  - 評価日・時変情報の見方
+status: drafting
 ---
 
 # 体験区分の凡例
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
+<!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## tagline
 
-hands_on / partial / research_only
-
-
-<!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
+著者がその用語をどこまで実際に触ったかを示す 3 段階の印です。
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+各エントリのタイトル横に ●／◐／○ の記号で表示し、著者の手触り感の深さを即座に伝えます。●（hands_on）は業務や個人で動かした経験あり、◐（partial）は一部触れた程度、○（research_only）は公開情報のみを示します。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+本書のどのページを開いても、タイトル付近に体験区分の記号が見えます。「この項目、著者は実際に使ったの？」と気になったときに確認する目印です。エントリの YAML フロントマターでは `experience_level` という名前で管理しています。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+3 段階の記号と意味を一覧で示し、読者が凡例を即参照できるようにします。
 
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: 体験区分 3 値
+- 周辺の要素: ● hands_on / ◐ partial / ○ research_only の各説明
+- 関係の描き方: 縦 3 段の表形式、各行に記号・名称・意味を並列表示
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「●（hands_on）のついた項目は実体験ベース、○（research_only）は二次情報中心と読み分けています。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +60,41 @@ hands_on / partial / research_only
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+著者の実体験の深さを記号で可視化する凡例です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+記述の信頼感を読者が自分で判断しやすくなります。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+research_only は信頼性の低さではなく手触り感のなさを意味します。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+情報鮮度が気になる項目を素早く見分けたい場面に役立ちます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+3 記号の意味だけ覚えれば使えます。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+読者レベルの凡例、評価日・時変情報の見方
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. 本書を開く — エントリのタイトル横の記号に気づく
+2. 記号を確認 — ●／◐／○ で著者の体験深度を把握する
+3. 記述を読む — 体験深度を念頭に情報を受け取る
+4. 深掘りする — research_only の項目は一次情報も確認する
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- まえがき
+- 図鑑の歩き方
+- 読者レベルの凡例
+- 評価日・時変情報の見方
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,17 +102,17 @@ hands_on / partial / research_only
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,10 +121,10 @@ hands_on / partial / research_only
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 体験区分 3 段階を縦に並べた一覧表。各行に記号・英名・日本語説明・例を配置
+- 登場人物: 読者（1 名）が表を指差している
+- 吹き出し・心の声: 「○ か… じゃあ二次情報か。一次も確認しよう」
+- 中央に置くキーワード/ラベル: ● hands_on / ◐ partial / ○ research_only
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +132,23 @@ hands_on / partial / research_only
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 本を開くアイコン
+- Step 2 のアイコン/絵柄: 記号（●◐○）のアイコン
+- Step 3 のアイコン/絵柄: 読書アイコン
+- Step 4 のアイコン/絵柄: 虫めがねアイコン
+- 矢印で示す流れの意図: 本を開く → 記号を見る → 読む → 必要なら一次情報へ
 
 
 ## コミュニティ補完メモ
 
+- A-5 読者レベルの凡例との住み分け：A-4 は「著者側の体験深度」、A-5 は「読者側の前提知識レベル」を示す別軸の指標。混同しやすいので凡例ページで並べて掲載するとよい
+- A-6 評価日・時変情報の見方との関係：research_only の項目は evaluation_date が古い場合に特に注意が必要なため、A-6 と合わせて参照を促す
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- 本書内部仕様 — checked 2026-04-30
 
 ## 備考
+
+- experience_level フィールドの 3 値は本書固有の凡例であり、外部標準ではない
+- ○（research_only）は著者の手触り感の欠如を示すものであり、参照元文献の品質や信頼性とは別の軸

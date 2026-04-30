@@ -1,69 +1,59 @@
 ---
 id: J-93
 title: Ubuntu
+title_reading: ウブントゥ
 category: term_general
 subtype: ui_os
-experience_level:
-reader_level:
+experience_level: hands_on
+reader_level: 2-4
 figure_type: structure
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2004-10-20
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-30
+related_terms:
+  - Linux
+  - WSL
+  - bash
+  - GPL
+status: drafting
 ---
 
-# Ubuntu
-
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
+<!-- バイブコーディング図鑑 エントリー v2（spread_v1） -->
 
 ## tagline
 
-Linux ディストリビューションの代表例
+Canonical 社が開発する Debian（デビアン）系 Linux（リナックス）ディストリビューションです。
 
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+Ubuntu は無償で使える Linux OS（オペレーティングシステム）の一つで、Canonical 社が 2 年ごとに LTS（Long Term Support、長期サポート）版を提供します。通常版は 6 ヶ月ごとに更新され、安定運用なら LTS 版、新機能を試すなら通常版と選び分けられます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+WSL（Windows Subsystem for Linux）を Windows に導入すると、初期ディストリビューションとして Ubuntu が選ばれます。AWS・GCP・Azure のクラウド仮想マシンのデフォルト選択肢としても登場し、Claude Code や Cursor の Linux 動作確認にも使われます。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+Ubuntu が「手元 PC・クラウド・WSL」という 3 つの場面でどう顔を出すかを示します。
+
+### B. 登場シーン（figure_type: structure）
+
+- シーン1: 開発者の手元 PC に直接インストールして Linux 環境として利用する
+- シーン2: WSL 経由で Windows 上に Linux 環境を立ち上げる際の初期ディストリビューションとして登場する
+- シーン3: AWS / GCP / Azure でクラウド仮想マシンを作成する際のデフォルト OS として選ばれる
+- 並べる基準: 読者が Ubuntu の名を見かける場所（エディタ・ターミナル・クラウドコンソール）を入口に並列
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「WSL のデフォルト Ubuntu に Claude Code を入れると、bash 系チュートリアルがそのまま動きます。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,69 +62,61 @@ Linux ディストリビューションの代表例
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Debian 系 Linux をエンドユーザーにも使いやすい形で提供する OS です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+クラウド・WSL・手元 PC で同じ操作体験が得られます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+LTS 版と通常版で EOL（サポート終了）時期が大きく異なります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI ツールのサーバサイドや WSL 開発環境の基盤として使われます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+通常版と LTS 版の違い、バージョン番号の読み方を押さえると迷いが減ります。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Linux、WSL、bash
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. 環境選定 — Windows なら WSL、クラウドなら仮想マシン OS として Ubuntu を選ぶ
+2. インストール — LTS 版か通常版かをバージョン番号（例: 24.04 LTS）で確認して導入する
+3. 初期設定 — apt（エーピーティー）でパッケージを更新し、開発ツールを揃える
+4. ツール導入 — Claude Code・Cursor などの AI ツールを Linux 向け手順でインストールする
+5. 動作確認 — bash でチュートリアルを流し、環境が正しく動くか確かめる
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- Linux
+- WSL
+- bash
+- GPL
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,31 +125,37 @@ Linux ディストリビューションの代表例
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 中央に Ubuntu ロゴ／名前を置き、三方向の矢印で「手元 PC」「WSL（Windows）」「クラウド仮想マシン」の 3 シーンを配置する
+- 登場人物（いれば）: 開発者 1 名がノート PC と向き合う姿（右下隅）
+- 吹き出し・心の声: 「どこでも同じ apt コマンドで揃う」
+- 中央に置くキーワード/ラベル: Ubuntu
+- Before / After の場合の対比ポイント: なし（登場シーン型）
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
 - 共通アイコン流用（個別演出が要るときだけ書き足す）
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: 選択肢カード（Windows / Cloud / PC）
+- Step 2 のアイコン/絵柄: ダウンロード矢印＋バージョン番号ラベル
+- Step 3 のアイコン/絵柄: ターミナル画面＋ apt コマンド
+- Step 4 のアイコン/絵柄: AI ツールのアイコン群
+- 矢印で示す流れの意図: 環境選定から動作確認まで一直線に進む様子
 
 ## コミュニティ補完メモ
 
+- J-92 Linux との住み分け：Linux はカーネル／OS ファミリー全体の概念エントリ。Ubuntu は Linux の具体ディストリビューションとして、実際に使う場面での顔を担う。重複説明は避け、Ubuntu 側では「なぜ Ubuntu が選ばれるか」「LTS 版と通常版の選び方」に絞る。
+- F-82 WSL との住み分け：WSL は Windows 上で Linux を動かす仕組みのエントリ。Ubuntu 側では「WSL の初期ディストリビューションとして登場する」という一言にとどめ、仕組みの説明は WSL エントリに譲る。
+- バリエーション（Kubuntu / Xubuntu / Pop!_OS）は本文に入れると字数が膨れるため、備考に記載。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- Ubuntu 公式サイト <https://ubuntu.com/about> — checked 2026-04-30
+- Canonical 社公式リリースノート <https://wiki.ubuntu.com/Releases> — checked 2026-04-30
 
 ## 備考
+
+- Ubuntu のバージョン番号は「YY.MM」形式（例: 24.04 = 2024 年 4 月リリース）。末尾が「.04」の年の LTS が安定版の目印。
+- バリエーション：Kubuntu（KDE デスクトップ）/ Xubuntu（軽量 XFCE）/ Pop!_OS（Ubuntu 派生、ゲーム・GPU 寄り）など派生ディストリビューションが存在する。これらは本文のスコープ外として備考に記録。
+- Canonical 社（カノニカル）はイギリス企業。創業者 Mark Shuttleworth（マーク・シャトルワース）は南アフリカ出身の実業家で、「人類のための OS」を掲げて Ubuntu を公開した（2004 年 10 月）。
