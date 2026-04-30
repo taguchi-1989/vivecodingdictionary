@@ -1,0 +1,125 @@
+:root {
+  --paper: #fbfcff;
+  --ink: #111827;
+  --navy: #123e82;
+  --blue: #2f7be6;
+  --pale: #d6e4f8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #dfe6f0;
+  color: var(--ink);
+  font-family: "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+
+.stage {
+  padding: 32px;
+}
+
+.cover {
+  position: relative;
+  width: min(72vw, 760px);
+  aspect-ratio: 1 / 1.4142;
+  overflow: hidden;
+  padding: 46px 56px 48px;
+  background:
+    linear-gradient(160deg, rgba(255,255,255,.99), rgba(244,249,255,.9) 62%, rgba(255,255,255,.99)),
+    var(--paper);
+  box-shadow:
+    0 34px 90px rgba(18, 62, 130, .22),
+    0 7px 20px rgba(17, 24, 39, .1);
+}
+
+.cover::before {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  border: 1px solid rgba(18, 62, 130, .2);
+  pointer-events: none;
+}
+
+.cover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 126px;
+  background: linear-gradient(95deg, #0f326f, #1857b4 48%, #2f7be6);
+  pointer-events: none;
+}
+
+.blurb {
+  position: absolute;
+  z-index: 2;
+  left: 56px;
+  right: 56px;
+  top: 272px;
+  max-width: 620px;
+}
+
+.lead {
+  margin: 0;
+  color: var(--navy);
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.18;
+  letter-spacing: 0;
+}
+
+.bottom {
+  position: absolute;
+  z-index: 2;
+  left: 56px;
+  right: 56px;
+  bottom: 26px;
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+  color: white;
+}
+
+.barcode {
+  width: 112px;
+  height: 72px;
+  border-radius: 3px;
+  background:
+    repeating-linear-gradient(90deg, #111 0 2px, #fff 2px 5px, #111 5px 6px, #fff 6px 10px),
+    #fff;
+  border: 8px solid #fff;
+  opacity: .92;
+}
+
+@media (max-width: 760px) {
+  .stage {
+    padding: 12px;
+  }
+
+  .cover {
+    width: calc(100vw - 24px);
+    padding: 34px;
+  }
+
+  .blurb {
+    left: 34px;
+    right: 34px;
+    top: 212px;
+  }
+
+  .lead {
+    font-size: 32px;
+  }
+
+  .bottom {
+    left: 34px;
+    right: 34px;
+  }
+}

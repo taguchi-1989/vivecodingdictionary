@@ -1,0 +1,299 @@
+:root {
+  --paper: #fbfcff;
+  --ink: #111827;
+  --navy: #123e82;
+  --blue: #2f7be6;
+  --pale: #d6e4f8;
+  --silver-a: #ffffff;
+  --silver-b: #d5e0ee;
+  --silver-c: #8ea6c4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #dfe6f0;
+  color: var(--ink);
+  font-family: "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+
+.stage {
+  padding: 32px;
+}
+
+.cover {
+  position: relative;
+  width: min(72vw, 760px);
+  aspect-ratio: 1 / 1.4142;
+  overflow: hidden;
+  background:
+    linear-gradient(160deg, rgba(255,255,255,.99), rgba(244,249,255,.9) 62%, rgba(255,255,255,.99)),
+    var(--paper);
+  box-shadow:
+    0 34px 90px rgba(18, 62, 130, .26),
+    0 7px 20px rgba(17, 24, 39, .12);
+}
+
+.cover::before {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  border: 1px solid rgba(18, 62, 130, .22);
+  pointer-events: none;
+  z-index: 4;
+}
+
+.cover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 28px;
+  background:
+    linear-gradient(90deg, transparent, rgba(18,62,130,.09)),
+    linear-gradient(180deg, rgba(255,255,255,.74), rgba(214,228,248,.46), rgba(255,255,255,.84));
+  pointer-events: none;
+}
+
+.paper-gloss {
+  position: absolute;
+  inset: -18%;
+  background:
+    linear-gradient(112deg, transparent 0 26%, rgba(255,255,255,.82) 34%, rgba(202,222,246,.22) 39%, transparent 49%),
+    radial-gradient(ellipse at 82% 14%, rgba(255,255,255,.88), transparent 18%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.promise {
+  position: absolute;
+  top: 38px;
+  left: 56px;
+  right: 56px;
+  width: fit-content;
+  padding: 8px 12px;
+  border: 1px solid rgba(18, 62, 130, .24);
+  color: var(--navy);
+  background: rgba(255, 255, 255, .72);
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1;
+  z-index: 5;
+}
+
+.title-block {
+  position: absolute;
+  top: 116px;
+  left: 56px;
+  right: 56px;
+  z-index: 5;
+}
+
+h1 {
+  margin: 0;
+  color: var(--navy);
+  font-family: Arial, "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+h1 .title-line {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+h1 em,
+h1 strong {
+  display: inline-block;
+  font-size: clamp(68px, 9.1vw, 100px);
+  line-height: .95;
+  font-style: normal;
+  white-space: nowrap;
+}
+
+h1 strong {
+  font-weight: 900;
+  padding-right: 10px;
+  background:
+    linear-gradient(
+      100deg,
+      #123e82 0%,
+      #123e82 37%,
+      var(--silver-a) 45%,
+      var(--silver-b) 51%,
+      var(--silver-c) 56%,
+      #123e82 66%,
+      #123e82 100%
+    );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: .8px rgba(18, 62, 130, .7);
+  filter:
+    drop-shadow(0 2px 0 rgba(255,255,255,.95))
+    drop-shadow(0 14px 18px rgba(18,62,130,.15));
+}
+
+.reading {
+  margin: 12px 0 0 4px;
+  color: rgba(18, 62, 130, .58);
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+
+.subtitle {
+  position: absolute;
+  top: 316px;
+  left: 56px;
+  right: 56px;
+  margin: 0;
+  padding: 14px 18px;
+  border-left: 6px solid var(--blue);
+  background:
+    linear-gradient(135deg, rgba(214,228,248,.82), rgba(255,255,255,.88));
+  color: #111827;
+  box-shadow:
+    0 12px 30px rgba(18,62,130,.1),
+    inset 0 1px 0 rgba(255,255,255,.88);
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.45;
+  z-index: 5;
+}
+
+.cover-art {
+  position: absolute;
+  left: 50%;
+  bottom: 198px;
+  width: 66%;
+  transform: translateX(-50%);
+  opacity: .82;
+  filter:
+    grayscale(.06)
+    saturate(.9)
+    contrast(.98)
+    drop-shadow(0 14px 18px rgba(18,62,130,.08));
+  z-index: 2;
+}
+
+.obi {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 64px;
+  padding: 20px 56px;
+  background:
+    linear-gradient(95deg, #0f326f, #1857b4 45%, #2f7be6 78%);
+  color: white;
+  box-shadow:
+    0 -14px 30px rgba(18,62,130,.16),
+    inset 0 1px 0 rgba(255,255,255,.28);
+  z-index: 5;
+}
+
+.obi::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(112deg, transparent 0 24%, rgba(255,255,255,.3) 38%, transparent 54%);
+  pointer-events: none;
+}
+
+.obi p {
+  position: relative;
+  margin: 0;
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 1.3;
+  text-shadow: 0 1px 8px rgba(0,0,0,.15);
+}
+
+.footer {
+  position: absolute;
+  left: 56px;
+  right: 56px;
+  bottom: 28px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 18px;
+  color: rgba(18,62,130,.72);
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  z-index: 5;
+}
+
+@media (max-width: 760px) {
+  .stage {
+    padding: 12px;
+  }
+
+  .cover {
+    width: calc(100vw - 24px);
+  }
+
+  .promise,
+  .title-block,
+  .subtitle,
+  .footer {
+    left: 34px;
+    right: 34px;
+  }
+
+  .promise {
+    font-size: 13px;
+  }
+
+  .title-block {
+    top: 92px;
+  }
+
+  h1 em,
+  h1 strong {
+    font-size: clamp(46px, 11.7vw, 64px);
+  }
+
+  h1 .title-line {
+    gap: 9px;
+  }
+
+  .reading {
+    font-size: 13px;
+  }
+
+  .subtitle {
+    top: 252px;
+    font-size: 16px;
+  }
+
+  .cover-art {
+    bottom: 166px;
+    width: 78%;
+  }
+
+  .obi {
+    padding-inline: 34px;
+  }
+
+  .obi p {
+    font-size: 17px;
+  }
+
+  .footer {
+    font-size: 9px;
+  }
+}
