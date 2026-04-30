@@ -75,19 +75,19 @@ C-57,,Geoffrey Hinton,person_org,person,drafting,,content/entries/person/C-57_ge
 C-58,,Elon Musk,person_org,person,drafting,,content/entries/person/C-58_elon_musk.md
 C-59,,Jensen Huang,person_org,person,drafting,,content/entries/person/C-59_jensen_huang.md
 C-60,,Ray Kurzweil,person_org,person,needs_review,,content/entries/person/C-60_ray_kurzweil.md
-C-80,,AI大学,person_org,youtuber,skeleton,,content/entries/person/C-80.md
-C-81,,にゃんた,person_org,youtuber,skeleton,,content/entries/person/C-81.md
+C-80,,AI大学,person_org,youtuber,drafting,,content/entries/person/C-80.md
+C-81,,にゃんた,person_org,youtuber,drafting,v2テンプレ書き起こし済（2026-04-30）。旧スケルトン C-81.md は archived,content/entries/person/C-81_nyanta.md
 C-82,,まさお,person_org,youtuber,skeleton,,content/entries/person/C-82.md
-C-83,,AIの羅針盤,person_org,youtuber,skeleton,,content/entries/person/C-83.md
+C-83,,AI の羅針盤,person_org,youtuber,drafting,,content/entries/person/C-83.md
 D-1,,Gemini 2 系,model,google,drafting,v2テンプレで D-1_gemini2.md に書き起こし済（2026-04-29）。旧D-1.md は archived,content/entries/model/D-1_gemini2.md
 D-2,201,Gemini 2.5 系,model,google,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/model/D-2_gemini25.md
-D-3,,Gemini 3 系,model,google,skeleton,,content/entries/model/D-3.md
-D-4,,Gemini 3.1 系,model,google,skeleton,,content/entries/model/D-4.md
+D-3,,Gemini 3 系,model,google,drafting,v2テンプレ本書き済（2026-04-30）,content/entries/model/D-3.md
+D-4,,Gemini 3.1 系,model,google,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/model/D-4_gemini_3_1.md
 D-10,,Claude 3 系,model,anthropic,skeleton,,content/entries/model/D-10.md
 D-11,,Claude 3.5 系,model,anthropic,candidate,,content/entries/model/D-11_claude35.md
 D-12,,Claude 4 系,model,anthropic,needs_review,,content/entries/model/D-12_claude4.md
 D-13,,Claude 4.5 系,model,anthropic,skeleton,,content/entries/model/D-13.md
-D-14,,Claude Mitos モデル,model,anthropic,skeleton,要確認: 正式名称,content/entries/model/D-14.md
+D-14,,Claude Mythos Preview,model,frontier_model,drafting,v2テンプレ書き起こし済（2026-04-30）。旧スケルトン D-14.md は archived,content/entries/model/D-14_claude_mythos_preview.md
 D-20,,GPT-5 系,model,openai,needs_review,本書き済み（2026-04-29）。旧スケルトン D-20.md は archived,content/entries/model/D-20_gpt5.md
 D-21,,GPT-4 系,model,openai,drafting,本書き済み（2026-04-29）。旧スケルトン D-21.md は archived,content/entries/model/D-21_gpt4.md
 D-22,,o1 系,model,openai,drafting,本書き済み（2026-04-29）。旧スケルトン D-22.md は archived,content/entries/model/D-22_o1.md
@@ -156,15 +156,15 @@ F-17,,Astro,term_tool,framework,needs_review,v2テンプレ書き起こし済（
 F-20,303,ESLint,term_tool,linter,needs_review,旧3桁ID連携・v2テンプレで書き直し済（2026-04-29）,content/entries/term_tool/F-20_eslint.md
 F-21,,Prettier,term_tool,formatter,drafting,,content/entries/term_tool/F-21_prettier.md
 F-30,,VS Code,term_tool,editor,drafting,,content/entries/term_tool/F-30_vs_code.md
-F-34,,VS Code 拡張機能,term_tool,editor,skeleton,,content/entries/term_tool/F-34.md
+F-34,,VS Code 拡張機能,term_tool,editor,drafting,v2テンプレ本書き済（2026-04-30）,content/entries/term_tool/F-34.md
 F-35,,Markdown Preview Enhanced,term_tool,editor_ext,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-35_markdown_preview_enhanced.md
 F-36,,Git Graph,term_tool,editor_ext,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-36_git_graph.md
 F-37,,Japanese Language Pack for VS Code,term_tool,editor_ext,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-37_japanese_language_pack_for_vs_code.md
 F-38,,Markdown All in One,term_tool,editor_ext,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-38_markdown_all_in_one.md
 F-40,,npm,term_tool,cli_build,skeleton,,content/entries/term_tool/F-40_npm.md
 F-41,,Vite,term_tool,cli_build,drafting,,content/entries/term_tool/F-41_vite.md
-F-42,,ビルド,term_tool,cli_build,skeleton,,content/entries/term_tool/F-42.md
-F-43,,テスト,term_tool,cli_build,skeleton,,content/entries/term_tool/F-43.md
+F-42,,ビルド,term_tool,cli_build,drafting,v2テンプレ本書き済（2026-04-30）,content/entries/term_tool/F-42_build.md
+F-43,,テスト,term_tool,cli_build,drafting,v2テンプレ本書き済（2026-04-30）,content/entries/term_tool/F-43.md
 F-44,,pnpm,term_tool,cli_build,drafting,,content/entries/term_tool/F-44_pnpm.md
 F-50,,git,term_tool,git,needs_review,,content/entries/term/F-50_git.md
 F-51,,git push,term_tool,git,skeleton,,content/entries/term_tool/F-51_git_push.md
@@ -190,7 +190,7 @@ F-86,,ollama,term_tool,runtime,drafting,ローカルLLM,content/entries/term_too
 F-87,,sudo,term_tool,shell,needs_review,Substitute User do の略。2026-04-30 entry-writer で本書き,content/entries/term_tool/F-87_sudo.md
 F-90,,Docker,term_tool,container,skeleton,,content/entries/term_tool/F-90_docker.md
 F-91,,.env,term_tool,env,needs_review,,content/entries/term_tool/F-91_env.md
-F-100,,拡張子早見表,term_tool,file_format,skeleton,,content/entries/term_tool/F-100.md
+F-100,,拡張子早見表,term_tool,file_format,drafting,,content/entries/term_tool/F-100_file_extensions_guide.md
 F-101,,.ico,term_tool,file_format,needs_review,,content/entries/term_tool/F-101_ico.md
 F-102,,.mp4,term_tool,file_format,drafting,,content/entries/term_tool/F-102_mp4.md
 F-103,,.mp3,term_tool,file_format,needs_review,,content/entries/term_tool/F-103_mp3.md
@@ -217,7 +217,7 @@ F-171,,S3,term_tool,cloud_service,drafting,,content/entries/term_tool/F-171_s3.m
 F-172,,IAM,term_tool,cloud_service,needs_review,,content/entries/term_tool/F-172_iam.md
 F-180,,OpenGL,term_tool,graphics,needs_review,,content/entries/term_tool/F-180_opengl.md
 F-181,,WebGL,term_tool,graphics_api,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-181_webgl.md
-F-190,,サブルーチン,term_tool,programming_basic,skeleton,古典的概念,content/entries/term_tool/F-190.md
+F-190,,サブルーチン,term_tool,programming_basic,drafting,古典的概念 / v2本書き済み 2026-04-30,content/entries/term_tool/F-190_subroutine.md
 F-200,,Rust,term_tool,language,needs_review,F-1〜9 言語サブが満杯のため新サブ「追加言語」F-200〜209 を新設（2026-04-29）。v2 テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-200_rust.md
 G-1,,Context (コンテキスト),term_llm,basic,needs_review,,content/entries/term/G-1_context.md
 G-2,,Token,term_llm,basic,needs_review,,content/entries/term_llm/G-2_token.md

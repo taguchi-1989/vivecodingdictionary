@@ -18,7 +18,7 @@ related_terms:
   - Playwright
   - ビルド
   - HumanEval
-status: drafting
+status: archived
 ---
 
 # テスト
@@ -99,17 +99,17 @@ TDD、Playwright、Vitest
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
--
--
--
+- 
+- 
+- 
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象:
-- 👍 良い点:
-- 👎 ダメな点:
-- 👥 誰向けか:
+- 🙂 第一印象: 
+- 👍 良い点: 
+- 👎 ダメな点: 
+- 👥 誰向けか: 
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -145,9 +145,9 @@ TDD、Playwright、Vitest
 
 ## 出典メモ
 
-- Jest 公式ドキュメント <https://jestjs.io/> — checked 2026-04-30
-- Vitest 公式ドキュメント <https://vitest.dev/> — checked 2026-04-30
-- pytest 公式ドキュメント <https://docs.pytest.org/> — checked 2026-04-30
+- Jest 公式ドキュメント https://jestjs.io/ — checked 2026-04-30
+- Vitest 公式ドキュメント https://vitest.dev/ — checked 2026-04-30
+- pytest 公式ドキュメント https://docs.pytest.org/ — checked 2026-04-30
 
 ## 備考
 
