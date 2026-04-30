@@ -1,69 +1,57 @@
 ---
 id: G-36
 title: Artifact
+title_reading: アーティファクト
 category: term_llm
 subtype: control
-experience_level:
-reader_level:
+experience_level: hands_on
+reader_level: 2
 figure_type: structure
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2024-06
+version_status: active
+pricing_note: freemium
+evaluation_date: 2026-04-30
+related_terms:
+  - Claude
+  - Canvas
+  - Tool Use
+  - Slash Command
+status: drafting
 ---
 
 # Artifact
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
+<!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## tagline
 
-成果物を独立パネルに出す UI 機能（Claude Artifacts 等）。広義には「生成物／ビルド出力」の総称
-
-
-<!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
+Claude.ai の右サイドパネルに生成物を独立表示する作業領域です。会話とアウトプットを分けて確認できます。
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+Claude.ai でコードや文書を生成すると、会話欄とは別の右側パネルに成果物が表示されます。パネル内で直接編集でき、ファイル単位で履歴が残るため、会話を遡らずに最新版を確認できます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+Claude.ai でコードや HTML を書いてもらったとき、右側に専用パネルが開く場面で登場します。2024 年 6 月のローンチ以降、「Artifact に出した」という言い方を同僚から聞くことがあります。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+会話チャット欄と Artifact パネルが左右に並ぶ画面構成を見せ、成果物が分離管理される点を伝える。
 
+### B. 登場シーン（figure_type: structure）
+
+- シーン1: Claude.ai でコードを生成 → 右パネルにコードが表示・編集可能
+- シーン2: HTML プレビューを確認しながら会話で修正指示を出す
+- シーン3: 同じファイルを繰り返し更新して履歴を積む
+- 並べる基準: 会話とアウトプットの分離という軸
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Claude の Artifact に HTML を出してもらって、プレビューを確認しながら修正できます。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +60,42 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+会話と生成物を左右に分けて表示する専用パネルです。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+成果物をファイル単位で管理でき、会話を遡る手間が減ります。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Claude.ai 専用機能で、API 利用やモバイルでは使えない場合があります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+HTML・コード・文書を繰り返し修正する共同編集的な作業に向いています。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Claude.ai でコードを生成すると自動で開くパネルです。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+Canvas、Tool Use、Claude.ai
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. プロンプト入力 — Claude.ai でコード・文書の生成を依頼する
+2. Artifact 生成 — 右パネルに成果物が自動表示される
+3. パネル内編集 — 直接テキストを編集するか、会話で追加指示を出す
+4. 履歴確認 — ファイル単位の履歴で過去バージョンを参照する
+5. 共有・エクスポート — 完成した成果物をコピーまたは共有する
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- Claude
+- Canvas
+- Tool Use
+- Slash Command
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,17 +103,17 @@ YAML 補足（本書きで埋める／見直す欄）:
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,31 +122,36 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: Claude.ai の画面を模式化し、左側に会話バブル、右側に Artifact パネル（コードや HTML）を横並びで配置する
+- 登場人物: ノートPC を開いた人物（非エンジニア）が画面を見ている
+- 吹き出し・心の声: 「会話は左、成果物は右でスッキリ！」
+- 中央に置くキーワード/ラベル: 「会話 ｜ Artifact」の区切り線
 
-### 6 視点アイコン（右ページ上段）
+### 6視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: チャット入力画面
+- Step 2 のアイコン/絵柄: 右パネルが開くアニメーション的な矢印
+- Step 3 のアイコン/絵柄: 鉛筆で編集しているアイコン
+- Step 4 のアイコン/絵柄: 時計・履歴アイコン
+- 矢印で示す流れの意図: 会話から成果物が生まれ、繰り返し改善されるサイクル
 
 
 ## コミュニティ補完メモ
 
+- Canvas（ChatGPT の同等機能）との住み分け：G-36 は Claude.ai の Artifact に絞る。ChatGPT Canvas との比較は備考に留め、本文では扱わない
+- Tool Use（G-30）との住み分け：Tool Use は Claude が外部ツールを呼び出す仕組み。Artifact は生成物の表示・編集 UI であり、概念レイヤーが異なる
+- Slash Command（G-32）との住み分け：Slash Command は入力インターフェースの操作。Artifact はアウトプット側の機能
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- Anthropic ブログ「Introducing Artifacts」— checked 2026-04-30
 
 ## 備考
+
+- ChatGPT の Canvas は 2024 年後半に登場した類似機能。同等の UI 体験を提供するが、別サービスの別機能として扱う
+- 無料プランでも Artifact は利用できる（2026-04-30 時点）。ただし生成量の制限あり
+- モバイル版 Claude.ai では Artifact パネルの表示方法が異なる場合がある
