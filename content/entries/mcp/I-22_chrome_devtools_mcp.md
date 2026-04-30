@@ -25,17 +25,17 @@ status: drafting
 
 ## tagline
 
-Chrome に特化した MCP Server（エムシーピーサーバー）です。コンソールログ取得やパフォーマンス計測を AI から直接操作できます。
+Chrome 専用の MCP Server です。ログ取得やパフォーマンス計測を AI から操作できます。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-Google 公式の `chrome-devtools-mcp` を使い、Chrome DevTools Protocol（CDP）経由でブラウザを操作します。コンソールログの取得・ネットワーク監視・DOM スナップショット・スクリーンショット・パフォーマンストレースを AI の指示で実行できます。
+Google 公式の `chrome-devtools-mcp` が CDP（Chrome DevTools Protocol）でブラウザを操作します。コンソールログとパフォーマンストレースを AI の指示で取得できます。
 
 ## どこで出会うか
 
-フロントエンドのバグ調査や LCP（最大コンテンツ描画）などの速度計測を AI に任せたい場面で登場します。`npx chrome-devtools-mcp@latest` で起動し、実行中の Chrome に接続するか、自動で起動した Chrome を制御します。
+フロントエンドのバグ調査や LCP（最大コンテンツ描画）計測を AI に任せる場面です。`npx chrome-devtools-mcp@latest` で起動し CDP で接続します。
 
 ## メイン図
 

@@ -6,6 +6,7 @@ category: {{CATEGORY}}
 subtype: {{SUBTYPE}}
 experience_level:
 reader_level:
+importance:              # A=必須 / B=一般 / C=中級 / D=上級 / E=開発者向け（任意）
 figure_type: structure
 page_layout: spread_v1
 start_date:

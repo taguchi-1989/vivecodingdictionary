@@ -15,6 +15,7 @@ subtype:                 # language / framework / linter / ai_assistant / fronti
 # ── 読者・体験 ──
 experience_level:        # hands_on / partial / research_only
 reader_level:            # 1〜6（"2-3" のような範囲も可）
+importance:              # A=必須 / B=一般 / C=中級 / D=上級 / E=開発者向け（任意。読み始める優先度）
 
 # ── 誌面形式 ──
 figure_type:             # before_after / structure / comparison / workflow / timeline

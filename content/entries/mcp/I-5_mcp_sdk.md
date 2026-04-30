@@ -29,17 +29,17 @@ status: drafting
 
 ## tagline
 
-MCP サーバ・クライアントを自作するための公式開発キット。TypeScript 版と Python 版があります。
+MCP サーバ・クライアントを自作するための公式開発キットです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-MCP サーバ／クライアントを実装するとき、JSON-RPC 通信やライフサイクル管理（initialize / tools/list / tools/call）を SDK が肩代わりします。Tool・Resource・Prompt の 3 機能を、デコレータや register 関数で宣言するだけで動かせます。
+MCP サーバ／クライアントを実装するとき、JSON-RPC 通信とライフサイクル管理を SDK が担います。Tool・Resource・Prompt の各機能は register 関数で宣言するだけで動きます。
 
 ## どこで出会うか
 
-「社内 API を Claude から呼べるようにしたい」「自作 MCP（I-80）を書きたい」場面で登場します。TypeScript は `npm i @modelcontextprotocol/sdk`、Python は `pip install mcp` で導入でき、公式サンプルが揃っています。
+社内 API を Claude から呼びたい場面や自作 MCP（I-80）を書く場面で登場します。TypeScript 版・Python 版それぞれに公式サンプルが揃っています。
 
 ## メイン図
 

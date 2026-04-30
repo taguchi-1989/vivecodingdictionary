@@ -10,11 +10,20 @@
 # の順で更新し、双方向で整合を取る。本ファイルと v2_rules_summary に差があれば、
 # **本ファイル（schema）を正**とする。
 
-schema_version: "v2.28.0"
-updated_at: "2026-04-28"
+schema_version: "v2.29.0"
+updated_at: "2026-04-30"
 canonical_doc: "docs/v2_rules_summary.md"
 
 # 変更履歴
+# - v2.29.0 (2026-04-30): 任意フィールド `importance` (A〜E) を追加。
+#   読み始める優先度（reader_level=前提知識レベル とは独立した軸）。
+#   A=必須（AI ニュースを目にする全員 / ChatGPT, Claude, LLM, Hallucination 等）
+#   B=一般（仕事で AI を使う非エンジニア / Token, MCP, Cursor, Deep Research 等）
+#   C=中級（業務で本格活用する人 / Tool Use, Hook, Subagent 等）
+#   D=上級（エンジニア・実装者 / 量子化, LoRA, Tauri, Whisper 等）
+#   E=開発者向け（研究者・歴史・コア実装 / gpt-oss, ノイマン型, Anthropic 創業 等）
+#   誌面では右上ナビ・フッターのバッジで示す予定（実装は別担当）。
+#   validator は enum 外れを ⚠️ 警告、未指定は許容。
 # - v2.28.0 (2026-04-28): タイトル末尾の括弧書き読み（例: `Context（コンテキスト）`）を
 #   廃止し、新スロット `title_reading`（任意）を追加。タイトルは純粋名のみ、読み・
 #   日本語展開はタイトル直下の独立スロットに表示する。誌面では 14px グレー。
@@ -98,6 +107,20 @@ frontmatter:
       format: regex
       pattern: "^(\\d|\\d-\\d)$"   # "1" または "2-3"
       severity: warn
+
+    - key: importance
+      description: |
+        読み始める優先度（誰がまず読むべきか）。reader_level（前提知識レベル）とは
+        独立した軸として、本書全体での重要度を A〜E の 5 段階で示す。
+        A: 必須（AI ニュースを目にする全員。例: ChatGPT, Claude, Gemini, LLM, Hallucination）
+        B: 一般（仕事で AI を使う非エンジニア。例: Token, Context, MCP, Cursor, Deep Research）
+        C: 中級（業務で本格活用する人。例: Tool Use, Hook, Slash Command, Subagent）
+        D: 上級（エンジニア・実装者。例: 量子化, LoRA, Tensor コア, Tauri, Whisper）
+        E: 開発者向け（研究者・歴史・コア実装。例: gpt-oss, ノイマン型, Anthropic 創業）
+        誌面では右上ハンバーガーナビ・左ページフッターのバッジで示す（実装は別担当）。
+      enum: [A, B, C, D, E]
+      severity: warn
+      since: "2026-04-30"
 
   time_varying_required:  # version_status または pricing_note がある場合、出典メモに checked 日付必須
     - key: version_status

@@ -28,17 +28,17 @@ status: drafting
 
 ## tagline
 
-OpenAI 製のコーディングエージェントです。2025 年に再始動し、リポジトリを操作して PR まで作れます。
+OpenAI 製のコーディングエージェントです。リポジトリを操作して PR まで作れます。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-ChatGPT に組み込まれたクラウド版と、ローカルで動く CLI（コマンドラインインターフェース）版の 2 系統があります。クラウド版はリモートのコンテナ上でリポジトリを自律的に操作し、コード修正から PR（プルリクエスト）作成まで自動化します。
+ChatGPT 組み込みのクラウド版と、ローカルで動く CLI 版の 2 系統があります。クラウド版はコンテナ上でリポジトリを操作し、コード修正から PR（プルリクエスト）作成まで自動化します。
 
 ## どこで出会うか
 
-ChatGPT Pro・Team・Enterprise の画面で「Codex」エージェントとして登場します。技術記事では「OpenAI のコーディングエージェント比較」の文脈でよく名前を見かけます。GitHub Copilot（B-5）が Microsoft 系、Claude Code（B-7）が Anthropic 系であるのと並ぶ、OpenAI 系の代表格です。
+ChatGPT Pro・Team・Enterprise の画面で「Codex」エージェントとして登場します。GitHub Copilot（B-5）が Microsoft 系、Claude Code（B-7）が Anthropic 系と並ぶ、OpenAI 系の代表格です。
 
 ## メイン図
 

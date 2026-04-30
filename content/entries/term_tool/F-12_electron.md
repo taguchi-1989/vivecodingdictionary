@@ -25,17 +25,17 @@ status: drafting
 
 ## tagline
 
-Web 技術でデスクトップアプリを作れるフレームワークです。VS Code や Slack もこれで動いています。
+Web 技術で 3 OS 対応デスクトップアプリを作れるフレームワークです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-HTML・CSS・JavaScript（ジャバスクリプト）で書いた Web アプリを、Windows・Mac・Linux のデスクトップアプリとして配布できる形にしてくれます。Chromium（Web レンダリング）と Node.js（OS API アクセス）を 1 パッケージに同梱するため、1 つのコードベースで 3 OS に対応できます。
+HTML・CSS・JavaScript で書いた Web アプリを、Chromium と Node.js を同梱し Windows・Mac・Linux 向けデスクトップアプリとして配布できます。
 
 ## どこで出会うか
 
-VS Code（F-30）・Slack・Discord・Notion・Claude Desktop など、日常で使うデスクトップアプリの多くが Electron 製です。「Web で作った AI チャット画面をローカルアプリにしたい」という場面で名前が挙がることがあります。
+VS Code（F-30）・Slack・Discord など日常のアプリで採用されています。AI チャット画面をローカルアプリにしたい場面でも登場します。
 
 ## メイン図
 

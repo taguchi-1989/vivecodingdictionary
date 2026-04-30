@@ -276,6 +276,15 @@ def check_yaml(fm: dict, r: Report) -> None:
                 f"A. YAML: `title_reading` が {n} 字（目安 2〜30、推奨 3〜15）"
             )
 
+    # 2026-04-30: importance（任意）の enum チェック A〜E
+    # A=必須 / B=一般 / C=中級 / D=上級 / E=開発者向け
+    importance = str(fm.get("importance", "")).strip()
+    if importance and importance not in ("A", "B", "C", "D", "E"):
+        r.warn(
+            f"A. YAML: `importance` が `{importance}` — A/B/C/D/E のいずれかを指定してください "
+            "(A=必須 / B=一般 / C=中級 / D=上級 / E=開発者向け)"
+        )
+
 
 def check_structure(body: str, r: Report) -> None:
     for sec in REQUIRED_SECTIONS:
