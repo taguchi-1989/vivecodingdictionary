@@ -1,6 +1,78 @@
-# 次セッションへの引き継ぎ（2026-04-29 v9 更新 / 並列 95 件本書きラウンド完走）
+# 次セッションへの引き継ぎ（2026-04-30 v10 更新 / 累計 245 件本書き完走）
 
-*2026-04-29 セッションで `entry-writer` 5 並列バッチ × 19 回 で letter 横断 95 件を本書き。skeleton 305 → 210（−95）、drafting 5 → 92、needs_review 29 → 37、archived 8 → 21、☆ 違反 0 で着地。次セッションはこのファイルの「2026-04-29 セッション成果」を確認し、続きの 30 件束を `entry-writer` で進めるか、needs_review に積まれた 37 件の著者欄記入に進むか選んでください。*
+*2026-04-29〜2026-04-30 にかけて、`entry-writer` 5 並列 × 49 バッチ で letter 横断 245 件を本書き。skeleton 305 → 42（−263）、drafting → 263、needs_review → 39、archived 8 → 23、☆ 違反 0 で着地。残スケルトン約 42 件。次セッションはこのファイルの「2026-04-30 セッション成果」を確認し、残り 42 件のうち 30 件束を `entry-writer` で進めるか、needs_review に積まれた 39 件の著者欄記入に進むか選んでください。*
+
+## 2026-04-30: 並列 150 件本書きラウンド（5 並列 × 30 バッチ × 6 ラウンド）
+
+### コミット 6 本（古い順）
+
+- `6b1b0f4` write 30 more stage-3 entries (I/C/J across batches 19-24): I-MCP・C-人物・J-概念
+- `0a720fd` write 30 more stage-3 entries (F across batches 25-30): F-言語・UI・git・ランタイム・DB・図/OSS
+- `2cbebf3` write 30 more stage-3 entries (B/D across batches 31-36): B-AI ツール・Copilot・クラウド・コミュニティ・D-モデル
+- `72757c0` write 30 more stage-3 entries (E/H/I/C/J/G across batches 37-42): E-ベンチマーク・H ワークフロー・I MCP・C 企業・J 概念・G LLM
+- `5882ca0` write 30 more stage-3 entries (F/J across batches 43-48): F-VS Code 拡張・CLI・ライセンス・メディア・AWS・GL・J-ストレ・OS
+- `52905cd` write 30 more stage-3 entries (A/G/F/H/J across batches 49-54): A メタ全 9 件 + untracked 12 件 + 主要残 9 件
+
+### 書いた 150 件の内訳（batches 19-54）
+
+| ラウンド | 内容 | 件数 |
+| :-- | :-- | --: |
+| batches 19-24 | I-MCP 10 / C-人物 7 / C-組織 3 / J-概念 8 / 補助 2 | 30 |
+| batches 25-30 | F-言語/形式 5 / UI/Linter 5 / git ファイル系 5 / ランタイム/端末 5 / DB 系 5 / 図/OSS 5 | 30 |
+| batches 31-36 | B-AI ツール 5 / Copilot 5 / クラウド・PaaS 5 / コミュニティ 5 / D-モデル 10 | 30 |
+| batches 37-42 | E-ベンチ前後半 10 / H 系 3 / I-21 / C-企業 4 / J-概念 8 / G-LLM 4 | 30 |
+| batches 43-48 | F-VS Code 拡張 4 / 端末 1 / CLI/Web 品質 4 / ライセンス・アイコン・メディア・レンダリング 10 / AWS 3 / GL 2 / J-OS/ストレージ 6 | 30 |
+| batches 49-54 | A メタ全 9 / untracked 12（G-15〜19, G-38, G-39, G-47, F-16, F-17, F-200, H-63）/ 主要残 9 | 30 |
+
+詳細は各コミットメッセージを参照。
+
+### 並列実行の知見（前セッションから継続蓄積）
+
+1. **5 並列 × N バッチが安定**：今回 batch30（F-86 ollama 含む）で 5 並列が API タイムアウトで全件失敗 → 単発で再投げて完走。同時に長時間処理が走ると API 側が切れることがあるので、再投げ前提で進めるとよい
+2. **status は Python ワンライナーで一括変更**（前 v9 と同じ）。スケルトンテンプレ内コメントに `status: skeleton` が複数あるので必ずフロントマター 1 つだけを置換する正規表現（`^status: skeleton\s*$` + flags=MULTILINE + count=1）を使う
+3. **頻発した ☆ 違反パターン**（合計 13 件発生・全件その場で並列トリム解消）
+   - 左ページ合計 +100 字超過：C-54 / I-4 / I-5 / I-41 / F-160 / F-91 / I-21 / F-110 / F-16（開発フロー過大）
+   - 「非エンジニアのつまずき」欄に AI 記入混入（`- -` のままになる）：I-5 / F-62 / B-40 / H-5
+   - entry-writer に「左ページ合計 250 字以内」「つまずき欄は空のまま」を毎回プロンプトで強調しているが、再発するので保存後の validator チェックは必須
+4. **新ファイル名分離**：J-19 → J-19_quantization、J-2 → J-2_strong_weak_ai のように entry-writer が新ファイル名で書くケースあり。entries.csv の path も自動更新され、旧スケルトンは archived 化される。実害なし。D-43_qwen / D-54_stable_diffusion なども同様
+5. **連体修飾の「だ」 validator 誤検出**（前 v9 と同じ）。「進んだ N 本」→「進んでいる」など現在進行に書き換え
+
+### untracked 残置物（次セッションで判断）
+
+- `assets/covers/` `assets/opening/` `drafts/covers/` `drafts/opening/` `drafts/opening_spread_brief.md` — 別ライン（カバー・開きの試作）の作業
+- `ledgers/expansion_plan.md` — 拡張プランのメモ。entry_candidates.md の更新と対応する
+- `ledgers/entry_candidates.md` の M（差分）— G-15〜G-19 / G-38 / G-39 / G-47 / F-16 / F-17 / F-200 / H-63 の候補追加。このセッションで対応するスケルトンを本書きしたので、M を取り込んでもよい
+
+### 残タスク
+
+- **残スケルトン約 42 件**（次の 30 件束で粗方片付く）
+  - **C 系 4 件**：C-80 AI 大学 / C-81 にゃんた / C-82 まさお / C-83 AI の歴史氏（YouTuber 系）
+  - **D 系 4 件**：D-3 Gemini 3 系 / D-4 Gemini 3.1 系 / D-14 Claude Mitos モデル / D-25 GPT-1 / GPT-2 系
+  - **F 系 約 7 件**：F-34 VS Code 拡張機能 / F-42 ビルド / F-43 テスト / F-100 拡張子総覧 / F-150（書済）/ F-190 サブルーチン ほか
+  - **G 系 約 9 件**：G-7 指示追従性 / G-8 決定論的非決定論的 / G-9 effort レベル / G-35 Deep Research / G-36 Artifact / G-43 オーケストレーション / G-44 マルチエージェント協調 / G-45 段階的開示 / G-46 ナーフ
+  - **H 系 約 8 件**：H-51 Preview→正式版 / H-52 Copilot→Claude Code / H-55 LLaMA オープン化 / H-56 Claude バージョン史 / H-57 Gemini 命名史 / H-59 AI エージェント元年 / H-60 Codex→Copilot 系譜 / H-61 Preview 文化 / H-62 Anthropic 創業
+  - **I 系 2 件**：I-80 自作 MCP のテンプレ / I-81 MCP の登録設定
+  - **J 系 約 8 件**：J-31 第 5 世代 / J-32 ノイマン型 / J-33 量子コンピュータ / J-53 著作権法 / J-55 個人情報法 / J-62 チューリングテスト / J-74 RTX シリーズ / J-75 Tensor コア / J-100 識字
+- **既書き 39 件の著者欄記入**（needs_review → ready 昇格は著者本人のみ可能）
+- **要直しキューの ⚠ 軽微超過 約 237 件**：著者欄記入のついでに削るのが効率的（数は累積、新規分が 50 件ほど追加）
+- **新ファイル名 ↔ entries.csv path の整合性確認**：J-19_quantization / J-2_strong_weak_ai / D-43_qwen など、書き換え時の path 自動更新は確認済みだが念のためチェック
+
+### 次セッションの最短ルート
+
+1. このファイルの「2026-04-30 セッション成果」と最新の `ledgers/revision_queue.md` を見る
+2. 残スケルトン約 42 件から 30 件束を選ぶ（C/D/F/G/H/I/J の混成、または H 歴史 + I 自作 MCP + J 一般などテーマ別）
+3. `python3 -c "..."` で skeleton → drafting 一括フリップ
+4. `Agent` を 5 並列で起動 × 6 バッチ
+5. 完走後に `python3 scripts/update_review_queue.py` で確認、☆ 違反があれば並列トリム
+6. コミット
+
+### 累計成果（2026-04-29〜2026-04-30 セッション）
+
+- **本書き 245 件**（前セッション 95 + 今セッション 150）
+- **コミット 10 本**（v9 の 4 本 + v10 の 6 本）
+- **残スケルトン 305 → 42 件（−263、進捗 86%）**
+
+---
 
 ## 2026-04-29: 並列 95 件本書きラウンド（5 並列 × 19 バッチ）
 
