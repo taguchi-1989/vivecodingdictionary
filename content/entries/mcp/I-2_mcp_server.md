@@ -31,11 +31,11 @@ status: drafting
 
 ## 何をしてくれるか
 
-MCP Client（Claude Code など）からのリクエストを受け取り、外部サービスやファイルシステムを操作して結果を返します。GitHub や Slack など「連携したい相手」ごとに 1 つの Server が用意され、LLM は Server を呼ぶだけで個別実装を意識しなくて済みます。
+MCP Client からのリクエストを受け取り、外部サービスやファイルシステムを操作して結果を返します。GitHub や Slack など連携先ごとに 1 つの Server が用意され、LLM は Server を呼ぶだけで個別実装を意識しなくて済みます。
 
 ## どこで出会うか
 
-Claude Code の設定画面や `claude_desktop_config.json` で「どの MCP Server を使うか」を登録するときに登場します。Filesystem MCP（I-10）・GitHub MCP（I-11）・Playwright MCP（I-20）のように、目的ごとに個別の Server が存在します。
+`claude_desktop_config.json` などで MCP Server を登録するときに登場します。Filesystem MCP・GitHub MCP・Playwright MCP のように、目的ごとに個別の Server が存在します。
 
 ## メイン図
 

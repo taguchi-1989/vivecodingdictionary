@@ -26,17 +26,17 @@ status: drafting
 
 ## tagline
 
-標準プレビューを超える Markdown 強化拡張です。図・数式・PDF 出力まで一気に使えます。
+Markdown の標準プレビューを大幅に強化する VS Code 拡張です。図・数式・PDF 出力まで追加できます。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-VS Code（F-30）向けの Markdown プレビュー拡張機能（エクステンション）です。Mermaid（F-140）図や KaTeX 数式のレンダリング、コードチャンク実行、HTML / PDF / PNG へのエクスポートなど、標準プレビューにはない機能をまとめて提供します。
+VS Code（F-30）向けのプレビュー拡張機能です。Mermaid（F-140）図や KaTeX 数式のレンダリング、HTML / PDF へのエクスポートなど、標準プレビューにはない機能を提供します。
 
 ## どこで出会うか
 
-AI アシスタントが出力した Mermaid 入り仕様書を VS Code で確認するときに活躍します。拡張機能マーケットプレイスで「Markdown Preview Enhanced」を検索すると見つかります。Markdown All in One（F-38）と組み合わせて使う人も多いです。
+AI が出力した Mermaid 入り仕様書を VS Code で確認するときに活躍します。拡張機能マーケットプレイスで検索するとすぐ見つかります。Markdown All in One（F-38）との併用も一般的です。
 
 ## メイン図
 

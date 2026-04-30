@@ -32,11 +32,11 @@ AI クライアントと MCP Server をつなぐ通信路の規格。stdio と H
 
 ## 何をしてくれるか
 
-MCP（Model Context Protocol）でクライアントとサーバがメッセージをやり取りする経路を定めた仕組みです。ローカル動作には stdio、リモート接続には HTTP/SSE を使い、Transport が違うと起動方法や設定の書き方も変わります。
+MCP（Model Context Protocol）でクライアントとサーバがメッセージをやり取りする経路を定めた仕組みです。ローカルには stdio、リモートには HTTP/SSE を使います。
 
 ## どこで出会うか
 
-MCP Server を設定ファイルに追加するとき、`command`/`args` を書く欄（stdio）か `url` の欄（HTTP）かで Transport が決まります。Claude Code や Claude Desktop で「動かない」と感じたら、まず種別を確認すると切り分けが早いです。
+MCP Server を設定ファイルに追加するとき、`command`/`args`（stdio）か `url`（HTTP）かで Transport が決まります。「動かない」と感じたら種別の確認が最初の切り分けになります。
 
 ## メイン図
 

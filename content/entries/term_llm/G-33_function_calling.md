@@ -26,17 +26,17 @@ status: drafting
 
 ## tagline
 
-LLM が関数名と引数を JSON で返す API 機能です。OpenAI が 2023 年に命名した呼称です。
+LLM が関数名と引数を JSON で返す仕組みです。OpenAI 由来の呼称です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-Function Calling（ファンクションコーリング）は、LLM（大規模言語モデル）がテキストの代わりに「呼び出す関数名と引数」を JSON で返す仕組みです。アプリ側がその JSON を受け取って関数を実行し、結果を LLM に戻すと、最終回答が生成されます。
+LLM（大規模言語モデル）がテキストではなく「関数名と引数」を JSON で返し、アプリ側がその JSON を使って関数を実行します。実行結果を LLM に戻すと最終回答が生成されます。
 
 ## どこで出会うか
 
-OpenAI の API ドキュメントや ChatGPT Plugins の解説記事で「Function Calling」という用語を見かけます。Anthropic の Claude API では同じ仕組みを「Tool Use」と呼んでいるため、両方の呼称が並ぶドキュメントやブログ記事で混乱しやすい箇所です。
+OpenAI の API ドキュメントで「Function Calling」、Anthropic の Claude API では同じ仕組みを「Tool Use」と呼ぶため、両方の呼称が混在する記事で見かけます。
 
 ## メイン図
 

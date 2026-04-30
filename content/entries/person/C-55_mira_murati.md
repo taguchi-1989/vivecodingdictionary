@@ -30,17 +30,17 @@ status: drafting
 
 ## tagline
 
-元 OpenAI CTO。ChatGPT・DALL·E・Sora の開発統括を担い、2025 年に Thinking Machines Lab を設立しました。
+元 OpenAI CTO。研究と製品出荷の橋渡し役を務め、退職後は Thinking Machines Lab を設立しました。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-OpenAI で研究と製品出荷の橋渡し役として機能し、ChatGPT（B-3）・DALL·E・Sora の開発統括を担いました。2023 年 11 月の Sam Altman（C-50）一時解任時には暫定 CEO を 5 日間務めた経歴があります。
+OpenAI で ChatGPT（B-3）・DALL·E・Sora の開発統括を担いました。2023 年 11 月の Sam Altman（C-50）一時解任時には暫定 CEO を 5 日間務めた経歴があります。
 
 ## どこで出会うか
 
-AI 業界の人物を紹介する記事や、OpenAI の歴史を振り返るコンテンツで名前が出ます。2024 年 9 月の OpenAI 退職と Thinking Machines Lab（2025 年 2 月設立）の話題で、業界ニュースを追う人には頻繁に目に入ります。
+AI 業界の人物紹介記事や OpenAI の歴史を振り返るコンテンツで名前が出ます。2024 年 9 月の退職と Thinking Machines Lab（2025 年 2 月設立）の話題で、業界ニュースに頻出します。
 
 ## メイン図
 

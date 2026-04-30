@@ -26,17 +26,17 @@ status: drafting
 
 ## tagline
 
-Artificial Superintelligence の略。人間の知能を遥かに超えた AI の到達点として語られる概念です。
+Artificial Superintelligence の略。人間の知能を遥かに超えた AI の水準を指す概念です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-ASI は現時点では存在しない仮想の知能水準で、AGI（人間レベルの汎用 AI）をさらに超えた段階を指します。Nick Bostrom の著書『Superintelligence』（2014）が体系化し、速度・並列性・質の 3 分類で議論されています。
+現時点では存在しない仮想の知能水準で、AGI（人間レベルの汎用 AI）をさらに超えた段階を指します。Nick Bostrom の著書『Superintelligence』（2014）が概念を体系化し、研究者間で議論されています。
 
 ## どこで出会うか
 
-AI 安全性や長期リスクを扱う記事・講演でよく登場します。OpenAI の「Superalignment」研究や、Ilya Sutskever が 2024 年に設立した SSI（Safe Superintelligence Inc.）のミッション説明で目にすることがあります。
+AI 安全性・長期リスクを扱う記事や講演で登場します。OpenAI の「Superalignment」研究や、Ilya Sutskever が 2024 年に設立した SSI のミッション説明で目にすることがあります。
 
 ## メイン図
 

@@ -26,17 +26,17 @@ status: drafting
 
 ## tagline
 
-Claude Code（B-7）をコミュニティが拡張した OSS フレームワークです。Anthropic 公式ではありません。
+Claude Code をコミュニティが拡張した非公式 OSS フレームワークです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-`/architect` `/refactor` `/security` などの専用スラッシュコマンドと、architect / frontend / backend / qa といった専門ペルソナを Claude Code に追加します。工程ごとに最適化された動作を呼び出せるようになります。
+`/architect` `/refactor` `/security` などの専用スラッシュコマンドと、architect / frontend / qa などの専門ペルソナを Claude Code に追加します。工程ごとに最適化された動作を短いコマンドで呼び出せます。
 
 ## どこで出会うか
 
-GitHub（NomenAK/SuperClaude）で公開されており、`pip` や `uv` でインストールします。導入後は `.claude/` 配下にコマンド定義や AGENTS.md（G-21）系のファイルが追加され、Claude Code の起動時から使えるようになります。
+GitHub（NomenAK/SuperClaude）で公開されており、`pip` でインストールします。導入後は `.claude/` 配下に定義ファイルが追加され、Claude Code の起動時から利用できます。
 
 ## メイン図
 

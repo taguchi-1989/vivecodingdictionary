@@ -25,18 +25,18 @@ status: drafting
 
 ## tagline
 
-LPU（Language Processing Unit）を開発する AI 推論専用チップ企業です。GPU とは異なる設計で LLM の推論速度を大幅に引き上げます。
+LPU（Language Processing Unit）を開発する AI 推論専用チップ企業です。LLM の推論速度を大幅に引き上げます。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-LPU と呼ぶ独自設計の推論専用チップで、LLM（大規模言語モデル）の出力を超低レイテンシで実行します。GroqCloud API 経由で Llama・Mixtral・DeepSeek などのオープンウェイトモデルを利用でき、OpenAI 互換 API として接続できます。
+LPU と呼ぶ推論専用チップで、LLM（大規模言語モデル）の出力を超低レイテンシで実行します。GroqCloud API 経由で Llama・Mixtral などのオープンウェイトモデルを OpenAI 互換 API として利用できます。
 
 
 ## どこで出会うか
 
-「GPU 以外で LLM を動かす選択肢」として技術記事や API 比較記事で名前を見かけます。リアルタイム翻訳・チャットボット・コーディング補助など、応答速度が重視される用途で GroqCloud の導入事例が紹介される場面で出会います。
+「GPU 以外で LLM を動かす選択肢」として API 比較記事で名前を見かけます。応答速度が重視されるリアルタイム翻訳やチャット API の検討場面で GroqCloud の事例が登場します。
 
 
 ## メイン図

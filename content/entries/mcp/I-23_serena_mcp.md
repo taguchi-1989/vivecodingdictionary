@@ -27,17 +27,17 @@ status: drafting
 
 ## tagline
 
-LSP（Language Server Protocol）でシンボル単位のコード操作を LLM に提供する MCP Server です。
+LSP（Language Server Protocol）でシンボル操作を LLM に提供する MCP Server です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-Oraios AI が公開するオープンソースの MCP Server です。関数・クラス・変数といったシンボルの定義位置や参照先を LSP 経由で正確に取得し、Claude や Cursor が「ファイル全体を読まずに必要な箇所だけ参照・書き換え」できるようになります。
+関数・クラス・変数のシンボル定義位置や参照先を LSP 経由で正確に取得し、LLM が「ファイル全体を読まずに必要箇所だけ参照・書き換え」できるようにします。Oraios AI 公開のオープンソース Server です。
 
 ## どこで出会うか
 
-大規模リポジトリでリファクタや影響範囲調査を行うときに名前を見かけます。`uvx` コマンドで起動して MCP Client の設定に登録するだけで利用でき、Python・TypeScript・Rust・Go などの言語に対応しています。
+大規模リポジトリでリファクタや影響範囲調査を行うときに名前が出ます。`uvx` コマンドで起動して MCP Client 設定に登録するだけで使え、Python・TypeScript・Rust・Go など多言語に対応しています。
 
 ## メイン図
 

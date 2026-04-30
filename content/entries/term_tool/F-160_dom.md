@@ -32,12 +32,12 @@ Document Object Model の略。HTML をメモリ上のツリーとして JavaScr
 
 ## 何をしてくれるか
 
-ブラウザが HTML を解析すると、各タグがオブジェクトのツリー構造（DOM ツリー）になります。JavaScript はこのツリーに `querySelector()` などを呼んで、表示中のページを動的に書き換えられます。
+ブラウザが HTML を解析すると、各タグがツリー構造（DOM ツリー）になります。JavaScript はこのツリーに `querySelector()` などを呼んで、表示中のページを書き換えられます。
 
 
 ## どこで出会うか
 
-AI にフロントエンドを頼むと、生成コードに `document.getElementById()` や `addEventListener()` が現れます。「ボタンを押したら〇〇する」を実現する舞台が DOM で、React や Vue の Virtual DOM もここが出発点です。
+AI にフロントエンドを頼むと、生成コードに `getElementById()` や `addEventListener()` が現れます。「ボタンを押したら動く」を実現する舞台が DOM で、React の Virtual DOM もここが出発点です。
 
 
 ## メイン図
