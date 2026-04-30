@@ -1,69 +1,63 @@
 ---
 id: F-37
 title: Japanese Language Pack for VS Code
+title_reading: ジャパニーズ ランゲージ パック フォー ブイエスコード
 category: term_tool
 subtype: editor_ext
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: hands_on
+reader_level: 1-2
+figure_type: before_after
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-30
+related_terms:
+  - VS Code
+  - Cursor
+  - Claude Code
+  - Marketplace
+status: drafting
 ---
 
 # Japanese Language Pack for VS Code
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-VS Code の日本語化拡張
-
+VS Code（ブイエスコード）のメニューを日本語化する Microsoft 公式の拡張機能です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+インストールして再起動すると、VS Code のメニュー・コマンドパレット・設定項目が日本語表示に切り替わります。Microsoft が公式で配布しており、Marketplace（マーケットプレイス）から無償で入手できます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+VS Code を初めて起動したとき、右下に「日本語に切り替えますか？」という通知が出ることがあります。また Cursor（カーソル）や Claude Code（クロードコード）も VS Code ベースのため、同様の手順で日本語化できます。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+インストール前後で画面の表示言語がどう変わるかを対比で示す。
+
+### A. Before / After（figure_type: before_after）
+
+- Before
+  - 状況: 拡張を入れていない初期状態
+  - 視覚要素: メニューバーに "File / Edit / View" と英語表示
+  - つまずき: 操作の意味がわからず戸惑う
+- After
+  - 状況: Japanese Language Pack をインストールして再起動
+  - 視覚要素: メニューバーに「ファイル / 編集 / 表示」と日本語表示
+  - うれしさ: 用語が母語で見えるため操作を迷わず進められる
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「最初に Japanese Language Pack を入れたら、メニューが日本語になって戸惑いが減りました。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +66,43 @@ VS Code の日本語化拡張
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+VS Code の UI を日本語表示に切り替える公式拡張です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+英語のメニューを読む手間がなくなり、操作に集中できます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+各拡張機能の UI は日本語化されず、本体のみが対象です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+VS Code を初めて触る非エンジニアの導入ハードルを下げます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Marketplace で検索してインストールし、再起動するだけです。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
+VS Code, Marketplace, Cursor
 
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. VS Code インストール — エディタ本体を PC に導入する
+2. Language Pack 追加 — Marketplace で検索してインストールする
+3. 再起動 — VS Code を再起動して日本語 UI を有効にする
+4. 拡張機能を追加 — 日本語化済みの環境でほかの拡張を導入する
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- VS Code
+- Cursor
+- Claude Code
+- Marketplace
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,29 +110,30 @@ VS Code の日本語化拡張
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: before_after）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: VS Code のメニューバーを左右に並べ、左が英語表示・右が日本語表示の対比図
+- 登場人物（いれば）: 画面を見て困惑している人物（Before）と安心している人物（After）
+- 吹き出し・心の声: Before「File って何…？」/ After「ファイル、わかる！」
+- 中央に置くキーワード/ラベル: 「日本語化」
+- Before / After の場合の対比ポイント: メニューの文字が英語 → 日本語に変わる瞬間
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +141,24 @@ VS Code の日本語化拡張
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: PC とダウンロードアイコン
+- Step 2 のアイコン/絵柄: Marketplace の検索ボックス
+- Step 3 のアイコン/絵柄: 再起動（矢印循環）アイコン
+- Step 4 のアイコン/絵柄: 拡張機能の追加アイコン
+- 矢印で示す流れの意図: 導入から日本語環境完成までの順序
 
 ## コミュニティ補完メモ
 
+- VS Code（F-30）との住み分け: F-30 がエディタ本体の概要を扱うのに対し、F-37 は日本語化手順に特化。重複なし。
+- Cursor（B-4）・Claude Code（B-7）との関係: どちらも VS Code ベースであり、同じ Language Pack が適用できる旨を本文「どこで出会うか」で言及済み。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- <https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-ja> — checked 2026-04-30
+- <https://code.visualstudio.com/docs/getstarted/locales> — checked 2026-04-30
 
 
 ## 備考
+
+- 拡張機能側（各サードパーティ製など）の UI は日本語化されない。VS Code 本体のみが対象。これはつまずき例として左ページに入れるか著者欄に回す候補。本文「注意点」に要約して記載済み。
+- 中・韓・仏・独など他言語パックも Microsoft 公式で同様に提供されているが、本エントリのスコープは日本語パックのみ。

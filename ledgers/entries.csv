@@ -157,10 +157,10 @@ F-20,303,ESLint,term_tool,linter,needs_review,旧3桁ID連携・v2テンプレ�
 F-21,,Prettier,term_tool,formatter,drafting,,content/entries/term_tool/F-21_prettier.md
 F-30,,VS Code,term_tool,editor,drafting,,content/entries/term_tool/F-30_vs_code.md
 F-34,,VS Code 拡張機能,term_tool,editor,skeleton,,content/entries/term_tool/F-34.md
-F-35,,Markdown Preview Enhanced,term_tool,editor_ext,skeleton,,content/entries/term_tool/F-35_markdown_preview_enhanced.md
-F-36,,Git Graph,term_tool,editor_ext,skeleton,,content/entries/term_tool/F-36_git_graph.md
-F-37,,Japanese Language Pack for VS Code,term_tool,editor_ext,skeleton,,content/entries/term_tool/F-37_japanese_language_pack_for_vs_code.md
-F-38,,Markdown All in One,term_tool,editor_ext,skeleton,,content/entries/term_tool/F-38_markdown_all_in_one.md
+F-35,,Markdown Preview Enhanced,term_tool,editor_ext,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-35_markdown_preview_enhanced.md
+F-36,,Git Graph,term_tool,editor_ext,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-36_git_graph.md
+F-37,,Japanese Language Pack for VS Code,term_tool,editor_ext,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-37_japanese_language_pack_for_vs_code.md
+F-38,,Markdown All in One,term_tool,editor_ext,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-38_markdown_all_in_one.md
 F-40,,npm,term_tool,cli_build,skeleton,,content/entries/term_tool/F-40_npm.md
 F-41,,Vite,term_tool,cli_build,drafting,,content/entries/term_tool/F-41_vite.md
 F-42,,ビルド,term_tool,cli_build,skeleton,,content/entries/term_tool/F-42.md
@@ -184,19 +184,19 @@ F-80,,Node.js,term_tool,runtime,drafting,,content/entries/term_tool/F-80_node_js
 F-81,,bash,term_tool,shell,drafting,,content/entries/term_tool/F-81_bash.md
 F-82,,WSL,term_tool,shell,needs_review,,content/entries/term_tool/F-82_wsl.md
 F-83,,PowerShell,term_tool,shell,drafting,,content/entries/term_tool/F-83_powershell.md
-F-84,,Ghostty,term_tool,terminal,skeleton,,content/entries/term_tool/F-84_ghostty.md
-F-85,,SuperClaude Framework,term_tool,terminal,skeleton,Claude Code 拡張 OSS（Anthropic 非公式）,content/entries/term_tool/F-85_superclaude_framework.md
+F-84,,Ghostty,term_tool,terminal,needs_review,,content/entries/term_tool/F-84_ghostty.md
+F-85,,SuperClaude Framework,term_tool,framework,needs_review,Claude Code 拡張 OSS（Anthropic 非公式）v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-85_superclaude_framework.md
 F-86,,ollama,term_tool,runtime,drafting,ローカルLLM,content/entries/term_tool/F-86_ollama.md
-F-87,,sudo,term_tool,shell,skeleton,UNIX 系の権限昇格コマンド,content/entries/term_tool/F-87_sudo.md
+F-87,,sudo,term_tool,shell,needs_review,Substitute User do の略。2026-04-30 entry-writer で本書き,content/entries/term_tool/F-87_sudo.md
 F-90,,Docker,term_tool,container,skeleton,,content/entries/term_tool/F-90_docker.md
 F-91,,.env,term_tool,env,needs_review,,content/entries/term_tool/F-91_env.md
 F-100,,拡張子早見表,term_tool,file_format,skeleton,,content/entries/term_tool/F-100.md
-F-101,,.ico,term_tool,file_format,skeleton,,content/entries/term_tool/F-101_ico.md
-F-102,,.mp4,term_tool,file_format,skeleton,,content/entries/term_tool/F-102_mp4.md
-F-103,,.mp3,term_tool,file_format,skeleton,,content/entries/term_tool/F-103_mp3.md
-F-104,,.webp,term_tool,file_format,skeleton,,content/entries/term_tool/F-104_webp.md
-F-110,,Lighthouse,term_tool,quality,skeleton,,content/entries/term_tool/F-110_lighthouse.md
-F-111,,a11y,term_tool,quality,skeleton,,content/entries/term_tool/F-111_a11y.md
+F-101,,.ico,term_tool,file_format,needs_review,,content/entries/term_tool/F-101_ico.md
+F-102,,.mp4,term_tool,file_format,drafting,,content/entries/term_tool/F-102_mp4.md
+F-103,,.mp3,term_tool,file_format,needs_review,,content/entries/term_tool/F-103_mp3.md
+F-104,,.webp,term_tool,file_format,needs_review,,content/entries/term_tool/F-104_webp.md
+F-110,,Lighthouse,term_tool,quality,drafting,,content/entries/term_tool/F-110_lighthouse.md
+F-111,,a11y,term_tool,quality,drafting,,content/entries/term_tool/F-111_a11y.md
 F-120,,PostgreSQL,term_tool,database,drafting,,content/entries/term_tool/F-120_postgresql.md
 F-121,,SQLite,term_tool,database,skeleton,,content/entries/term_tool/F-121_sqlite.md
 F-122,,Prisma,term_tool,orm,needs_review,,content/entries/term_tool/F-122_prisma.md
@@ -205,18 +205,18 @@ F-130,,OAuth,term_tool,auth,needs_review,,content/entries/term_tool/F-130_oauth.
 F-140,,Mermaid,term_tool,diagram,skeleton,,content/entries/term_tool/F-140_mermaid.md
 F-141,,PlantUML,term_tool,diagram,drafting,,content/entries/term_tool/F-141_plantuml.md
 F-150,,MIT ライセンス,term_tool,license,skeleton,,content/entries/term_tool/F-150.md
-F-151,,Apache 2.0,term_tool,license,skeleton,,content/entries/term_tool/F-151_apache_2_0.md
-F-152,,GPL,term_tool,license,skeleton,,content/entries/term_tool/F-152_gpl.md
-F-153,,Creative Commons (CC),term_tool,license,skeleton,,content/entries/term_tool/F-153_creative_commons.md
+F-151,,Apache 2.0,term_tool,license,drafting,,content/entries/term_tool/F-151_apache_2_0.md
+F-152,,GPL,term_tool,license,drafting,,content/entries/term_tool/F-152_gpl.md
+F-153,,Creative Commons,term_tool,license,drafting,title を Creative Commons に修正（括弧除去）,content/entries/term_tool/F-153_creative_commons.md
 F-154,,OSS,term_tool,license,skeleton,,content/entries/term_tool/F-154_oss.md
 F-160,,DOM,term_tool,web_foundation,skeleton,,content/entries/term_tool/F-160_dom.md
 F-161,,SSR,term_tool,web_foundation,skeleton,,content/entries/term_tool/F-161_ssr.md
-F-162,,SSG,term_tool,web_foundation,skeleton,,content/entries/term_tool/F-162_ssg.md
-F-170,,EC2,term_tool,cloud_service,skeleton,,content/entries/term_tool/F-170_ec2.md
-F-171,,S3,term_tool,cloud_service,skeleton,,content/entries/term_tool/F-171_s3.md
-F-172,,IAM,term_tool,cloud_service,skeleton,,content/entries/term_tool/F-172_iam.md
-F-180,,OpenGL,term_tool,graphics,skeleton,,content/entries/term_tool/F-180_opengl.md
-F-181,,WebGL,term_tool,graphics,skeleton,,content/entries/term_tool/F-181_webgl.md
+F-162,,SSG,term_tool,web_foundation,needs_review,,content/entries/term_tool/F-162_ssg.md
+F-170,,EC2,term_tool,cloud_service,needs_review,,content/entries/term_tool/F-170_ec2.md
+F-171,,S3,term_tool,cloud_service,drafting,,content/entries/term_tool/F-171_s3.md
+F-172,,IAM,term_tool,cloud_service,needs_review,,content/entries/term_tool/F-172_iam.md
+F-180,,OpenGL,term_tool,graphics,needs_review,,content/entries/term_tool/F-180_opengl.md
+F-181,,WebGL,term_tool,graphics_api,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-181_webgl.md
 F-190,,サブルーチン,term_tool,programming_basic,skeleton,古典的概念,content/entries/term_tool/F-190.md
 F-200,,Rust,term_tool,language,skeleton,F-1〜9 言語サブが満杯のため新サブ「追加言語」F-200〜209 を新設（2026-04-29）,content/entries/term_tool/F-200_rust.md
 G-1,,Context (コンテキスト),term_llm,basic,needs_review,,content/entries/term/G-1_context.md
@@ -341,12 +341,12 @@ J-74,,RTX シリーズ,term_general,hardware,skeleton,,content/entries/term_gene
 J-75,,Tensor コア,term_general,hardware,skeleton,,content/entries/term_general/J-75.md
 J-76,,CPU,term_general,hardware,drafting,,content/entries/term_general/J-76_cpu.md
 J-77,,GPU (概念),term_general,hardware,skeleton,,content/entries/term_general/J-77_gpu.md
-J-78,,HDD,term_general,hardware,skeleton,,content/entries/term_general/J-78_hdd.md
-J-79,,SSD,term_general,hardware,skeleton,,content/entries/term_general/J-79_ssd.md
+J-78,,HDD,term_general,hardware,needs_review,2026-04-30 entry-writer 執筆,content/entries/term_general/J-78_hdd.md
+J-79,,SSD,term_general,hardware,needs_review,2026-04-30 entry-writer 執筆,content/entries/term_general/J-79_ssd.md
 J-80,,SATA,term_general,hardware,skeleton,,content/entries/term_general/J-80_sata.md
-J-81,,M.2,term_general,hardware,skeleton,,content/entries/term_general/J-81_m_2.md
-J-90,,GUI,term_general,ui_os,skeleton,,content/entries/term_general/J-90_gui.md
-J-91,,CLI,term_general,ui_os,skeleton,,content/entries/term_general/J-91_cli.md
-J-92,,Linux,term_general,ui_os,skeleton,,content/entries/term_general/J-92_linux.md
+J-81,,M.2,term_general,hardware,drafting,2026-04-29 entry-writer 執筆,content/entries/term_general/J-81_m_2.md
+J-90,,GUI,term_general,ui_os,drafting,,content/entries/term_general/J-90_gui.md
+J-91,,CLI,term_general,ui_os,drafting,,content/entries/term_general/J-91_cli.md
+J-92,,Linux,term_general,ui_os,drafting,,content/entries/term_general/J-92_linux.md
 J-93,,Ubuntu,term_general,ui_os,skeleton,,content/entries/term_general/J-93_ubuntu.md
 J-100,,驚き屋,term_general,community,skeleton,,content/entries/term_general/J-100.md

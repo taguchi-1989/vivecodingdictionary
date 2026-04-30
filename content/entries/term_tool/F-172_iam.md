@@ -1,69 +1,63 @@
 ---
 id: F-172
 title: IAM
+title_reading: アイエーエム
 category: term_tool
 subtype: cloud_service
-experience_level:
-reader_level:
+experience_level: partial
+reader_level: 3-4
 figure_type: structure
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-30
+related_terms:
+  - AWS
+  - EC2
+  - S3
+  - AWS MCP
+status: drafting
 ---
 
 # IAM
 
 <!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
+バイブコーディング図鑑 エントリー雛形 v2（2ページ見開き想定、iter 22 準拠）
 -->
 
 ## tagline
 
-Identity and Access Management。認証と権限の管理
+Identity and Access Management の略。「誰が」「何に」「どんな操作を」許可するかを AWS 上で一元管理する仕組みです。
 
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+ユーザー・グループ・ロール（Role）・ポリシーの 4 要素で権限を細かく設定できます。ポリシーは JSON で書き、「Effect: Allow」「Action: s3:GetObject」のように許可・拒否の対象を明示します。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+AWS コンソールでリソースを操作しようとしたとき、「権限がありません」というエラーで初めて存在に気づく方が多いです。AI エージェントに AWS を操作させる場合も、IAM ロールで許可範囲を絞ることが安全な運用の起点になります。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+IAM の 4 要素（ユーザー・グループ・ロール・ポリシー）と「誰が何にアクセスできるか」の関係を一目で把握してもらう。
+
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: IAM ポリシー（JSON の許可・拒否ルール）
+- 周辺の要素（3〜6個）: ユーザー / グループ / ロール / AWS リソース（S3・EC2 等）/ MFA
+- 関係の描き方（矢印・包含・比較）: ポリシーを人物やロールに付与する矢印、ロールが EC2 → S3 へアクセスする矢印
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Claude に S3 だけ触れる IAM ロールを作らせて、本番事故を防げました。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +66,43 @@ Identity and Access Management。認証と権限の管理
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AWS リソースへのアクセス権限を一元管理します。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+最小権限の原則を実装でき、誤操作・漏洩リスクを抑えられます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ルートアカウントの直接使用は厳禁で、ロール優先が基本です。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI エージェントや CI/CD に権限を与えるときに必須です。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ユーザー・ロール・ポリシーの 3 語の区別から始めると理解が早いです。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+ポリシー JSON の書き方、ARN、AWS Organizations
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. AWS アカウント準備 — ルートアカウントを封印し IAM ユーザーを作成する
+2. ロール設計 — EC2・Lambda 等のサービスに付与するロールを定義する
+3. ポリシー記述 — JSON で Action／Resource／Effect を指定してルールを書く
+4. 権限付与 — ロールをサービスやユーザーにアタッチして動作確認する
+5. 定期監査 — 不要な権限を削除し、アクセスキーをローテーションする
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- AWS
+- EC2
+- S3
+- AWS MCP
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,17 +110,17 @@ Identity and Access Management。認証と権限の管理
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,10 +129,10 @@ Identity and Access Management。認証と権限の管理
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: IAM の 4 要素（ユーザー・グループ・ロール・ポリシー）が AWS リソースへのアクセスを制御する関係図
+- 登場人物（いれば）: 開発者（人物）・AI エージェント（ロボットアイコン）
+- 吹き出し・心の声: 開発者「S3 だけ触れるロールを作れば安心！」、AI エージェント「ポリシーの範囲でしか動けません」
+- 中央に置くキーワード/ラベル: IAM ポリシー（JSON）
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +140,24 @@ Identity and Access Management。認証と権限の管理
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: 鍵マーク（ルートアカウント封印）
+- Step 2 のアイコン/絵柄: 設計書アイコン（ロール設計）
+- Step 3 のアイコン/絵柄: JSON ファイル（ポリシー記述）
+- Step 4 のアイコン/絵柄: コネクタ矢印（権限付与）
+- 矢印で示す流れの意図: アカウント準備 → 設計 → 記述 → 付与 → 監査の循環
 
 ## コミュニティ補完メモ
 
+- AWS（B-23）との住み分け：AWS はクラウド全体のサービス群、IAM はその中の認証・認可専用サービス。AWS エントリでは「使えるサービスの広さ」を扱い、IAM エントリでは「誰が何にアクセスできるか」の仕組みに絞る。
+- EC2（F-170）・S3（F-171）との関係：EC2 や S3 を実際に使うときにロールやポリシーで権限を制御する場面が IAM の主要ユースケース。
+- AWS MCP（I-50）との関係：AWS MCP 経由で AI が AWS リソースを操作するときも IAM ポリシーに従うため、IAM の理解が前提になる。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- AWS 公式ドキュメント「IAM とは」<https://docs.aws.amazon.com/ja_jp/IAM/latest/UserGuide/introduction.html> — checked 2026-04-30
 
 
 ## 備考
+
+- ポリシー JSON の `Action`・`Resource`・`Effect` の三つ組みは読者のつまずきポイント。「Effect: Allow」「Action: s3:GetObject」「Resource: arn:aws:s3:::bucket/*」の例を著者欄の非エンジニアのつまずきに記入してもらうと読者に刺さる。
+- ルートアカウントを使わないことは AWS セキュリティの最重要原則だが、時変情報（料金・上限値）ではないため本文に記載。

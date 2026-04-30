@@ -1,70 +1,60 @@
 ---
 id: J-91
 title: CLI
+title_reading: シーエルアイ
 category: term_general
 subtype: ui_os
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: hands_on
+reader_level: 2-3
+figure_type: comparison
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-30
+related_terms:
+  - GUI
+  - bash
+  - Claude Code
+  - PowerShell
+status: drafting
 ---
-
-# CLI
-
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
 
 ## tagline
 
-Command Line Interface。文字入力で操作する UI
-
+Command Line Interface の略。文字でコマンドを入力して操作するインターフェースです。GUI（グラフィカルユーザーインターフェース）と対をなす概念です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+テキストのコマンドを入力して、ソフトウェアやシステムを操作する仕組みです。マウスやアイコンに頼らず命令を直接伝えられるため、スクリプトによる自動化や繰り返し操作の効率化に向いています。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+Claude Code（B-7）や Codex CLI（B-8）などの AI エージェントを使い始めると、ターミナルを開く場面が増えます。また `git` や `npm` を使う開発手順の説明でも CLI が前提になっていることがあります。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+GUI と CLI の操作の違いを対比で示し、CLI がどんな場面で選ばれるかを一目で伝えます。
 
+### A. Before / After（figure_type: comparison）
+
+- Before
+  - 状況: マウスでアイコンをクリックして操作する GUI の場面
+  - 視覚要素（コード or 概念）: ウィンドウ・ボタン・メニューのイラスト
+  - つまずき: 自動化しにくく、同じ手順を繰り返すのが手間
+- After
+  - 状況: ターミナルにコマンドを打ち込む CLI の場面
+  - 視覚要素: `claude` / `git commit -m "fix"` などのコマンド入力行
+  - うれしさ: 1 行で操作が完結し、スクリプトで繰り返せる
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
-
+「Claude Code が CLI で動くので、ターミナルに慣れる練習にもなりました。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -72,81 +62,71 @@ Command Line Interface。文字入力で操作する UI
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+文字コマンドでソフトウェアを直接操作するインターフェースです。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+スクリプト化で同じ操作を自動化でき、再現性が高まります。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+コマンドは暗記不要で、AI に聞けば提案してもらえます。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI エージェントの起動やサーバー操作で必須の場面があります。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ターミナルを開いてコマンドを 1 行入力する体験が入口です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+bash、PowerShell、ターミナルエミュレータ
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
-
+1. 環境構築 — ターミナルを開き CLI でパッケージをインストールします
+2. バージョン管理 — `git` コマンドで変更を記録・共有します
+3. AI エージェント起動 — `claude` など CLI コマンドでエージェントを呼び出します
+4. スクリプト自動化 — 繰り返し作業をシェルスクリプトにまとめて実行します
+5. リモート操作 — SSH でサーバーに接続して CLI のみで保守します
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- GUI
+- bash
+- Claude Code
+- PowerShell
 
-- 用語A —
-- 用語B —
-- 用語C —
-
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
-
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: comparison）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 左に GUI（ウィンドウとマウスカーソル）、右に CLI（黒背景のターミナルに白文字コマンド）を並べた対比図
+- 登場人物: 非エンジニアの人物がキーボードに向かっている姿
+- 吹き出し・心の声: 「1行打つだけで済むんだ」「AI に聞いたら教えてくれました」
+- 中央に置くキーワード/ラベル: CLI vs GUI
+- Before / After の場合の対比ポイント: マウス操作の手間 vs キーボード 1 行の簡潔さ
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +134,24 @@ Command Line Interface。文字入力で操作する UI
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: 工具箱（環境構築）
+- Step 2 のアイコン/絵柄: git ロゴ（バージョン管理）
+- Step 3 のアイコン/絵柄: ロボット・AI（エージェント起動）
+- Step 4 のアイコン/絵柄: 歯車（自動化）
+- 矢印で示す流れの意図: 開発初期の環境整備から AI 活用・自動化まで CLI が通底していることを示す
 
 ## コミュニティ補完メモ
 
+- GUI（J-90）との住み分け：J-90 は「マウス・アイコン主体の操作形式」を主テーマにするのに対し、J-91 CLI は「文字コマンドによる操作」と AI エージェントとの接点に絞る。対義語として互いに参照する関係。
+- bash（F-81）・PowerShell（F-83）との住み分け：F-81/F-83 は特定のシェルを主題とする。J-91 は CLI という上位概念を扱い、シェルは「構成要素の一例」として触れるにとどめる。
+- Claude Code（B-7）との住み分け：B-7 はサービスとして Claude Code を主テーマにする。J-91 では「CLI が主役に戻ってきた一例」として言及する程度に抑える。
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- Wikipedia "Command-line interface" — checked 2026-04-30
+- Claude Code 公式ドキュメント（Anthropic） — checked 2026-04-30
 
 ## 備考
+
+- AI エージェント（Claude Code / Codex CLI / Gemini CLI）が CLI 中心で動く流れにより、非エンジニアにも CLI が身近になっている点を「どこで出会うか」の核心に据えた。
+- 「コマンドを覚えなくていい」という心理障壁の解消は著者コメント欄に委ねる（本文には入れない）。

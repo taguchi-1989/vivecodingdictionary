@@ -1,69 +1,61 @@
 ---
 id: F-101
 title: .ico
+title_reading: ドット アイコ
 category: term_tool
 subtype: file_format
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: hands_on
+reader_level: 2-3
+figure_type: comparison
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-30
+related_terms:
+  - SVG
+  - PNG
+  - favicon
+  - ImageMagick
+status: drafting
 ---
 
 # .ico
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-ファビコン（タブに出る小さい画像）
-
+Windows やブラウザで表示されるアイコン専用の画像形式です。複数サイズを 1 ファイルに束ねられます。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
+16×16 から 256×256 まで異なるサイズのビットマップ画像を 1 ファイルに格納できる形式です。OS やブラウザが表示先の大きさに合わせて最適なサイズを自動で選びます。
 
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
+Web サイトを作ると `favicon.ico` という名前でルートに置くよう求められます。AI に「サイトの favicon を用意して」と頼むと `.ico` ファイルの生成を提案されることがあります。Windows のショートカットアイコンとしても使われます。
 
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+1 つの `.ico` ファイルが複数サイズを内包し、表示先によって使い分けられる仕組みを示します。
+
+### B. 登場シーン（figure_type: comparison）
+
+- シーン1: ブラウザタブに 16×16 が表示される
+- シーン2: Windows デスクトップのショートカットに 48×48 が表示される
+- シーン3: 高解像度ディスプレイで 256×256 が選ばれる
+- 並べる基準: 表示先（ブラウザ・OS）ごとのサイズ自動選択
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「favicon は AI に SVG で作らせて、`.ico` は ImageMagick で変換しました。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,81 +64,73 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+複数サイズのアイコン画像を 1 ファイルに束ねる形式です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+OS が表示先に合わせて最適サイズを自動選択してくれます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+現代の Web では PNG や SVG でも favicon に使えます。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Windows アプリや IE 対応が必要なサイトで今も必要です。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+`favicon.ico` はサイトのルートに置くブラウザタブ用アイコンです。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
+SVG、PNG、ImageMagick
 
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. デザイン素材を用意 — PNG や SVG でアイコン原案を作ります
+2. サイズ展開 — 16×16 / 32×32 / 48×48 などを書き出します
+3. `.ico` に変換 — ImageMagick などで複数サイズを 1 ファイルに束ねます
+4. favicon として配置 — サイトルートに `favicon.ico` として置き、`<link>` タグで参照します
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- SVG
+- PNG
+- favicon
+- ImageMagick
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: comparison）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: 1 つの `.ico` ファイルから複数サイズが取り出される様子。ファイルアイコンを中央に置き、左にブラウザタブ（16px）、右にデスクトップショートカット（48px）、上に高解像度表示（256px）を矢印で接続する
+- 登場人物: Web 制作者が PC 画面を指さしながら「なんで 3 種類あるの？」と首をかしげているポーズ
+- 吹き出し・心の声: 「全部 `.ico` 1 個でいいんだ！」
+- 中央に置くキーワード/ラベル: `.ico` ファイル（多サイズ内包）
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +138,26 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: 鉛筆アイコン（デザイン）
+- Step 2 のアイコン/絵柄: 拡大縮小矢印（サイズ展開）
+- Step 3 のアイコン/絵柄: コンバートアイコン（変換）
+- Step 4 のアイコン/絵柄: フォルダ＋ブラウザ（配置）
+- 矢印で示す流れの意図: PNG/SVG から `.ico` を経由してサイトに組み込むまでの一方向の流れ
 
 
 ## コミュニティ補完メモ
 
+- SVG（F-9）との住み分け：SVG はベクター形式でスケーラブルだが、IE や一部 Windows 環境では `.ico` の方が確実に表示される。現代の Web では `<link rel="icon" href="icon.svg">` で SVG を使いつつ、旧環境向けに `favicon.ico` を併置するパターンが多い
+- PNG との関係：PNG 単体でも `<link rel="icon" type="image/png">` で favicon に使えるが、ブラウザ互換性や複数サイズ自動選択の点で `.ico` が依然有利な場面がある
+
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- MDN Web Docs: favicon — <https://developer.mozilla.org/ja/docs/Glossary/Favicon> — checked 2026-04-30
+- Microsoft Docs: ICO ファイル形式 — <https://docs.microsoft.com/en-us/windows/win32/uxguide/vis-icons> — checked 2026-04-30
 
 
 ## 備考
+
+- IE 対応が不要な場合は SVG または PNG の favicon で十分なケースが多い
+- `favicon.ico` をルートに置くと `<link>` タグ不要でブラウザが自動取得する慣例がある

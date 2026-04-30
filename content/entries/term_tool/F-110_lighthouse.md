@@ -1,69 +1,58 @@
 ---
 id: F-110
 title: Lighthouse
+title_reading: ライトハウス
 category: term_tool
 subtype: quality
-experience_level:
-reader_level:
+experience_level: hands_on
+reader_level: 2-4
 figure_type: structure
 page_layout: spread_v1
 start_date:
 end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-30
+related_terms:
+  - a11y
+  - GitHub Actions
+  - Core Web Vitals
+  - JavaScript
+status: drafting
 ---
 
 # Lighthouse
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-Google の Web 品質監査（性能／SEO／アクセシビリティ）
-
+Google が提供する Web ページ品質の自動診断ツールです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+Performance / Accessibility / Best Practices / SEO / PWA の 5 項目を 0〜100 点で評価します。Chrome の DevTools から即使え、CLI や CI（GitHub Actions など）にも組み込めます。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+Chrome の DevTools の「Lighthouse」タブを押すと診断が始まります。AI で書いたコードが本当に速くて検索エンジンに読まれるか確かめる手順として登場し、PR ごとの自動計測でも使われます。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+5 つのカテゴリそれぞれにスコアが出る構造を示し、数字が何を意味するかを一目で分かるようにします。
+
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: Lighthouse スコアレポート
+- 周辺の要素: Performance / Accessibility / Best Practices / SEO / PWA の 5 スコア円
+- 関係の描き方: 中央のレポート画面から 5 本の線が各スコアへ伸びる放射状
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Lighthouse スコアを Claude に渡したら、画像の遅延読み込みまで提案してもらえました。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,69 +61,62 @@ Google の Web 品質監査（性能／SEO／アクセシビリティ）
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Web ページの品質を 5 カテゴリ・100 点満点で数値化します。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+AI 生成コードの品質を人の目に頼らず機械的に確認できます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+スコアはネットワーク環境や計測タイミングで変動することがあります。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+CI に組み込むと PR ごとにスコア低下を自動検出できます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+DevTools の Lighthouse タブと LCP 2.5 秒基準を押さえるのが第一歩です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
+Core Web Vitals、a11y（F-111）、GitHub Actions（F-62）
 
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. ページ公開前に手動計測 — Chrome DevTools の Lighthouse タブで初回スコアを確認します。
+2. 問題箇所を特定 — LCP・INP・CLS など Core Web Vitals の低いスコアを読みます。
+3. AI に改善を依頼 — スコアレポートを Claude に渡し、画像最適化や遅延読み込みを提案してもらいます。
+4. CI で自動化 — Lighthouse CI を GitHub Actions に組み込み、PR ごとにスコアを計測します。
+5. 基準値を守る — LCP 2.5 秒・スコア 90 以上など閾値を設定してリグレッションを防ぎます。
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- a11y
+- GitHub Actions
+- Core Web Vitals
+- JavaScript
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,31 +125,38 @@ Google の Web 品質監査（性能／SEO／アクセシビリティ）
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: Lighthouse レポート画面の模式図。中央にスコア表示パネル、外周に 5 カテゴリのスコア円を放射状に並べる
+- 登場人物: 画面を眺めるエンジニア風の人物（横顔）
+- 吹き出し・心の声: 「Performance 65 点…画像が重いのか」と考えている
+- 中央に置くキーワード/ラベル: Lighthouse Report
 
 ### 6 視点アイコン（右ページ上段）
 
-- 共通アイコン流用（個別演出が要るときだけ書き足す）
+- 共通アイコン流用
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: ブラウザ画面（虫眼鏡）
+- Step 2 のアイコン/絵柄: スコアゲージ（低得点を指す針）
+- Step 3 のアイコン/絵柄: AI チャット吹き出し
+- Step 4 のアイコン/絵柄: GitHub ワークフロー矢印
+- 矢印で示す流れの意図: 手動確認 → 課題特定 → AI 改善 → 自動監視 の順で品質を守る循環
 
 
 ## コミュニティ補完メモ
 
+- a11y（F-111）との住み分け: F-110 は Lighthouse というツール全体、F-111 は Accessibility（a11y）という概念。Lighthouse は a11y スコアを計測する手段の一つ。
+- Core Web Vitals との関係: LCP / INP / CLS は Lighthouse の Performance カテゴリに含まれる指標。別エントリとして詳細を扱う想定。
+- GitHub Actions（F-62）との住み分け: F-62 は CI/CD の基盤、F-110 は品質計測ツール。Lighthouse CI は F-62 の上で動くアプリケーションの位置付け。
+
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- [Chrome for Developers: Lighthouse overview](https://developer.chrome.com/docs/lighthouse/overview) — checked 2026-04-30
+- [web.dev: LCP](https://web.dev/articles/lcp) — checked 2026-04-30
 
 
 ## 備考
+
+- LCP（Largest Contentful Paint）の基準値: 2.5 秒以下 Good / 2.5〜4 秒 Needs Improvement / 4 秒超 Poor。初心者がつまずきやすいため読者のつまずき例として記録。
+- Lighthouse CI は Google が提供するオープンソースの npm パッケージで、GitHub Actions などに組み込む形で使う。

@@ -1,69 +1,56 @@
 ---
 id: F-180
 title: OpenGL
+title_reading: オープンジーエル
 category: term_tool
 subtype: graphics
-experience_level:
-reader_level:
+experience_level: research_only
+reader_level: 3-4
 figure_type: structure
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 1992-01-01
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-30
+related_terms:
+  - WebGL
+  - three.js
+  - GPU
+  - NVIDIA
+status: drafting
 ---
 
 # OpenGL
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-クロスプラットフォームの 3D グラフィックス API（業界標準の古参）
-
+Open Graphics Library の略。GPU に命令を送る 3D グラフィックス API の業界標準です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+GPU（画像処理装置）と直接やり取りして、3D オブジェクトの描画・変換・テクスチャ合成などを行う低レベル API です。CAD・ゲームエンジン・科学可視化・VR など幅広い分野で採用されており、1992 年の公開以来クロスプラットフォームで動き続けています。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
-
+Blender や Maya など 3D 制作ツールの動作基盤として名前が出ることがあります。また WebGL（F-181）は OpenGL ES をブラウザ向けに移植したもので、three.js（F-14）の裏でも OpenGL 系の仕様が動いています。AI の 3D 可視化コードを読む場面で遭遇しやすい用語です。
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+OpenGL がソフトウェアと GPU をつなぐ「通訳」として機能する構造を示します。
 
+### C. 概念図（figure_type: structure）
+
+- 中心に置く概念: OpenGL API
+- 周辺の要素: アプリケーション / シェーダープログラム / GPU / 画面出力 / OpenGL ES / WebGL
+- 関係の描き方: アプリ → OpenGL → GPU → 画面出力の縦方向矢印。OpenGL ES・WebGL は派生として右に分岐
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「OpenGL の知識があれば WebGL の AI 出力コードもすぐ読み解けますよ。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,69 +59,61 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+GPU へ描画命令を送る低レベル API の標準です。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+一度習得するとWebGL や OpenGL ES にも知識が転用できます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+Vulkan・Metal・DirectX への移行が進み、新規採用は減っています。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+3D 可視化・ゲーム・CAD の動作原理を理解したい場面で役立ちます。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+「GPU に命令を送る API」という役割と派生の WebGL を押さえれば十分です。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
-
+WebGL、Vulkan、three.js
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. 3D 要件の確認 — CAD・VR・可視化など目的に合わせて API を選ぶ
+2. 環境セットアップ — OpenGL 対応ドライバとライブラリをインストールする
+3. シェーダー記述 — GLSL で頂点・フラグメントシェーダーを書く
+4. 描画ループ実装 — 毎フレーム GPU へ命令を送り画面を更新する
+5. 出力確認 — ウィンドウまたはブラウザ（WebGL）で描画結果を確認する
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
+- WebGL
+- three.js
+- GPU
+- NVIDIA
 
-- 用語A —
-- 用語B —
-- 用語C —
 
-
-<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+<!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -143,10 +122,10 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### メイン図（左ページ中段 / figure_type: structure）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: アプリ → OpenGL API → GPU → 画面出力の縦方向フロー。右側に OpenGL ES・WebGL の派生ラインを添える
+- 登場人物（いれば）: 開発者（男性 or 女性）がコードを書いている姿
+- 吹き出し・心の声: 「GPU に命令送ったら画面が動いた！」
+- 中央に置くキーワード/ラベル: OpenGL
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +133,28 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
+- Step 1 のアイコン/絵柄: チェックリスト（要件確認）
+- Step 2 のアイコン/絵柄: レンチ（環境セットアップ）
+- Step 3 のアイコン/絵柄: コードファイル（シェーダー記述）
+- Step 4 のアイコン/絵柄: 循環矢印（描画ループ）
+- Step 5 のアイコン/絵柄: モニター画面（出力確認）
+- 矢印で示す流れの意図: 設計 → 実装 → 確認の直線フロー
 
 
 ## コミュニティ補完メモ
 
+- WebGL（F-181）との住み分け：WebGL は OpenGL ES をブラウザ環境へ移植したもの。本エントリはデスクトップ・ネイティブ環境での OpenGL を主軸に扱う
+- Vulkan との住み分け：Vulkan は OpenGL より低レベルで高効率。新規プロジェクトでは Vulkan が選ばれることが増えているが、既存ソフト（Blender 等）は OpenGL を継続使用しており当面共存
+- three.js（F-14）との住み分け：three.js は WebGL（OpenGL 派生）の上位抽象。本エントリは仕様の源流として言及する程度にとどめる
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
-
+- Khronos Group — OpenGL Overview <https://www.khronos.org/opengl/> — checked 2026-04-30
+- Khronos Group — OpenGL 4.6 Release (2017) — checked 2026-04-30
 
 ## 備考
+
+- OpenGL 4.6 は 2017 年リリース。以降バージョンアップは行われておらず、新機能追加は Vulkan へ移行している
+- Apple は macOS 10.14（Mojave）で OpenGL を deprecated と宣言。Metal が主力
+- Android の OpenGL ES はモバイルゲームや AI 推論 UI で現役
+- 「Vulkan に置き換わった」と誤解されやすいが、多くの既存アプリは OpenGL で動き続けており共存状態

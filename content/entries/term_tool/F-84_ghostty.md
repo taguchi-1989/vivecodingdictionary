@@ -1,69 +1,59 @@
 ---
 id: F-84
 title: Ghostty
+title_reading: ゴースティ
 category: term_tool
 subtype: terminal
-experience_level:
-reader_level:
-figure_type: structure
+experience_level: hands_on
+reader_level: 3-4
+figure_type: comparison
 page_layout: spread_v1
-start_date:
-end_date:
-version_status:
-pricing_note:
-evaluation_date: 2026-04-28
-related_terms: []
-status: skeleton
+start_date: 2024-12-26
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-30
+related_terms:
+  - bash
+  - Claude Code
+  - WSL
+  - Warp
+status: drafting
 ---
 
 # Ghostty
 
-<!--
-バイブコーディング図鑑 スケルトン雛形 v1（2026-04-28 追加）
-- 構造だけ先に置いた状態。本文は status を `drafting` に上げた段階で entry-writer が埋める
-- validator は status: skeleton を archived/sample と同様にスキップする
-- tagline には entry_candidates.md の「一言」を仮で流し込んでいる（本書きで磨き直す）
-
-YAML 補足（本書きで埋める／見直す欄）:
-- subtype: candidate.csv の subtype 列を流し込み済み（後で見直す）
-- experience_level: hands_on / partial / research_only
-- reader_level: 1〜6
-- figure_type: before_after / structure / comparison / workflow / timeline（仮で structure を入れている）
-- version_status: active / preview / deprecated（時変なら埋める）
-- pricing_note: none / paid / freemium（時変なら埋める）
-- related_terms: 3〜5 個目安
-- status: skeleton → drafting → needs_review → ready
--->
-
 ## tagline
 
-新興の高速ターミナルエミュレータ（Mitchell Hashimoto 作）
-
+GPU 描画で動く高速ターミナルエミュレータです。AI エージェントの長文出力も滑らかに流せます。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-<!-- 60〜200 字（推奨 80〜150）。役割と仕組みを 2〜4 文で。本書きで埋める。 -->
-
+ターミナルエミュレータ（端末画面）とは、コマンドを打ち込む「黒い画面」のアプリ自体を指します。Ghostty は GPU レンダリングによる高速描画と、300 以上の設定項目による細かなカスタマイズを両立しています。
 
 ## どこで出会うか
 
-<!-- 60〜200 字（推奨 80〜150）。読者が遭遇する具体シーン。本書きで埋める。 -->
+Claude Code（CC）や bash などを日常的に使う開発者が乗り換え先として話題にします。AI エージェントが大量のテキストを出力する場面でも描画が詰まりにくく、バイブコーディング環境の整備記事でよく名前が出ます。
 
 
 ## メイン図
 
 ### 図の狙い
 
-<!-- 1〜2 文。この図で読者に何を掴んでもらうか。本書きで埋める。 -->
+「ターミナルエミュレータ」と「シェル」の役割分担を一枚の図で示し、Ghostty がどのレイヤーに属するかを明確にする。
+
+### B. 登場シーン（figure_type: comparison）
+
+- シーン1: 開発者がターミナルアプリ（Ghostty）を開く → 中で bash や zsh（シェル）が起動する
+- シーン2: Claude Code が長文ログを出力 → Ghostty の GPU 描画でスクロールが滑らか
+- シーン3: Kitty グラフィックスプロトコル対応ツールを使う → 画像プレビューなどが表示される
+- 並べる基準: ターミナル（外箱）とシェル（中身）という階層関係
 
 
 ## 会話での使い方例
 
-<!-- 25〜50 字（推奨 30〜40）、1 文。本書きで埋める。 -->
-
-「」
+「Ghostty に乗り換えたら、Claude Code の長文出力もスクロールが滑らかでした。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -72,51 +62,44 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 1. 役割
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ターミナルエミュレータとして、シェルとやり取りする画面を提供します。
 
 ### 2. うれしさ
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+GPU 描画で AI の大量テキスト出力でも描画が快適に保たれます。
 
 ### 3. 注意点
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+macOS・Linux 対応で、Windows は対応を検討中です（2026-04-30 時点）。
 
 ### 4. どこで役立つか
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+バイブコーディングで AI エージェントを長時間動かす環境で重宝します。
 
 ### 5. はじめに
 
-<!-- 15〜40 字、1 文。本書きで埋める。 -->
-
+ターミナルはアプリ、シェルはその中身という層の違いを把握しておくと理解が早まります。
 
 ### 6. 深掘り先
 
-<!-- 15〜50 字、1〜3 語をカンマ区切り。本書きで埋める。 -->
+bash、WSL、Warp
 
 
 ## 開発フローでの位置（必須）
 
-<!-- 4〜5 ステップ。本書きで埋める。 -->
-
-1. 
-2. 
-3. 
-4. 
+1. 環境構築 — Ghostty をインストールし、起動画面と設定ファイルの場所を確認します
+2. シェル連携 — bash や zsh をデフォルトシェルに設定し、プロンプトが表示されるか確認します
+3. AI ツール起動 — ターミナル内で Claude Code などを起動し、出力の描画速度を体感します
+4. カスタマイズ — 300 以上の設定項目からフォント・色・スクロール量を好みに合わせます
+5. 運用 — 作業ログをスクロールで追いながら、AI エージェントの出力を読み取ります
 
 
 ## 関連用語
 
-<!-- 3〜5 個。本書きで埋める。YAML の related_terms と一致させる。 -->
-
-- 用語A —
-- 用語B —
-- 用語C —
+- bash
+- Claude Code
+- WSL
+- Warp
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
@@ -124,29 +107,28 @@ YAML 補足（本書きで埋める／見直す欄）:
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+-
+-
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
-
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 
 ## 誌面ポンチ絵メモ
 
-### メイン図（左ページ中段 / figure_type: structure）
+### メイン図（左ページ中段 / figure_type: comparison）
 
-- 描く内容: 
-- 登場人物（いれば）: 
-- 吹き出し・心の声: 
-- 中央に置くキーワード/ラベル: 
+- 描く内容: ターミナルエミュレータ（外箱）とシェル（内部）の二層構造。左にシェルなし・もたつく旧環境、右に Ghostty + bash のスムーズな環境を並べる
+- 登場人物: ノートPC を見つめる開発者（1名）
+- 吹き出し・心の声: 「スクロールが滑らか！」「やっと AI の出力を追えた」
+- 中央に置くキーワード/ラベル: Ghostty（外箱）／ bash（中身）
 
 ### 6 視点アイコン（右ページ上段）
 
@@ -154,20 +136,29 @@ YAML 補足（本書きで埋める／見直す欄）:
 
 ### 開発フロー図（右ページ下段）
 
-- Step 1 のアイコン/絵柄: 
-- Step 2 のアイコン/絵柄: 
-- Step 3 のアイコン/絵柄: 
-- Step 4 のアイコン/絵柄: 
-
+- Step 1 のアイコン/絵柄: インストールアイコン（ダウンロード矢印）
+- Step 2 のアイコン/絵柄: ターミナル画面 + シェルプロンプト
+- Step 3 のアイコン/絵柄: AI ロボット + 長いテキスト
+- Step 4 のアイコン/絵柄: スライダー・設定歯車
+- Step 5 のアイコン/絵柄: スクロールバー + 目のアイコン
+- 矢印で示す流れの意図: インストールから日常運用までの順序
 
 ## コミュニティ補完メモ
+
+- Warp（B 系ツール）との住み分け：Warp は AI 機能を内蔵した統合ターミナル。Ghostty は AI 非内蔵の高速描画特化ターミナルで、外部 AI ツールを組み合わせて使う。
+- iTerm2 との住み分け：iTerm2 は macOS の老舗ターミナルで機能豊富だが描画速度は Ghostty より遅い場面がある。
+- F-81 bash との関係：bash はシェル（コマンド解釈プログラム）、Ghostty はそのシェルを動かす外箱（エミュレータ）。層が異なる。
+- F-82 WSL との関係：WSL（Windows Subsystem for Linux）は Windows 上に Linux 環境を作る仕組みで、Ghostty のターミナル画面から WSL に接続して使うパターンがある。
 
 
 ## 出典メモ
 
-<!-- 形式: URL または誌名 — checked YYYY-MM-DD -->
-
-- 
+- <https://ghostty.org/> — checked 2026-04-30
+- <https://github.com/ghostty-org/ghostty> — checked 2026-04-30
 
 
 ## 備考
+
+- Windows 対応は 2026-04-30 時点で研究段階（"Tier 3" として issue あり）。将来変わる可能性があるため version_status: active のまま出典メモに記載。
+- 開発者は Mitchell Hashimoto（Vagrant・Terraform を擁する HashiCorp の共同創業者）。HashiCorp 退任後の個人プロジェクトとして開発。
+- Zig 言語で書かれており、低レベル最適化による高速化が特徴。
