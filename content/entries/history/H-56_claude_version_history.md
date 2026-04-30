@@ -5,6 +5,7 @@ category: history
 subtype: timeline
 experience_level: research_only
 reader_level: 2-3
+importance: C
 figure_type: timeline
 page_layout: spread_v1
 start_date: 2023-03

@@ -6,6 +6,7 @@ category: term_tool
 subtype: license
 experience_level: research_only
 reader_level: 3-5
+importance: E
 figure_type: structure
 page_layout: spread_v1
 start_date:

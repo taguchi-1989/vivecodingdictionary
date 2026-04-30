@@ -6,6 +6,7 @@ category: term_llm
 subtype: basic
 experience_level: hands_on
 reader_level: 2
+importance: B
 figure_type: structure
 page_layout: spread_v1
 version_status: active

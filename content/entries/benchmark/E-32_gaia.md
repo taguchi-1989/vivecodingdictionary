@@ -6,6 +6,7 @@ category: benchmark
 subtype: agent
 experience_level: research_only
 reader_level: 3-5
+importance: E
 figure_type: comparison
 page_layout: spread_v1
 start_date: 2023-11-01

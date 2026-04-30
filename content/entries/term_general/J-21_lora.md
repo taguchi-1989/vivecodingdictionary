@@ -6,6 +6,7 @@ category: term_general
 subtype: data_learning
 experience_level: partial
 reader_level: 3-5
+importance: D
 figure_type: before_after
 page_layout: spread_v1
 start_date:

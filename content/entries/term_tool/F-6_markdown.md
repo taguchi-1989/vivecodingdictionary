@@ -6,6 +6,7 @@ category: term_tool
 subtype: language
 experience_level: partial
 reader_level: "2"
+importance: C
 figure_type: before_after
 page_layout: spread_v1
 start_date:

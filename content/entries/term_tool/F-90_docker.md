@@ -6,6 +6,7 @@ category: term_tool
 subtype: container
 experience_level: partial
 reader_level: 3
+importance: C
 figure_type: structure
 page_layout: spread_v1
 version_status: active

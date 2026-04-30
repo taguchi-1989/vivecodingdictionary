@@ -6,6 +6,7 @@ category: model
 subtype: ai_solution
 experience_level: research_only
 reader_level: 2-3
+importance: E
 figure_type: structure
 page_layout: spread_v1
 start_date: 2024-01-01

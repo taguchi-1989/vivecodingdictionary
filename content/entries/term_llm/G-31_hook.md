@@ -6,6 +6,7 @@ category: term_llm
 subtype: control
 experience_level: partial
 reader_level: 3
+importance: D
 figure_type: workflow
 page_layout: spread_v1
 start_date:

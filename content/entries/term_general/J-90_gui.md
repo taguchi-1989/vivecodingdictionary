@@ -6,6 +6,7 @@ category: term_general
 subtype: ui_os
 experience_level: partial
 reader_level: 1-2
+importance: C
 figure_type: comparison
 page_layout: spread_v1
 start_date:

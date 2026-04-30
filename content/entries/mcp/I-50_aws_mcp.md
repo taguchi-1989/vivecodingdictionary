@@ -6,6 +6,7 @@ category: mcp
 subtype: cloud
 experience_level: hands_on
 reader_level: 3-4
+importance: D
 figure_type: structure
 page_layout: spread_v1
 start_date: 2024-12

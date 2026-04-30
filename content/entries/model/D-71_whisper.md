@@ -6,6 +6,7 @@ category: model
 subtype: voice_audio
 experience_level: partial
 reader_level: 3
+importance: D
 figure_type: workflow
 page_layout: spread_v1
 start_date: 2022

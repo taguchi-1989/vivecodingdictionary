@@ -6,6 +6,7 @@ category: term_general
 subtype: data_learning
 experience_level: research_only
 reader_level: 3
+importance: D
 figure_type: workflow
 page_layout: spread_v1
 start_date:

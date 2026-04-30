@@ -6,6 +6,7 @@ category: term_general
 subtype: data_learning
 experience_level: research_only
 reader_level: 2-3
+importance: C
 figure_type: structure
 page_layout: spread_v1
 start_date:

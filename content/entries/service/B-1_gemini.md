@@ -6,6 +6,7 @@ category: service
 subtype: ai_assistant
 experience_level: research_only
 reader_level: 2
+importance: A
 figure_type: structure
 page_layout: spread_v1
 start_date: 2024-02

@@ -6,6 +6,7 @@ category: service
 subtype: ai_assistant
 experience_level: hands_on
 reader_level: 1-2
+importance: C
 figure_type: comparison
 page_layout: spread_v1
 start_date: 2023-02-01

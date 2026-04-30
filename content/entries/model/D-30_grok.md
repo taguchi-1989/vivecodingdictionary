@@ -6,6 +6,7 @@ category: model
 subtype: xai
 experience_level: partial
 reader_level: 2
+importance: B
 figure_type: timeline
 page_layout: spread_v1
 start_date: 2023

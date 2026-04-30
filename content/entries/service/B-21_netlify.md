@@ -6,6 +6,7 @@ category: service
 subtype: hosting_cloud
 experience_level: partial
 reader_level: "2-3"
+importance: C
 figure_type: structure
 page_layout: spread_v1
 start_date:

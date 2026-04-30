@@ -6,6 +6,7 @@ category: term_tool
 subtype: graphics_api
 experience_level: partial
 reader_level: 3-4
+importance: E
 figure_type: structure
 page_layout: spread_v1
 start_date:

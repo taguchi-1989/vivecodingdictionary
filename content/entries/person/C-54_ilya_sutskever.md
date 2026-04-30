@@ -6,6 +6,7 @@ category: person
 subtype: person
 experience_level: research_only
 reader_level: 3-5
+importance: D
 figure_type: timeline
 page_layout: spread_v1
 start_date:

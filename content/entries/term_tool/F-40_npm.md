@@ -6,6 +6,7 @@ category: term_tool
 subtype: cli_build
 experience_level: hands_on
 reader_level: 2
+importance: C
 figure_type: workflow
 page_layout: spread_v1
 version_status: active

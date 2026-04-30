@@ -9,6 +9,7 @@ subtype: methodology
 # ── 読者・体験 ──
 experience_level: research_only
 reader_level: 3-4
+importance: C
 
 # ── 誌面形式 ──
 figure_type: structure

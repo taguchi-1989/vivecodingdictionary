@@ -6,6 +6,7 @@ category: service
 subtype: managed_ai
 experience_level: research_only
 reader_level: "3-5"
+importance: C
 figure_type: structure
 page_layout: spread_v1
 start_date:

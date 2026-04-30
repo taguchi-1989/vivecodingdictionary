@@ -6,6 +6,7 @@ category: term_llm
 subtype: basic
 experience_level: hands_on
 reader_level: 1
+importance: C
 figure_type: workflow
 page_layout: spread_v1
 evaluation_date: 2026-04-29

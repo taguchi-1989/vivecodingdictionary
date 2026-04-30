@@ -6,6 +6,7 @@ category: benchmark
 subtype: general
 experience_level: research_only
 reader_level: 2
+importance: B
 figure_type: workflow
 page_layout: spread_v1
 start_date: 2023

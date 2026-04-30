@@ -6,6 +6,7 @@ category: model
 subtype: open_weight_llm
 experience_level: research_only
 reader_level: 3-5
+importance: D
 figure_type: comparison
 page_layout: spread_v1
 start_date: 2023-03-01

@@ -5,6 +5,7 @@ category: term_llm
 subtype: ops
 experience_level: research_only
 reader_level: 4-5
+importance: E
 figure_type: structure
 page_layout: spread_v1
 start_date:

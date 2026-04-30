@@ -6,6 +6,7 @@ category: term_tool
 subtype: git_workflow
 experience_level: hands_on
 reader_level: 2-4
+importance: C
 figure_type: workflow
 page_layout: spread_v1
 start_date:

@@ -5,6 +5,7 @@ category: term_tool
 subtype: cli_build
 experience_level: partial
 reader_level: 2-3
+importance: C
 figure_type: workflow
 page_layout: spread_v1
 start_date:

@@ -6,6 +6,7 @@ category: model
 subtype: video_generation
 experience_level: research_only
 reader_level: 2-4
+importance: D
 figure_type: comparison
 page_layout: spread_v1
 start_date: 2024-05-14

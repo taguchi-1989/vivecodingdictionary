@@ -6,6 +6,7 @@ category: model
 subtype: image_video
 experience_level: partial
 reader_level: 2-4
+importance: D
 figure_type: before_after
 page_layout: spread_v1
 start_date: 2025-08-01

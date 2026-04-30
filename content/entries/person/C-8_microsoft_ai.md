@@ -6,6 +6,7 @@ category: person_org
 subtype: company
 experience_level: research_only
 reader_level: 2-4
+importance: C
 figure_type: structure
 page_layout: spread_v1
 start_date: 2024-03

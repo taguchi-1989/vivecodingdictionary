@@ -6,6 +6,7 @@ category: term_tool
 subtype: auth
 experience_level: partial
 reader_level: 2-4
+importance: D
 figure_type: workflow
 page_layout: spread_v1
 start_date:

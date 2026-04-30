@@ -6,6 +6,7 @@ category: service
 subtype: saas_design
 experience_level: partial
 reader_level: 2-4
+importance: B
 figure_type: structure
 page_layout: spread_v1
 start_date: 2016-09-26

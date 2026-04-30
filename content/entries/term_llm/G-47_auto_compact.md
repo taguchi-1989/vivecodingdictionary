@@ -6,6 +6,7 @@ category: term_llm
 subtype: ops
 experience_level: hands_on
 reader_level: 3-4
+importance: E
 figure_type: before_after
 page_layout: spread_v1
 start_date:

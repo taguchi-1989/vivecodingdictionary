@@ -6,6 +6,7 @@ category: service
 subtype: saas_design
 experience_level: hands_on
 reader_level: 1-3
+importance: D
 figure_type: before_after
 page_layout: spread_v1
 start_date: 2020-01-01

@@ -6,6 +6,7 @@ category: term_tool
 subtype: cli_build
 experience_level: hands_on
 reader_level: 3-4
+importance: C
 figure_type: comparison
 page_layout: spread_v1
 start_date:

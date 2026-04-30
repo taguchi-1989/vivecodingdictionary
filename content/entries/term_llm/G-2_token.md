@@ -6,6 +6,7 @@ category: term_llm
 subtype: basic
 experience_level: research_only
 reader_level: 2
+importance: B
 figure_type: before_after
 page_layout: spread_v1
 evaluation_date: 2026-04-29

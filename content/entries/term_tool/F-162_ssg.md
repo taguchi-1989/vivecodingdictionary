@@ -6,6 +6,7 @@ category: term_tool
 subtype: web_foundation
 experience_level: partial
 reader_level: 2-3
+importance: D
 figure_type: comparison
 page_layout: spread_v1
 start_date:

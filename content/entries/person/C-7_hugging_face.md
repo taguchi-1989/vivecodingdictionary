@@ -6,6 +6,7 @@ category: person_org
 subtype: company
 experience_level: partial
 reader_level: "2-3"
+importance: B
 figure_type: structure
 page_layout: spread_v1
 start_date: 2016

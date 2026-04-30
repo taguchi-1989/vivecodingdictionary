@@ -6,6 +6,7 @@ category: term_llm
 subtype: technique
 experience_level: partial
 reader_level: 3-4
+importance: C
 figure_type: before_after
 page_layout: spread_v1
 start_date: 2024-08-01

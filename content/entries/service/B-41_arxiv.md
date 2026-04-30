@@ -6,6 +6,7 @@ category: service
 subtype: info_source
 experience_level: research_only
 reader_level: 3-5
+importance: D
 figure_type: structure
 page_layout: spread_v1
 start_date: 1991-08-14

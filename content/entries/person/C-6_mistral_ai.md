@@ -6,6 +6,7 @@ category: person_org
 subtype: company
 experience_level: partial
 reader_level: 2-4
+importance: C
 figure_type: comparison
 page_layout: spread_v1
 start_date: 2023-04-01

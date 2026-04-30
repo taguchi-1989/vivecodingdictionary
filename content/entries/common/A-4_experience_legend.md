@@ -6,6 +6,7 @@ category: common
 subtype: meta
 experience_level: hands_on
 reader_level: 1
+importance: A
 figure_type: structure
 page_layout: spread_v1
 start_date:

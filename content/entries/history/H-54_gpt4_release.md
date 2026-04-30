@@ -6,6 +6,7 @@ category: history
 subtype: event
 experience_level: research_only
 reader_level: 1
+importance: C
 figure_type: timeline
 page_layout: spread_v1
 start_date: 2023-03-14

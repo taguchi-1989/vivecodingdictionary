@@ -6,6 +6,7 @@ category: term_general
 subtype: ui_os
 experience_level: partial
 reader_level: 2-3
+importance: D
 figure_type: structure
 page_layout: spread_v1
 start_date: 1991-10-01

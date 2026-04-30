@@ -6,6 +6,7 @@ category: term_general
 subtype: hardware
 experience_level: research_only
 reader_level: 3-4
+importance: E
 figure_type: timeline
 page_layout: spread_v1
 start_date: 2024-03-01

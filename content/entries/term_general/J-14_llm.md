@@ -6,6 +6,7 @@ category: term_general
 subtype: ml_basic
 experience_level: hands_on
 reader_level: 1
+importance: A
 figure_type: structure
 page_layout: spread_v1
 version_status: active

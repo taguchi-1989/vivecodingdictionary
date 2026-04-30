@@ -5,6 +5,7 @@ category: common
 subtype: intro
 experience_level: hands_on
 reader_level: 1
+importance: A
 figure_type: structure
 page_layout: spread_v1
 evaluation_date: 2026-04-23

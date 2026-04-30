@@ -6,6 +6,7 @@ category: tool_agent
 subtype: config_file
 experience_level: partial
 reader_level: 3
+importance: C
 figure_type: structure
 page_layout: spread_v1
 start_date:

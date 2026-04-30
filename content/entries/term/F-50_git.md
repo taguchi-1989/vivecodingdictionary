@@ -6,6 +6,7 @@ category: term_tool
 subtype: git
 experience_level: hands_on
 reader_level: 2
+importance: C
 figure_type: before_after
 page_layout: spread_v1
 version_status: active

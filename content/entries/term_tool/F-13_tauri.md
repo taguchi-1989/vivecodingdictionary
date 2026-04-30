@@ -9,6 +9,7 @@ subtype: framework
 # ── 読者・体験 ──
 experience_level: partial
 reader_level: 3-4
+importance: D
 
 # ── 誌面形式 ──
 figure_type: comparison

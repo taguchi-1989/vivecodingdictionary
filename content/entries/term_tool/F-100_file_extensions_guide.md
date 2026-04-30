@@ -5,6 +5,7 @@ category: term_tool
 subtype: file_format
 experience_level: partial
 reader_level: 1-2
+importance: B
 figure_type: structure
 page_layout: spread_v1
 start_date:

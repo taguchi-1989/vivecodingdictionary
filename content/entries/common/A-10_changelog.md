@@ -9,6 +9,7 @@ subtype: meta
 # ── 読者・体験 ──
 experience_level: research_only
 reader_level: 1
+importance: A
 
 # ── 誌面形式 ──
 figure_type: timeline

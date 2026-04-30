@@ -6,6 +6,7 @@ category: service
 subtype: ai_assistant
 experience_level: partial
 reader_level: "2-3"
+importance: C
 figure_type: comparison
 page_layout: spread_v1
 start_date: 2024-11-01

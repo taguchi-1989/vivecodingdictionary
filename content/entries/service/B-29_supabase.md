@@ -6,6 +6,7 @@ category: service
 subtype: baas
 experience_level: hands_on
 reader_level: 2-4
+importance: C
 figure_type: structure
 page_layout: spread_v1
 start_date: 2020-01-01

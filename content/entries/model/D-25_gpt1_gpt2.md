@@ -6,6 +6,7 @@ category: model
 subtype: openai
 experience_level: research_only
 reader_level: 2-3
+importance: E
 figure_type: timeline
 page_layout: spread_v1
 start_date: 2018
