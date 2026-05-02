@@ -1,6 +1,6 @@
 # 要直しキュー（revision queue）
 
-*自動生成: 2026-05-02 01:35 / `scripts/update_review_queue.py`*
+*自動生成: 2026-05-02 01:53 / `scripts/update_review_queue.py`*
 
 1 画面で「次やるべき・見直すべき・適合済み」が見えるダッシュボード。`scripts/validate_entry.py` のチェックを全件で走らせた結果を集計して再生成しています。手で編集しないでください。
 
@@ -16,7 +16,7 @@
 
 _なし_
 
-## ⚠️ 警告あり（軽微超過 / 著者か entry-writer で手当て）（257 件）
+## ⚠️ 警告あり（軽微超過 / 著者か entry-writer で手当て）（258 件）
 
 | ID | title | status | 概要 |
 | :-- | :-- | :-- | :-- |
@@ -29,6 +29,7 @@ _なし_
 | B-16 | Microsoft 365 Copilot | drafting | ⚠ 287 字（目安 155-250、+37 字超過） |
 | B-18 | Aqua Voice | drafting | ⚠ 266 字（目安 155-250、+16 字超過） |
 | B-19 | Claude Cowork | drafting | ⚠ 68 字（目安 25-60、+8 字超過）; ⚠ 65 字（目安 25-50、+15 字超過）; ⚠ 209 字（目安 80-180、+29 字超過） |
+| B-2 | Claude | needs_review | ⚠ 「非エンジニアのつまずき」に記入あり（- システムエンジニアからの評価が高い理由が最初わからなかった; ⚠ 「私のコメント」の 第一印象 に記入あり（環境構築が思ったより大変でした（VS Code 拡張や N; ⚠ 「私のコメント」の 良い点 に記入あり（Claude Code がファイル編集まで自動実行してくれた |
 | B-21 | Netlify | drafting | ⚠ 258 字（目安 155-250、+8 字超過） |
 | B-22 | Cloudflare | drafting | ⚠ 274 字（目安 155-250、+24 字超過） |
 | B-24 | Google Cloud | drafting | ⚠ 52 字（目安 25-50、+2 字超過） |
@@ -282,13 +283,12 @@ _なし_
 
 _なし（drafting で全パスしたものは自動で needs_review に上がります）_
 
-## 📝 著者レビュー待ち（needs_review・全パス）（83 件）
+## 📝 著者レビュー待ち（needs_review・全パス）（82 件）
 
 | ID | title | status | 概要 |
 | :-- | :-- | :-- | :-- |
 | B-13 | ElevenLabs | needs_review | — |
 | B-17 | Edge Copilot | needs_review | — |
-| B-2 | Claude | needs_review | — |
 | B-20 | Vercel | needs_review | — |
 | B-23 | AWS | needs_review | — |
 | B-28 | Render | needs_review | — |
