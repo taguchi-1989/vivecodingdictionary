@@ -20,7 +20,7 @@ related_terms:
   - Max
   - API
   - Anthropic
-status: needs_review
+status: ready
 ---
 
 # Claude の料金プラン
