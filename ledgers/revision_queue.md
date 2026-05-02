@@ -1,6 +1,6 @@
 # 要直しキュー（revision queue）
 
-*自動生成: 2026-05-02 06:33 / `scripts/update_review_queue.py`*
+*自動生成: 2026-05-02 06:36 / `scripts/update_review_queue.py`*
 
 1 画面で「次やるべき・見直すべき・適合済み」が見えるダッシュボード。`scripts/validate_entry.py` のチェックを全件で走らせた結果を集計して再生成しています。手で編集しないでください。
 
@@ -16,7 +16,7 @@
 
 _なし_
 
-## ⚠️ 警告あり（軽微超過 / 著者か entry-writer で手当て）（260 件）
+## ⚠️ 警告あり（軽微超過 / 著者か entry-writer で手当て）（261 件）
 
 | ID | title | status | 概要 |
 | :-- | :-- | :-- | :-- |
@@ -24,6 +24,7 @@ _なし_
 | B-10 | Devin | drafting | ⚠ 294 字（目安 155-250、+44 字超過） |
 | B-11 | Bolt.new | drafting | ⚠ 288 字（目安 155-250、+38 字超過） |
 | B-12 | Perplexity | drafting | ⚠ 強い断定語「最新」が入っている可能性（要確認） |
+| B-13 | ElevenLabs | needs_review | ⚠ 「非エンジニアのつまずき」に記入あり（- そもそも聞いたことがなく、何のサービスかわからない人が多い; ⚠ 「私のコメント」の 第一印象 に記入あり（AI ニュースで紹介された音声があまりに自然でびっくりしま; ⚠ 「私のコメント」の 良い点 に記入あり（感情のこもった言い回しを軽く出せます） — 著者の記入なら  |
 | B-14 | Genspark | drafting | ⚠ 283 字（目安 155-250、+33 字超過） |
 | B-15 | Microsoft Copilot | drafting | ⚠ 63 字（目安 25-60、+3 字超過）; ⚠ 258 字（目安 155-250、+8 字超過） |
 | B-16 | Microsoft 365 Copilot | drafting | ⚠ 287 字（目安 155-250、+37 字超過） |
@@ -285,11 +286,10 @@ _なし_
 
 _なし（drafting で全パスしたものは自動で needs_review に上がります）_
 
-## 📝 著者レビュー待ち（needs_review・全パス）（80 件）
+## 📝 著者レビュー待ち（needs_review・全パス）（79 件）
 
 | ID | title | status | 概要 |
 | :-- | :-- | :-- | :-- |
-| B-13 | ElevenLabs | needs_review | — |
 | B-17 | Edge Copilot | needs_review | — |
 | B-20 | Vercel | needs_review | — |
 | B-23 | AWS | needs_review | — |
