@@ -19,7 +19,7 @@ related_terms:
   - VS Code
   - Markdown Preview Enhanced
   - Mermaid
-status: drafting
+status: needs_review
 ---
 
 # Markdown All in One

@@ -20,7 +20,7 @@ related_terms:
   - Deep Learning
   - エンコーダー
   - デコーダー
-status: drafting
+status: needs_review
 ---
 
 # Transformer

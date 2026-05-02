@@ -19,7 +19,7 @@ related_terms:
   - DeepSeek V3
   - Qwen
   - Kimi
-status: drafting
+status: needs_review
 ---
 
 # GLM

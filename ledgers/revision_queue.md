@@ -1,13 +1,14 @@
 # 要直しキュー（revision queue）
 
-*自動生成: 2026-04-30 16:34 / `scripts/update_review_queue.py`*
+*自動生成: 2026-05-02 06:37 / `scripts/update_review_queue.py`*
 
 1 画面で「次やるべき・見直すべき・適合済み」が見えるダッシュボード。`scripts/validate_entry.py` のチェックを全件で走らせた結果を集計して再生成しています。手で編集しないでください。
 
 ## status 内訳
 
-- **drafting**: 310 件
-- **needs_review**: 41 件
+- **drafting**: 258 件
+- **needs_review**: 88 件
+- **ready**: 5 件
 - **archived**: 39 件
 - **合計**: 390 件
 
@@ -15,7 +16,7 @@
 
 _なし_
 
-## ⚠️ 警告あり（軽微超過 / 著者か entry-writer で手当て）（256 件）
+## ⚠️ 警告あり（軽微超過 / 著者か entry-writer で手当て）（261 件）
 
 | ID | title | status | 概要 |
 | :-- | :-- | :-- | :-- |
@@ -23,11 +24,13 @@ _なし_
 | B-10 | Devin | drafting | ⚠ 294 字（目安 155-250、+44 字超過） |
 | B-11 | Bolt.new | drafting | ⚠ 288 字（目安 155-250、+38 字超過） |
 | B-12 | Perplexity | drafting | ⚠ 強い断定語「最新」が入っている可能性（要確認） |
+| B-13 | ElevenLabs | ready | ⚠ 「非エンジニアのつまずき」に記入あり（- そもそも聞いたことがなく、何のサービスかわからない人が多い; ⚠ 「私のコメント」の 第一印象 に記入あり（AI ニュースで紹介された音声があまりに自然でびっくりしま; ⚠ 「私のコメント」の 良い点 に記入あり（感情のこもった言い回しを軽く出せます） — 著者の記入なら  |
 | B-14 | Genspark | drafting | ⚠ 283 字（目安 155-250、+33 字超過） |
 | B-15 | Microsoft Copilot | drafting | ⚠ 63 字（目安 25-60、+3 字超過）; ⚠ 258 字（目安 155-250、+8 字超過） |
 | B-16 | Microsoft 365 Copilot | drafting | ⚠ 287 字（目安 155-250、+37 字超過） |
 | B-18 | Aqua Voice | drafting | ⚠ 266 字（目安 155-250、+16 字超過） |
 | B-19 | Claude Cowork | drafting | ⚠ 68 字（目安 25-60、+8 字超過）; ⚠ 65 字（目安 25-50、+15 字超過）; ⚠ 209 字（目安 80-180、+29 字超過） |
+| B-2 | Claude | ready | ⚠ 「非エンジニアのつまずき」に記入あり（- システムエンジニアからの評価が高い理由が最初わからなかった; ⚠ 「私のコメント」の 第一印象 に記入あり（環境構築が思ったより大変でした（VS Code 拡張や N; ⚠ 「私のコメント」の 良い点 に記入あり（Claude Code がファイル編集まで自動実行してくれた |
 | B-21 | Netlify | drafting | ⚠ 258 字（目安 155-250、+8 字超過） |
 | B-22 | Cloudflare | drafting | ⚠ 274 字（目安 155-250、+24 字超過） |
 | B-24 | Google Cloud | drafting | ⚠ 52 字（目安 25-50、+2 字超過） |
@@ -35,10 +38,13 @@ _なし_
 | B-26 | Azure OpenAI | drafting | ⚠ 198 字（目安 80-180、+18 字超過）; ⚠ 258 字（目安 155-250、+8 字超過） |
 | B-27 | Vertex AI | drafting | ⚠ 260 字（目安 155-250、+10 字超過）; ⚠ 434 字（目安 220-430、+4 字超過） |
 | B-29 | Supabase | drafting | ⚠ 64 字（目安 25-60、+4 字超過）; ⚠ 206 字（目安 80-180、+26 字超過）; ⚠ 278 字（目安 155-250、+28 字超過） |
+| B-3 | ChatGPT | ready | ⚠ 「非エンジニアのつまずき」に記入あり（- ChatGPT と Codex（同じ OpenAI 製）の; ⚠ 「私のコメント」の 第一印象 に記入あり（タイピングミスや音声認識のずれがあっても意図をくみ取ってく; ⚠ 「私のコメント」の 良い点 に記入あり（更新が早く、フロンティアモデルとしての優等生感があります。バ |
 | B-32 | Figma | drafting | ⚠ 277 字（目安 155-250、+27 字超過） |
 | B-33 | Canva | drafting | ⚠ 282 字（目安 155-250、+32 字超過） |
+| B-4 | Cursor | ready | ⚠ 「非エンジニアのつまずき」に記入あり（- Cursor を入れても VS Code との違いがよくわ; ⚠ 「私のコメント」の 第一印象 に記入あり（AI ニュース界隈で「良い」と騒がれていた印象でした） —; ⚠ 「私のコメント」の 良い点 に記入あり（コードをちゃんと書く人には良いです） — 著者の記入なら O |
 | B-40 | Reddit | drafting | ⚠ 267 字（目安 155-250、+17 字超過） |
 | B-41 | arXiv | drafting | ⚠ 214 字（目安 80-180、+34 字超過）; ⚠ 294 字（目安 155-250、+44 字超過）; ⚠ 464 字（目安 220-430、+34 字超過） |
+| B-5 | GitHub Copilot | ready | ⚠ 「非エンジニアのつまずき」に記入あり（- 「GitHub」という言葉自体にアレルギーがあり入りにくか; ⚠ 「私のコメント」の 第一印象 に記入あり（Claude Code と比べると使いづらく感じました） ; ⚠ 「私のコメント」の 良い点 に記入あり（アップデートが頻繁で、いまではエージェント的な操作もできるよ |
 | B-52 | Gemini の料金プラン | drafting | ⚠ 252 字（目安 155-250、+2 字超過） |
 | B-6 | Windsurf | drafting | ⚠ 76 字（目安 25-60、+16 字超過）; ⚠ 251 字（目安 120-240、+11 字超過）; ⚠ 284 字（目安 155-250、+34 字超過） |
 | B-60 | Suno | drafting | ⚠ 256 字（目安 155-250、+6 字超過） |
@@ -276,99 +282,93 @@ _なし_
 | J-92 | Linux | drafting | ⚠ 16 字（目安 20-50、-4 字不足） |
 | J-93 | Ubuntu | drafting | ⚠ 56 字（目安 25-50、+6 字超過）; ⚠ 209 字（目安 80-180、+29 字超過）; ⚠ 15 字（目安 20-50、-5 字不足） |
 
-## ✍️ 書きかけ（drafting・全パス済み・自動昇格漏れ）（52 件）
+## ✍️ 書きかけ（drafting・全パス済み・自動昇格漏れ）（0 件）
+
+_なし（drafting で全パスしたものは自動で needs_review に上がります）_
+
+## 📝 著者レビュー待ち（needs_review・全パス）（79 件）
 
 | ID | title | status | 概要 |
 | :-- | :-- | :-- | :-- |
-| B-13 | ElevenLabs | drafting | — |
-| B-17 | Edge Copilot | drafting | — |
-| B-28 | Render | drafting | — |
-| B-30 | Amazon Bedrock | drafting | — |
-| B-31 | Excalidraw | drafting | — |
-| C-4 | Meta AI | drafting | — |
-| C-55 | Mira Murati | drafting | — |
-| C-6 | Mistral AI | drafting | — |
-| C-80 | AI大学 | drafting | — |
-| C-82 | まさお | drafting | — |
-| D-1 | Gemini 2 系 | drafting | — |
-| D-10 | Claude 3 系 | drafting | — |
-| D-45 | GLM | drafting | — |
-| D-47 | DeepSeek R1 | drafting | — |
-| D-50 | DALL-E | drafting | — |
-| D-52 | Sora | drafting | — |
-| D-60 | AlphaGo | drafting | — |
-| E-2 | SWE-Bench Verified | drafting | — |
-| E-21 | MMLU-Pro | drafting | — |
-| E-3 | Terminal-Bench | drafting | — |
-| E-31 | WebArena | drafting | — |
-| E-50 | Chatbot Arena | drafting | — |
-| F-104 | .webp | drafting | — |
-| F-111 | a11y | drafting | — |
-| F-12 | Electron | drafting | — |
-| F-130 | OAuth | drafting | — |
-| F-141 | PlantUML | drafting | — |
-| F-151 | Apache 2.0 | drafting | — |
-| F-180 | OpenGL | drafting | — |
-| F-34 | VS Code 拡張機能 | drafting | — |
-| F-36 | Git Graph | drafting | — |
-| F-38 | Markdown All in One | drafting | — |
-| F-43 | テスト | drafting | — |
-| F-86 | ollama | drafting | — |
-| G-17 | ベクトル DB | drafting | — |
-| G-22 | SKILL.md | drafting | — |
-| G-3 | Dictation | drafting | — |
-| G-32 | Slash Command | drafting | — |
-| G-34 | Code Interpreter | drafting | — |
-| G-36 | Artifact | drafting | — |
-| G-42 | Worktree | drafting | — |
-| G-45 | 段階的開示 | drafting | — |
-| H-4 | コードレビュー | drafting | — |
-| H-54 | GPT-4 リリース | drafting | — |
-| H-61 | Preview 版という文化 | drafting | — |
-| I-80 | 自作 MCP のテンプレ | drafting | — |
-| J-13 | Transformer | drafting | — |
-| J-32 | ノイマン型 | drafting | — |
-| J-41 | DX | drafting | — |
-| J-50 | AI 倫理 | drafting | — |
-| J-62 | チューリングテスト | drafting | — |
-| J-74 | RTX シリーズ | drafting | — |
-
-## 📝 著者レビュー待ち（needs_review・全パス）（32 件）
-
-| ID | title | status | 概要 |
-| :-- | :-- | :-- | :-- |
-| B-2 | Claude | needs_review | — |
+| B-17 | Edge Copilot | needs_review | — |
 | B-20 | Vercel | needs_review | — |
 | B-23 | AWS | needs_review | — |
-| B-3 | ChatGPT | needs_review | — |
-| B-4 | Cursor | needs_review | — |
-| B-5 | GitHub Copilot | needs_review | — |
+| B-28 | Render | needs_review | — |
+| B-30 | Amazon Bedrock | needs_review | — |
+| B-31 | Excalidraw | needs_review | — |
 | B-50 | Claude の料金プラン | needs_review | — |
 | B-51 | ChatGPT の料金プラン | needs_review | — |
 | C-1 | OpenAI | needs_review | — |
 | C-2 | Anthropic | needs_review | — |
 | C-3 | Google DeepMind | needs_review | — |
+| C-4 | Meta AI | needs_review | — |
 | C-50 | Sam Altman | needs_review | — |
 | C-51 | Dario Amodei | needs_review | — |
+| C-55 | Mira Murati | needs_review | — |
+| C-6 | Mistral AI | needs_review | — |
+| C-80 | AI大学 | needs_review | — |
+| C-82 | まさお | needs_review | — |
 | C-9 | NVIDIA | needs_review | — |
+| D-1 | Gemini 2 系 | needs_review | — |
+| D-10 | Claude 3 系 | needs_review | — |
 | D-11 | Claude 3.5 系 | needs_review | — |
 | D-12 | Claude 4 系 | needs_review | — |
 | D-13 | Claude 4.5 系 | needs_review | — |
 | D-14 | Claude Mythos Preview | needs_review | — |
 | D-20 | GPT-5 系 | needs_review | — |
+| D-45 | GLM | needs_review | — |
+| D-47 | DeepSeek R1 | needs_review | — |
+| D-50 | DALL-E | needs_review | — |
+| D-52 | Sora | needs_review | — |
+| D-60 | AlphaGo | needs_review | — |
 | E-1 | SWE-Bench | needs_review | — |
+| E-2 | SWE-Bench Verified | needs_review | — |
+| E-21 | MMLU-Pro | needs_review | — |
+| E-3 | Terminal-Bench | needs_review | — |
+| E-31 | WebArena | needs_review | — |
+| E-50 | Chatbot Arena | needs_review | — |
+| F-104 | .webp | needs_review | — |
+| F-111 | a11y | needs_review | — |
+| F-12 | Electron | needs_review | — |
+| F-130 | OAuth | needs_review | — |
+| F-141 | PlantUML | needs_review | — |
+| F-151 | Apache 2.0 | needs_review | — |
+| F-180 | OpenGL | needs_review | — |
 | F-3 | Python | needs_review | — |
+| F-34 | VS Code 拡張機能 | needs_review | — |
+| F-36 | Git Graph | needs_review | — |
+| F-38 | Markdown All in One | needs_review | — |
+| F-43 | テスト | needs_review | — |
 | F-50 | git | needs_review | — |
 | F-51 | git push | needs_review | — |
 | F-52 | git pull | needs_review | — |
 | F-53 | branch | needs_review | — |
 | F-54 | commit | needs_review | — |
 | F-55 | merge | needs_review | — |
+| F-86 | ollama | needs_review | — |
+| G-17 | ベクトル DB | needs_review | — |
 | G-2 | Token | needs_review | — |
+| G-22 | SKILL.md | needs_review | — |
+| G-3 | Dictation | needs_review | — |
+| G-32 | Slash Command | needs_review | — |
+| G-34 | Code Interpreter | needs_review | — |
+| G-36 | Artifact | needs_review | — |
 | G-40 | バイブコーディング | needs_review | — |
+| G-42 | Worktree | needs_review | — |
 | G-43 | オーケストレーション | needs_review | — |
+| G-45 | 段階的開示 | needs_review | — |
+| H-4 | コードレビュー | needs_review | — |
 | H-53 | ChatGPT 登場 | needs_review | — |
+| H-54 | GPT-4 リリース | needs_review | — |
+| H-61 | Preview 版という文化 | needs_review | — |
+| I-80 | 自作 MCP のテンプレ | needs_review | — |
+| J-13 | Transformer | needs_review | — |
 | J-14 | LLM | needs_review | — |
+| J-32 | ノイマン型 | needs_review | — |
+| J-41 | DX | needs_review | — |
+| J-50 | AI 倫理 | needs_review | — |
+| J-62 | チューリングテスト | needs_review | — |
+| J-74 | RTX シリーズ | needs_review | — |
 
 ## ✅ 完成（ready・全パス）（0 件）
 

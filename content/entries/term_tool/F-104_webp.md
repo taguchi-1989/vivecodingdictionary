@@ -19,7 +19,7 @@ related_terms:
   - .ico
   - Lighthouse
   - HTML
-status: drafting
+status: needs_review
 ---
 
 # .webp

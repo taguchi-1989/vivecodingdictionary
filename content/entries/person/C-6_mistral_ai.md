@@ -18,7 +18,7 @@ related_terms:
   - B-25 Azure
   - C-1 OpenAI
   - C-2 Anthropic
-status: drafting
+status: needs_review
 ---
 
 # Mistral AI

@@ -18,7 +18,7 @@ related_terms:
   - Canvas
   - Tool Use
   - Slash Command
-status: drafting
+status: needs_review
 ---
 
 # Artifact

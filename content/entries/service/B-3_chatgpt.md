@@ -19,7 +19,7 @@ related_terms:
   - Claude
   - Gemini
   - Custom GPT
-status: needs_review
+status: ready
 ---
 
 # ChatGPT
@@ -105,17 +105,17 @@ GPT-5 系（D-20）、Custom GPT、DALL·E、OpenAI API、Operator。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
--
--
--
+- ChatGPT と Codex（同じ OpenAI 製）の位置関係がわかりにくいです
+- 無料から有料に上げて何がどう良くなるのかが見えにくいです
+- chatgpt.com・Custom GPT・API という 3 つの入口の使い分けが最初つかみにくいです
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象:
-- 👍 良い点:
-- 👎 ダメな点:
-- 👥 誰向けか:
+- 🙂 第一印象: タイピングミスや音声認識のずれがあっても意図をくみ取ってくれることに感動しました
+- 👍 良い点: 更新が早く、フロンティアモデルとしての優等生感があります。バランスが良く外れが少ないです
+- 👎 ダメな点: 特化モデルには一歩譲る時期があります（画像生成・コーディング・検索など）
+- 👥 誰向けか: あらゆる人にすすめられます。有料化時は Plus や Codex で用途別に選び直せます
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

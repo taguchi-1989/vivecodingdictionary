@@ -30,7 +30,7 @@ related_terms:
   - AlphaZero
 
 # ── 制作状態 ──
-status: drafting
+status: needs_review
 ---
 
 # AlphaGo

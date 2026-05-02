@@ -19,7 +19,7 @@ related_terms:
   - OpenAI
   - Yann LeCun
   - Google DeepMind
-status: drafting
+status: needs_review
 ---
 
 # Meta AI

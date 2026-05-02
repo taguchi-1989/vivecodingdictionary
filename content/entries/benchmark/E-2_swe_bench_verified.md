@@ -17,7 +17,7 @@ related_terms:
   - HumanEval
   - Chatbot Arena
   - Claude Code
-status: drafting
+status: needs_review
 ---
 
 # SWE-Bench Verified

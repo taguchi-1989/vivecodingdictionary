@@ -18,7 +18,7 @@ related_terms:
   - GPT-3 系
   - マルチモーダル
   - GPT-4o
-status: drafting
+status: needs_review
 ---
 
 # GPT-4 リリース

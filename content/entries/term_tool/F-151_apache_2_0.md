@@ -29,7 +29,7 @@ related_terms:
   - Llama 系
 
 # ── 制作状態 ──
-status: drafting
+status: needs_review
 ---
 
 # Apache 2.0

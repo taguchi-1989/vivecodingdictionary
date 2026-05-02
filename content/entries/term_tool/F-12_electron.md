@@ -19,7 +19,7 @@ related_terms:
   - Node.js
   - VS Code
   - Tauri
-status: drafting
+status: needs_review
 ---
 
 # Electron

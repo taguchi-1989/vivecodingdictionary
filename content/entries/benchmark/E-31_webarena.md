@@ -18,7 +18,7 @@ related_terms:
   - AgentBench
   - OSWorld
   - Playwright MCP
-status: drafting
+status: needs_review
 ---
 
 # WebArena

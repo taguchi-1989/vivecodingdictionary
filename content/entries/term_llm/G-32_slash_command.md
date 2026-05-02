@@ -20,7 +20,7 @@ related_terms:
   - CLAUDE.md
   - Hook
   - Skill
-status: drafting
+status: needs_review
 ---
 
 # Slash Command

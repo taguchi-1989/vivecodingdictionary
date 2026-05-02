@@ -19,7 +19,7 @@ related_terms:
   - Gemini 2.5 系
   - Flash
   - Vertex AI
-status: drafting
+status: needs_review
 ---
 
 # Gemini 2 系

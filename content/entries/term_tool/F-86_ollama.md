@@ -32,7 +32,7 @@ related_terms:
   - llama.cpp
 
 # ── 制作状態 ──
-status: drafting
+status: needs_review
 ---
 
 # ollama

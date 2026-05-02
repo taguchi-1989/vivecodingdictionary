@@ -20,7 +20,7 @@ related_terms:
   - オープンウェイト
   - o1 系
   - 強化学習
-status: drafting
+status: needs_review
 ---
 
 # DeepSeek R1
