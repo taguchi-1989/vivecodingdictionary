@@ -105,9 +105,9 @@ Artifacts、Computer use、Claude 4 系。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
--
--
--
+- 「Claude 3.5」と名のつくモデルが初代 3.5 Sonnet と 3.5 Sonnet v2 の 2 種類あり、どちらの話をしているのか分かりにくいです
+- 学習データが古い LLM に質問すると今でも「最新は Claude 3.5 Sonnet です」と返ってきてしまい、現役モデルの把握がずれます
+- Opus が最上位ティアと言われがちですが、3.5 系では Sonnet のほうが性能で先行していて、ティア＝性能の素朴な理解とずれて戸惑います
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
