@@ -20,7 +20,7 @@ related_terms:
   - Pro
   - OpenAI
   - API
-status: needs_review
+status: ready
 ---
 
 # ChatGPT の料金プラン
