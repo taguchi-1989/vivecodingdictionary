@@ -1,6 +1,6 @@
 # 要直しキュー（revision queue）
 
-*自動生成: 2026-05-02 11:54 / `scripts/update_review_queue.py`*
+*自動生成: 2026-05-02 12:09 / `scripts/update_review_queue.py`*
 
 1 画面で「次やるべき・見直すべき・適合済み」が見えるダッシュボード。`scripts/validate_entry.py` のチェックを全件で走らせた結果を集計して再生成しています。手で編集しないでください。
 
@@ -20,7 +20,7 @@ _なし_
 
 | ID | title | status | 概要 |
 | :-- | :-- | :-- | :-- |
-| B-1 | Gemini | needs_review | ⚠ 58 字（目安 20-50、+8 字超過） |
+| B-1 | Gemini | needs_review | ⚠ 「非エンジニアのつまずき」に記入あり（- プレビュー期間が長くモデルが安定しないので、業務で使うとき; ⚠ 58 字（目安 20-50、+8 字超過） |
 | B-10 | Devin | drafting | ⚠ 294 字（目安 155-250、+44 字超過） |
 | B-11 | Bolt.new | drafting | ⚠ 288 字（目安 155-250、+38 字超過） |
 | B-12 | Perplexity | drafting | ⚠ 強い断定語「最新」が入っている可能性（要確認） |
