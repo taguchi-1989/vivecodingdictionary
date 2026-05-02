@@ -1,6 +1,6 @@
 # 要直しキュー（revision queue）
 
-*自動生成: 2026-05-02 10:33 / `scripts/update_review_queue.py`*
+*自動生成: 2026-05-02 10:39 / `scripts/update_review_queue.py`*
 
 1 画面で「次やるべき・見直すべき・適合済み」が見えるダッシュボード。`scripts/validate_entry.py` のチェックを全件で走らせた結果を集計して再生成しています。手で編集しないでください。
 
@@ -16,7 +16,7 @@
 
 _なし_
 
-## ⚠️ 警告あり（軽微超過 / 著者か entry-writer で手当て）（264 件）
+## ⚠️ 警告あり（軽微超過 / 著者か entry-writer で手当て）（265 件）
 
 | ID | title | status | 概要 |
 | :-- | :-- | :-- | :-- |
@@ -40,6 +40,7 @@ _なし_
 | B-25 | Azure | drafting | ⚠ 65 字（目安 25-60、+5 字超過） |
 | B-26 | Azure OpenAI | drafting | ⚠ 198 字（目安 80-180、+18 字超過）; ⚠ 258 字（目安 155-250、+8 字超過） |
 | B-27 | Vertex AI | drafting | ⚠ 260 字（目安 155-250、+10 字超過）; ⚠ 434 字（目安 220-430、+4 字超過） |
+| B-28 | Render | needs_review | ⚠ 「非エンジニアのつまずき」に記入あり（- 環境変数（API キーなど）をどこに入れるかが分かりづらく; ⚠ 「私のコメント」の 第一印象 に記入あり（LLM が「このタイプなら Render」と勧めてくる選択; ⚠ 「私のコメント」の 良い点 に記入あり（Python アプリ（FastAPI / Flask など） |
 | B-29 | Supabase | drafting | ⚠ 64 字（目安 25-60、+4 字超過）; ⚠ 206 字（目安 80-180、+26 字超過）; ⚠ 278 字（目安 155-250、+28 字超過） |
 | B-3 | ChatGPT | ready | ⚠ 「非エンジニアのつまずき」に記入あり（- ChatGPT と Codex（同じ OpenAI 製）の; ⚠ 「私のコメント」の 第一印象 に記入あり（タイピングミスや音声認識のずれがあっても意図をくみ取ってく; ⚠ 「私のコメント」の 良い点 に記入あり（更新が早く、フロンティアモデルとしての優等生感があります。バ |
 | B-32 | Figma | drafting | ⚠ 277 字（目安 155-250、+27 字超過） |
@@ -289,11 +290,10 @@ _なし_
 
 _なし（drafting で全パスしたものは自動で needs_review に上がります）_
 
-## 📝 著者レビュー待ち（needs_review・全パス）（76 件）
+## 📝 著者レビュー待ち（needs_review・全パス）（75 件）
 
 | ID | title | status | 概要 |
 | :-- | :-- | :-- | :-- |
-| B-28 | Render | needs_review | — |
 | B-30 | Amazon Bedrock | needs_review | — |
 | B-31 | Excalidraw | needs_review | — |
 | B-50 | Claude の料金プラン | needs_review | — |
