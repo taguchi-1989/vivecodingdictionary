@@ -19,7 +19,7 @@ related_terms:
   - Claude.ai
   - Artifacts
   - API
-status: needs_review
+status: ready
 ---
 
 # Claude
@@ -112,7 +112,7 @@ Extended Thinking、Artifacts、MCP、Projects、ナーフ（G-46）。
 
 - 🙂 第一印象: 環境構築が思ったより大変でした（VS Code 拡張や Node.js のあたりでつまずきました）
 - 👍 良い点: Claude Code がファイル編集まで自動実行してくれた瞬間に超感動しました
-- 👎 ダメな点: 高いです。Opus 前提になりがちで、Sonnet だと表面的な修正しか入らずイラつく時期もありました
+- 👎 ダメな点: 価格が高い点です。Opus 前提になりがちで、Sonnet だと表面的な修正しか入らずイラつく時期もありました
 - 👥 誰向けか: 開発者やリテラシーの高い人向けです。流行で飛びつくよりも、しっかり扱える人が活きる印象です
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

@@ -1,14 +1,14 @@
 # 要直しキュー（revision queue）
 
-*自動生成: 2026-05-02 01:53 / `scripts/update_review_queue.py`*
+*自動生成: 2026-05-02 06:19 / `scripts/update_review_queue.py`*
 
 1 画面で「次やるべき・見直すべき・適合済み」が見えるダッシュボード。`scripts/validate_entry.py` のチェックを全件で走らせた結果を集計して再生成しています。手で編集しないでください。
 
 ## status 内訳
 
 - **drafting**: 258 件
-- **needs_review**: 92 件
-- **ready**: 1 件
+- **needs_review**: 91 件
+- **ready**: 2 件
 - **archived**: 39 件
 - **合計**: 390 件
 
@@ -29,7 +29,7 @@ _なし_
 | B-16 | Microsoft 365 Copilot | drafting | ⚠ 287 字（目安 155-250、+37 字超過） |
 | B-18 | Aqua Voice | drafting | ⚠ 266 字（目安 155-250、+16 字超過） |
 | B-19 | Claude Cowork | drafting | ⚠ 68 字（目安 25-60、+8 字超過）; ⚠ 65 字（目安 25-50、+15 字超過）; ⚠ 209 字（目安 80-180、+29 字超過） |
-| B-2 | Claude | needs_review | ⚠ 「非エンジニアのつまずき」に記入あり（- システムエンジニアからの評価が高い理由が最初わからなかった; ⚠ 「私のコメント」の 第一印象 に記入あり（環境構築が思ったより大変でした（VS Code 拡張や N; ⚠ 「私のコメント」の 良い点 に記入あり（Claude Code がファイル編集まで自動実行してくれた |
+| B-2 | Claude | ready | ⚠ 「非エンジニアのつまずき」に記入あり（- システムエンジニアからの評価が高い理由が最初わからなかった; ⚠ 「私のコメント」の 第一印象 に記入あり（環境構築が思ったより大変でした（VS Code 拡張や N; ⚠ 「私のコメント」の 良い点 に記入あり（Claude Code がファイル編集まで自動実行してくれた |
 | B-21 | Netlify | drafting | ⚠ 258 字（目安 155-250、+8 字超過） |
 | B-22 | Cloudflare | drafting | ⚠ 274 字（目安 155-250、+24 字超過） |
 | B-24 | Google Cloud | drafting | ⚠ 52 字（目安 25-50、+2 字超過） |
