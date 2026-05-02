@@ -336,6 +336,53 @@ def check_author_fields_empty(body: str, status: str, r: Report) -> None:
                         break
 
 
+def check_author_line_limits(body: str, r: Report) -> None:
+    """著者記入欄の 1 行ごとの上限を警告。
+
+    - 私のコメント: ラベル後の本文 45 字以内（推奨 25〜40）
+    - 非エンジニアのつまずき: 1 項目 60 字以内（推奨 30〜50）
+    上限超過は ⚠️。著者の最終判断で残してもよいが、誌面枠を割る可能性が高い。
+    """
+    MY_COMMENT_LIMIT = 45
+    TSUMAZUKI_LIMIT = 60
+    LABEL_RE = re.compile(r"^([^\w]*[^\s:：]+)\s*[:：]\s*(.*)$")
+
+    # 私のコメント
+    m = re.search(r"## 私のコメント\n(.*?)(?=\n## |\n<!--)", body, re.DOTALL)
+    if m:
+        for line in m.group(1).split("\n"):
+            line = line.strip()
+            if not line.startswith("- "):
+                continue
+            body_text = line[2:].strip()
+            mm = LABEL_RE.match(body_text)
+            content = mm.group(2).strip() if mm else body_text
+            if not content:
+                continue
+            if len(content) > MY_COMMENT_LIMIT:
+                head = (mm.group(1) + ": ") if mm else ""
+                r.warn(
+                    f"H. 私のコメント: {head}{len(content)} 字（上限 {MY_COMMENT_LIMIT}） — "
+                    f"「{content[:30]}…」"
+                )
+
+    # 非エンジニアのつまずき
+    m = re.search(r"## 非エンジニアのつまずき\n(.*?)(?=\n## |\n<!--)", body, re.DOTALL)
+    if m:
+        for line in m.group(1).split("\n"):
+            line = line.strip()
+            if not line.startswith("- "):
+                continue
+            content = line[2:].strip()
+            if not content:
+                continue
+            if len(content) > TSUMAZUKI_LIMIT:
+                r.warn(
+                    f"H. 非エンジニアのつまずき: {len(content)} 字（上限 {TSUMAZUKI_LIMIT}） — "
+                    f"「{content[:30]}…」"
+                )
+
+
 def extract_section(body: str, heading: str) -> str:
     """`## <heading>` の本文を取り出す。次の `## ` またはファイル終端まで。"""
     m = re.search(re.escape("## " + heading) + r"\n(.*?)(?=\n## |\Z)", body, re.DOTALL)
@@ -427,6 +474,9 @@ def check_char_counts(body: str, r: Report) -> None:
         text = extract_section(body, heading)
         actual = count_chars(text)
         r.add_char_row(display, 0, 0, actual, "right", "ℹ️ 著者記入欄")
+
+    # 著者欄の 1 行ごとの上限チェック（2026-05-02 追加：誌面はみ出し防止）
+    check_author_line_limits(body, r)
 
     # 左右ページ合計（著者欄は含めない）
     left_mark, left_reason = judge_total(left_total, LEFT_TOTAL_MIN, LEFT_TOTAL_MAX)

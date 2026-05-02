@@ -103,7 +103,7 @@ MCP SDK、各種 MCP（GitHub／Playwright／Notion）、自作 MCP のテンプ
 ## 非エンジニアのつまずき
 
 - 何の略で、結局何の役に立つのかがピンと来ず、「AI の USB-C」と言われてもイメージが結びつきません
-- MCP Server と MCP Client のどちらが自分側で、どちらが向こう側なのかが混乱しやすく、設定するときに迷います
+- MCP Server と Client のどちらが自分側か混乱しやすく、設定時に迷います
 - 入れた MCP が安全かどうか（権限の範囲やデータ漏れのリスク）の判断が難しく、気軽に追加していいのか不安になります
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
