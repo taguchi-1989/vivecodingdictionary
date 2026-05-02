@@ -18,7 +18,7 @@ related_terms:
   - Suno
   - Dictation
   - VLM
-status: needs_review
+status: ready
 ---
 
 # ElevenLabs
