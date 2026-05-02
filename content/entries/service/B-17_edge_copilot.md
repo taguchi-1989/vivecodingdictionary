@@ -19,7 +19,7 @@ related_terms:
   - Microsoft 365 Copilot
   - ChatGPT
   - DALL·E
-status: needs_review
+status: ready
 ---
 
 # Edge Copilot
