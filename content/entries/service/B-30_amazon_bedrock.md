@@ -20,7 +20,7 @@ related_terms:
   - Llama
   - Vertex AI
   - IAM
-status: needs_review
+status: ready
 ---
 
 # Amazon Bedrock
