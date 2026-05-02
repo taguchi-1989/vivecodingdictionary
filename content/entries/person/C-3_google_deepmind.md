@@ -20,7 +20,7 @@ related_terms:
   - Google Cloud
   - OpenAI
   - Anthropic
-status: needs_review
+status: ready
 ---
 
 # Google DeepMind
