@@ -19,7 +19,7 @@ related_terms:
   - デプロイ
   - Preview URL
   - CI/CD
-status: needs_review
+status: ready
 ---
 
 # Vercel
