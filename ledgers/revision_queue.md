@@ -1,6 +1,6 @@
 # 要直しキュー（revision queue）
 
-*自動生成: 2026-05-02 10:28 / `scripts/update_review_queue.py`*
+*自動生成: 2026-05-02 10:33 / `scripts/update_review_queue.py`*
 
 1 画面で「次やるべき・見直すべき・適合済み」が見えるダッシュボード。`scripts/validate_entry.py` のチェックを全件で走らせた結果を集計して再生成しています。手で編集しないでください。
 
@@ -16,7 +16,7 @@
 
 _なし_
 
-## ⚠️ 警告あり（軽微超過 / 著者か entry-writer で手当て）（263 件）
+## ⚠️ 警告あり（軽微超過 / 著者か entry-writer で手当て）（264 件）
 
 | ID | title | status | 概要 |
 | :-- | :-- | :-- | :-- |
@@ -35,6 +35,7 @@ _なし_
 | B-20 | Vercel | ready | ⚠ 「非エンジニアのつまずき」に記入あり（- 無料枠から Pro にアップグレードしたら無料分が消えた感; ⚠ 「私のコメント」の 第一印象 に記入あり（LLM に Web アプリを作らせると、Next.js の; ⚠ 「私のコメント」の 良い点 に記入あり（環境変数を入れれば Supabase や Discord な |
 | B-21 | Netlify | drafting | ⚠ 258 字（目安 155-250、+8 字超過） |
 | B-22 | Cloudflare | drafting | ⚠ 274 字（目安 155-250、+24 字超過） |
+| B-23 | AWS | needs_review | ⚠ 「非エンジニアのつまずき」に記入あり（- カード情報の登録時にエラーで弾かれることが多く、会員登録の; ⚠ 「私のコメント」の 第一印象 に記入あり（「クラウドといえばここ」のデファクトスタンダードという印象; ⚠ 「私のコメント」の 良い点 に記入あり（できることの幅が広く、LLM に頼めば設定もそのまま実行して |
 | B-24 | Google Cloud | drafting | ⚠ 52 字（目安 25-50、+2 字超過） |
 | B-25 | Azure | drafting | ⚠ 65 字（目安 25-60、+5 字超過） |
 | B-26 | Azure OpenAI | drafting | ⚠ 198 字（目安 80-180、+18 字超過）; ⚠ 258 字（目安 155-250、+8 字超過） |
@@ -288,11 +289,10 @@ _なし_
 
 _なし（drafting で全パスしたものは自動で needs_review に上がります）_
 
-## 📝 著者レビュー待ち（needs_review・全パス）（77 件）
+## 📝 著者レビュー待ち（needs_review・全パス）（76 件）
 
 | ID | title | status | 概要 |
 | :-- | :-- | :-- | :-- |
-| B-23 | AWS | needs_review | — |
 | B-28 | Render | needs_review | — |
 | B-30 | Amazon Bedrock | needs_review | — |
 | B-31 | Excalidraw | needs_review | — |
