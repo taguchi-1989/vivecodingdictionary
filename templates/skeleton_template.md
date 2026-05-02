@@ -1,19 +1,24 @@
 ---
-id: {{ID}}
-title: {{TITLE}}
-title_reading:           # 任意。読み専用。英字タイトルは「英単語をカタカナで並べた読み」（例: モデルコンテキストプロトコル / ラージランゲージモデル / アクセシビリティ / ギット / コンテキスト）。略称音読み・日本語訳は入れず、正式名称は tagline 冒頭へ（2026-04-28 改）
-category: {{CATEGORY}}
-subtype: {{SUBTYPE}}
+id:
+  "{ ID }":
+title:
+  "{ TITLE }":
+title_reading:
+category:
+  "{ CATEGORY }":
+subtype:
+  "{ SUBTYPE }":
 experience_level:
 reader_level:
-importance:              # A=必須 / B=一般 / C=中級 / D=上級 / E=開発者向け（任意）
+importance:
 figure_type: structure
 page_layout: spread_v1
 start_date:
 end_date:
 version_status:
 pricing_note:
-evaluation_date: {{TODAY}}
+evaluation_date:
+  "{ TODAY }":
 related_terms: []
 status: skeleton
 ---
