@@ -20,7 +20,7 @@ related_terms:
   - Lambda
   - Amazon Bedrock
   - Google Cloud
-status: needs_review
+status: ready
 ---
 
 # AWS
