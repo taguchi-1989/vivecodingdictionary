@@ -19,7 +19,7 @@ related_terms:
   - GitHub
   - デプロイ
   - Heroku
-status: drafting
+status: needs_review
 ---
 
 # Render

@@ -20,7 +20,7 @@ related_terms:
   - Tensor コア
   - H100
   - Ollama
-status: drafting
+status: needs_review
 ---
 
 # RTX シリーズ

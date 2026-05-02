@@ -35,6 +35,7 @@ from validate_entry import (  # noqa: E402
     check_char_counts,
     check_tone,
     check_sources_date,
+    promote_to_needs_review,
 )
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -69,6 +70,7 @@ def validate_silently(path: Path, fm: dict, body: str, status: str):
 
 def collect():
     rows = []
+    promoted_ids: list[str] = []
     for md_path in sorted(ENTRIES_DIR.rglob("*.md")):
         try:
             text = md_path.read_text(encoding="utf-8")
@@ -86,6 +88,12 @@ def collect():
             stars, warns, summary = 0, 0, ""
         else:
             stars, warns, summary = validate_silently(md_path, fm, body, status)
+            # 自動昇格の取りこぼし回収：drafting + ☆0 + ⚠0 を needs_review に巻き上げる
+            # （単発の validate_entry.py は保存時しか走らないため、過去エントリで漏れる）
+            if status == "drafting" and stars == 0 and warns == 0:
+                if promote_to_needs_review(md_path):
+                    status = "needs_review"
+                    promoted_ids.append(eid)
 
         rows.append({
             "id": eid,
@@ -97,7 +105,7 @@ def collect():
             "path": md_path.relative_to(PROJECT_ROOT).as_posix(),
             "is_common": is_common,
         })
-    return rows
+    return rows, promoted_ids
 
 
 def render(rows):
@@ -179,13 +187,16 @@ def main() -> int:
     ap.add_argument("--quiet", action="store_true", help="標準出力を抑える（hook 経由用）")
     args = ap.parse_args()
 
-    rows = collect()
+    rows, promoted_ids = collect()
     out = render(rows)
     QUEUE_PATH.parent.mkdir(parents=True, exist_ok=True)
     QUEUE_PATH.write_text(out, encoding="utf-8")
 
     if not args.quiet:
         print(f"updated: {QUEUE_PATH.relative_to(PROJECT_ROOT)}  ({len(rows)} entries)")
+        if promoted_ids:
+            print(f"promoted drafting → needs_review: {len(promoted_ids)} 件")
+            print("  " + ", ".join(promoted_ids))
     return 0
 
 

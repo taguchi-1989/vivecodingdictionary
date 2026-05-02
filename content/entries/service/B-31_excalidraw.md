@@ -18,7 +18,7 @@ related_terms:
   - PlantUML
   - Figma
   - SVG
-status: drafting
+status: needs_review
 ---
 
 # Excalidraw

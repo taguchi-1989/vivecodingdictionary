@@ -19,7 +19,7 @@ related_terms:
   - Markdown
   - SVG
   - VS Code
-status: drafting
+status: needs_review
 ---
 
 # PlantUML

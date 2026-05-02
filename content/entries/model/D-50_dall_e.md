@@ -19,7 +19,7 @@ related_terms:
   - 拡散モデル
   - Stable Diffusion
   - Imagen
-status: drafting
+status: needs_review
 ---
 
 # DALL-E

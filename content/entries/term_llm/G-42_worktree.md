@@ -20,7 +20,7 @@ related_terms:
   - Subagent
   - 並列実行
   - Claude Code
-status: drafting
+status: needs_review
 ---
 
 # Worktree

@@ -19,7 +19,7 @@ related_terms:
   - git
   - branch
   - Pull Request
-status: drafting
+status: needs_review
 ---
 
 # Git Graph

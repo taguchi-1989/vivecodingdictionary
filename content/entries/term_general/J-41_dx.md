@@ -20,7 +20,7 @@ related_terms:
   - AI活用
   - クラウド
   - デジタル化
-status: drafting
+status: needs_review
 ---
 
 # DX

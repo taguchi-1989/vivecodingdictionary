@@ -19,7 +19,7 @@ related_terms:
   - Slack MCP
   - .env
   - GitHub
-status: drafting
+status: needs_review
 ---
 
 # OAuth

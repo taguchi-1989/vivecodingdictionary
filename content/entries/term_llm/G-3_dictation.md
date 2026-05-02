@@ -16,7 +16,7 @@ related_terms:
   - Prompt Engineering
   - LLM
   - Voice Input
-status: drafting
+status: needs_review
 ---
 
 # Dictation
