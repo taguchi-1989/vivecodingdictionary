@@ -1,6 +1,6 @@
 # 要直しキュー（revision queue）
 
-*自動生成: 2026-05-02 11:11 / `scripts/update_review_queue.py`*
+*自動生成: 2026-05-02 11:23 / `scripts/update_review_queue.py`*
 
 1 画面で「次やるべき・見直すべき・適合済み」が見えるダッシュボード。`scripts/validate_entry.py` のチェックを全件で走らせた結果を集計して再生成しています。手で編集しないでください。
 
@@ -16,7 +16,7 @@
 
 _なし_
 
-## ⚠️ 警告あり（軽微超過 / 著者か entry-writer で手当て）（269 件）
+## ⚠️ 警告あり（軽微超過 / 著者か entry-writer で手当て）（270 件）
 
 | ID | title | status | 概要 |
 | :-- | :-- | :-- | :-- |
@@ -60,6 +60,7 @@ _なし_
 | B-7 | Claude Code | drafting | ⚠ 67 字（目安 25-60、+7 字超過）; ⚠ 297 字（目安 155-250、+47 字超過） |
 | B-8 | Codex | drafting | ⚠ 259 字（目安 155-250、+9 字超過） |
 | B-9 | v0 | drafting | ⚠ 76 字（目安 25-60、+16 字超過）; ⚠ 190 字（目安 80-180、+10 字超過）; ⚠ 263 字（目安 155-250、+13 字超過） |
+| C-1 | OpenAI | needs_review | ⚠ 「非エンジニアのつまずき」に記入あり（- サービスが多くて、ChatGPT 以外（API・DALL·; ⚠ 「私のコメント」の 第一印象 に記入あり（ChatGPT で AI ブームを作ったフロンティア企業と; ⚠ 「私のコメント」の 良い点 に記入あり（流行の先端で切磋琢磨している姿勢が見え、LLM 関連では常に |
 | C-10 | Moonshot AI | drafting | ⚠ 255 字（目安 155-250、+5 字超過） |
 | C-11 | Z.ai | drafting | ⚠ 254 字（目安 155-250、+4 字超過） |
 | C-12 | TSMC | drafting | ⚠ 75 字（目安 25-60、+15 字超過）; ⚠ 16 字（目安 20-50、-4 字不足）; ⚠ 259 字（目安 155-250、+9 字超過） |
@@ -294,11 +295,10 @@ _なし_
 
 _なし（drafting で全パスしたものは自動で needs_review に上がります）_
 
-## 📝 著者レビュー待ち（needs_review・全パス）（71 件）
+## 📝 著者レビュー待ち（needs_review・全パス）（70 件）
 
 | ID | title | status | 概要 |
 | :-- | :-- | :-- | :-- |
-| C-1 | OpenAI | needs_review | — |
 | C-2 | Anthropic | needs_review | — |
 | C-3 | Google DeepMind | needs_review | — |
 | C-4 | Meta AI | needs_review | — |
