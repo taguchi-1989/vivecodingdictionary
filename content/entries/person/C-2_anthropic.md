@@ -18,7 +18,7 @@ related_terms:
   - Claude Code
   - OpenAI
   - Google DeepMind
-status: needs_review
+status: ready
 ---
 
 # Anthropic
@@ -101,17 +101,17 @@ Constitutional AI、RSP、Interpretability の論文。
 
 ## 非エンジニアのつまずき
 
--
--
--
+- 「Anthropic」という社名が読みづらく、「アンソロピック？アンスロピック？」と一瞬迷います
+- SaaS の死（既存 SaaS を AI で置き換える流れ）と結びつけて語られることが多く、伝統的なソフト業界には脅威に映る企業イメージがあります
+- ChatGPT を提供する OpenAI と何が違うのかが、外から見ると分かりにくいです
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象:
-- 👍 良い点:
-- 👎 ダメな点:
-- 👥 誰向けか:
+- 🙂 第一印象: OpenAI からスピンアウトした企業として認識していました
+- 👍 良い点: 倫理観のある AI（Constitutional AI / RSP）という姿勢を打ち出しつつ、LLM の性能でもトップクラスを保っています
+- 👎 ダメな点: 最近はその安全性路線がやや揺らいでいる印象があり、若干不安を感じます
+- 👥 誰向けか: 企業名としては既に一般常識になってきており、AI を使う立場のすべての人に押さえてほしい会社です
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

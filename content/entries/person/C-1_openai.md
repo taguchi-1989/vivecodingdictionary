@@ -18,7 +18,7 @@ related_terms:
   - DALL·E
   - Sora
   - Sam Altman
-status: needs_review
+status: ready
 ---
 
 # OpenAI
@@ -106,17 +106,17 @@ ChatGPT、GPT-5、Sam Altman、OpenAI API ドキュメント。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+- サービスが多くて、ChatGPT 以外（API・DALL·E・Sora・Codex）が何をするものか分かりにくいです
+- Codex CLI は Windows 対応とされていたものの、PowerShell サンドボックスや WSL2 が絡むなどインストールが複雑で、入れるだけで苦労する時期がありました
+- モデル名が紛らわしく、GPT-4o と GPT-4.1 が並ぶと「GPT-4.0」と言い間違えそうになります。o1 や o3 系も気づくと GPT-5 に統合されて消えていきます
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象: ChatGPT で AI ブームを作ったフロンティア企業という印象が真っ先に来ました
+- 👍 良い点: 流行の先端で切磋琢磨している姿勢が見え、LLM 関連では常にトップクラスの存在です
+- 👎 ダメな点: 名前は Open でも実態はクローズドな部分が大きく、企業体質には危うさを感じる場面もあります
+- 👥 誰向けか: 現代人の常識として押さえておきたい企業で、AI を使う側のすべての人向けです
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
