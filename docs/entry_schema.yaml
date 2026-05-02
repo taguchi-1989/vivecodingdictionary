@@ -265,15 +265,17 @@ right_page:
     heading: "## 非エンジニアのつまずき"
     items_fixed: 3           # iter 22 で 3 固定
     item_min_chars: 15
-    item_max_chars: 30
+    item_max_chars: 60       # 2026-05-02 改: 実態に合わせて上限を 60 に拡張、超過は ⚠️
+    item_recommended_max_chars: 50
     authored_by: user_only   # AI は触らない、空スケルトンのみ残す
-    severity: warn           # item 数のみ判定、内容は著者任せ
+    severity: warn           # 項目数 ＋ item_max_chars 超で警告
 
   - slot: watashino_comment
     heading: "## 私のコメント"
     items_fixed: 4           # first / good / bad / who 固定
     item_min_chars: 10
-    item_max_chars: 40
+    item_max_chars: 45       # 2026-05-02 改: 上限 45 字、超過は ⚠️
+    item_recommended_max_chars: 40
     labels: [第一印象, 良い点, ダメな点, 誰向けか]
     badges: ["★", "✓", "!", "☺"]
     authored_by: user_only

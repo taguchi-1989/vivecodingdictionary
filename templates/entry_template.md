@@ -199,7 +199,7 @@ status: drafting         # drafting / sample / needs_source / needs_review / rea
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-<!-- 箇条書き 3〜4 項目。各 15〜30 字目安。
+<!-- 箇条書き 3 項目固定。各項目 推奨 30〜50 字／上限 60 字（2026-05-02 改）。
      「何が分かりにくかったか」を事実寄りに、短く。著者本人のみ記入。 -->
 
 - 
@@ -209,7 +209,7 @@ status: drafting         # drafting / sample / needs_source / needs_review / rea
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-<!-- 4 行固定。各 20〜35 字目安。冒頭の絵文字ラベルはそのまま維持。
+<!-- 4 行固定。各 推奨 25〜40 字／上限 45 字（2026-05-02 改）。冒頭の絵文字ラベルはそのまま維持。
      誌面 v2 で 誰向けか のアイコンは 🎯 から 👥 に変更済み。 -->
 
 - 🙂 第一印象: 

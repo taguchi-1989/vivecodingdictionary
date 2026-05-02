@@ -117,7 +117,7 @@ Cursor（B-4）、VS Code（F-30）、GitHub（F-60）
 ## 非エンジニアのつまずき
 
 - 「GitHub」という言葉自体にアレルギーがあり入りにくかったです
-- M365 Copilot・Edge Copilot・GitHub Copilot の違いやライセンスがわかりにくかったです
+- M365 Copilot・Edge Copilot・GitHub Copilot の違いがわかりにくかったです
 - 入力したコードが学習に使われるかが不明でした（ビジネスプラン以上なら使われない仕組みです）
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
