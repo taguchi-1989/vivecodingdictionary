@@ -103,8 +103,8 @@ SWE-Bench、Multi-SWE-Bench、HumanEval
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
--
--
+-★sweベンチも？？なのにVerifyって何となる？
+-何が測れるかよくわからない
 -
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
