@@ -105,7 +105,7 @@ GLM、CodeGeeX、AutoGLM
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
--
+-お遍。 glm で書いといて欲しいなってところとあと米国企業と特設直接取引が実現されてるとかと5カップ気になるな
 -
 -
 
