@@ -20,7 +20,7 @@ related_terms:
   - LLM
   - AI
   - 教師あり学習
-status: drafting
+status: needs_review
 ---
 
 # Machine Learning
@@ -33,11 +33,11 @@ status: drafting
 
 ## 何をしてくれるか
 
-大量のデータを与えると、コンピューターが統計的なパターンを自動で見つけます。画像の識別・スパムの分類・価格予測など、ルールを明示しなくても「経験から学ぶ」仕組みです。
+データを与えると、コンピューターが統計的なパターンを自動で見つけます。画像識別・スパム分類・価格予測など、ルールを書かなくても「経験から学ぶ」仕組みです。
 
 ## どこで出会うか
 
-「AI を導入した」という文脈の多くが Machine Learning の応用です。Deep Learning（J-11）や LLM（J-14）はその下位概念にあたり、「AI > Machine Learning > Deep Learning > LLM」という入れ子で整理すると全体像が掴みやすくなります。
+「AI を導入した」という話の多くが Machine Learning の応用です。Deep Learning（J-11）や LLM（J-14）は下位概念にあたり、「AI > Machine Learning > Deep Learning > LLM」の入れ子で整理すると全体像が見えます。
 
 ## メイン図
 
@@ -53,7 +53,7 @@ status: drafting
 
 ## 会話での使い方例
 
-「Machine Learning はデータを与えると自動でパターンを学ぶ仕組みで、Deep Learning はその一種です。」
+「Machine Learning はデータから学ぶ手法で、Deep Learning もその一種です」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 

@@ -19,7 +19,7 @@ related_terms:
   - H100
   - GPU
   - VRAM
-status: drafting
+status: needs_review
 ---
 
 # Blackwell
@@ -36,11 +36,11 @@ NVIDIA が 2024 年 3 月に発表した GPU アーキテクチャ世代で、Ho
 
 ## 何をしてくれるか
 
-B200 は 192GB の HBM3e メモリと FP4 演算をサポートし、AI の学習・推論性能を大幅に引き上げます。CPU と 2 枚の GPU を 1 チップに統合した GB200 SuperChip も登場し、省電力と高密度実装を両立させています。
+B200 は HBM3e メモリと FP4 演算に対応し、AI の学習・推論性能を引き上げます。CPU と 2 枚の GPU を統合した GB200 SuperChip も登場し、省電力と高密度実装を両立させています。
 
 ## どこで出会うか
 
-AWS・Azure・Google Cloud・Oracle Cloud が 2024 年末から B200 / GB200 を順次提供しています。LLM の学習コストや推論速度を話す業界記事で「Blackwell 世代」という表現を目にする機会があります。
+主要クラウド各社が 2024 年末から B200 / GB200 を順次提供しています。LLM の学習コストや推論速度を扱う業界記事で「Blackwell 世代」という表現を目にする機会があります。
 
 ## メイン図
 
@@ -95,6 +95,7 @@ H100、GPU、NVLink
 - H100
 - GPU
 - VRAM
+- NVLink
 
 
 <!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->

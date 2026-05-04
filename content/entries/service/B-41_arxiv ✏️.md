@@ -19,7 +19,7 @@ related_terms:
   - Deep Learning
   - Reddit
   - Papers With Code
-status: drafting
+status: needs_review
 ---
 
 ## tagline
@@ -30,11 +30,11 @@ status: drafting
 
 ## 何をしてくれるか
 
-物理・数学・コンピュータサイエンスなどの論文を、査読（専門家によるチェック）が完了する前に無料で公開するサーバです。研究者は成果をすぐに共有でき、読者はジャーナル掲載を待たずに内容を確認できます。
+物理・数学・情報科学などの論文を、査読（専門家によるチェック）の前に無料で公開するサーバです。研究者は成果をすぐ共有でき、読者は掲載を待たずに内容を確認できます。
 
 ## どこで出会うか
 
-「Attention Is All You Need」（Transformer、J-13）や GPT 系・DeepSeek 系の技術報告など、AI 業界の話題になった論文の出所として名前を見かけます。Hugging Face Papers や Papers With Code を経由して arXiv の個別論文に辿り着くことが多いです。
+Transformer 論文（J-13）や GPT・DeepSeek 系の技術報告など、話題の論文の出所として名前を見かけます。Hugging Face Papers や Papers With Code 経由で個別論文に辿り着くことも多いです。
 
 ## メイン図
 
@@ -83,11 +83,11 @@ Papers With Code、Hugging Face Papers、Semantic Scholar
 
 ## 開発フローでの位置（必須）
 
-1. 話題のモデル名を検索 — Twitter / Hugging Face の投稿に arXiv リンクが貼られていることが多いです
-2. 論文 PDF を開く — abstract（要旨）だけ読めば概要は掴めます
-3. AI に要約を依頼 — PDF を Claude や ChatGPT に貼り付けて「3 行で要約して」と頼みます
-4. 実装例を探す — Papers With Code で同じ論文の GitHub リポジトリを探します
-5. 引用文献を辿る — 関連論文の arXiv 番号を手がかりに背景知識を補います
+1. モデル名を検索 — Twitter や Hugging Face の投稿に arXiv リンクがよく貼られます
+2. PDF を開く — abstract（要旨）だけで概要が掴めます
+3. AI に要約依頼 — Claude や ChatGPT に貼り「3 行で要約」と頼みます
+4. 実装例を探す — Papers With Code で GitHub リポジトリを辿ります
+5. 引用を辿る — 関連論文で背景知識を補います
 
 ## 関連用語
 

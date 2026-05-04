@@ -19,12 +19,12 @@ related_terms:
   - bash
   - Claude Code
   - PowerShell
-status: drafting
+status: needs_review
 ---
 
 ## tagline
 
-Command Line Interface の略。文字でコマンドを入力して操作するインターフェースです。GUI（グラフィカルユーザーインターフェース）と対をなす概念です。
+Command Line Interface の略。文字コマンドで操作する仕組みで、GUI と対をなします。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
@@ -34,7 +34,7 @@ Command Line Interface の略。文字でコマンドを入力して操作する
 
 ## どこで出会うか
 
-Claude Code（B-7）や Codex CLI（B-8）などの AI エージェントを使い始めると、ターミナルを開く場面が増えます。また `git` や `npm` を使う開発手順の説明でも CLI が前提になっていることがあります。
+Claude Code（B-7）や Codex CLI（B-8）などの AI エージェントを使い始めると、ターミナルを開く場面が増えます。`git` や `npm` を使う開発手順の説明でも CLI が前提のことがあります。
 
 ## メイン図
 

@@ -20,7 +20,7 @@ related_terms:
   - Google AI Ultra
   - Google One
   - Vertex AI
-status: drafting
+status: needs_review
 ---
 
 # Gemini の料金プラン
@@ -33,7 +33,7 @@ status: drafting
 
 ## 何をしてくれるか
 
-使用量や目的に合わせてプランを選ぶことで、Gemini の利用できるモデルや機能の範囲が変わります。無料の Free から始め、Google AI Pro・Google AI Ultra へと段階的に移行できます。
+使用量や目的に合わせてプランを選ぶと、Gemini で使えるモデルや機能の範囲が変わります。無料の Free から、Google AI Pro・Google AI Ultra へと段階的に移行できます。
 
 ## どこで出会うか
 

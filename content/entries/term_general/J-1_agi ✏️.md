@@ -19,14 +19,14 @@ related_terms:
   - Singularity
   - OpenAI
   - Sam Altman
-status: drafting
+status: needs_review
 ---
 
 # AGI
 
 ## tagline
 
-Artificial General Intelligence の略。人間が行うほぼあらゆる認知タスクをこなせる AI を指す概念です。
+Artificial General Intelligence の略。人間並みに幅広い認知タスクをこなせる AI を指す概念です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
@@ -36,7 +36,7 @@ Artificial General Intelligence の略。人間が行うほぼあらゆる認知
 
 ## どこで出会うか
 
-OpenAI（C-1）がミッション文に「全人類に利する AGI の構築」と掲げているため、プレスリリースや業界記事でよく目にします。「AGI に到達した」と報じられるたびに、定義の違いから議論が起きるのも特徴です。
+OpenAI（C-1）がミッションに「全人類に利する AGI の構築」を掲げ、プレスや業界記事で頻繁に登場します。「AGI に到達した」と報じられるたび、定義の違いから議論が起きやすい言葉です。
 
 ## メイン図
 

@@ -20,7 +20,7 @@ related_terms:
   - Transformer
   - LLM
   - GPU
-status: drafting
+status: needs_review
 ---
 
 # Deep Learning
@@ -33,11 +33,11 @@ status: drafting
 
 ## 何をしてくれるか
 
-大量のデータからパターンを自動で学習します。人間が特徴を手で設計しなくても、層を重ねたニューラルネットワーク（Neural Network）が画像・音声・テキストの特徴を段階的に抽出します。
+大量のデータからパターンを自動で学習します。人間が特徴を設計しなくても、層を重ねた Neural Network が画像・音声・テキストの特徴を段階的に抽出します。
 
 ## どこで出会うか
 
-「Deep Learning モデルを使っています」という説明で、AI ツールや研究紹介記事でよく目にします。LLM（J-14）や画像生成 AI の仕組みを調べると必ず登場し、Machine Learning（J-10）の中でも特に今の AI ブームを牽引してきた手法です。
+「Deep Learning モデルを使っています」という形で、AI ツールや研究紹介記事に頻出します。LLM（J-14）や画像生成 AI の仕組みを調べると登場し、Machine Learning（J-10）の中でも今の AI ブームを牽引してきた手法です。
 
 ## メイン図
 
@@ -53,7 +53,7 @@ Machine Learning という大きな枠の中に Deep Learning があり、その
 
 ## 会話での使い方例
 
-「LLM も Deep Learning の一種で、層を重ねた Neural Network が言語パターンを学んでいます。」
+「LLM も Deep Learning の一種で、多層の Neural Network が言語を学びます。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -69,7 +69,7 @@ Machine Learning の中で、多層構造により複雑なパターンを学ぶ
 
 ### 3. 注意点
 
-大量のデータと GPU 計算資源が必要で、学習コストが高くなります。
+大量のデータと GPU 計算資源が要り、学習コストが高めです。
 
 ### 4. どこで役立つか
 

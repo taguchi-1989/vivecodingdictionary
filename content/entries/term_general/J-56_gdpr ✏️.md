@@ -18,7 +18,7 @@ related_terms:
   - ISO/IEC 42001
   - Azure OpenAI
   - Vertex AI
-status: drafting
+status: needs_review
 ---
 
 # GDPR
@@ -53,7 +53,7 @@ GDPR が「どこの組織に、どの義務を課すか」を一目で示す。
 
 ## 会話での使い方例
 
-「Claude Enterprise は GDPR 対応で学習に使われない契約があるので安心して導入できます。」
+「Claude Enterprise は GDPR 対応で学習に使われない契約なので導入できます。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->

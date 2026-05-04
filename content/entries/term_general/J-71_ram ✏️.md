@@ -19,24 +19,24 @@ related_terms:
   - CPU
   - HDD
   - SSD
-status: drafting
+status: needs_review
 ---
 
 # RAM
 
 ## tagline
 
-Random Access Memory の略。CPU が作業中のデータを一時保管する高速メモリです。
+Random Access Memory の略。CPU が作業中データを一時保管する高速メモリです。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-CPU が実行中のプログラムやデータを置いておく場所です。起動中のアプリ・開いているファイルはすべて RAM 上に展開されます。電源を切ると内容が消える揮発性メモリで、永続保存には HDD や SSD を使います。
+CPU が実行中のプログラムやデータを置く場所です。起動中のアプリや開いているファイルは RAM 上に展開されます。電源を切ると消える揮発性メモリで、永続保存は SSD などが担います。
 
 ## どこで出会うか
 
-PC の購入画面やスペック表で「16GB RAM」のように表記されます。ローカル LLM（大規模言語モデル）をノート PC で動かそうとする際、「CPU 推論なら RAM 容量が必要」という文脈でよく目にします。Apple Silicon の Unified Memory も RAM の一種です。
+PC のスペック表で「16GB RAM」と表記されます。ローカル LLM（大規模言語モデル）をノート PC で動かす際、「CPU 推論なら RAM 容量が要る」という文脈で目にします。Apple Silicon の Unified Memory も同種です。
 
 ## メイン図
 
@@ -93,10 +93,9 @@ VRAM、CPU、SSD
 
 ## 関連用語
 
-- VRAM
-- CPU
-- HDD
-- SSD
+- VRAM（GPU 用一時メモリ）
+- CPU（RAM の主な利用者）
+- HDD / SSD（永続ストレージ）
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->

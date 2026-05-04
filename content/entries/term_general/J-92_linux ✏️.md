@@ -18,7 +18,7 @@ related_terms:
   - bash
   - WSL
   - GPL
-status: drafting
+status: needs_review
 ---
 
 # Linux
@@ -91,8 +91,8 @@ Ubuntu（J-93）、bash（F-81）、WSL（F-82）
 
 ## 関連用語
 
-- Ubuntu
-- bash
+- Ubuntu（代表的ディストリ）
+- bash（標準シェル）
 - WSL
 - GPL
 

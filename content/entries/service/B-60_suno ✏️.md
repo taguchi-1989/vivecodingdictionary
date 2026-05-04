@@ -19,7 +19,7 @@ related_terms:
   - ACE-Step 1.5
   - DALL-E
   - Sora
-status: drafting
+status: needs_review
 ---
 
 # Suno
@@ -40,7 +40,7 @@ status: drafting
 
 ## どこで出会うか
 
-広告 BGM やジングルを短時間で用意したい場面で名前が挙がります。Claude や ChatGPT（チャットジーピーティー）に歌詞を書かせてから Suno に渡す流れが SNS でよく紹介され、非エンジニアがクリエイティブ制作に AI を使う入口として登場することがあります。
+広告 BGM やジングルを手早く用意したい場面で名前が挙がります。Claude や ChatGPT（チャットジーピーティー）に歌詞を書かせて Suno に渡す流れが SNS で紹介され、非エンジニアがクリエイティブ制作に AI を使う入口になることがあります。
 
 ## メイン図
 

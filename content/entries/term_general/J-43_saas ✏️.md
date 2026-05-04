@@ -20,14 +20,14 @@ related_terms:
   - フリーミアム
   - サブスクリプション
   - クラウド
-status: drafting
+status: needs_review
 ---
 
 # SaaS
 
 ## tagline
 
-Software as a Service の略。ソフトウェアをインストールせず、Web ブラウザ経由でサブスクリプション利用する形態です。
+Software as a Service の略。インストール不要で、ブラウザからサブスク利用する形態です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
@@ -37,7 +37,7 @@ Software as a Service の略。ソフトウェアをインストールせず、W
 
 ## どこで出会うか
 
-Notion・Figma・Slack・ChatGPT・Claude など、業務で日常的に使うツールの多くが SaaS です。バイブコーディングで使う Cursor・Windsurf・Claude Code もすべて SaaS の形をとっています。
+Notion・Figma・Slack・ChatGPT・Claude など、業務で日常的に使うツールの多くが SaaS です。バイブコーディングの Cursor・Windsurf・Claude Code も SaaS の形です。
 
 ## メイン図
 

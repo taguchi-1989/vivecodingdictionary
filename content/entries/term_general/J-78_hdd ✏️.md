@@ -19,7 +19,7 @@ related_terms:
   - SATA
   - M.2
   - RAM
-status: drafting
+status: needs_review
 ---
 
 # HDD
@@ -95,10 +95,10 @@ SSD、SATA、NAS
 
 ## 関連用語
 
-- SSD
-- SATA
-- M.2
-- RAM
+- SSD（高速ストレージ）
+- SATA（接続規格）
+- M.2（SSD 形状）
+- RAM（主記憶）
 
 
 <!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->

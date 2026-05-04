@@ -19,14 +19,14 @@ related_terms:
   - SATA
   - M.2
   - ollama
-status: drafting
+status: needs_review
 ---
 
 # SSD
 
 ## tagline
 
-Solid State Drive の略。フラッシュメモリでデータを保存する永続ストレージです。可動部がなく、HDD より高速・静音・耐衝撃な点が特徴です。
+Solid State Drive の略。フラッシュメモリで保存する永続ストレージで、HDD より高速・静音です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
@@ -98,10 +98,10 @@ HDD、NVMe、M.2
 
 ## 関連用語
 
-- HDD
-- SATA
-- M.2
-- ollama
+- HDD（J-78）
+- SATA（J-80）
+- M.2（J-81）
+- ollama（F-86）
 
 
 <!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->

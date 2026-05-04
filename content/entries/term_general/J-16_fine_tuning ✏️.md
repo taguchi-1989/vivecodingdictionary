@@ -19,7 +19,7 @@ related_terms:
   - Prompt Engineering
   - Transformer
   - RAG
-status: drafting
+status: needs_review
 ---
 
 # Fine-tuning
@@ -45,9 +45,9 @@ status: drafting
 
 ## どこで出会うか
 
-OpenAI や Google の API ドキュメントに「Fine-tuning」の章があり、業務システムに組み込む場面で登場します。「Prompt でなんとかならないか」と試した後、最終手段として検討されることが多い技術です。
+OpenAI や Google の API ドキュメントに「Fine-tuning」の章があり、業務システムに組み込む場面で登場します。Prompt で対応できないか試した後の選択肢として検討されることが多い技術です。
 
-<!-- 字数確認: 95字 -->
+<!-- 字数確認: 89字 -->
 
 ## メイン図
 
