@@ -20,7 +20,7 @@ related_terms:
   - CLAUDE.md
   - Claude Code
   - Token
-status: drafting
+status: needs_review
 ---
 
 # Prompt Caching
@@ -33,11 +33,11 @@ LLM API への同じプロンプト断片をサーバ側で再利用し、料金
 
 ## 何をしてくれるか
 
-同じ System Prompt（システムプロンプト）や長い前提文書を毎回 API に送ると、そのたびフルコストが発生します。Prompt Caching はその内部状態をサーバ側に保持しておき、再利用時のトークン課金を大幅に削減します。
+同じ System Prompt（システムプロンプト）や長い前提文書を毎回 API に送ると、都度フルコストが発生します。Prompt Caching は内部状態をサーバ側に保持し、再利用時のトークン課金を抑えます。
 
 ## どこで出会うか
 
-Claude Code や Cursor など長文の指示書を持つエージェントを運用していると、月の請求で気づく場合があります。Anthropic の API では `cache_control` パラメータでキャッシュ保持位置を指定します。
+Claude Code や Cursor など長文の指示書を持つエージェントを運用していると、月の請求で気づく場合があります。Anthropic の API では `cache_control` で保持位置を指定します。
 
 ## メイン図
 
@@ -74,7 +74,7 @@ LLM API の繰り返し入力をサーバ側で再利用してコストを下げ
 
 ### 3. 注意点
 
-Anthropic は `cache_control` の明示が必要で、設計次第で効果が変わります。
+Anthropic は `cache_control` の明示が要り、設計次第で効果が変わります。
 
 ### 4. どこで役立つか
 
@@ -90,18 +90,17 @@ Context Engineering、System Prompt、Token
 
 ## 開発フローでの位置（必須）
 
-1. 指示書の設計 — CLAUDE.md や System Prompt の長さと内容を確認する
+1. 指示書の設計 — CLAUDE.md や System Prompt の長さを確認する
 2. ブレークポイント設定 — `cache_control` で再利用範囲の末尾を指定する
-3. キャッシュ動作確認 — ヒット／ミスをログで確認し、5 分以内の再利用を検証する
-4. コスト計測 — キャッシュ書き込み（＋25%）と読み出し（約 1/10）の収支を確認する
-5. 運用最適化 — 指示書を頻繁に変えるとヒット率が落ちるため変更頻度を調整する
+3. 動作確認 — ヒット／ミスをログで見て 5 分以内の再利用を検証する
+4. コスト計測 — 書き込み（＋25%）と読み出し（約 1/10）の収支を見る
+5. 運用最適化 — 変更頻度を調整しヒット率を保つ
 
 ## 関連用語
 
 - System Prompt
 - Context Engineering
 - CLAUDE.md
-- Claude Code
 - Token
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->

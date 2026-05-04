@@ -19,7 +19,7 @@ related_terms:
   - Prompt Engineering
   - Few-shot
   - Context Window
-status: drafting
+status: needs_review
 ---
 
 # System Prompt
@@ -88,11 +88,11 @@ Context, Prompt Engineering, Few-shot
 
 ## 開発フローでの位置（必須）
 
-1. 役割・制約を決める — AI に担わせたいペルソナと守らせたい制約を整理する
+1. 役割・制約を決める — 担わせたいペルソナと守らせたい制約を整理する
 2. System Prompt を書く — 役割・出力形式・禁止事項を簡潔にまとめる
-3. User Prompt と動作確認 — 実際の会話を何件か試し、矛盾や抜けを潰す
-4. 改善・再固定 — 出力が安定したら System Prompt をテンプレとして保存する
-5. 運用・更新 — タスクや対象が変わるたびに System Prompt を見直す
+3. User Prompt と動作確認 — 会話を何件か試し、矛盾や抜けを潰す
+4. 改善・再固定 — 出力が安定したらテンプレとして保存する
+5. 運用・更新 — タスクや対象が変わるたびに見直す
 
 ## 関連用語
 

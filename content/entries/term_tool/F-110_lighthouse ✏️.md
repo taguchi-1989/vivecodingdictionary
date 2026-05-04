@@ -19,7 +19,7 @@ related_terms:
   - GitHub Actions
   - Core Web Vitals
   - JavaScript
-status: drafting
+status: needs_review
 ---
 
 # Lighthouse
@@ -87,11 +87,11 @@ Core Web Vitals、a11y（F-111）、GitHub Actions（F-62）
 
 ## 開発フローでの位置（必須）
 
-1. ページ公開前に手動計測 — Chrome DevTools の Lighthouse タブで初回スコアを確認します。
-2. 問題箇所を特定 — LCP・INP・CLS など Core Web Vitals の低いスコアを読みます。
-3. AI に改善を依頼 — スコアレポートを Claude に渡し、画像最適化や遅延読み込みを提案してもらいます。
-4. CI で自動化 — Lighthouse CI を GitHub Actions に組み込み、PR ごとにスコアを計測します。
-5. 基準値を守る — LCP 2.5 秒・スコア 90 以上など閾値を設定してリグレッションを防ぎます。
+1. 手動計測 — DevTools の Lighthouse タブで初回スコアを確認します。
+2. 課題特定 — LCP・INP・CLS など Core Web Vitals の低い値を読みます。
+3. AI へ依頼 — レポートを渡し、画像最適化などを提案してもらいます。
+4. CI で自動化 — Lighthouse CI を GitHub Actions に組み込みます。
+5. 基準値の保持 — LCP 2.5 秒など閾値で低下を防ぎます。
 
 
 ## 関連用語

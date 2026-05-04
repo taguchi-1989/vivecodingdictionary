@@ -19,7 +19,7 @@ related_terms:
   - Permission
   - Slash Command
   - Auto Mode
-status: drafting
+status: needs_review
 ---
 
 # Plan Mode
@@ -32,11 +32,11 @@ status: drafting
 
 ## 何をしてくれるか
 
-Claude Code（CC）が搭載するモードで、Shift+Tab で切り替えます。ファイルを一切編集せず、実装計画だけをテキストで提示します。ユーザーが Approve（承認）を押して初めて実装に進みます。
+Claude Code（CC）が搭載するモードで、Shift+Tab で切り替えます。ファイルは編集せず、実装計画だけをテキストで提示し、Approve（承認）で初めて実装に進みます。
 
 ## どこで出会うか
 
-大規模リファクタや設計変更を依頼するときに活用します。チームで実装方針を共有する前段にも使われます。Claude Code を日常的に使うようになると、変更規模に応じて Plan Mode と Auto Mode を使い分ける運用が定着します。
+大規模リファクタや設計変更を依頼するときに使われます。Claude Code を日常的に使うと、変更規模に応じて Plan Mode と Auto Mode を使い分ける運用が定着しがちです。
 
 
 ## メイン図

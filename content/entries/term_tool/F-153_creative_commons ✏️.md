@@ -19,7 +19,7 @@ related_terms:
   - GPL
   - OSS
   - arXiv
-status: drafting
+status: needs_review
 ---
 
 # Creative Commons
@@ -36,7 +36,7 @@ status: drafting
 
 ## 何をしてくれるか
 
-著作権を完全に放棄せずに「使っていい条件」を著者が宣言できます。CC0（パブリックドメイン相当）から CC BY-NC-ND（表示・非商用・改変禁止）まで 7 種があり、アイコンで条件が一目で分かります。
+著作権を放棄せずに「使っていい条件」を著者が宣言できます。CC0（パブリックドメイン相当）から CC BY-NC-ND（表示・非商用・改変禁止）まで 7 種があり、アイコンで条件を読み取れます。
 
 ## どこで出会うか
 

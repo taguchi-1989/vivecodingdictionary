@@ -19,24 +19,24 @@ related_terms:
   - PostgreSQL
   - SQLite
   - ORM
-status: drafting
+status: needs_review
 ---
 
 # Prisma
 
 ## tagline
 
-TypeScript（F-2）向けの型安全な ORM（Object-Relational Mapping）です。DB 操作をコードで安全に扱えます。
+TypeScript（F-2）向けの型安全な ORM（Object-Relational Mapping）です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-`schema.prisma` ファイルにテーブル定義を書くと、TypeScript 用の DB クライアントを自動生成します。SQL を直接書かなくても、型補完付きでデータを取得・更新できます。
+`schema.prisma` にテーブル定義を書くと、TypeScript 用の DB クライアントを自動生成します。SQL を直接書かずに、型補完付きでデータを取得・更新できます。
 
 ## どこで出会うか
 
-Next.js（F-11）や Express を使う TypeScript プロジェクトで登場します。AI にスキーマを書かせるとき、`schema.prisma` の構文を Claude や Cursor が理解しやすく、クエリコードまで一気に補完してもらえます。
+Next.js（F-11）や Express の TypeScript プロジェクトで登場します。`schema.prisma` の構文は Claude や Cursor が読み取りやすく、クエリコードまで補完してもらえます。
 
 ## メイン図
 
@@ -92,11 +92,11 @@ ORM、TypeScript、PostgreSQL
 
 ## 開発フローでの位置（必須）
 
-1. スキーマ定義 — `schema.prisma` にモデル（テーブル）を書く
-2. マイグレーション — `prisma migrate dev` で DB に変更を反映する
-3. クライアント生成 — `prisma generate` で型付き DB クライアントを生成する
-4. クエリ実装 — TypeScript で `prisma.user.findMany()` などを記述する
-5. データ確認 — Prisma Studio（GUI）でデータを目視確認できる
+1. スキーマ定義 — `schema.prisma` にモデルを書く
+2. マイグレーション — `prisma migrate dev` で DB に反映
+3. クライアント生成 — `prisma generate` で型付きクライアントを生成
+4. クエリ実装 — `prisma.user.findMany()` などを記述
+5. データ確認 — Prisma Studio（GUI）で目視確認
 
 
 ## 関連用語

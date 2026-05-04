@@ -20,7 +20,7 @@ related_terms:
   - IFEval
   - Tool Use
   - HumanEval
-status: drafting
+status: needs_review
 ---
 
 # 指示追従性
@@ -100,7 +100,6 @@ IFEval、MT-Bench、System Prompt
 - Context Engineering
 - IFEval
 - Tool Use
-- HumanEval
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->

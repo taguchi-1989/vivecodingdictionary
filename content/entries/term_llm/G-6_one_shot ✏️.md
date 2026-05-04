@@ -19,7 +19,7 @@ related_terms:
   - Few-shot Learning
   - Zero-shot
   - System Prompt
-status: drafting
+status: needs_review
 ---
 
 # One-shot
@@ -32,11 +32,11 @@ status: drafting
 
 ## 何をしてくれるか
 
-プロンプト（指示文）の中に出力例を 1 件だけ添えることで、AI の返答フォーマットや文体を揃えます。「例: Hello → こんにちは」のように示すだけで、Claude や GPT が同じ書き方で応答します。
+プロンプト（指示文）に出力例を 1 件だけ添えることで、AI の返答フォーマットや文体を揃えます。「例: Hello → こんにちは」と示すだけで、Claude や GPT が同じ書き方で応答します。
 
 ## どこで出会うか
 
-Prompt Engineering（G-10）の解説記事や、Few-shot Learning（G-13）と対比される場面で登場します。「例なし＝Zero-shot、例 1 つ＝One-shot、例数個＝Few-shot」という 3 段階の整理として紹介されることがほとんどです。
+Prompt Engineering（G-10）の解説や Few-shot Learning（G-13）との対比で登場します。「例なし＝Zero-shot、例 1 つ＝One-shot、例数個＝Few-shot」という 3 段階の整理で紹介されることが多いです。
 
 ## メイン図
 
@@ -102,7 +102,6 @@ Few-shot Learning、Chain of Thought、Prompt Engineering
 - Prompt Engineering
 - Few-shot Learning
 - Zero-shot
-- System Prompt
 
 
 <!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->

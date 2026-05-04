@@ -19,7 +19,7 @@ related_terms:
   - Tool Use
   - MCP
   - AutoGen
-status: drafting
+status: needs_review
 ---
 
 # マルチエージェント協調
@@ -34,12 +34,12 @@ status: drafting
 
 ## 何をしてくれるか
 
-planner（計画役）・executor（実行役）・reviewer（レビュー役）のように役割を分けた複数エージェントが協調して動きます。1 体では context が不足する大きなタスクや、専門的なスキルを要する局面で有効です。
+planner（計画役）・executor（実行役）・reviewer（レビュー役）のように役割を分けた複数エージェントが協調して動きます。1 体では context が不足する大きなタスクや、専門的な工程に向きます。
 
 
 ## どこで出会うか
 
-AutoGen や CrewAI などのフレームワーク、または Claude Code の Subagent 機能を使った設計記事で目にします。「エージェントに別のエージェントを呼ばせる」構成として紹介されることが多いです。
+AutoGen や CrewAI などのフレームワーク、Claude Code の Subagent 機能を使った設計記事で目にします。「エージェントが別のエージェントを呼ぶ」構成として紹介されます。
 
 
 ## メイン図

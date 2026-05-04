@@ -20,7 +20,7 @@ related_terms:
   - Reasoning
   - LLM
   - プロンプト
-status: drafting
+status: needs_review
 ---
 
 # Thinking モデル
@@ -37,7 +37,7 @@ status: drafting
 
 ## どこで出会うか
 
-ChatGPT（B-3）のモデル選択欄や API のモデル名に「o1」「o3」「Gemini Thinking」「Extended Thinking」と出てきます。通常モデルより応答が遅い場面で「なぜ時間がかかるのか」が最初のつまずきになりがちです。
+ChatGPT（B-3）のモデル選択欄や API のモデル名に「o1」「o3」「Gemini Thinking」「Extended Thinking」と出てきます。応答が遅い場面で「なぜ時間がかかるのか」が最初のつまずきになりがちです。
 
 ## メイン図
 

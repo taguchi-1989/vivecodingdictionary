@@ -19,25 +19,25 @@ related_terms:
   - HTML
   - React
   - SVG
-status: drafting
+status: needs_review
 ---
 
 # DOM
 
 ## tagline
 
-Document Object Model の略。HTML をメモリ上のツリーとして JavaScript から操作するための規格です。
+Document Object Model の略。HTML をツリー化し JavaScript から操作する規格です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-ブラウザが HTML を解析すると、各タグがツリー構造（DOM ツリー）になります。JavaScript はこのツリーに `querySelector()` などを呼んで、表示中のページを書き換えられます。
+ブラウザが HTML を解析すると、各タグがツリー構造（DOM ツリー）になります。JavaScript から `querySelector()` などで表示中のページを書き換えられます。
 
 
 ## どこで出会うか
 
-AI にフロントエンドを頼むと、生成コードに `getElementById()` や `addEventListener()` が現れます。「ボタンを押したら動く」を実現する舞台が DOM で、React の Virtual DOM もここが出発点です。
+AI にフロントエンドを頼むと、生成コードに `getElementById()` や `addEventListener()` が現れます。「ボタンを押したら動く」の舞台が DOM で、Virtual DOM もここが出発点です。
 
 
 ## メイン図

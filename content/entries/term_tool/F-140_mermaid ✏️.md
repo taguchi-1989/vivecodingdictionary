@@ -29,14 +29,14 @@ related_terms:
   - SVG
 
 # ── 制作状態 ──
-status: drafting
+status: needs_review
 ---
 
 # Mermaid
 
 ## tagline
 
-テキストを書くだけでフローチャートや構成図を生成できる記法です。
+テキストでフローチャートや構成図を生成できる記法です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 

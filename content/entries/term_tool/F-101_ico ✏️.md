@@ -19,7 +19,7 @@ related_terms:
   - PNG
   - favicon
   - ImageMagick
-status: drafting
+status: needs_review
 ---
 
 # .ico
@@ -37,7 +37,7 @@ Windows やブラウザで表示されるアイコン専用の画像形式です
 
 ## どこで出会うか
 
-Web サイトを作ると `favicon.ico` という名前でルートに置くよう求められます。AI に「サイトの favicon を用意して」と頼むと `.ico` ファイルの生成を提案されることがあります。Windows のショートカットアイコンとしても使われます。
+Web サイトを作ると `favicon.ico` をルートに置くよう求められます。AI に「favicon を用意して」と頼むと `.ico` の生成を提案されることがあります。Windows のショートカットアイコンとしても使われます。
 
 
 ## メイン図

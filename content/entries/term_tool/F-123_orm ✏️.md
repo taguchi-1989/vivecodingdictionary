@@ -37,19 +37,19 @@ status: drafting
 
 ## tagline
 
-Object-Relational Mapping の略。DB のテーブルをクラスとして扱い、SQL なしで操作できる仕組みです。
+Object-Relational Mapping の略。DB のテーブルをクラスとして扱い、SQL なしで操作する仕組みです。
 
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-`User.findById(1)` のような言語ネイティブな書き方で DB を操作できます。型補完が効き、スキーマ変更もコード側に反映されるため、SQL を直接書くより安全に扱えます。
+`User.findById(1)` のような書き方で DB を操作できます。型補完が効き、スキーマ変更もコードに反映されやすく、SQL 直書きより扱いやすめです。
 
 
 ## どこで出会うか
 
-Prisma や TypeORM（TypeScript）、SQLAlchemy（Python）、Active Record（Ruby on Rails）などのライブラリ名で登場します。AI がスキーマから API ハンドラまで一気に生成する際にも ORM 前提のコードが出てきます。
+Prisma や TypeORM（TypeScript）、SQLAlchemy（Python）、Active Record（Rails）などのライブラリ名で登場します。AI がスキーマから API を生成する場面でも ORM 前提が多めです。
 
 
 ## メイン図

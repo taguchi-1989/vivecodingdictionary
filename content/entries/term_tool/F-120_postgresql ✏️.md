@@ -20,7 +20,7 @@ related_terms:
   - ORM
   - Supabase
   - pgvector
-status: drafting
+status: needs_review
 ---
 
 # PostgreSQL
@@ -38,7 +38,7 @@ status: drafting
 
 ## どこで出会うか
 
-SaaS（B-43）の本番データベースや Supabase（B-29）の中核として名前が出ます。AWS・Azure・GCP でもマネージドサービスとして選択でき、バイブコーディングで LLM に渡す業務データの格納先として登場します。
+SaaS（B-43）の本番 DB や Supabase（B-29）の中核として名前が出ます。AWS・Azure・GCP のマネージドサービスでも選べ、LLM に渡す業務データの格納先として登場します。
 
 
 ## メイン図
@@ -90,11 +90,11 @@ pgvector、Supabase、ORM
 
 ## 開発フローでの位置（必須）
 
-1. DB 選定 — 本番データ規模と拡張性を検討し PostgreSQL を選択します
-2. スキーマ設計 — テーブルと列を定義し ORM（F-123）でマイグレーションします
-3. データ投入 — API や Supabase を経由してデータを INSERT します
-4. クエリ & RAG — SQL 検索に加え pgvector で Embedding を格納して LLM に渡します
-5. 運用 — RDS / Cloud SQL などマネージドサービスでバックアップを自動化します
+1. DB 選定 — データ規模と拡張性を見て PostgreSQL を選びます
+2. スキーマ設計 — テーブルと列を決め ORM（F-123）で反映します
+3. データ投入 — API や Supabase 経由で INSERT します
+4. クエリ & RAG — SQL 検索や pgvector で Embedding を扱います
+5. 運用 — RDS / Cloud SQL などでバックアップを自動化します
 
 
 ## 関連用語

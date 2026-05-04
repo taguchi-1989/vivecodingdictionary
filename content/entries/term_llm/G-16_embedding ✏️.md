@@ -19,7 +19,7 @@ related_terms:
   - ベクトル DB
   - Transformer
   - LLM
-status: drafting
+status: needs_review
 ---
 
 # Embedding
@@ -30,17 +30,17 @@ status: drafting
 
 ## tagline
 
-テキストや画像の意味を数列（ベクトル）に変換する技術です。AI が「似ている」を数値で判断する仕組みの土台です。
+テキストや画像の意味を数列（ベクトル）に変換する技術。AI が「似ている」を数値で判断する土台です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-文章や画像を数百〜数千次元のベクトル（数値の配列）に変換します。似た意味を持つものは変換後のベクトルが近い位置に集まるよう学習されているため、「意味の類似度」を数値として比較できます。
+文章や画像を数百〜数千次元のベクトル（数値配列）に変換します。似た意味ほど近い位置に集まるよう学習されており、意味の類似度を数値で比較できます。
 
 ## どこで出会うか
 
-社内ドキュメントへの意味検索や RAG（Retrieval-Augmented Generation）構築の場面で登場します。OpenAI の text-embedding-3-small や sentence-transformers などの API・ライブラリを呼び出す際に名前を見かけます。
+社内ドキュメントの意味検索や RAG（Retrieval-Augmented Generation）構築で登場します。OpenAI の text-embedding-3-small や sentence-transformers といった API・ライブラリで見かけます。
 
 ## メイン図
 
@@ -57,7 +57,7 @@ status: drafting
 
 ## 会話での使い方例
 
-「社内 FAQ を Embedding にしてベクトル DB に入れると、自然な質問でもヒットします。」
+「社内 FAQ を Embedding にしてベクトル DB に入れれば、自然な質問でも拾えます。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->

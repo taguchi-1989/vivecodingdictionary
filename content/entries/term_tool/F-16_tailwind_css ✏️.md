@@ -18,7 +18,7 @@ related_terms:
   - shadcn/ui
   - React
   - Prettier
-status: drafting
+status: needs_review
 ---
 
 # Tailwind CSS
@@ -31,11 +31,11 @@ status: drafting
 
 ## 何をしてくれるか
 
-`flex p-4 text-sm text-gray-700` のように、1 つの目的に特化した小さなクラスを並べて UI を組み立てます。カスタム CSS ファイルを別途書かなくても、HTML の class 属性だけでデザインが完結します。
+`flex p-4 text-sm` のように、1 つの目的に絞った小さなクラスを並べて UI を組み立てます。別途 CSS ファイルを書かなくても、HTML の class 属性だけでスタイルが整います。
 
 ## どこで出会うか
 
-v0（B-9）や Bolt.new（B-11）が生成する UI コードのほぼすべてが Tailwind CSS です。shadcn/ui（F-15）も前提として採用しており、AI に「UI 作って」と頼んだ出力を読む場面で必ず登場します。
+v0（B-9）や Bolt.new（B-11）が生成する UI コードの多くは Tailwind CSS です。shadcn/ui（F-15）も前提として採用しており、AI に UI 生成を頼んだ出力を読む場面でよく登場します。
 
 ## メイン図
 
@@ -70,19 +70,19 @@ HTML の class にユーティリティを並べてスタイルを組む CSS フ
 
 ### 2. うれしさ
 
-CSS ファイルとクラス名の管理が不要になり、AI 出力のコードも読みやすくなります。
+CSS ファイルやクラス名の管理が要らず、AI 出力のコードも読みやすくなります
 
 ### 3. 注意点
 
-class 属性が長くなりがちで、整理せずに放置すると可読性が下がることがあります。
+class 属性が長くなりがちで、放置すると可読性が下がることがあります。
 
 ### 4. どこで役立つか
 
-AI 生成 UI コードの読解や、shadcn/ui を使う React プロジェクトで役立ちます。
+AI 生成 UI の読解や、shadcn/ui を使う React プロジェクトで役立ちます。
 
 ### 5. はじめに
 
-よく使うクラス（`p` `m` `flex` `text` `bg`）の命名ルールを把握するところから始まります。
+`p` `m` `flex` `text` `bg` など、よく使うクラスの命名ルールを把握するところから始めます。
 
 ### 6. 深掘り先
 
@@ -92,9 +92,9 @@ CSS, shadcn/ui, Prettier
 
 1. 初期設定 — `npm install tailwindcss` で導入し設定ファイルを置きます
 2. クラスを記述 — `flex gap-4 p-6` のように class 属性で組みます
-3. AI 出力を読む — v0・Bolt.new の出力もほぼ Tailwind です
-4. 整理する — Prettier プラグインで自動整列、`@apply` でまとめます
-5. ビルド — 未使用クラスを削った軽量 CSS が出力されます
+3. AI 出力を読む — v0・Bolt.new の出力も多くが Tailwind です
+4. 整理 — Prettier プラグインで整列し `@apply` でまとめます
+5. ビルド — 未使用クラスを削った軽量 CSS が出ます
 
 
 ## 関連用語

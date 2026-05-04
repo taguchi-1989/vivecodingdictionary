@@ -19,7 +19,7 @@ related_terms:
   - MCP
   - Agent
   - JSON
-status: drafting
+status: needs_review
 ---
 
 # Function Calling
@@ -96,7 +96,7 @@ Tool Use（G-30）、MCP（I-1）、Agent。
 - Tool Use
 - MCP
 - Agent
-- JSON
+- JSON Schema
 
 <!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 

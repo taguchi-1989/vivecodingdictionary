@@ -18,7 +18,7 @@ related_terms:
   - Tailwind CSS
   - v0
   - Radix UI
-status: drafting
+status: needs_review
 ---
 
 # shadcn/ui
@@ -86,11 +86,11 @@ Radix UI、Tailwind CSS、v0
 
 ## 開発フローでの位置（必須）
 
-1. プロジェクト初期化 — Next.js や Vite で React プロジェクトを立ち上げます
-2. shadcn/ui 導入 — `npx shadcn@latest init` で設定ファイルを生成します
-3. コンポーネント追加 — `npx shadcn@latest add button` で必要なパーツをコピーします
-4. カスタマイズ — コピーされたコードを直接編集してデザインを調整します
-5. AI との連携 — Claude や v0 に「shadcn/ui で」と指定して UI を自動生成します
+1. プロジェクト初期化 — Next.js や Vite で React 環境を立ち上げます
+2. shadcn/ui 導入 — `npx shadcn@latest init` で設定を生成します
+3. コンポーネント追加 — `add button` でパーツをコピーします
+4. カスタマイズ — 取り込まれたコードを直接編集します
+5. AI との連携 — Claude や v0 に「shadcn/ui で」と指定して生成します
 
 
 ## 関連用語

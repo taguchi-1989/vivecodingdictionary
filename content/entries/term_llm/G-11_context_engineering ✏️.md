@@ -20,24 +20,24 @@ related_terms:
   - System Prompt
   - RAG
   - Context Window
-status: drafting
+status: needs_review
 ---
 
 # Context Engineering
 
 ## tagline
 
-LLM に渡す情報・状態・履歴の全体を設計する技術です。Prompt Engineering より広い層を扱います。
+LLM に渡す情報・履歴の全体を設計する技術です。Prompt Engineering より広い層を扱います。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-LLM（大規模言語モデル）が参照する Context（文脈）の「何を・どの順で・どれだけ渡すか」を設計します。指示文を磨く Prompt Engineering より上位の概念で、System Prompt・履歴・ファイルなど全体の構造を整えます。
+LLM（大規模言語モデル）が参照する Context（文脈）の「何を・どの順で・どれだけ渡すか」を設計します。Prompt Engineering より広く、System Prompt や履歴など全体の構造を整えます。
 
 ## どこで出会うか
 
-「指示を変えても改善しない」場面で、Context の設計が根本原因であることがあります。Anthropic や AI 研究者の間で 2024〜2025 年に認知が広まり、CLAUDE.md もその実践例の 1 つです。
+「指示を変えても改善しない」場面で、Context の設計が原因のことがあります。Anthropic や AI 研究者の間で 2024〜2025 年に広まり、CLAUDE.md も実践例です。
 
 ## メイン図
 
@@ -53,7 +53,7 @@ Prompt Engineering（指示文の磨き込み）と Context Engineering（情報
 
 ## 会話での使い方例
 
-「Context Engineering は渡す情報の設計なので、指示文の書き方より先に考えたいですね。」
+「Context Engineering は情報の設計なので、指示文の書き方より先に考えたいですね。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -95,7 +95,6 @@ Context（G-1）, System Prompt（G-4）, RAG
 - Context
 - Prompt Engineering
 - System Prompt
-- RAG
 - Context Window
 
 <!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->

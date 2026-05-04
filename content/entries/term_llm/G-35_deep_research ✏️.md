@@ -20,7 +20,7 @@ related_terms:
   - Perplexity
   - オーケストレーション
   - ハルシネーション
-status: drafting
+status: needs_review
 ---
 
 # Deep Research
@@ -37,7 +37,7 @@ status: drafting
 
 ## どこで出会うか
 
-ChatGPT や Gemini の画面で「Deep Research」ボタンとして登場します。Perplexity でも Pro Search や Deep Research の名称で提供されており、市場調査・競合調査・技術動向まとめをまとめて依頼したい場面で目にすることが多いです。
+ChatGPT や Gemini の画面で「Deep Research」ボタンとして登場します。Perplexity でも Pro Search や Deep Research の名称で提供され、市場調査・競合調査・技術動向まとめを依頼したい場面で見かけます。
 
 ## メイン図
 

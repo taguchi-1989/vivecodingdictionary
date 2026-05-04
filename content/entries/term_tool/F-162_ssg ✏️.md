@@ -19,14 +19,14 @@ related_terms:
   - Astro
   - Cloudflare Pages
   - Netlify
-status: drafting
+status: needs_review
 ---
 
 # SSG
 
 ## tagline
 
-Static Site Generation の略。ビルド時に全ページの HTML を生成し、CDN から静的ファイルとして配信する方式です。
+Static Site Generation の略。ビルド時に HTML を生成し、CDN から静的ファイルで配信する方式です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
@@ -36,7 +36,7 @@ Static Site Generation の略。ビルド時に全ページの HTML を生成し
 
 ## どこで出会うか
 
-Hugo・Jekyll・Astro などのフレームワーク設定や、Vercel / Cloudflare Pages へのデプロイ手順で目にします。AI が生成したブログやドキュメントサイトを公開するときに選ぶ方式としてよく登場します。
+Hugo・Jekyll・Astro などのフレームワーク設定や、Vercel / Cloudflare Pages へのデプロイ手順で目にします。AI が作ったブログやドキュメントを公開するときの選択肢として登場します。
 
 ## メイン図
 
