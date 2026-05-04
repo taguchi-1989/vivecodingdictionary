@@ -19,7 +19,7 @@ related_terms:
   - ChatGPT
   - Sam Altman
   - Thinking Machines Lab
-status: needs_review
+status: ready
 ---
 
 # Mira Murati

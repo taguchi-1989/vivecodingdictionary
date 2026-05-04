@@ -19,7 +19,7 @@ related_terms:
   - GitHub
   - Claude Code
   - Tool Use
-status: needs_review
+status: ready
 ---
 
 # GitHub MCP

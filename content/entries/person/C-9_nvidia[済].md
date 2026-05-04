@@ -19,7 +19,7 @@ related_terms:
   - H100
   - Hopper
   - LLM
-status: needs_review
+status: ready
 ---
 
 # NVIDIA

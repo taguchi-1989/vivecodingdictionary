@@ -1,31 +1,37 @@
 #!/usr/bin/env python3
 """
-content/entries/**/*.md のファイル名末尾にステータステキストマーカーを付ける／更新する。
+content/entries/**/*.md のファイル名末尾に「次のアクション」タグを 1 つ付ける／更新する。
 
-ステータス（YAML フロントマター status: から決定、必ず 1 つ付く）:
-  [skeleton]      skeleton / candidate
-  [drafting]      drafting
-  [needs_review]  needs_review
-  [ready]         ready
-  [archived]      archived / sample
+タグは必ず 1 個だけ。誰の番か × 何の作業かが瞬時に読めるように、コロン区切りで
+「主体:作業」を 2 文字で表す（B-1 方式、2026-05-04 採用）。
 
-著者コメント（追加で付く）:
-  [comment]       「## 私のコメント」節に著者の記入がある（プレースホルダー以外の非空文字）
+  [人:未]   skeleton / candidate
+            → 人の番。AI に初稿生成を依頼する
+  [AI:直]   drafting + ☆ 違反あり
+            → AI の番。構造崩れ・字数 100 字超などを直す
+  [AI:整]   drafting + 警告のみ（または全パスなのに昇格漏れ）
+            → AI の番。字数の丸めや LLM 整文など軽い手当て
+  [人:書]   needs_review
+            → 人の番。「非エンジニアのつまずき」「私のコメント」を書く
+  [済]      ready
+            → 完成（著者欄まで埋まった）
+  [凍]      archived / sample
+            → 参照用、触らない
 
 例:
-  B-1_gemini.md  →  B-1_gemini[ready][comment].md
-  B-3_chatgpt.md →  B-3_chatgpt[drafting].md
-  G-7.md          →  G-7[archived].md
+  C-1_openai[ready][comment].md → C-1_openai[済].md
+  C-5_xai[drafting][comment].md → C-5_xai[AI:整].md  （警告のみの場合）
+  C-50_sam_altman[needs_review].md → C-50_sam_altman[人:書].md
+
+使い方:
+    python3 scripts/apply_status_markers.py --dry-run
+    python3 scripts/apply_status_markers.py
+    python3 scripts/apply_status_markers.py --filter content/entries/service
 
 なぜ絵文字ではなくテキストか:
   Obsidian Mobile + Git の同期で、絵文字付きファイル名が安定しなかった
   （古いキャッシュが上書きで戻る事故が発生）。テキストの [...] 形式は
   クロスプラットフォームで安全。
-
-Usage:
-    python3 scripts/apply_status_markers.py --dry-run
-    python3 scripts/apply_status_markers.py
-    python3 scripts/apply_status_markers.py --filter content/entries/service
 """
 from __future__ import annotations
 
@@ -37,19 +43,38 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 ENTRIES_DIR = ROOT / "content" / "entries"
 
-STATUS_TAG = {
-    "skeleton": "[skeleton]",
-    "candidate": "[skeleton]",
-    "drafting": "[drafting]",
-    "needs_review": "[needs_review]",
-    "ready": "[ready]",
-    "archived": "[archived]",
-    "sample": "[archived]",
+# 兄弟スクリプトを import 可能に
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from validate_entry import (  # noqa: E402
+    Report,
+    parse_frontmatter,
+    check_yaml,
+    check_structure,
+    check_author_fields_empty,
+    check_char_counts,
+    check_tone,
+    check_sources_date,
+)
+
+
+# 直接決まる status → タグ
+STATUS_TAG_DIRECT = {
+    "skeleton":     "[人:未]",
+    "candidate":    "[人:未]",
+    "needs_review": "[人:書]",
+    "ready":        "[済]",
+    "archived":     "[凍]",
+    "sample":       "[凍]",
 }
 
-COMMENT_TAG = "[comment]"
+# 全タグ（剥がし対象。旧版の「私:〜」も剥がせるよう残す）
+NEW_TAGS = [
+    "[人:未]", "[AI:直]", "[AI:整]", "[人:書]", "[済]", "[凍]",
+    "[私:未]", "[私:書]",  # 旧表記（2026-05-04 一日のみ存在）
+]
 
-ALL_TAGS = [
+# 旧テキストタグ（剥がし対象）
+LEGACY_TEXT_TAGS = [
     "[skeleton]",
     "[drafting]",
     "[needs_review]",
@@ -61,48 +86,17 @@ ALL_TAGS = [
 # 旧絵文字マーカー（互換のため、付いていたら剥がす）
 LEGACY_EMOJI = ["⬜", "✏️", "👁", "✅", "🗄", "💬"]
 
-
-def parse_frontmatter(text: str) -> dict[str, str]:
-    m = re.match(r"^---\r?\n(.*?)\r?\n---", text, re.DOTALL)
-    if not m:
-        return {}
-    fm: dict[str, str] = {}
-    for line in m.group(1).splitlines():
-        mm = re.match(r"^([A-Za-z_][\w-]*):\s*(.*?)\s*$", line)
-        if mm:
-            fm[mm.group(1)] = mm.group(2).strip().strip('"').strip("'")
-    return fm
-
-
-COMMENT_SECTION_RE = re.compile(r"##\s*私のコメント\s*\n(.*?)(?=\n##\s|\Z)", re.DOTALL)
-COMMENT_LINE_RE = re.compile(r"^-\s*[🙂👍👎👥][^:]*:\s*(.+?)\s*$")
-
-
-def is_comment_filled(text: str) -> bool:
-    m = COMMENT_SECTION_RE.search(text)
-    if not m:
-        return False
-    for line in m.group(1).splitlines():
-        mm = COMMENT_LINE_RE.match(line)
-        if mm and mm.group(1).strip():
-            return True
-    return False
+ALL_STRIP = NEW_TAGS + LEGACY_TEXT_TAGS + LEGACY_EMOJI
 
 
 def strip_existing_marker(stem: str) -> str:
-    """末尾の「既知タグの並び」を取り除く（テキスト [...] と旧絵文字の両方）。"""
+    """末尾の「既知タグの並び」を取り除く。"""
     while True:
         prev = stem
         s = stem.rstrip()
-        # テキストタグ剥がし
-        for tag in ALL_TAGS:
+        for tag in ALL_STRIP:
             if s.endswith(tag):
                 s = s[: -len(tag)]
-                break
-        # 旧絵文字剥がし
-        for marker in LEGACY_EMOJI:
-            if s.endswith(marker):
-                s = s[: -len(marker)]
                 break
         if s == prev:
             break
@@ -110,18 +104,43 @@ def strip_existing_marker(stem: str) -> str:
     return stem.rstrip()
 
 
-def compute_new_name(path: Path, fm: dict[str, str], comment_filled: bool) -> str | None:
-    status = fm.get("status")
+def silent_validate_for_drafting(path: Path, fm: dict, body: str) -> tuple[int, int]:
+    """drafting 用に ☆ と ⚠ の件数だけ返す（出力なし）。
+
+    validate_entry.py の main と同じ順で呼んで、件数を判定に使う。
+    """
+    r = Report(path)
+    check_yaml(fm, r)
+    check_structure(body, r)
+    check_author_fields_empty(body, "drafting", r)
+    check_char_counts(body, r)
+    check_tone(body, r)
+    check_sources_date(body, fm, r)
+    return len(r.star_fails), len(r.warnings)
+
+
+def compute_new_name(path: Path, text: str) -> str | None:
+    fm, body = parse_frontmatter(text)
+    status = str(fm.get("status", "")).strip()
     if not status:
         return None
-    tag = STATUS_TAG.get(status)
-    if tag is None:
-        return None
+
+    if status in STATUS_TAG_DIRECT:
+        tag = STATUS_TAG_DIRECT[status]
+    elif status == "drafting":
+        stars, warns = silent_validate_for_drafting(path, fm, body)
+        if stars > 0:
+            tag = "[AI:直]"
+        else:
+            # 警告ありでも全パスでも、AI の手当て待ちなので [AI:整]
+            # （全パスなら本来は validator が needs_review に昇格させているはず。
+            #  もし漏れていても次回 validate でリカバリされる）
+            tag = "[AI:整]"
+    else:
+        return None  # 未知 status
+
     base = strip_existing_marker(path.stem)
-    suffix = tag
-    if comment_filled:
-        suffix += COMMENT_TAG
-    return f"{base}{suffix}.md"
+    return f"{base}{tag}.md"
 
 
 def main() -> int:
@@ -150,17 +169,16 @@ def main() -> int:
         except Exception as e:
             print(f"  read failed: {md}: {e}", file=sys.stderr)
             continue
-        fm = parse_frontmatter(text)
-        status = fm.get("status")
+        fm, _ = parse_frontmatter(text)
+        status = str(fm.get("status", "")).strip()
         if not status:
             skipped_no_status.append(md)
             continue
-        if status not in STATUS_TAG:
+        new_name = compute_new_name(md, text)
+        if new_name is None:
             unknown_status.append((md, status))
             continue
-        comment_filled = is_comment_filled(text)
-        new_name = compute_new_name(md, fm, comment_filled)
-        if new_name and new_name != md.name:
+        if new_name != md.name:
             renames.append((md, md.parent / new_name))
 
     # collision check

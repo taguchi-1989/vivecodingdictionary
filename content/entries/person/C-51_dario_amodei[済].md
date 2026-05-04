@@ -19,7 +19,7 @@ related_terms:
   - Constitutional AI
   - Claude
   - RSP
-status: needs_review
+status: ready
 ---
 
 # Dario Amodei
