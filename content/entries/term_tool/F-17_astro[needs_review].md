@@ -1,0 +1,163 @@
+---
+id: F-17
+title: Astro
+title_reading: アストロ
+category: term_tool
+subtype: framework
+experience_level: partial
+reader_level: 3-4
+importance: D
+figure_type: comparison
+page_layout: spread_v1
+start_date: 2021-06-08
+version_status: active
+pricing_note: none
+evaluation_date: 2026-04-30
+related_terms:
+  - SSG
+  - Tailwind CSS
+  - shadcn/ui
+  - React
+status: needs_review
+---
+
+# Astro
+
+## tagline
+
+コンテンツ重視の Web フレームワークです。静的出力を基本に、動きが必要な部分だけ JavaScript を載せます。
+
+<!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
+
+## 何をしてくれるか
+
+Markdown・MDX からページを生成し、React や Vue のコンポーネントを必要な箇所だけ「島（アイランド）」として配置できます。初期ロードが軽く、ブログ・ドキュメント・LP に向きます。
+
+## どこで出会うか
+
+Claude や Cursor に「静的サイトを作って」と頼むと候補に上がります。Next.js（F-11）が動的アプリ向けなのに対し、Astro はコンテンツ配信を優先したい場面で名前が出ます。
+
+## メイン図
+
+### 図の狙い
+
+Astro の「アイランドアーキテクチャ」を、静的ページの中に React コンポーネントが島として浮かぶ構造で示す。
+
+### B. 登場シーン（figure_type: comparison）
+
+- シーン1: 静的ページ全体は Astro が HTML として生成し、インタラクティブな検索欄だけ React アイランドを配置
+- シーン2: Markdown ファイルを並べてブログを構築。ビルド時に全ページを静的 HTML に変換
+- シーン3: Tailwind CSS と組み合わせ、デザイントークンを保ちながら LP を高速配信
+- 並べる基準: 静的部分と動的部分の担当範囲の違い
+
+
+## 会話での使い方例
+
+「ブログとドキュメントは Astro、ダッシュボードは Next.js と棲み分けて使っています。」
+
+
+<!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
+
+## この用語の見どころ
+
+### 1. 役割
+
+静的出力を基本に、UI フレームワークを混在させる Web フレームワークです。
+
+### 2. うれしさ
+
+初期ロードが軽く、Markdown をそのままページにできます。
+
+### 3. 注意点
+
+動的機能が多いアプリより、コンテンツ配信に向いています。
+
+### 4. どこで役立つか
+
+ブログ・ドキュメント・LP など更新頻度の高いコンテンツサイトに向いています。
+
+### 5. はじめに
+
+「静的サイトジェネレーター（SSG）＋アイランド」の 2 点を押さえると理解が進みます。
+
+### 6. 深掘り先
+
+SSG（F-162）、React（F-11 関連）、Tailwind CSS（F-16）
+
+## 開発フローでの位置（必須）
+
+1. 要件確認 — コンテンツ中心か動的アプリかを見極めます
+2. 初期化 — `npm create astro@latest` でひな形を作ります
+3. 執筆 — Markdown / MDX を `src/content/` に置きます
+4. 拡張 — 動かしたい箇所だけ React 等のコンポーネントを足します
+5. 配信 — `astro build` で静的 HTML を生成し CDN へ配ります
+
+
+## 関連用語
+
+- SSG
+- Tailwind CSS
+- shadcn/ui
+- React
+
+
+<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+
+<!-- AUTHOR: user_only / AI-ASSIST: no -->
+## 非エンジニアのつまずき
+
+-
+-
+-
+
+<!-- AUTHOR: user_only / AI-ASSIST: no -->
+## 私のコメント
+
+- 🙂 第一印象:
+- 👍 良い点:
+- 👎 ダメな点:
+- 👥 誰向けか:
+
+
+<!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
+
+## 誌面ポンチ絵メモ
+
+### メイン図（左ページ中段 / figure_type: comparison）
+
+- 描く内容: 静的ページ全体（Astro が担当）の中に、動的な React アイランドが 1〜2 つ浮かぶ構造図
+- 登場人物: PC の前に座った開発者（非エンジニア寄りの人物）が Astro のビルド結果を眺めている
+- 吹き出し・心の声: 「Markdown を書くだけでページになった」「この検索欄だけ React にした」
+- 中央に置くキーワード/ラベル: 「静的 HTML」「React アイランド」
+- Before / After の場合の対比ポイント: （比較図のため Before/After は不要）
+
+### 6 視点アイコン（右ページ上段）
+
+- 共通アイコン流用（個別演出が要るときだけ書き足す）
+
+### 開発フロー図（右ページ下段）
+
+- Step 1 のアイコン/絵柄: 要件確認（フォーク分岐アイコン）
+- Step 2 のアイコン/絵柄: プロジェクト作成（フォルダ新規作成）
+- Step 3 のアイコン/絵柄: コンテンツ執筆（Markdown ファイル）
+- Step 4 のアイコン/絵柄: アイランド配置（パズルのピース）
+- 矢印で示す流れの意図: 計画 → 初期化 → 執筆 → 拡張 → 配信の直線フロー
+
+
+## コミュニティ補完メモ
+
+- Next.js（F-11 関連）との住み分け: Next.js はダッシュボード・認証など動的アプリ向け、Astro はブログ・ドキュメント・LP など静的コンテンツ向け。AI に「サイト作って」と頼むと両方が候補に上がるため、コンテンツ中心か動的か、を先に整理することを推奨
+- SSG（F-162）との関係: Astro は SSG の実装の一つ。SSG の概念を先に理解すると Astro の設計思想が掴みやすい
+- Tailwind CSS（F-16）/ shadcn/ui（F-15）との組み合わせ: Astro は公式インテグレーションで Tailwind を 1 コマンドで導入可能。shadcn/ui は React アイランドと組み合わせて使う
+
+## 出典メモ
+
+- <https://astro.build/> — checked 2026-04-30
+- <https://docs.astro.build/ja/concepts/islands/> — checked 2026-04-30
+
+
+## 備考
+
+- Astro は 2021 年 6 月に Fred K. Schott らが公開。バージョン 5 系（2024 年末リリース）で Content Layer API が安定化
+- 本図鑑の予定スタックとして採用検討中（2026-04-30 時点）
+- Bun 公式サイト・The Guardian の AI 解説ページでも採用実績あり（evaluation_date 時点）
