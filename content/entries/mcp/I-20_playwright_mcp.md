@@ -6,7 +6,7 @@ category: mcp
 subtype: dev_automation
 experience_level: hands_on
 reader_level: 3
-importance: C
+importance: B
 figure_type: workflow
 page_layout: spread_v1
 start_date: 2024-11
@@ -104,17 +104,17 @@ Playwright、MCP Server、E2E テスト。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
--
+-普通に仕事をしていたら名前を聞かない
 -
 -
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象:
-- 👍 良い点:
-- 👎 ダメな点:
-- 👥 誰向けか:
+- 🙂 第一印象:確認が非常に楽になる最高
+- 👍 良い点:実際の操作を代行してくれるから、使い方が現代にある
+- 👎 ダメな点:いくらペルソナを設定しても全て網羅的にいけない点には注意
+- 👥 誰向けか:全てのバイブコーディングをする人全て
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
