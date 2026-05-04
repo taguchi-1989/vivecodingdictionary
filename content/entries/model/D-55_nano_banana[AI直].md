@@ -18,7 +18,7 @@ related_terms:
   - DALL-E
   - Stable Diffusion
   - Gemini
-status: drafting
+status: ready
 ---
 
 # Nano Banana

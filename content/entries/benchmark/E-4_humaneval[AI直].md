@@ -18,7 +18,7 @@ related_terms:
   - MBPP
   - Codex
   - Python
-status: drafting
+status: ready
 ---
 
 # HumanEval

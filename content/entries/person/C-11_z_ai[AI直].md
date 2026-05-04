@@ -18,7 +18,7 @@ related_terms:
   - Moonshot AI
   - Hugging Face
   - Anthropic
-status: drafting
+status: needs_review
 ---
 
 # Z.ai

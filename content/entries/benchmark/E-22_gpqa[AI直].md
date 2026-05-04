@@ -18,7 +18,7 @@ related_terms:
   - reasoning モデル
   - o1
   - SWE-Bench
-status: drafting
+status: needs_review
 ---
 
 # GPQA

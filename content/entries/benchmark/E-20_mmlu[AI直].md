@@ -18,7 +18,7 @@ related_terms:
   - MMLU-Pro
   - GPT-4
   - LLM
-status: drafting
+status: ready
 ---
 
 # MMLU

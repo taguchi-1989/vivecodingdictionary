@@ -19,7 +19,7 @@ related_terms:
   - Singularity
   - ASI
   - Geoffrey Hinton
-status: drafting
+status: ready
 ---
 
 # Ray Kurzweil

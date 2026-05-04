@@ -19,7 +19,7 @@ related_terms:
   - LLM
   - ChatGPT
   - Gemini
-status: drafting
+status: ready
 ---
 
 # Grok 系

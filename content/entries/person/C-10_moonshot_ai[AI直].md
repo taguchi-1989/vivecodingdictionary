@@ -18,7 +18,7 @@ related_terms:
   - DeepSeek V3
   - Qwen
   - Anthropic
-status: drafting
+status: needs_review
 ---
 
 # Moonshot AI

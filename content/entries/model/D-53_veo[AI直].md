@@ -18,7 +18,7 @@ related_terms:
   - Flow
   - Google DeepMind
   - Gemini
-status: drafting
+status: ready
 ---
 
 # Veo

@@ -19,7 +19,7 @@ related_terms:
   - GPU
   - CPU
   - ROCm
-status: drafting
+status: ready
 ---
 
 # AMD

@@ -18,7 +18,7 @@ related_terms:
   - MATH
   - Chain of Thought
   - AIME
-status: drafting
+status: ready
 ---
 
 # GSM8K

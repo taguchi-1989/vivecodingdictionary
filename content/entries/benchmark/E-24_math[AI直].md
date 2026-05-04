@@ -19,7 +19,7 @@ related_terms:
   - AIME
   - MMLU-Pro
   - Thinking モデル
-status: drafting
+status: ready
 ---
 
 # MATH

@@ -19,7 +19,7 @@ related_terms:
   - Chrome DevTools MCP
   - MCP Server
   - JavaScript
-status: drafting
+status: ready
 ---
 
 # Puppeteer MCP

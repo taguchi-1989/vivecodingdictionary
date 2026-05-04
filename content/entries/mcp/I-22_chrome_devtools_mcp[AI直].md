@@ -19,7 +19,7 @@ related_terms:
   - MCP Server
   - Playwright MCP
   - VS Code
-status: drafting
+status: ready
 ---
 
 # Chrome DevTools MCP

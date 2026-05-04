@@ -19,7 +19,7 @@ related_terms:
   - AMD
   - H100
   - GPU
-status: drafting
+status: ready
 ---
 
 # TSMC

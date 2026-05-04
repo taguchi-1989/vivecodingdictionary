@@ -19,7 +19,7 @@ related_terms:
   - Llama 系
   - Hugging Face
   - ファインチューニング
-status: drafting
+status: ready
 ---
 
 # gpt-oss

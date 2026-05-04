@@ -19,7 +19,7 @@ related_terms:
   - AI の羅針盤
   - ChatGPT
   - Claude Code
-status: drafting
+status: needs_review
 ---
 
 # にゃんた
