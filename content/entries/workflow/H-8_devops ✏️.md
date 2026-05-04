@@ -31,7 +31,7 @@ related_terms:
   - IaC
 
 # ── 制作状態 ──
-status: drafting
+status: needs_review
 ---
 
 # DevOps
@@ -44,11 +44,11 @@ status: drafting
 
 ## 何をしてくれるか
 
-コードを書いてリリースする「開発チーム」と、システムを安定稼働させる「運用チーム」が連携し、障害対応・デプロイ・監視を一体で回せるようにします。CI/CD や IaC（Infrastructure as Code）が主な実装手段です。
+「開発チーム」と「運用チーム」が連携し、障害対応・デプロイ・監視を一体で回せるようにします。CI/CD や IaC（Infrastructure as Code）が主な実装手段です。
 
 ## どこで出会うか
 
-「DevOps エンジニア」という求人票や、GitHub Actions の設定ファイルを触るときに出会います。バイブコーディングでは AI が PR 作成から CI 通過・自動デプロイまでループするため、DevOps の自動化パイプラインとの相性が特に良い場面で登場します。
+「DevOps エンジニア」という求人票や GitHub Actions の設定ファイルで出会います。バイブコーディングでは AI が PR 作成から CI 通過・自動デプロイまで回すため、自動化パイプラインと相性のよい場面に登場します。
 
 ## メイン図
 

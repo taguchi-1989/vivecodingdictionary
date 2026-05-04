@@ -19,7 +19,7 @@ related_terms:
   - Cursor
   - Claude Code
   - Marketplace
-status: drafting
+status: needs_review
 ---
 
 # Japanese Language Pack for VS Code
@@ -32,11 +32,11 @@ VS Code（ブイエスコード）のメニューを日本語化する Microsoft
 
 ## 何をしてくれるか
 
-インストールして再起動すると、VS Code のメニュー・コマンドパレット・設定項目が日本語表示に切り替わります。Microsoft が公式で配布しており、Marketplace（マーケットプレイス）から無償で入手できます。
+インストールして再起動すると、VS Code のメニューやコマンドパレットなどが日本語表示に切り替わります。Microsoft が公式配布しており、Marketplace から無償で入手できます。
 
 ## どこで出会うか
 
-VS Code を初めて起動したとき、右下に「日本語に切り替えますか？」という通知が出ることがあります。また Cursor（カーソル）や Claude Code（クロードコード）も VS Code ベースのため、同様の手順で日本語化できます。
+VS Code を初めて起動したとき、右下に「日本語に切り替えますか？」と通知が出ることがあります。Cursor や Claude Code も VS Code ベースのため、同じ手順で日本語化できます。
 
 ## メイン図
 
@@ -58,7 +58,7 @@ VS Code を初めて起動したとき、右下に「日本語に切り替えま
 
 ## 会話での使い方例
 
-「最初に Japanese Language Pack を入れたら、メニューが日本語になって戸惑いが減りました。」
+「Japanese Language Pack を入れたら、メニューが日本語になって戸惑いが減りました。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->

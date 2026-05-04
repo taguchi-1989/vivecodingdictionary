@@ -28,17 +28,17 @@ status: drafting
 
 ## tagline
 
-Claude Code（クロードコード）のプロジェクト専用設定ファイルです。Hook（フック）や Permission（パーミッション）をリポジトリ単位で固定できます。
+Claude Code のプロジェクト用設定ファイルで、Hook や Permission をリポジトリ単位で揃えられます。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-`.claude/` ディレクトリに置くだけで、Bash の許可リストや保存時に動かす Hook を Claude Code に読み込ませられます。チームメンバーも同じ設定でリポジトリを開くため、動作の一致を保てます。
+`.claude/` に置くだけで、Bash 許可リストや保存時 Hook を Claude Code に読み込ませられます。同僚も同じ設定でリポジトリを開けるので動作が揃います。
 
 ## どこで出会うか
 
-Claude Code を使い始めてしばらくすると、リポジトリ直下に `.claude/` フォルダが現れるか、自分で作るよう案内されます。特に Hook を設定したい、または Bash コマンドの許可範囲をプロジェクトごとに変えたいときに編集します。
+Claude Code を使い始めると、リポジトリ直下に `.claude/` が現れるか自分で作るよう案内されます。Hook を入れたい、または Bash 許可範囲をプロジェクトごとに変えたいときに編集します。
 
 ## メイン図
 
@@ -55,7 +55,7 @@ Claude Code を使い始めてしばらくすると、リポジトリ直下に `
 
 ## 会話での使い方例
 
-「`.claude/settings.json` にチーム共通の Hook を置いて、保存時に validator が走るようにしました。」
+「`.claude/settings.json` の Hook で保存時 validator を走らせます。」
 
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
@@ -88,11 +88,11 @@ Hook、Permission、CLAUDE.md
 
 ## 開発フローでの位置（必須）
 
-1. リポジトリ準備 — `.claude/` ディレクトリをプロジェクトルートに作成します。
-2. 設定ファイル作成 — `settings.json` に `permissions` や `hooks` を JSON 形式で記述します。
-3. Hook 登録 — `PostToolUse` イベントに validator スクリプトを指定して保存時チェックを有効にします。
-4. ローカル上書き — 個人だけに必要な設定は `settings.local.json` に書いて git 管理対象から外します。
-5. チーム共有 — `settings.json` をコミットして全員が同じ動作ルールをリポジトリから受け取ります。
+1. 準備 — プロジェクト直下に `.claude/` を作ります。
+2. 設定記述 — `settings.json` に `permissions` / `hooks` を書きます。
+3. Hook 登録 — `PostToolUse` に validator を指定します。
+4. 個人上書き — 個人設定は `settings.local.json` に分けます。
+5. 共有 — `settings.json` をコミットして共有します。
 
 
 ## 関連用語

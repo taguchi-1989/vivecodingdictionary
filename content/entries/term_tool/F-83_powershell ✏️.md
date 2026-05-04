@@ -30,17 +30,17 @@ status: drafting
 
 ## tagline
 
-Microsoft が 2006 年に公開したシェル兼スクリプト言語です。Windows 標準搭載で、現行の PowerShell 7 は macOS/Linux でも動きます。
+Microsoft 製のシェル兼スクリプト言語です。Windows 標準搭載で、7 系は macOS/Linux にも対応します。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-コマンドを対話入力するシェルとして OS を操作しながら、スクリプトとして繰り返し処理を自動化できます。bash（F-81）がテキストを流すのに対し、PowerShell は .NET オブジェクトをパイプで扱うため、属性でのフィルタが直感的です。
+対話シェルで OS を操作しつつ、スクリプトで処理を自動化できます。bash（F-81）がテキストを流すのに対し、.NET オブジェクトをパイプで扱うため属性フィルタが書きやすくなります。
 
 ## どこで出会うか
 
-Windows の「ターミナル」や「スタートメニュー」から起動できます。Claude Code を Windows ネイティブで使うとき、Bash ツールではなく PowerShell ツールが呼ばれる環境があり、bash と書式が違うためコマンドの解釈に注意が必要です。
+Windows のターミナルやスタートメニューから起動できます。Claude Code を Windows ネイティブで使うと Bash ではなく PowerShell が呼ばれる場合があり、書式差で解釈がずれやすい点に注意します。
 
 ## メイン図
 
@@ -61,7 +61,7 @@ bash と PowerShell のパイプ操作を短いコマンド対比で示し、「
 
 ## 会話での使い方例
 
-「Claude Code を Windows で使うときは PowerShell の制約を伝えると安全です。」
+「Windows で Claude Code を使うなら PowerShell 前提と伝えましょう。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
@@ -93,11 +93,11 @@ bash、WSL、Azure
 
 ## 開発フローでの位置（必須）
 
-1. 環境確認 — `$PSVersionTable` でバージョンと OS を確認します
-2. スクリプト作成 — `.ps1` ファイルに動詞-名詞コマンドを組み合わせて書きます
-3. 実行ポリシー確認 — `Set-ExecutionPolicy` でスクリプト実行が許可されているか確かめます
-4. パイプ活用 — オブジェクトをパイプで渡し、`Where-Object` や `Select-Object` でフィルタします
-5. CI/CD 連携 — GitHub Actions 等の Windows ランナーで `.ps1` スクリプトを呼び出します
+1. 環境確認 — `$PSVersionTable` でバージョンを確認
+2. スクリプト作成 — `.ps1` に動詞-名詞コマンドを記述
+3. 実行ポリシー — `Set-ExecutionPolicy` で許可状況を確認
+4. パイプ活用 — `Where-Object` 等で属性フィルタ
+5. CI/CD 連携 — Windows ランナーで `.ps1` を呼び出し
 
 ## 関連用語
 
@@ -105,6 +105,7 @@ bash、WSL、Azure
 - WSL
 - git
 - Azure
+- Windows Terminal
 
 <!-- ━━━━━━━━ 著者記入欄（右ページ下段に印刷される／AI は触らない） ━━━━━━━━ -->
 

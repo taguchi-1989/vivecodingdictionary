@@ -18,7 +18,7 @@ related_terms:
   - Tailwind CSS
   - shadcn/ui
   - React
-status: drafting
+status: needs_review
 ---
 
 # Astro
@@ -31,7 +31,7 @@ status: drafting
 
 ## 何をしてくれるか
 
-Markdown・MDX を書くだけでページを生成し、React や Vue などのコンポーネントを必要な箇所だけ「島（アイランド）」として配置できます。初期ロードが軽く、ブログ・ドキュメント・LP に向いています。
+Markdown・MDX からページを生成し、React や Vue のコンポーネントを必要な箇所だけ「島（アイランド）」として配置できます。初期ロードが軽く、ブログ・ドキュメント・LP に向きます。
 
 ## どこで出会うか
 
@@ -86,11 +86,11 @@ SSG（F-162）、React（F-11 関連）、Tailwind CSS（F-16）
 
 ## 開発フローでの位置（必須）
 
-1. 要件確認 — コンテンツ中心か動的アプリかを判断し、Astro の採用を決めます
-2. プロジェクト作成 — `npm create astro@latest` でひな形を生成します
-3. コンテンツ執筆 — Markdown / MDX ファイルを `src/content/` に配置します
-4. アイランド配置 — インタラクティブな箇所だけ React や Vue コンポーネントを挿入します
-5. ビルド・配信 — `astro build` で静的 HTML を生成し、CDN にデプロイします
+1. 要件確認 — コンテンツ中心か動的アプリかを見極めます
+2. 初期化 — `npm create astro@latest` でひな形を作ります
+3. 執筆 — Markdown / MDX を `src/content/` に置きます
+4. 拡張 — 動かしたい箇所だけ React 等のコンポーネントを足します
+5. 配信 — `astro build` で静的 HTML を生成し CDN へ配ります
 
 
 ## 関連用語

@@ -19,7 +19,7 @@ related_terms:
   - GitHub
   - Markdown
   - CLAUDE.md
-status: drafting
+status: needs_review
 ---
 
 # README.md
@@ -36,7 +36,7 @@ status: drafting
 
 ## どこで出会うか
 
-GitHub でリポジトリを開いたとき、コード一覧のすぐ下に表示されているのが README.md です。AI エージェントも「最初に読むファイル」として参照するため、Claude Code や Cursor に渡すプロジェクトでは特に重要です。
+GitHub でリポジトリを開くと、コード一覧のすぐ下に表示されるのが README.md です。AI エージェントも「最初に読むファイル」として参照するため、Claude Code や Cursor に渡す場面でも役立ちます。
 
 ## メイン図
 

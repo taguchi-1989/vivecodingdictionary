@@ -20,7 +20,7 @@ related_terms:
   - Node.js
   - Python
   - MCP
-status: drafting
+status: needs_review
 ---
 
 # .env
@@ -37,7 +37,7 @@ API キーなどを `KEY=VALUE` 形式で書き並べた設定ファイル。プ
 
 ## どこで出会うか
 
-AI ツールに API キーを渡す場面で登場します。Claude Code の MCP 設定や OpenAI 利用でも前提になり、`.gitignore`（F-56）で除外しテンプレ用に `.env.example` を残す運用が定番です。
+AI ツールに API キーを渡す場面で登場します。Claude Code の MCP 設定や OpenAI 利用でも前提となり、`.gitignore` で除外し `.env.example` を残すのが定番です。
 
 ## メイン図
 
@@ -92,11 +92,11 @@ AI ツールや外部サービスの API キーを扱う場面で必須です。
 
 ## 開発フローでの位置（必須）
 
-1. ライブラリ導入 — Node.js なら `npm install dotenv`、Python なら `pip install python-dotenv` を実行します
-2. `.env` 作成 — プロジェクトルートに `KEY=VALUE` 形式で API キーや接続情報を書き並べます
-3. `.gitignore` 登録 — `.env` を追記して git の追跡から除外し、誤コミットを防ぎます
-4. `.env.example` 追加 — キー名だけ書いた例示ファイルをリポジトリに含め、チームに構造を伝えます
-5. コードから参照 — `process.env.KEY` や `os.environ['KEY']` で値を読み込んで使います
+1. ライブラリ導入 — `npm install dotenv` か `pip install python-dotenv`
+2. `.env` 作成 — ルートに `KEY=VALUE` 形式で記述
+3. `.gitignore` 登録 — `.env` を追記して追跡から外す
+4. `.env.example` 追加 — キー名だけの例示で構造を共有
+5. コードから参照 — `process.env.KEY` 等で読み込み
 
 
 ## 関連用語

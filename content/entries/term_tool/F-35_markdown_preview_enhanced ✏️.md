@@ -19,7 +19,7 @@ related_terms:
   - Markdown
   - Markdown All in One
   - Mermaid
-status: drafting
+status: needs_review
 ---
 
 # Markdown Preview Enhanced
@@ -36,7 +36,7 @@ VS Code（F-30）向けのプレビュー拡張機能です。Mermaid（F-140）
 
 ## どこで出会うか
 
-AI が出力した Mermaid 入り仕様書を VS Code で確認するときに活躍します。拡張機能マーケットプレイスで検索するとすぐ見つかります。Markdown All in One（F-38）との併用も一般的です。
+AI が出力した Mermaid 入り仕様書を VS Code で確認するときに役立ちます。拡張機能マーケットプレイスで検索すると見つかります。Markdown All in One（F-38）との併用も一般的です。
 
 ## メイン図
 

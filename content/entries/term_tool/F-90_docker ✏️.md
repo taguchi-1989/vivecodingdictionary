@@ -18,7 +18,7 @@ related_terms:
   - Dockerfile
   - Docker Compose
   - WSL
-status: drafting
+status: needs_review
 ---
 
 # Docker
@@ -31,11 +31,11 @@ status: drafting
 
 ## 何をしてくれるか
 
-アプリの実行環境をコンテナ（Container）という軽量な箱にまとめ、どの OS でも同じ状態で動かせるツールです。Dockerfile を書くとイメージ（Image・配布用の雛形）を生成でき、チームや本番環境へ同じ環境を渡せます。
+アプリの実行環境をコンテナ（Container）という軽量な箱にまとめ、どの OS でも同じ状態で動かせます。Dockerfile からイメージ（Image・配布用の雛形）を作り、チームや本番へ渡せます。
 
 ## どこで出会うか
 
-AI ツールのローカル実行手順や開発環境を揃える場面で「Docker で動かしてください」という案内を見かけます。WSL（Windows Subsystem for Linux）と組み合わせると Windows でも Linux 向けコンテナをそのまま動かせます。
+AI ツールのローカル実行や開発環境を揃える場面で「Docker で動かしてください」と案内されます。WSL（Windows Subsystem for Linux）と合わせれば Windows でも Linux コンテナが動きます
 
 ## メイン図
 

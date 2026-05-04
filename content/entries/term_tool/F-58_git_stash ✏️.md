@@ -30,7 +30,7 @@ related_terms:
   - merge
 
 # ── 制作状態 ──
-status: drafting
+status: needs_review
 ---
 
 # git stash
@@ -106,11 +106,11 @@ git branch、git commit、git merge
 
 ## 開発フローでの位置（必須）
 
-1. 作業中断 — コミットしたくない変更がある状態で別作業が発生する
-2. 退避 — `git stash` を実行して変更を棚に乗せ、ワークツリーをきれいにする
-3. 別作業 — ブランチ切り替えや AI への依頼など、割り込み作業を完了する
-4. 復元 — `git stash pop` で棚から変更を取り出して作業を再開する
-5. 棚卸し — `git stash list` で不要な退避が残っていれば `git stash drop` で削除する
+1. 作業中断 — コミットしたくない変更がある状態で別作業が入る
+2. 退避 — `git stash` で変更を棚に乗せ、ワークツリーを clean にする
+3. 別作業 — ブランチ切り替えや AI 依頼など割り込み作業を済ませる
+4. 復元 — `git stash pop` で棚から変更を取り出し作業を再開する
+5. 棚卸し — `git stash list` で残骸を確認し `git stash drop` で削除する
 
 
 ## 関連用語

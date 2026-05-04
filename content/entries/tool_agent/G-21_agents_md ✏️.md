@@ -20,7 +20,7 @@ related_terms:
   - Codex
   - System Prompt
   - SKILL.md
-status: drafting
+status: needs_review
 ---
 
 # AGENTS.md
@@ -37,7 +37,7 @@ status: drafting
 
 ## どこで出会うか
 
-複数の AI コーディングツールをチームで使い分けている場面や、ツールを乗り換えるときに紹介されることが多いです。Claude Code は CLAUDE.md（G-20）を優先しますが、AGENTS.md も読むことができます。
+複数の AI コーディングツールをチームで使い分ける場面や、ツールを乗り換えるときに紹介されやすいです。Claude Code は CLAUDE.md（G-20）を優先しますが、AGENTS.md も読めます。
 
 ## メイン図
 

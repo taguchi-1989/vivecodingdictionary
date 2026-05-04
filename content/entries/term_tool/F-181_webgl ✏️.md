@@ -19,24 +19,24 @@ related_terms:
   - three.js
   - JavaScript
   - GPU
-status: drafting
+status: needs_review
 ---
 
 # WebGL
 
 ## tagline
 
-Web Graphics Library の略。ブラウザ上で 3D 描画を行う JavaScript API です。プラグインなしで動き、主要ブラウザが標準実装しています。
+Web Graphics Library の略。ブラウザ上で 3D 描画を行う JavaScript API です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-GPU（グラフィックス処理ユニット）を使い、ブラウザ内で 3D グラフィックスを描画します。JavaScript から呼び出せる低レベル API で、頂点座標やシェーダ（描画プログラム）を直接指定する仕組みです。
+GPU（グラフィックス処理ユニット）を使い、ブラウザ内で 3D を描画します。JavaScript から呼び出せる低レベル API で、頂点座標やシェーダ（描画プログラム）を直接指定する仕組みです。
 
 ## どこで出会うか
 
-Google Maps や Earth の 3D 表示、AI モデルのインタラクティブデモ、ゲームなどで内部的に使われています。three.js（F-14）や Babylon.js といった高レベルライブラリが WebGL を内部で呼び出す構造になっています。
+Google Maps の 3D 表示、AI モデルのデモ、ブラウザゲームなどで内部的に使われています。three.js（F-14）や Babylon.js といった高レベルライブラリが WebGL を呼び出す構造です。
 
 ## メイン図
 

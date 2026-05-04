@@ -19,7 +19,7 @@ related_terms:
   - branch
   - Pull Request
   - CI/CD
-status: drafting
+status: needs_review
 ---
 
 # Git Flow
@@ -86,11 +86,11 @@ GitHub Flow、Trunk-Based Development、CI/CD
 
 ## 開発フローでの位置（必須）
 
-1. 機能着手 — `develop` から `feature/*` を切り、実装を進めます
-2. 統合 — `feature/*` を `develop` にマージし、動作を確認します
-3. リリース準備 — `release/*` を切り、最終調整と品質確認を行います
-4. 本番反映 — `release/*` を `main` にマージし、タグを打ちます
-5. 緊急修正 — 本番障害は `main` から `hotfix/*` を切り、即時対応します
+1. 機能着手 — `develop` から `feature/*` を切り実装します
+2. 統合 — `feature/*` を `develop` にマージし動作を確認します
+3. リリース準備 — `release/*` を切り最終調整と品質確認を行います
+4. 本番反映 — `release/*` を `main` にマージしタグを打ちます
+5. 緊急修正 — 本番障害は `main` から `hotfix/*` で対応します
 
 ## 関連用語
 

@@ -20,7 +20,7 @@ related_terms:
   - GitHub
   - CommonMark
   - LLM
-status: drafting
+status: needs_review
 ---
 
 # Markdown
@@ -33,11 +33,11 @@ status: drafting
 
 ## 何をしてくれるか
 
-プレーンテキストに `#` や `-` などの記号を加えるだけで、整形された文書をブラウザや各種ツールで表示できます。本書自身も Markdown で書かれており、AI へのプロンプトやドキュメントの標準フォーマットとして広く使われています。
+プレーンテキストに `#` や `-` などの記号を加えるだけで、整形された文書をブラウザや各種ツールで表示できます。本書自身も Markdown で書かれ、AI プロンプトや文書の標準形式として広く使われています。
 
 ## どこで出会うか
 
-GitHub（ギットハブ）のリポジトリ画面や README ファイル、Claude Code の設定ファイル CLAUDE.md などで日常的に目にします。LLM（大規模言語モデル）は回答を Markdown 形式で返すことが多く、AI との会話でも頻繁に登場します。
+GitHub（ギットハブ）のリポジトリ画面や README、Claude Code の設定ファイル CLAUDE.md で日常的に目にします。LLM（大規模言語モデル）は回答を Markdown 形式で返すことが多く、AI との会話にも頻出します。
 
 ## メイン図
 
