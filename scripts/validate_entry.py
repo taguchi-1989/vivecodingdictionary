@@ -577,6 +577,19 @@ def promote_to_needs_review(path: Path) -> bool:
     - YAML frontmatter 内の `status: drafting` だけを置換（本文・コメントは触らない）
     - Python の直接書き込みなので Edit/Write フックは再発火しない（ループしない）
     """
+    return _replace_status(path, "drafting", "needs_review")
+
+
+def promote_to_ready(path: Path) -> bool:
+    """needs_review → ready に YAML を直接書き換える。
+
+    - 著者欄が全項目埋まったエントリのみで呼ばれる
+    - YAML frontmatter 内の `status: needs_review` だけを置換
+    """
+    return _replace_status(path, "needs_review", "ready")
+
+
+def _replace_status(path: Path, old: str, new: str) -> bool:
     try:
         text = path.read_text(encoding="utf-8")
     except Exception:
@@ -589,8 +602,8 @@ def promote_to_needs_review(path: Path) -> bool:
     fm_text = text[4:end]
     rest = text[end:]
     new_fm = re.sub(
-        r"^status:\s*drafting\s*$",
-        "status: needs_review",
+        rf"^status:\s*{re.escape(old)}\s*$",
+        f"status: {new}",
         fm_text,
         flags=re.MULTILINE,
     )
@@ -600,6 +613,47 @@ def promote_to_needs_review(path: Path) -> bool:
         path.write_text("---\n" + new_fm + rest, encoding="utf-8")
     except Exception:
         return False
+    return True
+
+
+def is_author_fields_filled(body: str) -> bool:
+    """A 案（厳しめ）: 著者欄が完全に埋まっているか判定する。
+
+    needs_review → ready の自動昇格条件として使う。
+
+    - 「## 非エンジニアのつまずき」: ハイフン箇条書きで語句が入った行が 1 つ以上
+    - 「## 私のコメント」: 4 ラベル（第一印象 / 良い点 / ダメな点 / 誰向けか）
+      すべてのラベル後に語句が入っている
+
+    どちらか欠けていたら False。
+    """
+    m = re.search(r"## 非エンジニアのつまずき\n(.*?)(?=\n## |\n<!--)", body, re.DOTALL)
+    if not m:
+        return False
+    tsumazuki_filled = False
+    for line in m.group(1).split("\n"):
+        line = line.strip()
+        if line.startswith("-") and len(line) > 1 and line[1:].strip():
+            tsumazuki_filled = True
+            break
+    if not tsumazuki_filled:
+        return False
+
+    m = re.search(r"## 私のコメント\n(.*?)(?=\n## |\n<!--)", body, re.DOTALL)
+    if not m:
+        return False
+    block = m.group(1)
+    label_keys = ["第一印象", "良い点", "ダメな点", "誰向けか"]
+    for lbl in label_keys:
+        found = False
+        for line in block.split("\n"):
+            if lbl in line and ":" in line:
+                after = line.split(":", 1)[-1].strip()
+                if after:
+                    found = True
+                    break
+        if not found:
+            return False
     return True
 
 
@@ -638,15 +692,23 @@ def main() -> int:
     check_tone(body, r)
     check_sources_date(body, fm, r)
 
-    # 自動昇格ゲート：drafting + ☆違反0 + 警告0 のときだけ needs_review に上げる
-    promoted = False
+    # 自動昇格ゲート
+    # 1) drafting + ☆違反0 + 警告0   → needs_review
+    # 2) needs_review + ☆違反0 + 著者欄が全項目埋まっている → ready
+    #    （著者欄を埋めると check_author_fields_empty が「警告」を出すが、これは
+    #     情報通知の警告なので昇格判定では除外する。判定は ☆ 違反のみで見る）
+    promoted_msg = ""
     if status == "drafting" and not r.star_fails and not r.warnings:
-        promoted = promote_to_needs_review(path)
+        if promote_to_needs_review(path):
+            promoted_msg = "- status: `drafting` → `needs_review`（全チェックパスのため）"
+    elif status == "needs_review" and not r.star_fails and is_author_fields_filled(body):
+        if promote_to_ready(path):
+            promoted_msg = "- status: `needs_review` → `ready`（著者欄が全項目埋まったため）"
 
     # 出力：☆ 違反は stderr（Claude に見せる）、警告は stdout
     rendered = r.render()
-    if promoted:
-        rendered += "\n### 🆙 自動昇格\n\n- status: `drafting` → `needs_review`（全チェックパスのため）\n"
+    if promoted_msg:
+        rendered += "\n### 🆙 自動昇格\n\n" + promoted_msg + "\n"
     if r.star_fails:
         print(rendered, file=sys.stderr)
     else:

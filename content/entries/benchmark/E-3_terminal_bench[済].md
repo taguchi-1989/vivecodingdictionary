@@ -17,7 +17,7 @@ related_terms:
   - TAU-Bench
   - Claude Code
   - コーディングエージェント
-status: needs_review
+status: ready
 ---
 
 # Terminal-Bench

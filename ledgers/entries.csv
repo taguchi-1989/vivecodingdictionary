@@ -1,352 +1,352 @@
 new_id,legacy_id,title,category,subtype,status,notes,path
-A-1,,まえがき,common,intro,candidate,,content/entries/common/A-1_preface[drafting].md
-A-2,,この本の読み方,common,intro,needs_review,,content/entries/common/A-2_reading_guide[needs_review].md
-A-3,,図鑑の歩き方,common,intro,drafting,,content/entries/common/A-3_walking_guide[drafting].md
-A-4,,体験区分の凡例,common,meta,needs_review,,content/entries/common/A-4_experience_legend[drafting].md
-A-5,,読者レベルの凡例,common,meta,drafting,,content/entries/common/A-5_reader_level_legend[drafting].md
-A-6,,評価日・時変情報の見方,common,meta,drafting,,content/entries/common/A-6_evaluation_date_legend[drafting].md
-A-7,,図のタイプ,common,meta,drafting,,content/entries/common/A-7_figure_types_legend[drafting].md
-A-8,,色・記号の凡例,common,meta,needs_review,,content/entries/common/A-8_color_symbol_legend[drafting].md
-A-9,,索引,common,meta,drafting,,content/entries/common/A-9_index[drafting].md
-A-10,,更新履歴と更新方針,common,meta,drafting,,content/entries/common/A-10_changelog[drafting].md
-A-11,,略称表記,common,meta,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/common/A-11_abbreviations[drafting].md
-B-1,101,Gemini,service,ai_assistant,needs_review,新テンプレ書き起こし済（2026-04-24）。legacy 101 は archived,content/entries/service/B-1_gemini[needs_review].md
-B-2,,Claude,service,ai_assistant,needs_review,,content/entries/service/B-2_claude[ready][comment].md
-B-3,,ChatGPT,service,ai_assistant,drafting,,content/entries/service/B-3_chatgpt[ready][comment].md
-B-4,,Cursor,service,ai_assistant,needs_review,,content/entries/service/B-4_cursor[ready][comment].md
-B-5,,GitHub Copilot,service,ai_assistant,needs_review,,content/entries/service/B-5_github_copilot[ready][comment].md
-B-6,,Windsurf,service,ai_assistant,needs_review,,content/entries/service/B-6_windsurf[needs_review].md
-B-7,,Claude Code,service,ai_assistant,skeleton,略称CC,content/entries/service/B-7_claude_code[needs_review].md
-B-8,,Codex,service,ai_assistant,needs_review,旧 title Codex (OpenAI) を Codex に変更（2026-04-30）,content/entries/service/B-8_codex[needs_review].md
-B-9,,v0,service,ai_assistant,skeleton,,content/entries/service/B-9_v0[needs_review].md
-B-10,,Devin,service,ai_assistant,skeleton,,content/entries/service/B-10_devin[needs_review].md
-B-11,,Bolt.new,service,ai_assistant,skeleton,,content/entries/service/B-11_bolt_new[needs_review].md
-B-12,,Perplexity,service,ai_assistant,skeleton,,content/entries/service/B-12_perplexity[drafting].md
-B-13,,ElevenLabs,service,tts_service,drafting,音声系 TTS・Voice Cloning,content/entries/service/B-13_elevenlabs[ready][comment].md
-B-14,,Genspark,service,ai_assistant,needs_review,,content/entries/service/B-14_genspark[needs_review].md
-B-15,,Microsoft Copilot,service,ai_assistant,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-15_microsoft_copilot[needs_review].md
-B-16,,Microsoft 365 Copilot,service,ai_assistant,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-16_microsoft_365_copilot[needs_review].md
-B-17,,Edge Copilot,service,ai_assistant,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-17_edge_copilot[ready][comment].md
-B-18,,Aqua Voice,service,voice_input_saas,drafting,v2テンプレ書き起こし済（2026-04-29）,content/entries/service/B-18_aqua_voice[needs_review].md
-B-19,,Claude Cowork,service,collaboration_service,drafting,v2テンプレ書き起こし済（2026-04-30）。正式名称は出版前に要確認,content/entries/service/B-19_claude_cowork[needs_review].md
-B-20,,Vercel,service,hosting_cloud,needs_review,,content/entries/service/B-20_vercel[ready][comment].md
-B-21,,Netlify,service,hosting_cloud,skeleton,,content/entries/service/B-21_netlify[needs_review].md
-B-22,,Cloudflare,service,hosting_cloud,skeleton,,content/entries/service/B-22_cloudflare[needs_review].md
-B-23,,AWS,service,hosting_cloud,needs_review,,content/entries/service/B-23_aws[ready][comment].md
-B-24,,Google Cloud,service,hosting_cloud,needs_review,,content/entries/service/B-24_google_cloud[needs_review].md
-B-25,,Azure,service,hosting_cloud,skeleton,,content/entries/service/B-25_azure[needs_review].md
-B-26,,Azure OpenAI,service,managed_ai,skeleton,,content/entries/service/B-26_azure_openai[needs_review].md
-B-27,,Vertex AI,service,managed_ai,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-27_vertex_ai[needs_review].md
-B-28,,Render,service,hosting_cloud,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-28_render[ready][comment].md
-B-29,,Supabase,service,baas,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-29_supabase[needs_review].md
-B-30,,Amazon Bedrock,service,managed_ai,drafting,,content/entries/service/B-30_amazon_bedrock[ready][comment].md
-B-31,,Excalidraw,service,saas_design,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-31_excalidraw[ready][comment].md
-B-32,,Figma,service,saas_design,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-32_figma[needs_review].md
-B-33,,Canva,service,saas_design,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-33_canva[needs_review].md
-B-40,,Reddit,service,info_source,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-40_reddit[needs_review].md
-B-41,,arXiv,service,info_source,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-41_arxiv[needs_review].md
-B-50,,Claude の料金プラン,service,pricing,needs_review,時変情報 evaluation_date:2026-04-29,content/entries/service/B-50_claude_pricing[ready][comment].md
-B-51,,ChatGPT の料金プラン,service,pricing,needs_review,時変情報 evaluation_date:2026-04-29,content/entries/service/B-51_chatgpt_pricing[ready][comment].md
-B-52,,Gemini の料金プラン,service,pricing,drafting,時変情報 evaluation_date:2026-04-29,content/entries/service/B-52_gemini_pricing[needs_review].md
-B-60,,Suno,service,creative_media,drafting,音楽生成 v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-60_suno[needs_review].md
-B-61,,ACE-Step 1.5,service,creative_media,needs_review,音楽生成 v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-61_ace_step_1_5[needs_review].md
-C-1,,OpenAI,person_org,company,candidate,,content/entries/person/C-1_openai[ready][comment].md
-C-2,,Anthropic,person_org,company,needs_review,,content/entries/person/C-2_anthropic[ready][comment].md
-C-3,,Google DeepMind,person_org,company,drafting,,content/entries/person/C-3_google_deepmind[ready][comment].md
-C-4,,Meta AI,person_org,company,needs_review,,content/entries/person/C-4_meta_ai[ready][comment].md
-C-5,,xAI,person_org,company,skeleton,,content/entries/person/C-5_xai[drafting][comment].md
-C-6,,Mistral AI,person_org,company,drafting,,content/entries/person/C-6_mistral_ai[needs_review].md
-C-7,,Hugging Face,person_org,company,skeleton,,content/entries/person/C-7_hugging_face[drafting][comment].md
-C-8,,Microsoft AI,person_org,company,needs_review,,content/entries/person/C-8_microsoft_ai[drafting][comment].md
-C-9,,NVIDIA,person_org,company,needs_review,,content/entries/person/C-9_nvidia[needs_review][comment].md
-C-10,,Moonshot AI,person_org,company,drafting,,content/entries/person/C-10_moonshot_ai[drafting].md
-C-11,,Z.ai,person_org,company,drafting,旧Zhipu AI→Z.ai リブランド 2025年,content/entries/person/C-11_z_ai[drafting].md
-C-12,,TSMC,person_org,company,drafting,半導体ファウンドリ v2テンプレ書き起こし済（2026-04-30）,content/entries/person/C-12_tsmc[drafting][comment].md
-C-13,,Groq,person_org,company,drafting,AI推論チップ LPU v2テンプレ書き起こし済（2026-04-30）,content/entries/person/C-13_groq[drafting][comment].md
-C-14,,AMD,person_org,company,drafting,半導体,content/entries/person/C-14_amd[drafting][comment].md
-C-50,,Sam Altman,person_org,person,needs_review,,content/entries/person/C-50_sam_altman[needs_review].md
-C-51,,Dario Amodei,person_org,person,needs_review,,content/entries/person/C-51_dario_amodei[needs_review][comment].md
-C-52,,Demis Hassabis,person_org,person,drafting,,content/entries/person/C-52_demis_hassabis[drafting][comment].md
-C-53,,Andrej Karpathy,person_org,person,skeleton,,content/entries/person/C-53_andrej_karpathy[needs_review][comment].md
-C-54,,Ilya Sutskever,person,person,drafting,,content/entries/person/C-54_ilya_sutskever[drafting][comment].md
-C-55,,Mira Murati,person_org,person,drafting,,content/entries/person/C-55_mira_murati[needs_review][comment].md
-C-56,,Yann LeCun,person_org,person,needs_review,,content/entries/person/C-56_yann_lecun[drafting][comment].md
-C-57,,Geoffrey Hinton,person_org,person,drafting,,content/entries/person/C-57_geoffrey_hinton[drafting][comment].md
-C-58,,Elon Musk,person_org,person,drafting,,content/entries/person/C-58_elon_musk[drafting][comment].md
-C-59,,Jensen Huang,person_org,person,drafting,,content/entries/person/C-59_jensen_huang[drafting][comment].md
-C-60,,Ray Kurzweil,person_org,person,needs_review,,content/entries/person/C-60_ray_kurzweil[drafting][comment].md
-C-80,,AI大学,person_org,youtuber,drafting,,content/entries/person/C-80[needs_review][comment].md
-C-81,,にゃんた,person_org,youtuber,drafting,v2テンプレ書き起こし済（2026-04-30）。旧スケルトン C-81.md は archived,content/entries/person/C-81[archived].md
-C-82,,まさお,person_org,youtuber,skeleton,,content/entries/person/C-82[needs_review][comment].md
-C-83,,AI の羅針盤,person_org,youtuber,drafting,,content/entries/person/C-83[needs_review].md
-D-1,,Gemini 2 系,model,google,drafting,v2テンプレで D-1_gemini2.md に書き起こし済（2026-04-29）。旧D-1.md は archived,content/entries/model/D-1[archived].md
-D-2,201,Gemini 2.5 系,model,google,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/model/D-2_gemini25[needs_review].md
-D-3,,Gemini 3 系,model,google,drafting,v2テンプレ本書き済（2026-04-30）,content/entries/model/D-3[needs_review].md
-D-4,,Gemini 3.1 系,model,google,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/model/D-4[archived].md
-D-10,,Claude 3 系,model,anthropic,skeleton,,content/entries/model/D-10[needs_review].md
-D-11,,Claude 3.5 系,model,anthropic,candidate,,content/entries/model/D-11_claude35[needs_review].md
-D-12,,Claude 4 系,model,anthropic,needs_review,,content/entries/model/D-12_claude4[needs_review].md
-D-13,,Claude 4.5 系,model,anthropic,skeleton,,content/entries/model/D-13[needs_review].md
-D-14,,Claude Mythos Preview,model,frontier_model,drafting,v2テンプレ書き起こし済（2026-04-30）。旧スケルトン D-14.md は archived,content/entries/model/D-14[archived].md
-D-20,,GPT-5 系,model,openai,needs_review,本書き済み（2026-04-29）。旧スケルトン D-20.md は archived,content/entries/model/D-20[archived].md
-D-21,,GPT-4 系,model,openai,drafting,本書き済み（2026-04-29）。旧スケルトン D-21.md は archived,content/entries/model/D-21[archived].md
-D-22,,o1 系,model,openai,drafting,本書き済み（2026-04-29）。旧スケルトン D-22.md は archived,content/entries/model/D-22[archived].md
-D-23,,o3 系,model,openai,skeleton,,content/entries/model/D-23[needs_review].md
-D-24,,GPT-3 系,model,openai,drafting,,content/entries/model/D-24[archived].md
-D-25,,GPT-1 / GPT-2 系,model,openai,drafting,v2テンプレ書き起こし済（2026-04-30）スケルトン D-25.md は archived,content/entries/model/D-25[archived].md
-D-26,,gpt-oss,model,openai,skeleton,OpenAI初の公式オープンウェイトモデル 2025-08,content/entries/model/D-26_gpt_oss[drafting][comment].md
-D-30,,Grok 系,model,xai,drafting,,content/entries/model/D-30[archived].md
-D-35,,Cursor Composer,model,other_closed,drafting,title を Cursor Composer に更新（2026-04-30）,content/entries/model/D-35_cursor_composer[drafting][comment].md
-D-40,,Llama 系,model,open,drafting,,content/entries/model/D-40[archived].md
-D-41,,Mistral 系,model,open,drafting,,content/entries/model/D-41[archived].md
-D-42,,Gemma 系,model,open,drafting,,content/entries/model/D-42[archived].md
-D-43,,Qwen 系,model,open,drafting,,content/entries/model/D-43[archived].md
-D-44,,Kimi,model,open,skeleton,,content/entries/model/D-44_kimi[drafting][comment].md
-D-45,,GLM,model,open_weight_llm,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/model/D-45_glm[needs_review][comment].md
-D-46,,DeepSeek V3,model,open,needs_review,,content/entries/model/D-46_deepseek_v3[drafting][comment].md
-D-47,,DeepSeek R1,model,open,needs_review,推論特化,content/entries/model/D-47_deepseek_r1[needs_review][comment].md
-D-50,,DALL-E,model,image_video,skeleton,,content/entries/model/D-50_dall_e[needs_review][comment].md
-D-51,,Imagen,model,image_video,skeleton,,content/entries/model/D-51_imagen[drafting][comment].md
-D-52,,Sora,model,image_video,needs_review,,content/entries/model/D-52_sora[needs_review][comment].md
-D-53,,Veo,model,video_generation,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/model/D-53_veo[drafting][comment].md
-D-54,,Stable Diffusion,model,image_video,skeleton,,content/entries/model/D-54_stable_diffusion[drafting][comment].md
-D-55,,Nano Banana,model,image_video,needs_review,,content/entries/model/D-55_nano_banana[drafting][comment].md
-D-56,,Seedance,model,video_generation,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/model/D-56_seedance[drafting][comment].md
-D-57,,Flow,model,image_video,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/model/D-57_flow[drafting][comment].md
-D-58,,Whisk,model,image_video,needs_review,,content/entries/model/D-58_whisk[drafting][comment].md
-D-60,,AlphaGo,model,historical,skeleton,,content/entries/model/D-60_alphago[needs_review][comment].md
-D-70,,Amical,model,ai_solution,drafting,情報限定的。公式確認が必要（2026-04-30）,content/entries/model/D-70_amical[drafting].md
-D-71,,Whisper,model,voice_audio,skeleton,OpenAI のオープン音声認識モデル,content/entries/model/D-71_whisper[drafting][comment].md
-E-1,,SWE-Bench,benchmark,coding,needs_review,,content/entries/benchmark/E-1_swe_bench[needs_review].md
-E-2,,SWE-Bench Verified,benchmark,coding,drafting,,content/entries/benchmark/E-2_swe_bench_verified[needs_review][comment].md
-E-3,,Terminal-Bench,benchmark,coding,skeleton,,content/entries/benchmark/E-3_terminal_bench[needs_review][comment].md
-E-4,,HumanEval,benchmark,coding,skeleton,,content/entries/benchmark/E-4_humaneval[drafting][comment].md
-E-20,,MMLU,benchmark,reasoning,skeleton,,content/entries/benchmark/E-20_mmlu[drafting][comment].md
-E-21,,MMLU-Pro,benchmark,reasoning,skeleton,,content/entries/benchmark/E-21_mmlu_pro[needs_review][comment].md
-E-22,,GPQA,benchmark,reasoning,skeleton,,content/entries/benchmark/E-22_gpqa[drafting][comment].md
-E-23,,GSM8K,benchmark,reasoning,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-23_gsm8k[drafting][comment].md
-E-24,,MATH,benchmark,reasoning,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-24_math[drafting][comment].md
-E-25,,AIME,benchmark,reasoning,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-25_aime[needs_review].md
-E-26,,Humanity's Last Exam,benchmark,reasoning,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-26_humanity_s_last_exam[needs_review].md
-E-27,,IQ Bench,benchmark,reasoning,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-27_iq_bench[needs_review].md
-E-30,,TAU-Bench,benchmark,agent,skeleton,,content/entries/benchmark/E-30_tau_bench[needs_review].md
-E-31,,WebArena,benchmark,agent,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-31_webarena[needs_review].md
-E-32,,GAIA,benchmark,agent,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-32_gaia[needs_review].md
-E-33,,AgentBench,benchmark,agent_benchmark,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-33_agentbench[needs_review].md
-E-34,,OSWorld,benchmark,agent,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-34_osworld[needs_review].md
-E-50,,Chatbot Arena,benchmark,general,needs_review,,content/entries/benchmark/E-50_chatbot_arena[needs_review].md
-E-51,,LMSYS Arena,benchmark,general,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-51_lmsys_arena[needs_review].md
-F-1,301,JavaScript,term_tool,language,needs_review,旧3桁ID連携→F-1に取り込み済み,content/entries/term_tool/F-1_javascript[drafting].md
-F-2,302,TypeScript,term_tool,language,drafting,旧3桁ID連携 / v2テンプレ書き起こし済（2026-04-29）,content/entries/term_tool/F-2_typescript[needs_review].md
-F-3,,Python,term_tool,language,needs_review,,content/entries/term_tool/F-3_python[needs_review].md
-F-4,,HTML,term_tool,language,skeleton,,content/entries/term_tool/F-4_html[needs_review].md
-F-5,,CSS,term_tool,language,skeleton,,content/entries/term_tool/F-5_css[needs_review].md
-F-6,,Markdown,term_tool,language,skeleton,,content/entries/term_tool/F-6_markdown[needs_review].md
-F-7,,YAML,term_tool,language,skeleton,,content/entries/term_tool/F-7_yaml[needs_review].md
-F-8,,JSON,term_tool,language,skeleton,,content/entries/term_tool/F-8_json[needs_review].md
-F-9,,SVG,term_tool,language,skeleton,,content/entries/term_tool/F-9_svg[needs_review].md
-F-10,304,React,term_tool,framework,drafting,旧3桁ID 304 の素材を取り込み新テンプレ書き起こし済（2026-04-29）,content/entries/term_tool/F-10_react[needs_review].md
-F-11,305,Next.js,term_tool,framework,needs_review,旧3桁ID 305 の素材を取り込み新テンプレ書き起こし済（2026-04-29）,content/entries/term_tool/F-11_next_js[needs_review].md
-F-12,,Electron,term_tool,framework,skeleton,,content/entries/term_tool/F-12_electron[needs_review].md
-F-13,,Tauri,term_tool,framework,skeleton,,content/entries/term_tool/F-13_tauri[needs_review].md
-F-14,,three.js,term_tool,framework,needs_review,3Dライブラリ,content/entries/term_tool/F-14_three_js[needs_review].md
-F-15,,shadcn/ui,term_tool,framework,drafting,コピペ配布型 React コンポーネント集,content/entries/term_tool/F-15_shadcn_ui[needs_review].md
-F-16,,Tailwind CSS,term_tool,framework,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-16_tailwind_css[needs_review].md
-F-17,,Astro,term_tool,framework,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-17_astro[needs_review].md
-F-20,303,ESLint,term_tool,linter,needs_review,旧3桁ID連携・v2テンプレで書き直し済（2026-04-29）,content/entries/term_tool/F-20_eslint[needs_review].md
-F-21,,Prettier,term_tool,formatter,drafting,,content/entries/term_tool/F-21_prettier[needs_review].md
-F-30,,VS Code,term_tool,editor,drafting,,content/entries/term_tool/F-30_vs_code[needs_review].md
-F-34,,VS Code 拡張機能,term_tool,editor,drafting,v2テンプレ本書き済（2026-04-30）,content/entries/term_tool/F-34[needs_review].md
-F-35,,Markdown Preview Enhanced,term_tool,editor_ext,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-35_markdown_preview_enhanced[needs_review].md
-F-36,,Git Graph,term_tool,editor_ext,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-36_git_graph[needs_review].md
-F-37,,Japanese Language Pack for VS Code,term_tool,editor_ext,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-37_japanese_language_pack_for_vs_code[needs_review].md
-F-38,,Markdown All in One,term_tool,editor_ext,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-38_markdown_all_in_one[needs_review].md
-F-40,,npm,term_tool,cli_build,skeleton,,content/entries/term_tool/F-40_npm[needs_review].md
-F-41,,Vite,term_tool,cli_build,drafting,,content/entries/term_tool/F-41_vite[needs_review].md
-F-42,,ビルド,term_tool,cli_build,drafting,v2テンプレ本書き済（2026-04-30）,content/entries/term_tool/F-42[archived].md
-F-43,,テスト,term_tool,cli_build,drafting,v2テンプレ本書き済（2026-04-30）,content/entries/term_tool/F-43[needs_review].md
-F-44,,pnpm,term_tool,cli_build,drafting,,content/entries/term_tool/F-44_pnpm[needs_review].md
-F-50,,git,term_tool,git,needs_review,,content/entries/term/F-50_git[needs_review].md
-F-51,,git push,term_tool,git,skeleton,,content/entries/term_tool/F-51_git_push[needs_review].md
-F-52,,git pull,term_tool,git,needs_review,,content/entries/term_tool/F-52_git_pull[needs_review].md
-F-53,,branch,term_tool,git,skeleton,,content/entries/term_tool/F-53_branch[needs_review].md
-F-54,,commit,term_tool,git,needs_review,,content/entries/term_tool/F-54_commit[needs_review].md
-F-55,,merge,term_tool,git,skeleton,,content/entries/term_tool/F-55_merge[needs_review].md
-F-56,,.gitignore,term_tool,git,drafting,,content/entries/term_tool/F-56_gitignore[drafting].md
-F-57,,リポジトリ,term_tool,git,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-57[needs_review].md
-F-58,,git stash,term_tool,git,skeleton,,content/entries/term_tool/F-58_git_stash[needs_review].md
-F-59,,README.md,term_tool,git,needs_review,,content/entries/term_tool/F-59_readme_md[needs_review].md
-F-60,,GitHub,term_tool,github,needs_review,,content/entries/term_tool/F-60_github[needs_review].md
-F-61,,Pull Request,term_tool,github,needs_review,,content/entries/term_tool/F-61_pull_request[needs_review].md
-F-62,,GitHub Actions,term_tool,github,skeleton,CI/CD,content/entries/term_tool/F-62_github_actions[needs_review].md
-F-71,,ripgrep (rg),term_tool,search,needs_review,,content/entries/term_tool/F-71_ripgrep[needs_review].md
-F-80,,Node.js,term_tool,runtime,drafting,,content/entries/term_tool/F-80_node_js[needs_review].md
-F-81,,bash,term_tool,shell,drafting,,content/entries/term_tool/F-81_bash[needs_review].md
-F-82,,WSL,term_tool,shell,needs_review,,content/entries/term_tool/F-82_wsl[needs_review].md
-F-83,,PowerShell,term_tool,shell,drafting,,content/entries/term_tool/F-83_powershell[drafting].md
-F-84,,Ghostty,term_tool,terminal,needs_review,,content/entries/term_tool/F-84_ghostty[needs_review].md
-F-85,,SuperClaude Framework,term_tool,framework,needs_review,Claude Code 拡張 OSS（Anthropic 非公式）v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-85_superclaude_framework[drafting].md
-F-86,,ollama,term_tool,runtime,drafting,ローカルLLM,content/entries/term_tool/F-86_ollama[needs_review].md
-F-87,,sudo,term_tool,shell,needs_review,Substitute User do の略。2026-04-30 entry-writer で本書き,content/entries/term_tool/F-87_sudo[needs_review].md
-F-90,,Docker,term_tool,container,skeleton,,content/entries/term_tool/F-90_docker[needs_review].md
-F-91,,.env,term_tool,env,needs_review,,content/entries/term_tool/F-91_env[needs_review].md
-F-100,,拡張子早見表,term_tool,file_format,drafting,,content/entries/term_tool/F-100[archived].md
-F-101,,.ico,term_tool,file_format,needs_review,,content/entries/term_tool/F-101_ico[needs_review].md
-F-102,,.mp4,term_tool,file_format,drafting,,content/entries/term_tool/F-102_mp4[needs_review].md
-F-103,,.mp3,term_tool,file_format,needs_review,,content/entries/term_tool/F-103_mp3[needs_review].md
-F-104,,.webp,term_tool,file_format,needs_review,,content/entries/term_tool/F-104_webp[needs_review].md
-F-110,,Lighthouse,term_tool,quality,drafting,,content/entries/term_tool/F-110_lighthouse[needs_review].md
-F-111,,a11y,term_tool,quality,drafting,,content/entries/term_tool/F-111_a11y[needs_review].md
-F-120,,PostgreSQL,term_tool,database,drafting,,content/entries/term_tool/F-120_postgresql[needs_review].md
-F-121,,SQLite,term_tool,database,skeleton,,content/entries/term_tool/F-121_sqlite[needs_review].md
-F-122,,Prisma,term_tool,orm,needs_review,,content/entries/term_tool/F-122_prisma[needs_review].md
-F-123,,ORM,term_tool,orm,drafting,,content/entries/term_tool/F-123_orm[drafting].md
-F-130,,OAuth,term_tool,auth,needs_review,,content/entries/term_tool/F-130_oauth[needs_review].md
-F-140,,Mermaid,term_tool,diagram,skeleton,,content/entries/term_tool/F-140_mermaid[needs_review].md
-F-141,,PlantUML,term_tool,diagram,drafting,,content/entries/term_tool/F-141_plantuml[needs_review].md
-F-150,,MIT ライセンス,term_tool,license,drafting,,content/entries/term_tool/F-150[needs_review].md
-F-151,,Apache 2.0,term_tool,license,drafting,,content/entries/term_tool/F-151_apache_2_0[needs_review].md
-F-152,,GPL,term_tool,license,drafting,,content/entries/term_tool/F-152_gpl[needs_review].md
-F-153,,Creative Commons,term_tool,license,drafting,title を Creative Commons に修正（括弧除去）,content/entries/term_tool/F-153_creative_commons[needs_review].md
-F-154,,OSS,term_tool,license,skeleton,,content/entries/term_tool/F-154_oss[needs_review].md
-F-160,,DOM,term_tool,web_foundation,skeleton,,content/entries/term_tool/F-160_dom[needs_review].md
-F-161,,SSR,term_tool,web_foundation,skeleton,,content/entries/term_tool/F-161_ssr[needs_review].md
-F-162,,SSG,term_tool,web_foundation,needs_review,,content/entries/term_tool/F-162_ssg[needs_review].md
-F-170,,EC2,term_tool,cloud_service,needs_review,,content/entries/term_tool/F-170_ec2[needs_review].md
-F-171,,S3,term_tool,cloud_service,drafting,,content/entries/term_tool/F-171_s3[drafting].md
-F-172,,IAM,term_tool,cloud_service,needs_review,,content/entries/term_tool/F-172_iam[needs_review].md
-F-180,,OpenGL,term_tool,graphics,needs_review,,content/entries/term_tool/F-180_opengl[needs_review].md
-F-181,,WebGL,term_tool,graphics_api,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-181_webgl[needs_review].md
-F-190,,サブルーチン,term_tool,programming_basic,drafting,古典的概念 / v2本書き済み 2026-04-30,content/entries/term_tool/F-190[archived].md
-F-200,,Rust,term_tool,language,needs_review,F-1〜9 言語サブが満杯のため新サブ「追加言語」F-200〜209 を新設（2026-04-29）。v2 テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-200_rust[needs_review].md
-G-1,,Context (コンテキスト),term_llm,basic,needs_review,,content/entries/term/G-1_context[needs_review].md
-G-2,,Token,term_llm,basic,needs_review,,content/entries/term_llm/G-2_token[needs_review].md
-G-3,,Dictation,term_llm,basic,needs_review,,content/entries/term_llm/G-3_dictation[needs_review].md
-G-4,,System Prompt,term_llm,basic,drafting,,content/entries/term_llm/G-4_system_prompt[needs_review].md
-G-5,,Context Window,term_llm,basic,skeleton,,content/entries/term_llm/G-5_context_window[needs_review].md
-G-6,,One-shot,term_llm,basic,skeleton,,content/entries/term_llm/G-6_one_shot[needs_review].md
-G-7,,指示追従性,term_llm,basic,needs_review,,content/entries/term_llm/G-7[archived].md
-G-8,,決定論的／非決定論的,term_llm,basic,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-8[needs_review].md
-G-9,,effort レベル,term_llm,basic,drafting,low/medium/high/xhigh,content/entries/term_llm/G-9[needs_review].md
-G-10,,Prompt Engineering,term_llm,technique,drafting,,content/entries/term_llm/G-10_prompt_engineering[needs_review].md
-G-11,,Context Engineering,term_llm,technique,drafting,,content/entries/term_llm/G-11_context_engineering[needs_review].md
-G-12,,Agent Design,term_llm,technique,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-12_agent_design[needs_review].md
-G-13,,Few-shot Learning,term_llm,technique,skeleton,,content/entries/term_llm/G-13_few_shot_learning[needs_review].md
-G-14,,Thinking モデル,term_llm,technique,drafting,新テンプレ書き起こし済（2026-04-29）。旧G-14.mdはarchived,content/entries/term_llm/G-14[archived].md
-G-15,,RAG,term_llm,technique,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-15_rag[needs_review].md
-G-16,,Embedding,term_llm,technique,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-16_embedding[needs_review].md
-G-17,,ベクトル DB,term_llm,technique,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-17[needs_review].md
-G-18,,Chain of Thought,term_llm,technique,drafting,CoT。v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-18_chain_of_thought[needs_review].md
-G-19,,Prompt Caching,term_llm,technique,skeleton,プロンプト断片を再利用してコスト・レイテンシを下げる仕組み,content/entries/term_llm/G-19_prompt_caching[needs_review].md
-G-20,,CLAUDE.md,tool_agent,config_file,skeleton,,content/entries/tool_agent/G-20_claude_md[needs_review].md
-G-21,,AGENTS.md,tool_agent,config_file,drafting,,content/entries/tool_agent/G-21_agents_md[needs_review].md
-G-22,,SKILL.md,tool_agent,config_file,drafting,,content/entries/tool_agent/G-22_skill_md[needs_review].md
-G-23,,.claude/settings.json,tool_agent,config_file,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/tool_agent/G-23_claude_settings_json[drafting].md
-G-30,,Tool Use,term_llm,control,drafting,,content/entries/term_llm/G-30_tool_use[needs_review].md
-G-31,,Hook,term_llm,control,drafting,,content/entries/term_llm/G-31_hook[needs_review].md
-G-32,,Slash Command,term_llm,control,needs_review,,content/entries/term_llm/G-32_slash_command[needs_review].md
-G-33,,Function Calling,term_llm,control,skeleton,,content/entries/term_llm/G-33_function_calling[needs_review].md
-G-34,,Code Interpreter,term_llm,code_execution,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-34_code_interpreter[needs_review].md
-G-35,,Deep Research,term_llm,control,skeleton,,content/entries/term_llm/G-35_deep_research[needs_review].md
-G-36,,Artifact,term_llm,control,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-36_artifact[needs_review].md
-G-38,,Plan Mode,term_llm,control,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-38_plan_mode[needs_review].md
-G-39,,Permission,term_llm,control,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-39_permission[needs_review].md
-G-40,,バイブコーディング,term_llm,ops,skeleton,,content/entries/term_llm/G-40_vibe_coding[needs_review].md
-G-41,,Subagent,term_llm,ops,drafting,,content/entries/term_llm/G-41_subagent[needs_review].md
-G-42,,Worktree,term_llm,ops,needs_review,,content/entries/term_llm/G-42_worktree[needs_review].md
-G-43,,オーケストレーション,term_llm,ops,needs_review,旧スケルトン G-43.md は archived,content/entries/term_llm/G-43[archived].md
-G-44,,マルチエージェント協調,term_llm,ops,drafting,,content/entries/term_llm/G-44[archived].md
-G-45,,段階的開示,term_llm,ops,needs_review,,content/entries/term_llm/G-45[needs_review].md
-G-46,,ナーフ（モデルの劣化体感）,term_llm,ops,drafting,,content/entries/term_llm/G-46[archived].md
-G-47,,Auto-compact,term_llm,ops,needs_review,Claude Code の自動圧縮（文脈管理）,content/entries/term_llm/G-47_auto_compact[needs_review].md
-H-1,,TDD,workflow,methodology,skeleton,,content/entries/workflow/H-1_tdd[needs_review].md
-H-2,,ペアプログラミング,workflow,methodology,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/workflow/H-2[needs_review].md
-H-3,,バイブコーディングの流儀,workflow,methodology,drafting,,content/entries/workflow/H-3[needs_review].md
-H-4,,コードレビュー,workflow,methodology,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/workflow/H-4[needs_review].md
-H-5,,Scrum / Agile,workflow,methodology,drafting,,content/entries/workflow/H-5_scrum_agile[needs_review].md
-H-6,,Git Flow,workflow,methodology,drafting,,content/entries/workflow/H-6_git_flow[needs_review].md
-H-7,,CI/CD,workflow,methodology,needs_review,,content/entries/workflow/H-7_ci_cd[needs_review].md
-H-8,,DevOps,workflow,methodology,drafting,,content/entries/workflow/H-8_devops[needs_review].md
-H-50,,Bard → Gemini,history,timeline,skeleton,,content/entries/history/H-50[needs_review].md
-H-51,,Preview から正式版への流れ,history,culture,skeleton,,content/entries/history/H-51[needs_review].md
-H-52,,Copilot から Claude Code までの流れ,history,timeline,skeleton,,content/entries/history/H-52[needs_review].md
-H-53,,ChatGPT 登場,history,event,needs_review,2022-11,content/entries/history/H-53_chatgpt_launch[needs_review].md
-H-54,,GPT-4 リリース,history,event,drafting,,content/entries/history/H-54[archived].md
-H-55,,LLaMA のオープン化,history,event,drafting,v2テンプレ本書き済（2026-04-30）,content/entries/history/H-55[drafting].md
-H-56,,Claude のバージョン史,history,timeline,needs_review,v2テンプレ本書き済（2026-04-30）旧スケルトン H-56.md は archived,content/entries/history/H-56[archived].md
-H-57,,Gemini の命名史,history,timeline,needs_review,v2テンプレ本書き済（2026-04-30）,content/entries/history/H-57[needs_review].md
-H-58,,Transformer 論文,history,paper,drafting,2017,content/entries/history/H-58[archived].md
-H-59,,AI エージェント元年,history,era,needs_review,2024頃,content/entries/history/H-59[needs_review].md
-H-60,,Codex → GitHub Copilot の系譜,history,timeline,drafting,v2テンプレ本書き済（2026-04-30）,content/entries/history/H-60[needs_review].md
-H-61,,Preview 版という文化,history,culture,needs_review,,content/entries/history/H-61[needs_review].md
-H-62,,Anthropic 創業の流れ,history,event,drafting,v2テンプレ本書き済（2026-04-30）,content/entries/history/H-62[needs_review].md
-H-63,,Vibe Coding 命名,history,event,drafting,2025-02 Karpathy のツイートで広まった,content/entries/history/H-63[needs_review].md
-I-1,,MCP,mcp,protocol,needs_review,,content/entries/mcp/I-1_mcp[needs_review][comment].md
-I-2,,MCP Server,mcp,protocol,skeleton,,content/entries/mcp/I-2_mcp_server[drafting][comment].md
-I-3,,MCP Client,mcp,protocol,drafting,,content/entries/mcp/I-3_mcp_client[drafting][comment].md
-I-4,,MCP Transport,mcp,protocol,needs_review,,content/entries/mcp/I-4_mcp_transport[drafting][comment].md
-I-5,,MCP SDK,mcp,protocol,drafting,,content/entries/mcp/I-5_mcp_sdk[drafting][comment].md
-I-10,,Filesystem MCP,mcp,reference,needs_review,,content/entries/mcp/I-10_filesystem_mcp[drafting][comment].md
-I-11,,GitHub MCP,mcp,reference,needs_review,公式,content/entries/mcp/I-11_github_mcp[needs_review][comment].md
-I-12,,Git MCP,mcp,reference,needs_review,,content/entries/mcp/I-12_git_mcp[drafting][comment].md
-I-13,,Slack MCP,mcp,reference,drafting,,content/entries/mcp/I-13_slack_mcp[drafting][comment].md
-I-20,,Playwright MCP,mcp,dev_automation,skeleton,,content/entries/mcp/I-20_playwright_mcp[drafting][comment].md
-I-21,,Puppeteer MCP,mcp,dev_automation,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/mcp/I-21_puppeteer_mcp[drafting][comment].md
-I-22,,Chrome DevTools MCP,mcp,dev_automation,needs_review,,content/entries/mcp/I-22_chrome_devtools_mcp[drafting][comment].md
-I-23,,Serena MCP,mcp,dev_automation,skeleton,,content/entries/mcp/I-23_serena_mcp[drafting][comment].md
-I-24,,Context7 MCP,mcp,dev_automation,needs_review,,content/entries/mcp/I-24_context7_mcp[drafting][comment].md
-I-30,,Notion MCP,mcp,collab,needs_review,,content/entries/mcp/I-30_notion_mcp[drafting][comment].md
-I-41,,SQLite MCP,mcp,data,drafting,,content/entries/mcp/I-41_sqlite_mcp[drafting][comment].md
-I-50,,AWS MCP,mcp,cloud,drafting,,content/entries/mcp/I-50_aws_mcp[drafting][comment].md
-I-80,,自作 MCP のテンプレ,mcp,diy,needs_review,,content/entries/mcp/I-80[needs_review].md
-I-81,,MCP の登録・設定,mcp,diy,drafting,,content/entries/mcp/I-81[needs_review].md
-J-1,,AGI,term_general,ai_concept,skeleton,,content/entries/term_general/J-1_agi[needs_review].md
-J-2,,強い AI／弱い AI,term_general,ai_concept,drafting,v2テンプレ書き起こし済（2026-04-30）旧スケルトン archived,content/entries/term_general/J-2[archived].md
-J-3,,Singularity,term_general,ai_concept,needs_review,シンギュラリティ,content/entries/term_general/J-3_singularity[needs_review].md
-J-4,,ASI,term_general,ai_concept,skeleton,,content/entries/term_general/J-4_asi[needs_review].md
-J-10,,Machine Learning,term_general,ml_basic,skeleton,,content/entries/term_general/J-10_machine_learning[needs_review].md
-J-11,,Deep Learning,term_general,ml_basic,skeleton,,content/entries/term_general/J-11_deep_learning[needs_review].md
-J-12,,Neural Network,term_general,ml_basic,skeleton,,content/entries/term_general/J-12_neural_network[needs_review].md
-J-13,,Transformer,term_general,ml_basic,drafting,,content/entries/term_general/J-13_transformer[needs_review].md
-J-14,,LLM,term_general,ml_basic,needs_review,,content/entries/term_general/J-14_llm[needs_review].md
-J-15,,VLM,term_general,ml_basic,skeleton,,content/entries/term_general/J-15_vlm[needs_review].md
-J-16,,Fine-tuning,term_general,ml_basic,needs_review,,content/entries/term_general/J-16_fine_tuning[needs_review].md
-J-17,,Attention,term_general,ml_basic,drafting,,content/entries/term_general/J-17_attention[needs_review].md
-J-18,,MoE,term_general,ml_basic,skeleton,,content/entries/term_general/J-18_moe[needs_review].md
-J-19,,量子化,term_general,ml_basic,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_general/J-19[archived].md
-J-20,,Big Data,term_general,data_learning,drafting,,content/entries/term_general/J-20_big_data[needs_review].md
-J-21,,LoRA,term_general,data_learning,needs_review,,content/entries/term_general/J-21_lora[needs_review].md
-J-22,,パラメータ数の単位,term_general,data_learning,drafting,,content/entries/term_general/J-22[needs_review].md
-J-23,,拡散モデル,term_general,data_learning,drafting,画像・動画生成の主流アーキテクチャ,content/entries/term_general/J-23[archived].md
-J-31,,第 5 世代コンピュータ,term_general,computing_history,drafting,,content/entries/term_general/J-31[drafting].md
-J-32,,ノイマン型,term_general,computing_history,skeleton,,content/entries/term_general/J-32[needs_review].md
-J-33,,量子コンピュータ,term_general,computing_history,drafting,,content/entries/term_general/J-33[archived].md
-J-40,,IoT,term_general,buzzword,skeleton,,content/entries/term_general/J-40_iot[needs_review].md
-J-41,,DX,term_general,buzzword,skeleton,,content/entries/term_general/J-41_dx[needs_review].md
-J-42,,Web3,term_general,buzzword,needs_review,,content/entries/term_general/J-42_web3[needs_review].md
-J-43,,SaaS,term_general,buzzword,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_general/J-43_saas[needs_review].md
-J-50,,AI 倫理,term_general,ethics_law,skeleton,,content/entries/term_general/J-50[needs_review].md
-J-51,,Hallucination,term_general,ethics_law,drafting,,content/entries/term_general/J-51_hallucination[needs_review].md
-J-52,,Sycophancy,term_general,ethics_law,needs_review,,content/entries/term_general/J-52_sycophancy[needs_review].md
-J-53,,著作権法 30 条の 4（日本）,term_general,ethics_law,drafting,,content/entries/term_general/J-53[drafting].md
-J-54,,ISO/IEC 42001,term_general,ethics_law,drafting,AIMS v2テンプレ書き起こし済（2026-04-29）,content/entries/term_general/J-54_iso_iec_42001[needs_review].md
-J-55,,個人情報保護法,term_general,ethics_law,drafting,2026-04-30 entry-writer 執筆,content/entries/term_general/J-55[needs_review].md
-J-56,,GDPR,term_general,ethics_law,needs_review,,content/entries/term_general/J-56_gdpr[needs_review].md
-J-62,,チューリングテスト,term_general,peripheral,drafting,2026-04-30 entry-writer 執筆,content/entries/term_general/J-62[needs_review].md
-J-70,,VRAM,term_general,hardware,drafting,2026-04-29 entry-writer 執筆,content/entries/term_general/J-70_vram[needs_review].md
-J-71,,RAM,term_general,hardware,drafting,2026-04-30 entry-writer 執筆,content/entries/term_general/J-71_ram[needs_review].md
-J-72,,H100,term_general,hardware,drafting,,content/entries/term_general/J-72_h100[needs_review].md
-J-73,,Blackwell,term_general,hardware,drafting,2026-04-30 entry-writer 執筆,content/entries/term_general/J-73_blackwell[needs_review].md
-J-74,,RTX シリーズ,term_general,hardware,drafting,2026-04-30 entry-writer 執筆,content/entries/term_general/J-74[archived].md
-J-75,,Tensor コア,term_general,hardware,drafting,2026-04-30 entry-writer 執筆,content/entries/term_general/J-75[archived].md
-J-76,,CPU,term_general,hardware,drafting,,content/entries/term_general/J-76_cpu[needs_review].md
-J-77,,GPU (概念),term_general,hardware,skeleton,,content/entries/term_general/J-77_gpu[drafting].md
-J-78,,HDD,term_general,hardware,needs_review,2026-04-30 entry-writer 執筆,content/entries/term_general/J-78_hdd[needs_review].md
-J-79,,SSD,term_general,hardware,needs_review,2026-04-30 entry-writer 執筆,content/entries/term_general/J-79_ssd[needs_review].md
-J-80,,SATA,term_general,hardware,skeleton,,content/entries/term_general/J-80_sata[needs_review].md
-J-81,,M.2,term_general,hardware,drafting,2026-04-29 entry-writer 執筆,content/entries/term_general/J-81_m_2[needs_review].md
-J-90,,GUI,term_general,ui_os,drafting,,content/entries/term_general/J-90_gui[needs_review].md
-J-91,,CLI,term_general,ui_os,drafting,,content/entries/term_general/J-91_cli[needs_review].md
-J-92,,Linux,term_general,ui_os,drafting,,content/entries/term_general/J-92_linux[needs_review].md
-J-93,,Ubuntu,term_general,ui_os,drafting,,content/entries/term_general/J-93_ubuntu[needs_review].md
-J-100,,識字（リテラシー）,term_general,concept,drafting,タイトルを驚き屋から識字（リテラシー）に変更（2026-04-30）,content/entries/term_general/J-100[drafting].md
+A-1,,まえがき,common,intro,candidate,,content/entries/common/A-1_preface[AI:直].md
+A-2,,この本の読み方,common,intro,needs_review,,content/entries/common/A-2_reading_guide[私:書].md
+A-3,,図鑑の歩き方,common,intro,drafting,,content/entries/common/A-3_walking_guide[AI:整].md
+A-4,,体験区分の凡例,common,meta,needs_review,,content/entries/common/A-4_experience_legend[AI:整].md
+A-5,,読者レベルの凡例,common,meta,drafting,,content/entries/common/A-5_reader_level_legend[AI:整].md
+A-6,,評価日・時変情報の見方,common,meta,drafting,,content/entries/common/A-6_evaluation_date_legend[AI:整].md
+A-7,,図のタイプ,common,meta,drafting,,content/entries/common/A-7_figure_types_legend[AI:整].md
+A-8,,色・記号の凡例,common,meta,needs_review,,content/entries/common/A-8_color_symbol_legend[AI:整].md
+A-9,,索引,common,meta,drafting,,content/entries/common/A-9_index[AI:整].md
+A-10,,更新履歴と更新方針,common,meta,drafting,,content/entries/common/A-10_changelog[AI:整].md
+A-11,,略称表記,common,meta,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/common/A-11_abbreviations[AI:整].md
+B-1,101,Gemini,service,ai_assistant,needs_review,新テンプレ書き起こし済（2026-04-24）。legacy 101 は archived,content/entries/service/B-1_gemini[私:書].md
+B-2,,Claude,service,ai_assistant,needs_review,,content/entries/service/B-2_claude[済].md
+B-3,,ChatGPT,service,ai_assistant,drafting,,content/entries/service/B-3_chatgpt[済].md
+B-4,,Cursor,service,ai_assistant,needs_review,,content/entries/service/B-4_cursor[済].md
+B-5,,GitHub Copilot,service,ai_assistant,needs_review,,content/entries/service/B-5_github_copilot[済].md
+B-6,,Windsurf,service,ai_assistant,needs_review,,content/entries/service/B-6_windsurf[私:書].md
+B-7,,Claude Code,service,ai_assistant,skeleton,略称CC,content/entries/service/B-7_claude_code[私:書].md
+B-8,,Codex,service,ai_assistant,needs_review,旧 title Codex (OpenAI) を Codex に変更（2026-04-30）,content/entries/service/B-8_codex[私:書].md
+B-9,,v0,service,ai_assistant,skeleton,,content/entries/service/B-9_v0[私:書].md
+B-10,,Devin,service,ai_assistant,skeleton,,content/entries/service/B-10_devin[私:書].md
+B-11,,Bolt.new,service,ai_assistant,skeleton,,content/entries/service/B-11_bolt_new[私:書].md
+B-12,,Perplexity,service,ai_assistant,skeleton,,content/entries/service/B-12_perplexity[AI:整].md
+B-13,,ElevenLabs,service,tts_service,drafting,音声系 TTS・Voice Cloning,content/entries/service/B-13_elevenlabs[済].md
+B-14,,Genspark,service,ai_assistant,needs_review,,content/entries/service/B-14_genspark[私:書].md
+B-15,,Microsoft Copilot,service,ai_assistant,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-15_microsoft_copilot[私:書].md
+B-16,,Microsoft 365 Copilot,service,ai_assistant,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-16_microsoft_365_copilot[私:書].md
+B-17,,Edge Copilot,service,ai_assistant,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-17_edge_copilot[済].md
+B-18,,Aqua Voice,service,voice_input_saas,drafting,v2テンプレ書き起こし済（2026-04-29）,content/entries/service/B-18_aqua_voice[私:書].md
+B-19,,Claude Cowork,service,collaboration_service,drafting,v2テンプレ書き起こし済（2026-04-30）。正式名称は出版前に要確認,content/entries/service/B-19_claude_cowork[私:書].md
+B-20,,Vercel,service,hosting_cloud,needs_review,,content/entries/service/B-20_vercel[済].md
+B-21,,Netlify,service,hosting_cloud,skeleton,,content/entries/service/B-21_netlify[私:書].md
+B-22,,Cloudflare,service,hosting_cloud,skeleton,,content/entries/service/B-22_cloudflare[私:書].md
+B-23,,AWS,service,hosting_cloud,needs_review,,content/entries/service/B-23_aws[済].md
+B-24,,Google Cloud,service,hosting_cloud,needs_review,,content/entries/service/B-24_google_cloud[私:書].md
+B-25,,Azure,service,hosting_cloud,skeleton,,content/entries/service/B-25_azure[私:書].md
+B-26,,Azure OpenAI,service,managed_ai,skeleton,,content/entries/service/B-26_azure_openai[私:書].md
+B-27,,Vertex AI,service,managed_ai,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-27_vertex_ai[私:書].md
+B-28,,Render,service,hosting_cloud,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-28_render[済].md
+B-29,,Supabase,service,baas,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-29_supabase[私:書].md
+B-30,,Amazon Bedrock,service,managed_ai,drafting,,content/entries/service/B-30_amazon_bedrock[済].md
+B-31,,Excalidraw,service,saas_design,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-31_excalidraw[済].md
+B-32,,Figma,service,saas_design,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-32_figma[私:書].md
+B-33,,Canva,service,saas_design,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-33_canva[私:書].md
+B-40,,Reddit,service,info_source,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-40_reddit[私:書].md
+B-41,,arXiv,service,info_source,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-41_arxiv[私:書].md
+B-50,,Claude の料金プラン,service,pricing,needs_review,時変情報 evaluation_date:2026-04-29,content/entries/service/B-50_claude_pricing[済].md
+B-51,,ChatGPT の料金プラン,service,pricing,needs_review,時変情報 evaluation_date:2026-04-29,content/entries/service/B-51_chatgpt_pricing[済].md
+B-52,,Gemini の料金プラン,service,pricing,drafting,時変情報 evaluation_date:2026-04-29,content/entries/service/B-52_gemini_pricing[私:書].md
+B-60,,Suno,service,creative_media,drafting,音楽生成 v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-60_suno[私:書].md
+B-61,,ACE-Step 1.5,service,creative_media,needs_review,音楽生成 v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-61_ace_step_1_5[私:書].md
+C-1,,OpenAI,person_org,company,candidate,,content/entries/person/C-1_openai[済].md
+C-2,,Anthropic,person_org,company,needs_review,,content/entries/person/C-2_anthropic[済].md
+C-3,,Google DeepMind,person_org,company,drafting,,content/entries/person/C-3_google_deepmind[済].md
+C-4,,Meta AI,person_org,company,needs_review,,content/entries/person/C-4_meta_ai[済].md
+C-5,,xAI,person_org,company,skeleton,,content/entries/person/C-5_xai[AI:直].md
+C-6,,Mistral AI,person_org,company,drafting,,content/entries/person/C-6_mistral_ai[私:書].md
+C-7,,Hugging Face,person_org,company,skeleton,,content/entries/person/C-7_hugging_face[AI:直].md
+C-8,,Microsoft AI,person_org,company,needs_review,,content/entries/person/C-8_microsoft_ai[AI:直].md
+C-9,,NVIDIA,person_org,company,needs_review,,content/entries/person/C-9_nvidia[済].md
+C-10,,Moonshot AI,person_org,company,drafting,,content/entries/person/C-10_moonshot_ai[AI:直].md
+C-11,,Z.ai,person_org,company,drafting,旧Zhipu AI→Z.ai リブランド 2025年,content/entries/person/C-11_z_ai[AI:直].md
+C-12,,TSMC,person_org,company,drafting,半導体ファウンドリ v2テンプレ書き起こし済（2026-04-30）,content/entries/person/C-12_tsmc[AI:直].md
+C-13,,Groq,person_org,company,drafting,AI推論チップ LPU v2テンプレ書き起こし済（2026-04-30）,content/entries/person/C-13_groq[AI:直].md
+C-14,,AMD,person_org,company,drafting,半導体,content/entries/person/C-14_amd[AI:直].md
+C-50,,Sam Altman,person_org,person,needs_review,,content/entries/person/C-50_sam_altman[私:書].md
+C-51,,Dario Amodei,person_org,person,needs_review,,content/entries/person/C-51_dario_amodei[済].md
+C-52,,Demis Hassabis,person_org,person,drafting,,content/entries/person/C-52_demis_hassabis[AI:直].md
+C-53,,Andrej Karpathy,person_org,person,skeleton,,content/entries/person/C-53_andrej_karpathy[済].md
+C-54,,Ilya Sutskever,person,person,drafting,,content/entries/person/C-54_ilya_sutskever[AI:直].md
+C-55,,Mira Murati,person_org,person,drafting,,content/entries/person/C-55_mira_murati[済].md
+C-56,,Yann LeCun,person_org,person,needs_review,,content/entries/person/C-56_yann_lecun[AI:直].md
+C-57,,Geoffrey Hinton,person_org,person,drafting,,content/entries/person/C-57_geoffrey_hinton[AI:直].md
+C-58,,Elon Musk,person_org,person,drafting,,content/entries/person/C-58_elon_musk[AI:直].md
+C-59,,Jensen Huang,person_org,person,drafting,,content/entries/person/C-59_jensen_huang[AI:直].md
+C-60,,Ray Kurzweil,person_org,person,needs_review,,content/entries/person/C-60_ray_kurzweil[AI:直].md
+C-80,,AI大学,person_org,youtuber,drafting,,content/entries/person/C-80[済].md
+C-81,,にゃんた,person_org,youtuber,drafting,v2テンプレ書き起こし済（2026-04-30）。旧スケルトン C-81.md は archived,content/entries/person/C-81[凍].md
+C-82,,まさお,person_org,youtuber,skeleton,,content/entries/person/C-82[済].md
+C-83,,AI の羅針盤,person_org,youtuber,drafting,,content/entries/person/C-83[私:書].md
+D-1,,Gemini 2 系,model,google,drafting,v2テンプレで D-1_gemini2.md に書き起こし済（2026-04-29）。旧D-1.md は archived,content/entries/model/D-1[凍].md
+D-2,201,Gemini 2.5 系,model,google,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/model/D-2_gemini25[私:書].md
+D-3,,Gemini 3 系,model,google,drafting,v2テンプレ本書き済（2026-04-30）,content/entries/model/D-3[私:書].md
+D-4,,Gemini 3.1 系,model,google,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/model/D-4[凍].md
+D-10,,Claude 3 系,model,anthropic,skeleton,,content/entries/model/D-10[私:書].md
+D-11,,Claude 3.5 系,model,anthropic,candidate,,content/entries/model/D-11_claude35[私:書].md
+D-12,,Claude 4 系,model,anthropic,needs_review,,content/entries/model/D-12_claude4[私:書].md
+D-13,,Claude 4.5 系,model,anthropic,skeleton,,content/entries/model/D-13[私:書].md
+D-14,,Claude Mythos Preview,model,frontier_model,drafting,v2テンプレ書き起こし済（2026-04-30）。旧スケルトン D-14.md は archived,content/entries/model/D-14[凍].md
+D-20,,GPT-5 系,model,openai,needs_review,本書き済み（2026-04-29）。旧スケルトン D-20.md は archived,content/entries/model/D-20[凍].md
+D-21,,GPT-4 系,model,openai,drafting,本書き済み（2026-04-29）。旧スケルトン D-21.md は archived,content/entries/model/D-21[凍].md
+D-22,,o1 系,model,openai,drafting,本書き済み（2026-04-29）。旧スケルトン D-22.md は archived,content/entries/model/D-22[凍].md
+D-23,,o3 系,model,openai,skeleton,,content/entries/model/D-23[私:書].md
+D-24,,GPT-3 系,model,openai,drafting,,content/entries/model/D-24[凍].md
+D-25,,GPT-1 / GPT-2 系,model,openai,drafting,v2テンプレ書き起こし済（2026-04-30）スケルトン D-25.md は archived,content/entries/model/D-25[凍].md
+D-26,,gpt-oss,model,openai,skeleton,OpenAI初の公式オープンウェイトモデル 2025-08,content/entries/model/D-26_gpt_oss[AI:直].md
+D-30,,Grok 系,model,xai,drafting,,content/entries/model/D-30[凍].md
+D-35,,Cursor Composer,model,other_closed,drafting,title を Cursor Composer に更新（2026-04-30）,content/entries/model/D-35_cursor_composer[AI:直].md
+D-40,,Llama 系,model,open,drafting,,content/entries/model/D-40[凍].md
+D-41,,Mistral 系,model,open,drafting,,content/entries/model/D-41[凍].md
+D-42,,Gemma 系,model,open,drafting,,content/entries/model/D-42[凍].md
+D-43,,Qwen 系,model,open,drafting,,content/entries/model/D-43[凍].md
+D-44,,Kimi,model,open,skeleton,,content/entries/model/D-44_kimi[AI:直].md
+D-45,,GLM,model,open_weight_llm,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/model/D-45_glm[済].md
+D-46,,DeepSeek V3,model,open,needs_review,,content/entries/model/D-46_deepseek_v3[AI:直].md
+D-47,,DeepSeek R1,model,open,needs_review,推論特化,content/entries/model/D-47_deepseek_r1[済].md
+D-50,,DALL-E,model,image_video,skeleton,,content/entries/model/D-50_dall_e[済].md
+D-51,,Imagen,model,image_video,skeleton,,content/entries/model/D-51_imagen[AI:直].md
+D-52,,Sora,model,image_video,needs_review,,content/entries/model/D-52_sora[済].md
+D-53,,Veo,model,video_generation,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/model/D-53_veo[AI:直].md
+D-54,,Stable Diffusion,model,image_video,skeleton,,content/entries/model/D-54_stable_diffusion[AI:直].md
+D-55,,Nano Banana,model,image_video,needs_review,,content/entries/model/D-55_nano_banana[AI:直].md
+D-56,,Seedance,model,video_generation,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/model/D-56_seedance[AI:直].md
+D-57,,Flow,model,image_video,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/model/D-57_flow[AI:直].md
+D-58,,Whisk,model,image_video,needs_review,,content/entries/model/D-58_whisk[AI:直].md
+D-60,,AlphaGo,model,historical,skeleton,,content/entries/model/D-60_alphago[済].md
+D-70,,Amical,model,ai_solution,drafting,情報限定的。公式確認が必要（2026-04-30）,content/entries/model/D-70_amical[AI:整].md
+D-71,,Whisper,model,voice_audio,skeleton,OpenAI のオープン音声認識モデル,content/entries/model/D-71_whisper[AI:直].md
+E-1,,SWE-Bench,benchmark,coding,needs_review,,content/entries/benchmark/E-1_swe_bench[私:書].md
+E-2,,SWE-Bench Verified,benchmark,coding,drafting,,content/entries/benchmark/E-2_swe_bench_verified[済].md
+E-3,,Terminal-Bench,benchmark,coding,skeleton,,content/entries/benchmark/E-3_terminal_bench[済].md
+E-4,,HumanEval,benchmark,coding,skeleton,,content/entries/benchmark/E-4_humaneval[AI:直].md
+E-20,,MMLU,benchmark,reasoning,skeleton,,content/entries/benchmark/E-20_mmlu[AI:直].md
+E-21,,MMLU-Pro,benchmark,reasoning,skeleton,,content/entries/benchmark/E-21_mmlu_pro[済].md
+E-22,,GPQA,benchmark,reasoning,skeleton,,content/entries/benchmark/E-22_gpqa[AI:直].md
+E-23,,GSM8K,benchmark,reasoning,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-23_gsm8k[AI:直].md
+E-24,,MATH,benchmark,reasoning,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-24_math[AI:直].md
+E-25,,AIME,benchmark,reasoning,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-25_aime[私:書].md
+E-26,,Humanity's Last Exam,benchmark,reasoning,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-26_humanity_s_last_exam[私:書].md
+E-27,,IQ Bench,benchmark,reasoning,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-27_iq_bench[私:書].md
+E-30,,TAU-Bench,benchmark,agent,skeleton,,content/entries/benchmark/E-30_tau_bench[私:書].md
+E-31,,WebArena,benchmark,agent,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-31_webarena[私:書].md
+E-32,,GAIA,benchmark,agent,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-32_gaia[私:書].md
+E-33,,AgentBench,benchmark,agent_benchmark,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-33_agentbench[私:書].md
+E-34,,OSWorld,benchmark,agent,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-34_osworld[私:書].md
+E-50,,Chatbot Arena,benchmark,general,needs_review,,content/entries/benchmark/E-50_chatbot_arena[私:書].md
+E-51,,LMSYS Arena,benchmark,general,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-51_lmsys_arena[私:書].md
+F-1,301,JavaScript,term_tool,language,needs_review,旧3桁ID連携→F-1に取り込み済み,content/entries/term_tool/F-1_javascript[AI:整].md
+F-2,302,TypeScript,term_tool,language,drafting,旧3桁ID連携 / v2テンプレ書き起こし済（2026-04-29）,content/entries/term_tool/F-2_typescript[私:書].md
+F-3,,Python,term_tool,language,needs_review,,content/entries/term_tool/F-3_python[私:書].md
+F-4,,HTML,term_tool,language,skeleton,,content/entries/term_tool/F-4_html[私:書].md
+F-5,,CSS,term_tool,language,skeleton,,content/entries/term_tool/F-5_css[私:書].md
+F-6,,Markdown,term_tool,language,skeleton,,content/entries/term_tool/F-6_markdown[私:書].md
+F-7,,YAML,term_tool,language,skeleton,,content/entries/term_tool/F-7_yaml[私:書].md
+F-8,,JSON,term_tool,language,skeleton,,content/entries/term_tool/F-8_json[私:書].md
+F-9,,SVG,term_tool,language,skeleton,,content/entries/term_tool/F-9_svg[私:書].md
+F-10,304,React,term_tool,framework,drafting,旧3桁ID 304 の素材を取り込み新テンプレ書き起こし済（2026-04-29）,content/entries/term_tool/F-10_react[私:書].md
+F-11,305,Next.js,term_tool,framework,needs_review,旧3桁ID 305 の素材を取り込み新テンプレ書き起こし済（2026-04-29）,content/entries/term_tool/F-11_next_js[私:書].md
+F-12,,Electron,term_tool,framework,skeleton,,content/entries/term_tool/F-12_electron[私:書].md
+F-13,,Tauri,term_tool,framework,skeleton,,content/entries/term_tool/F-13_tauri[私:書].md
+F-14,,three.js,term_tool,framework,needs_review,3Dライブラリ,content/entries/term_tool/F-14_three_js[私:書].md
+F-15,,shadcn/ui,term_tool,framework,drafting,コピペ配布型 React コンポーネント集,content/entries/term_tool/F-15_shadcn_ui[私:書].md
+F-16,,Tailwind CSS,term_tool,framework,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-16_tailwind_css[私:書].md
+F-17,,Astro,term_tool,framework,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-17_astro[私:書].md
+F-20,303,ESLint,term_tool,linter,needs_review,旧3桁ID連携・v2テンプレで書き直し済（2026-04-29）,content/entries/term_tool/F-20_eslint[私:書].md
+F-21,,Prettier,term_tool,formatter,drafting,,content/entries/term_tool/F-21_prettier[私:書].md
+F-30,,VS Code,term_tool,editor,drafting,,content/entries/term_tool/F-30_vs_code[私:書].md
+F-34,,VS Code 拡張機能,term_tool,editor,drafting,v2テンプレ本書き済（2026-04-30）,content/entries/term_tool/F-34[私:書].md
+F-35,,Markdown Preview Enhanced,term_tool,editor_ext,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-35_markdown_preview_enhanced[私:書].md
+F-36,,Git Graph,term_tool,editor_ext,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-36_git_graph[私:書].md
+F-37,,Japanese Language Pack for VS Code,term_tool,editor_ext,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-37_japanese_language_pack_for_vs_code[私:書].md
+F-38,,Markdown All in One,term_tool,editor_ext,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-38_markdown_all_in_one[私:書].md
+F-40,,npm,term_tool,cli_build,skeleton,,content/entries/term_tool/F-40_npm[私:書].md
+F-41,,Vite,term_tool,cli_build,drafting,,content/entries/term_tool/F-41_vite[私:書].md
+F-42,,ビルド,term_tool,cli_build,drafting,v2テンプレ本書き済（2026-04-30）,content/entries/term_tool/F-42[凍].md
+F-43,,テスト,term_tool,cli_build,drafting,v2テンプレ本書き済（2026-04-30）,content/entries/term_tool/F-43[私:書].md
+F-44,,pnpm,term_tool,cli_build,drafting,,content/entries/term_tool/F-44_pnpm[私:書].md
+F-50,,git,term_tool,git,needs_review,,content/entries/term/F-50_git[私:書].md
+F-51,,git push,term_tool,git,skeleton,,content/entries/term_tool/F-51_git_push[私:書].md
+F-52,,git pull,term_tool,git,needs_review,,content/entries/term_tool/F-52_git_pull[私:書].md
+F-53,,branch,term_tool,git,skeleton,,content/entries/term_tool/F-53_branch[私:書].md
+F-54,,commit,term_tool,git,needs_review,,content/entries/term_tool/F-54_commit[私:書].md
+F-55,,merge,term_tool,git,skeleton,,content/entries/term_tool/F-55_merge[私:書].md
+F-56,,.gitignore,term_tool,git,drafting,,content/entries/term_tool/F-56_gitignore[AI:整].md
+F-57,,リポジトリ,term_tool,git,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-57[私:書].md
+F-58,,git stash,term_tool,git,skeleton,,content/entries/term_tool/F-58_git_stash[私:書].md
+F-59,,README.md,term_tool,git,needs_review,,content/entries/term_tool/F-59_readme_md[私:書].md
+F-60,,GitHub,term_tool,github,needs_review,,content/entries/term_tool/F-60_github[私:書].md
+F-61,,Pull Request,term_tool,github,needs_review,,content/entries/term_tool/F-61_pull_request[私:書].md
+F-62,,GitHub Actions,term_tool,github,skeleton,CI/CD,content/entries/term_tool/F-62_github_actions[私:書].md
+F-71,,ripgrep (rg),term_tool,search,needs_review,,content/entries/term_tool/F-71_ripgrep[私:書].md
+F-80,,Node.js,term_tool,runtime,drafting,,content/entries/term_tool/F-80_node_js[私:書].md
+F-81,,bash,term_tool,shell,drafting,,content/entries/term_tool/F-81_bash[私:書].md
+F-82,,WSL,term_tool,shell,needs_review,,content/entries/term_tool/F-82_wsl[私:書].md
+F-83,,PowerShell,term_tool,shell,drafting,,content/entries/term_tool/F-83_powershell[AI:整].md
+F-84,,Ghostty,term_tool,terminal,needs_review,,content/entries/term_tool/F-84_ghostty[私:書].md
+F-85,,SuperClaude Framework,term_tool,framework,needs_review,Claude Code 拡張 OSS（Anthropic 非公式）v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-85_superclaude_framework[AI:整].md
+F-86,,ollama,term_tool,runtime,drafting,ローカルLLM,content/entries/term_tool/F-86_ollama[私:書].md
+F-87,,sudo,term_tool,shell,needs_review,Substitute User do の略。2026-04-30 entry-writer で本書き,content/entries/term_tool/F-87_sudo[私:書].md
+F-90,,Docker,term_tool,container,skeleton,,content/entries/term_tool/F-90_docker[私:書].md
+F-91,,.env,term_tool,env,needs_review,,content/entries/term_tool/F-91_env[私:書].md
+F-100,,拡張子早見表,term_tool,file_format,drafting,,content/entries/term_tool/F-100[凍].md
+F-101,,.ico,term_tool,file_format,needs_review,,content/entries/term_tool/F-101_ico[私:書].md
+F-102,,.mp4,term_tool,file_format,drafting,,content/entries/term_tool/F-102_mp4[私:書].md
+F-103,,.mp3,term_tool,file_format,needs_review,,content/entries/term_tool/F-103_mp3[私:書].md
+F-104,,.webp,term_tool,file_format,needs_review,,content/entries/term_tool/F-104_webp[私:書].md
+F-110,,Lighthouse,term_tool,quality,drafting,,content/entries/term_tool/F-110_lighthouse[私:書].md
+F-111,,a11y,term_tool,quality,drafting,,content/entries/term_tool/F-111_a11y[私:書].md
+F-120,,PostgreSQL,term_tool,database,drafting,,content/entries/term_tool/F-120_postgresql[私:書].md
+F-121,,SQLite,term_tool,database,skeleton,,content/entries/term_tool/F-121_sqlite[私:書].md
+F-122,,Prisma,term_tool,orm,needs_review,,content/entries/term_tool/F-122_prisma[私:書].md
+F-123,,ORM,term_tool,orm,drafting,,content/entries/term_tool/F-123_orm[AI:整].md
+F-130,,OAuth,term_tool,auth,needs_review,,content/entries/term_tool/F-130_oauth[私:書].md
+F-140,,Mermaid,term_tool,diagram,skeleton,,content/entries/term_tool/F-140_mermaid[私:書].md
+F-141,,PlantUML,term_tool,diagram,drafting,,content/entries/term_tool/F-141_plantuml[私:書].md
+F-150,,MIT ライセンス,term_tool,license,drafting,,content/entries/term_tool/F-150[私:書].md
+F-151,,Apache 2.0,term_tool,license,drafting,,content/entries/term_tool/F-151_apache_2_0[私:書].md
+F-152,,GPL,term_tool,license,drafting,,content/entries/term_tool/F-152_gpl[私:書].md
+F-153,,Creative Commons,term_tool,license,drafting,title を Creative Commons に修正（括弧除去）,content/entries/term_tool/F-153_creative_commons[私:書].md
+F-154,,OSS,term_tool,license,skeleton,,content/entries/term_tool/F-154_oss[私:書].md
+F-160,,DOM,term_tool,web_foundation,skeleton,,content/entries/term_tool/F-160_dom[私:書].md
+F-161,,SSR,term_tool,web_foundation,skeleton,,content/entries/term_tool/F-161_ssr[私:書].md
+F-162,,SSG,term_tool,web_foundation,needs_review,,content/entries/term_tool/F-162_ssg[私:書].md
+F-170,,EC2,term_tool,cloud_service,needs_review,,content/entries/term_tool/F-170_ec2[私:書].md
+F-171,,S3,term_tool,cloud_service,drafting,,content/entries/term_tool/F-171_s3[AI:整].md
+F-172,,IAM,term_tool,cloud_service,needs_review,,content/entries/term_tool/F-172_iam[私:書].md
+F-180,,OpenGL,term_tool,graphics,needs_review,,content/entries/term_tool/F-180_opengl[私:書].md
+F-181,,WebGL,term_tool,graphics_api,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-181_webgl[私:書].md
+F-190,,サブルーチン,term_tool,programming_basic,drafting,古典的概念 / v2本書き済み 2026-04-30,content/entries/term_tool/F-190[凍].md
+F-200,,Rust,term_tool,language,needs_review,F-1〜9 言語サブが満杯のため新サブ「追加言語」F-200〜209 を新設（2026-04-29）。v2 テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-200_rust[私:書].md
+G-1,,Context (コンテキスト),term_llm,basic,needs_review,,content/entries/term/G-1_context[私:書].md
+G-2,,Token,term_llm,basic,needs_review,,content/entries/term_llm/G-2_token[私:書].md
+G-3,,Dictation,term_llm,basic,needs_review,,content/entries/term_llm/G-3_dictation[私:書].md
+G-4,,System Prompt,term_llm,basic,drafting,,content/entries/term_llm/G-4_system_prompt[私:書].md
+G-5,,Context Window,term_llm,basic,skeleton,,content/entries/term_llm/G-5_context_window[私:書].md
+G-6,,One-shot,term_llm,basic,skeleton,,content/entries/term_llm/G-6_one_shot[私:書].md
+G-7,,指示追従性,term_llm,basic,needs_review,,content/entries/term_llm/G-7[凍].md
+G-8,,決定論的／非決定論的,term_llm,basic,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-8[私:書].md
+G-9,,effort レベル,term_llm,basic,drafting,low/medium/high/xhigh,content/entries/term_llm/G-9[私:書].md
+G-10,,Prompt Engineering,term_llm,technique,drafting,,content/entries/term_llm/G-10_prompt_engineering[私:書].md
+G-11,,Context Engineering,term_llm,technique,drafting,,content/entries/term_llm/G-11_context_engineering[私:書].md
+G-12,,Agent Design,term_llm,technique,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-12_agent_design[私:書].md
+G-13,,Few-shot Learning,term_llm,technique,skeleton,,content/entries/term_llm/G-13_few_shot_learning[私:書].md
+G-14,,Thinking モデル,term_llm,technique,drafting,新テンプレ書き起こし済（2026-04-29）。旧G-14.mdはarchived,content/entries/term_llm/G-14[凍].md
+G-15,,RAG,term_llm,technique,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-15_rag[私:書].md
+G-16,,Embedding,term_llm,technique,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-16_embedding[私:書].md
+G-17,,ベクトル DB,term_llm,technique,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-17[私:書].md
+G-18,,Chain of Thought,term_llm,technique,drafting,CoT。v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-18_chain_of_thought[私:書].md
+G-19,,Prompt Caching,term_llm,technique,skeleton,プロンプト断片を再利用してコスト・レイテンシを下げる仕組み,content/entries/term_llm/G-19_prompt_caching[私:書].md
+G-20,,CLAUDE.md,tool_agent,config_file,skeleton,,content/entries/tool_agent/G-20_claude_md[私:書].md
+G-21,,AGENTS.md,tool_agent,config_file,drafting,,content/entries/tool_agent/G-21_agents_md[私:書].md
+G-22,,SKILL.md,tool_agent,config_file,drafting,,content/entries/tool_agent/G-22_skill_md[私:書].md
+G-23,,.claude/settings.json,tool_agent,config_file,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/tool_agent/G-23_claude_settings_json[AI:整].md
+G-30,,Tool Use,term_llm,control,drafting,,content/entries/term_llm/G-30_tool_use[私:書].md
+G-31,,Hook,term_llm,control,drafting,,content/entries/term_llm/G-31_hook[私:書].md
+G-32,,Slash Command,term_llm,control,needs_review,,content/entries/term_llm/G-32_slash_command[私:書].md
+G-33,,Function Calling,term_llm,control,skeleton,,content/entries/term_llm/G-33_function_calling[私:書].md
+G-34,,Code Interpreter,term_llm,code_execution,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-34_code_interpreter[私:書].md
+G-35,,Deep Research,term_llm,control,skeleton,,content/entries/term_llm/G-35_deep_research[私:書].md
+G-36,,Artifact,term_llm,control,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-36_artifact[私:書].md
+G-38,,Plan Mode,term_llm,control,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-38_plan_mode[私:書].md
+G-39,,Permission,term_llm,control,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-39_permission[私:書].md
+G-40,,バイブコーディング,term_llm,ops,skeleton,,content/entries/term_llm/G-40_vibe_coding[私:書].md
+G-41,,Subagent,term_llm,ops,drafting,,content/entries/term_llm/G-41_subagent[私:書].md
+G-42,,Worktree,term_llm,ops,needs_review,,content/entries/term_llm/G-42_worktree[私:書].md
+G-43,,オーケストレーション,term_llm,ops,needs_review,旧スケルトン G-43.md は archived,content/entries/term_llm/G-43[凍].md
+G-44,,マルチエージェント協調,term_llm,ops,drafting,,content/entries/term_llm/G-44[凍].md
+G-45,,段階的開示,term_llm,ops,needs_review,,content/entries/term_llm/G-45[私:書].md
+G-46,,ナーフ（モデルの劣化体感）,term_llm,ops,drafting,,content/entries/term_llm/G-46[凍].md
+G-47,,Auto-compact,term_llm,ops,needs_review,Claude Code の自動圧縮（文脈管理）,content/entries/term_llm/G-47_auto_compact[私:書].md
+H-1,,TDD,workflow,methodology,skeleton,,content/entries/workflow/H-1_tdd[私:書].md
+H-2,,ペアプログラミング,workflow,methodology,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/workflow/H-2[私:書].md
+H-3,,バイブコーディングの流儀,workflow,methodology,drafting,,content/entries/workflow/H-3[私:書].md
+H-4,,コードレビュー,workflow,methodology,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/workflow/H-4[私:書].md
+H-5,,Scrum / Agile,workflow,methodology,drafting,,content/entries/workflow/H-5_scrum_agile[私:書].md
+H-6,,Git Flow,workflow,methodology,drafting,,content/entries/workflow/H-6_git_flow[私:書].md
+H-7,,CI/CD,workflow,methodology,needs_review,,content/entries/workflow/H-7_ci_cd[私:書].md
+H-8,,DevOps,workflow,methodology,drafting,,content/entries/workflow/H-8_devops[私:書].md
+H-50,,Bard → Gemini,history,timeline,skeleton,,content/entries/history/H-50[私:書].md
+H-51,,Preview から正式版への流れ,history,culture,skeleton,,content/entries/history/H-51[私:書].md
+H-52,,Copilot から Claude Code までの流れ,history,timeline,skeleton,,content/entries/history/H-52[私:書].md
+H-53,,ChatGPT 登場,history,event,needs_review,2022-11,content/entries/history/H-53_chatgpt_launch[私:書].md
+H-54,,GPT-4 リリース,history,event,drafting,,content/entries/history/H-54[凍].md
+H-55,,LLaMA のオープン化,history,event,drafting,v2テンプレ本書き済（2026-04-30）,content/entries/history/H-55[AI:整].md
+H-56,,Claude のバージョン史,history,timeline,needs_review,v2テンプレ本書き済（2026-04-30）旧スケルトン H-56.md は archived,content/entries/history/H-56[凍].md
+H-57,,Gemini の命名史,history,timeline,needs_review,v2テンプレ本書き済（2026-04-30）,content/entries/history/H-57[私:書].md
+H-58,,Transformer 論文,history,paper,drafting,2017,content/entries/history/H-58[凍].md
+H-59,,AI エージェント元年,history,era,needs_review,2024頃,content/entries/history/H-59[私:書].md
+H-60,,Codex → GitHub Copilot の系譜,history,timeline,drafting,v2テンプレ本書き済（2026-04-30）,content/entries/history/H-60[私:書].md
+H-61,,Preview 版という文化,history,culture,needs_review,,content/entries/history/H-61[私:書].md
+H-62,,Anthropic 創業の流れ,history,event,drafting,v2テンプレ本書き済（2026-04-30）,content/entries/history/H-62[私:書].md
+H-63,,Vibe Coding 命名,history,event,drafting,2025-02 Karpathy のツイートで広まった,content/entries/history/H-63[私:書].md
+I-1,,MCP,mcp,protocol,needs_review,,content/entries/mcp/I-1_mcp[済].md
+I-2,,MCP Server,mcp,protocol,skeleton,,content/entries/mcp/I-2_mcp_server[AI:直].md
+I-3,,MCP Client,mcp,protocol,drafting,,content/entries/mcp/I-3_mcp_client[AI:直].md
+I-4,,MCP Transport,mcp,protocol,needs_review,,content/entries/mcp/I-4_mcp_transport[AI:直].md
+I-5,,MCP SDK,mcp,protocol,drafting,,content/entries/mcp/I-5_mcp_sdk[AI:直].md
+I-10,,Filesystem MCP,mcp,reference,needs_review,,content/entries/mcp/I-10_filesystem_mcp[AI:直].md
+I-11,,GitHub MCP,mcp,reference,needs_review,公式,content/entries/mcp/I-11_github_mcp[済].md
+I-12,,Git MCP,mcp,reference,needs_review,,content/entries/mcp/I-12_git_mcp[AI:直].md
+I-13,,Slack MCP,mcp,reference,drafting,,content/entries/mcp/I-13_slack_mcp[AI:直].md
+I-20,,Playwright MCP,mcp,dev_automation,skeleton,,content/entries/mcp/I-20_playwright_mcp[AI:直].md
+I-21,,Puppeteer MCP,mcp,dev_automation,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/mcp/I-21_puppeteer_mcp[AI:直].md
+I-22,,Chrome DevTools MCP,mcp,dev_automation,needs_review,,content/entries/mcp/I-22_chrome_devtools_mcp[AI:直].md
+I-23,,Serena MCP,mcp,dev_automation,skeleton,,content/entries/mcp/I-23_serena_mcp[AI:直].md
+I-24,,Context7 MCP,mcp,dev_automation,needs_review,,content/entries/mcp/I-24_context7_mcp[AI:直].md
+I-30,,Notion MCP,mcp,collab,needs_review,,content/entries/mcp/I-30_notion_mcp[AI:直].md
+I-41,,SQLite MCP,mcp,data,drafting,,content/entries/mcp/I-41_sqlite_mcp[AI:直].md
+I-50,,AWS MCP,mcp,cloud,drafting,,content/entries/mcp/I-50_aws_mcp[AI:直].md
+I-80,,自作 MCP のテンプレ,mcp,diy,needs_review,,content/entries/mcp/I-80[私:書].md
+I-81,,MCP の登録・設定,mcp,diy,drafting,,content/entries/mcp/I-81[私:書].md
+J-1,,AGI,term_general,ai_concept,skeleton,,content/entries/term_general/J-1_agi[私:書].md
+J-2,,強い AI／弱い AI,term_general,ai_concept,drafting,v2テンプレ書き起こし済（2026-04-30）旧スケルトン archived,content/entries/term_general/J-2[凍].md
+J-3,,Singularity,term_general,ai_concept,needs_review,シンギュラリティ,content/entries/term_general/J-3_singularity[私:書].md
+J-4,,ASI,term_general,ai_concept,skeleton,,content/entries/term_general/J-4_asi[私:書].md
+J-10,,Machine Learning,term_general,ml_basic,skeleton,,content/entries/term_general/J-10_machine_learning[私:書].md
+J-11,,Deep Learning,term_general,ml_basic,skeleton,,content/entries/term_general/J-11_deep_learning[私:書].md
+J-12,,Neural Network,term_general,ml_basic,skeleton,,content/entries/term_general/J-12_neural_network[私:書].md
+J-13,,Transformer,term_general,ml_basic,drafting,,content/entries/term_general/J-13_transformer[私:書].md
+J-14,,LLM,term_general,ml_basic,needs_review,,content/entries/term_general/J-14_llm[私:書].md
+J-15,,VLM,term_general,ml_basic,skeleton,,content/entries/term_general/J-15_vlm[私:書].md
+J-16,,Fine-tuning,term_general,ml_basic,needs_review,,content/entries/term_general/J-16_fine_tuning[私:書].md
+J-17,,Attention,term_general,ml_basic,drafting,,content/entries/term_general/J-17_attention[私:書].md
+J-18,,MoE,term_general,ml_basic,skeleton,,content/entries/term_general/J-18_moe[私:書].md
+J-19,,量子化,term_general,ml_basic,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_general/J-19[凍].md
+J-20,,Big Data,term_general,data_learning,drafting,,content/entries/term_general/J-20_big_data[私:書].md
+J-21,,LoRA,term_general,data_learning,needs_review,,content/entries/term_general/J-21_lora[私:書].md
+J-22,,パラメータ数の単位,term_general,data_learning,drafting,,content/entries/term_general/J-22[私:書].md
+J-23,,拡散モデル,term_general,data_learning,drafting,画像・動画生成の主流アーキテクチャ,content/entries/term_general/J-23[凍].md
+J-31,,第 5 世代コンピュータ,term_general,computing_history,drafting,,content/entries/term_general/J-31[AI:整].md
+J-32,,ノイマン型,term_general,computing_history,skeleton,,content/entries/term_general/J-32[私:書].md
+J-33,,量子コンピュータ,term_general,computing_history,drafting,,content/entries/term_general/J-33[凍].md
+J-40,,IoT,term_general,buzzword,skeleton,,content/entries/term_general/J-40_iot[私:書].md
+J-41,,DX,term_general,buzzword,skeleton,,content/entries/term_general/J-41_dx[私:書].md
+J-42,,Web3,term_general,buzzword,needs_review,,content/entries/term_general/J-42_web3[私:書].md
+J-43,,SaaS,term_general,buzzword,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_general/J-43_saas[私:書].md
+J-50,,AI 倫理,term_general,ethics_law,skeleton,,content/entries/term_general/J-50[私:書].md
+J-51,,Hallucination,term_general,ethics_law,drafting,,content/entries/term_general/J-51_hallucination[私:書].md
+J-52,,Sycophancy,term_general,ethics_law,needs_review,,content/entries/term_general/J-52_sycophancy[私:書].md
+J-53,,著作権法 30 条の 4（日本）,term_general,ethics_law,drafting,,content/entries/term_general/J-53[AI:整].md
+J-54,,ISO/IEC 42001,term_general,ethics_law,drafting,AIMS v2テンプレ書き起こし済（2026-04-29）,content/entries/term_general/J-54_iso_iec_42001[私:書].md
+J-55,,個人情報保護法,term_general,ethics_law,drafting,2026-04-30 entry-writer 執筆,content/entries/term_general/J-55[私:書].md
+J-56,,GDPR,term_general,ethics_law,needs_review,,content/entries/term_general/J-56_gdpr[私:書].md
+J-62,,チューリングテスト,term_general,peripheral,drafting,2026-04-30 entry-writer 執筆,content/entries/term_general/J-62[私:書].md
+J-70,,VRAM,term_general,hardware,drafting,2026-04-29 entry-writer 執筆,content/entries/term_general/J-70_vram[私:書].md
+J-71,,RAM,term_general,hardware,drafting,2026-04-30 entry-writer 執筆,content/entries/term_general/J-71_ram[私:書].md
+J-72,,H100,term_general,hardware,drafting,,content/entries/term_general/J-72_h100[私:書].md
+J-73,,Blackwell,term_general,hardware,drafting,2026-04-30 entry-writer 執筆,content/entries/term_general/J-73_blackwell[私:書].md
+J-74,,RTX シリーズ,term_general,hardware,drafting,2026-04-30 entry-writer 執筆,content/entries/term_general/J-74[凍].md
+J-75,,Tensor コア,term_general,hardware,drafting,2026-04-30 entry-writer 執筆,content/entries/term_general/J-75[凍].md
+J-76,,CPU,term_general,hardware,drafting,,content/entries/term_general/J-76_cpu[私:書].md
+J-77,,GPU (概念),term_general,hardware,skeleton,,content/entries/term_general/J-77_gpu[AI:整].md
+J-78,,HDD,term_general,hardware,needs_review,2026-04-30 entry-writer 執筆,content/entries/term_general/J-78_hdd[私:書].md
+J-79,,SSD,term_general,hardware,needs_review,2026-04-30 entry-writer 執筆,content/entries/term_general/J-79_ssd[私:書].md
+J-80,,SATA,term_general,hardware,skeleton,,content/entries/term_general/J-80_sata[私:書].md
+J-81,,M.2,term_general,hardware,drafting,2026-04-29 entry-writer 執筆,content/entries/term_general/J-81_m_2[私:書].md
+J-90,,GUI,term_general,ui_os,drafting,,content/entries/term_general/J-90_gui[私:書].md
+J-91,,CLI,term_general,ui_os,drafting,,content/entries/term_general/J-91_cli[私:書].md
+J-92,,Linux,term_general,ui_os,drafting,,content/entries/term_general/J-92_linux[私:書].md
+J-93,,Ubuntu,term_general,ui_os,drafting,,content/entries/term_general/J-93_ubuntu[私:書].md
+J-100,,識字（リテラシー）,term_general,concept,drafting,タイトルを驚き屋から識字（リテラシー）に変更（2026-04-30）,content/entries/term_general/J-100[AI:整].md

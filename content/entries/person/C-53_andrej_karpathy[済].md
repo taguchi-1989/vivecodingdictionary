@@ -20,7 +20,7 @@ related_terms:
   - Neural Networks Zero to Hero
   - OpenAI
   - Eureka Labs
-status: needs_review
+status: ready
 ---
 
 # Andrej Karpathy

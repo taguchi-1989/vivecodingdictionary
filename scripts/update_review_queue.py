@@ -36,6 +36,8 @@ from validate_entry import (  # noqa: E402
     check_tone,
     check_sources_date,
     promote_to_needs_review,
+    promote_to_ready,
+    is_author_fields_filled,
 )
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -88,12 +90,18 @@ def collect():
             stars, warns, summary = 0, 0, ""
         else:
             stars, warns, summary = validate_silently(md_path, fm, body, status)
-            # 自動昇格の取りこぼし回収：drafting + ☆0 + ⚠0 を needs_review に巻き上げる
-            # （単発の validate_entry.py は保存時しか走らないため、過去エントリで漏れる）
+            # 自動昇格の取りこぼし回収（単発の validate_entry.py は保存時しか走らないため、
+            # 過去エントリや手で書き足したエントリで漏れる）
+            # 1) drafting + ☆0 + ⚠0     → needs_review
+            # 2) needs_review + ☆0 + 著者欄が全項目埋まっている → ready
             if status == "drafting" and stars == 0 and warns == 0:
                 if promote_to_needs_review(md_path):
                     status = "needs_review"
-                    promoted_ids.append(eid)
+                    promoted_ids.append(eid + " (drafting→needs_review)")
+            if status == "needs_review" and stars == 0 and is_author_fields_filled(body):
+                if promote_to_ready(md_path):
+                    status = "ready"
+                    promoted_ids.append(eid + " (needs_review→ready)")
 
         rows.append({
             "id": eid,
@@ -174,10 +182,11 @@ def render(rows):
     lines.append("")
     lines.append("## 動線")
     lines.append("")
-    lines.append("- **☆ 違反**: その場で entry-writer を呼んで直す（status は drafting のままにする）")
-    lines.append("- **⚠️ 警告**: 軽微なら手で削る／溜まったらまとめて対応")
-    lines.append("- **needs_review**: 著者本人が「非エンジニアのつまずき」「私のコメント」を埋めて `status: ready` に上げる")
+    lines.append("- **☆ 違反**（タグ `[AI:直]`）: その場で entry-writer を呼んで直す（status は drafting のまま）")
+    lines.append("- **⚠️ 警告**（タグ `[AI:整]`）: 軽微なら手で削る／溜まったらまとめて対応")
+    lines.append("- **needs_review**（タグ `[私:書]`）: 著者本人が「非エンジニアのつまずき」「私のコメント」4 項目を埋める。全項目埋まると保存時に `ready`（`[済]`）へ自動昇格")
     lines.append("- このキューは `Edit/Write` のたびに自動更新されます。手動更新は `python3 scripts/update_review_queue.py`")
+    lines.append("- ファイル名のタグを更新するには `python3 scripts/apply_status_markers.py`")
     lines.append("")
     return "\n".join(lines)
 

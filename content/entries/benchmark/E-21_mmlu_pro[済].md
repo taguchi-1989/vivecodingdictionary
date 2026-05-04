@@ -17,7 +17,7 @@ related_terms:
   - GPQA
   - reasoning
   - HumanEval
-status: needs_review
+status: ready
 ---
 
 # MMLU-Pro

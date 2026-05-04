@@ -18,7 +18,7 @@ related_terms:
   - MCP Transport
   - Tool Use
   - Claude Code
-status: needs_review
+status: ready
 ---
 
 # MCP

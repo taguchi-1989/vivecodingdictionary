@@ -19,7 +19,7 @@ related_terms:
   - DALL-E
   - Veo
   - 動画生成 AI
-status: needs_review
+status: ready
 ---
 
 # Sora
