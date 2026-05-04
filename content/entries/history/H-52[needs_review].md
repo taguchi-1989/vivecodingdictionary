@@ -1,0 +1,172 @@
+---
+id: H-52
+title: Copilot から Claude Code までの流れ
+category: history
+subtype: timeline
+experience_level: partial
+reader_level: 2-3
+importance: C
+figure_type: timeline
+page_layout: spread_v1
+start_date: 2021-06-01
+end_date:
+version_status: active
+pricing_note: paid
+evaluation_date: 2026-04-30
+related_terms:
+  - GitHub Copilot
+  - Cursor
+  - Claude Code
+  - Devin
+  - Codex
+status: needs_review
+---
+
+# Copilot から Claude Code までの流れ
+
+## tagline
+
+補完・対話・タスク・自律の 4 段階で進化した AI コーディング支援の系譜です。
+
+
+<!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
+
+## 何をしてくれるか
+
+2021 年の GitHub Copilot 登場以降、AI コーディング支援は「1 行補完」から「タスク単位で動く自律エージェント」へと段階的に進化しました。時系列で整理すると、各ツールの役割の違いが見えやすくなります。
+
+## どこで出会うか
+
+ツールを乗り換えるとき、または「Cursor と Copilot はどう違うの？」と聞かれたとき、この系譜が答えの骨格になります。各世代のツールは今も並行して使われており、用途と予算に応じて選ぶことができます。
+
+## メイン図
+
+### 図の狙い
+
+2021〜2025 年の主要ツールを横軸に並べ、「補完 → 対話 → タスク → 自律」の進化軸を縦に重ねることで、各ツールがどの段階にいるかを一目で示します。
+
+### C. 概念図（figure_type: timeline）
+
+- 中心に置く概念: 4 段階進化軸（補完 / 対話 / タスク / 自律）
+- 周辺の要素: Copilot（2021）/ Cursor（2023）/ Copilot Workspace・Cursor Composer（2024）/ Claude Code・Codex CLI（2025）
+- 関係の描き方: 左から右へ時系列矢印、縦軸で進化段階を示す階段状レイアウト
+
+
+## 会話での使い方例
+
+「Copilot は補完、Cursor は対話、Claude Code は自律と段階が違います。」
+
+
+<!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
+
+## この用語の見どころ
+
+### 1. 役割
+
+AI コーディング支援の進化を 4 世代に整理した歴史的見取り図です。
+
+### 2. うれしさ
+
+ツール選びの基準が「世代の段階」として直感的に掴めます。
+
+### 3. 注意点
+
+各ツールは今も更新中のため、機能の境界は当時より広がっていることがあります。
+
+### 4. どこで役立つか
+
+新しいツールを試す前の位置確認や、チームへの説明場面で使えます。
+
+### 5. はじめに
+
+Copilot と Cursor の違いを抑えると、この系譜の全体像が見えます。
+
+### 6. 深掘り先
+
+Claude Code, Cursor, Devin, Codex
+
+
+## 開発フローでの位置（必須）
+
+1. 補完期（2021〜）— Copilot が行・関数単位の予測補完を提供
+2. 対話期（2023〜）— Cursor が対話・マルチファイル編集を実現
+3. タスク期（2024〜）— Copilot Workspace と Cursor Composer がタスク単位の操作を提供
+4. 自律期（2025〜）— Claude Code や Codex CLI が複数ステップの自律実行を担います
+
+
+## 関連用語
+
+- GitHub Copilot
+- Cursor
+- Claude Code
+- Devin
+- Codex
+
+
+<!-- ━━━━━━━━ 著者記入欄（AI は触らない） ━━━━━━━━ -->
+
+<!-- AUTHOR: user_only / AI-ASSIST: no -->
+## 非エンジニアのつまずき
+
+- 
+- 
+- 
+
+<!-- AUTHOR: user_only / AI-ASSIST: no -->
+## 私のコメント
+
+- 🙂 第一印象: 
+- 👍 良い点: 
+- 👎 ダメな点: 
+- 👥 誰向けか: 
+
+
+<!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
+
+## 誌面ポンチ絵メモ
+
+### メイン図（左ページ中段 / figure_type: timeline）
+
+- 描く内容: 横軸に 2021〜2025 年の時系列、縦軸に「補完 → 対話 → タスク → 自律」の 4 段階を示す階段状タイムライン
+- 登場人物: エンジニア風の人物がエディタの前に座り、段階ごとに表情（驚き→なるほど→楽→余裕）が変わる
+- 吹き出し・心の声: 補完期「次の行が出た！」／自律期「もう丸ごと頼める…」
+- 中央に置くキーワード/ラベル: 補完 / 対話 / タスク / 自律（4 段階ラベル）
+
+### 6 視点アイコン（右ページ上段）
+
+- 共通アイコン流用
+
+### 開発フロー図（右ページ下段）
+
+- Step 1 のアイコン/絵柄: Copilot ロゴ風の補完カーソル
+- Step 2 のアイコン/絵柄: Cursor のチャット吹き出し
+- Step 3 のアイコン/絵柄: タスク一覧を示すチェックリスト
+- Step 4 のアイコン/絵柄: ロボットアーム風の自律エージェント
+
+
+## コミュニティ補完メモ
+
+- B-7 Claude Code との住み分け：B-7 は Claude Code の機能・使い方を扱う。本エントリは歴史的位置づけのみ
+- B-4 Cursor との住み分け：B-4 は Cursor の機能詳細を扱う。本エントリは系譜の一点として言及
+- B-8 Codex との住み分け：B-8 は OpenAI Codex モデルを扱う。本エントリは Codex CLI の登場時期として言及
+- B-10 Devin との住み分け：B-10 は Devin の機能を扱う。本エントリは自律世代の代表例として名前のみ
+- H-50 Bard → Gemini 改名の流れ：Google 側の歴史。本エントリは OpenAI / GitHub / Anthropic 側の系譜に絞る
+
+
+## 出典メモ
+
+- GitHub Copilot 発表 — https://github.blog/2021-06-29-introducing-github-copilot-ai-your-programming-pair-programmer/ — checked 2026-04-30
+- GitHub Copilot GA — https://github.blog/2022-06-21-github-copilot-is-generally-available-to-all-developers/ — checked 2026-04-30
+- Cursor 公式 — https://cursor.com — checked 2026-04-30
+- Claude Code 発表 — https://www.anthropic.com/claude-code — checked 2026-04-30
+
+
+## 備考
+
+- 2021-06: GitHub Copilot Technical Preview（OpenAI Codex ベース）
+- 2022-06: GitHub Copilot GA、月 10 ドルで一般提供開始
+- 2023 春: Cursor 登場（VS Code フォーク、対話型・マルチファイル編集）
+- 2024 中: Copilot Workspace・Cursor Composer 登場（タスク単位操作）
+- 2025 春: Claude Code（CLI 自律エージェント）、OpenAI Codex CLI、Cursor Agent、Devin（Cognition）など
+- 進化の軸は「補完 → 対話 → タスク単位 → 自律エージェント」の 4 段階で整理できる
+- 各ツールは並行して進化し続けており、世代の境界は曖昧になっている面もある
