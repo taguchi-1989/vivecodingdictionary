@@ -184,7 +184,7 @@ def render(rows):
     lines.append("")
     lines.append("- **☆ 違反**（タグ `[AI:直]`）: その場で entry-writer を呼んで直す（status は drafting のまま）")
     lines.append("- **⚠️ 警告**（タグ `[AI:整]`）: 軽微なら手で削る／溜まったらまとめて対応")
-    lines.append("- **needs_review**（タグ `[私:書]`）: 著者本人が「非エンジニアのつまずき」「私のコメント」4 項目を埋める。全項目埋まると保存時に `ready`（`[済]`）へ自動昇格")
+    lines.append("- **needs_review**（タグ `[人:書]`）: 著者本人が「非エンジニアのつまずき」「私のコメント」4 項目を埋める。全項目埋まると保存時に `ready`（`[済]`）へ自動昇格")
     lines.append("- このキューは `Edit/Write` のたびに自動更新されます。手動更新は `python3 scripts/update_review_queue.py`")
     lines.append("- ファイル名のタグを更新するには `python3 scripts/apply_status_markers.py`")
     lines.append("")
