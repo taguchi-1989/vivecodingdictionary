@@ -54,27 +54,27 @@ C-1,,OpenAI,person_org,company,candidate,,content/entries/person/C-1_openai[済]
 C-2,,Anthropic,person_org,company,needs_review,,content/entries/person/C-2_anthropic[済].md
 C-3,,Google DeepMind,person_org,company,drafting,,content/entries/person/C-3_google_deepmind[済].md
 C-4,,Meta AI,person_org,company,needs_review,,content/entries/person/C-4_meta_ai[済].md
-C-5,,xAI,person_org,company,skeleton,,content/entries/person/C-5_xai[AI直].md
+C-5,,xAI,person_org,company,skeleton,,content/entries/person/C-5_xai[済].md
 C-6,,Mistral AI,person_org,company,drafting,,content/entries/person/C-6_mistral_ai[人書].md
-C-7,,Hugging Face,person_org,company,skeleton,,content/entries/person/C-7_hugging_face[AI直].md
-C-8,,Microsoft AI,person_org,company,needs_review,,content/entries/person/C-8_microsoft_ai[AI直].md
+C-7,,Hugging Face,person_org,company,skeleton,,content/entries/person/C-7_hugging_face[済].md
+C-8,,Microsoft AI,person_org,company,needs_review,,content/entries/person/C-8_microsoft_ai[済].md
 C-9,,NVIDIA,person_org,company,needs_review,,content/entries/person/C-9_nvidia[済].md
-C-10,,Moonshot AI,person_org,company,drafting,,content/entries/person/C-10_moonshot_ai[AI直].md
-C-11,,Z.ai,person_org,company,drafting,旧Zhipu AI→Z.ai リブランド 2025年,content/entries/person/C-11_z_ai[AI直].md
-C-12,,TSMC,person_org,company,drafting,半導体ファウンドリ v2テンプレ書き起こし済（2026-04-30）,content/entries/person/C-12_tsmc[AI直].md
-C-13,,Groq,person_org,company,drafting,AI推論チップ LPU v2テンプレ書き起こし済（2026-04-30）,content/entries/person/C-13_groq[AI直].md
-C-14,,AMD,person_org,company,drafting,半導体,content/entries/person/C-14_amd[AI直].md
+C-10,,Moonshot AI,person_org,company,drafting,,content/entries/person/C-10_moonshot_ai[人書].md
+C-11,,Z.ai,person_org,company,drafting,旧Zhipu AI→Z.ai リブランド 2025年,content/entries/person/C-11_z_ai[人書].md
+C-12,,TSMC,person_org,company,drafting,半導体ファウンドリ v2テンプレ書き起こし済（2026-04-30）,content/entries/person/C-12_tsmc[済].md
+C-13,,Groq,person_org,company,drafting,AI推論チップ LPU v2テンプレ書き起こし済（2026-04-30）,content/entries/person/C-13_groq[済].md
+C-14,,AMD,person_org,company,drafting,半導体,content/entries/person/C-14_amd[済].md
 C-50,,Sam Altman,person_org,person,needs_review,,content/entries/person/C-50_sam_altman[人書].md
 C-51,,Dario Amodei,person_org,person,needs_review,,content/entries/person/C-51_dario_amodei[済].md
-C-52,,Demis Hassabis,person_org,person,drafting,,content/entries/person/C-52_demis_hassabis[AI直].md
+C-52,,Demis Hassabis,person_org,person,drafting,,content/entries/person/C-52_demis_hassabis[済].md
 C-53,,Andrej Karpathy,person_org,person,skeleton,,content/entries/person/C-53_andrej_karpathy[済].md
-C-54,,Ilya Sutskever,person,person,drafting,,content/entries/person/C-54_ilya_sutskever[AI直].md
+C-54,,Ilya Sutskever,person,person,drafting,,content/entries/person/C-54_ilya_sutskever[済].md
 C-55,,Mira Murati,person_org,person,drafting,,content/entries/person/C-55_mira_murati[済].md
-C-56,,Yann LeCun,person_org,person,needs_review,,content/entries/person/C-56_yann_lecun[AI直].md
-C-57,,Geoffrey Hinton,person_org,person,drafting,,content/entries/person/C-57_geoffrey_hinton[AI直].md
-C-58,,Elon Musk,person_org,person,drafting,,content/entries/person/C-58_elon_musk[AI直].md
-C-59,,Jensen Huang,person_org,person,drafting,,content/entries/person/C-59_jensen_huang[AI直].md
-C-60,,Ray Kurzweil,person_org,person,needs_review,,content/entries/person/C-60_ray_kurzweil[AI直].md
+C-56,,Yann LeCun,person_org,person,needs_review,,content/entries/person/C-56_yann_lecun[済].md
+C-57,,Geoffrey Hinton,person_org,person,drafting,,content/entries/person/C-57_geoffrey_hinton[済].md
+C-58,,Elon Musk,person_org,person,drafting,,content/entries/person/C-58_elon_musk[済].md
+C-59,,Jensen Huang,person_org,person,drafting,,content/entries/person/C-59_jensen_huang[済].md
+C-60,,Ray Kurzweil,person_org,person,needs_review,,content/entries/person/C-60_ray_kurzweil[済].md
 C-80,,AI大学,person_org,youtuber,drafting,,content/entries/person/C-80[済].md
 C-81,,にゃんた,person_org,youtuber,drafting,v2テンプレ書き起こし済（2026-04-30）。旧スケルトン C-81.md は archived,content/entries/person/C-81[凍].md
 C-82,,まさお,person_org,youtuber,skeleton,,content/entries/person/C-82[済].md
@@ -94,38 +94,38 @@ D-22,,o1 系,model,openai,drafting,本書き済み（2026-04-29）。旧スケ�
 D-23,,o3 系,model,openai,skeleton,,content/entries/model/D-23[人書].md
 D-24,,GPT-3 系,model,openai,drafting,,content/entries/model/D-24[凍].md
 D-25,,GPT-1 / GPT-2 系,model,openai,drafting,v2テンプレ書き起こし済（2026-04-30）スケルトン D-25.md は archived,content/entries/model/D-25[凍].md
-D-26,,gpt-oss,model,openai,skeleton,OpenAI初の公式オープンウェイトモデル 2025-08,content/entries/model/D-26_gpt_oss[AI直].md
+D-26,,gpt-oss,model,openai,skeleton,OpenAI初の公式オープンウェイトモデル 2025-08,content/entries/model/D-26_gpt_oss[済].md
 D-30,,Grok 系,model,xai,drafting,,content/entries/model/D-30[凍].md
-D-35,,Cursor Composer,model,other_closed,drafting,title を Cursor Composer に更新（2026-04-30）,content/entries/model/D-35_cursor_composer[AI直].md
+D-35,,Cursor Composer,model,other_closed,drafting,title を Cursor Composer に更新（2026-04-30）,content/entries/model/D-35_cursor_composer[済].md
 D-40,,Llama 系,model,open,drafting,,content/entries/model/D-40[凍].md
 D-41,,Mistral 系,model,open,drafting,,content/entries/model/D-41[凍].md
 D-42,,Gemma 系,model,open,drafting,,content/entries/model/D-42[凍].md
 D-43,,Qwen 系,model,open,drafting,,content/entries/model/D-43[凍].md
-D-44,,Kimi,model,open,skeleton,,content/entries/model/D-44_kimi[AI直].md
+D-44,,Kimi,model,open,skeleton,,content/entries/model/D-44_kimi[済].md
 D-45,,GLM,model,open_weight_llm,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/model/D-45_glm[済].md
-D-46,,DeepSeek V3,model,open,needs_review,,content/entries/model/D-46_deepseek_v3[AI直].md
+D-46,,DeepSeek V3,model,open,needs_review,,content/entries/model/D-46_deepseek_v3[人書].md
 D-47,,DeepSeek R1,model,open,needs_review,推論特化,content/entries/model/D-47_deepseek_r1[済].md
 D-50,,DALL-E,model,image_video,skeleton,,content/entries/model/D-50_dall_e[済].md
-D-51,,Imagen,model,image_video,skeleton,,content/entries/model/D-51_imagen[AI直].md
+D-51,,Imagen,model,image_video,skeleton,,content/entries/model/D-51_imagen[済].md
 D-52,,Sora,model,image_video,needs_review,,content/entries/model/D-52_sora[済].md
-D-53,,Veo,model,video_generation,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/model/D-53_veo[AI直].md
-D-54,,Stable Diffusion,model,image_video,skeleton,,content/entries/model/D-54_stable_diffusion[AI直].md
-D-55,,Nano Banana,model,image_video,needs_review,,content/entries/model/D-55_nano_banana[AI直].md
-D-56,,Seedance,model,video_generation,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/model/D-56_seedance[AI直].md
-D-57,,Flow,model,image_video,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/model/D-57_flow[AI直].md
-D-58,,Whisk,model,image_video,needs_review,,content/entries/model/D-58_whisk[AI直].md
+D-53,,Veo,model,video_generation,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/model/D-53_veo[済].md
+D-54,,Stable Diffusion,model,image_video,skeleton,,content/entries/model/D-54_stable_diffusion[済].md
+D-55,,Nano Banana,model,image_video,needs_review,,content/entries/model/D-55_nano_banana[済].md
+D-56,,Seedance,model,video_generation,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/model/D-56_seedance[済].md
+D-57,,Flow,model,image_video,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/model/D-57_flow[済].md
+D-58,,Whisk,model,image_video,needs_review,,content/entries/model/D-58_whisk[済].md
 D-60,,AlphaGo,model,historical,skeleton,,content/entries/model/D-60_alphago[済].md
 D-70,,Amical,model,ai_solution,drafting,情報限定的。公式確認が必要（2026-04-30）,content/entries/model/D-70_amical[AI整].md
-D-71,,Whisper,model,voice_audio,skeleton,OpenAI のオープン音声認識モデル,content/entries/model/D-71_whisper[AI直].md
+D-71,,Whisper,model,voice_audio,skeleton,OpenAI のオープン音声認識モデル,content/entries/model/D-71_whisper[済].md
 E-1,,SWE-Bench,benchmark,coding,needs_review,,content/entries/benchmark/E-1_swe_bench[人書].md
 E-2,,SWE-Bench Verified,benchmark,coding,drafting,,content/entries/benchmark/E-2_swe_bench_verified[済].md
 E-3,,Terminal-Bench,benchmark,coding,skeleton,,content/entries/benchmark/E-3_terminal_bench[済].md
-E-4,,HumanEval,benchmark,coding,skeleton,,content/entries/benchmark/E-4_humaneval[AI直].md
-E-20,,MMLU,benchmark,reasoning,skeleton,,content/entries/benchmark/E-20_mmlu[AI直].md
+E-4,,HumanEval,benchmark,coding,skeleton,,content/entries/benchmark/E-4_humaneval[済].md
+E-20,,MMLU,benchmark,reasoning,skeleton,,content/entries/benchmark/E-20_mmlu[済].md
 E-21,,MMLU-Pro,benchmark,reasoning,skeleton,,content/entries/benchmark/E-21_mmlu_pro[済].md
-E-22,,GPQA,benchmark,reasoning,skeleton,,content/entries/benchmark/E-22_gpqa[AI直].md
-E-23,,GSM8K,benchmark,reasoning,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-23_gsm8k[AI直].md
-E-24,,MATH,benchmark,reasoning,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-24_math[AI直].md
+E-22,,GPQA,benchmark,reasoning,skeleton,,content/entries/benchmark/E-22_gpqa[人書].md
+E-23,,GSM8K,benchmark,reasoning,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-23_gsm8k[済].md
+E-24,,MATH,benchmark,reasoning,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-24_math[済].md
 E-25,,AIME,benchmark,reasoning,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-25_aime[人書].md
 E-26,,Humanity's Last Exam,benchmark,reasoning,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-26_humanity_s_last_exam[人書].md
 E-27,,IQ Bench,benchmark,reasoning,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-27_iq_bench[人書].md
@@ -282,22 +282,22 @@ H-61,,Preview 版という文化,history,culture,needs_review,,content/entries/h
 H-62,,Anthropic 創業の流れ,history,event,drafting,v2テンプレ本書き済（2026-04-30）,content/entries/history/H-62[人書].md
 H-63,,Vibe Coding 命名,history,event,drafting,2025-02 Karpathy のツイートで広まった,content/entries/history/H-63[人書].md
 I-1,,MCP,mcp,protocol,needs_review,,content/entries/mcp/I-1_mcp[済].md
-I-2,,MCP Server,mcp,protocol,skeleton,,content/entries/mcp/I-2_mcp_server[AI直].md
-I-3,,MCP Client,mcp,protocol,drafting,,content/entries/mcp/I-3_mcp_client[AI直].md
-I-4,,MCP Transport,mcp,protocol,needs_review,,content/entries/mcp/I-4_mcp_transport[AI直].md
-I-5,,MCP SDK,mcp,protocol,drafting,,content/entries/mcp/I-5_mcp_sdk[AI直].md
-I-10,,Filesystem MCP,mcp,reference,needs_review,,content/entries/mcp/I-10_filesystem_mcp[AI直].md
+I-2,,MCP Server,mcp,protocol,skeleton,,content/entries/mcp/I-2_mcp_server[済].md
+I-3,,MCP Client,mcp,protocol,drafting,,content/entries/mcp/I-3_mcp_client[済].md
+I-4,,MCP Transport,mcp,protocol,needs_review,,content/entries/mcp/I-4_mcp_transport[済].md
+I-5,,MCP SDK,mcp,protocol,drafting,,content/entries/mcp/I-5_mcp_sdk[済].md
+I-10,,Filesystem MCP,mcp,reference,needs_review,,content/entries/mcp/I-10_filesystem_mcp[済].md
 I-11,,GitHub MCP,mcp,reference,needs_review,公式,content/entries/mcp/I-11_github_mcp[済].md
-I-12,,Git MCP,mcp,reference,needs_review,,content/entries/mcp/I-12_git_mcp[AI直].md
-I-13,,Slack MCP,mcp,reference,drafting,,content/entries/mcp/I-13_slack_mcp[AI直].md
-I-20,,Playwright MCP,mcp,dev_automation,skeleton,,content/entries/mcp/I-20_playwright_mcp[AI直].md
-I-21,,Puppeteer MCP,mcp,dev_automation,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/mcp/I-21_puppeteer_mcp[AI直].md
-I-22,,Chrome DevTools MCP,mcp,dev_automation,needs_review,,content/entries/mcp/I-22_chrome_devtools_mcp[AI直].md
-I-23,,Serena MCP,mcp,dev_automation,skeleton,,content/entries/mcp/I-23_serena_mcp[AI直].md
-I-24,,Context7 MCP,mcp,dev_automation,needs_review,,content/entries/mcp/I-24_context7_mcp[AI直].md
-I-30,,Notion MCP,mcp,collab,needs_review,,content/entries/mcp/I-30_notion_mcp[AI直].md
-I-41,,SQLite MCP,mcp,data,drafting,,content/entries/mcp/I-41_sqlite_mcp[AI直].md
-I-50,,AWS MCP,mcp,cloud,drafting,,content/entries/mcp/I-50_aws_mcp[AI直].md
+I-12,,Git MCP,mcp,reference,needs_review,,content/entries/mcp/I-12_git_mcp[済].md
+I-13,,Slack MCP,mcp,reference,drafting,,content/entries/mcp/I-13_slack_mcp[済].md
+I-20,,Playwright MCP,mcp,dev_automation,skeleton,,content/entries/mcp/I-20_playwright_mcp[済].md
+I-21,,Puppeteer MCP,mcp,dev_automation,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/mcp/I-21_puppeteer_mcp[済].md
+I-22,,Chrome DevTools MCP,mcp,dev_automation,needs_review,,content/entries/mcp/I-22_chrome_devtools_mcp[済].md
+I-23,,Serena MCP,mcp,dev_automation,skeleton,,content/entries/mcp/I-23_serena_mcp[済].md
+I-24,,Context7 MCP,mcp,dev_automation,needs_review,,content/entries/mcp/I-24_context7_mcp[済].md
+I-30,,Notion MCP,mcp,collab,needs_review,,content/entries/mcp/I-30_notion_mcp[済].md
+I-41,,SQLite MCP,mcp,data,drafting,,content/entries/mcp/I-41_sqlite_mcp[済].md
+I-50,,AWS MCP,mcp,cloud,drafting,,content/entries/mcp/I-50_aws_mcp[済].md
 I-80,,自作 MCP のテンプレ,mcp,diy,needs_review,,content/entries/mcp/I-80[人書].md
 I-81,,MCP の登録・設定,mcp,diy,drafting,,content/entries/mcp/I-81[人書].md
 J-1,,AGI,term_general,ai_concept,skeleton,,content/entries/term_general/J-1_agi[人書].md
