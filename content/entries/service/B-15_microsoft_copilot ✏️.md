@@ -19,7 +19,7 @@ related_terms:
   - Microsoft 365 Copilot
   - Edge Copilot
   - ChatGPT
-status: drafting
+status: needs_review
 ---
 
 # Microsoft Copilot
@@ -28,13 +28,13 @@ status: drafting
 
 ## tagline
 
-Windows・Edge・スマホから呼べる Microsoft の汎用 AI チャットです。旧 Bing Chat 系列の後継にあたります。
+Windows・Edge・スマホから呼べる Microsoft の汎用 AI チャットです。旧 Bing Chat の後継です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-テキストでの質問応答・Web 検索・画像生成（DALL·E 3）・音声会話（Copilot Voice）など幅広い機能を無料から提供します。中身は OpenAI の GPT 系モデルを主力として採用しています。
+テキスト質問応答・Web 検索・画像生成（DALL·E 3）・音声会話（Copilot Voice）など幅広い機能を無料から提供します。中身は OpenAI の GPT 系モデルを主力に採用しています。
 
 ## どこで出会うか
 

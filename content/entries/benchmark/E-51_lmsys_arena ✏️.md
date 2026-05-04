@@ -18,7 +18,7 @@ related_terms:
   - ELO レーティング
   - SWE-Bench Verified
   - Claude
-status: drafting
+status: needs_review
 ---
 
 # LMSYS Arena
@@ -31,11 +31,11 @@ Chatbot Arena を立ち上げた研究グループ、およびそのプラット
 
 ## 何をしてくれるか
 
-UC Berkeley 発の研究グループ LMSYS が運営する人手投票型のモデル評価基盤です。ユーザーが 2 つの匿名モデルに同じ質問を投げて好きな回答を選び、集計結果を ELO レーティングに変換してリーダーボードを公開します。
+UC Berkeley 発の研究グループ LMSYS が運営する人手投票型のモデル評価基盤です。匿名 2 モデルに同じ質問を投げて好きな回答を選び、集計を ELO レーティングに変換してリーダーボードを公開します。
 
 ## どこで出会うか
 
-新モデルのリリース記事で「LMSYS のランキングで上位」と紹介される場面が典型です。運営が lmarena.ai として独立分離した経緯から、記事によって「LMSYS Arena」「LMArena」「Chatbot Arena」が混在することがあります。
+新モデルの記事で「LMSYS のランキングで上位」と紹介される場面が典型です。運営が lmarena.ai として独立した経緯から、「LMSYS Arena」「LMArena」「Chatbot Arena」が混在しがちです。
 
 ## メイン図
 
@@ -84,10 +84,10 @@ Chatbot Arena、ELO レーティング、SWE-Bench Verified
 
 ## 開発フローでの位置（必須）
 
-1. モデル候補の絞り込み — LMSYS Arena のランキングで体感評価を確認する
-2. 名称の照合 — 記事で「LMSYS」「LMArena」「Chatbot Arena」が混在していても同系列と判断する
-3. 派生 Arena の確認 — コーディング用途なら Copilot Arena、画像なら Vision Arena も参照する
-4. 自動ベンチと併用 — SWE-Bench Verified（E-2）など自動採点指標と組み合わせて判断する
+1. 候補絞り込み — ランキングで体感評価を確認する
+2. 名称照合 — 「LMSYS」「LMArena」「Chatbot Arena」は同系列と判断する
+3. 派生 Arena — コーディングは Copilot Arena、画像は Vision Arena を参照
+4. 自動ベンチ併用 — SWE-Bench Verified などと組み合わせて判断する
 
 ## 関連用語
 

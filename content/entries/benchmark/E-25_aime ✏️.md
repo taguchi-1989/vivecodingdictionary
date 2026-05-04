@@ -19,24 +19,24 @@ related_terms:
   - MATH
   - Thinking モデル
   - GPQA
-status: drafting
+status: needs_review
 ---
 
 # AIME
 
 ## tagline
 
-American Invitational Mathematics Examination の略。競技数学レベルの推論力を測るベンチマークです。
+American Invitational Mathematics Examination の略。競技数学級の推論力を測ります。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-15 問の整数解（0〜999）を答える形式で、LLM の「深い思考力」を数値化します。GSM8K（小中学算数）が頭打ちになった後、推論強化系モデルの実力差を測る指標として定着しました。
+15 問の整数解（0〜999）形式で、LLM の深い思考力を数値化します。GSM8K が頭打ちになった後、推論強化系モデルの実力差を測る指標として定着しました。
 
 ## どこで出会うか
 
-o3 系・GPT-5 系・Claude 4.x 系・Gemini 2.5 系の性能比較記事で登場します。「AIME 2024 で何点か」という形で Thinking モデル（G-14）の性能を示す指標として、業界レポートや SNS での観測ツイートによく出てきます。
+o3 系・GPT-5 系・Claude 4.x 系・Gemini 2.5 系の性能比較で登場します。「AIME 2024 で何点か」という形で Thinking モデル（G-14）の指標として、業界レポートや SNS の観測ツイートに出てきます。
 
 ## メイン図
 

@@ -18,7 +18,7 @@ related_terms:
   - SWE-Bench Verified
   - AGI
   - Thinking モデル
-status: drafting
+status: needs_review
 ---
 
 # Humanity's Last Exam
@@ -31,7 +31,7 @@ status: drafting
 
 ## 何をしてくれるか
 
-Center for AI Safety と Scale AI が 2025 年 1 月に公開した 3,000 問のテスト群です。数学・物理・化学・生物・人文・コンピュータ科学など 100 以上の分野を横断し、AI の総合的な学力を測ります。
+Center for AI Safety と Scale AI が 2025 年 1 月に公開した 3,000 問のテスト群です。数学・物理・人文など 100 以上の分野を横断し、AI の総合的な学力を測ります。
 
 ## どこで出会うか
 

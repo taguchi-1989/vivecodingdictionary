@@ -19,25 +19,25 @@ related_terms:
   - Vercel
   - OAuth
   - v0
-status: drafting
+status: needs_review
 ---
 
 # Supabase
 
 ## tagline
 
-OSS の BaaS（Backend as a Service）です。PostgreSQL を中核に据えた Firebase 代替サービスです。
+OSS の BaaS（Backend as a Service）です。PostgreSQL を中核に据えた Firebase 代替です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-DB・認証・ストレージ・Edge Functions・Realtime を 1 サービスにまとめて提供します。PostgreSQL（SQL）ベースで、型生成対応のクライアント SDK から操作できます。
+DB・認証・ストレージ・Edge Functions・Realtime を 1 サービスで提供します。PostgreSQL ベースで、型生成対応のクライアント SDK から操作できます。
 
 
 ## どこで出会うか
 
-v0（B-9）や Bolt.new（B-11）がフルスタック雛形を生成するとき、Supabase を DB ＋ Auth のバックエンドに選ぶことがあります。「Supabase のプロジェクト URL を教えて」と AI に聞かれたら、ここで出会うサインです。
+v0（B-9）や Bolt.new（B-11）がフルスタック雛形を出すとき、DB ＋ Auth に Supabase が選ばれます。「Supabase のプロジェクト URL を教えて」と AI に聞かれたら出会うサインです。
 
 
 ## メイン図
@@ -89,11 +89,11 @@ PostgreSQL、Row Level Security、pgvector
 
 ## 開発フローでの位置（必須）
 
-1. プロジェクト作成 — Supabase ダッシュボードで DB と Auth を初期化します
-2. スキーマ設計 — SQL エディタかマイグレーションファイルでテーブルを定義します
-3. SDK 接続 — TypeScript クライアントを生成し、フロントから CRUD を呼び出します
-4. 認証設定 — OAuth（B-130）プロバイダを有効化し、RLS ポリシーを追加します
-5. デプロイ連携 — Vercel（B-20）の環境変数に URL と API キーを渡して本番化します
+1. プロジェクト作成 — ダッシュボードで DB と Auth を初期化します
+2. スキーマ設計 — SQL エディタでテーブルを定義します
+3. SDK 接続 — TypeScript クライアントから CRUD を呼びます
+4. 認証設定 — OAuth（B-130）と RLS ポリシーを追加します
+5. デプロイ連携 — Vercel（B-20）に URL とキーを渡します
 
 
 ## 関連用語

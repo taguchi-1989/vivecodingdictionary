@@ -19,7 +19,7 @@ related_terms:
   - Gemini 2 系
   - Thinking モデル
   - Vertex AI
-status: drafting
+status: needs_review
 ---
 
 # Gemini 2.5 系
@@ -28,15 +28,15 @@ status: drafting
 
 ## tagline
 
-Google DeepMind が 2025 年 3 月に投入した Gemini の 2.5 世代です。Pro／Flash／Flash-Lite の 3 ティアで提供されます。
+2025 年 3 月公開の Gemini 2.5 世代です。Pro／Flash／Flash-Lite の 3 ティアがあります。
 
 ## 何をしてくれるか
 
-テキスト・コード・画像をまとめて処理できます。既定で「思考（Thinking）」機能が組み込まれており、追加トークンを使うとより深く推論する設定も可能です。コンテキスト長は 100 万トークン超を維持しています。
+テキスト・コード・画像をまとめて処理できます。既定で「思考（Thinking）」機能が組み込まれ、追加トークンで推論を深められます。コンテキスト長は 100 万トークン超です。
 
 ## どこで出会うか
 
-Cursor や Claude Code のモデル選択画面で「Gemini 2.5 Pro」と並んでいることがあります。Google AI Studio では無料で試用でき、企業用途は Vertex AI（B-27）経由でも利用できます。
+Cursor や Claude Code のモデル選択画面で「Gemini 2.5 Pro」が並ぶことがあります。Google AI Studio では試用でき、企業用途は Vertex AI（B-27）経由でも使えます。
 
 ## メイン図
 
@@ -86,11 +86,11 @@ Thinking モデル、Gemini 2 系、Vertex AI。
 
 ## 開発フローでの位置（必須）
 
-1. タスクを分類する — 長文・深い推論が必要か、軽量処理かを判断する
-2. ティアを選ぶ — Pro（深い推論）・Flash（速度）・Flash-Lite（軽量）を決める
-3. Thinking 設定を確認する — 既定オンか、追加トークンで深掘りするかを選ぶ
-4. API または Google AI Studio で実行する — 無料試用か企業利用かで入口を分ける
-5. コストと品質を確認する — Flash と Pro の使い分けを調整する
+1. タスクを分類する — 長文・深い推論か、軽量処理かを判断
+2. ティアを選ぶ — Pro（深い推論）・Flash（速度）・Flash-Lite（軽量）から決める
+3. Thinking 設定を確認する — 既定オンか追加トークンで深掘りかを選ぶ
+4. API か Google AI Studio で実行する — 試用か企業利用かで入口を分ける
+5. コストと品質を確認する — Flash と Pro の使い分けを調整
 
 ## 関連用語
 

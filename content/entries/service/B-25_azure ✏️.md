@@ -20,14 +20,14 @@ related_terms:
   - Azure OpenAI
   - Microsoft 365
   - App Service
-status: drafting
+status: needs_review
 ---
 
 # Azure
 
 ## tagline
 
-Microsoft Azure の略称。VM・App Service・Functions など 200 以上のサービスを持つクラウド基盤です。
+Microsoft Azure の略称。VM や App Service など多数のサービスを束ねるクラウド基盤です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 

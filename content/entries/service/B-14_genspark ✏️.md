@@ -18,7 +18,7 @@ related_terms:
   - ChatGPT
   - Gemini
   - Deep Research
-status: drafting
+status: needs_review
 ---
 
 # Genspark
@@ -31,11 +31,11 @@ status: drafting
 
 ## 何をしてくれるか
 
-質問を入力すると複数の LLM（大規模言語モデル）と Web 検索を組み合わせ、Sparkpage（回答まとめページ）として返してくれます。AI Slides によるスライド生成や Super Agent によるタスク実行など、回答の形を選べるのが特徴です。
+質問を入力すると複数の LLM（大規模言語モデル）と Web 検索を組み合わせ、Sparkpage（回答まとめページ）として返します。AI Slides によるスライド化や Super Agent でのタスク実行など、出力の形を選べます。
 
 ## どこで出会うか
 
-「Perplexity（パープレキシティ）のように検索 AI を試したいが、スライド出力や複合エージェントも使いたい」と思ったときに名前が挙がるサービスです。比較記事で Perplexity や ChatGPT Search と並んで紹介されることがあります。
+「Perplexity のように検索 AI を試したいが、スライドやエージェントも使いたい」と思ったときに名前が挙がります。比較記事で Perplexity や ChatGPT Search と並んで紹介されます。
 
 ## メイン図
 

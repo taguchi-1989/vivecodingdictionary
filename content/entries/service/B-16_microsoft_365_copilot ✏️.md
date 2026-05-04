@@ -19,7 +19,7 @@ related_terms:
   - Microsoft
   - GitHub Copilot
   - Azure
-status: drafting
+status: needs_review
 ---
 
 # Microsoft 365 Copilot
@@ -34,11 +34,11 @@ Word・Excel・Teams などに組み込まれた業務統合 AI です。月額 
 
 ## 何をしてくれるか
 
-Microsoft 365 の各アプリ内で AI が直接動きます。Word ではドラフト生成・要約、Excel では関数提案・データ分析、PowerPoint ではスライド自動生成、Outlook ではメール下書き、Teams では会議要約が使えます。
+Microsoft 365 の各アプリ内で AI が動きます。Word でドラフト・要約、Excel で関数提案・分析、PowerPoint でスライド生成、Outlook でメール下書き、Teams で会議要約ができます。
 
 ## どこで出会うか
 
-社内の Microsoft 365 環境を使う職場で「Copilot を契約した」と案内されたときが最初の出会いです。Microsoft Graph 経由で自社メール・ファイルを参照した回答を返してくれる点が、無料の B-15 と大きく異なります。
+Microsoft 365 を使う職場で「Copilot を契約した」と案内された時が出会いです。Microsoft Graph で自社メールやファイルを参照する点が無料 B-15 との違いです。
 
 ## メイン図
 

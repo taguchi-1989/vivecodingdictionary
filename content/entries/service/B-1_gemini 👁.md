@@ -94,11 +94,11 @@ Gemini 2.5 系、Vertex AI、AI Studio、Workspace 個別機能。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 関連用語
 
-- Google DeepMind
+- DeepMind
 - Gemini 2.5 系
 - Bard → Gemini
 - Vertex AI
-- Google Workspace
+- Workspace
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 

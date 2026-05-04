@@ -18,7 +18,7 @@ related_terms:
   - エージェント
   - WebArena
   - GAIA
-status: drafting
+status: needs_review
 ---
 
 # TAU-Bench
@@ -51,7 +51,7 @@ Tool-Agent-User の略。ビジネス対話タスクで AI エージェントの
 
 ## 会話での使い方例
 
-「TAU-Bench はコードより接客寄りの難しさを測るので、SWE-Bench と併用するのが現実的です。」
+「TAU-Bench は接客寄りの難しさを測るので、SWE-Bench と併用が現実的です。」
 
 <!-- ━━━━━━━━ 右ページ ━━━━━━━━ -->
 
