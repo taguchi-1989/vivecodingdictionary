@@ -19,7 +19,7 @@ related_terms:
   - Yann LeCun
   - Deep Learning
   - AI 倫理
-status: ready
+status: drafting
 ---
 
 # Geoffrey Hinton

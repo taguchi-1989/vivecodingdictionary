@@ -19,7 +19,7 @@ related_terms:
   - Veo
   - Kling
   - fal.ai
-status: ready
+status: drafting
 ---
 
 # Seedance

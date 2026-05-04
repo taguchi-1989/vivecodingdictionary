@@ -20,7 +20,7 @@ related_terms:
   - LSP
   - Context Engineering
   - VS Code
-status: ready
+status: drafting
 ---
 
 # Serena MCP

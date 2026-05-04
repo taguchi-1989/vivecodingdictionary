@@ -18,7 +18,7 @@ related_terms:
   - MCP Server
   - AWS
   - Amazon Bedrock
-status: ready
+status: drafting
 ---
 
 # AWS MCP

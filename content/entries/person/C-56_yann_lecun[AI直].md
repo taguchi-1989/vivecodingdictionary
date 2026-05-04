@@ -19,7 +19,7 @@ related_terms:
   - Geoffrey Hinton
   - Deep Learning
   - Neural Network
-status: ready
+status: drafting
 ---
 
 # Yann LeCun

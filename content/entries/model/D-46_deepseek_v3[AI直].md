@@ -19,7 +19,7 @@ related_terms:
   - DeepSeek R1
   - MIT ライセンス
   - Llama 系
-status: needs_review
+status: drafting
 ---
 
 # DeepSeek V3

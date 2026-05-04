@@ -18,7 +18,7 @@ related_terms:
   - H100
   - GPU
   - CUDA
-status: ready
+status: drafting
 ---
 
 # Jensen Huang

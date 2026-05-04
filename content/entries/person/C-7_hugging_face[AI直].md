@@ -19,7 +19,7 @@ related_terms:
   - Spaces
   - Llama
   - Mistral
-status: ready
+status: drafting
 ---
 
 # Hugging Face

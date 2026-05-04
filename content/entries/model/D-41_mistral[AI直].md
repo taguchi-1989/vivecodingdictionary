@@ -19,7 +19,7 @@ related_terms:
   - MoE
   - La Plateforme
   - ファインチューニング
-status: ready
+status: drafting
 ---
 
 # Mistral 系

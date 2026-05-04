@@ -19,7 +19,7 @@ related_terms:
   - Sam Altman
   - Geoffrey Hinton
   - ASI
-status: ready
+status: drafting
 ---
 
 <!-- バイブコーディング図鑑 エントリー v2（2ページ見開き想定、iter 22 準拠） -->

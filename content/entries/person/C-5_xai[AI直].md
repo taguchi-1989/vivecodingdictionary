@@ -18,7 +18,7 @@ related_terms:
   - X（Twitter）
   - Colossus
   - OpenAI
-status: ready
+status: drafting
 ---
 
 # xAI

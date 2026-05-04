@@ -19,7 +19,7 @@ related_terms:
   - Stability AI
   - Hugging Face
   - ファインチューニング
-status: ready
+status: drafting
 ---
 
 # Stable Diffusion

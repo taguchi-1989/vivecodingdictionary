@@ -18,7 +18,7 @@ related_terms:
   - Claude Code
   - Cursor
   - Tool Use
-status: ready
+status: drafting
 ---
 
 # MCP Client

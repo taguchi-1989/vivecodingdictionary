@@ -19,7 +19,7 @@ related_terms:
   - DeepSeek
   - Qwen
   - 長文 Context
-status: ready
+status: drafting
 ---
 
 # Kimi

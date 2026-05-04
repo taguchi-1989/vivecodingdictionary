@@ -19,7 +19,7 @@ related_terms:
   - MCP Server
   - MCP Client
   - MCP SDK
-status: ready
+status: drafting
 ---
 
 # MCP Transport

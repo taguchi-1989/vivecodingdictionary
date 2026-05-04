@@ -19,7 +19,7 @@ related_terms:
   - MCP Server
   - Context Window
   - Prompt Engineering
-status: ready
+status: drafting
 ---
 
 # Context7 MCP

@@ -18,7 +18,7 @@ related_terms:
   - Claude Code
   - Windsurf
   - Tool Use
-status: ready
+status: drafting
 ---
 
 ## tagline

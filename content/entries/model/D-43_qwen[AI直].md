@@ -19,7 +19,7 @@ related_terms:
   - Llama
   - ファインチューニング
   - Hugging Face
-status: ready
+status: drafting
 ---
 
 # Qwen 系

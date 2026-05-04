@@ -19,7 +19,7 @@ related_terms:
   - AlphaFold
   - AlphaGo
   - Nobel Prize
-status: ready
+status: drafting
 ---
 
 # Demis Hassabis

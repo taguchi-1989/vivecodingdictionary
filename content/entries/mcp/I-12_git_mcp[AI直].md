@@ -19,7 +19,7 @@ related_terms:
   - MCP Server
   - GitHub MCP
   - git
-status: ready
+status: drafting
 ---
 
 # Git MCP

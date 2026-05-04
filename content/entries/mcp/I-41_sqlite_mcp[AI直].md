@@ -18,7 +18,7 @@ related_terms:
   - MCP Server
   - Python
   - AWS MCP
-status: ready
+status: drafting
 ---
 
 # SQLite MCP

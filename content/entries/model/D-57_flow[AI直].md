@@ -19,7 +19,7 @@ related_terms:
   - Imagen
   - Gemini
   - Whisk
-status: ready
+status: drafting
 ---
 
 # Flow

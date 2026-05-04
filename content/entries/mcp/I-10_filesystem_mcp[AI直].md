@@ -19,7 +19,7 @@ related_terms:
   - Claude Code
   - Tool Use
   - MCP Client
-status: ready
+status: drafting
 ---
 
 # Filesystem MCP

@@ -18,7 +18,7 @@ related_terms:
   - Llama 系
   - Grok 系
   - GroqCloud
-status: ready
+status: drafting
 ---
 
 # Groq
