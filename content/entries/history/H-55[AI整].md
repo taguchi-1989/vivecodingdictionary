@@ -19,7 +19,7 @@ related_terms:
   - llama.cpp
   - Mistral 系
   - ローカル LLM
-status: drafting
+status: needs_review
 ---
 
 # LLaMA のオープン化
@@ -159,4 +159,4 @@ llama.cpp、Ollama、Hugging Face
 - LLaMA 1 は研究者限定のはずが 4chan などへリークし、結果として個人勢のローカル LLM 実験の火種になった経緯がある（事実として記載、善悪評価は著者コメント欄に回す）
 - Llama 2 のライセンスは「月間アクティブユーザー 7 億人以上のサービスには別途 Meta との契約が必要」という条件付き。一般的な個人・中小利用は OK
 - Llama 3 系（3.0 / 3.1 / 3.2 / 3.3）は 2024 年以降に展開、2025 年に Llama 4 が登場
-- 時変情報（最新バージョン・ライセンス詳細）は evaluation_date: 2026-04-30 時点
+- 時変情報（バージョン・ライセンス詳細）は evaluation_date: 2026-04-30 時点

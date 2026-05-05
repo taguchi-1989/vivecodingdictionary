@@ -18,7 +18,7 @@ related_terms:
   - Tool Use
   - Filesystem MCP
   - GitHub MCP
-status: drafting
+status: ready
 ---
 
 # MCP Server

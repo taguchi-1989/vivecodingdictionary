@@ -19,7 +19,7 @@ related_terms:
   - Claude Code
   - Tool Use
   - MCP Client
-status: drafting
+status: ready
 ---
 
 # Filesystem MCP
@@ -109,9 +109,9 @@ MCP、MCP Server、GitHub MCP、Playwright MCP。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 今回はじめて試してみました <!-- 元: 今回はびめてみた -->
+- 🙂 第一印象: 今回はじめて試してみました
 - 👍 良い点: Claude Code に任せれば意識せず色々できます
-- 👎 ダメな点: 権限設定をミスすると大変です <!-- 元: 権限設定を見すると大変 -->
+- 👎 ダメな点: 権限設定をミスすると大変です
 - 👥 誰向けか: 自作のハーネスを組む人向けです
 
 

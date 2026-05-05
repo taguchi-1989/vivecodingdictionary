@@ -1,7 +1,7 @@
 ---
 id: G-23
 title: .claude/settings.json
-title_reading: ドット クロード スラッシュ セッティングス ドット ジェイソン
+title_reading: クロードセッティングス
 category: tool_agent
 subtype: config_file
 experience_level: hands_on
@@ -19,7 +19,7 @@ related_terms:
   - CLAUDE.md
   - Hook
   - Permission
-status: drafting
+status: needs_review
 ---
 
 <!--
@@ -88,11 +88,11 @@ Hook、Permission、CLAUDE.md
 
 ## 開発フローでの位置（必須）
 
-1. 準備 — プロジェクト直下に `.claude/` を作ります。
-2. 設定記述 — `settings.json` に `permissions` / `hooks` を書きます。
-3. Hook 登録 — `PostToolUse` に validator を指定します。
-4. 個人上書き — 個人設定は `settings.local.json` に分けます。
-5. 共有 — `settings.json` をコミットして共有します。
+1. 準備 — `.claude/` をプロジェクト直下に作ります。
+2. 設定記述 — `settings.json` に permissions/hooks を書きます。
+3. Hook 登録 — `PostToolUse` に validator を指定。
+4. 個人上書き — `settings.local.json` に分離。
+5. 共有 — `settings.json` をコミットして共有。
 
 
 ## 関連用語

@@ -19,7 +19,7 @@ related_terms:
   - GitHub Copilot
   - Azure
   - Copilot Studio
-status: drafting
+status: ready
 ---
 
 # Microsoft AI

@@ -19,7 +19,7 @@ related_terms:
   - LLM
   - ChatGPT
   - Gemini
-status: drafting
+status: ready
 ---
 
 # Grok 系
@@ -106,7 +106,7 @@ xAI、Grok-4 Heavy の推論能力、LLM 比較。
 ## 非エンジニアのつまずき
 
 - エコシステムとして X を使っていないとそもそも触れません
-- 商用的な正確さをどう担保しているのかわかりません <!-- 元: 商用的な咳をさを銅担保してるのかわからない -->
+- 商用的な正確さをどう担保しているのかわかりません
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント

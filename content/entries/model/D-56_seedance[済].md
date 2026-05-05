@@ -19,7 +19,7 @@ related_terms:
   - Veo
   - Kling
   - fal.ai
-status: drafting
+status: ready
 ---
 
 # Seedance
@@ -107,7 +107,7 @@ Sora, Veo, Kling
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: Sora 2 との優劣は不明ですが、良い動画が作れる印象です <!-- 元: 空2 -->
+- 🙂 第一印象: Sora 2 との優劣は不明ですが、良い動画が作れる印象です
 - 👍 良い点: ベンチマークが高いですね
 - 👎 ダメな点: 中華系モデルならではの警戒感があり、映画レベルをいきなり作れる段階ではない印象です
 - 👥 誰向けか: テレビや映画関係者向けかなと思います

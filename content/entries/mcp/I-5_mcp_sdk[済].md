@@ -19,7 +19,7 @@ related_terms:
   - MCP Server
   - MCP Client
   - 自作 MCP
-status: drafting
+status: ready
 ---
 
 # MCP SDK

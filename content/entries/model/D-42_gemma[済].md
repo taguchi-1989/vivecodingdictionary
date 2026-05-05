@@ -19,7 +19,7 @@ related_terms:
   - オープンモデル
   - Ollama
   - ファインチューニング
-status: drafting
+status: ready
 ---
 
 # Gemma 系

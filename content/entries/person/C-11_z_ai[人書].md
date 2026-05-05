@@ -18,7 +18,7 @@ related_terms:
   - Moonshot AI
   - Hugging Face
   - Anthropic
-status: drafting
+status: needs_review
 ---
 
 # Z.ai
@@ -31,11 +31,11 @@ status: drafting
 
 ## 何をしてくれるか
 
-GLM（大規模言語モデルの一系列）を開発・提供する中国の AI 企業です。テキスト・コード・画像に対応したモデルをそろえ、API とオープンウェイト（重みを公開した形式）の両形式で利用できます。
+GLM（大規模言語モデルの一系列）を開発・提供する中国の AI 企業です。テキスト・コード・画像に対応したモデルをそろえ、API とオープンウェイト（重みを公開した形式）で利用できます。
 
 ## どこで出会うか
 
-Hugging Face（C-7）で GLM モデルを検索するとヒットします。中国系 LLM 記事では「六小虎」として Moonshot AI（C-10）と並んで登場します。2025 年 1 月に米国制裁リスト（Entity List）へ追加されており、規制報道でも名前が出ます。
+Hugging Face（C-7）で GLM モデルを検索するとヒットします。中国系 LLM 記事では「六小虎」として Moonshot AI（C-10）と並んで登場します。2025 年 1 月に米国制裁リスト（Entity List）へ追加されており、規制報道にも出ます。
 
 ## メイン図
 

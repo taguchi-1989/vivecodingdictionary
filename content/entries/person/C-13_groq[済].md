@@ -18,7 +18,7 @@ related_terms:
   - Llama 系
   - Grok 系
   - GroqCloud
-status: drafting
+status: ready
 ---
 
 # Groq
@@ -114,7 +114,7 @@ NVIDIA, LPU, GroqCloud
 ## 私のコメント
 
 - 🙂 第一印象: 名前が Grok と混同しやすいです。
-- 👍 良い点: OSS 系モデルを高速に回せます。 <!-- 元: oss 系確か割と僕使えないな -->
+- 👍 良い点: OSS 系モデルを高速に回せます。
 - 👎 ダメな点: フロンティアモデル比では性能面で見劣りします。
 - 👥 誰向けか: 速度重視のマニア層向けです。
 

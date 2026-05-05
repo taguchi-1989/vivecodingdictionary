@@ -1,6 +1,6 @@
 ---
 id: J-53
-title: 著作権法 30 条の 4（日本）
+title: 著作権法 30 条の 4
 category: term_general
 subtype: ethics_law
 experience_level: research_only
@@ -18,7 +18,7 @@ related_terms:
   - 情報解析
   - Fair Use
   - TDM 例外
-status: drafting
+status: needs_review
 ---
 
 # 著作権法 30 条の 4（日本）

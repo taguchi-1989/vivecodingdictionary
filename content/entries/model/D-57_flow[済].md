@@ -19,7 +19,7 @@ related_terms:
   - Imagen
   - Gemini
   - Whisk
-status: drafting
+status: ready
 ---
 
 # Flow
@@ -109,13 +109,13 @@ Veo、Imagen、Whisk
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 回数上限があり気軽には使いづらいです <!-- 元: ジミニ -->
+- 回数上限があり気軽には使いづらいです
 - クレジット消費の幅がイメージしづらいです
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象:Google プロプランで Gemini と一緒に使える点 <!-- 元: 地面 -->
+- 🙂 第一印象:Google プロプランで Gemini と一緒に使える点
 - 👍 良い点:Google のエコシステムの 1 つとして組み込まれている点です
 - 👎 ダメな点:本格利用していませんが、クレジット消費は多そうです
 - 👥 誰向けか:動画編集をする人や新しいものを試したい人向けです

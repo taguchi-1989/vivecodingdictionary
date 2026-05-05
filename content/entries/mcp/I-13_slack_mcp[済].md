@@ -18,7 +18,7 @@ related_terms:
   - MCP Server
   - Notion MCP
   - AWS MCP
-status: drafting
+status: ready
 ---
 
 # Slack MCP
