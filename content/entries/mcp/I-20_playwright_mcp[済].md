@@ -19,7 +19,7 @@ related_terms:
   - Claude Code
   - Playwright
   - E2E テスト
-status: drafting
+status: ready
 ---
 
 # Playwright MCP

@@ -30,7 +30,7 @@ related_terms:
   - Python
 
 # ── 制作状態 ──
-status: drafting
+status: needs_review
 ---
 
 # ORM
@@ -44,12 +44,12 @@ Object-Relational Mapping の略。DB のテーブルをクラスとして扱い
 
 ## 何をしてくれるか
 
-`User.findById(1)` のような書き方で DB を操作できます。型補完が効き、スキーマ変更もコードに反映されやすく、SQL 直書きより扱いやすめです。
+`User.findById(1)` のような書き方で DB を操作できます。型補完が効き、スキーマ変更もコードに反映されやすく、SQL 直書きより扱いやすいです。
 
 
 ## どこで出会うか
 
-Prisma や TypeORM（TypeScript）、SQLAlchemy（Python）、Active Record（Rails）などのライブラリ名で登場します。AI がスキーマから API を生成する場面でも ORM 前提が多めです。
+Prisma や TypeORM（TypeScript）、SQLAlchemy（Python）、Active Record（Rails）などのライブラリ名で登場します。AI がスキーマから API を生成する際も ORM 前提が多いです。
 
 
 ## メイン図

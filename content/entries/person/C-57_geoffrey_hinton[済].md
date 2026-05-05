@@ -19,7 +19,7 @@ related_terms:
   - Yann LeCun
   - Deep Learning
   - AI 倫理
-status: drafting
+status: ready
 ---
 
 # Geoffrey Hinton
@@ -107,12 +107,12 @@ Deep Learning、Ilya Sutskever、AI 倫理
 ## 非エンジニアのつまずき
 
 - 一般のニュースでは名前を耳にせず馴染みがありません。
-- Google を退社した背景に思いがありそうですが掴みきれません。<!-- 元: 葬式を退社している -->
+- Google を退社した背景に思いがありそうですが掴みきれません。
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 深層学習を作った人はすごいですね。<!-- 元: 真相学習 -->
+- 🙂 第一印象: 深層学習を作った人はすごいですね。
 - 👍 良い点: よく分かりません。
 - 👎 ダメな点: よく分かりません。
 - 👥 誰向けか: 深層学習の歴史を俯瞰したい人向けです。

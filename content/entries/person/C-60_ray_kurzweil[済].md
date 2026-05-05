@@ -19,7 +19,7 @@ related_terms:
   - Singularity
   - ASI
   - Geoffrey Hinton
-status: drafting
+status: ready
 ---
 
 # Ray Kurzweil
@@ -104,7 +104,7 @@ AGI、Singularity、ASI
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 予測がうまいとされている人です <!-- 元: パスワード作るの？上手となってる人 -->
+- 🙂 第一印象: 予測がうまいとされている人です
 - 👍 良い点: 定量的な目標・指標をセットした人です
 - 👎 ダメな点: その指標自体に根拠はないところです
 - 👥 誰向けか: 一般教養として名前くらい知っておきたい人向けです

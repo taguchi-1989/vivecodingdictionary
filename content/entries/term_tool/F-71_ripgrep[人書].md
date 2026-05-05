@@ -1,6 +1,6 @@
 ---
 id: F-71
-title: ripgrep (rg)
+title: ripgrep
 title_reading: リップグレップ
 category: term_tool
 subtype: search

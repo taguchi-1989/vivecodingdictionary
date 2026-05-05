@@ -19,7 +19,7 @@ related_terms:
   - Slash Command
   - Subagent
   - AGENTS.md
-status: drafting
+status: needs_review
 ---
 
 # SuperClaude Framework
@@ -131,7 +131,7 @@ Claude Code、Slash Command、AGENTS.md
 
 - 描く内容: Claude Code の画面を中心に、左側に「素の Claude Code（チャット欄のみ）」、右側に「SuperClaude 導入後（/architect /security などのコマンド一覧）」を並べた Before/After 構成
 - 登場人物（いれば）: 開発者（1 名）がターミナルを操作している様子
-- 吹き出し・心の声: Before「毎回長いプロンプトを書かないと…」／After「`/architect` で一発だ。」
+- 吹き出し・心の声: Before「毎回長いプロンプトを書かないと…」／After「`/architect` で一発です。」
 - 中央に置くキーワード/ラベル: SuperClaude
 - Before / After の場合の対比ポイント: コマンド入力の手間と Claude の専門性
 

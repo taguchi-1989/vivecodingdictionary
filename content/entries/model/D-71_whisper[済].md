@@ -19,7 +19,7 @@ related_terms:
   - Dictation
   - API
   - whisper.cpp
-status: drafting
+status: ready
 ---
 
 # Whisper

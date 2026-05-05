@@ -20,7 +20,7 @@ related_terms:
   - Node.js
   - HTML
   - CSS
-status: drafting
+status: needs_review
 ---
 
 # JavaScript
@@ -126,7 +126,7 @@ TypeScript（F-2）、React（F-10）、Node.js（F-80）。
 
 - 描く内容: 中央に「JS」ロゴ風の円、上方向に TypeScript・React・Next.js を積み木のように重ねる矢印、下方向にブラウザアイコンと Node.js アイコンへの 2 分岐矢印
 - 登場人物: 非エンジニアの人物 1 人が AI チャット画面を見ながら「JS ってどこで動いてるの？」と思っている
-- 吹き出し・心の声: 「ブラウザでもサーバーでも JS なんだ。TypeScript や React もここから来てるんですね」
+- 吹き出し・心の声: 「ブラウザでもサーバーでも JS なんですね。TypeScript や React もここから来てるんですね」
 - 中央に置くキーワード/ラベル: JavaScript（JS）
 - Before / After の場合の対比ポイント: （概念図のため不要）
 

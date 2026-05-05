@@ -19,7 +19,7 @@ related_terms:
   - Vertex AI
   - DALL-E
   - Stable Diffusion
-status: drafting
+status: ready
 ---
 
 # Imagen

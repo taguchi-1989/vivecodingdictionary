@@ -19,7 +19,7 @@ related_terms:
   - .env
   - GitHub
   - README.md
-status: drafting
+status: needs_review
 ---
 
 ## tagline
@@ -158,5 +158,5 @@ git、.env、GitHub の gitignore テンプレリポジトリ
 
 ## 備考
 
-- コミット済みファイルは `.gitignore` に追記しても追跡が続く。除外するには `git rm --cached <file>` が必要。これは読者のつまずき頻出なので、右ページ「注意点」に盛り込んだ。
+- コミット済みファイルは `.gitignore` に追記しても追跡が続きます。除外するには `git rm --cached <file>` が必要です。これは読者のつまずき頻出のため、右ページ「注意点」に盛り込みました。
 - グローバル gitignore はプロジェクト固有でなく個人 OS の設定（`.DS_Store` 等）に使う。本エントリはプロジェクト固有の `.gitignore` に絞り、グローバル設定の詳細はコミュニティ補完メモに留める。
