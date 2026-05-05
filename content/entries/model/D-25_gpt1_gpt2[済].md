@@ -19,7 +19,7 @@ related_terms:
   - Transformer 論文
   - パラメータ数
   - Scaling Law
-status: drafting
+status: ready
 ---
 
 # GPT-1 / GPT-2 系

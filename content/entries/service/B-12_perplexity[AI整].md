@@ -19,7 +19,7 @@ related_terms:
   - ChatGPT
   - Deep Research
   - Sonar
-status: drafting
+status: needs_review
 ---
 
 # Perplexity
@@ -125,7 +125,7 @@ Deep Research（G-35）、Sonar API、Prompt Engineering。
 
 - 描く内容: 左から「質問入力 → Web検索 → 引用付き回答 → ソース確認」の4コマ横並び
 - 登場人物: ノートPCの前に座るビジネスパーソン（担当者）1名
-- 吹き出し・心の声: Step1「最新情報を調べたい」、Step4「これが元の記事か」
+- 吹き出し・心の声: Step1「新しい情報を調べたい」、Step4「これが元の記事か」
 - 中央に置くキーワード: 引用①②③ のナンバリングが回答文に並ぶ様子
 
 ### 6視点アイコン（右ページ上段）
@@ -143,7 +143,7 @@ Deep Research（G-35）、Sonar API、Prompt Engineering。
 
 ## コミュニティ補完メモ
 
-- ChatGPT（B-3）／Claude（B-2）との住み分け：汎用チャットと違い、Web検索と引用表示が主機能。最新情報の調査用途に特化した位置づけ。
+- ChatGPT（B-3）／Claude（B-2）との住み分け：汎用チャットと違い、Web検索と引用表示が主機能。リアルタイム情報の調査用途に特化した位置づけ。
 - Deep Research（G-35）との住み分け：Deep Researchは長時間かけて複数ソースを深掘りする上位機能。本エントリはPerplexityの基本的な「質問→検索→引用回答」フローに絞る。
 - 内部モデル（GPT-4系／Claude／自社Sonar等）の詳細はSonar APIエントリで扱う想定。
 

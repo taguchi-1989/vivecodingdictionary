@@ -19,7 +19,7 @@ related_terms:
   - Mistral
   - Ollama
   - ファインチューニング
-status: drafting
+status: ready
 ---
 
 # Llama 系

@@ -19,7 +19,7 @@ related_terms:
   - DALL-E
   - Gemini
   - Whisk Animate
-status: drafting
+status: ready
 ---
 
 # Whisk

@@ -19,7 +19,7 @@ related_terms:
   - MCP Server
   - MCP Client
   - MCP SDK
-status: drafting
+status: ready
 ---
 
 # MCP Transport
@@ -111,7 +111,7 @@ MCP Server、JSON-RPC、SSE（Server-Sent Events）
 ## 私のコメント
 
 - 🙂 第一印象: 今回初めてです
-- 👍 良い点: MCP の解像度が上がります <!-- 元: mcpのへ解像度が上がる -->
+- 👍 良い点: MCP の解像度が上がります
 - 👎 ダメな点: 二系統の理解が難しいです
 - 👥 誰向けか: 開発者向けです
 

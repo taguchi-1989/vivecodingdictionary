@@ -19,7 +19,7 @@ related_terms:
   - GPU
   - CPU
   - ROCm
-status: drafting
+status: ready
 ---
 
 # AMD
@@ -107,7 +107,7 @@ NVIDIA、ROCm、GPU
 
 - 読み方がわかりません
 - CPU と GPU とマザーボードの相性が不安です
-- Radeon など製品名も読みにくいです <!-- 元: れいでおんなどのなさ名前も読みにくい -->
+- Radeon など製品名も読みにくいです
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント

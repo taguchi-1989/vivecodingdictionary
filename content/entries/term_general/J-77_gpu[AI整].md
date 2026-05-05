@@ -1,6 +1,6 @@
 ---
 id: J-77
-title: GPU (概念)
+title: GPU
 title_reading: ジーピーユー
 category: term_general
 subtype: hardware
@@ -20,7 +20,7 @@ related_terms:
   - CUDA
   - Neural Network
   - Tensor コア
-status: drafting
+status: needs_review
 ---
 
 # GPU (概念)

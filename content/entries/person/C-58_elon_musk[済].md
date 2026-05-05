@@ -18,7 +18,7 @@ related_terms:
   - Grok
   - OpenAI
   - AI 安全性
-status: drafting
+status: ready
 ---
 
 # Elon Musk

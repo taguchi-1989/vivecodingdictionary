@@ -19,7 +19,7 @@ related_terms:
   - Chrome DevTools MCP
   - MCP Server
   - JavaScript
-status: drafting
+status: ready
 ---
 
 # Puppeteer MCP
@@ -116,7 +116,7 @@ Playwright MCP、Chrome DevTools MCP、MCP Server
 
 - 🙂 第一印象:何でもできすぎて、PDF 周りでもよく分かりません
 - 👍 良い点:PDF 生成もできるので、出版関係では使わない手はないです
-- 👎 ダメな点:機能が多く初見は難しい。文字化けや LaTeX に注意<!-- 元: ラテフの文章 -->
+- 👎 ダメな点:機能が多く初見は難しい。文字化けや LaTeX に注意
 - 👥 誰向けか:PDF で受け渡しをする人すべてに向きます
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

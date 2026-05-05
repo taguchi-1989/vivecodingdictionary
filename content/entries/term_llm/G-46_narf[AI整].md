@@ -1,6 +1,6 @@
 ---
 id: G-46
-title: ナーフ（モデルの劣化体感）
+title: ナーフ
 category: term_llm
 subtype: ops
 experience_level: partial
@@ -19,7 +19,7 @@ related_terms:
   - SWE-Bench
   - Thinking モデル
   - ベンチマーク
-status: drafting
+status: needs_review
 ---
 
 # ナーフ（モデルの劣化体感）
