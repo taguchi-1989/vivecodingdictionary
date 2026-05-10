@@ -20,7 +20,7 @@ related_terms:
   - IFEval
   - Tool Use
   - HumanEval
-status: needs_review
+status: ready
 ---
 
 # 指示追従性
@@ -107,17 +107,17 @@ IFEval、MT-Bench、System Prompt
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 
-- 
-- 
+- Instruction-following がサンプリングの調整（Temperature あたり）で決まるのか、モデル自体の能力なのか、区別がよく分からない。
+- そもそも何が嬉しいのか、コーディングをやっていないと分かりづらい指標。
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象: コーディング能力の文脈で見た。
+- 👍 良い点: ここが高いとエージェントとして能力を発揮できる。
+- 👎 ダメな点: 低いとチャットはできても仕事はできない、という感じになっちゃう。
+- 👥 誰向けか: Claude Code などエージェントタスクに向いたモデルを説明・選定して使っていく人向け。
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

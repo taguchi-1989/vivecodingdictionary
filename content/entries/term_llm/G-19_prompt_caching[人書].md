@@ -20,7 +20,7 @@ related_terms:
   - CLAUDE.md
   - Claude Code
   - Token
-status: needs_review
+status: ready
 ---
 
 # Prompt Caching
@@ -108,17 +108,17 @@ Context Engineering、System Prompt、Token
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
--
--
--
+- この言葉も最近聞いたばかりでよく分かっていないが、Serena MCP あたりがこれに当たるかもしれない（要確認）。
+- Claude Code の初期に「トークン効率を上げる」と話題になっていたのは、おそらくこのキャッシュの話。
+- 業務で使うときは情報のキャッシュをあまり意識していなかったが、個人で遊んでいると気になり始める部分。
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象:
-- 👍 良い点:
-- 👎 ダメな点:
-- 👥 誰向けか:
+- 🙂 第一印象: 「Serena MCP を使えばキャッシングされてコストが下がる」みたいな話が流行っていた。
+- 👍 良い点: トークン効率が上がる。
+- 👎 ダメな点: 今は Claude Code のハーネスに組み込まれているので、わざわざ MCP で使う必要はないと思う。
+- 👥 誰向けか: 歴史的な文脈で見るくらいの位置づけ。
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

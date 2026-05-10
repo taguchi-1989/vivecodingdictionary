@@ -20,7 +20,7 @@ related_terms:
   - Context Engineering
   - LLM
   - RAG
-status: needs_review
+status: ready
 ---
 
 # Context Window
@@ -106,17 +106,17 @@ Context Engineering、RAG、Prompt Caching。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
--
--
+- 昔のモデルは Context Window がちっちゃくて、入れるときに分割するなど色々工夫していた。
+- Claude Code を使い始めてからも、コンテキストを圧縮すると文脈がおかしくなることがよくあった。
 -
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象:
-- 👍 良い点:
-- 👎 ダメな点:
-- 👥 誰向けか:
+- 🙂 第一印象: 覚えられる範囲がちっちゃいのが課題なんだな。
+- 👍 良い点: 最近のモデルはだいぶ改善してきていて、枠を大きくする方向とハーネスの工夫でボトルネックは解消しつつある。
+- 👎 ダメな点: 全部入れようとするプロセス自体が間違い。だいぶ良くなったとはいえ、依然として課題ゼロにはなっていない。
+- 👥 誰向けか: LLM を使って何かをやる人には知識として必要。
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
