@@ -18,7 +18,7 @@ related_terms:
   - WSL
   - bash
   - GPL
-status: needs_review
+status: ready
 ---
 
 <!-- バイブコーディング図鑑 エントリー v2（spread_v1） -->
