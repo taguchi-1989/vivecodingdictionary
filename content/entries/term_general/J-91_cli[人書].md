@@ -19,7 +19,7 @@ related_terms:
   - bash
   - Claude Code
   - PowerShell
-status: needs_review
+status: ready
 ---
 
 ## tagline

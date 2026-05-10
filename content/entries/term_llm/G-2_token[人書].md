@@ -15,7 +15,7 @@ related_terms:
   - Context Window
   - Prompt Engineering
   - LLM
-status: needs_review
+status: ready
 ---
 
 # Token
