@@ -19,7 +19,7 @@ related_terms:
   - ChatGPT
   - Deep Research
   - Sonar
-status: needs_review
+status: ready
 ---
 
 # Perplexity

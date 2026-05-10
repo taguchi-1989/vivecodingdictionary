@@ -19,7 +19,7 @@ related_terms:
   - CLAUDE.md
   - MCP
   - エージェント
-status: needs_review
+status: ready
 ---
 
 # Claude Code

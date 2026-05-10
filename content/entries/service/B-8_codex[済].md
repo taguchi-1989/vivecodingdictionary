@@ -18,7 +18,7 @@ related_terms:
   - ChatGPT
   - GitHub Copilot
   - Claude Code
-status: needs_review
+status: ready
 ---
 
 # Codex

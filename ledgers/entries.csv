@@ -15,13 +15,13 @@ B-2,,Claude,service,ai_assistant,ready,,content/entries/service/B-2_claude[済].
 B-3,,ChatGPT,service,ai_assistant,ready,,content/entries/service/B-3_chatgpt[済].md
 B-4,,Cursor,service,ai_assistant,ready,,content/entries/service/B-4_cursor[済].md
 B-5,,GitHub Copilot,service,ai_assistant,ready,,content/entries/service/B-5_github_copilot[済].md
-B-6,,Windsurf,service,ai_assistant,needs_review,,content/entries/service/B-6_windsurf[人書].md
-B-7,,Claude Code,service,ai_assistant,needs_review,略称CC,content/entries/service/B-7_claude_code[人書].md
-B-8,,Codex,service,ai_assistant,needs_review,旧 title Codex (OpenAI) を Codex に変更（2026-04-30）,content/entries/service/B-8_codex[人書].md
-B-9,,v0,service,ai_assistant,needs_review,,content/entries/service/B-9_v0[人書].md
-B-10,,Devin,service,ai_assistant,needs_review,,content/entries/service/B-10_devin[人書].md
-B-11,,Bolt.new,service,ai_assistant,needs_review,,content/entries/service/B-11_bolt_new[人書].md
-B-12,,Perplexity,service,ai_assistant,needs_review,,content/entries/service/B-12_perplexity[人書].md
+B-6,,Windsurf,service,ai_assistant,needs_review,,content/entries/service/B-6_windsurf[済].md
+B-7,,Claude Code,service,ai_assistant,needs_review,略称CC,content/entries/service/B-7_claude_code[済].md
+B-8,,Codex,service,ai_assistant,needs_review,旧 title Codex (OpenAI) を Codex に変更（2026-04-30）,content/entries/service/B-8_codex[済].md
+B-9,,v0,service,ai_assistant,needs_review,,content/entries/service/B-9_v0[済].md
+B-10,,Devin,service,ai_assistant,needs_review,,content/entries/service/B-10_devin[済].md
+B-11,,Bolt.new,service,ai_assistant,needs_review,,content/entries/service/B-11_bolt_new[済].md
+B-12,,Perplexity,service,ai_assistant,needs_review,,content/entries/service/B-12_perplexity[済].md
 B-13,,ElevenLabs,service,tts_service,ready,音声系 TTS・Voice Cloning,content/entries/service/B-13_elevenlabs[済].md
 B-14,,Genspark,service,ai_assistant,ready,,content/entries/service/B-14_genspark[済].md
 B-15,,Microsoft Copilot,service,ai_assistant,ready,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-15_microsoft_copilot[済].md
@@ -136,7 +136,7 @@ E-33,,AgentBench,benchmark,agent_benchmark,needs_review,v2テンプレ書き起�
 E-34,,OSWorld,benchmark,agent,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-34_osworld[人書].md
 E-50,,Chatbot Arena,benchmark,general,ready,,content/entries/benchmark/E-50_chatbot_arena[済].md
 E-51,,LMSYS Arena,benchmark,general,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-51_lmsys_arena[人書].md
-F-1,301,JavaScript,term_tool,language,ready,旧3桁ID連携→F-1に取り込み済み,content/entries/term_tool/F-1_javascript[人書].md
+F-1,301,JavaScript,term_tool,language,ready,旧3桁ID連携→F-1に取り込み済み,content/entries/term_tool/F-1_javascript[済].md
 F-2,302,TypeScript,term_tool,language,needs_review,旧3桁ID連携 / v2テンプレ書き起こし済（2026-04-29）,content/entries/term_tool/F-2_typescript[人書].md
 F-3,,Python,term_tool,language,needs_review,,content/entries/term_tool/F-3_python[人書].md
 F-4,,HTML,term_tool,language,needs_review,,content/entries/term_tool/F-4_html[人書].md
@@ -220,45 +220,45 @@ F-181,,WebGL,term_tool,graphics_api,needs_review,v2テンプレ書き起こし�
 F-190,,サブルーチン,term_tool,programming_basic,needs_review,古典的概念 / v2本書き済み 2026-04-30,content/entries/term_tool/F-190_subroutine[人書].md
 F-200,,Rust,term_tool,language,needs_review,F-1〜9 言語サブが満杯のため新サブ「追加言語」F-200〜209 を新設（2026-04-29）。v2 テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-200_rust[人書].md
 G-1,,Context (コンテキスト),term_llm,basic,ready,,content/entries/term/G-1_context[済].md
-G-2,,Token,term_llm,basic,ready,,content/entries/term_llm/G-2_token[人書].md
-G-3,,Dictation,term_llm,basic,ready,,content/entries/term_llm/G-3_dictation[人書].md
+G-2,,Token,term_llm,basic,ready,,content/entries/term_llm/G-2_token[済].md
+G-3,,Dictation,term_llm,basic,ready,,content/entries/term_llm/G-3_dictation[済].md
 G-4,,System Prompt,term_llm,basic,needs_review,,content/entries/term_llm/G-4_system_prompt[人書].md
-G-5,,Context Window,term_llm,basic,ready,,content/entries/term_llm/G-5_context_window[人書].md
-G-6,,One-shot,term_llm,basic,ready,,content/entries/term_llm/G-6_one_shot[人書].md
-G-7,,指示追従性,term_llm,basic,ready,,content/entries/term_llm/G-7_instruction-following[人書].md
+G-5,,Context Window,term_llm,basic,ready,,content/entries/term_llm/G-5_context_window[済].md
+G-6,,One-shot,term_llm,basic,ready,,content/entries/term_llm/G-6_one_shot[済].md
+G-7,,指示追従性,term_llm,basic,ready,,content/entries/term_llm/G-7_instruction-following[済].md
 G-8,,決定論的／非決定論的,term_llm,basic,needs_review,v2テンプレ書き起こし済（2026-04-30）,
 G-9,,effort レベル,term_llm,basic,drafting,low/medium/high/xhigh,
-G-10,,Prompt Engineering,term_llm,technique,ready,,content/entries/term_llm/G-10_prompt_engineering[人書].md
-G-11,,Context Engineering,term_llm,technique,ready,,content/entries/term_llm/G-11_context_engineering[人書].md
+G-10,,Prompt Engineering,term_llm,technique,ready,,content/entries/term_llm/G-10_prompt_engineering[済].md
+G-11,,Context Engineering,term_llm,technique,ready,,content/entries/term_llm/G-11_context_engineering[済].md
 G-12,,Agent Design,term_llm,technique,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-12_agent_design[人書].md
-G-13,,Few-shot Learning,term_llm,technique,ready,,content/entries/term_llm/G-13_few_shot_learning[人書].md
-G-14,,Thinking モデル,term_llm,technique,ready,新テンプレ書き起こし済（2026-04-29）。旧G-14.mdはarchived,content/entries/term_llm/G-14_thinking_model[人書].md
-G-15,,RAG,term_llm,technique,ready,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-15_rag[人書].md
-G-16,,Embedding,term_llm,technique,ready,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-16_embedding[人書].md
+G-13,,Few-shot Learning,term_llm,technique,ready,,content/entries/term_llm/G-13_few_shot_learning[済].md
+G-14,,Thinking モデル,term_llm,technique,ready,新テンプレ書き起こし済（2026-04-29）。旧G-14.mdはarchived,content/entries/term_llm/G-14_thinking_model[済].md
+G-15,,RAG,term_llm,technique,ready,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-15_rag[済].md
+G-16,,Embedding,term_llm,technique,ready,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-16_embedding[済].md
 G-17,,ベクトル DB,term_llm,technique,drafting,v2テンプレ書き起こし済（2026-04-30）,
-G-18,,Chain of Thought,term_llm,technique,ready,CoT。v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-18_chain_of_thought[人書].md
-G-19,,Prompt Caching,term_llm,technique,ready,プロンプト断片を再利用してコスト・レイテンシを下げる仕組み,content/entries/term_llm/G-19_prompt_caching[人書].md
+G-18,,Chain of Thought,term_llm,technique,ready,CoT。v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-18_chain_of_thought[済].md
+G-19,,Prompt Caching,term_llm,technique,ready,プロンプト断片を再利用してコスト・レイテンシを下げる仕組み,content/entries/term_llm/G-19_prompt_caching[済].md
 G-20,,CLAUDE.md,tool_agent,config_file,ready,,content/entries/tool_agent/G-20_claude_md[済].md
 G-21,,AGENTS.md,tool_agent,config_file,ready,,content/entries/tool_agent/G-21_agents_md[済].md
 G-22,,SKILL.md,tool_agent,config_file,ready,,content/entries/tool_agent/G-22_skill_md[済].md
 G-23,,.claude/settings.json,tool_agent,config_file,ready,v2テンプレ書き起こし済（2026-04-30）,content/entries/tool_agent/G-23_claude_settings_json[済].md
-G-30,,Tool Use,term_llm,control,ready,,content/entries/term_llm/G-30_tool_use[人書].md
-G-31,,Hook,term_llm,control,ready,,content/entries/term_llm/G-31_hook[人書].md
-G-32,,Slash Command,term_llm,control,ready,,content/entries/term_llm/G-32_slash_command[人書].md
-G-33,,Function Calling,term_llm,control,ready,,content/entries/term_llm/G-33_function_calling[人書].md
-G-34,,Code Interpreter,term_llm,code_execution,ready,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-34_code_interpreter[人書].md
-G-35,,Deep Research,term_llm,control,ready,,content/entries/term_llm/G-35_deep_research[人書].md
-G-36,,Artifact,term_llm,control,ready,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-36_artifact[人書].md
-G-38,,Plan Mode,term_llm,control,ready,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-38_plan_mode[人書].md
-G-39,,Permission,term_llm,control,ready,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-39_permission[人書].md
-G-40,,バイブコーディング,term_llm,ops,ready,,content/entries/term_llm/G-40_vibe_coding[人書].md
-G-41,,Subagent,term_llm,ops,ready,,content/entries/term_llm/G-41_subagent[人書].md
-G-42,,Worktree,term_llm,ops,ready,,content/entries/term_llm/G-42_worktree[人書].md
-G-43,,オーケストレーション,term_llm,ops,ready,旧スケルトン G-43.md は archived,content/entries/term_llm/G-43_orchestration[人書].md
-G-44,,マルチエージェント協調,term_llm,ops,ready,,content/entries/term_llm/G-44_multi_agent_coordination[人書].md
+G-30,,Tool Use,term_llm,control,ready,,content/entries/term_llm/G-30_tool_use[済].md
+G-31,,Hook,term_llm,control,ready,,content/entries/term_llm/G-31_hook[済].md
+G-32,,Slash Command,term_llm,control,ready,,content/entries/term_llm/G-32_slash_command[済].md
+G-33,,Function Calling,term_llm,control,ready,,content/entries/term_llm/G-33_function_calling[済].md
+G-34,,Code Interpreter,term_llm,code_execution,ready,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-34_code_interpreter[済].md
+G-35,,Deep Research,term_llm,control,ready,,content/entries/term_llm/G-35_deep_research[済].md
+G-36,,Artifact,term_llm,control,ready,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-36_artifact[済].md
+G-38,,Plan Mode,term_llm,control,ready,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-38_plan_mode[済].md
+G-39,,Permission,term_llm,control,ready,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-39_permission[済].md
+G-40,,バイブコーディング,term_llm,ops,ready,,content/entries/term_llm/G-40_vibe_coding[済].md
+G-41,,Subagent,term_llm,ops,ready,,content/entries/term_llm/G-41_subagent[済].md
+G-42,,Worktree,term_llm,ops,ready,,content/entries/term_llm/G-42_worktree[済].md
+G-43,,オーケストレーション,term_llm,ops,ready,旧スケルトン G-43.md は archived,content/entries/term_llm/G-43_orchestration[済].md
+G-44,,マルチエージェント協調,term_llm,ops,ready,,content/entries/term_llm/G-44_multi_agent_coordination[済].md
 G-45,,段階的開示,term_llm,ops,needs_review,,
-G-46,,ナーフ（モデルの劣化体感）,term_llm,ops,ready,,content/entries/term_llm/G-46_narf[人書].md
-G-47,,Auto-compact,term_llm,ops,ready,Claude Code の自動圧縮（文脈管理）,content/entries/term_llm/G-47_auto_compact[人書].md
+G-46,,ナーフ（モデルの劣化体感）,term_llm,ops,ready,,content/entries/term_llm/G-46_narf[済].md
+G-47,,Auto-compact,term_llm,ops,ready,Claude Code の自動圧縮（文脈管理）,content/entries/term_llm/G-47_auto_compact[済].md
 H-1,,TDD,workflow,methodology,ready,,content/entries/workflow/H-1_tdd[済].md
 H-2,,ペアプログラミング,workflow,methodology,drafting,v2テンプレ書き起こし済（2026-04-30）,
 H-3,,バイブコーディングの流儀,workflow,methodology,drafting,,
@@ -344,9 +344,9 @@ J-77,,GPU (概念),term_general,hardware,ready,,content/entries/term_general/J-7
 J-78,,HDD,term_general,hardware,ready,2026-04-30 entry-writer 執筆,content/entries/term_general/J-78_hdd[済].md
 J-79,,SSD,term_general,hardware,ready,2026-04-30 entry-writer 執筆,content/entries/term_general/J-79_ssd[済].md
 J-80,,SATA,term_general,hardware,ready,,content/entries/term_general/J-80_sata[済].md
-J-81,,M.2,term_general,hardware,ready,2026-04-29 entry-writer 執筆,content/entries/term_general/J-81_m_2[人書].md
-J-90,,GUI,term_general,ui_os,ready,,content/entries/term_general/J-90_gui[人書].md
-J-91,,CLI,term_general,ui_os,ready,,content/entries/term_general/J-91_cli[人書].md
-J-92,,Linux,term_general,ui_os,ready,,content/entries/term_general/J-92_linux[人書].md
-J-93,,Ubuntu,term_general,ui_os,ready,,content/entries/term_general/J-93_ubuntu[人書].md
-J-100,,識字（リテラシー）,term_general,concept,ready,タイトルを驚き屋から識字（リテラシー）に変更（2026-04-30）,content/entries/term_general/J-100_literacy[人書].md
+J-81,,M.2,term_general,hardware,ready,2026-04-29 entry-writer 執筆,content/entries/term_general/J-81_m_2[済].md
+J-90,,GUI,term_general,ui_os,ready,,content/entries/term_general/J-90_gui[済].md
+J-91,,CLI,term_general,ui_os,ready,,content/entries/term_general/J-91_cli[済].md
+J-92,,Linux,term_general,ui_os,ready,,content/entries/term_general/J-92_linux[済].md
+J-93,,Ubuntu,term_general,ui_os,ready,,content/entries/term_general/J-93_ubuntu[済].md
+J-100,,識字（リテラシー）,term_general,concept,ready,タイトルを驚き屋から識字（リテラシー）に変更（2026-04-30）,content/entries/term_general/J-100_literacy[済].md
