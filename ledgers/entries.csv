@@ -15,13 +15,13 @@ B-2,,Claude,service,ai_assistant,ready,,content/entries/service/B-2_claude[済].
 B-3,,ChatGPT,service,ai_assistant,ready,,content/entries/service/B-3_chatgpt[済].md
 B-4,,Cursor,service,ai_assistant,ready,,content/entries/service/B-4_cursor[済].md
 B-5,,GitHub Copilot,service,ai_assistant,ready,,content/entries/service/B-5_github_copilot[済].md
-B-6,,Windsurf,service,ai_assistant,needs_review,,content/entries/service/B-6_windsurf[人書].md
-B-7,,Claude Code,service,ai_assistant,needs_review,略称CC,content/entries/service/B-7_claude_code[人書].md
-B-8,,Codex,service,ai_assistant,needs_review,旧 title Codex (OpenAI) を Codex に変更（2026-04-30）,content/entries/service/B-8_codex[人書].md
-B-9,,v0,service,ai_assistant,needs_review,,content/entries/service/B-9_v0[人書].md
-B-10,,Devin,service,ai_assistant,needs_review,,content/entries/service/B-10_devin[人書].md
-B-11,,Bolt.new,service,ai_assistant,needs_review,,content/entries/service/B-11_bolt_new[人書].md
-B-12,,Perplexity,service,ai_assistant,needs_review,,content/entries/service/B-12_perplexity[人書].md
+B-6,,Windsurf,service,ai_assistant,needs_review,,content/entries/service/B-6_windsurf[済].md
+B-7,,Claude Code,service,ai_assistant,needs_review,略称CC,content/entries/service/B-7_claude_code[済].md
+B-8,,Codex,service,ai_assistant,needs_review,旧 title Codex (OpenAI) を Codex に変更（2026-04-30）,content/entries/service/B-8_codex[済].md
+B-9,,v0,service,ai_assistant,needs_review,,content/entries/service/B-9_v0[済].md
+B-10,,Devin,service,ai_assistant,needs_review,,content/entries/service/B-10_devin[済].md
+B-11,,Bolt.new,service,ai_assistant,needs_review,,content/entries/service/B-11_bolt_new[済].md
+B-12,,Perplexity,service,ai_assistant,needs_review,,content/entries/service/B-12_perplexity[済].md
 B-13,,ElevenLabs,service,tts_service,ready,音声系 TTS・Voice Cloning,content/entries/service/B-13_elevenlabs[済].md
 B-14,,Genspark,service,ai_assistant,ready,,content/entries/service/B-14_genspark[済].md
 B-15,,Microsoft Copilot,service,ai_assistant,ready,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-15_microsoft_copilot[済].md
