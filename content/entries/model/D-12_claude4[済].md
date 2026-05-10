@@ -18,7 +18,7 @@ related_terms:
   - Claude Code
   - Claude 3.5 系
   - Claude 4.5 系
-status: needs_review
+status: ready
 ---
 
 # Claude 4 系

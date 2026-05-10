@@ -17,7 +17,7 @@ related_terms:
   - commit
   - merge
   - リポジトリ
-status: needs_review
+status: ready
 ---
 
 # git

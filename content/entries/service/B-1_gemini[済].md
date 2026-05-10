@@ -19,7 +19,7 @@ related_terms:
   - Bard → Gemini
   - Vertex AI
   - Google Workspace
-status: needs_review
+status: ready
 ---
 
 # Gemini
