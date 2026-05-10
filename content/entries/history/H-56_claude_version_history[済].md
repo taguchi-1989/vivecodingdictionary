@@ -18,7 +18,7 @@ related_terms:
   - Claude 3 系
   - Claude 4 系
   - Extended Thinking
-status: needs_review
+status: ready
 ---
 
 # Claude のバージョン史

@@ -18,7 +18,7 @@ related_terms:
   - SWE-Bench Verified
   - AGI
   - Thinking モデル
-status: needs_review
+status: ready
 ---
 
 # Humanity's Last Exam

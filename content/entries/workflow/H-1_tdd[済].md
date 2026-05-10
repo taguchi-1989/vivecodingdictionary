@@ -20,7 +20,7 @@ related_terms:
   - ペアプログラミング
   - CI/CD
   - コードレビュー
-status: needs_review
+status: ready
 ---
 
 # TDD

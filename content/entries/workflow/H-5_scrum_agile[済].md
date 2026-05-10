@@ -19,7 +19,7 @@ related_terms:
   - コードレビュー
   - Git Flow
   - DevOps
-status: needs_review
+status: ready
 ---
 
 # Scrum / Agile

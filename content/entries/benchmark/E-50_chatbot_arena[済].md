@@ -18,7 +18,7 @@ related_terms:
   - LMSYS Arena
   - MMLU
   - SWE-Bench
-status: needs_review
+status: ready
 ---
 
 # Chatbot Arena

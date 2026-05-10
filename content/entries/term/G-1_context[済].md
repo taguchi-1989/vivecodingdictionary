@@ -17,7 +17,7 @@ related_terms:
   - System Prompt
   - Token
   - Prompt Engineering
-status: needs_review
+status: ready
 ---
 
 # Context

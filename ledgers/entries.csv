@@ -10,7 +10,7 @@ A-8,,色・記号の凡例,common,meta,needs_review,,content/entries/common/A-8_
 A-9,,索引,common,meta,drafting,,content/entries/common/A-9_index[AI整].md
 A-10,,更新履歴と更新方針,common,meta,drafting,,content/entries/common/A-10_changelog[AI整].md
 A-11,,略称表記,common,meta,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/common/A-11_abbreviations[AI整].md
-B-1,101,Gemini,service,ai_assistant,needs_review,新テンプレ書き起こし済（2026-04-24）。legacy 101 は archived,content/entries/service/B-1_gemini[人書].md
+B-1,101,Gemini,service,ai_assistant,ready,新テンプレ書き起こし済（2026-04-24）。legacy 101 は archived,content/entries/service/B-1_gemini[済].md
 B-2,,Claude,service,ai_assistant,needs_review,,content/entries/service/B-2_claude[済].md
 B-3,,ChatGPT,service,ai_assistant,drafting,,content/entries/service/B-3_chatgpt[済].md
 B-4,,Cursor,service,ai_assistant,needs_review,,content/entries/service/B-4_cursor[済].md
@@ -84,8 +84,8 @@ D-2,201,Gemini 2.5 系,model,google,drafting,v2テンプレ書き起こし済（
 D-3,,Gemini 3 系,model,google,drafting,v2テンプレ本書き済（2026-04-30）,content/entries/model/D-3[人書].md
 D-4,,Gemini 3.1 系,model,google,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/model/D-4[凍].md
 D-10,,Claude 3 系,model,anthropic,skeleton,,content/entries/model/D-10[人書].md
-D-11,,Claude 3.5 系,model,anthropic,candidate,,content/entries/model/D-11_claude35[人書].md
-D-12,,Claude 4 系,model,anthropic,needs_review,,content/entries/model/D-12_claude4[人書].md
+D-11,,Claude 3.5 系,model,anthropic,ready,,content/entries/model/D-11_claude35[済].md
+D-12,,Claude 4 系,model,anthropic,ready,,content/entries/model/D-12_claude4[済].md
 D-13,,Claude 4.5 系,model,anthropic,skeleton,,content/entries/model/D-13[人書].md
 D-14,,Claude Mythos Preview,model,frontier_model,drafting,v2テンプレ書き起こし済（2026-04-30）。旧スケルトン D-14.md は archived,content/entries/model/D-14[凍].md
 D-20,,GPT-5 系,model,openai,needs_review,本書き済み（2026-04-29）。旧スケルトン D-20.md は archived,content/entries/model/D-20[凍].md
@@ -117,7 +117,7 @@ D-58,,Whisk,model,image_video,needs_review,,content/entries/model/D-58_whisk[済
 D-60,,AlphaGo,model,historical,skeleton,,content/entries/model/D-60_alphago[済].md
 D-70,,Amical,model,ai_solution,drafting,情報限定的。公式確認が必要（2026-04-30）,content/entries/model/D-70_amical[AI整].md
 D-71,,Whisper,model,voice_audio,skeleton,OpenAI のオープン音声認識モデル,content/entries/model/D-71_whisper[済].md
-E-1,,SWE-Bench,benchmark,coding,needs_review,,content/entries/benchmark/E-1_swe_bench[人書].md
+E-1,,SWE-Bench,benchmark,coding,ready,,content/entries/benchmark/E-1_swe_bench[済].md
 E-2,,SWE-Bench Verified,benchmark,coding,drafting,,content/entries/benchmark/E-2_swe_bench_verified[済].md
 E-3,,Terminal-Bench,benchmark,coding,skeleton,,content/entries/benchmark/E-3_terminal_bench[済].md
 E-4,,HumanEval,benchmark,coding,skeleton,,content/entries/benchmark/E-4_humaneval[済].md
@@ -126,15 +126,15 @@ E-21,,MMLU-Pro,benchmark,reasoning,skeleton,,content/entries/benchmark/E-21_mmlu
 E-22,,GPQA,benchmark,reasoning,skeleton,,content/entries/benchmark/E-22_gpqa[人書].md
 E-23,,GSM8K,benchmark,reasoning,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-23_gsm8k[済].md
 E-24,,MATH,benchmark,reasoning,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-24_math[済].md
-E-25,,AIME,benchmark,reasoning,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-25_aime[人書].md
-E-26,,Humanity's Last Exam,benchmark,reasoning,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-26_humanity_s_last_exam[人書].md
-E-27,,IQ Bench,benchmark,reasoning,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-27_iq_bench[人書].md
-E-30,,TAU-Bench,benchmark,agent,skeleton,,content/entries/benchmark/E-30_tau_bench[人書].md
+E-25,,AIME,benchmark,reasoning,ready,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-25_aime[済].md
+E-26,,Humanity's Last Exam,benchmark,reasoning,ready,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-26_humanity_s_last_exam[済].md
+E-27,,IQ Bench,benchmark,reasoning,ready,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-27_iq_bench[済].md
+E-30,,TAU-Bench,benchmark,agent,ready,,content/entries/benchmark/E-30_tau_bench[済].md
 E-31,,WebArena,benchmark,agent,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-31_webarena[人書].md
 E-32,,GAIA,benchmark,agent,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-32_gaia[人書].md
 E-33,,AgentBench,benchmark,agent_benchmark,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-33_agentbench[人書].md
 E-34,,OSWorld,benchmark,agent,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-34_osworld[人書].md
-E-50,,Chatbot Arena,benchmark,general,needs_review,,content/entries/benchmark/E-50_chatbot_arena[人書].md
+E-50,,Chatbot Arena,benchmark,general,ready,,content/entries/benchmark/E-50_chatbot_arena[済].md
 E-51,,LMSYS Arena,benchmark,general,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-51_lmsys_arena[人書].md
 F-1,301,JavaScript,term_tool,language,needs_review,旧3桁ID連携→F-1に取り込み済み,content/entries/term_tool/F-1_javascript[AI整].md
 F-2,302,TypeScript,term_tool,language,drafting,旧3桁ID連携 / v2テンプレ書き起こし済（2026-04-29）,content/entries/term_tool/F-2_typescript[人書].md
@@ -166,7 +166,7 @@ F-41,,Vite,term_tool,cli_build,drafting,,content/entries/term_tool/F-41_vite[人
 F-42,,ビルド,term_tool,cli_build,drafting,v2テンプレ本書き済（2026-04-30）,content/entries/term_tool/F-42[凍].md
 F-43,,テスト,term_tool,cli_build,drafting,v2テンプレ本書き済（2026-04-30）,content/entries/term_tool/F-43[人書].md
 F-44,,pnpm,term_tool,cli_build,drafting,,content/entries/term_tool/F-44_pnpm[人書].md
-F-50,,git,term_tool,git,needs_review,,content/entries/term/F-50_git[人書].md
+F-50,,git,term_tool,git,ready,,content/entries/term/F-50_git[済].md
 F-51,,git push,term_tool,git,skeleton,,content/entries/term_tool/F-51_git_push[人書].md
 F-52,,git pull,term_tool,git,needs_review,,content/entries/term_tool/F-52_git_pull[人書].md
 F-53,,branch,term_tool,git,skeleton,,content/entries/term_tool/F-53_branch[人書].md
@@ -219,7 +219,7 @@ F-180,,OpenGL,term_tool,graphics,needs_review,,content/entries/term_tool/F-180_o
 F-181,,WebGL,term_tool,graphics_api,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-181_webgl[人書].md
 F-190,,サブルーチン,term_tool,programming_basic,drafting,古典的概念 / v2本書き済み 2026-04-30,content/entries/term_tool/F-190[凍].md
 F-200,,Rust,term_tool,language,needs_review,F-1〜9 言語サブが満杯のため新サブ「追加言語」F-200〜209 を新設（2026-04-29）。v2 テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-200_rust[人書].md
-G-1,,Context (コンテキスト),term_llm,basic,needs_review,,content/entries/term/G-1_context[人書].md
+G-1,,Context (コンテキスト),term_llm,basic,ready,,content/entries/term/G-1_context[済].md
 G-2,,Token,term_llm,basic,needs_review,,content/entries/term_llm/G-2_token[人書].md
 G-3,,Dictation,term_llm,basic,needs_review,,content/entries/term_llm/G-3_dictation[人書].md
 G-4,,System Prompt,term_llm,basic,drafting,,content/entries/term_llm/G-4_system_prompt[人書].md
@@ -238,10 +238,10 @@ G-16,,Embedding,term_llm,technique,drafting,v2テンプレ書き起こし済（2
 G-17,,ベクトル DB,term_llm,technique,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-17[人書].md
 G-18,,Chain of Thought,term_llm,technique,drafting,CoT。v2テンプレ書き起こし済（2026-04-30）,content/entries/term_llm/G-18_chain_of_thought[人書].md
 G-19,,Prompt Caching,term_llm,technique,skeleton,プロンプト断片を再利用してコスト・レイテンシを下げる仕組み,content/entries/term_llm/G-19_prompt_caching[人書].md
-G-20,,CLAUDE.md,tool_agent,config_file,skeleton,,content/entries/tool_agent/G-20_claude_md[人書].md
-G-21,,AGENTS.md,tool_agent,config_file,drafting,,content/entries/tool_agent/G-21_agents_md[人書].md
-G-22,,SKILL.md,tool_agent,config_file,drafting,,content/entries/tool_agent/G-22_skill_md[人書].md
-G-23,,.claude/settings.json,tool_agent,config_file,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/tool_agent/G-23_claude_settings_json[AI整].md
+G-20,,CLAUDE.md,tool_agent,config_file,ready,,content/entries/tool_agent/G-20_claude_md[済].md
+G-21,,AGENTS.md,tool_agent,config_file,ready,,content/entries/tool_agent/G-21_agents_md[済].md
+G-22,,SKILL.md,tool_agent,config_file,ready,,content/entries/tool_agent/G-22_skill_md[済].md
+G-23,,.claude/settings.json,tool_agent,config_file,ready,v2テンプレ書き起こし済（2026-04-30）,content/entries/tool_agent/G-23_claude_settings_json[済].md
 G-30,,Tool Use,term_llm,control,drafting,,content/entries/term_llm/G-30_tool_use[人書].md
 G-31,,Hook,term_llm,control,drafting,,content/entries/term_llm/G-31_hook[人書].md
 G-32,,Slash Command,term_llm,control,needs_review,,content/entries/term_llm/G-32_slash_command[人書].md
@@ -259,21 +259,21 @@ G-44,,マルチエージェント協調,term_llm,ops,drafting,,content/entries/t
 G-45,,段階的開示,term_llm,ops,needs_review,,content/entries/term_llm/G-45[人書].md
 G-46,,ナーフ（モデルの劣化体感）,term_llm,ops,drafting,,content/entries/term_llm/G-46[凍].md
 G-47,,Auto-compact,term_llm,ops,needs_review,Claude Code の自動圧縮（文脈管理）,content/entries/term_llm/G-47_auto_compact[人書].md
-H-1,,TDD,workflow,methodology,skeleton,,content/entries/workflow/H-1_tdd[人書].md
+H-1,,TDD,workflow,methodology,ready,,content/entries/workflow/H-1_tdd[済].md
 H-2,,ペアプログラミング,workflow,methodology,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/workflow/H-2[人書].md
 H-3,,バイブコーディングの流儀,workflow,methodology,drafting,,content/entries/workflow/H-3[人書].md
 H-4,,コードレビュー,workflow,methodology,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/workflow/H-4[人書].md
-H-5,,Scrum / Agile,workflow,methodology,drafting,,content/entries/workflow/H-5_scrum_agile[人書].md
-H-6,,Git Flow,workflow,methodology,drafting,,content/entries/workflow/H-6_git_flow[人書].md
-H-7,,CI/CD,workflow,methodology,needs_review,,content/entries/workflow/H-7_ci_cd[人書].md
-H-8,,DevOps,workflow,methodology,drafting,,content/entries/workflow/H-8_devops[人書].md
+H-5,,Scrum / Agile,workflow,methodology,ready,,content/entries/workflow/H-5_scrum_agile[済].md
+H-6,,Git Flow,workflow,methodology,ready,,content/entries/workflow/H-6_git_flow[済].md
+H-7,,CI/CD,workflow,methodology,ready,,content/entries/workflow/H-7_ci_cd[済].md
+H-8,,DevOps,workflow,methodology,ready,,content/entries/workflow/H-8_devops[済].md
 H-50,,Bard → Gemini,history,timeline,skeleton,,content/entries/history/H-50[人書].md
 H-51,,Preview から正式版への流れ,history,culture,skeleton,,content/entries/history/H-51[人書].md
 H-52,,Copilot から Claude Code までの流れ,history,timeline,skeleton,,content/entries/history/H-52[人書].md
-H-53,,ChatGPT 登場,history,event,needs_review,2022-11,content/entries/history/H-53_chatgpt_launch[人書].md
-H-54,,GPT-4 リリース,history,event,drafting,,content/entries/history/H-54[凍].md
+H-53,,ChatGPT 登場,history,event,ready,2022-11,content/entries/history/H-53_chatgpt_launch[済].md
+H-54,,GPT-4 リリース,history,event,ready,,content/entries/history/H-54[凍].md
 H-55,,LLaMA のオープン化,history,event,drafting,v2テンプレ本書き済（2026-04-30）,content/entries/history/H-55[AI整].md
-H-56,,Claude のバージョン史,history,timeline,needs_review,v2テンプレ本書き済（2026-04-30）旧スケルトン H-56.md は archived,content/entries/history/H-56[凍].md
+H-56,,Claude のバージョン史,history,timeline,ready,v2テンプレ本書き済（2026-04-30）旧スケルトン H-56.md は archived,content/entries/history/H-56[凍].md
 H-57,,Gemini の命名史,history,timeline,needs_review,v2テンプレ本書き済（2026-04-30）,content/entries/history/H-57[人書].md
 H-58,,Transformer 論文,history,paper,drafting,2017,content/entries/history/H-58[凍].md
 H-59,,AI エージェント元年,history,era,needs_review,2024頃,content/entries/history/H-59[人書].md
@@ -308,7 +308,7 @@ J-10,,Machine Learning,term_general,ml_basic,skeleton,,content/entries/term_gene
 J-11,,Deep Learning,term_general,ml_basic,skeleton,,content/entries/term_general/J-11_deep_learning[人書].md
 J-12,,Neural Network,term_general,ml_basic,skeleton,,content/entries/term_general/J-12_neural_network[人書].md
 J-13,,Transformer,term_general,ml_basic,drafting,,content/entries/term_general/J-13_transformer[人書].md
-J-14,,LLM,term_general,ml_basic,needs_review,,content/entries/term_general/J-14_llm[人書].md
+J-14,,LLM,term_general,ml_basic,ready,,content/entries/term_general/J-14_llm[済].md
 J-15,,VLM,term_general,ml_basic,skeleton,,content/entries/term_general/J-15_vlm[人書].md
 J-16,,Fine-tuning,term_general,ml_basic,needs_review,,content/entries/term_general/J-16_fine_tuning[人書].md
 J-17,,Attention,term_general,ml_basic,drafting,,content/entries/term_general/J-17_attention[人書].md

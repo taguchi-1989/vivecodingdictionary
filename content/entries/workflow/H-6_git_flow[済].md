@@ -19,7 +19,7 @@ related_terms:
   - branch
   - Pull Request
   - CI/CD
-status: needs_review
+status: ready
 ---
 
 # Git Flow

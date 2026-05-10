@@ -19,7 +19,7 @@ related_terms:
   - MATH
   - Thinking モデル
   - GPQA
-status: needs_review
+status: ready
 ---
 
 # AIME

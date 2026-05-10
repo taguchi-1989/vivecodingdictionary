@@ -31,7 +31,7 @@ related_terms:
   - IaC
 
 # ── 制作状態 ──
-status: needs_review
+status: ready
 ---
 
 # DevOps

@@ -17,7 +17,7 @@ related_terms:
   - HumanEval
   - Terminal-Bench
   - Claude Code
-status: needs_review
+status: ready
 ---
 
 # SWE-Bench

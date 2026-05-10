@@ -18,7 +18,7 @@ related_terms:
   - エージェント
   - WebArena
   - GAIA
-status: needs_review
+status: ready
 ---
 
 # TAU-Bench

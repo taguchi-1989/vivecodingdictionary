@@ -20,7 +20,7 @@ related_terms:
   - Context
   - AGENTS.md
   - Memory
-status: needs_review
+status: ready
 ---
 
 # CLAUDE.md

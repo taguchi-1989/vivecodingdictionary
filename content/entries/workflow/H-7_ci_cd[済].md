@@ -20,7 +20,7 @@ related_terms:
   - git push
   - Vercel
   - テスト自動化
-status: needs_review
+status: ready
 ---
 
 # CI/CD

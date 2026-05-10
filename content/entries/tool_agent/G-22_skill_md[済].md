@@ -20,7 +20,7 @@ related_terms:
   - Slash Command
   - Skills
   - AGENTS.md
-status: needs_review
+status: ready
 ---
 
 # SKILL.md

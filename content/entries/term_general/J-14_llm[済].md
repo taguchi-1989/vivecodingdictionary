@@ -17,7 +17,7 @@ related_terms:
   - Neural Network
   - Context
   - Fine-tuning
-status: needs_review
+status: ready
 ---
 
 # LLM

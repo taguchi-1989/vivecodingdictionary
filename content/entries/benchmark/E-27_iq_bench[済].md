@@ -19,7 +19,7 @@ related_terms:
   - Yann LeCun
   - GPQA
   - ARC-AGI
-status: needs_review
+status: ready
 ---
 
 # IQ Bench

@@ -19,7 +19,7 @@ related_terms:
   - CLAUDE.md
   - Hook
   - Permission
-status: needs_review
+status: ready
 ---
 
 <!--

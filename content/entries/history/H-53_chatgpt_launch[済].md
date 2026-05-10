@@ -18,7 +18,7 @@ related_terms:
   - GPT-4 リリース
   - Bard → Gemini
   - AI エージェント元年
-status: needs_review
+status: ready
 ---
 
 # ChatGPT 登場

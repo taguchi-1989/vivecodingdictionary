@@ -20,7 +20,7 @@ related_terms:
   - Codex
   - System Prompt
   - SKILL.md
-status: needs_review
+status: ready
 ---
 
 # AGENTS.md
