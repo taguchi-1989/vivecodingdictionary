@@ -19,7 +19,7 @@ related_terms:
   - A-2 読み方ガイド
   - A-9 索引
   - A-5 読者レベルの凡例
-status: drafting
+status: needs_review
 ---
 
 # 図鑑の歩き方

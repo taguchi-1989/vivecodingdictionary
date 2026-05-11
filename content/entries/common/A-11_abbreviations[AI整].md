@@ -19,7 +19,7 @@ related_terms:
   - 図鑑の歩き方
   - 索引
   - a11y
-status: drafting
+status: needs_review
 ---
 
 # 略称表記

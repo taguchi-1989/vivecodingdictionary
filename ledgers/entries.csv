@@ -1,27 +1,27 @@
 new_id,legacy_id,title,category,subtype,status,notes,path
-A-1,,まえがき,common,intro,drafting,,content/entries/common/A-1_preface[AI直].md
+A-1,,まえがき,common,intro,needs_review,,content/entries/common/A-1_preface[AI直].md
 A-2,,この本の読み方,common,intro,needs_review,,content/entries/common/A-2_reading_guide[人書].md
-A-3,,図鑑の歩き方,common,intro,drafting,,content/entries/common/A-3_walking_guide[AI整].md
-A-4,,体験区分の凡例,common,meta,drafting,,content/entries/common/A-4_experience_legend[AI整].md
-A-5,,読者レベルの凡例,common,meta,drafting,,content/entries/common/A-5_reader_level_legend[AI整].md
-A-6,,評価日・時変情報の見方,common,meta,drafting,,content/entries/common/A-6_evaluation_date_legend[AI整].md
-A-7,,図のタイプ,common,meta,drafting,,content/entries/common/A-7_figure_types_legend[AI整].md
-A-8,,色・記号の凡例,common,meta,drafting,,content/entries/common/A-8_color_symbol_legend[AI整].md
-A-9,,索引,common,meta,drafting,,content/entries/common/A-9_index[AI整].md
-A-10,,更新履歴と更新方針,common,meta,drafting,,content/entries/common/A-10_changelog[AI整].md
-A-11,,略称表記,common,meta,drafting,v2テンプレ書き起こし済（2026-04-30）,content/entries/common/A-11_abbreviations[AI整].md
+A-3,,図鑑の歩き方,common,intro,needs_review,,content/entries/common/A-3_walking_guide[AI整].md
+A-4,,体験区分の凡例,common,meta,needs_review,,content/entries/common/A-4_experience_legend[AI整].md
+A-5,,読者レベルの凡例,common,meta,needs_review,,content/entries/common/A-5_reader_level_legend[AI整].md
+A-6,,評価日・時変情報の見方,common,meta,needs_review,,content/entries/common/A-6_evaluation_date_legend[AI整].md
+A-7,,図のタイプ,common,meta,needs_review,,content/entries/common/A-7_figure_types_legend[AI整].md
+A-8,,色・記号の凡例,common,meta,needs_review,,content/entries/common/A-8_color_symbol_legend[AI整].md
+A-9,,索引,common,meta,needs_review,,content/entries/common/A-9_index[AI整].md
+A-10,,更新履歴と更新方針,common,meta,needs_review,,content/entries/common/A-10_changelog[AI整].md
+A-11,,略称表記,common,meta,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/common/A-11_abbreviations[AI整].md
 B-1,101,Gemini,service,ai_assistant,ready,新テンプレ書き起こし済（2026-04-24）。legacy 101 は archived,content/entries/service/B-1_gemini[済].md
 B-2,,Claude,service,ai_assistant,ready,,content/entries/service/B-2_claude[済].md
 B-3,,ChatGPT,service,ai_assistant,ready,,content/entries/service/B-3_chatgpt[済].md
 B-4,,Cursor,service,ai_assistant,ready,,content/entries/service/B-4_cursor[済].md
 B-5,,GitHub Copilot,service,ai_assistant,ready,,content/entries/service/B-5_github_copilot[済].md
-B-6,,Windsurf,service,ai_assistant,needs_review,,content/entries/service/B-6_windsurf[済].md
-B-7,,Claude Code,service,ai_assistant,needs_review,略称CC,content/entries/service/B-7_claude_code[済].md
-B-8,,Codex,service,ai_assistant,needs_review,旧 title Codex (OpenAI) を Codex に変更（2026-04-30）,content/entries/service/B-8_codex[済].md
-B-9,,v0,service,ai_assistant,needs_review,,content/entries/service/B-9_v0[済].md
-B-10,,Devin,service,ai_assistant,needs_review,,content/entries/service/B-10_devin[済].md
-B-11,,Bolt.new,service,ai_assistant,needs_review,,content/entries/service/B-11_bolt_new[済].md
-B-12,,Perplexity,service,ai_assistant,needs_review,,content/entries/service/B-12_perplexity[済].md
+B-6,,Windsurf,service,ai_assistant,ready,,content/entries/service/B-6_windsurf[済].md
+B-7,,Claude Code,service,ai_assistant,ready,略称CC,content/entries/service/B-7_claude_code[済].md
+B-8,,Codex,service,ai_assistant,ready,旧 title Codex (OpenAI) を Codex に変更（2026-04-30）,content/entries/service/B-8_codex[済].md
+B-9,,v0,service,ai_assistant,ready,,content/entries/service/B-9_v0[済].md
+B-10,,Devin,service,ai_assistant,ready,,content/entries/service/B-10_devin[済].md
+B-11,,Bolt.new,service,ai_assistant,ready,,content/entries/service/B-11_bolt_new[済].md
+B-12,,Perplexity,service,ai_assistant,ready,,content/entries/service/B-12_perplexity[済].md
 B-13,,ElevenLabs,service,tts_service,ready,音声系 TTS・Voice Cloning,content/entries/service/B-13_elevenlabs[済].md
 B-14,,Genspark,service,ai_assistant,ready,,content/entries/service/B-14_genspark[済].md
 B-15,,Microsoft Copilot,service,ai_assistant,ready,v2テンプレ書き起こし済（2026-04-30）,content/entries/service/B-15_microsoft_copilot[済].md
