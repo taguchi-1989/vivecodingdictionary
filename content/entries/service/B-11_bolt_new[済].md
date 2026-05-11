@@ -19,7 +19,7 @@ related_terms:
   - Vite
   - v0
   - Prompt Engineering
-status: needs_review
+status: ready
 ---
 
 # Bolt.new

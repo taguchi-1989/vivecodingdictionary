@@ -19,7 +19,7 @@ related_terms:
   - VS Code
   - GitHub Copilot
   - Claude Code
-status: needs_review
+status: ready
 ---
 
 # Windsurf

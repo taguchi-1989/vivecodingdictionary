@@ -19,7 +19,7 @@ related_terms:
   - 自律エージェント
   - Claude Code
   - Pull Request
-status: needs_review
+status: ready
 ---
 
 # Devin
