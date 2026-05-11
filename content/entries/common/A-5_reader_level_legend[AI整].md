@@ -15,7 +15,7 @@ related_terms:
   - A-2 この本の読み方
   - A-3 図鑑の歩き方
   - A-4 体験区分の凡例
-status: drafting
+status: needs_review
 ---
 
 # 読者レベルの凡例

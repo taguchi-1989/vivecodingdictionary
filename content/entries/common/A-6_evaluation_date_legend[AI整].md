@@ -19,7 +19,7 @@ related_terms:
   - 図鑑の歩き方
   - 体験区分の凡例
   - 更新履歴と更新方針
-status: drafting
+status: needs_review
 ---
 
 # 評価日・時変情報の見方

@@ -19,7 +19,7 @@ related_terms:
   - 図鑑の歩き方
   - 読者レベルの凡例
   - 評価日・時変情報の見方
-status: drafting
+status: needs_review
 ---
 
 # 体験区分の凡例

@@ -30,7 +30,7 @@ related_terms:
   - A-2 この本の読み方
 
 # ── 制作状態 ──
-status: drafting
+status: needs_review
 ---
 
 ## tagline

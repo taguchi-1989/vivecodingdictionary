@@ -19,7 +19,7 @@ related_terms:
   - 図鑑の歩き方
   - 図のタイプ
   - 体験区分の凡例
-status: drafting
+status: needs_review
 ---
 
 # 色・記号の凡例

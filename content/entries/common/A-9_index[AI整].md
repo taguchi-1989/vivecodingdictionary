@@ -19,7 +19,7 @@ related_terms:
   - この本の読み方
   - 図鑑の歩き方
   - 略称表記
-status: drafting
+status: needs_review
 ---
 
 # 索引
