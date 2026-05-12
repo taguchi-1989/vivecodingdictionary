@@ -104,7 +104,7 @@ Next.js、JSX、State、Props、TypeScript。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- HTML / CSS / JavaScript をようやく覚えたところに、また別の枠組みが出てきて「これまでのものが使えないのか」と戸惑いました。実装は任せるとしても「なぜ React を使うのか」を腹落ちさせるのに時間がかかりました。
+- HTML / CSS / JS を覚えた後に別の枠組みが出てきて戸惑いました。「なぜ React か」を腹落ちさせるのに時間がかかりました。
 - 最初は Astro 系のコンポーネントで進めようとしてしまい、React に行き着くまでに遠回りをしました。
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->

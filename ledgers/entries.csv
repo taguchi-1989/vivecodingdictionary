@@ -137,42 +137,42 @@ E-34,,OSWorld,benchmark,agent,needs_review,v2テンプレ書き起こし済（20
 E-50,,Chatbot Arena,benchmark,general,ready,,content/entries/benchmark/E-50_chatbot_arena[済].md
 E-51,,LMSYS Arena,benchmark,general,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/benchmark/E-51_lmsys_arena[人書].md
 F-1,301,JavaScript,term_tool,language,ready,旧3桁ID連携→F-1に取り込み済み,content/entries/term_tool/F-1_javascript[済].md
-F-2,302,TypeScript,term_tool,language,needs_review,旧3桁ID連携 / v2テンプレ書き起こし済（2026-04-29）,content/entries/term_tool/F-2_typescript[人書].md
-F-3,,Python,term_tool,language,needs_review,,content/entries/term_tool/F-3_python[人書].md
-F-4,,HTML,term_tool,language,needs_review,,content/entries/term_tool/F-4_html[人書].md
-F-5,,CSS,term_tool,language,needs_review,,content/entries/term_tool/F-5_css[人書].md
-F-6,,Markdown,term_tool,language,needs_review,,content/entries/term_tool/F-6_markdown[人書].md
+F-2,302,TypeScript,term_tool,language,ready,旧3桁ID連携 / v2テンプレ書き起こし済（2026-04-29）,content/entries/term_tool/F-2_typescript[済].md
+F-3,,Python,term_tool,language,ready,,content/entries/term_tool/F-3_python[済].md
+F-4,,HTML,term_tool,language,ready,,content/entries/term_tool/F-4_html[済].md
+F-5,,CSS,term_tool,language,ready,,content/entries/term_tool/F-5_css[済].md
+F-6,,Markdown,term_tool,language,ready,,content/entries/term_tool/F-6_markdown[済].md
 F-7,,YAML,term_tool,language,needs_review,,content/entries/term_tool/F-7_yaml[人書].md
-F-8,,JSON,term_tool,language,needs_review,,content/entries/term_tool/F-8_json[人書].md
-F-9,,SVG,term_tool,language,needs_review,,content/entries/term_tool/F-9_svg[人書].md
-F-10,304,React,term_tool,framework,needs_review,旧3桁ID 304 の素材を取り込み新テンプレ書き起こし済（2026-04-29）,content/entries/term_tool/F-10_react[人書].md
-F-11,305,Next.js,term_tool,framework,needs_review,旧3桁ID 305 の素材を取り込み新テンプレ書き起こし済（2026-04-29）,content/entries/term_tool/F-11_next_js[人書].md
-F-12,,Electron,term_tool,framework,needs_review,,content/entries/term_tool/F-12_electron[人書].md
-F-13,,Tauri,term_tool,framework,needs_review,,content/entries/term_tool/F-13_tauri[人書].md
-F-14,,three.js,term_tool,framework,needs_review,3Dライブラリ,content/entries/term_tool/F-14_three_js[人書].md
+F-8,,JSON,term_tool,language,ready,,content/entries/term_tool/F-8_json[済].md
+F-9,,SVG,term_tool,language,ready,,content/entries/term_tool/F-9_svg[済].md
+F-10,304,React,term_tool,framework,ready,旧3桁ID 304 の素材を取り込み新テンプレ書き起こし済（2026-04-29）,content/entries/term_tool/F-10_react[済].md
+F-11,305,Next.js,term_tool,framework,ready,旧3桁ID 305 の素材を取り込み新テンプレ書き起こし済（2026-04-29）,content/entries/term_tool/F-11_next_js[済].md
+F-12,,Electron,term_tool,framework,ready,,content/entries/term_tool/F-12_electron[済].md
+F-13,,Tauri,term_tool,framework,ready,,content/entries/term_tool/F-13_tauri[済].md
+F-14,,three.js,term_tool,framework,ready,3Dライブラリ,content/entries/term_tool/F-14_three_js[済].md
 F-15,,shadcn/ui,term_tool,framework,needs_review,コピペ配布型 React コンポーネント集,content/entries/term_tool/F-15_shadcn_ui[人書].md
-F-16,,Tailwind CSS,term_tool,framework,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-16_tailwind_css[人書].md
-F-17,,Astro,term_tool,framework,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-17_astro[人書].md
-F-20,303,ESLint,term_tool,linter,needs_review,旧3桁ID連携・v2テンプレで書き直し済（2026-04-29）,content/entries/term_tool/F-20_eslint[人書].md
-F-21,,Prettier,term_tool,formatter,needs_review,,content/entries/term_tool/F-21_prettier[人書].md
-F-30,,VS Code,term_tool,editor,needs_review,,content/entries/term_tool/F-30_vs_code[人書].md
+F-16,,Tailwind CSS,term_tool,framework,ready,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-16_tailwind_css[済].md
+F-17,,Astro,term_tool,framework,ready,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-17_astro[済].md
+F-20,303,ESLint,term_tool,linter,ready,旧3桁ID連携・v2テンプレで書き直し済（2026-04-29）,content/entries/term_tool/F-20_eslint[済].md
+F-21,,Prettier,term_tool,formatter,ready,,content/entries/term_tool/F-21_prettier[済].md
+F-30,,VS Code,term_tool,editor,ready,,content/entries/term_tool/F-30_vs_code[済].md
 F-34,,VS Code 拡張機能,term_tool,editor,drafting,v2テンプレ本書き済（2026-04-30）,
-F-35,,Markdown Preview Enhanced,term_tool,editor_ext,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-35_markdown_preview_enhanced[人書].md
-F-36,,Git Graph,term_tool,editor_ext,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-36_git_graph[人書].md
-F-37,,Japanese Language Pack for VS Code,term_tool,editor_ext,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-37_japanese_language_pack_for_vs_code[人書].md
-F-38,,Markdown All in One,term_tool,editor_ext,needs_review,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-38_markdown_all_in_one[人書].md
-F-40,,npm,term_tool,cli_build,needs_review,,content/entries/term_tool/F-40_npm[人書].md
-F-41,,Vite,term_tool,cli_build,needs_review,,content/entries/term_tool/F-41_vite[人書].md
-F-42,,ビルド,term_tool,cli_build,needs_review,v2テンプレ本書き済（2026-04-30）,content/entries/term_tool/F-42_build[人書].md
+F-35,,Markdown Preview Enhanced,term_tool,editor_ext,ready,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-35_markdown_preview_enhanced[済].md
+F-36,,Git Graph,term_tool,editor_ext,ready,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-36_git_graph[済].md
+F-37,,Japanese Language Pack for VS Code,term_tool,editor_ext,ready,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-37_japanese_language_pack_for_vs_code[済].md
+F-38,,Markdown All in One,term_tool,editor_ext,ready,v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-38_markdown_all_in_one[済].md
+F-40,,npm,term_tool,cli_build,ready,,content/entries/term_tool/F-40_npm[済].md
+F-41,,Vite,term_tool,cli_build,ready,,content/entries/term_tool/F-41_vite[済].md
+F-42,,ビルド,term_tool,cli_build,ready,v2テンプレ本書き済（2026-04-30）,content/entries/term_tool/F-42_build[済].md
 F-43,,テスト,term_tool,cli_build,archived,v2テンプレ本書き済（2026-04-30）,content/entries/term_tool/F-43_test[凍].md
-F-44,,pnpm,term_tool,cli_build,needs_review,,content/entries/term_tool/F-44_pnpm[人書].md
+F-44,,pnpm,term_tool,cli_build,ready,,content/entries/term_tool/F-44_pnpm[済].md
 F-50,,git,term_tool,git,ready,,content/entries/term/F-50_git[済].md
-F-51,,git push,term_tool,git,needs_review,,content/entries/term_tool/F-51_git_push[人書].md
-F-52,,git pull,term_tool,git,needs_review,,content/entries/term_tool/F-52_git_pull[人書].md
-F-53,,branch,term_tool,git,needs_review,,content/entries/term_tool/F-53_branch[人書].md
-F-54,,commit,term_tool,git,needs_review,,content/entries/term_tool/F-54_commit[人書].md
-F-55,,merge,term_tool,git,needs_review,,content/entries/term_tool/F-55_merge[人書].md
-F-56,,.gitignore,term_tool,git,needs_review,,content/entries/term_tool/F-56_gitignore[人書].md
+F-51,,git push,term_tool,git,ready,,content/entries/term_tool/F-51_git_push[済].md
+F-52,,git pull,term_tool,git,ready,,content/entries/term_tool/F-52_git_pull[済].md
+F-53,,branch,term_tool,git,ready,,content/entries/term_tool/F-53_branch[済].md
+F-54,,commit,term_tool,git,ready,,content/entries/term_tool/F-54_commit[済].md
+F-55,,merge,term_tool,git,ready,,content/entries/term_tool/F-55_merge[済].md
+F-56,,.gitignore,term_tool,git,ready,,content/entries/term_tool/F-56_gitignore[済].md
 F-57,,リポジトリ,term_tool,git,needs_review,v2テンプレ書き起こし済（2026-04-30）,
 F-58,,git stash,term_tool,git,needs_review,,content/entries/term_tool/F-58_git_stash[人書].md
 F-59,,README.md,term_tool,git,needs_review,,content/entries/term_tool/F-59_readme_md[人書].md
