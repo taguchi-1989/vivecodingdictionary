@@ -117,7 +117,7 @@ GFM（GitHub Flavored Markdown）、CommonMark、Mermaid。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
-- 🙂 第一印象:
+- 🙂 第一印象:何で使うのかわかんないし、ちょっと使いづらいような印象あったかあの
 - 👍 良い点:
 - 👎 ダメな点:
 - 👥 誰向けか:
