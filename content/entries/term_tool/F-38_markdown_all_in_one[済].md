@@ -112,7 +112,7 @@ Markdown Preview Enhanced（F-35）、Mermaid（F-140）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 自分で触るときのちょっとした効率化にはつながりますし、目次生成機能もあって便利です。ただ LaTeX や Mermaid を含む PDF 印刷をしようとするとうまくいかないことが多く、そこでハマって時間を取られがちでした。
+- 効率化や目次生成は便利ですが、LaTeX や Mermaid を含む PDF 印刷でうまくいかないことが多く、ハマりやすかったです。
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント

@@ -101,8 +101,8 @@ pnpm、yarn、package-lock.json、npmjs.com。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- Python では pip を使っているので JavaScript 系で npm が出てきてもすんなり入ってきましたが、コマンドの綴りが npm なのか mpn なのか混乱しました。
-- ターミナルでのコマンド入力はタイポが命取りなので、音声で日本語指示できる環境の方が非エンジニアには楽だと感じます。
+- pip の経験があるので npm 自体はすんなり入りましたが、綴りが npm か mpn か混乱しました。
+- ターミナルのコマンド入力はタイポが命取りで、音声で日本語指示できる環境のほうが非エンジニアには楽だと感じます。
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
