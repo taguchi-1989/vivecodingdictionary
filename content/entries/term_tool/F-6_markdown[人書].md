@@ -110,8 +110,8 @@ GFM（GitHub Flavored Markdown）、CommonMark、Mermaid。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
--
--
+-寝れるの？出力でなんかシャープだとかのものがたくさん出てきたりするけどま※ とかがなんか紛れてきたりとかしてそこが分かりづらい
+-とはいえ、なんかテキストで書いてあるから書いてある内容は人分かりやすいんだなと思ってま機能のところを理解するところがないかな
 -
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
