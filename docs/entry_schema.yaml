@@ -10,11 +10,16 @@
 # の順で更新し、双方向で整合を取る。本ファイルと v2_rules_summary に差があれば、
 # **本ファイル（schema）を正**とする。
 
-schema_version: "v2.29.0"
-updated_at: "2026-04-30"
+schema_version: "v2.30.0"
+updated_at: "2026-05-13"
 canonical_doc: "docs/v2_rules_summary.md"
 
 # 変更履歴
+# - v2.30.0 (2026-05-13): 前付け（A 章）用に `page_layout` enum を 7 値拡張し、
+#   front_* レイアウト群を新設。詳細は docs/front_section_layout.md（前付け仕様）。
+#   spread_v1 の本編ルールは無変更。`page_layout` が front_* のときは
+#   figure_type / related_terms / 必須節・字数合計の判定を layout 別に切り替える。
+#   id は letter ID に加えて `^front_[a-z_]+$` を許容（扉エントリ用）。
 # - v2.29.0 (2026-04-30): 任意フィールド `importance` (A〜E) を追加。
 #   読み始める優先度（reader_level=前提知識レベル とは独立した軸）。
 #   A=必須（AI ニュースを目にする全員 / ChatGPT, Claude, LLM, Hallucination 等）
@@ -41,8 +46,8 @@ frontmatter:
   required:
     - key: id
       format: regex
-      pattern: "^[A-J]-\\d{1,2}$"   # 例: A-1, B-3, D-12
-      description: letter-数字 ID
+      pattern: "^([A-J]-\\d{1,2}|front_[a-z_]+)$"   # 例: A-1, B-3, D-12 / front_concept（扉）
+      description: letter-数字 ID または `front_` 接頭辞 ID（前付け）
       severity: error
     - key: title
       min_chars: 1
@@ -65,8 +70,19 @@ frontmatter:
         workflow: ".figure-workflow"
         timeline: ".figure-timeline"
     - key: page_layout
-      enum: [spread_v1]
+      enum:
+        - spread_v1                 # 本編（B〜J 章）。既存仕様（§1〜2）
+        - front_concept_spread      # 扉（前付け）
+        - front_essay               # A-1 まえがき
+        - front_anatomy             # A-2 見開きの読み方
+        - front_map_index           # A-3 + A-9
+        - front_legend_marks        # A-4 + A-5 + A-6
+        - front_swatch              # A-7 + A-8
+        - front_log_glossary        # A-10 + A-11
       severity: error
+      # 2026-05-13: 前付け 7 値を追加。front_* レイアウトのルールは
+      # docs/front_section_layout.md §4 を参照。本ファイル末尾の
+      # `front_layouts:` 節で layout 別の必須/任意・字数目安を機械可読に持つ。
     - key: evaluation_date
       format: regex
       pattern: "^\\d{4}-\\d{2}-\\d{2}$"
@@ -408,3 +424,69 @@ legacy_heading_map:
   - old: "タイトル末尾の括弧書き読み（例: `Context（コンテキスト）`）"
     new: "title_reading スロット（独立）"
     since: "2026-04-28"
+
+# ────────────────────────────────────────
+# 前付け（A 章）の例外レイアウト群
+# 詳細は docs/front_section_layout.md。spread_v1 とは別系のルールを layout 別に持つ
+# ────────────────────────────────────────
+front_layouts:
+  # 共通方針
+  policy:
+    id_pattern: "^([A-J]-\\d{1,2}|front_[a-z_]+)$"  # letter ID または front_ 接頭辞
+    auto_promote: false                              # drafting → needs_review の自動昇格を停止
+    required_sections_check: false                   # spread_v1 用の必須節検査をスキップ
+    char_totals_check: false                         # 左右ページ合計 ☆ 判定をスキップ
+    figure_type: optional                            # 全 layout で任意
+    spread_position_enum: [left, right, full]        # 複数 ID 同居時のページ担当
+
+  # 各 layout の固有ルール（related_terms 必須個数、字数目安、構成 ID）
+  layouts:
+    - name: front_concept_spread
+      assigned_ids: ["front_concept"]               # 扉。letter ID 体系外、ledger 外
+      related_terms: optional
+      char_hint_left:  "80-120"
+      char_hint_right: "80-120"
+      note: "扉。タイトル無し・ページ番号無し・章ラベル無し"
+
+    - name: front_essay
+      assigned_ids: ["A-1"]
+      related_terms: optional
+      char_hint_left:  "30-50（リード）"
+      char_hint_right: "350-500（本文）"
+      note: "まえがき。著者ボイスで書く巻頭言。tagline 帯・6 視点・著者欄は置かない"
+
+    - name: front_anatomy
+      assigned_ids: ["A-2"]
+      related_terms: optional
+      char_hint_left:  "—（コールアウトのみ）"
+      char_hint_right: "—（コールアウトのみ）"
+      char_hint_total: "200-300（左右合計）"
+      note: "本編 1 エントリの実物見開きを敷いてコールアウトで指す注釈図"
+
+    - name: front_map_index
+      assigned_ids: ["A-3", "A-9"]
+      related_terms: required_3_5                    # A-3 / A-9 それぞれに 3〜5 個
+      char_hint_left:  "150-250"
+      char_hint_right: "150-250"
+      note: "A-3 は左（A〜J 地図）、A-9 は右（ミニ索引）。spread_position で left/right 明示"
+
+    - name: front_legend_marks
+      assigned_ids: ["A-4", "A-5", "A-6"]
+      related_terms: required_3_5                    # A-4 / A-5 / A-6 それぞれ
+      char_hint_left:  "200-300（タグ／レベル凡例）"
+      char_hint_right: "100-180（評価日凡例）"
+      note: "A-4 / A-5 は左、A-6 は右。3 エントリ同居"
+
+    - name: front_swatch
+      assigned_ids: ["A-7", "A-8"]
+      related_terms: optional
+      char_hint_left:  "100-180（図カタログ）"
+      char_hint_right: "100-180（色・記号スウォッチ）"
+      note: "実物見本帳。文字より物理サンプルが主役"
+
+    - name: front_log_glossary
+      assigned_ids: ["A-10", "A-11"]
+      related_terms: optional
+      char_hint_left:  "履歴 1 ブロック + タイムライン"
+      char_hint_right: "略称 4 列表"
+      note: "更新履歴とリファレンス表。表とタイムラインのレイアウトが主役"
