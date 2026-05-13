@@ -973,3 +973,49 @@
   font-size: 20px;
   flex-shrink: 0;
 }
+
+/* Print check: one physical book page per PDF page.
+   The screen preview keeps the two-page spread; headless Chrome PDF uses this
+   block so each .vbcd.page is emitted at the book trim size. */
+@media print {
+  @page {
+    size: 199mm 281mm;
+    margin: 0;
+  }
+
+  html,
+  body {
+    width: 199mm;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+  }
+
+  .proto-nav,
+  .preview-meta,
+  .preview-nav {
+    display: none !important;
+  }
+
+  .spread {
+    display: block;
+    width: 199mm;
+    margin: 0;
+    background: #ffffff;
+    box-shadow: none;
+  }
+
+  .vbcd.page {
+    width: 199mm;
+    min-height: 281mm;
+    height: 281mm;
+    overflow: visible;
+    break-after: page;
+    page-break-after: always;
+  }
+
+  .vbcd.page:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+}
