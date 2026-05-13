@@ -68,6 +68,24 @@ MIHIDOKORO_SUBS = [
     "### 6. 深掘り先",
 ]
 
+# 前付け（A 章）レイアウト群。詳細は docs/front_section_layout.md §4
+# spread_v1 用の必須節・字数合計判定はスキップし、軽い YAML / トーンチェックだけ走らせる
+FRONT_LAYOUTS = {
+    "front_concept_spread",
+    "front_essay",
+    "front_anatomy",
+    "front_map_index",
+    "front_legend_marks",
+    "front_swatch",
+    "front_log_glossary",
+}
+
+# layout 別の related_terms 必須個数（3〜5）。掲載外は任意（空でも警告しない）
+FRONT_REQUIRES_RELATED_TERMS = {
+    "front_map_index",
+    "front_legend_marks",
+}
+
 # 旧テンプレで書かれた箇所を検出して移行を促す（警告のみ）
 DEPRECATED_HEADINGS = [
     ("どこで効くか", "「どこで効くか」→「どこで役立つか」（AI 臭回避、2026-04-24 決定）"),
@@ -249,8 +267,9 @@ def check_yaml(fm: dict, r: Report) -> None:
     for key in REQUIRED_YAML:
         if key not in fm or not str(fm[key]).strip():
             r.star(f"A. YAML: 必須キー `{key}` が欠落")
-    if fm.get("page_layout") and fm["page_layout"] != "spread_v1":
-        r.warn(f"A. YAML: `page_layout` が `spread_v1` 以外（{fm['page_layout']}）")
+    layout = str(fm.get("page_layout", "")).strip()
+    if layout and layout != "spread_v1" and layout not in FRONT_LAYOUTS:
+        r.warn(f"A. YAML: `page_layout` が enum 外（{layout}）")
 
     # evaluation_date の書式
     eval_date = str(fm.get("evaluation_date", "")).strip()
@@ -294,6 +313,65 @@ def check_structure(body: str, r: Report) -> None:
     if len(found_subs) < 6:
         missing = [s for s in MIHIDOKORO_SUBS if s not in body]
         r.star(f"C. 見どころ 6 視点: {', '.join(missing)} が無い")
+
+
+# ─── 前付け（front_*）用の検証関数 ─────────────────────────────────
+
+def check_yaml_front(fm: dict, r: Report) -> None:
+    """前付けレイアウト用 YAML チェック（spread_v1 より緩い）。
+
+    - id は `^[A-J]-\\d{1,2}$` または `^front_[a-z_]+$` を許容
+    - figure_type は任意（あっても無視）
+    - related_terms は layout 別（FRONT_REQUIRES_RELATED_TERMS に載る layout のみ 3〜5 個必須）
+    - title / category / page_layout / evaluation_date / status は必須
+    """
+    entry_id = str(fm.get("id", "")).strip()
+    if not entry_id:
+        r.star("A. YAML: 必須キー `id` が欠落")
+    elif not re.match(r"^([A-J]-\d{1,2}|front_[a-z_]+)$", entry_id):
+        r.warn(
+            f"A. YAML: `id` が letter ID でも `^front_` 接頭辞でもない（{entry_id}）"
+        )
+
+    for key in ("title", "category", "page_layout", "evaluation_date", "status"):
+        if key not in fm or not str(fm[key]).strip():
+            r.star(f"A. YAML: 必須キー `{key}` が欠落")
+
+    layout = str(fm.get("page_layout", "")).strip()
+    if layout and layout not in FRONT_LAYOUTS:
+        r.warn(
+            f"A. YAML: `page_layout` が front_* enum 外（{layout}） — "
+            "docs/front_section_layout.md §4-1 の 7 値から選んでください"
+        )
+
+    # evaluation_date 書式
+    eval_date = str(fm.get("evaluation_date", "")).strip()
+    if eval_date and not re.match(r"^\d{4}-\d{2}-\d{2}$", eval_date):
+        r.warn(f"A. YAML: `evaluation_date` が YYYY-MM-DD 形式でない（{eval_date}）")
+
+    # related_terms: layout が要求するときだけ個数を見る
+    if layout in FRONT_REQUIRES_RELATED_TERMS:
+        related = fm.get("related_terms")
+        if not isinstance(related, list) or not (3 <= len(related) <= 5):
+            n = len(related) if isinstance(related, list) else 0
+            r.warn(
+                f"A. YAML: `related_terms` が {layout} では 3〜5 個必要（現在 {n} 件）"
+            )
+
+    # spread_position: 同居 layout（A-3+A-9 / A-4+A-5+A-6 / A-7+A-8 / A-10+A-11）で
+    # 左右どちらの面を担当するかを明示する任意キー
+    sp = str(fm.get("spread_position", "")).strip()
+    if sp and sp not in ("left", "right", "full"):
+        r.warn(
+            f"A. YAML: `spread_position` が `left` / `right` / `full` 以外（{sp}）"
+        )
+
+    # title_reading（任意）
+    reading = str(fm.get("title_reading", "")).strip()
+    if reading:
+        n = len(reading)
+        if n < 2 or n > 30:
+            r.warn(f"A. YAML: `title_reading` が {n} 字（目安 2〜30）")
 
 
 def check_author_fields_empty(body: str, status: str, r: Report) -> None:
@@ -559,14 +637,16 @@ def resolve_path_from_stdin_or_argv() -> Path | None:
 
 
 def should_validate(path: Path) -> bool:
-    """content/entries/**/*.md のみ対象。
+    """content/entries/**/*.md または content/frontmatter/*.md を対象に。
 
-    common/ ディレクトリ（A-* まえがき・読み方ガイド等）は語彙エントリではなく
-    本書の使い方ガイドのため、別テンプレへ移行予定。当面は validator から除外する。
+    common/（A 章）と frontmatter/（扉）の分岐は main() 側で page_layout を見て決める:
+      - page_layout が front_* → 前付け用ルールセット（軽い YAML / トーンのみ）
+      - それ以外で common/ → 当面スキップ（spread_v1 から front_* への移行中）
+      - それ以外 → 既存の spread_v1 検証
     """
     posix = path.as_posix()
-    if "/content/entries/common/" in posix or posix.startswith("content/entries/common/"):
-        return False
+    if "/content/frontmatter/" in posix or posix.startswith("content/frontmatter/"):
+        return True
     return bool(re.search(r"(^|/)content/entries/[^/]+/[^/]+\.md$", posix))
 
 
@@ -682,6 +762,27 @@ def main() -> int:
     # skeleton は本文未着手の枠だけが置かれた状態（2026-04-28 追加）
     status = str(fm.get("status", "")).strip()
     if status in ("archived", "sample", "skeleton"):
+        return 0
+
+    # 前付けレイアウト（front_*）: 軽い検証ルートに分岐
+    # 必須節・字数合計の検査はスキップ。自動昇格も無効（著者本人レビュー必須）
+    # 未知の front_xxx も同じ経路に流す（check_yaml_front が enum 外 warn を出す）
+    layout = str(fm.get("page_layout", "")).strip()
+    if layout.startswith("front_"):
+        r = Report(path)
+        check_yaml_front(fm, r)
+        check_tone(body, r)
+        rendered = r.render()
+        if r.star_fails:
+            print(rendered, file=sys.stderr)
+        else:
+            print(rendered)
+        return r.exit_code
+
+    # spread_v1 で common/ にあるエントリは移行中のため当面スキップ
+    # （A-1〜A-11 が front_* に移行し終えるとこの除外は不要になる）
+    posix = path.as_posix()
+    if "/content/entries/common/" in posix or posix.startswith("content/entries/common/"):
         return 0
 
     r = Report(path)
