@@ -30,6 +30,7 @@ from validate_entry import (  # noqa: E402
     Report,
     parse_frontmatter,
     check_yaml,
+    check_yaml_front,
     check_structure,
     check_author_fields_empty,
     check_char_counts,
@@ -38,10 +39,12 @@ from validate_entry import (  # noqa: E402
     promote_to_needs_review,
     promote_to_ready,
     is_author_fields_filled,
+    FRONT_LAYOUTS,
 )
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 ENTRIES_DIR = PROJECT_ROOT / "content" / "entries"
+FRONTMATTER_DIR = PROJECT_ROOT / "content" / "frontmatter"
 QUEUE_PATH = PROJECT_ROOT / "ledgers" / "revision_queue.md"
 
 SKIP_STATUSES = {"skeleton", "sample", "archived"}
@@ -51,14 +54,20 @@ def validate_silently(path: Path, fm: dict, body: str, status: str):
     """1 件の validator を黙って走らせ、(stars, warnings, summary) を返す。
 
     summary は警告/違反の冒頭 3 件をセミコロン区切りで圧縮した短文。
+    page_layout が front_* なら前付け用ルールセット（軽い）。
     """
     r = Report(path)
-    check_yaml(fm, r)
-    check_structure(body, r)
-    check_author_fields_empty(body, status, r)
-    check_char_counts(body, r)
-    check_tone(body, r)
-    check_sources_date(body, fm, r)
+    layout = str(fm.get("page_layout", "")).strip()
+    if layout.startswith("front_"):
+        check_yaml_front(fm, r)
+        check_tone(body, r)
+    else:
+        check_yaml(fm, r)
+        check_structure(body, r)
+        check_author_fields_empty(body, status, r)
+        check_char_counts(body, r)
+        check_tone(body, r)
+        check_sources_date(body, fm, r)
 
     parts: list[str] = []
     for s in r.star_fails:
@@ -73,7 +82,10 @@ def validate_silently(path: Path, fm: dict, body: str, status: str):
 def collect():
     rows = []
     promoted_ids: list[str] = []
-    for md_path in sorted(ENTRIES_DIR.rglob("*.md")):
+    paths: list[Path] = sorted(ENTRIES_DIR.rglob("*.md"))
+    if FRONTMATTER_DIR.exists():
+        paths += sorted(FRONTMATTER_DIR.rglob("*.md"))
+    for md_path in paths:
         try:
             text = md_path.read_text(encoding="utf-8")
         except Exception:
@@ -85,23 +97,32 @@ def collect():
             continue
         status = str(fm.get("status", "")).strip() or "(空)"
 
-        is_common = "/content/entries/common/" in md_path.as_posix()
-        if status in SKIP_STATUSES or is_common:
+        posix = md_path.as_posix()
+        is_common = "/content/entries/common/" in posix
+        is_frontmatter_dir = "/content/frontmatter/" in posix
+        layout = str(fm.get("page_layout", "")).strip()
+        is_front = layout.startswith("front_")
+
+        # 検証対象判定:
+        #  - skeleton / sample / archived は集計のみ
+        #  - common/ にあって spread_v1 のまま（front_* 未移行）は当面スキップ
+        #  - それ以外（本編 entries、front_*、frontmatter/）は validate を走らせる
+        if status in SKIP_STATUSES:
+            stars, warns, summary = 0, 0, ""
+        elif is_common and not is_front:
             stars, warns, summary = 0, 0, ""
         else:
             stars, warns, summary = validate_silently(md_path, fm, body, status)
-            # 自動昇格の取りこぼし回収（単発の validate_entry.py は保存時しか走らないため、
-            # 過去エントリや手で書き足したエントリで漏れる）
-            # 1) drafting + ☆0 + ⚠0     → needs_review
-            # 2) needs_review + ☆0 + 著者欄が全項目埋まっている → ready
-            if status == "drafting" and stars == 0 and warns == 0:
-                if promote_to_needs_review(md_path):
-                    status = "needs_review"
-                    promoted_ids.append(eid + " (drafting→needs_review)")
-            if status == "needs_review" and stars == 0 and is_author_fields_filled(body):
-                if promote_to_ready(md_path):
-                    status = "ready"
-                    promoted_ids.append(eid + " (needs_review→ready)")
+            # 自動昇格は spread_v1 だけ。front_* は著者本人レビュー必須
+            if not is_front:
+                if status == "drafting" and stars == 0 and warns == 0:
+                    if promote_to_needs_review(md_path):
+                        status = "needs_review"
+                        promoted_ids.append(eid + " (drafting→needs_review)")
+                if status == "needs_review" and stars == 0 and is_author_fields_filled(body):
+                    if promote_to_ready(md_path):
+                        status = "ready"
+                        promoted_ids.append(eid + " (needs_review→ready)")
 
         rows.append({
             "id": eid,
@@ -112,6 +133,8 @@ def collect():
             "summary": summary,
             "path": md_path.relative_to(PROJECT_ROOT).as_posix(),
             "is_common": is_common,
+            "is_frontmatter_dir": is_frontmatter_dir,
+            "is_front": is_front,
         })
     return rows, promoted_ids
 
@@ -124,15 +147,25 @@ def render(rows):
     for r in rows:
         by_status[r["status"]] = by_status.get(r["status"], 0) + 1
 
-    # バケツ分け（common/ と SKIP_STATUSES は語彙エントリの検証対象外なので全バケツから除外）
-    def is_target(r):
-        return not r["is_common"] and r["status"] not in SKIP_STATUSES
+    # バケツ分け:
+    #  - SKIP_STATUSES（skeleton/sample/archived）は全バケツ除外
+    #  - common/ で spread_v1 のまま（front_* 未移行）も除外
+    #  - 前付け（front_*）は本編とは別バケツに集約
+    def is_target_main(r):
+        if r["status"] in SKIP_STATUSES:
+            return False
+        if r["is_front"]:
+            return False
+        if r["is_common"]:
+            return False
+        return True
 
-    star_violators = [r for r in rows if is_target(r) and r["stars"] > 0]
-    warn_only      = [r for r in rows if is_target(r) and r["stars"] == 0 and r["warns"] > 0]
-    drafting_clean = [r for r in rows if is_target(r) and r["status"] == "drafting" and r["stars"] == 0 and r["warns"] == 0]
-    needs_review   = [r for r in rows if is_target(r) and r["status"] == "needs_review" and r["stars"] == 0 and r["warns"] == 0]
-    ready_clean    = [r for r in rows if is_target(r) and r["status"] == "ready" and r["stars"] == 0 and r["warns"] == 0]
+    front_rows = [r for r in rows if r["is_front"] and r["status"] not in SKIP_STATUSES]
+    star_violators = [r for r in rows if is_target_main(r) and r["stars"] > 0]
+    warn_only      = [r for r in rows if is_target_main(r) and r["stars"] == 0 and r["warns"] > 0]
+    drafting_clean = [r for r in rows if is_target_main(r) and r["status"] == "drafting" and r["stars"] == 0 and r["warns"] == 0]
+    needs_review   = [r for r in rows if is_target_main(r) and r["status"] == "needs_review" and r["stars"] == 0 and r["warns"] == 0]
+    ready_clean    = [r for r in rows if is_target_main(r) and r["status"] == "ready" and r["stars"] == 0 and r["warns"] == 0]
 
     lines = [
         "# 要直しキュー（revision queue）",
@@ -179,6 +212,8 @@ def render(rows):
                      empty_msg="なし（drafting で全パスしたものは自動で needs_review に上がります）")
     lines += section("📝 著者レビュー待ち（needs_review・全パス）", needs_review)
     lines += section("✅ 完成（ready・全パス）", ready_clean)
+    lines += section("📖 前付け（front_*・著者本人レビュー必須）", front_rows,
+                     empty_msg="なし（A 章 / 扉が front_* レイアウトに移行すると表示されます）")
     lines.append("")
     lines.append("## 動線")
     lines.append("")
