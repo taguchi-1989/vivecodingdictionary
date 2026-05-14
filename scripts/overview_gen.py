@@ -21,7 +21,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / 'scripts'))
 from density_audit import (
-    TARGETS, TS_BASELINE, AUTHOR_BULLET_TARGET, COMMENT_LABELS,
+    TARGETS, TS_BASELINE, AUTHOR_BULLET_TARGET, TSUMAZUKI_TOTAL_TARGET, COMMENT_LABELS,
     layout_of, parse, section_chars, status_of, tagline_chars,
     tsumazuki_bullets, comment_items,
 )
@@ -59,6 +59,14 @@ def author_cell_class(n: int) -> str:
     if n > AUTHOR_BULLET_TARGET['max']:
         return 'over'
     if n > AUTHOR_BULLET_TARGET['rec_max']:
+        return 'near'
+    return 'ok'
+
+
+def tsumazuki_total_class(n: int) -> str:
+    if n > TSUMAZUKI_TOTAL_TARGET['max']:
+        return 'over'
+    if n > TSUMAZUKI_TOTAL_TARGET['rec_max']:
         return 'near'
     return 'ok'
 
@@ -246,7 +254,11 @@ def gen_html(rows):
         for sname in TARGETS:
             t = TARGETS[sname]
             header_cells.append(f'{sec_short[sname]}<span class="tcap">≤{t["max"]}</span>')
-        header_cells.extend(['計', 'TS比', 'つま1', 'つま2', 'つま3', '印象', '良', 'ダ', '誰', 'preview'])
+        header_cells.extend([
+            '計', 'TS比',
+            f'つま計<span class="tcap">≤{TSUMAZUKI_TOTAL_TARGET["max"]}</span>',
+            '印象', '良', 'ダ', '誰', 'preview',
+        ])
         P('<thead><tr>')
         for h in header_cells:
             P(f'<th>{h}</th>')
@@ -286,14 +298,14 @@ def gen_html(rows):
             row_cells.append(f'<td class="num total">{density_html}</td>')
             row_cells.append(f'<td class="num">{ts_html}</td>')
 
-            # tsumazuki 3 slots
-            for i in range(3):
-                if i < len(r['tsumazuki']):
-                    n = len(r['tsumazuki'][i])
-                    cls = author_cell_class(n)
-                    row_cells.append(f'<td class="num {cls}" title="{escape(r["tsumazuki"][i])}">{n}</td>')
-                else:
-                    row_cells.append('<td class="num na">—</td>')
+            # tsumazuki: total
+            tsu_total = sum(len(b) for b in r['tsumazuki'])
+            tsu_full = ' / '.join(r['tsumazuki']) if r['tsumazuki'] else ''
+            if tsu_total == 0:
+                row_cells.append('<td class="num na">—</td>')
+            else:
+                cls = tsumazuki_total_class(tsu_total)
+                row_cells.append(f'<td class="num {cls}" title="{escape(tsu_full)}">{tsu_total}</td>')
 
             # comment 4 labels
             for label in COMMENT_LABELS:

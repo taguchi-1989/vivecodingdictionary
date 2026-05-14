@@ -39,7 +39,8 @@ TARGETS = {
     '6. 深掘り先':           {'min': 15, 'max': 35, 'rec_max': 30, 'kind': 'six'},
 }
 # 著者欄ターゲット
-AUTHOR_BULLET_TARGET = {'max': 40, 'rec_max': 35}
+AUTHOR_BULLET_TARGET = {'max': 40, 'rec_max': 35}  # 私のコメントの各ラベル用
+TSUMAZUKI_TOTAL_TARGET = {'min': 0, 'max': 120, 'rec_max': 100}  # つまずき bullets 合計（3 bullets 想定）
 COMMENT_LABELS = ['第一印象', '良い点', 'ダメな点', '誰向けか']
 
 # TS 見本基準（参考値）
@@ -224,7 +225,7 @@ def write_summary(rows):
     P('|---------|----:|--------:|----:|')
     for name, t in TARGETS.items():
         P(f'| {name} | {t["min"]} | {t["rec_max"]} | {t["max"]} |')
-    P(f'| 非エンジニアのつまずき (各 bullet) | — | {AUTHOR_BULLET_TARGET["rec_max"]} | {AUTHOR_BULLET_TARGET["max"]} |')
+    P(f'| 非エンジニアのつまずき (3 bullets 合計) | — | {TSUMAZUKI_TOTAL_TARGET["rec_max"]} | {TSUMAZUKI_TOTAL_TARGET["max"]} |')
     P(f'| 私のコメント (各ラベル) | — | {AUTHOR_BULLET_TARGET["rec_max"]} | {AUTHOR_BULLET_TARGET["max"]} |')
     P('')
 
@@ -245,20 +246,17 @@ def write_summary(rows):
     P('')
 
     # Author overflow
-    tsu_over = 0
-    tsu_near = 0
     com_over = 0
     com_near = 0
-    tsu_long_ids = []
     com_long_ids = []
+    tsu_total_over = []
+    tsu_total_near = []
     for r in rows:
-        for b in r['tsumazuki']:
-            if len(b) > 40:
-                tsu_over += 1
-                if not any(eid == r['id'] for eid, _ in tsu_long_ids):
-                    tsu_long_ids.append((r['id'], max(len(x) for x in r['tsumazuki'])))
-            elif len(b) > 35:
-                tsu_near += 1
+        tsu_total = sum(len(b) for b in r['tsumazuki'])
+        if tsu_total > TSUMAZUKI_TOTAL_TARGET['max']:
+            tsu_total_over.append((r['id'], tsu_total))
+        elif tsu_total > TSUMAZUKI_TOTAL_TARGET['rec_max']:
+            tsu_total_near.append((r['id'], tsu_total))
         for label, v in r['comment'].items():
             if v and len(v) > 40:
                 com_over += 1
@@ -266,17 +264,17 @@ def write_summary(rows):
                     com_long_ids.append((r['id'], max((len(x) for x in r['comment'].values() if x), default=0)))
             elif v and len(v) > 35:
                 com_near += 1
-    tsu_long_ids.sort(key=lambda x: -x[1])
+    tsu_total_over.sort(key=lambda x: -x[1])
     com_long_ids.sort(key=lambda x: -x[1])
 
-    P('## 著者欄の「max=40 超」bullet 数\n')
-    P(f'- 非エンジニアのつまずき bullet 超過 **{tsu_over}** 件 / 推奨超過 {tsu_near} 件')
-    P(f'- 私のコメント ラベル超過 **{com_over}** 件 / 推奨超過 {com_near} 件')
+    P('## 著者欄の超過件数\n')
+    P(f'- 非エンジニアのつまずき (合計) max={TSUMAZUKI_TOTAL_TARGET["max"]} 超: **{len(tsu_total_over)}** 件 / 推奨超過: {len(tsu_total_near)} 件')
+    P(f'- 私のコメント (各ラベル) max=40 超: **{com_over}** 件 / 推奨超過: {com_near} 件')
     P('')
-    P('### つまずき 超過 ID 上位 15')
+    P('### つまずき 合計超過 ID 上位 15')
     P('')
-    for eid, n in tsu_long_ids[:15]:
-        P(f'- {eid} (最大 {n} 字)')
+    for eid, n in tsu_total_over[:15]:
+        P(f'- {eid} (合計 {n} 字)')
     P('')
     P('### 私のコメント 超過 ID 上位 15')
     P('')
@@ -311,7 +309,7 @@ def write_detail(rows):
     cols = ['ID', 'status']
     for name in TARGETS:
         cols.append(name)
-    cols.extend(['本文計', 'つま1', 'つま2', 'つま3', 'コ印象', 'コ良い', 'コダメ', 'コ誰', 'preview'])
+    cols.extend(['本文計', 'つま計', 'コ印象', 'コ良い', 'コダメ', 'コ誰', 'preview'])
     P('| ' + ' | '.join(cols) + ' |')
     P('|' + '|'.join(['---'] * len(cols)) + '|')
 
@@ -321,18 +319,16 @@ def write_detail(rows):
             cells.append(fmt_chars(r['sections'][name], t))
         cells.append(str(r['body_total']))
 
-        # tsumazuki: up to 3
-        for i in range(3):
-            if i < len(r['tsumazuki']):
-                n = len(r['tsumazuki'][i])
-                if n > 40:
-                    cells.append(f'⚠ {n}')
-                elif n > 35:
-                    cells.append(f'▲ {n}')
-                else:
-                    cells.append(str(n))
-            else:
-                cells.append('—')
+        # tsumazuki: total
+        tsu_total = sum(len(b) for b in r['tsumazuki'])
+        if tsu_total == 0:
+            cells.append('—')
+        elif tsu_total > TSUMAZUKI_TOTAL_TARGET['max']:
+            cells.append(f'⚠ {tsu_total}')
+        elif tsu_total > TSUMAZUKI_TOTAL_TARGET['rec_max']:
+            cells.append(f'▲ {tsu_total}')
+        else:
+            cells.append(str(tsu_total))
 
         # comment: 4 labels
         for label in COMMENT_LABELS:
