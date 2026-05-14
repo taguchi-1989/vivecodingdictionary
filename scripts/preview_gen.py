@@ -144,8 +144,18 @@ def extract_subsection(body: str, parent_heading: str, child_heading: str) -> st
     return m.group(1).strip() if m else ""
 
 
+def _split_into_sentences(text: str) -> list[str]:
+    """日本語文を「。」「！」「？」で分割。句点はそのまま末尾に残す。"""
+    parts = re.findall(r"[^。！？]+[。！？]?", text)
+    return [p.strip() for p in parts if p.strip()]
+
+
 def extract_tsumazuki_bullets(body: str) -> list[str]:
-    """## 非エンジニアのつまずき の各行（先頭 - の箇条書き）を返す。空行は除去。"""
+    """## 非エンジニアのつまずき の箇条書きを返す。
+
+    1 つの bullet に複数文が詰まっている場合は文単位で分割し、上限 3 文ぶんを返す。
+    プレースホルダ行はスキップ。
+    """
     section = extract_section(body, "非エンジニアのつまずき")
     bullets: list[str] = []
     for line in section.splitlines():
@@ -153,11 +163,17 @@ def extract_tsumazuki_bullets(body: str) -> list[str]:
         if not m:
             continue
         text = m.group(1).strip()
-        # （著者記入欄・空）プレースホルダはスキップ
         if re.fullmatch(r"[（(]\s*著者記入欄[・·]?空?\s*[）)]", text):
             continue
-        bullets.append(text)
-    return bullets
+        # 句点で文分割。1 文しかなければ自体をそのまま使う。
+        sentences = _split_into_sentences(text)
+        if len(sentences) <= 1:
+            bullets.append(text)
+        else:
+            bullets.extend(sentences)
+        if len(bullets) >= 3:
+            break
+    return bullets[:3]
 
 
 COMMENT_LABELS = ["第一印象", "良い点", "ダメな点", "誰向けか"]
