@@ -36,7 +36,7 @@ Google 製の Chrome 自動操作ライブラリ Puppeteer を MCP Server とし
 
 ## どこで出会うか
 
-MCP 公式 reference server として `npx -y @modelcontextprotocol/server-puppeteer` で起動でき、Claude Desktop / Code の設定で参照する場面に出てきます。Web 自動テストや PDF 量産で選ばれます。
+MCP 公式 reference server として Claude Desktop / Code の設定画面で参照する場面に出てきます。Web 自動テストや PDF 量産の選択肢として紹介されます。
 
 
 ## メイン図
@@ -68,19 +68,19 @@ Chrome 自動操作を AI エージェントのツールとして提供します
 
 ### 2. うれしさ
 
-スクリプトを書かずに AI への指示だけでブラウザ操作が完結します。
+スクリプト不要で AI 指示だけでブラウザ操作が完結します。
 
 ### 3. 注意点
 
-Chrome / Chromium 専用で、Firefox・Safari には対応しません。
+Chrome / Chromium 専用で Firefox・Safari は非対応です。
 
 ### 4. どこで役立つか
 
-PDF 量産・スクリーンショット取得・フォーム自動入力の場面で役立ちます。
+PDF 量産・スクリーンショット・フォーム自動入力の場面。
 
 ### 5. はじめに
 
-MCP Server（I-2）の仕組みと起動コマンドを把握すれば始められます。
+MCP Server（I-2）の仕組みと起動コマンドが前提知識です。
 
 ### 6. 深掘り先
 

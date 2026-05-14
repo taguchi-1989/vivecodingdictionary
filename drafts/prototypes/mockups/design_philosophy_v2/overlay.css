@@ -1008,7 +1008,6 @@
   .vbcd.page {
     width: 199mm;
     min-height: 281mm;
-    height: 281mm;
     overflow: visible;
     break-after: page;
     page-break-after: always;

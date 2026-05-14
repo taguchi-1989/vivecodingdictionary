@@ -19,7 +19,7 @@ related_terms:
   - GitHub
   - GitHub Actions
   - branch
-status: needs_review
+status: ready
 ---
 
 # Pull Request

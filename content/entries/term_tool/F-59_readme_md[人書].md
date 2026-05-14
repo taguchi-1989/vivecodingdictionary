@@ -19,7 +19,7 @@ related_terms:
   - GitHub
   - Markdown
   - CLAUDE.md
-status: needs_review
+status: ready
 ---
 
 # README.md

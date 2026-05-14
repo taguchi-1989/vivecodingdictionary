@@ -19,7 +19,7 @@ related_terms:
   - git
   - VS Code
   - bash
-status: needs_review
+status: ready
 ---
 
 # ripgrep (rg)

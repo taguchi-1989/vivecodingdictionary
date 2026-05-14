@@ -19,7 +19,7 @@ related_terms:
   - GitHub Actions
   - リポジトリ
   - Issue
-status: needs_review
+status: ready
 ---
 
 # GitHub

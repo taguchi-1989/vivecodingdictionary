@@ -29,7 +29,7 @@ related_terms:
   - Docker
 
 # ── 制作状態 ──
-status: needs_review
+status: ready
 ---
 
 <!-- エントリー雛形 v2（2ページ見開き想定、iter 22 準拠） -->
