@@ -150,6 +150,33 @@ def _split_into_sentences(text: str) -> list[str]:
     return [p.strip() for p in parts if p.strip()]
 
 
+def _soft_split_long_sentence(sentence: str, limit: int = 70) -> list[str]:
+    """1 文が長すぎる場合に「、」で割る。
+
+    全文長が limit 以下ならそのまま。超える場合は、中央寄りの「、」で 2 つに割る。
+    両側に最低 15 字以上残らない位置でしか割れない場合はあきらめてそのまま返す。
+    """
+    if len(sentence) <= limit:
+        return [sentence]
+    # 「、」候補位置を全部取り、両側 >= 15 字の条件で中央に最も近いものを選ぶ
+    n = len(sentence)
+    midpoint = n // 2
+    candidates: list[int] = []
+    for i, ch in enumerate(sentence):
+        if ch == "、" and 15 <= i <= n - 16:
+            candidates.append(i)
+    if not candidates:
+        return [sentence]
+    best = min(candidates, key=lambda i: abs(i - midpoint))
+    head = sentence[:best].rstrip("、").strip()
+    tail = sentence[best + 1:].lstrip("、").strip()
+    if not head or not tail:
+        return [sentence]
+    if head and head[-1] not in "。！？":
+        head += "。"
+    return [head, tail]
+
+
 def extract_tsumazuki_bullets(body: str) -> list[str]:
     """## 非エンジニアのつまずき の箇条書きを返す。
 
@@ -165,12 +192,10 @@ def extract_tsumazuki_bullets(body: str) -> list[str]:
         text = m.group(1).strip()
         if re.fullmatch(r"[（(]\s*著者記入欄[・·]?空?\s*[）)]", text):
             continue
-        # 句点で文分割。1 文しかなければ自体をそのまま使う。
-        sentences = _split_into_sentences(text)
-        if len(sentences) <= 1:
-            bullets.append(text)
-        else:
-            bullets.extend(sentences)
+        # 句点で文分割。さらに 70 字超の長文は「、」でソフト分割する。
+        sentences = _split_into_sentences(text) or [text]
+        for s in sentences:
+            bullets.extend(_soft_split_long_sentence(s))
         if len(bullets) >= 3:
             break
     return bullets[:3]
@@ -211,13 +236,12 @@ def extract_comment_items(body: str) -> dict[str, str]:
 
 
 def render_tsumazuki_items(bullets: list[str]) -> str:
-    """非エンジニアのつまずき 3 行ぶんの <li> を生成。空はプレースホルダ。"""
-    items: list[str] = []
-    for i in range(3):
-        if i < len(bullets):
-            items.append(f"<li>{escape(bullets[i])}</li>")
-        else:
-            items.append('<li class="placeholder">（著者記入欄・空）</li>')
+    """非エンジニアのつまずきの <li> を生成。
+
+    実コンテンツ件数ぶん（1〜3）だけ並べる。空はプレースホルダ 1 行のみ。"""
+    if not bullets:
+        return '<li class="placeholder">（著者記入欄・空）</li>'
+    items = [f"<li>{escape(b)}</li>" for b in bullets[:3]]
     return "\n              ".join(items)
 
 
