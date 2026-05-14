@@ -174,16 +174,16 @@ F-54,,commit,term_tool,git,ready,,content/entries/term_tool/F-54_commit[済].md
 F-55,,merge,term_tool,git,ready,,content/entries/term_tool/F-55_merge[済].md
 F-56,,.gitignore,term_tool,git,ready,,content/entries/term_tool/F-56_gitignore[済].md
 F-57,,リポジトリ,term_tool,git,needs_review,v2テンプレ書き起こし済（2026-04-30）,
-F-58,,git stash,term_tool,git,needs_review,,content/entries/term_tool/F-58_git_stash[人書].md
+F-58,,git stash,term_tool,git,needs_review,,content/entries/term_tool/F-58_git_stash[済].md
 F-59,,README.md,term_tool,git,needs_review,,content/entries/term_tool/F-59_readme_md[人書].md
 F-60,,GitHub,term_tool,github,needs_review,,content/entries/term_tool/F-60_github[人書].md
 F-61,,Pull Request,term_tool,github,needs_review,,content/entries/term_tool/F-61_pull_request[人書].md
 F-62,,GitHub Actions,term_tool,github,needs_review,CI/CD,content/entries/term_tool/F-62_github_actions[人書].md
 F-71,,ripgrep (rg),term_tool,search,needs_review,,content/entries/term_tool/F-71_ripgrep[人書].md
 F-80,,Node.js,term_tool,runtime,needs_review,,content/entries/term_tool/F-80_node_js[人書].md
-F-81,,bash,term_tool,shell,needs_review,,content/entries/term_tool/F-81_bash[人書].md
-F-82,,WSL,term_tool,shell,needs_review,,content/entries/term_tool/F-82_wsl[人書].md
-F-83,,PowerShell,term_tool,shell,needs_review,,content/entries/term_tool/F-83_powershell[人書].md
+F-81,,bash,term_tool,shell,needs_review,,content/entries/term_tool/F-81_bash[済].md
+F-82,,WSL,term_tool,shell,needs_review,,content/entries/term_tool/F-82_wsl[済].md
+F-83,,PowerShell,term_tool,shell,needs_review,,content/entries/term_tool/F-83_powershell[済].md
 F-84,,Ghostty,term_tool,terminal,needs_review,,content/entries/term_tool/F-84_ghostty[人書].md
 F-85,,SuperClaude Framework,term_tool,framework,needs_review,Claude Code 拡張 OSS（Anthropic 非公式）v2テンプレ書き起こし済（2026-04-30）,content/entries/term_tool/F-85_superclaude_framework[人書].md
 F-86,,ollama,term_tool,runtime,needs_review,ローカルLLM,content/entries/term_tool/F-86_ollama[人書].md

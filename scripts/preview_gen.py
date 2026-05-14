@@ -144,6 +144,79 @@ def extract_subsection(body: str, parent_heading: str, child_heading: str) -> st
     return m.group(1).strip() if m else ""
 
 
+def extract_tsumazuki_bullets(body: str) -> list[str]:
+    """## 非エンジニアのつまずき の各行（先頭 - の箇条書き）を返す。空行は除去。"""
+    section = extract_section(body, "非エンジニアのつまずき")
+    bullets: list[str] = []
+    for line in section.splitlines():
+        m = re.match(r"^\s*-\s+(.+)$", line)
+        if not m:
+            continue
+        text = m.group(1).strip()
+        # （著者記入欄・空）プレースホルダはスキップ
+        if re.fullmatch(r"[（(]\s*著者記入欄[・·]?空?\s*[）)]", text):
+            continue
+        bullets.append(text)
+    return bullets
+
+
+COMMENT_LABELS = ["第一印象", "良い点", "ダメな点", "誰向けか"]
+
+
+def extract_comment_items(body: str) -> dict[str, str]:
+    """## 私のコメント の 4 ラベル（第一印象/良い点/ダメな点/誰向けか）の値を抽出。
+
+    フォーマット例:
+        - 🙂 第一印象: 〜
+        - 👍 良い点: 〜
+        - 👎 ダメな点: 〜
+        - 👥 誰向けか: 〜
+
+    絵文字の有無や `: 〜` の半角全角を吸収。値が空またはプレースホルダの場合は空文字を返す。
+    """
+    section = extract_section(body, "私のコメント")
+    result: dict[str, str] = {label: "" for label in COMMENT_LABELS}
+    for line in section.splitlines():
+        m = re.match(r"^\s*-\s*(.+)$", line)
+        if not m:
+            continue
+        content = m.group(1).strip()
+        for label in COMMENT_LABELS:
+            # 行内に「ラベル:」が含まれていれば後続を値として取り出す
+            pat = re.compile(rf"{re.escape(label)}\s*[:：]\s*(.*)$")
+            mm = pat.search(content)
+            if mm:
+                value = mm.group(1).strip()
+                if re.fullmatch(r"[（(]\s*著者記入欄[・·]?空?\s*[）)]", value):
+                    value = ""
+                result[label] = value
+                break
+    return result
+
+
+def render_tsumazuki_items(bullets: list[str]) -> str:
+    """非エンジニアのつまずき 3 行ぶんの <li> を生成。空はプレースホルダ。"""
+    items: list[str] = []
+    for i in range(3):
+        if i < len(bullets):
+            items.append(f"<li>{escape(bullets[i])}</li>")
+        else:
+            items.append('<li class="placeholder">（著者記入欄・空）</li>')
+    return "\n              ".join(items)
+
+
+def render_comment_items(values: dict[str, str]) -> str:
+    """私のコメント 4 ラベルぶんの <li> を生成。空はプレースホルダ。"""
+    items: list[str] = []
+    for label in COMMENT_LABELS:
+        v = values.get(label, "")
+        if v:
+            items.append(f'<li><div><span class="cl">{label}:</span>{escape(v)}</div></li>')
+        else:
+            items.append(f'<li><div><span class="cl">{label}:</span>（著者記入欄・空）</div></li>')
+    return "\n              ".join(items)
+
+
 def strip_md(text: str) -> str:
     """HTML コメント除去・Markdown 装飾除去・空白整理"""
     text = re.sub(r"<!--.*?-->", "", text, flags=re.DOTALL)
@@ -704,9 +777,7 @@ body {{ margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: va
           <div class="section-heading"><span class="label">非エンジニアのつまずき</span></div>
           <div class="list-block">
             <ul>
-              <li class="placeholder">（著者記入欄・空）</li>
-              <li class="placeholder">（著者記入欄・空）</li>
-              <li class="placeholder">（著者記入欄・空）</li>
+              {tsumazuki_items}
             </ul>
           </div>
         </div>
@@ -714,10 +785,7 @@ body {{ margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: va
           <div class="section-heading"><span class="label">私のコメント</span></div>
           <div class="comment-block">
             <ul>
-              <li><div><span class="cl">第一印象:</span>（著者記入欄・空）</div></li>
-              <li><div><span class="cl">良い点:</span>（著者記入欄・空）</div></li>
-              <li><div><span class="cl">ダメな点:</span>（著者記入欄・空）</div></li>
-              <li><div><span class="cl">誰向けか:</span>（著者記入欄・空）</div></li>
+              {comment_items}
             </ul>
           </div>
         </div>
@@ -889,6 +957,9 @@ def render_page(entry: dict, prev: dict | None, next_: dict | None, drawer_html:
     ponchi_title, ponchi_caption = extract_ponchi(body, entry["title"])
     ponchi_svg, ponchi_is_real = load_ponchi_svg(entry_id)
 
+    tsumazuki_items = render_tsumazuki_items(extract_tsumazuki_bullets(body))
+    comment_items = render_comment_items(extract_comment_items(body))
+
     ref_url, ref_date = extract_reference_url(body)
 
     title_sub_html = (
@@ -940,6 +1011,8 @@ def render_page(entry: dict, prev: dict | None, next_: dict | None, drawer_html:
         related_pills=related_html,
         ref_url=escape(ref_url or "（未記入）"),
         ref_date=escape(ref_date or "—"),
+        tsumazuki_items=tsumazuki_items,
+        comment_items=comment_items,
         drawer=drawer_html,
         nav_bar=render_prev_next_bar(prev, next_),
     )
