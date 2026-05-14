@@ -172,8 +172,7 @@ def _soft_split_long_sentence(sentence: str, limit: int = 70) -> list[str]:
     tail = sentence[best + 1:].lstrip("、").strip()
     if not head or not tail:
         return [sentence]
-    if head and head[-1] not in "。！？":
-        head += "。"
+    # head の末尾には何も足さない（「、」での分割は連用形の続きが多いため句点を補うと不自然）
     return [head, tail]
 
 
