@@ -108,7 +108,7 @@ NVIDIA, LPU, GroqCloud
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- xAI の Grok（グロック）と Groq（グロック）の区別が非常に分かりづらいです。
+- xAI の Grok と Groq の区別が非常に分かりづらいです。
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント

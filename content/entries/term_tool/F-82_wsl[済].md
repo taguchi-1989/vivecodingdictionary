@@ -107,9 +107,9 @@ bash、Docker、VS Code Remote
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- Claude Code を Windows で使おうとすると「まず WSL を入れてください」と言われます。
-- WSL の構築は Windows ユーザーには特に理解しづらい部分です。
+- Windows で Claude Code を使おうとすると WSL を入れるよう促されます。
 - OS は Windows なのにどこに立ち上げるのかという感覚がピンと来ませんでした。
+-
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント

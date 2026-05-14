@@ -103,7 +103,7 @@ git fetch、git merge、rebase、conflict 解消。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- PC を変えたり Web 環境を使い始めると pull 忘れが増えました。「どの環境が最新か」という作法はミスを重ねないと身につかないと感じます。
+- 環境を変えると pull 忘れが増え、どこが最新か混乱しがちです。
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント

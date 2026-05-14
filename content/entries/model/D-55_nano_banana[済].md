@@ -108,8 +108,8 @@ Imagen、DALL-E、Stable Diffusion
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 正式名「Gemini 2.5 Flash Image」が長く、API 設定でどれを選ぶか迷いました
-- Gemini で画像生成を頼んでもうまく出ないことがあり、動作が不安定に感じました
+- 正式名が長く API 設定でどれを選ぶか迷いました。
+- 画像生成を頼んでもうまく出ないことがあり不安定に感じました。
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント

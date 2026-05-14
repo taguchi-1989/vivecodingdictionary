@@ -109,8 +109,8 @@ NVIDIA、H100、CUDA
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- NVIDIA の名前は聞きますが、Jensen Huang 個人の知名度は一般にはそこまで高くない印象です
-- どういう立場の人で、どういう思想で経営しているのかがまだ把握しきれていません
+- NVIDIA は知っていても Jensen Huang 個人の知名度は一般に高くない印象です。
+- どういう思想で経営しているのかがまだ把握しきれていません。
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント

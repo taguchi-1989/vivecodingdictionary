@@ -106,7 +106,7 @@ AGI（J-1）、ASI（J-4）、AI 倫理（J-50）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- AGI からつながる流れと考えると分かるようで、本当にその順番（AGI → ASI → Singularity）で進んでいくのかは、自分の中で結構疑問が残る言葉です
+- AGI → ASI → Singularity の順番通りに進むのか、自分の中に疑問が残ります。
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント

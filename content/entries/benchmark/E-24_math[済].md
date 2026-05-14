@@ -109,7 +109,7 @@ GSM8K、AIME、Thinking モデル
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- レベル差があるとされても、Level 5 が他のベンチマークでどの位置なのか分かりません
+- Level 5 が他ベンチマークでどの位置かイメージしにくいです。
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント

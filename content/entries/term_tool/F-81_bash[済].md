@@ -115,9 +115,9 @@ WSL、PowerShell、シェルスクリプト
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- Windows のコマンドプロンプトに bash のコマンドをコピペしても動きません。
-- bash は WSL などの Linux 環境で動くという点を理解する必要があります。
-- コマンドプロンプトと PowerShell も似ていてよく見るのに理解できませんでした。
+- コマンドプロンプトに bash コマンドをコピペしても動きません。
+- bash は WSL などの Linux 環境で動くという点の理解が必要です。
+- コマンドプロンプトと PowerShell も似ていて理解できませんでした。
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント

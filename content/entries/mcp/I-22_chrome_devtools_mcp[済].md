@@ -106,7 +106,7 @@ MCP Server、Playwright MCP、Chrome DevTools Protocol
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- Playwright との差分が分かりづらいです。どちらを使うか、両方要るかが見えません。
+- Playwright との差分が分かりにくく、どちらを使うか判断が難しいです。
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント

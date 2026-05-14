@@ -108,7 +108,7 @@ ASI、Singularity、ARC-AGI
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 定義が曖昧で分かりづらく、いま自分が業務で使っている AI システムから何がどう変わるのかをイメージするのが難しいです
+- 定義が曖昧で、現在の AI から何がどう変わるのかをイメージしにくいです。
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント

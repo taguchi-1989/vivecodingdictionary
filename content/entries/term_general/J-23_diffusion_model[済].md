@@ -104,8 +104,8 @@ Stable Diffusion（D-54）、DDPM 論文、U-Net
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- Stable Diffusion をはじめとする拡散モデルで画像生成が出てきた当初は分かりやすかったです。
-- 最近の GPT 系の画像生成や動画生成と、どこまでが拡散モデルでどこからが別系統なのかが、現状はっきり区別しきれません。
+- Stable Diffusion で画像生成が出てきた当初は分かりやすかったです
+- GPT 系の画像・動画生成との境界がはっきり区別しきれません
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント

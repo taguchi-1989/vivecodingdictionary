@@ -107,7 +107,7 @@ OpenAI、Azure OpenAI Service、Phi
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 何かあるとすぐ課金、という Microsoft の企業体質が Copilot にも表れています。
+- すぐ課金という Microsoft の企業体質が Copilot にも表れています。
 - 料金体系に迷いを感じます。無料プランがいつ有料化されるか不安です。
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->

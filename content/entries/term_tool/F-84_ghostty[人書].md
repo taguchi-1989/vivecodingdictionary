@@ -108,9 +108,8 @@ bash、WSL、Warp
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 開発系 YouTuber が推しているのは知っていましたが、Windows では入れられませんでした。
-- Mac ユーザー限定の面もあり、VS Code のターミナルで代用しているとの差がわかりませんでした。
--
+- 開発系 YouTuber が推しているのは知っていましたが、Windows では入れられませんでした
+- Mac 限定な面もあり、VS Code のターミナルとの差がわかりませんでした
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント

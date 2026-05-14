@@ -104,7 +104,7 @@ AGI、ARC-AGI、GPQA
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- Gemini 2.5 プレビュー発表時には IQ 130 超えと出ていたのが、後日 110 程度に落ち着くなど、計測タイミングで結構ばらつきがあります
+- Gemini 2.5 プレビューで IQ 130 超えと出ていたのが後日 110 程度に落ち着くなど、ばらつきがあります。
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント

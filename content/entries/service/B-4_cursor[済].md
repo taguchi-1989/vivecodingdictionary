@@ -115,9 +115,9 @@ Composer（D-35）、VS Code（F-30）、GitHub Copilot（B-5）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- Cursor を入れても VS Code との違いがよくわかりませんでした
-- 学習に使われると聞き、会社で使っていいかが不明でした
-- 本格的に触る前に Claude Code でバイブコーディングする流れになり、自分で書かなくなって出番がありませんでした
+- Cursor を入れても VS Code との違いがよくわかりませんでした。
+- 学習に使われると聞き、会社で使っていいかが不明でした。
+- Claude Code に移行して自分で書かなくなり、出番がありませんでした。
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント

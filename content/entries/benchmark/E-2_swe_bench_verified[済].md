@@ -103,7 +103,7 @@ SWE-Bench、Multi-SWE-Bench、HumanEval
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- SWE-bench がよく分からない状態で「Verified」と言われても何が違うのか分かりません。
+- SWE-Bench 自体が不明瞭なまま「Verified」と言われても違いが掴めません。
 - 何を測っているのかがイメージしにくいです。
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->

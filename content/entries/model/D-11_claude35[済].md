@@ -105,9 +105,9 @@ Artifacts、Computer use、Claude 4 系。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- Claude 3.5 Sonnet には初代と v2 があり、どちらの話か分かりにくいです
-- 学習が古い LLM に聞くと今でも「最新は Claude 3.5 Sonnet」と返ってきて、現役モデルの把握がずれます
-- Opus が最上位と言われがちですが、3.5 系では Sonnet のほうが先行していてティア＝性能の理解とずれます
+- 3.5 Sonnet に初代と v2 があり、どちらの話か分かりにくいです。
+- 古い LLM が「最新は 3.5 Sonnet」と返し現役把握がずれます。
+- Opus が最上位と思われがちですが 3.5 系は Sonnet が先行。
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント

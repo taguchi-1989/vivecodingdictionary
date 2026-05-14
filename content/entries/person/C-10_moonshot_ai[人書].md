@@ -106,9 +106,9 @@ Kimi（D-44）、DeepSeek V3（D-46）、Qwen（D-43）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 「六小虎」という呼び方が初見では意味が掴みづらく、構成 6 社（Zhipu AI ／ MiniMax ／ Baichuan ／ 01.AI ／ Moonshot AI ／ StepFun）と各社の代表モデル名がいっぺんに出てくると整理しきれません
-- 会社名（Moonshot AI）と代表モデル名（Kimi）が直感的につながらず、ニュースで Kimi だけ見た時に「どこの会社が出している？」となりがちです
-- 中国系 LLM 企業（Z.ai／GLM、Moonshot AI／Kimi、DeepSeek 等）が並ぶと、企業とモデルの対応関係を頭の中で線で結ぶのに少し時間がかかります
+- 「六小虎」の 6 社名と代表モデルがいっぺんに出てくると整理しきれません。
+- 社名と代表モデル名が結びつかず「どこの会社？」となりがちです。
+- 中国系企業と代表モデルの対応関係を線で結ぶのに時間がかかります。
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント

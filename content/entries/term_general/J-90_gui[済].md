@@ -105,7 +105,7 @@ CLI、Computer Use、VLM
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
-- 普段モニタとマウスで操作している画面のことを GUI と呼ぶ、と言われても、あまりに当たり前すぎて逆に理解しづらい。
+- 当たり前すぎる操作を GUI と名づけられると、逆に理解しづらいです。
 - CLI と対比しないと、何が GUI なのかが掴みにくい。
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
