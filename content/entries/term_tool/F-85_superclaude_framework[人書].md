@@ -32,11 +32,11 @@ Claude Code をコミュニティが拡張した非公式 OSS フレームワー
 
 ## 何をしてくれるか
 
-`/architect` `/refactor` などの専用スラッシュコマンドと、architect / frontend / qa といった専門ペルソナを Claude Code に追加し、工程ごとの動作を短いコマンドで呼び出せます。
+`/architect` `/refactor` などのスラッシュコマンドと専門ペルソナを Claude Code に追加し、工程ごとの動作を短いコマンドで呼び出せます。
 
 ## どこで出会うか
 
-GitHub（NomenAK/SuperClaude）で公開されており、`pip` でインストールします。導入後は `.claude/` 配下に定義が追加され、Claude Code の起動時から使えます。
+GitHub で公開されており、`pip` でインストールします。導入後は `.claude/` 配下に定義が追加され、Claude Code の起動時から使えます。
 
 ## メイン図
 

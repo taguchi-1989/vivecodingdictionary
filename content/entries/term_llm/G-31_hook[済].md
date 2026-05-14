@@ -32,11 +32,11 @@ status: ready
 
 ## 何をしてくれるか
 
-Claude Code がツールを呼ぶ直前・直後に、指定したシェルスクリプトを自動実行する仕組みです。「保存のたびに validator を走らせる」「応答後に Slack へ通知する」処理を AI の返答と切り離して動かせます。
+Claude Code がツールを呼ぶ直前・直後にシェルスクリプトを自動実行する仕組みです。validator 実行や通知など、AI と切り離した処理を差し込めます。
 
 ## どこで出会うか
 
-`settings.json`（G-23）の `hooks` 項目として登場します。発火タイミングは PreToolUse・PostToolUse など 4 種あり、ツール呼び出しの前後に処理を挟みたい場面で設定します。
+`settings.json` の `hooks` 項目として登場します。発火タイミングは PreToolUse・PostToolUse の 4 種あり、ツール前後に処理を挟む場面で設定します。
 
 ## メイン図
 

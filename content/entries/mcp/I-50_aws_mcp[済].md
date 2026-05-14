@@ -25,17 +25,17 @@ status: ready
 
 ## tagline
 
-AWS（Amazon Web Services）のリソースを Claude などから操作できる公式 MCP Server 群です。
+AWS リソースを AI クライアントから操作できる AWS 公式の MCP Server 群です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-AWS が公式リポジトリ `awslabs/mcp` で公開する MCP Server 群の総称です。CDK（クラウド開発キット）操作・CloudFormation 検証・Bedrock Knowledge Base 検索など用途別に複数の Server が用意されています。
+AWS 公式の MCP Server 群の総称です。CDK 操作・CloudFormation 検証・Bedrock 検索など用途別に Server が用意されています。
 
 ## どこで出会うか
 
-Claude Code など MCP 対応ツールで「インフラ作業を AI に任せたい」場面で登場します。Server ごとに個別起動し、必要なものだけ追加する構成が一般的です。
+Claude Code など MCP 対応ツールで「インフラ作業を AI に任せたい」場面で登場します。必要な Server だけを個別に起動して使います。
 
 ## メイン図
 
@@ -61,23 +61,23 @@ MCP を経由して Claude と AWS の各サービスがつながる構造を示
 
 ### 1. 役割
 
-Claude から AWS リソースを操作・参照するための公式 MCP Server 群です。
+AI から AWS リソースを操作・参照するための公式 MCP Server 群。
 
 ### 2. うれしさ
 
-CLI を手打ちせず、自然言語で CDK 差分確認や S3 設定参照ができます。
+CLI を手打ちせず自然言語で CDK 差分確認や S3 設定参照ができます。
 
 ### 3. 注意点
 
-本番アカウントに直接繋ぐと事故の元で、最初は読み取り専用ロールが安全です。
+本番アカウントへの直接接続は事故の元で、読み取り専用ロールが安全です。
 
 ### 4. どこで役立つか
 
-インフラ構築・運用の補助と、Bedrock RAG 検索のテストに向いています。
+インフラ構築・運用補助と Bedrock RAG 検索のテストに向いています。
 
 ### 5. はじめに
 
-必要な Server だけを選んで入れる点と、認証に AWS CLI のプロファイルを使う点です。
+必要な Server だけを選び、認証に AWS CLI プロファイルを使う点を確認します。
 
 ### 6. 深掘り先
 

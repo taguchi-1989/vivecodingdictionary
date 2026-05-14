@@ -33,7 +33,7 @@ LLM に渡す情報・履歴の全体を設計する技術です。Prompt Engine
 
 ## 何をしてくれるか
 
-LLM（大規模言語モデル）が参照する Context（文脈）の「何を・どの順で・どれだけ渡すか」を設計します。Prompt Engineering より広く、System Prompt や履歴など全体の構造を整えます。
+LLM に「何を・どの順で・どれだけ渡すか」を設計します。Prompt Engineering より広く、System Prompt や履歴など全体の構造を整えます。
 
 ## どこで出会うか
 

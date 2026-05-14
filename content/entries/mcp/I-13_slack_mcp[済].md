@@ -76,7 +76,7 @@ Slack を AI から操作する MCP の公式 reference server です。
 
 ### 5. はじめに
 
-Slack App の作成と OAuth スコープ（読み取り・書き込み）の違いを把握します。
+Slack App 作成と OAuth スコープの読み書き区別を把握します。
 
 ### 6. 深掘り先
 

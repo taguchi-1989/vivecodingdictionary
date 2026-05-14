@@ -63,7 +63,7 @@ Gemini 2.0 の主要モデルを時系列に並べ、Flash・Pro の役割と登
 
 ### 1. 役割
 
-Google の AI モデル第 2 世代で、Flash と Pro の 2 段階構成です。
+Google の AI モデル第 2 世代で Flash と Pro の 2 段階構成です。
 
 ### 2. うれしさ
 

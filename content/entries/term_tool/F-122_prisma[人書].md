@@ -26,17 +26,17 @@ status: needs_review
 
 ## tagline
 
-TypeScript（F-2）向けの型安全な ORM（Object-Relational Mapping）です。
+TypeScript 向けの型安全な ORM（Object-Relational Mapping）です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-`schema.prisma` にテーブル定義を書くと、TypeScript 用の DB クライアントを自動生成します。SQL を直接書かずに、型補完付きでデータを取得・更新できます。
+`schema.prisma` にテーブル定義を書くと DB クライアントを自動生成します。SQL を書かずに型補完付きでデータを取得・更新できます。
 
 ## どこで出会うか
 
-Next.js（F-11）や Express の TypeScript プロジェクトで登場します。`schema.prisma` の構文は Claude や Cursor が読み取りやすく、クエリコードまで補完してもらえます。
+Next.js や Express の TypeScript プロジェクトで登場します。`schema.prisma` は AI が読み取りやすく、クエリコードまで補完できます。
 
 ## メイン図
 
@@ -75,7 +75,7 @@ TypeScript から DB を型安全に操作する ORM です。
 
 ### 3. 注意点
 
-`migrate dev` は開発用で、本番は `migrate deploy` を使います。
+開発は `migrate dev`、本番は `migrate deploy` と使い分けます。
 
 ### 4. どこで役立つか
 
@@ -83,7 +83,7 @@ Next.js や Express の API 実装で DB 操作を安全にできます。
 
 ### 5. はじめに
 
-`schema.prisma` の書き方と `prisma generate` の役割を把握します。
+`schema.prisma` の書き方と `prisma generate` の役割を先に把握します。
 
 ### 6. 深掘り先
 

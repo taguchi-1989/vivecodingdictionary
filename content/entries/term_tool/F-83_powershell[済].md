@@ -30,7 +30,7 @@ status: ready
 
 ## tagline
 
-Microsoft 製のシェル兼スクリプト言語です。Windows 標準搭載で、7 系は macOS/Linux にも対応します。
+Microsoft 製のシェル兼スクリプト言語。Windows 標準搭載で 7 系は macOS/Linux にも対応します。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 

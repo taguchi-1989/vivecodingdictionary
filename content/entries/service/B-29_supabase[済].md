@@ -32,12 +32,12 @@ OSS の BaaS（Backend as a Service）です。PostgreSQL を中核に据えた 
 
 ## 何をしてくれるか
 
-DB・認証・ストレージ・Edge Functions・Realtime を 1 サービスで提供します。PostgreSQL ベースで、型生成対応のクライアント SDK から操作できます。
+DB・認証・ストレージ・Edge Functions・Realtime を 1 サービスで提供します。PostgreSQL ベースで型生成対応 SDK から操作できます。
 
 
 ## どこで出会うか
 
-v0（B-9）や Bolt.new（B-11）がフルスタック雛形を出すとき、DB ＋ Auth に Supabase が選ばれます。「Supabase のプロジェクト URL を教えて」と AI に聞かれたら出会うサインです。
+v0 や Bolt.new がフルスタック雛形を出すとき DB ＋ Auth に選ばれます。「Supabase のプロジェクト URL を教えて」と AI に聞かれたら出会うサインです。
 
 
 ## メイン図

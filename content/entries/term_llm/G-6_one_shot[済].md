@@ -32,11 +32,11 @@ status: ready
 
 ## 何をしてくれるか
 
-プロンプト（指示文）に出力例を 1 件だけ添えることで、AI の返答フォーマットや文体を揃えます。「例: Hello → こんにちは」と示すだけで、Claude や GPT が同じ書き方で応答します。
+出力例を 1 件だけ添えることで AI の返答フォーマットを揃えます。「例: Hello → こんにちは」と示すだけで同じ書き方で応答します。
 
 ## どこで出会うか
 
-Prompt Engineering（G-10）の解説や Few-shot Learning（G-13）との対比で登場します。「例なし＝Zero-shot、例 1 つ＝One-shot、例数個＝Few-shot」という 3 段階の整理で紹介されることが多いです。
+Prompt Engineering の解説で登場します。「Zero-shot・One-shot・Few-shot」の 3 段階整理の中の 1 つとして紹介されます。
 
 ## メイン図
 
@@ -87,7 +87,7 @@ Zero-shot との違いを確認すると理解が早まります。
 
 ### 6. 深掘り先
 
-Few-shot Learning、Chain of Thought、Prompt Engineering
+Few-shot Learning、Prompt Engineering、Zero-shot
 
 ## 開発フローでの位置（必須）
 

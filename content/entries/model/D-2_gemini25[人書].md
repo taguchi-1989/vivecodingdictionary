@@ -32,11 +32,11 @@ status: needs_review
 
 ## 何をしてくれるか
 
-テキスト・コード・画像をまとめて処理できます。既定で「思考（Thinking）」機能が組み込まれ、追加トークンで推論を深められます。コンテキスト長は 100 万トークン超です。
+テキスト・コード・画像をまとめて処理できます。既定で「思考（Thinking）」機能が組み込まれ、コンテキスト長は 100 万トークン超です。
 
 ## どこで出会うか
 
-Cursor や Claude Code のモデル選択画面で「Gemini 2.5 Pro」が並ぶことがあります。Google AI Studio では試用でき、企業用途は Vertex AI（B-27）経由でも使えます。
+Cursor や Claude Code のモデル選択画面で「Gemini 2.5 Pro」として並びます。Google AI Studio で試用でき、企業用途は Vertex AI 経由でも使えます。
 
 ## メイン図
 

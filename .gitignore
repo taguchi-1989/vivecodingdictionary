@@ -46,3 +46,8 @@ drafts/prototypes/preview/
 
 # ルート直下の一時スクリーンショット（Playwright MCP の撮影結果）
 /*.png
+
+# 一時作業ディレクトリ
+drafts/pdf/
+ledgers/_compression_batches/
+scripts/_batch_*.py

@@ -26,7 +26,7 @@ status: ready
 
 ## tagline
 
-General Language Model の略。中国・Z.ai が開発するオープンウェイト LLM ファミリーです。
+General Language Model の略。Z.ai（中国）が開発するオープンウェイト LLM 群です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 

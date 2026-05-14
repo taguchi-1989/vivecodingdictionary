@@ -26,18 +26,18 @@ status: needs_review
 
 ## tagline
 
-Document Object Model の略。HTML をツリー化し JavaScript から操作する規格です。
+Document Object Model の略。HTML をツリー化して JavaScript から操作する規格です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-ブラウザが HTML を解析すると、各タグがツリー構造（DOM ツリー）になります。JavaScript から `querySelector()` などで表示中のページを書き換えられます。
+ブラウザが HTML を解析すると各タグがツリー構造になります。JavaScript から `querySelector()` などで表示中のページを書き換えられます。
 
 
 ## どこで出会うか
 
-AI にフロントエンドを頼むと、生成コードに `getElementById()` や `addEventListener()` が現れます。「ボタンを押したら動く」の舞台が DOM で、Virtual DOM もここが出発点です。
+AI にフロントエンドを頼むと `getElementById()` や `addEventListener()` が現れます。「ボタンを押したら動く」の舞台が DOM です。
 
 
 ## メイン図
@@ -80,7 +80,7 @@ AI 生成コードのデバッグ時に DOM ツリーの構造を読む場面で
 
 ### 5. はじめに
 
-`document.querySelector` でノードを取得する基本操作を押さえます。
+`document.querySelector` でノードを取得する基本操作から入ります。
 
 ### 6. 深掘り先
 

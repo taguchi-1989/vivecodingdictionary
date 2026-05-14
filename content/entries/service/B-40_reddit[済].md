@@ -31,7 +31,7 @@ status: ready
 
 ## 何をしてくれるか
 
-投稿・コメント・upvote（賛成票）/ downvote（反対票）で話題の優先順が決まります。r/ChatGPT や r/LocalLLaMA など AI ツール別の板があり、使った人の体感レビューやバグ報告が集まります。
+投稿・コメント・upvote で話題の優先順が決まります。r/ChatGPT や r/LocalLLaMA など AI ツール別の板があり、体感レビューやバグ報告が集まります。
 
 
 ## どこで出会うか

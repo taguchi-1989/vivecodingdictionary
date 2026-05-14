@@ -33,11 +33,11 @@ API キーなどを `KEY=VALUE` 形式で書き並べた設定ファイル。プ
 
 ## 何をしてくれるか
 
-`dotenv` 系ライブラリで起動時に読み込まれ、コード中から `process.env.KEY` や `os.environ['KEY']` で値を参照できます。ソースコードに秘密情報を直書きせずに済みます。
+`dotenv` 系ライブラリで起動時に読み込まれ、コード中から `process.env.KEY` などで値を参照できます。ソースコードに秘密情報を直書きせずに済みます。
 
 ## どこで出会うか
 
-AI ツールに API キーを渡す場面で登場します。Claude Code の MCP 設定や OpenAI 利用でも前提となり、`.gitignore` で除外し `.env.example` を残すのが定番です。
+AI ツールに API キーを渡す場面で登場します。MCP 設定や OpenAI 利用でも前提となり、`.gitignore` で除外し `.env.example` を残すのが定番です。
 
 ## メイン図
 

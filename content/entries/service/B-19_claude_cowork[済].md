@@ -35,7 +35,7 @@ Claude.ai のチーム協働機能です。Workspace と Project で組織内の
 
 ## どこで出会うか
 
-Claude.ai の Team・Enterprise プランで「Workspaces」「Projects」として現れます。チームで「プロンプトを揃えたい」「議事録共有に使いたい」という話題で名前が出ます。
+Claude.ai の Team・Enterprise プランで「Workspaces」「Projects」として現れます。プロンプト統一や議事録共有の話題で名前が出ます。
 
 ## メイン図
 

@@ -32,11 +32,11 @@ Google が提供する Web ページ品質の自動診断ツールです。
 
 ## 何をしてくれるか
 
-Performance / Accessibility / Best Practices / SEO / PWA の 5 項目を 0〜100 点で評価します。Chrome の DevTools から即使え、CLI や CI（GitHub Actions など）にも組み込めます。
+Performance・Accessibility・SEO など複数項目を 0〜100 点で評価します。Chrome の DevTools から即使え、CLI や CI にも組み込めます。
 
 ## どこで出会うか
 
-Chrome の DevTools の「Lighthouse」タブを押すと診断が始まります。AI で書いたコードが本当に速くて検索エンジンに読まれるか確かめる手順として登場し、PR ごとの自動計測でも使われます。
+Chrome の DevTools の「Lighthouse」タブを押すと診断が始まります。AI で書いたコードの品質確認や、PR ごとの自動計測でも使われます。
 
 ## メイン図
 

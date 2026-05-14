@@ -35,7 +35,7 @@ status: needs_review
 
 ## どこで出会うか
 
-iOS・Android のアプリや Chrome・Firefox の内部で広く採用されています。ローカル開発で「サーバなしで DB を試したい」場面でもよく選ばれます。SQLite MCP（I-41）経由で AI が直接 SQL を実行する事例も増えています。
+iOS・Android・Chrome の内部で採用されています。ローカル開発で「サーバなしで DB を試したい」場面や、SQLite MCP 経由で AI が SQL を実行する場面でも使われます。
 
 ## メイン図
 

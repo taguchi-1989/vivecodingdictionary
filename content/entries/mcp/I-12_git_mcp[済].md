@@ -37,11 +37,11 @@ status: ready
 
 ## 何をしてくれるか
 
-`git status` / `git diff` / `git log` / `git commit` など主要な操作を、Claude が「git 専用ツール群」として宣言的に呼び出せます。Python 製で `mcp-server-git` という名称で公開されています。
+`git status` / `git diff` / `git log` / `git commit` など主要な操作を Claude が「git 専用ツール群」として呼び出せます。Python 製で `mcp-server-git` として公開されています。
 
 ## どこで出会うか
 
-Bash の全権限を渡せない職場や CI 環境で、git 操作だけ MCP 経由に絞りたいときに登場します。`uvx mcp-server-git` で起動し、Claude に接続して使います。
+Bash 全権限を渡せない職場や CI 環境で git 操作だけ MCP 経由に絞りたいときに登場します。`uvx mcp-server-git` で起動して使います。
 
 ## メイン図
 

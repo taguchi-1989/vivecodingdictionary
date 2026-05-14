@@ -32,11 +32,11 @@ status: ready
 
 ## 何をしてくれるか
 
-Agile（アジャイル）は短い反復・変化への追従・対話の重視を柱とする価値観です。Scrum（スクラム）はその代表的な型で、Sprint（スプリント）単位で動くものを届ける枠組みを指します。
+Agile は短い反復・変化への追従を柱とする価値観です。Scrum はその代表的な型で、Sprint 単位で動くものを届ける枠組みを指します。
 
 ## どこで出会うか
 
-チームの朝会（Daily Stand-up）や Sprint Review の案内、Backlog（バックログ）管理ツールの画面で目にします。AI ツール導入でも「1 Sprint 試して Retrospective（振り返り）で評価する」使い方と相性が良いです。
+チームの朝会（Daily Stand-up）や Sprint Review の案内・Backlog 管理ツールで目にします。AI ツール導入でも「1 Sprint 試して Retrospective で評価する」使い方と相性が良いです。
 
 ## メイン図
 

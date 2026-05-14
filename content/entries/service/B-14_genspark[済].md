@@ -31,11 +31,11 @@ status: ready
 
 ## 何をしてくれるか
 
-質問を入力すると複数の LLM（大規模言語モデル）と Web 検索を組み合わせ、Sparkpage（回答まとめページ）として返します。AI Slides によるスライド化や Super Agent でのタスク実行など、出力の形を選べます。
+複数の LLM と Web 検索を組み合わせ、Sparkpage（回答まとめページ）として返します。AI Slides でスライド化や Super Agent でのタスク実行など出力形式を選べます。
 
 ## どこで出会うか
 
-「Perplexity のように検索 AI を試したいが、スライドやエージェントも使いたい」と思ったときに名前が挙がります。比較記事で Perplexity や ChatGPT Search と並んで紹介されます。
+「Perplexity より幅広い出力形式を試したい」と思ったときに名前が挙がります。比較記事で ChatGPT Search と並んで紹介されます。
 
 ## メイン図
 
@@ -76,7 +76,7 @@ status: ready
 
 ### 5. はじめに
 
-Sparkpage の仕組みと Perplexity との違いを押さえると使い分けやすいです。
+Sparkpage の仕組みと Perplexity との違いを押さえると使い分けやすくなります。
 
 ### 6. 深掘り先
 

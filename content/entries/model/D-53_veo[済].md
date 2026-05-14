@@ -35,7 +35,7 @@ Google DeepMind が開発する動画生成 AI モデルです。テキストや
 
 ## どこで出会うか
 
-Gemini アプリの動画生成機能、Google AI Studio、Vertex AI（クラウド API）として利用できます。映像制作ツール Flow（D-57）の基盤モデルでもあり、広告・コンテンツ制作の文脈で名前が挙がります。
+Gemini アプリ・Google AI Studio・Vertex AI として利用できます。映像制作ツール Flow の基盤モデルでもあり、広告・コンテンツ制作で名前が挙がります。
 
 ## メイン図
 

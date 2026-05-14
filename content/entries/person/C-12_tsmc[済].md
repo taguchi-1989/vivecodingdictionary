@@ -26,7 +26,7 @@ status: ready
 
 ## tagline
 
-Taiwan Semiconductor Manufacturing Company の略。他社の設計をもとに半導体を製造するファウンドリ専業の代表企業です。
+Taiwan Semiconductor Manufacturing Company の略。他社の設計を受けて半導体を製造するファウンドリ専業の代表企業です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 

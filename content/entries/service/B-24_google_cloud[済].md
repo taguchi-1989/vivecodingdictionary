@@ -33,7 +33,7 @@ GCP（Google Cloud Platform）とも呼ばれる Google のクラウド基盤で
 
 ## 何をしてくれるか
 
-Compute Engine（仮想サーバー）・Cloud Run（コンテナ実行）・BigQuery（大規模データ分析）・Vertex AI（AI／ML プラットフォーム）など、インフラから AI まで一式をクラウドで提供します。
+Compute Engine・Cloud Run・BigQuery・Vertex AI など、仮想サーバーからデータ分析・AI まで一式をクラウドで提供します。
 
 ## どこで出会うか
 

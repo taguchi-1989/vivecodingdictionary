@@ -30,11 +30,11 @@ status: ready
 
 ## 何をしてくれるか
 
-`git merge` は、分岐して別々に進んでいる 2 本の branch を 1 本に合流させます。取り込んだ変更は新しい commit として履歴に残り、どこで合流したかが後から追えます。
+`git merge` は分岐して進んでいる 2 本の branch を 1 本に合流させます。取り込んだ変更は新しい commit として履歴に残ります。
 
 ## どこで出会うか
 
-feature branch（機能開発用の枝）での作業が終わり、main（本線）に取り込む場面で登場します。`git pull` も内部で merge を呼ぶため、他の人の変更を取り込むたびに使われます。
+feature branch の作業が終わり main に取り込む場面で登場します。`git pull` も内部で merge を呼ぶため、他者の変更を取り込むたびに使われます。
 
 ## メイン図
 
@@ -83,7 +83,7 @@ branch が何かと、merge commit が履歴に残る仕組みを押さえます
 
 ### 6. 深掘り先
 
-rebase、conflict 解消、fast-forward merge、pull request。
+rebase、conflict 解消、pull request。
 
 ## 開発フローでの位置（必須）
 

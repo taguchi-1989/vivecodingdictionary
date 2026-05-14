@@ -31,11 +31,11 @@ Node Package Manager の略。JavaScript のライブラリを一括で管理す
 
 ## 何をしてくれるか
 
-JavaScript や Node.js で使うライブラリ（部品）を、コマンド 1 つでインストール・更新・削除できます。`package.json` に依存関係が記録され、チームで同じ環境を再現しやすくなります。
+JavaScript で使うライブラリをコマンド 1 つでインストール・更新・削除できます。`package.json` に依存関係が記録され、環境を再現しやすくなります。
 
 ## どこで出会うか
 
-Vite や TypeScript など、多くの JavaScript ツールが npm 経由で配布されます。AI にプロジェクト作成を頼むと、`npm install` の実行を案内されることがあります。
+Vite や TypeScript など多くの JS ツールが npm 経由で配布されます。AI にプロジェクト作成を頼むと `npm install` を案内されることがあります。
 
 ## メイン図
 

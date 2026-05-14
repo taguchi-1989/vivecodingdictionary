@@ -36,11 +36,11 @@ Anthropic の CEO・共同創業者。AI 安全性の研究と実用化を両立
 
 ## 何をしてくれるか
 
-Anthropic を共同創業し、Constitutional AI（憲法的 AI）や RSP（責任ある拡張方針）を推進しています。長文エッセイで AI の未来像を公に言語化する役割を担っています。
+Anthropic を共同創業し、Constitutional AI や RSP（責任ある拡張方針）を推進しています。長文エッセイで AI の未来像を言語化する発信者でもあります。
 
 ## どこで出会うか
 
-Anthropic の公式ブログや発表文に名前が出るほか、エッセイ「Machines of Loving Grace」がニュースで取り上げられることがあります。議会証言や国際会議でも発言が参照されます。
+Anthropic の公式ブログやエッセイ「Machines of Loving Grace」がニュースで取り上げられることがあります。議会証言や国際会議でも発言が参照されます。
 
 ## メイン図
 
@@ -82,7 +82,7 @@ AI 安全性の議論や Anthropic 製品の設計方針を追うときに役立
 
 ### 5. はじめに
 
-元 OpenAI VP、Anthropic 共同創業者、Constitutional AI 推進者という 3 点を押さえます。
+元 OpenAI VP で Anthropic 共同創業者・Constitutional AI 推進者を押さえます。
 
 ### 6. 深掘り先
 

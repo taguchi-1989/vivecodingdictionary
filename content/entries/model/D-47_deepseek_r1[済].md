@@ -37,7 +37,7 @@ status: ready
 
 ## どこで出会うか
 
-2025 年 1 月の公開時、o1 系（D-22）と同等の推論性能をオープンウェイトで達成したとして「DeepSeek ショック」と呼ばれました。deepseek.com の API や Hugging Face のモデル取得でも利用できます。
+2025 年 1 月、o1 系と同等の推論性能をオープンウェイトで達成し「DeepSeek ショック」と呼ばれました。deepseek.com の API や Hugging Face で利用できます。
 
 ## メイン図
 

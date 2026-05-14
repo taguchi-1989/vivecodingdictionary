@@ -37,11 +37,11 @@ status: ready
 
 ## 何をしてくれるか
 
-YouTube「Neural Networks: Zero to Hero」や nanoGPT などの教育的 OSS を通じて、LLM（大規模言語モデル）の仕組みを解説しています。入門者が概念を掴む起点になります。
+YouTube「Neural Networks: Zero to Hero」や nanoGPT を通じて LLM の仕組みを解説します。入門者が概念を掴む起点になります。
 
 ## どこで出会うか
 
-「バイブコーディング」という語を 2025 年初頭に X（旧 Twitter）で発信したキーパーソンとして本書に登場します。AI 学習の文脈では YouTube や GitHub で名前が出ることが多い存在です。
+「バイブコーディング」という語を 2025 年初頭に X で発信したキーパーソンとして本書に登場します。AI 学習の文脈では YouTube や GitHub で名前が出ます。
 
 ## メイン図
 

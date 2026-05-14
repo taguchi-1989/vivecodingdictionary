@@ -40,7 +40,7 @@ status: ready
 
 ## どこで出会うか
 
-社内ドキュメントの意味検索や RAG（Retrieval-Augmented Generation）構築で登場します。OpenAI の text-embedding-3-small や sentence-transformers といった API・ライブラリで見かけます。
+社内ドキュメントの意味検索や RAG 構築で登場します。OpenAI の text-embedding-3-small や sentence-transformers などの API で見かけます。
 
 ## メイン図
 

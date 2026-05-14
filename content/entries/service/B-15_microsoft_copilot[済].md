@@ -28,13 +28,13 @@ status: ready
 
 ## tagline
 
-Windows・Edge・スマホから呼べる Microsoft の汎用 AI チャットです。旧 Bing Chat の後継です。
+Windows・Edge・スマホから使える Microsoft の汎用 AI チャット（旧 Bing Chat）です。
 
 <!-- ━━━━━━━━ 左ページ ━━━━━━━━ -->
 
 ## 何をしてくれるか
 
-テキスト質問応答・Web 検索・画像生成（DALL·E 3）・音声会話（Copilot Voice）など幅広い機能を無料から提供します。中身は OpenAI の GPT 系モデルを主力に採用しています。
+テキスト質問応答・Web 検索・画像生成（DALL·E 3）・音声会話など幅広い機能を無料から提供します。内部は OpenAI の GPT 系モデルが主力です。
 
 ## どこで出会うか
 

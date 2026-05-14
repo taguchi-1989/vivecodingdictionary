@@ -40,7 +40,7 @@ Gemini（ジェミニ）を生んだ、Google 傘下の AI 研究組織です。
 
 ## 何をしてくれるか
 
-2014 年の Google 買収と 2023 年の Google Brain（グーグルブレイン）統合を経た AI 研究組織です。Gemini モデルの研究開発を担い、AlphaGo（アルファ碁）や AlphaFold（タンパク質構造予測）など、AI 研究の代表的な成果を生み出しています。
+2014 年 Google 買収・2023 年 Google Brain 統合を経た AI 研究組織です。Gemini モデルを開発し、AlphaGo（アルファ碁）・AlphaFold（タンパク質構造予測）などの研究成果を生み出しています。
 
 ## どこで出会うか
 
