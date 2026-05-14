@@ -21,8 +21,9 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / 'scripts'))
 from density_audit import (
-    SECTIONS, TS_BASELINE,
+    TARGETS, TS_BASELINE, AUTHOR_BULLET_TARGET, COMMENT_LABELS,
     layout_of, parse, section_chars, status_of, tagline_chars,
+    tsumazuki_bullets, comment_items,
 )
 
 ENTRIES = REPO / 'content' / 'entries'
@@ -40,6 +41,26 @@ CHAPTERS = {
     'I': 'MCP',
     'J': '一般用語',
 }
+
+
+def section_cell_class(n: int, target: dict) -> str:
+    if n == 0:
+        return 'na'
+    if n > target['max']:
+        return 'over'
+    if n > target['rec_max']:
+        return 'near'
+    if n < target['min']:
+        return 'under'
+    return 'ok'
+
+
+def author_cell_class(n: int) -> str:
+    if n > AUTHOR_BULLET_TARGET['max']:
+        return 'over'
+    if n > AUTHOR_BULLET_TARGET['rec_max']:
+        return 'near'
+    return 'ok'
 
 
 def collect():
@@ -68,13 +89,22 @@ def collect():
         tag_m = re.search(r'\[(.+?)\]', f.stem)
         tag = tag_m.group(1) if tag_m else ''
 
-        # density
+        # density per section
         if layout.startswith('front_'):
             total = -1
+            sections = {}
+            tsu = []
+            com = {label: '' for label in COMMENT_LABELS}
         else:
-            counts = {s: section_chars(body, s) for s in SECTIONS}
-            counts['tagline'] = tagline_chars(fm)
-            total = sum(counts.values())
+            sections = {}
+            for sname in TARGETS:
+                if sname == 'tagline':
+                    sections[sname] = tagline_chars(fm, body)
+                else:
+                    sections[sname] = section_chars(body, sname)
+            total = sum(sections.values())
+            tsu = tsumazuki_bullets(body)
+            com = comment_items(body)
 
         rows.append({
             'id': eid,
@@ -86,6 +116,9 @@ def collect():
             'category': category,
             'tag': tag,
             'total': total,
+            'sections': sections,
+            'tsumazuki': tsu,
+            'comment': com,
         })
     rows.sort(key=lambda r: (r['letter'], r['num']))
     return rows
@@ -131,8 +164,16 @@ def gen_html(rows):
     P('.chapter { margin:24px 0 12px; padding:6px 12px; background:#0c2552; color:#fff; border-radius:6px; font-weight:700; font-size:14px; display:flex; gap:16px; align-items:baseline; }')
     P('.chapter .stat { font-size:11px; opacity:0.7; font-weight:400; }')
     P('table { width:100%; border-collapse:collapse; background:#fff; border:1px solid #d8e0eb; border-radius:6px; overflow:hidden; }')
-    P('th,td { padding:7px 10px; border-bottom:1px solid #eef0f4; font-size:13px; vertical-align:middle; }')
-    P('th { background:#fafbfd; text-align:left; font-weight:700; color:#27406b; font-size:11px; letter-spacing:0.05em; }')
+    P('th,td { padding:4px 5px; border-bottom:1px solid #eef0f4; font-size:11px; vertical-align:middle; white-space:nowrap; }')
+    P('th { background:#fafbfd; text-align:left; font-weight:700; color:#27406b; font-size:10px; letter-spacing:0.02em; }')
+    P('th .tcap { display:block; font-size:9px; opacity:0.6; font-weight:400; }')
+    P('table.dense td.num { text-align:right; font-variant-numeric:tabular-nums; min-width:32px; }')
+    P('td.num.over { background:#ffe2e0; color:#8b1d1d; font-weight:700; }')
+    P('td.num.near { background:#fff4d6; color:#7a5500; }')
+    P('td.num.under { background:#eef0f4; color:#6c7a91; }')
+    P('td.num.ok { color:#1a2333; }')
+    P('td.num.na { color:#aab2c0; }')
+    P('td.num.total { font-weight:700; }')
     P('tr:last-child td { border-bottom:none; }')
     P('tr:hover td { background:#fcfdff; }')
     P('.id { font-family:"SFMono-Regular","Consolas",monospace; font-size:12px; font-weight:700; color:#0c2552; width:50px; }')
@@ -187,9 +228,31 @@ def gen_html(rows):
           f'<span>{letter}章 — {CHAPTERS.get(letter, "")}</span>'
           f'<span class="stat">{stat["count"]} 件 / ready {stat["ready"]} / needs_review {stat["needs_review"]} / 平均密度 {stat["avg_density"]} 字</span>'
           f'</div>')
-        P(f'<table data-chapter="{letter}">')
-        P('<thead><tr><th>ID</th><th>タイトル</th><th>タグ</th><th>status</th><th style="text-align:right;">本文字数</th><th style="text-align:right;">TS比</th><th>preview</th></tr></thead>')
+        P(f'<table data-chapter="{letter}" class="dense">')
+        # Header with all section columns
+        sec_short = {
+            'tagline': 'タグライン',
+            '何をしてくれるか': '何を',
+            'どこで出会うか': 'どこで',
+            '会話での使い方例': '会話',
+            '1. 役割': '1役割',
+            '2. うれしさ': '2嬉',
+            '3. 注意点': '3注',
+            '4. どこで役立つか': '4役立',
+            '5. はじめに': '5初',
+            '6. 深掘り先': '6深',
+        }
+        header_cells = ['ID', 'タイトル', 'タグ', 'st']
+        for sname in TARGETS:
+            t = TARGETS[sname]
+            header_cells.append(f'{sec_short[sname]}<span class="tcap">≤{t["max"]}</span>')
+        header_cells.extend(['計', 'TS比', 'つま1', 'つま2', 'つま3', '印象', '良', 'ダ', '誰', 'preview'])
+        P('<thead><tr>')
+        for h in header_cells:
+            P(f'<th>{h}</th>')
+        P('</tr></thead>')
         P('<tbody>')
+
         for r in items:
             tag_cls_map = {'済': 'sumi', '人書': 'hito', 'AI整': 'ai_sei', 'AI直': 'ai_choku', '凍': 'tou'}
             tag_cls = tag_cls_map.get(r['tag'], 'ai_choku')
@@ -197,30 +260,55 @@ def gen_html(rows):
 
             if r['total'] < 0:
                 density_class = 'na'
-                density_html = '<span class="density na">— front</span>'
+                density_html = '<span class="density na">—</span>'
                 ts_html = '—'
             else:
                 ratio = r['total'] * 100 // TS_BASELINE
-                if ratio > 130:
-                    density_class = 'high'
-                elif ratio <= 110:
-                    density_class = 'low'
-                else:
-                    density_class = 'mid'
+                density_class = 'high' if ratio > 130 else ('low' if ratio <= 110 else 'mid')
                 density_html = f'<span class="density {density_class}">{r["total"]}</span>'
                 ts_html = f'<span class="density {density_class}">{ratio}%</span>'
 
+            row_cells = []
+            row_cells.append(f'<td class="id">{r["id"]}</td>')
+            row_cells.append(f'<td class="title">{escape(r["title"])}</td>')
+            row_cells.append(f'<td><span class="tag {tag_cls}">{tag_label}</span></td>')
+            row_cells.append(f'<td class="status">{r["status"][:2]}</td>')
+
+            for sname in TARGETS:
+                t = TARGETS[sname]
+                n = r['sections'].get(sname, 0)
+                if r['total'] < 0:
+                    row_cells.append('<td class="num na">—</td>')
+                else:
+                    cls = section_cell_class(n, t)
+                    row_cells.append(f'<td class="num {cls}">{n}</td>')
+
+            row_cells.append(f'<td class="num total">{density_html}</td>')
+            row_cells.append(f'<td class="num">{ts_html}</td>')
+
+            # tsumazuki 3 slots
+            for i in range(3):
+                if i < len(r['tsumazuki']):
+                    n = len(r['tsumazuki'][i])
+                    cls = author_cell_class(n)
+                    row_cells.append(f'<td class="num {cls}" title="{escape(r["tsumazuki"][i])}">{n}</td>')
+                else:
+                    row_cells.append('<td class="num na">—</td>')
+
+            # comment 4 labels
+            for label in COMMENT_LABELS:
+                v = r['comment'].get(label, '')
+                if v:
+                    n = len(v)
+                    cls = author_cell_class(n)
+                    row_cells.append(f'<td class="num {cls}" title="{escape(v)}">{n}</td>')
+                else:
+                    row_cells.append('<td class="num na">—</td>')
+
             hto = f'{r["id"]}.html'
             pdf = f'pdf/{r["id"]}.pdf'
-            P(f'<tr data-status="{r["status"]}" data-tag="{r["tag"]}">'
-              f'<td class="id">{r["id"]}</td>'
-              f'<td class="title">{escape(r["title"])}</td>'
-              f'<td><span class="tag {tag_cls}">{tag_label}</span></td>'
-              f'<td class="status">{r["status"]}</td>'
-              f'<td class="density">{density_html}</td>'
-              f'<td class="density">{ts_html}</td>'
-              f'<td class="links"><a href="{hto}" target="_blank">HTML</a><a href="{pdf}" target="_blank">PDF</a></td>'
-              f'</tr>')
+            row_cells.append(f'<td class="links"><a href="{hto}" target="_blank">H</a><a href="{pdf}" target="_blank">P</a></td>')
+            P(f'<tr data-status="{r["status"]}" data-tag="{r["tag"]}">{"".join(row_cells)}</tr>')
         P('</tbody></table>')
     P('</main>')
 
