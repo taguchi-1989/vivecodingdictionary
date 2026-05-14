@@ -27,6 +27,7 @@ from density_audit import (
 )
 
 ENTRIES = REPO / 'content' / 'entries'
+PONCHI_DIR = REPO / 'drafts' / 'ponchi'
 OUT = REPO / 'drafts' / 'prototypes' / 'preview' / 'overview.html'
 
 CHAPTERS = {
@@ -73,6 +74,7 @@ def tsumazuki_total_class(n: int) -> str:
 
 def collect():
     rows = []
+    ponchi_ids = {p.stem for p in PONCHI_DIR.glob('*.svg')}
     for f in sorted(ENTRIES.rglob('*.md')):
         text = f.read_text(encoding='utf-8')
         fm, body = parse(text)
@@ -127,6 +129,7 @@ def collect():
             'sections': sections,
             'tsumazuki': tsu,
             'comment': com,
+            'has_ponchi': eid in ponchi_ids,
         })
     rows.sort(key=lambda r: (r['letter'], r['num']))
     return rows
@@ -182,6 +185,9 @@ def gen_html(rows):
     P('td.num.ok { color:#1a2333; }')
     P('td.num.na { color:#aab2c0; }')
     P('td.num.total { font-weight:700; }')
+    P('td.ponchi { text-align:center; font-size:14px; }')
+    P('td.ponchi.has { color:#1a6b1a; }')
+    P('td.ponchi.pending { color:#aab2c0; }')
     P('tr:last-child td { border-bottom:none; }')
     P('tr:hover td { background:#fcfdff; }')
     P('.id { font-family:"SFMono-Regular","Consolas",monospace; font-size:12px; font-weight:700; color:#0c2552; width:50px; }')
@@ -213,7 +219,8 @@ def gen_html(rows):
     total_nr = sum(1 for r in rows if r['status'] == 'needs_review')
     valid_dens = [r['total'] for r in rows if r['total'] >= 0]
     median_d = sorted(valid_dens)[len(valid_dens) // 2] if valid_dens else 0
-    P(f'<div class="subtitle">全 {total_count} 件 / ready {total_ready} / needs_review {total_nr} / 本文密度中央値 {median_d} 字（TS 基準 {TS_BASELINE} 字 比 {median_d*100//TS_BASELINE}%）</div>')
+    ponchi_count = sum(1 for r in rows if r['has_ponchi'])
+    P(f'<div class="subtitle">全 {total_count} 件 / ready {total_ready} / needs_review {total_nr} / ポンチ絵 SVG あり {ponchi_count} 件・画像生成待ち {total_count - ponchi_count} 件 / 本文密度中央値 {median_d} 字（TS 基準 {TS_BASELINE} 字 比 {median_d*100//TS_BASELINE}%）</div>')
     P('<div class="toolbar">')
     P('<span style="font-size:12px;font-weight:600;">章フィルタ:</span>')
     P('<button class="btn on" data-filter="all" onclick="filterChapter(this)">すべて</button>')
@@ -224,6 +231,10 @@ def gen_html(rows):
     P('<button class="btn" data-status="ready" onclick="filterStatus(this)">ready</button>')
     P('<button class="btn" data-status="needs_review" onclick="filterStatus(this)">needs_review</button>')
     P('<button class="btn" data-status="hito" onclick="filterStatus(this)">[人書] 残</button>')
+    P('<span style="margin-left:24px;font-size:12px;font-weight:600;">ポンチ絵:</span>')
+    P('<button class="btn on" data-ponchi="all" onclick="filterPonchi(this)">すべて</button>')
+    P('<button class="btn" data-ponchi="has" onclick="filterPonchi(this)">あり</button>')
+    P('<button class="btn" data-ponchi="pending" onclick="filterPonchi(this)">画像生成待ち</button>')
     P('</div>')
     P('<div class="legend">密度色 — <span class="density high">赤</span> TS基準 +30% 超 / <span class="density mid">通常</span> +10〜30% / <span class="density low">緑</span> TS±10% 内</div>')
     P('</header>')
@@ -257,7 +268,8 @@ def gen_html(rows):
         header_cells.extend([
             '計', 'TS比',
             f'つま計<span class="tcap">≤{TSUMAZUKI_TOTAL_TARGET["max"]}</span>',
-            '印象', '良', 'ダ', '誰', 'preview',
+            '印象', '良', 'ダ', '誰',
+            'ポンチ', 'preview',
         ])
         P('<thead><tr>')
         for h in header_cells:
@@ -317,26 +329,34 @@ def gen_html(rows):
                 else:
                     row_cells.append('<td class="num na">—</td>')
 
+            # ponchi indicator
+            if r['has_ponchi']:
+                row_cells.append('<td class="ponchi has"><span title="SVG あり">●</span></td>')
+            else:
+                row_cells.append('<td class="ponchi pending"><span title="画像生成待ち">○</span></td>')
+
             hto = f'{r["id"]}.html'
             pdf = f'pdf/{r["id"]}.pdf'
             row_cells.append(f'<td class="links"><a href="{hto}" target="_blank">H</a><a href="{pdf}" target="_blank">P</a></td>')
-            P(f'<tr data-status="{r["status"]}" data-tag="{r["tag"]}">{"".join(row_cells)}</tr>')
+            ponchi_attr = 'has' if r['has_ponchi'] else 'pending'
+            P(f'<tr data-status="{r["status"]}" data-tag="{r["tag"]}" data-ponchi="{ponchi_attr}">{"".join(row_cells)}</tr>')
         P('</tbody></table>')
     P('</main>')
 
     P('<script>')
-    P('let curChapter = "all"; let curStatus = "all";')
+    P('let curChapter = "all"; let curStatus = "all"; let curPonchi = "all";')
     P('function apply() {')
     P('  document.querySelectorAll(".chapter, table").forEach(el => {')
     P('    const ch = el.dataset.chapter;')
     P('    el.classList.toggle("hidden", curChapter !== "all" && ch !== curChapter);')
     P('  });')
     P('  document.querySelectorAll("tbody tr").forEach(tr => {')
-    P('    const st = tr.dataset.status; const tag = tr.dataset.tag;')
+    P('    const st = tr.dataset.status; const tag = tr.dataset.tag; const pn = tr.dataset.ponchi;')
     P('    let show = true;')
-    P('    if (curStatus === "ready") show = (st === "ready");')
-    P('    else if (curStatus === "needs_review") show = (st === "needs_review");')
-    P('    else if (curStatus === "hito") show = (tag === "人書");')
+    P('    if (curStatus === "ready") show = show && (st === "ready");')
+    P('    else if (curStatus === "needs_review") show = show && (st === "needs_review");')
+    P('    else if (curStatus === "hito") show = show && (tag === "人書");')
+    P('    if (curPonchi !== "all") show = show && (pn === curPonchi);')
     P('    tr.classList.toggle("hidden", !show);')
     P('  });')
     P('}')
@@ -347,6 +367,10 @@ def gen_html(rows):
     P('function filterStatus(btn) {')
     P('  document.querySelectorAll("[data-status]").forEach(b => b.classList.remove("on"));')
     P('  btn.classList.add("on"); curStatus = btn.dataset.status; apply();')
+    P('}')
+    P('function filterPonchi(btn) {')
+    P('  document.querySelectorAll("[data-ponchi]").forEach(b => b.classList.remove("on"));')
+    P('  btn.classList.add("on"); curPonchi = btn.dataset.ponchi; apply();')
     P('}')
     P('</script></body></html>')
 
