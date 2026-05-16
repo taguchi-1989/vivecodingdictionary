@@ -1,0 +1,13 @@
+order,lane,entry_id,title,category,status,md_path,priority
+1,1,D-11,Claude 3.5 系,model,ready,content/entries/model/D-11_claude35[済].md,ready_svg_to_image
+2,2,F-50,git,term_tool,ready,content/entries/term/F-50_git[済].md,ready_svg_to_image
+3,3,E-1,SWE-Bench,benchmark,ready,content/entries/benchmark/E-1_swe_bench[済].md,ready_svg_to_image
+4,4,I-1,MCP,mcp,ready,content/entries/mcp/I-1_mcp[済].md,ready_svg_to_image
+5,1,H-53,ChatGPT 登場,history,ready,content/entries/history/H-53_chatgpt_launch[済].md,ready_svg_to_image
+6,2,C-1,OpenAI,person_org,ready,content/entries/person/C-1_openai[済].md,ready_svg_to_image
+7,3,C-2,Anthropic,person_org,ready,content/entries/person/C-2_anthropic[済].md,ready_svg_to_image
+8,4,D-25,GPT-1 / GPT-2 系,model,ready,content/entries/model/D-25_gpt1_gpt2[済].md,ready_missing_svg
+9,1,D-26,gpt-oss,model,ready,content/entries/model/D-26_gpt_oss[済].md,ready_missing_svg
+10,2,D-30,Grok 系,model,ready,content/entries/model/D-30_grok[済].md,ready_missing_svg
+11,3,D-35,Cursor Composer,model,ready,content/entries/model/D-35_cursor_composer[済].md,ready_missing_svg
+12,4,D-40,Llama 系,model,ready,content/entries/model/D-40_llama[済].md,ready_missing_svg
