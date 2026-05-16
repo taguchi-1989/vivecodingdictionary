@@ -495,7 +495,7 @@ def render_tagline_tags(fm: dict) -> str:
 
 
 def render_main_figure(fm: dict, entry_id: str) -> str:
-    """figure_type ごとのプレースホルダ（本番は実装担当が figure primitive を書く）"""
+    """figure_type ごとのプレースホルダ。最終 PNG があればそれを仮置きする。"""
     ft = fm.get("figure_type", "structure")
     label = {
         "before_after": "Before / After",
@@ -504,6 +504,15 @@ def render_main_figure(fm: dict, entry_id: str) -> str:
         "workflow": "ワークフロー図",
         "timeline": "タイムライン",
     }.get(ft, "図")
+    png_path = PONCHI_FINAL_DIR / f"{entry_id}.png"
+    if png_path.exists():
+        rel = f"../../../assets/ponchi/final/{entry_id}.png"
+        return f'''
+      <div class="section-heading"><span class="label">{label}</span></div>
+      <div class="figure figure--image" style="padding:14px;text-align:center;background:#fff;border:1px solid #d0d9e6;border-radius:6px;">
+        <img src="{rel}" alt="" loading="lazy" style="max-width:100%;max-height:340px;height:auto;object-fit:contain;display:inline-block;">
+        <div style="font-size:11px;color:var(--ink-3);margin-top:6px;">擬人化ポンチ絵を仮置き（{label} は本番生成器で差し替え予定）</div>
+      </div>'''
     return f'''
       <div class="section-heading"><span class="label">{label}</span></div>
       <div class="figure" style="min-height:140px;padding:22px;text-align:center;color:var(--ink-2);font-size:14px;">
@@ -793,7 +802,7 @@ body {{ margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: va
         <div class="ponchi-caption">
           <div class="ponchi-title">{ponchi_title}</div>
           <p class="ponchi-hint">{ponchi_caption}</p>
-          <span class="ponchi-todo">擬人化ポンチ絵 · 後日差し込み</span>
+          {ponchi_todo_html}
         </div>
       </div>
     </div>
@@ -1042,6 +1051,10 @@ def render_page(entry: dict, prev: dict | None, next_: dict | None, drawer_html:
         pin_icon=PIN_ICON_SVG,
         ponchi_icon=ponchi_asset,
         ponchi_icon_extra_class="ponchi-icon--real" if ponchi_is_real else "",
+        ponchi_todo_html=(
+            '' if (PONCHI_FINAL_DIR / f"{entry_id}.png").exists()
+            else '<span class="ponchi-todo">擬人化ポンチ絵 · 後日差し込み</span>'
+        ),
         page_left=f"{page_left:02d}",
         page_right=f"{page_right:02d}",
         pages=entry.get("pages", DEFAULT_ENTRY_PAGES),
