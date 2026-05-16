@@ -509,9 +509,8 @@ def render_main_figure(fm: dict, entry_id: str) -> str:
         rel = f"../../../assets/ponchi/final/{entry_id}.png"
         return f'''
       <div class="section-heading"><span class="label">{label}</span></div>
-      <div class="figure figure--image" style="padding:14px;text-align:center;background:#fff;border:1px solid #d0d9e6;border-radius:6px;">
-        <img src="{rel}" alt="" loading="lazy" style="max-width:100%;max-height:340px;height:auto;object-fit:contain;display:inline-block;">
-        <div style="font-size:11px;color:var(--ink-3);margin-top:6px;">擬人化ポンチ絵を仮置き（{label} は本番生成器で差し替え予定）</div>
+      <div class="figure figure--image" style="padding:12px;text-align:center;">
+        <img src="{rel}" alt="" loading="lazy" style="max-width:100%;max-height:360px;height:auto;object-fit:contain;display:inline-block;">
       </div>'''
     return f'''
       <div class="section-heading"><span class="label">{label}</span></div>
@@ -796,15 +795,7 @@ body {{ margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: va
       </div>
 
       {main_figure}
-
-      <div class="ponchi-slot">
-        <div class="ponchi-icon {ponchi_icon_extra_class}">{ponchi_icon}</div>
-        <div class="ponchi-caption">
-          <div class="ponchi-title">{ponchi_title}</div>
-          <p class="ponchi-hint">{ponchi_caption}</p>
-          {ponchi_todo_html}
-        </div>
-      </div>
+      {ponchi_slot_html}
     </div>
 
     <div class="page-chrome-bottom">
@@ -1049,11 +1040,17 @@ def render_page(entry: dict, prev: dict | None, next_: dict | None, drawer_html:
         book_icon=BOOK_ICON_SVG,
         code_icon=CODE_ICON_SVG,
         pin_icon=PIN_ICON_SVG,
-        ponchi_icon=ponchi_asset,
-        ponchi_icon_extra_class="ponchi-icon--real" if ponchi_is_real else "",
-        ponchi_todo_html=(
+        ponchi_slot_html=(
             '' if (PONCHI_FINAL_DIR / f"{entry_id}.png").exists()
-            else '<span class="ponchi-todo">擬人化ポンチ絵 · 後日差し込み</span>'
+            else f'''
+      <div class="ponchi-slot">
+        <div class="ponchi-icon {"ponchi-icon--real" if ponchi_is_real else ""}">{ponchi_asset}</div>
+        <div class="ponchi-caption">
+          <div class="ponchi-title">{escape(ponchi_title)}</div>
+          <p class="ponchi-hint">{escape(ponchi_caption)}</p>
+          <span class="ponchi-todo">擬人化ポンチ絵 · 後日差し込み</span>
+        </div>
+      </div>'''
         ),
         page_left=f"{page_left:02d}",
         page_right=f"{page_right:02d}",
@@ -1063,8 +1060,6 @@ def render_page(entry: dict, prev: dict | None, next_: dict | None, drawer_html:
         nanishiteku=nanishiteku_html,
         dokode_deau=dokode_deau_html,
         main_figure=render_main_figure(fm, entry_id),
-        ponchi_title=escape(ponchi_title),
-        ponchi_caption=escape(ponchi_caption),
         seepoint_cells=seepoint_cells,
         flow_row=flow_html,
         related_pills=related_html,
