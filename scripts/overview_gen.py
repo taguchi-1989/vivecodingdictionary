@@ -188,9 +188,13 @@ def gen_html(rows):
     P('td.num.ok { color:#1a2333; }')
     P('td.num.na { color:#aab2c0; }')
     P('td.num.total { font-weight:700; }')
-    P('td.ponchi { text-align:center; font-size:14px; }')
+    P('td.ponchi { text-align:center; font-size:14px; padding:2px 4px; }')
     P('td.ponchi.has { color:#1a6b1a; }')
     P('td.ponchi.pending { color:#aab2c0; }')
+    P('.ponchi-thumb { display:inline-block; position:relative; }')
+    P('.ponchi-thumb img { width:52px; height:52px; object-fit:contain; display:block; border:1px solid #d8e0eb; border-radius:3px; background:#fff; transition:transform .15s ease, box-shadow .15s ease; }')
+    P('.ponchi-thumb img:hover { transform:scale(4.5); transform-origin:right center; z-index:200; position:relative; box-shadow:0 6px 24px rgba(0,0,0,0.35); border-color:#27406b; }')
+    P('.ponchi-thumb.svg-only { font-size:18px; line-height:52px; width:52px; height:52px; color:#1a6b1a; border:1px dashed #b8c8db; border-radius:3px; background:#f8fbff; }')
     P('tr:last-child td { border-bottom:none; }')
     P('tr:hover td { background:#fcfdff; }')
     P('.id { font-family:"SFMono-Regular","Consolas",monospace; font-size:12px; font-weight:700; color:#0c2552; width:50px; }')
@@ -333,13 +337,17 @@ def gen_html(rows):
                 else:
                     row_cells.append('<td class="num na">—</td>')
 
-            # ponchi indicator
+            # ponchi indicator: PNG thumbnail / SVG marker / pending
             if r.get('has_ponchi_final'):
-                row_cells.append('<td class="ponchi has"><span title="PNG あり">●</span></td>')
+                img_src = f'../../../assets/ponchi/final/{r["id"]}.png'
+                row_cells.append(
+                    f'<td class="ponchi has"><span class="ponchi-thumb">'
+                    f'<img src="{img_src}" alt="{escape(r["id"])}" loading="lazy" title="{escape(r["id"])} {escape(r["title"])}"></span></td>'
+                )
             elif r['has_ponchi']:
-                row_cells.append('<td class="ponchi has"><span title="SVG あり">●</span></td>')
+                row_cells.append('<td class="ponchi has"><span class="ponchi-thumb svg-only" title="SVG のみ（PNG 待ち）">◐</span></td>')
             else:
-                row_cells.append('<td class="ponchi pending"><span title="画像生成待ち">○</span></td>')
+                row_cells.append('<td class="ponchi pending"><span class="ponchi-thumb svg-only" style="color:#aab2c0;border-style:dotted;" title="画像生成待ち">○</span></td>')
 
             hto = f'{r["id"]}.html'
             pdf = f'pdf/{r["id"]}.pdf'

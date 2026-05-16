@@ -310,22 +310,22 @@ J-13,Transformer,term_general,ready,content/entries/term_general/J-13_transforme
 J-14,LLM,term_general,ready,content/entries/term_general/J-14_llm[済].md,True,True,done,complete
 J-15,VLM,term_general,ready,content/entries/term_general/J-15_vlm[済].md,False,True,done,final_image_without_svg
 J-16,Fine-tuning,term_general,ready,content/entries/term_general/J-16_fine_tuning[済].md,False,True,done,final_image_without_svg
-J-17,Attention,term_general,ready,content/entries/term_general/J-17_attention[済].md,False,False,ready_missing_svg,missing_svg
-J-18,MoE,term_general,ready,content/entries/term_general/J-18_moe[済].md,False,False,ready_missing_svg,missing_svg
-J-19,量子化,term_general,ready,content/entries/term_general/J-19_quantization[済].md,False,False,ready_missing_svg,missing_svg
-J-20,Big Data,term_general,ready,content/entries/term_general/J-20_big_data[済].md,False,False,ready_missing_svg,missing_svg
-J-21,LoRA,term_general,ready,content/entries/term_general/J-21_lora[済].md,False,False,ready_missing_svg,missing_svg
+J-17,Attention,term_general,ready,content/entries/term_general/J-17_attention[済].md,False,True,done,final_image_without_svg
+J-18,MoE,term_general,ready,content/entries/term_general/J-18_moe[済].md,False,True,done,final_image_without_svg
+J-19,量子化,term_general,ready,content/entries/term_general/J-19_quantization[済].md,False,True,done,final_image_without_svg
+J-20,Big Data,term_general,ready,content/entries/term_general/J-20_big_data[済].md,False,True,done,final_image_without_svg
+J-21,LoRA,term_general,ready,content/entries/term_general/J-21_lora[済].md,False,True,done,final_image_without_svg
 J-22,パラメータ数の単位,term_general,drafting,,False,False,later,missing_svg
-J-23,拡散モデル,term_general,ready,content/entries/term_general/J-23_diffusion_model[済].md,False,False,ready_missing_svg,missing_svg
-J-31,第 5 世代コンピュータ,term_general,ready,content/entries/term_general/J-31_fifth_generation_computer[済].md,False,False,ready_missing_svg,missing_svg
+J-23,拡散モデル,term_general,ready,content/entries/term_general/J-23_diffusion_model[済].md,False,True,done,final_image_without_svg
+J-31,第 5 世代コンピュータ,term_general,ready,content/entries/term_general/J-31_fifth_generation_computer[済].md,False,True,done,final_image_without_svg
 J-32,ノイマン型,term_general,skeleton,,False,False,later,missing_svg
-J-33,量子コンピュータ,term_general,ready,content/entries/term_general/J-33_quantum-computer[済].md,False,False,ready_missing_svg,missing_svg
-J-40,IoT,term_general,ready,content/entries/term_general/J-40_iot[済].md,False,False,ready_missing_svg,missing_svg
-J-41,DX,term_general,ready,content/entries/term_general/J-41_dx[済].md,False,False,ready_missing_svg,missing_svg
-J-42,Web3,term_general,ready,content/entries/term_general/J-42_web3[済].md,False,False,ready_missing_svg,missing_svg
+J-33,量子コンピュータ,term_general,ready,content/entries/term_general/J-33_quantum-computer[済].md,False,True,done,final_image_without_svg
+J-40,IoT,term_general,ready,content/entries/term_general/J-40_iot[済].md,False,True,done,final_image_without_svg
+J-41,DX,term_general,ready,content/entries/term_general/J-41_dx[済].md,False,True,done,final_image_without_svg
+J-42,Web3,term_general,ready,content/entries/term_general/J-42_web3[済].md,False,True,done,final_image_without_svg
 J-43,SaaS,term_general,needs_review,content/entries/term_general/J-43_saas[人書].md,False,False,later,missing_svg
 J-50,AI 倫理,term_general,skeleton,,False,False,later,missing_svg
-J-51,Hallucination,term_general,ready,content/entries/term_general/J-51_hallucination[済].md,False,False,ready_missing_svg,missing_svg
+J-51,Hallucination,term_general,ready,content/entries/term_general/J-51_hallucination[済].md,False,True,done,final_image_without_svg
 J-52,Sycophancy,term_general,ready,content/entries/term_general/J-52_sycophancy[済].md,False,False,ready_missing_svg,missing_svg
 J-53,著作権法 30 条の 4（日本）,term_general,ready,content/entries/term_general/J-53_copyright_law_30_4[済].md,False,False,ready_missing_svg,missing_svg
 J-54,ISO/IEC 42001,term_general,ready,content/entries/term_general/J-54_iso_iec_42001[済].md,False,False,ready_missing_svg,missing_svg
