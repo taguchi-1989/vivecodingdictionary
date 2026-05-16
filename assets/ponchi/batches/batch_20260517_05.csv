@@ -1,0 +1,13 @@
+order,lane,entry_id,title,category,status,md_path,priority
+1,1,J-2,強い AI／弱い AI,term_general,ready,content/entries/term_general/J-2_strong_weak_ai[済].md,ready_missing_svg
+2,2,J-3,Singularity,term_general,ready,content/entries/term_general/J-3_singularity[済].md,ready_missing_svg
+3,3,J-4,ASI,term_general,ready,content/entries/term_general/J-4_asi[済].md,ready_missing_svg
+4,4,J-10,Machine Learning,term_general,ready,content/entries/term_general/J-10_machine_learning[済].md,ready_missing_svg
+5,1,J-11,Deep Learning,term_general,ready,content/entries/term_general/J-11_deep_learning[済].md,ready_missing_svg
+6,2,J-12,Neural Network,term_general,ready,content/entries/term_general/J-12_neural_network[済].md,ready_missing_svg
+7,3,J-13,Transformer,term_general,ready,content/entries/term_general/J-13_transformer[済].md,ready_missing_svg
+8,4,J-15,VLM,term_general,ready,content/entries/term_general/J-15_vlm[済].md,ready_missing_svg
+9,1,J-16,Fine-tuning,term_general,ready,content/entries/term_general/J-16_fine_tuning[済].md,ready_missing_svg
+10,2,J-17,Attention,term_general,ready,content/entries/term_general/J-17_attention[済].md,ready_missing_svg
+11,3,J-18,MoE,term_general,ready,content/entries/term_general/J-18_moe[済].md,ready_missing_svg
+12,4,J-19,量子化,term_general,ready,content/entries/term_general/J-19_quantization[済].md,ready_missing_svg

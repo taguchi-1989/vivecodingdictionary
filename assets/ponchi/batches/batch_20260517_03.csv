@@ -1,0 +1,13 @@
+order,lane,entry_id,title,category,status,md_path,priority
+1,1,F-11,Next.js,term_tool,ready,content/entries/term_tool/F-11_next_js[済].md,ready_missing_svg
+2,2,F-12,Electron,term_tool,ready,content/entries/term_tool/F-12_electron[済].md,ready_missing_svg
+3,3,F-13,Tauri,term_tool,ready,content/entries/term_tool/F-13_tauri[済].md,ready_missing_svg
+4,4,F-14,three.js,term_tool,ready,content/entries/term_tool/F-14_three_js[済].md,ready_missing_svg
+5,1,F-16,Tailwind CSS,term_tool,ready,content/entries/term_tool/F-16_tailwind_css[済].md,ready_missing_svg
+6,2,F-17,Astro,term_tool,ready,content/entries/term_tool/F-17_astro[済].md,ready_missing_svg
+7,3,F-20,ESLint,term_tool,ready,content/entries/term_tool/F-20_eslint[済].md,ready_missing_svg
+8,4,F-21,Prettier,term_tool,ready,content/entries/term_tool/F-21_prettier[済].md,ready_missing_svg
+9,1,F-30,VS Code,term_tool,ready,content/entries/term_tool/F-30_vs_code[済].md,ready_missing_svg
+10,2,F-35,Markdown Preview Enhanced,term_tool,ready,content/entries/term_tool/F-35_markdown_preview_enhanced[済].md,ready_missing_svg
+11,3,F-36,Git Graph,term_tool,ready,content/entries/term_tool/F-36_git_graph[済].md,ready_missing_svg
+12,4,F-37,Japanese Language Pack for VS Code,term_tool,ready,content/entries/term_tool/F-37_japanese_language_pack_for_vs_code[済].md,ready_missing_svg

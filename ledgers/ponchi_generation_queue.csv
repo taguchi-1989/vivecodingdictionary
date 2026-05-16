@@ -146,32 +146,32 @@ F-7,YAML,term_tool,needs_review,content/entries/term_tool/F-7_yaml[人書].md,Fa
 F-8,JSON,term_tool,ready,content/entries/term_tool/F-8_json[済].md,False,True,done,final_image_without_svg
 F-9,SVG,term_tool,ready,content/entries/term_tool/F-9_svg[済].md,False,True,done,final_image_without_svg
 F-10,React,term_tool,ready,content/entries/term_tool/F-10_react[済].md,False,True,done,final_image_without_svg
-F-11,Next.js,term_tool,ready,content/entries/term_tool/F-11_next_js[済].md,False,False,ready_missing_svg,missing_svg
-F-12,Electron,term_tool,ready,content/entries/term_tool/F-12_electron[済].md,False,False,ready_missing_svg,missing_svg
-F-13,Tauri,term_tool,ready,content/entries/term_tool/F-13_tauri[済].md,False,False,ready_missing_svg,missing_svg
-F-14,three.js,term_tool,ready,content/entries/term_tool/F-14_three_js[済].md,False,False,ready_missing_svg,missing_svg
+F-11,Next.js,term_tool,ready,content/entries/term_tool/F-11_next_js[済].md,False,True,done,final_image_without_svg
+F-12,Electron,term_tool,ready,content/entries/term_tool/F-12_electron[済].md,False,True,done,final_image_without_svg
+F-13,Tauri,term_tool,ready,content/entries/term_tool/F-13_tauri[済].md,False,True,done,final_image_without_svg
+F-14,three.js,term_tool,ready,content/entries/term_tool/F-14_three_js[済].md,False,True,done,final_image_without_svg
 F-15,shadcn/ui,term_tool,needs_review,content/entries/term_tool/F-15_shadcn_ui[人書].md,False,False,later,missing_svg
-F-16,Tailwind CSS,term_tool,ready,content/entries/term_tool/F-16_tailwind_css[済].md,False,False,ready_missing_svg,missing_svg
-F-17,Astro,term_tool,ready,content/entries/term_tool/F-17_astro[済].md,False,False,ready_missing_svg,missing_svg
-F-20,ESLint,term_tool,ready,content/entries/term_tool/F-20_eslint[済].md,False,False,ready_missing_svg,missing_svg
-F-21,Prettier,term_tool,ready,content/entries/term_tool/F-21_prettier[済].md,False,False,ready_missing_svg,missing_svg
-F-30,VS Code,term_tool,ready,content/entries/term_tool/F-30_vs_code[済].md,False,False,ready_missing_svg,missing_svg
+F-16,Tailwind CSS,term_tool,ready,content/entries/term_tool/F-16_tailwind_css[済].md,False,True,done,final_image_without_svg
+F-17,Astro,term_tool,ready,content/entries/term_tool/F-17_astro[済].md,False,True,done,final_image_without_svg
+F-20,ESLint,term_tool,ready,content/entries/term_tool/F-20_eslint[済].md,False,True,done,final_image_without_svg
+F-21,Prettier,term_tool,ready,content/entries/term_tool/F-21_prettier[済].md,False,True,done,final_image_without_svg
+F-30,VS Code,term_tool,ready,content/entries/term_tool/F-30_vs_code[済].md,False,True,done,final_image_without_svg
 F-34,VS Code 拡張機能,term_tool,drafting,,False,False,later,missing_svg
-F-35,Markdown Preview Enhanced,term_tool,ready,content/entries/term_tool/F-35_markdown_preview_enhanced[済].md,False,False,ready_missing_svg,missing_svg
-F-36,Git Graph,term_tool,ready,content/entries/term_tool/F-36_git_graph[済].md,False,False,ready_missing_svg,missing_svg
-F-37,Japanese Language Pack for VS Code,term_tool,ready,content/entries/term_tool/F-37_japanese_language_pack_for_vs_code[済].md,False,False,ready_missing_svg,missing_svg
-F-38,Markdown All in One,term_tool,ready,content/entries/term_tool/F-38_markdown_all_in_one[済].md,False,False,ready_missing_svg,missing_svg
-F-40,npm,term_tool,ready,content/entries/term_tool/F-40_npm[済].md,False,False,ready_missing_svg,missing_svg
-F-41,Vite,term_tool,ready,content/entries/term_tool/F-41_vite[済].md,False,False,ready_missing_svg,missing_svg
-F-42,ビルド,term_tool,ready,content/entries/term_tool/F-42_build[済].md,False,False,ready_missing_svg,missing_svg
-F-44,pnpm,term_tool,ready,content/entries/term_tool/F-44_pnpm[済].md,False,False,ready_missing_svg,missing_svg
+F-35,Markdown Preview Enhanced,term_tool,ready,content/entries/term_tool/F-35_markdown_preview_enhanced[済].md,False,True,done,final_image_without_svg
+F-36,Git Graph,term_tool,ready,content/entries/term_tool/F-36_git_graph[済].md,False,True,done,final_image_without_svg
+F-37,Japanese Language Pack for VS Code,term_tool,ready,content/entries/term_tool/F-37_japanese_language_pack_for_vs_code[済].md,False,True,done,final_image_without_svg
+F-38,Markdown All in One,term_tool,ready,content/entries/term_tool/F-38_markdown_all_in_one[済].md,False,True,done,final_image_without_svg
+F-40,npm,term_tool,ready,content/entries/term_tool/F-40_npm[済].md,False,True,done,final_image_without_svg
+F-41,Vite,term_tool,ready,content/entries/term_tool/F-41_vite[済].md,False,True,done,final_image_without_svg
+F-42,ビルド,term_tool,ready,content/entries/term_tool/F-42_build[済].md,False,True,done,final_image_without_svg
+F-44,pnpm,term_tool,ready,content/entries/term_tool/F-44_pnpm[済].md,False,True,done,final_image_without_svg
 F-50,git,term_tool,ready,content/entries/term/F-50_git[済].md,True,True,done,complete
-F-51,git push,term_tool,ready,content/entries/term_tool/F-51_git_push[済].md,False,False,ready_missing_svg,missing_svg
-F-52,git pull,term_tool,ready,content/entries/term_tool/F-52_git_pull[済].md,False,False,ready_missing_svg,missing_svg
-F-53,branch,term_tool,ready,content/entries/term_tool/F-53_branch[済].md,False,False,ready_missing_svg,missing_svg
-F-54,commit,term_tool,ready,content/entries/term_tool/F-54_commit[済].md,False,False,ready_missing_svg,missing_svg
-F-55,merge,term_tool,ready,content/entries/term_tool/F-55_merge[済].md,False,False,ready_missing_svg,missing_svg
-F-56,.gitignore,term_tool,ready,content/entries/term_tool/F-56_gitignore[済].md,False,False,ready_missing_svg,missing_svg
+F-51,git push,term_tool,ready,content/entries/term_tool/F-51_git_push[済].md,False,True,done,final_image_without_svg
+F-52,git pull,term_tool,ready,content/entries/term_tool/F-52_git_pull[済].md,False,True,done,final_image_without_svg
+F-53,branch,term_tool,ready,content/entries/term_tool/F-53_branch[済].md,False,True,done,final_image_without_svg
+F-54,commit,term_tool,ready,content/entries/term_tool/F-54_commit[済].md,False,True,done,final_image_without_svg
+F-55,merge,term_tool,ready,content/entries/term_tool/F-55_merge[済].md,False,True,done,final_image_without_svg
+F-56,.gitignore,term_tool,ready,content/entries/term_tool/F-56_gitignore[済].md,False,True,done,final_image_without_svg
 F-57,リポジトリ,term_tool,needs_review,,False,False,later,missing_svg
 F-58,git stash,term_tool,needs_review,content/entries/term_tool/F-58_git_stash[済].md,False,False,later,missing_svg
 F-59,README.md,term_tool,needs_review,content/entries/term_tool/F-59_readme_md[人書].md,False,False,later,missing_svg
@@ -299,17 +299,17 @@ I-41,SQLite MCP,mcp,ready,content/entries/mcp/I-41_sqlite_mcp[済].md,False,Fals
 I-50,AWS MCP,mcp,ready,content/entries/mcp/I-50_aws_mcp[済].md,False,False,ready_missing_svg,missing_svg
 I-80,自作 MCP のテンプレ,mcp,needs_review,,False,False,later,missing_svg
 I-81,MCP の登録・設定,mcp,drafting,,False,False,later,missing_svg
-J-1,AGI,term_general,ready,content/entries/term_general/J-1_agi[済].md,False,False,ready_missing_svg,missing_svg
-J-2,強い AI／弱い AI,term_general,ready,content/entries/term_general/J-2_strong_weak_ai[済].md,False,False,ready_missing_svg,missing_svg
-J-3,Singularity,term_general,ready,content/entries/term_general/J-3_singularity[済].md,False,False,ready_missing_svg,missing_svg
-J-4,ASI,term_general,ready,content/entries/term_general/J-4_asi[済].md,False,False,ready_missing_svg,missing_svg
-J-10,Machine Learning,term_general,ready,content/entries/term_general/J-10_machine_learning[済].md,False,False,ready_missing_svg,missing_svg
-J-11,Deep Learning,term_general,ready,content/entries/term_general/J-11_deep_learning[済].md,False,False,ready_missing_svg,missing_svg
-J-12,Neural Network,term_general,ready,content/entries/term_general/J-12_neural_network[済].md,False,False,ready_missing_svg,missing_svg
-J-13,Transformer,term_general,ready,content/entries/term_general/J-13_transformer[済].md,False,False,ready_missing_svg,missing_svg
+J-1,AGI,term_general,ready,content/entries/term_general/J-1_agi[済].md,False,True,done,final_image_without_svg
+J-2,強い AI／弱い AI,term_general,ready,content/entries/term_general/J-2_strong_weak_ai[済].md,False,True,done,final_image_without_svg
+J-3,Singularity,term_general,ready,content/entries/term_general/J-3_singularity[済].md,False,True,done,final_image_without_svg
+J-4,ASI,term_general,ready,content/entries/term_general/J-4_asi[済].md,False,True,done,final_image_without_svg
+J-10,Machine Learning,term_general,ready,content/entries/term_general/J-10_machine_learning[済].md,False,True,done,final_image_without_svg
+J-11,Deep Learning,term_general,ready,content/entries/term_general/J-11_deep_learning[済].md,False,True,done,final_image_without_svg
+J-12,Neural Network,term_general,ready,content/entries/term_general/J-12_neural_network[済].md,False,True,done,final_image_without_svg
+J-13,Transformer,term_general,ready,content/entries/term_general/J-13_transformer[済].md,False,True,done,final_image_without_svg
 J-14,LLM,term_general,ready,content/entries/term_general/J-14_llm[済].md,True,True,done,complete
-J-15,VLM,term_general,ready,content/entries/term_general/J-15_vlm[済].md,False,False,ready_missing_svg,missing_svg
-J-16,Fine-tuning,term_general,ready,content/entries/term_general/J-16_fine_tuning[済].md,False,False,ready_missing_svg,missing_svg
+J-15,VLM,term_general,ready,content/entries/term_general/J-15_vlm[済].md,False,True,done,final_image_without_svg
+J-16,Fine-tuning,term_general,ready,content/entries/term_general/J-16_fine_tuning[済].md,False,True,done,final_image_without_svg
 J-17,Attention,term_general,ready,content/entries/term_general/J-17_attention[済].md,False,False,ready_missing_svg,missing_svg
 J-18,MoE,term_general,ready,content/entries/term_general/J-18_moe[済].md,False,False,ready_missing_svg,missing_svg
 J-19,量子化,term_general,ready,content/entries/term_general/J-19_quantization[済].md,False,False,ready_missing_svg,missing_svg

@@ -1,0 +1,13 @@
+order,lane,entry_id,title,category,status,md_path,priority
+1,1,F-38,Markdown All in One,term_tool,ready,content/entries/term_tool/F-38_markdown_all_in_one[済].md,ready_missing_svg
+2,2,F-40,npm,term_tool,ready,content/entries/term_tool/F-40_npm[済].md,ready_missing_svg
+3,3,F-41,Vite,term_tool,ready,content/entries/term_tool/F-41_vite[済].md,ready_missing_svg
+4,4,F-42,ビルド,term_tool,ready,content/entries/term_tool/F-42_build[済].md,ready_missing_svg
+5,1,F-44,pnpm,term_tool,ready,content/entries/term_tool/F-44_pnpm[済].md,ready_missing_svg
+6,2,F-51,git push,term_tool,ready,content/entries/term_tool/F-51_git_push[済].md,ready_missing_svg
+7,3,F-52,git pull,term_tool,ready,content/entries/term_tool/F-52_git_pull[済].md,ready_missing_svg
+8,4,F-53,branch,term_tool,ready,content/entries/term_tool/F-53_branch[済].md,ready_missing_svg
+9,1,F-54,commit,term_tool,ready,content/entries/term_tool/F-54_commit[済].md,ready_missing_svg
+10,2,F-55,merge,term_tool,ready,content/entries/term_tool/F-55_merge[済].md,ready_missing_svg
+11,3,F-56,.gitignore,term_tool,ready,content/entries/term_tool/F-56_gitignore[済].md,ready_missing_svg
+12,4,J-1,AGI,term_general,ready,content/entries/term_general/J-1_agi[済].md,ready_missing_svg
