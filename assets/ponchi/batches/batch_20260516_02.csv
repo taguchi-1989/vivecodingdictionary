@@ -1,0 +1,13 @@
+order,lane,entry_id,title,category,status,md_path,priority
+1,1,G-2,Token,term_llm,ready,content/entries/term_llm/G-2_token[済].md,ready_missing_svg
+2,2,G-3,Dictation,term_llm,ready,content/entries/term_llm/G-3_dictation[済].md,ready_missing_svg
+3,3,G-5,Context Window,term_llm,ready,content/entries/term_llm/G-5_context_window[済].md,ready_missing_svg
+4,4,G-6,One-shot,term_llm,ready,content/entries/term_llm/G-6_one_shot[済].md,ready_missing_svg
+5,1,G-7,指示追従性,term_llm,ready,content/entries/term_llm/G-7_instruction-following[済].md,ready_missing_svg
+6,2,G-10,Prompt Engineering,term_llm,ready,content/entries/term_llm/G-10_prompt_engineering[済].md,ready_missing_svg
+7,3,G-11,Context Engineering,term_llm,ready,content/entries/term_llm/G-11_context_engineering[済].md,ready_missing_svg
+8,4,G-13,Few-shot Learning,term_llm,ready,content/entries/term_llm/G-13_few_shot_learning[済].md,ready_missing_svg
+9,1,G-14,Thinking モデル,term_llm,ready,content/entries/term_llm/G-14_thinking_model[済].md,ready_missing_svg
+10,2,G-15,RAG,term_llm,ready,content/entries/term_llm/G-15_rag[済].md,ready_missing_svg
+11,3,G-16,Embedding,term_llm,ready,content/entries/term_llm/G-16_embedding[済].md,ready_missing_svg
+12,4,G-18,Chain of Thought,term_llm,ready,content/entries/term_llm/G-18_chain_of_thought[済].md,ready_missing_svg

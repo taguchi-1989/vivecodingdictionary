@@ -28,6 +28,7 @@ from density_audit import (
 
 ENTRIES = REPO / 'content' / 'entries'
 PONCHI_DIR = REPO / 'drafts' / 'ponchi'
+PONCHI_FINAL_DIR = REPO / 'assets' / 'ponchi' / 'final'
 OUT = REPO / 'drafts' / 'prototypes' / 'preview' / 'overview.html'
 
 CHAPTERS = {
@@ -75,6 +76,7 @@ def tsumazuki_total_class(n: int) -> str:
 def collect():
     rows = []
     ponchi_ids = {p.stem for p in PONCHI_DIR.glob('*.svg')}
+    ponchi_final_ids = {p.stem for p in PONCHI_FINAL_DIR.glob('*.png')}
     for f in sorted(ENTRIES.rglob('*.md')):
         text = f.read_text(encoding='utf-8')
         fm, body = parse(text)
@@ -129,7 +131,8 @@ def collect():
             'sections': sections,
             'tsumazuki': tsu,
             'comment': com,
-            'has_ponchi': eid in ponchi_ids,
+            'has_ponchi': eid in ponchi_final_ids or eid in ponchi_ids,
+            'has_ponchi_final': eid in ponchi_final_ids,
         })
     rows.sort(key=lambda r: (r['letter'], r['num']))
     return rows
@@ -220,7 +223,8 @@ def gen_html(rows):
     valid_dens = [r['total'] for r in rows if r['total'] >= 0]
     median_d = sorted(valid_dens)[len(valid_dens) // 2] if valid_dens else 0
     ponchi_count = sum(1 for r in rows if r['has_ponchi'])
-    P(f'<div class="subtitle">全 {total_count} 件 / ready {total_ready} / needs_review {total_nr} / ポンチ絵 SVG あり {ponchi_count} 件・画像生成待ち {total_count - ponchi_count} 件 / 本文密度中央値 {median_d} 字（TS 基準 {TS_BASELINE} 字 比 {median_d*100//TS_BASELINE}%）</div>')
+    ponchi_final_count = sum(1 for r in rows if r.get('has_ponchi_final'))
+    P(f'<div class="subtitle">全 {total_count} 件 / ready {total_ready} / needs_review {total_nr} / ポンチ絵 PNG あり {ponchi_final_count} 件・画像生成待ち {total_count - ponchi_final_count} 件 / 本文密度中央値 {median_d} 字（TS 基準 {TS_BASELINE} 字 比 {median_d*100//TS_BASELINE}%）</div>')
     P('<div class="toolbar">')
     P('<span style="font-size:12px;font-weight:600;">章フィルタ:</span>')
     P('<button class="btn on" data-filter="all" onclick="filterChapter(this)">すべて</button>')
@@ -330,7 +334,9 @@ def gen_html(rows):
                     row_cells.append('<td class="num na">—</td>')
 
             # ponchi indicator
-            if r['has_ponchi']:
+            if r.get('has_ponchi_final'):
+                row_cells.append('<td class="ponchi has"><span title="PNG あり">●</span></td>')
+            elif r['has_ponchi']:
                 row_cells.append('<td class="ponchi has"><span title="SVG あり">●</span></td>')
             else:
                 row_cells.append('<td class="ponchi pending"><span title="画像生成待ち">○</span></td>')

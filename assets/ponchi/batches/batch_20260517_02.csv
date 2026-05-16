@@ -1,0 +1,13 @@
+order,lane,entry_id,title,category,status,md_path,priority
+1,1,G-42,Worktree,term_llm,ready,content/entries/term_llm/G-42_worktree[済].md,ready_missing_svg
+2,2,G-43,オーケストレーション,term_llm,ready,content/entries/term_llm/G-43_orchestration[済].md,ready_missing_svg
+3,3,G-44,マルチエージェント協調,term_llm,ready,content/entries/term_llm/G-44_multi_agent_coordination[済].md,ready_missing_svg
+4,4,G-46,ナーフ（モデルの劣化体感）,term_llm,ready,content/entries/term_llm/G-46_narf[済].md,ready_missing_svg
+5,1,G-47,Auto-compact,term_llm,ready,content/entries/term_llm/G-47_auto_compact[済].md,ready_missing_svg
+6,2,F-3,Python,term_tool,ready,content/entries/term_tool/F-3_python[済].md,ready_missing_svg
+7,3,F-4,HTML,term_tool,ready,content/entries/term_tool/F-4_html[済].md,ready_missing_svg
+8,4,F-5,CSS,term_tool,ready,content/entries/term_tool/F-5_css[済].md,ready_missing_svg
+9,1,F-6,Markdown,term_tool,ready,content/entries/term_tool/F-6_markdown[済].md,ready_missing_svg
+10,2,F-8,JSON,term_tool,ready,content/entries/term_tool/F-8_json[済].md,ready_missing_svg
+11,3,F-9,SVG,term_tool,ready,content/entries/term_tool/F-9_svg[済].md,ready_missing_svg
+12,4,F-10,React,term_tool,ready,content/entries/term_tool/F-10_react[済].md,ready_missing_svg

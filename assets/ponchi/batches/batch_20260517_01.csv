@@ -1,0 +1,13 @@
+order,lane,entry_id,title,category,status,md_path,priority
+1,1,G-19,Prompt Caching,term_llm,ready,content/entries/term_llm/G-19_prompt_caching[済].md,ready_missing_svg
+2,2,G-30,Tool Use,term_llm,ready,content/entries/term_llm/G-30_tool_use[済].md,ready_missing_svg
+3,3,G-31,Hook,term_llm,ready,content/entries/term_llm/G-31_hook[済].md,ready_missing_svg
+4,4,G-32,Slash Command,term_llm,ready,content/entries/term_llm/G-32_slash_command[済].md,ready_missing_svg
+5,1,G-33,Function Calling,term_llm,ready,content/entries/term_llm/G-33_function_calling[済].md,ready_missing_svg
+6,2,G-34,Code Interpreter,term_llm,ready,content/entries/term_llm/G-34_code_interpreter[済].md,ready_missing_svg
+7,3,G-35,Deep Research,term_llm,ready,content/entries/term_llm/G-35_deep_research[済].md,ready_missing_svg
+8,4,G-36,Artifact,term_llm,ready,content/entries/term_llm/G-36_artifact[済].md,ready_missing_svg
+9,1,G-38,Plan Mode,term_llm,ready,content/entries/term_llm/G-38_plan_mode[済].md,ready_missing_svg
+10,2,G-39,Permission,term_llm,ready,content/entries/term_llm/G-39_permission[済].md,ready_missing_svg
+11,3,G-40,バイブコーディング,term_llm,ready,content/entries/term_llm/G-40_vibe_coding[済].md,ready_missing_svg
+12,4,G-41,Subagent,term_llm,ready,content/entries/term_llm/G-41_subagent[済].md,ready_missing_svg

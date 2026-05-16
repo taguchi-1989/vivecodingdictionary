@@ -38,6 +38,7 @@ CSV_PATH = ROOT / "ledgers" / "entries.csv"
 ENTRIES_DIR = ROOT / "content" / "entries"
 PREVIEW_DIR = ROOT / "drafts" / "prototypes" / "preview"
 PONCHI_SVG_DIR = ROOT / "drafts" / "ponchi"
+PONCHI_FINAL_DIR = ROOT / "assets" / "ponchi" / "final"
 OVERLAY_CSS_REL = "../mockups/design_philosophy_v2/overlay.css"
 OVERLAY_TIGHT_CSS_REL = "../mockups/design_philosophy_v2/overlay-tight.css"
 BASE_CSS_REL = "../mockups/design_philosophy_v2/base.css"
@@ -373,8 +374,13 @@ LEVEL_ICON_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" str
 PONCHI_ICON_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/><path d="M9 12l-2 3m8-3l2 3"/></svg>'
 
 
-def load_ponchi_svg(entry_id: str) -> tuple[str, bool]:
-    """drafts/ponchi/{entry_id}.svg があればその中身を返す。なければ placeholder SVG と False。"""
+def load_ponchi_asset(entry_id: str) -> tuple[str, bool]:
+    """final PNG -> draft SVG -> placeholder の順でポンチ絵 HTML を返す。"""
+    png_path = PONCHI_FINAL_DIR / f"{entry_id}.png"
+    if png_path.exists():
+        rel = f"../../../assets/ponchi/final/{entry_id}.png"
+        return f'<img src="{rel}" alt="" loading="lazy">', True
+
     svg_path = PONCHI_SVG_DIR / f"{entry_id}.svg"
     if not svg_path.exists():
         return PONCHI_ICON_SVG, False
@@ -625,7 +631,8 @@ body {{ margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: va
 .body-text li {{ margin: 2px 0; line-height: 1.7; }}
 /* ponchi SVG が実データの時は円いっぱいに広げる（placeholder は 104px のまま） */
 .ponchi-icon.ponchi-icon--real {{ padding: 0; overflow: hidden; }}
-.ponchi-icon.ponchi-icon--real svg {{ width: 100% !important; height: 100% !important; border-radius: 50%; }}
+.ponchi-icon.ponchi-icon--real svg,
+.ponchi-icon.ponchi-icon--real img {{ width: 100% !important; height: 100% !important; border-radius: 50%; object-fit: cover; display: block; }}
 .preview-nav {{
   max-width: 1500px; margin: 0 auto 16px; padding: 10px 16px;
   background: #fff; border: 1px solid #d0d9e6; border-radius: 8px;
@@ -994,7 +1001,7 @@ def render_page(entry: dict, prev: dict | None, next_: dict | None, drawer_html:
     related_html = render_related_pills(related)
 
     ponchi_title, ponchi_caption = extract_ponchi(body, entry["title"])
-    ponchi_svg, ponchi_is_real = load_ponchi_svg(entry_id)
+    ponchi_asset, ponchi_is_real = load_ponchi_asset(entry_id)
 
     tsumazuki_items = render_tsumazuki_items(extract_tsumazuki_bullets(body))
     comment_items = render_comment_items(extract_comment_items(body))
@@ -1033,7 +1040,7 @@ def render_page(entry: dict, prev: dict | None, next_: dict | None, drawer_html:
         book_icon=BOOK_ICON_SVG,
         code_icon=CODE_ICON_SVG,
         pin_icon=PIN_ICON_SVG,
-        ponchi_icon=ponchi_svg,
+        ponchi_icon=ponchi_asset,
         ponchi_icon_extra_class="ponchi-icon--real" if ponchi_is_real else "",
         page_left=f"{page_left:02d}",
         page_right=f"{page_right:02d}",

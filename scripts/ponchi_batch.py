@@ -193,6 +193,7 @@ Style/medium: soft hand-drawn editorial illustration, clean expressive linework,
 Composition/framing: square composition, one clear scene, readable when reduced to a small book illustration, generous margins, no crowded UI details.
 Color palette: mostly black linework with white and very pale blue-gray paper tones; at most one subtle blue accent.
 Text: No readable text inside the image. If speech bubbles appear, use only tiny abstract scribble marks.
+If the source scene mentions labels, UI text, column names, or speech words, represent them as abstract blocks, icon marks, checkmarks, dots, or short illegible scribbles instead of readable text; the printed page caption will carry the wording.
 Constraints: Do not draw official logos, trademarks, product UI screenshots, brand marks, model provider marks, or real people's likenesses. Do not make it look like an advertisement. Keep the concept human-centered.
 Avoid: photorealism, 3D render, glossy icons, dense diagrams, fake readable Japanese text, brand marks, watermarks.
 """
