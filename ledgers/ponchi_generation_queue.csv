@@ -126,15 +126,15 @@ E-21,MMLU-Pro,benchmark,ready,content/entries/benchmark/E-21_mmlu_pro[済].md,Fa
 E-22,GPQA,benchmark,ready,content/entries/benchmark/E-22_gpqa[済].md,False,True,done,final_image_without_svg
 E-23,GSM8K,benchmark,ready,content/entries/benchmark/E-23_gsm8k[済].md,False,True,done,final_image_without_svg
 E-24,MATH,benchmark,ready,content/entries/benchmark/E-24_math[済].md,False,True,done,final_image_without_svg
-E-25,AIME,benchmark,ready,content/entries/benchmark/E-25_aime[済].md,False,False,ready_missing_svg,missing_svg
-E-26,Humanity's Last Exam,benchmark,ready,content/entries/benchmark/E-26_humanity_s_last_exam[済].md,False,False,ready_missing_svg,missing_svg
-E-27,IQ Bench,benchmark,ready,content/entries/benchmark/E-27_iq_bench[済].md,False,False,ready_missing_svg,missing_svg
-E-30,TAU-Bench,benchmark,ready,content/entries/benchmark/E-30_tau_bench[済].md,False,False,ready_missing_svg,missing_svg
+E-25,AIME,benchmark,ready,content/entries/benchmark/E-25_aime[済].md,False,True,done,final_image_without_svg
+E-26,Humanity's Last Exam,benchmark,ready,content/entries/benchmark/E-26_humanity_s_last_exam[済].md,False,True,done,final_image_without_svg
+E-27,IQ Bench,benchmark,ready,content/entries/benchmark/E-27_iq_bench[済].md,False,True,done,final_image_without_svg
+E-30,TAU-Bench,benchmark,ready,content/entries/benchmark/E-30_tau_bench[済].md,False,True,done,final_image_without_svg
 E-31,WebArena,benchmark,needs_review,content/entries/benchmark/E-31_webarena[人書].md,False,False,later,missing_svg
 E-32,GAIA,benchmark,needs_review,content/entries/benchmark/E-32_gaia[人書].md,False,False,later,missing_svg
 E-33,AgentBench,benchmark,needs_review,content/entries/benchmark/E-33_agentbench[人書].md,False,False,later,missing_svg
 E-34,OSWorld,benchmark,needs_review,content/entries/benchmark/E-34_osworld[人書].md,False,False,later,missing_svg
-E-50,Chatbot Arena,benchmark,ready,content/entries/benchmark/E-50_chatbot_arena[済].md,False,False,ready_missing_svg,missing_svg
+E-50,Chatbot Arena,benchmark,ready,content/entries/benchmark/E-50_chatbot_arena[済].md,False,True,done,final_image_without_svg
 E-51,LMSYS Arena,benchmark,needs_review,content/entries/benchmark/E-51_lmsys_arena[人書].md,False,False,later,missing_svg
 F-1,JavaScript,term_tool,ready,content/entries/term_tool/F-1_javascript[済].md,True,True,done,complete
 F-2,TypeScript,term_tool,ready,content/entries/term_tool/F-2_typescript[済].md,True,True,done,complete
@@ -258,14 +258,14 @@ G-44,マルチエージェント協調,term_llm,ready,content/entries/term_llm/G
 G-45,段階的開示,term_llm,needs_review,,False,False,later,missing_svg
 G-46,ナーフ（モデルの劣化体感）,term_llm,ready,content/entries/term_llm/G-46_narf[済].md,False,True,done,final_image_without_svg
 G-47,Auto-compact,term_llm,ready,content/entries/term_llm/G-47_auto_compact[済].md,False,True,done,final_image_without_svg
-H-1,TDD,workflow,ready,content/entries/workflow/H-1_tdd[済].md,False,False,ready_missing_svg,missing_svg
+H-1,TDD,workflow,ready,content/entries/workflow/H-1_tdd[済].md,False,True,done,final_image_without_svg
 H-2,ペアプログラミング,workflow,drafting,,False,False,later,missing_svg
 H-3,バイブコーディングの流儀,workflow,drafting,,False,False,later,missing_svg
 H-4,コードレビュー,workflow,drafting,,False,False,later,missing_svg
-H-5,Scrum / Agile,workflow,ready,content/entries/workflow/H-5_scrum_agile[済].md,False,False,ready_missing_svg,missing_svg
-H-6,Git Flow,workflow,ready,content/entries/workflow/H-6_git_flow[済].md,False,False,ready_missing_svg,missing_svg
-H-7,CI/CD,workflow,ready,content/entries/workflow/H-7_ci_cd[済].md,False,False,ready_missing_svg,missing_svg
-H-8,DevOps,workflow,ready,content/entries/workflow/H-8_devops[済].md,False,False,ready_missing_svg,missing_svg
+H-5,Scrum / Agile,workflow,ready,content/entries/workflow/H-5_scrum_agile[済].md,False,True,done,final_image_without_svg
+H-6,Git Flow,workflow,ready,content/entries/workflow/H-6_git_flow[済].md,False,True,done,final_image_without_svg
+H-7,CI/CD,workflow,ready,content/entries/workflow/H-7_ci_cd[済].md,False,True,done,final_image_without_svg
+H-8,DevOps,workflow,ready,content/entries/workflow/H-8_devops[済].md,False,True,done,final_image_without_svg
 H-50,Bard → Gemini,history,skeleton,,False,False,later,missing_svg
 H-51,Preview から正式版への流れ,history,skeleton,,False,False,later,missing_svg
 H-52,Copilot から Claude Code までの流れ,history,skeleton,,False,False,later,missing_svg
@@ -281,10 +281,10 @@ H-61,Preview 版という文化,history,needs_review,,False,False,later,missing_
 H-62,Anthropic 創業の流れ,history,drafting,,False,False,later,missing_svg
 H-63,Vibe Coding 命名,history,drafting,,False,False,later,missing_svg
 I-1,MCP,mcp,ready,content/entries/mcp/I-1_mcp[済].md,True,True,done,complete
-I-2,MCP Server,mcp,ready,content/entries/mcp/I-2_mcp_server[済].md,False,False,ready_missing_svg,missing_svg
-I-3,MCP Client,mcp,ready,content/entries/mcp/I-3_mcp_client[済].md,False,False,ready_missing_svg,missing_svg
-I-4,MCP Transport,mcp,ready,content/entries/mcp/I-4_mcp_transport[済].md,False,False,ready_missing_svg,missing_svg
-I-5,MCP SDK,mcp,ready,content/entries/mcp/I-5_mcp_sdk[済].md,False,False,ready_missing_svg,missing_svg
+I-2,MCP Server,mcp,ready,content/entries/mcp/I-2_mcp_server[済].md,False,True,done,final_image_without_svg
+I-3,MCP Client,mcp,ready,content/entries/mcp/I-3_mcp_client[済].md,False,True,done,final_image_without_svg
+I-4,MCP Transport,mcp,ready,content/entries/mcp/I-4_mcp_transport[済].md,False,True,done,final_image_without_svg
+I-5,MCP SDK,mcp,ready,content/entries/mcp/I-5_mcp_sdk[済].md,False,True,done,final_image_without_svg
 I-10,Filesystem MCP,mcp,ready,content/entries/mcp/I-10_filesystem_mcp[済].md,False,False,ready_missing_svg,missing_svg
 I-11,GitHub MCP,mcp,ready,content/entries/mcp/I-11_github_mcp[済].md,False,False,ready_missing_svg,missing_svg
 I-12,Git MCP,mcp,ready,content/entries/mcp/I-12_git_mcp[済].md,False,False,ready_missing_svg,missing_svg
@@ -343,9 +343,9 @@ J-77,GPU (概念),term_general,ready,content/entries/term_general/J-77_gpu[済].
 J-78,HDD,term_general,ready,content/entries/term_general/J-78_hdd[済].md,False,True,done,final_image_without_svg
 J-79,SSD,term_general,ready,content/entries/term_general/J-79_ssd[済].md,False,True,done,final_image_without_svg
 J-80,SATA,term_general,ready,content/entries/term_general/J-80_sata[済].md,False,True,done,final_image_without_svg
-J-81,M.2,term_general,ready,content/entries/term_general/J-81_m_2[済].md,False,False,ready_missing_svg,missing_svg
-J-90,GUI,term_general,ready,content/entries/term_general/J-90_gui[済].md,False,False,ready_missing_svg,missing_svg
-J-91,CLI,term_general,ready,content/entries/term_general/J-91_cli[済].md,False,False,ready_missing_svg,missing_svg
-J-92,Linux,term_general,ready,content/entries/term_general/J-92_linux[済].md,False,False,ready_missing_svg,missing_svg
-J-93,Ubuntu,term_general,ready,content/entries/term_general/J-93_ubuntu[済].md,False,False,ready_missing_svg,missing_svg
-J-100,識字（リテラシー）,term_general,ready,content/entries/term_general/J-100_literacy[済].md,False,False,ready_missing_svg,missing_svg
+J-81,M.2,term_general,ready,content/entries/term_general/J-81_m_2[済].md,False,True,done,final_image_without_svg
+J-90,GUI,term_general,ready,content/entries/term_general/J-90_gui[済].md,False,True,done,final_image_without_svg
+J-91,CLI,term_general,ready,content/entries/term_general/J-91_cli[済].md,False,True,done,final_image_without_svg
+J-92,Linux,term_general,ready,content/entries/term_general/J-92_linux[済].md,False,True,done,final_image_without_svg
+J-93,Ubuntu,term_general,ready,content/entries/term_general/J-93_ubuntu[済].md,False,True,done,final_image_without_svg
+J-100,識字（リテラシー）,term_general,ready,content/entries/term_general/J-100_literacy[済].md,False,True,done,final_image_without_svg
