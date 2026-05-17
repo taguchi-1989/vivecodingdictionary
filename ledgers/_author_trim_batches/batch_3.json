@@ -1,0 +1,469 @@
+[
+  {
+    "id": "J-14",
+    "path": "content/entries/term_general/J-14_llm[済].md",
+    "long_tsumazuki": [
+      54,
+      50,
+      58
+    ],
+    "long_comment": [
+      55,
+      56,
+      43
+    ],
+    "score": 316
+  },
+  {
+    "id": "J-74",
+    "path": "content/entries/term_general/J-74_rtx-series[済].md",
+    "long_tsumazuki": [
+      67,
+      121,
+      63
+    ],
+    "long_comment": [
+      48
+    ],
+    "score": 299
+  },
+  {
+    "id": "B-50",
+    "path": "content/entries/service/B-50_claude_pricing[済].md",
+    "long_tsumazuki": [
+      52,
+      52,
+      59
+    ],
+    "long_comment": [
+      43,
+      41,
+      41
+    ],
+    "score": 288
+  },
+  {
+    "id": "B-23",
+    "path": "content/entries/service/B-23_aws[済].md",
+    "long_tsumazuki": [
+      50,
+      45,
+      50
+    ],
+    "long_comment": [
+      44,
+      43,
+      42
+    ],
+    "score": 274
+  },
+  {
+    "id": "G-34",
+    "path": "content/entries/term_llm/G-34_code_interpreter[済].md",
+    "long_tsumazuki": [
+      48,
+      88,
+      42
+    ],
+    "long_comment": [
+      80
+    ],
+    "score": 258
+  },
+  {
+    "id": "F-9",
+    "path": "content/entries/term_tool/F-9_svg[済].md",
+    "long_tsumazuki": [
+      48,
+      51
+    ],
+    "long_comment": [
+      46,
+      49,
+      57
+    ],
+    "score": 251
+  },
+  {
+    "id": "G-14",
+    "path": "content/entries/term_llm/G-14_thinking_model[済].md",
+    "long_tsumazuki": [
+      65,
+      50,
+      43
+    ],
+    "long_comment": [
+      41,
+      48
+    ],
+    "score": 247
+  },
+  {
+    "id": "G-12",
+    "path": "content/entries/term_llm/G-12_agent_design[人書].md",
+    "long_tsumazuki": [
+      58,
+      63,
+      45
+    ],
+    "long_comment": [
+      71
+    ],
+    "score": 237
+  },
+  {
+    "id": "J-15",
+    "path": "content/entries/term_general/J-15_vlm[済].md",
+    "long_tsumazuki": [
+      86
+    ],
+    "long_comment": [
+      43,
+      44,
+      42
+    ],
+    "score": 215
+  },
+  {
+    "id": "G-20",
+    "path": "content/entries/tool_agent/G-20_claude_md[済].md",
+    "long_tsumazuki": [
+      56
+    ],
+    "long_comment": [
+      59,
+      48,
+      45
+    ],
+    "score": 208
+  },
+  {
+    "id": "B-15",
+    "path": "content/entries/service/B-15_microsoft_copilot[済].md",
+    "long_tsumazuki": [
+      84
+    ],
+    "long_comment": [
+      43,
+      72
+    ],
+    "score": 199
+  },
+  {
+    "id": "H-56",
+    "path": "content/entries/history/H-56_claude_version_history[済].md",
+    "long_tsumazuki": [
+      68
+    ],
+    "long_comment": [
+      73,
+      50
+    ],
+    "score": 191
+  },
+  {
+    "id": "G-30",
+    "path": "content/entries/term_llm/G-30_tool_use[済].md",
+    "long_tsumazuki": [
+      61,
+      42
+    ],
+    "long_comment": [
+      84
+    ],
+    "score": 187
+  },
+  {
+    "id": "J-40",
+    "path": "content/entries/term_general/J-40_iot[済].md",
+    "long_tsumazuki": [
+      93
+    ],
+    "long_comment": [
+      41,
+      44
+    ],
+    "score": 178
+  },
+  {
+    "id": "B-41",
+    "path": "content/entries/service/B-41_arxiv[済].md",
+    "long_tsumazuki": [
+      79
+    ],
+    "long_comment": [
+      48,
+      41
+    ],
+    "score": 168
+  },
+  {
+    "id": "J-54",
+    "path": "content/entries/term_general/J-54_iso_iec_42001[済].md",
+    "long_tsumazuki": [
+      117
+    ],
+    "long_comment": [
+      47
+    ],
+    "score": 164
+  },
+  {
+    "id": "I-1",
+    "path": "content/entries/mcp/I-1_mcp[済].md",
+    "long_tsumazuki": [
+      52,
+      44,
+      58
+    ],
+    "long_comment": [],
+    "score": 154
+  },
+  {
+    "id": "J-11",
+    "path": "content/entries/term_general/J-11_deep_learning[済].md",
+    "long_tsumazuki": [
+      60
+    ],
+    "long_comment": [
+      47,
+      44
+    ],
+    "score": 151
+  },
+  {
+    "id": "F-84",
+    "path": "content/entries/term_tool/F-84_ghostty[人書].md",
+    "long_tsumazuki": [
+      51,
+      51,
+      42
+    ],
+    "long_comment": [],
+    "score": 144
+  },
+  {
+    "id": "G-18",
+    "path": "content/entries/term_llm/G-18_chain_of_thought[済].md",
+    "long_tsumazuki": [
+      41,
+      42
+    ],
+    "long_comment": [
+      53
+    ],
+    "score": 136
+  },
+  {
+    "id": "J-12",
+    "path": "content/entries/term_general/J-12_neural_network[済].md",
+    "long_tsumazuki": [
+      82
+    ],
+    "long_comment": [
+      49
+    ],
+    "score": 131
+  },
+  {
+    "id": "F-53",
+    "path": "content/entries/term_tool/F-53_branch[済].md",
+    "long_tsumazuki": [
+      71,
+      50
+    ],
+    "long_comment": [],
+    "score": 121
+  },
+  {
+    "id": "J-23",
+    "path": "content/entries/term_general/J-23_diffusion_model[済].md",
+    "long_tsumazuki": [
+      53,
+      60
+    ],
+    "long_comment": [],
+    "score": 113
+  },
+  {
+    "id": "F-7",
+    "path": "content/entries/term_tool/F-7_yaml[人書].md",
+    "long_tsumazuki": [
+      107
+    ],
+    "long_comment": [],
+    "score": 107
+  },
+  {
+    "id": "C-58",
+    "path": "content/entries/person/C-58_elon_musk[済].md",
+    "long_tsumazuki": [
+      50,
+      49
+    ],
+    "long_comment": [],
+    "score": 99
+  },
+  {
+    "id": "H-54",
+    "path": "content/entries/history/H-54_gpt4_release[済].md",
+    "long_tsumazuki": [
+      95
+    ],
+    "long_comment": [],
+    "score": 95
+  },
+  {
+    "id": "J-41",
+    "path": "content/entries/term_general/J-41_dx[済].md",
+    "long_tsumazuki": [
+      87
+    ],
+    "long_comment": [],
+    "score": 87
+  },
+  {
+    "id": "F-37",
+    "path": "content/entries/term_tool/F-37_japanese_language_pack_for_vs_code[済].md",
+    "long_tsumazuki": [
+      81
+    ],
+    "long_comment": [],
+    "score": 81
+  },
+  {
+    "id": "F-55",
+    "path": "content/entries/term_tool/F-55_merge[済].md",
+    "long_tsumazuki": [
+      66
+    ],
+    "long_comment": [],
+    "score": 66
+  },
+  {
+    "id": "J-90",
+    "path": "content/entries/term_general/J-90_gui[済].md",
+    "long_tsumazuki": [
+      58
+    ],
+    "long_comment": [],
+    "score": 58
+  },
+  {
+    "id": "C-8",
+    "path": "content/entries/person/C-8_microsoft_ai[済].md",
+    "long_tsumazuki": [
+      48
+    ],
+    "long_comment": [],
+    "score": 48
+  },
+  {
+    "id": "C-81",
+    "path": "content/entries/person/C-81_nyanta[済].md",
+    "long_tsumazuki": [
+      44
+    ],
+    "long_comment": [],
+    "score": 44
+  },
+  {
+    "id": "E-33",
+    "path": "content/entries/benchmark/E-33_agentbench[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "D-21",
+    "path": "content/entries/model/D-21_gpt4[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "D-70",
+    "path": "content/entries/model/D-70_amical[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "B-6",
+    "path": "content/entries/service/B-6_windsurf[済].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "F-100",
+    "path": "content/entries/term_tool/F-100_file_extensions_guide[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "F-111",
+    "path": "content/entries/term_tool/F-111_a11y[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "F-140",
+    "path": "content/entries/term_tool/F-140_mermaid[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "F-160",
+    "path": "content/entries/term_tool/F-160_dom[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "F-180",
+    "path": "content/entries/term_tool/F-180_opengl[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "F-85",
+    "path": "content/entries/term_tool/F-85_superclaude_framework[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "D-54",
+    "path": "content/entries/model/D-54_stable_diffusion[済].md",
+    "long_tsumazuki": [
+      41
+    ],
+    "long_comment": [],
+    "score": 41
+  }
+]

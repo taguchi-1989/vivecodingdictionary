@@ -1,0 +1,473 @@
+[
+  {
+    "id": "F-62",
+    "path": "content/entries/term_tool/F-62_github_actions[人書].md",
+    "long_tsumazuki": [
+      339,
+      42
+    ],
+    "long_comment": [
+      43,
+      57
+    ],
+    "score": 481
+  },
+  {
+    "id": "G-42",
+    "path": "content/entries/term_llm/G-42_worktree[済].md",
+    "long_tsumazuki": [
+      78,
+      81,
+      42
+    ],
+    "long_comment": [
+      45,
+      64
+    ],
+    "score": 310
+  },
+  {
+    "id": "C-3",
+    "path": "content/entries/person/C-3_google_deepmind[済].md",
+    "long_tsumazuki": [
+      55,
+      54,
+      54
+    ],
+    "long_comment": [
+      41,
+      41,
+      44
+    ],
+    "score": 289
+  },
+  {
+    "id": "H-53",
+    "path": "content/entries/history/H-53_chatgpt_launch[済].md",
+    "long_tsumazuki": [
+      50,
+      60,
+      51
+    ],
+    "long_comment": [
+      55,
+      64
+    ],
+    "score": 280
+  },
+  {
+    "id": "B-19",
+    "path": "content/entries/service/B-19_claude_cowork[済].md",
+    "long_tsumazuki": [
+      114
+    ],
+    "long_comment": [
+      62,
+      44,
+      41
+    ],
+    "score": 261
+  },
+  {
+    "id": "F-11",
+    "path": "content/entries/term_tool/F-11_next_js[済].md",
+    "long_tsumazuki": [
+      52,
+      70
+    ],
+    "long_comment": [
+      48,
+      41,
+      44
+    ],
+    "score": 255
+  },
+  {
+    "id": "B-32",
+    "path": "content/entries/service/B-32_figma[済].md",
+    "long_tsumazuki": [
+      135
+    ],
+    "long_comment": [
+      42,
+      72
+    ],
+    "score": 249
+  },
+  {
+    "id": "F-54",
+    "path": "content/entries/term_tool/F-54_commit[済].md",
+    "long_tsumazuki": [
+      89,
+      56
+    ],
+    "long_comment": [
+      53,
+      41
+    ],
+    "score": 239
+  },
+  {
+    "id": "J-70",
+    "path": "content/entries/term_general/J-70_vram[済].md",
+    "long_tsumazuki": [
+      82,
+      101,
+      42
+    ],
+    "long_comment": [],
+    "score": 225
+  },
+  {
+    "id": "G-11",
+    "path": "content/entries/term_llm/G-11_context_engineering[済].md",
+    "long_tsumazuki": [
+      65,
+      52,
+      42
+    ],
+    "long_comment": [
+      51
+    ],
+    "score": 210
+  },
+  {
+    "id": "G-47",
+    "path": "content/entries/term_llm/G-47_auto_compact[済].md",
+    "long_tsumazuki": [
+      62,
+      44,
+      42
+    ],
+    "long_comment": [
+      56
+    ],
+    "score": 204
+  },
+  {
+    "id": "C-6",
+    "path": "content/entries/person/C-6_mistral_ai[人書].md",
+    "long_tsumazuki": [
+      72,
+      56,
+      68
+    ],
+    "long_comment": [],
+    "score": 196
+  },
+  {
+    "id": "F-4",
+    "path": "content/entries/term_tool/F-4_html[済].md",
+    "long_tsumazuki": [
+      54,
+      51
+    ],
+    "long_comment": [
+      43,
+      42
+    ],
+    "score": 190
+  },
+  {
+    "id": "B-3",
+    "path": "content/entries/service/B-3_chatgpt[済].md",
+    "long_tsumazuki": [
+      42,
+      53
+    ],
+    "long_comment": [
+      44,
+      44
+    ],
+    "score": 183
+  },
+  {
+    "id": "J-21",
+    "path": "content/entries/term_general/J-21_lora[済].md",
+    "long_tsumazuki": [
+      83
+    ],
+    "long_comment": [
+      44,
+      44
+    ],
+    "score": 171
+  },
+  {
+    "id": "F-30",
+    "path": "content/entries/term_tool/F-30_vs_code[済].md",
+    "long_tsumazuki": [
+      56
+    ],
+    "long_comment": [
+      58,
+      52
+    ],
+    "score": 166
+  },
+  {
+    "id": "J-33",
+    "path": "content/entries/term_general/J-33_quantum-computer[済].md",
+    "long_tsumazuki": [
+      115
+    ],
+    "long_comment": [
+      41
+    ],
+    "score": 156
+  },
+  {
+    "id": "G-38",
+    "path": "content/entries/term_llm/G-38_plan_mode[済].md",
+    "long_tsumazuki": [
+      56,
+      42
+    ],
+    "long_comment": [
+      55
+    ],
+    "score": 153
+  },
+  {
+    "id": "B-22",
+    "path": "content/entries/service/B-22_cloudflare[済].md",
+    "long_tsumazuki": [
+      103
+    ],
+    "long_comment": [
+      45
+    ],
+    "score": 148
+  },
+  {
+    "id": "G-2",
+    "path": "content/entries/term_llm/G-2_token[済].md",
+    "long_tsumazuki": [
+      41,
+      59
+    ],
+    "long_comment": [
+      42
+    ],
+    "score": 142
+  },
+  {
+    "id": "J-16",
+    "path": "content/entries/term_general/J-16_fine_tuning[済].md",
+    "long_tsumazuki": [
+      81
+    ],
+    "long_comment": [
+      52
+    ],
+    "score": 133
+  },
+  {
+    "id": "F-44",
+    "path": "content/entries/term_tool/F-44_pnpm[済].md",
+    "long_tsumazuki": [
+      68
+    ],
+    "long_comment": [
+      60
+    ],
+    "score": 128
+  },
+  {
+    "id": "G-16",
+    "path": "content/entries/term_llm/G-16_embedding[済].md",
+    "long_tsumazuki": [
+      61,
+      57
+    ],
+    "long_comment": [],
+    "score": 118
+  },
+  {
+    "id": "J-79",
+    "path": "content/entries/term_general/J-79_ssd[済].md",
+    "long_tsumazuki": [
+      68,
+      42
+    ],
+    "long_comment": [],
+    "score": 110
+  },
+  {
+    "id": "F-16",
+    "path": "content/entries/term_tool/F-16_tailwind_css[済].md",
+    "long_tsumazuki": [
+      55
+    ],
+    "long_comment": [
+      50
+    ],
+    "score": 105
+  },
+  {
+    "id": "F-82",
+    "path": "content/entries/term_tool/F-82_wsl[済].md",
+    "long_tsumazuki": [
+      54,
+      43
+    ],
+    "long_comment": [],
+    "score": 97
+  },
+  {
+    "id": "E-30",
+    "path": "content/entries/benchmark/E-30_tau_bench[済].md",
+    "long_tsumazuki": [],
+    "long_comment": [
+      43,
+      47
+    ],
+    "score": 90
+  },
+  {
+    "id": "D-56",
+    "path": "content/entries/model/D-56_seedance[済].md",
+    "long_tsumazuki": [
+      41
+    ],
+    "long_comment": [
+      41
+    ],
+    "score": 82
+  },
+  {
+    "id": "B-14",
+    "path": "content/entries/service/B-14_genspark[済].md",
+    "long_tsumazuki": [
+      77
+    ],
+    "long_comment": [],
+    "score": 77
+  },
+  {
+    "id": "B-4",
+    "path": "content/entries/service/B-4_cursor[済].md",
+    "long_tsumazuki": [
+      60
+    ],
+    "long_comment": [],
+    "score": 60
+  },
+  {
+    "id": "H-55",
+    "path": "content/entries/history/H-55_llama_opensource[済].md",
+    "long_tsumazuki": [
+      52
+    ],
+    "long_comment": [],
+    "score": 52
+  },
+  {
+    "id": "G-33",
+    "path": "content/entries/term_llm/G-33_function_calling[済].md",
+    "long_tsumazuki": [
+      45
+    ],
+    "long_comment": [],
+    "score": 45
+  },
+  {
+    "id": "C-7",
+    "path": "content/entries/person/C-7_hugging_face[済].md",
+    "long_tsumazuki": [
+      43
+    ],
+    "long_comment": [],
+    "score": 43
+  },
+  {
+    "id": "D-14",
+    "path": "content/entries/model/D-14_claude_mythos_preview[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "D-2",
+    "path": "content/entries/model/D-2_gemini25[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "B-10",
+    "path": "content/entries/service/B-10_devin[済].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "B-9",
+    "path": "content/entries/service/B-9_v0[済].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "F-103",
+    "path": "content/entries/term_tool/F-103_mp3[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "F-122",
+    "path": "content/entries/term_tool/F-122_prisma[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "F-152",
+    "path": "content/entries/term_tool/F-152_gpl[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "F-170",
+    "path": "content/entries/term_tool/F-170_ec2[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "F-200",
+    "path": "content/entries/term_tool/F-200_rust[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "F-90",
+    "path": "content/entries/term_tool/F-90_docker[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  }
+]

@@ -1,0 +1,467 @@
+[
+  {
+    "id": "B-51",
+    "path": "content/entries/service/B-51_chatgpt_pricing[済].md",
+    "long_tsumazuki": [
+      49,
+      54,
+      51
+    ],
+    "long_comment": [
+      42,
+      42,
+      45,
+      45
+    ],
+    "score": 328
+  },
+  {
+    "id": "G-13",
+    "path": "content/entries/term_llm/G-13_few_shot_learning[済].md",
+    "long_tsumazuki": [
+      56,
+      79,
+      42
+    ],
+    "long_comment": [
+      51,
+      75
+    ],
+    "score": 303
+  },
+  {
+    "id": "B-30",
+    "path": "content/entries/service/B-30_amazon_bedrock[済].md",
+    "long_tsumazuki": [
+      57,
+      60,
+      46
+    ],
+    "long_comment": [
+      41,
+      41,
+      44
+    ],
+    "score": 289
+  },
+  {
+    "id": "G-32",
+    "path": "content/entries/term_llm/G-32_slash_command[済].md",
+    "long_tsumazuki": [
+      50,
+      93,
+      94
+    ],
+    "long_comment": [
+      43
+    ],
+    "score": 280
+  },
+  {
+    "id": "G-19",
+    "path": "content/entries/term_llm/G-19_prompt_caching[済].md",
+    "long_tsumazuki": [
+      58,
+      54,
+      50
+    ],
+    "long_comment": [
+      46,
+      53
+    ],
+    "score": 261
+  },
+  {
+    "id": "C-1",
+    "path": "content/entries/person/C-1_openai[済].md",
+    "long_tsumazuki": [
+      58,
+      58,
+      54
+    ],
+    "long_comment": [
+      42,
+      41
+    ],
+    "score": 253
+  },
+  {
+    "id": "C-11",
+    "path": "content/entries/person/C-11_z_ai[人書].md",
+    "long_tsumazuki": [
+      60,
+      106,
+      82
+    ],
+    "long_comment": [],
+    "score": 248
+  },
+  {
+    "id": "J-19",
+    "path": "content/entries/term_general/J-19_quantization[済].md",
+    "long_tsumazuki": [
+      54,
+      84
+    ],
+    "long_comment": [
+      52,
+      47
+    ],
+    "score": 237
+  },
+  {
+    "id": "B-27",
+    "path": "content/entries/service/B-27_vertex_ai[済].md",
+    "long_tsumazuki": [
+      111
+    ],
+    "long_comment": [
+      53,
+      58
+    ],
+    "score": 222
+  },
+  {
+    "id": "G-36",
+    "path": "content/entries/term_llm/G-36_artifact[済].md",
+    "long_tsumazuki": [
+      76,
+      42
+    ],
+    "long_comment": [
+      49,
+      42
+    ],
+    "score": 209
+  },
+  {
+    "id": "F-42",
+    "path": "content/entries/term_tool/F-42_build[済].md",
+    "long_tsumazuki": [
+      90,
+      66
+    ],
+    "long_comment": [
+      46
+    ],
+    "score": 202
+  },
+  {
+    "id": "J-4",
+    "path": "content/entries/term_general/J-4_asi[済].md",
+    "long_tsumazuki": [
+      100
+    ],
+    "long_comment": [
+      44,
+      52
+    ],
+    "score": 196
+  },
+  {
+    "id": "F-56",
+    "path": "content/entries/term_tool/F-56_gitignore[済].md",
+    "long_tsumazuki": [
+      55,
+      75
+    ],
+    "long_comment": [
+      59
+    ],
+    "score": 189
+  },
+  {
+    "id": "F-15",
+    "path": "content/entries/term_tool/F-15_shadcn_ui[人書].md",
+    "long_tsumazuki": [
+      125
+    ],
+    "long_comment": [
+      55
+    ],
+    "score": 180
+  },
+  {
+    "id": "B-21",
+    "path": "content/entries/service/B-21_netlify[済].md",
+    "long_tsumazuki": [
+      116
+    ],
+    "long_comment": [
+      53
+    ],
+    "score": 169
+  },
+  {
+    "id": "B-60",
+    "path": "content/entries/service/B-60_suno[済].md",
+    "long_tsumazuki": [
+      115
+    ],
+    "long_comment": [
+      50
+    ],
+    "score": 165
+  },
+  {
+    "id": "E-1",
+    "path": "content/entries/benchmark/E-1_swe_bench[済].md",
+    "long_tsumazuki": [
+      58,
+      50,
+      47
+    ],
+    "long_comment": [],
+    "score": 155
+  },
+  {
+    "id": "J-75",
+    "path": "content/entries/term_general/J-75_tensor-core[済].md",
+    "long_tsumazuki": [
+      110
+    ],
+    "long_comment": [
+      42
+    ],
+    "score": 152
+  },
+  {
+    "id": "J-10",
+    "path": "content/entries/term_general/J-10_machine_learning[済].md",
+    "long_tsumazuki": [
+      90
+    ],
+    "long_comment": [
+      57
+    ],
+    "score": 147
+  },
+  {
+    "id": "J-73",
+    "path": "content/entries/term_general/J-73_blackwell[済].md",
+    "long_tsumazuki": [
+      89
+    ],
+    "long_comment": [
+      48
+    ],
+    "score": 137
+  },
+  {
+    "id": "G-31",
+    "path": "content/entries/term_llm/G-31_hook[済].md",
+    "long_tsumazuki": [
+      83
+    ],
+    "long_comment": [
+      50
+    ],
+    "score": 133
+  },
+  {
+    "id": "G-22",
+    "path": "content/entries/tool_agent/G-22_skill_md[済].md",
+    "long_tsumazuki": [
+      84
+    ],
+    "long_comment": [
+      44
+    ],
+    "score": 128
+  },
+  {
+    "id": "H-5",
+    "path": "content/entries/workflow/H-5_scrum_agile[済].md",
+    "long_tsumazuki": [
+      58
+    ],
+    "long_comment": [
+      57
+    ],
+    "score": 115
+  },
+  {
+    "id": "F-41",
+    "path": "content/entries/term_tool/F-41_vite[済].md",
+    "long_tsumazuki": [
+      65
+    ],
+    "long_comment": [
+      44
+    ],
+    "score": 109
+  },
+  {
+    "id": "J-2",
+    "path": "content/entries/term_general/J-2_strong_weak_ai[済].md",
+    "long_tsumazuki": [
+      104
+    ],
+    "long_comment": [],
+    "score": 104
+  },
+  {
+    "id": "F-50",
+    "path": "content/entries/term/F-50_git[済].md",
+    "long_tsumazuki": [
+      46,
+      50
+    ],
+    "long_comment": [],
+    "score": 96
+  },
+  {
+    "id": "D-55",
+    "path": "content/entries/model/D-55_nano_banana[済].md",
+    "long_tsumazuki": [
+      49,
+      41
+    ],
+    "long_comment": [],
+    "score": 90
+  },
+  {
+    "id": "J-3",
+    "path": "content/entries/term_general/J-3_singularity[済].md",
+    "long_tsumazuki": [
+      82
+    ],
+    "long_comment": [],
+    "score": 82
+  },
+  {
+    "id": "F-52",
+    "path": "content/entries/term_tool/F-52_git_pull[済].md",
+    "long_tsumazuki": [
+      73
+    ],
+    "long_comment": [],
+    "score": 73
+  },
+  {
+    "id": "J-31",
+    "path": "content/entries/term_general/J-31_fifth_generation_computer[済].md",
+    "long_tsumazuki": [
+      60
+    ],
+    "long_comment": [],
+    "score": 60
+  },
+  {
+    "id": "E-2",
+    "path": "content/entries/benchmark/E-2_swe_bench_verified[済].md",
+    "long_tsumazuki": [
+      50
+    ],
+    "long_comment": [],
+    "score": 50
+  },
+  {
+    "id": "E-24",
+    "path": "content/entries/benchmark/E-24_math[済].md",
+    "long_tsumazuki": [
+      44
+    ],
+    "long_comment": [],
+    "score": 44
+  },
+  {
+    "id": "E-31",
+    "path": "content/entries/benchmark/E-31_webarena[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "D-1",
+    "path": "content/entries/model/D-1_gemini2[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "D-47",
+    "path": "content/entries/model/D-47_deepseek_r1[済].md",
+    "long_tsumazuki": [],
+    "long_comment": [
+      42
+    ],
+    "score": 42
+  },
+  {
+    "id": "B-11",
+    "path": "content/entries/service/B-11_bolt_new[済].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "J-43",
+    "path": "content/entries/term_general/J-43_saas[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "F-104",
+    "path": "content/entries/term_tool/F-104_webp[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "F-123",
+    "path": "content/entries/term_tool/F-123_orm[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "F-153",
+    "path": "content/entries/term_tool/F-153_creative_commons[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "F-171",
+    "path": "content/entries/term_tool/F-171_s3[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "F-58",
+    "path": "content/entries/term_tool/F-58_git_stash[済].md",
+    "long_tsumazuki": [],
+    "long_comment": [
+      42
+    ],
+    "score": 42
+  },
+  {
+    "id": "F-91",
+    "path": "content/entries/term_tool/F-91_env[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  }
+]

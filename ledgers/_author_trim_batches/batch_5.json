@@ -1,0 +1,457 @@
+[
+  {
+    "id": "B-33",
+    "path": "content/entries/service/B-33_canva[済].md",
+    "long_tsumazuki": [
+      138
+    ],
+    "long_comment": [
+      41,
+      46,
+      86
+    ],
+    "score": 311
+  },
+  {
+    "id": "B-25",
+    "path": "content/entries/service/B-25_azure[済].md",
+    "long_tsumazuki": [
+      111
+    ],
+    "long_comment": [
+      50,
+      92,
+      42
+    ],
+    "score": 295
+  },
+  {
+    "id": "B-20",
+    "path": "content/entries/service/B-20_vercel[済].md",
+    "long_tsumazuki": [
+      48,
+      57,
+      50
+    ],
+    "long_comment": [
+      41,
+      45,
+      42
+    ],
+    "score": 283
+  },
+  {
+    "id": "G-15",
+    "path": "content/entries/term_llm/G-15_rag[済].md",
+    "long_tsumazuki": [
+      54,
+      74,
+      47
+    ],
+    "long_comment": [
+      90
+    ],
+    "score": 265
+  },
+  {
+    "id": "B-26",
+    "path": "content/entries/service/B-26_azure_openai[済].md",
+    "long_tsumazuki": [
+      159
+    ],
+    "long_comment": [
+      47,
+      51
+    ],
+    "score": 257
+  },
+  {
+    "id": "F-20",
+    "path": "content/entries/term_tool/F-20_eslint[済].md",
+    "long_tsumazuki": [
+      87,
+      68
+    ],
+    "long_comment": [
+      51,
+      44
+    ],
+    "score": 250
+  },
+  {
+    "id": "B-52",
+    "path": "content/entries/service/B-52_gemini_pricing[済].md",
+    "long_tsumazuki": [
+      154
+    ],
+    "long_comment": [
+      46,
+      42
+    ],
+    "score": 242
+  },
+  {
+    "id": "F-10",
+    "path": "content/entries/term_tool/F-10_react[済].md",
+    "long_tsumazuki": [
+      70,
+      54
+    ],
+    "long_comment": [
+      51,
+      54
+    ],
+    "score": 229
+  },
+  {
+    "id": "F-35",
+    "path": "content/entries/term_tool/F-35_markdown_preview_enhanced[済].md",
+    "long_tsumazuki": [
+      57
+    ],
+    "long_comment": [
+      46,
+      51,
+      58
+    ],
+    "score": 212
+  },
+  {
+    "id": "G-41",
+    "path": "content/entries/term_llm/G-41_subagent[済].md",
+    "long_tsumazuki": [
+      60,
+      75
+    ],
+    "long_comment": [
+      71
+    ],
+    "score": 206
+  },
+  {
+    "id": "F-40",
+    "path": "content/entries/term_tool/F-40_npm[済].md",
+    "long_tsumazuki": [
+      53,
+      55
+    ],
+    "long_comment": [
+      44,
+      45
+    ],
+    "score": 197
+  },
+  {
+    "id": "C-2",
+    "path": "content/entries/person/C-2_anthropic[済].md",
+    "long_tsumazuki": [
+      48,
+      53,
+      44
+    ],
+    "long_comment": [
+      45
+    ],
+    "score": 190
+  },
+  {
+    "id": "H-8",
+    "path": "content/entries/workflow/H-8_devops[済].md",
+    "long_tsumazuki": [
+      87
+    ],
+    "long_comment": [
+      46,
+      51
+    ],
+    "score": 184
+  },
+  {
+    "id": "G-44",
+    "path": "content/entries/term_llm/G-44_multi_agent_coordination[済].md",
+    "long_tsumazuki": [
+      62,
+      69,
+      42
+    ],
+    "long_comment": [],
+    "score": 173
+  },
+  {
+    "id": "E-26",
+    "path": "content/entries/benchmark/E-26_humanity_s_last_exam[済].md",
+    "long_tsumazuki": [
+      65
+    ],
+    "long_comment": [
+      47,
+      54
+    ],
+    "score": 166
+  },
+  {
+    "id": "G-1",
+    "path": "content/entries/term/G-1_context[済].md",
+    "long_tsumazuki": [
+      54,
+      47,
+      57
+    ],
+    "long_comment": [],
+    "score": 158
+  },
+  {
+    "id": "F-38",
+    "path": "content/entries/term_tool/F-38_markdown_all_in_one[済].md",
+    "long_tsumazuki": [
+      66
+    ],
+    "long_comment": [
+      42,
+      46
+    ],
+    "score": 154
+  },
+  {
+    "id": "B-17",
+    "path": "content/entries/service/B-17_edge_copilot[済].md",
+    "long_tsumazuki": [
+      52,
+      52
+    ],
+    "long_comment": [
+      45
+    ],
+    "score": 149
+  },
+  {
+    "id": "B-5",
+    "path": "content/entries/service/B-5_github_copilot[済].md",
+    "long_tsumazuki": [
+      55,
+      45
+    ],
+    "long_comment": [
+      42
+    ],
+    "score": 142
+  },
+  {
+    "id": "F-21",
+    "path": "content/entries/term_tool/F-21_prettier[済].md",
+    "long_tsumazuki": [
+      87
+    ],
+    "long_comment": [
+      47
+    ],
+    "score": 134
+  },
+  {
+    "id": "F-81",
+    "path": "content/entries/term_tool/F-81_bash[済].md",
+    "long_tsumazuki": [
+      43,
+      43,
+      44
+    ],
+    "long_comment": [],
+    "score": 130
+  },
+  {
+    "id": "E-27",
+    "path": "content/entries/benchmark/E-27_iq_bench[済].md",
+    "long_tsumazuki": [
+      75
+    ],
+    "long_comment": [
+      43
+    ],
+    "score": 118
+  },
+  {
+    "id": "F-5",
+    "path": "content/entries/term_tool/F-5_css[済].md",
+    "long_tsumazuki": [
+      64,
+      49
+    ],
+    "long_comment": [],
+    "score": 113
+  },
+  {
+    "id": "J-81",
+    "path": "content/entries/term_general/J-81_m_2[済].md",
+    "long_tsumazuki": [
+      46,
+      59
+    ],
+    "long_comment": [],
+    "score": 105
+  },
+  {
+    "id": "E-25",
+    "path": "content/entries/benchmark/E-25_aime[済].md",
+    "long_tsumazuki": [
+      54
+    ],
+    "long_comment": [
+      43
+    ],
+    "score": 97
+  },
+  {
+    "id": "F-83",
+    "path": "content/entries/term_tool/F-83_powershell[済].md",
+    "long_tsumazuki": [
+      47,
+      44
+    ],
+    "long_comment": [],
+    "score": 91
+  },
+  {
+    "id": "J-77",
+    "path": "content/entries/term_general/J-77_gpu[済].md",
+    "long_tsumazuki": [
+      83
+    ],
+    "long_comment": [],
+    "score": 83
+  },
+  {
+    "id": "J-80",
+    "path": "content/entries/term_general/J-80_sata[済].md",
+    "long_tsumazuki": [
+      79
+    ],
+    "long_comment": [],
+    "score": 79
+  },
+  {
+    "id": "J-42",
+    "path": "content/entries/term_general/J-42_web3[済].md",
+    "long_tsumazuki": [
+      62
+    ],
+    "long_comment": [],
+    "score": 62
+  },
+  {
+    "id": "C-59",
+    "path": "content/entries/person/C-59_jensen_huang[済].md",
+    "long_tsumazuki": [
+      53
+    ],
+    "long_comment": [],
+    "score": 53
+  },
+  {
+    "id": "I-22",
+    "path": "content/entries/mcp/I-22_chrome_devtools_mcp[済].md",
+    "long_tsumazuki": [
+      45
+    ],
+    "long_comment": [],
+    "score": 45
+  },
+  {
+    "id": "E-21",
+    "path": "content/entries/benchmark/E-21_mmlu_pro[済].md",
+    "long_tsumazuki": [
+      43
+    ],
+    "long_comment": [],
+    "score": 43
+  },
+  {
+    "id": "E-51",
+    "path": "content/entries/benchmark/E-51_lmsys_arena[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "D-24",
+    "path": "content/entries/model/D-24_gpt3[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "C-82",
+    "path": "content/entries/person/C-82_masao[済].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "B-8",
+    "path": "content/entries/service/B-8_codex[済].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "F-102",
+    "path": "content/entries/term_tool/F-102_mp4[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "F-121",
+    "path": "content/entries/term_tool/F-121_sqlite[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "F-151",
+    "path": "content/entries/term_tool/F-151_apache_2_0[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "F-162",
+    "path": "content/entries/term_tool/F-162_ssg[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "F-190",
+    "path": "content/entries/term_tool/F-190_subroutine[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  },
+  {
+    "id": "F-87",
+    "path": "content/entries/term_tool/F-87_sudo[人書].md",
+    "long_tsumazuki": [
+      42
+    ],
+    "long_comment": [],
+    "score": 42
+  }
+]
