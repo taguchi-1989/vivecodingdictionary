@@ -1,0 +1,13 @@
+order,lane,entry_id,title,category,status,md_path,priority
+1,1,D-3,Gemini 3 系,model,drafting,,later
+2,2,D-10,Claude 3 系,model,skeleton,,later
+3,3,D-13,Claude 4.5 系,model,skeleton,,later
+4,4,D-23,o3 系,model,skeleton,,later
+5,1,G-4,System Prompt,term_llm,needs_review,content/entries/term_llm/G-4_system_prompt[人書].md,later
+6,2,G-8,決定論的／非決定論的,term_llm,needs_review,,later
+7,3,G-9,effort レベル,term_llm,drafting,,later
+8,4,G-12,Agent Design,term_llm,needs_review,content/entries/term_llm/G-12_agent_design[人書].md,later
+9,1,G-17,ベクトル DB,term_llm,drafting,,later
+10,2,G-45,段階的開示,term_llm,needs_review,,later
+11,3,F-7,YAML,term_tool,needs_review,content/entries/term_tool/F-7_yaml[人書].md,later
+12,4,F-15,shadcn/ui,term_tool,needs_review,content/entries/term_tool/F-15_shadcn_ui[人書].md,later

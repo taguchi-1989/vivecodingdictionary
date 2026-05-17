@@ -158,7 +158,7 @@ def natural_id(entry_id: str) -> str:
 
 
 def extract_ponchi_memo(path: Path) -> str:
-    if not path.exists():
+    if not path.exists() or not path.is_file():
         return ""
     text = path.read_text(encoding="utf-8")
     start = text.find("## 誌面ポンチ絵メモ")
