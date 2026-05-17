@@ -509,8 +509,8 @@ def render_main_figure(fm: dict, entry_id: str) -> str:
         rel = f"../../../assets/ponchi/final/{entry_id}.png"
         return f'''
       <div class="section-heading"><span class="label">{label}</span></div>
-      <div class="figure figure--image" style="padding:12px;text-align:center;">
-        <img src="{rel}" alt="" loading="lazy" style="max-width:100%;max-height:360px;height:auto;object-fit:contain;display:inline-block;">
+      <div class="figure figure--image" style="padding:10px;text-align:center;">
+        <img src="{rel}" alt="" loading="lazy" style="max-width:88%;max-height:300px;height:auto;width:auto;object-fit:contain;display:inline-block;">
       </div>'''
     return f'''
       <div class="section-heading"><span class="label">{label}</span></div>
