@@ -130,13 +130,53 @@
       padding: 0 11px;
     }
 
+    input[type="text"] {
+      min-height: 34px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--panel);
+      color: var(--ink);
+      font: inherit;
+      font-size: 13px;
+      padding: 0 11px;
+    }
+
     select {
       padding: 0 10px;
     }
 
+    .load-panel {
+      display: grid;
+      grid-template-columns: minmax(260px, 1fr) auto auto auto;
+      gap: 10px;
+      align-items: end;
+      margin-bottom: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .field {
+      display: grid;
+      gap: 5px;
+    }
+
+    .field label {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .load-message {
+      color: var(--muted);
+      font-size: 12px;
+      min-height: 18px;
+    }
+
     .summary {
       display: grid;
-      grid-template-columns: repeat(5, minmax(130px, 1fr));
+      grid-template-columns: repeat(6, minmax(130px, 1fr));
       gap: 10px;
       margin-bottom: 16px;
     }
@@ -158,6 +198,13 @@
       margin-top: 2px;
       font-size: 20px;
       font-weight: 700;
+    }
+
+    #sourceMetric {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 16px;
     }
 
     .grid {
@@ -223,6 +270,16 @@
       font-weight: 700;
     }
 
+    .entry-title {
+      min-height: 19px;
+      margin-top: 2px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
     .score {
       min-width: 45px;
       text-align: right;
@@ -285,6 +342,11 @@
       color: #6d4b16;
       padding: 2px 7px;
       font-size: 11px;
+    }
+
+    .flag.comment {
+      background: #e7eef8;
+      color: #194d82;
     }
 
     .status-row {
@@ -409,8 +471,34 @@
       font: inherit;
     }
 
+    .review-form {
+      display: grid;
+      gap: 8px;
+      border-top: 1px solid var(--line);
+      margin-top: 2px;
+      padding-top: 10px;
+    }
+
+    .review-form label {
+      display: grid;
+      gap: 5px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .review-form select,
+    .review-form textarea {
+      width: 100%;
+      color: var(--ink);
+    }
+
+    .instruction {
+      min-height: 118px;
+    }
+
     @media (max-width: 780px) {
       .topbar,
+      .load-panel,
       .toolbar,
       .dialog-body {
         grid-template-columns: 1fr;
@@ -444,16 +532,45 @@
         </label>
         <button id="loadSample" type="button">サンプル読込</button>
         <button id="exportCsv" type="button" disabled>CSV出力</button>
-        <button id="clearAll" type="button">クリア</button>
+      <button id="clearAll" type="button">クリア</button>
       </div>
     </div>
   </header>
 
   <main>
+    <section class="load-panel" aria-label="load source">
+      <div class="field">
+        <label for="sourcePath">読み込み元</label>
+        <input id="sourcePath" type="text" value="../../assets/ponchi/final/" spellcheck="false">
+      </div>
+      <div class="field">
+        <label for="chapterSelect">章</label>
+        <select id="chapterSelect">
+          <option value="all">全て</option>
+          <option value="A">A common</option>
+          <option value="B">B service</option>
+          <option value="C">C person</option>
+          <option value="D">D model</option>
+          <option value="E">E benchmark</option>
+          <option value="F">F tool</option>
+          <option value="G">G LLM</option>
+          <option value="H">H history/workflow</option>
+          <option value="I">I MCP</option>
+          <option value="J">J general</option>
+        </select>
+      </div>
+      <button id="loadFromSource" class="primary" type="button">指定読込</button>
+      <div id="loadMessage" class="load-message" aria-live="polite"></div>
+    </section>
+
     <section class="summary" aria-label="summary">
       <div class="metric">
         <div class="metric-label">読み込み枚数</div>
         <div id="countMetric" class="metric-value">0</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">読み込み元</div>
+        <div id="sourceMetric" class="metric-value">-</div>
       </div>
       <div class="metric">
         <div class="metric-label">基準画像</div>
@@ -496,7 +613,7 @@
     <section id="empty" class="empty">
       <div>
         <strong>画像フォルダを選んで開始</strong>
-        <code>assets/ponchi/final</code> を選ぶと、WebP画像をまとめて読み込めます。読み込み後、カードの「基準にする」を押すとスコアが付きます。
+        <code>assets/ponchi/final</code> を選ぶか、上の読み込み元と章を指定して読み込めます。読み込み後、カードの「基準にする」を押すとスコアが付きます。
       </div>
     </section>
   </main>
@@ -518,10 +635,30 @@
         <div class="detail-line"><span>エッジ密度</span><span id="detailEdge">-</span></div>
         <div class="detail-line"><span>被写体量</span><span id="detailInk">-</span></div>
         <div class="detail-line"><span>警告</span><span id="detailFlags">-</span></div>
-        <label>
-          メモ
-          <textarea id="detailNote" class="note" placeholder="修正指示、再生成理由、気になる点"></textarea>
-        </label>
+        <div class="review-form">
+          <label>
+            修正理由
+            <select id="detailIssueType">
+              <option value="">未指定</option>
+              <option value="イメージ違い">イメージ違い</option>
+              <option value="意味が違う">意味が違う</option>
+              <option value="人物・物体が違う">人物・物体が違う</option>
+              <option value="構図違い">構図違い</option>
+              <option value="色味違い">色味違い</option>
+              <option value="線・密度違い">線・密度違い</option>
+              <option value="文字・ロゴ混入">文字・ロゴ混入</option>
+              <option value="品質不足">品質不足</option>
+            </select>
+          </label>
+          <label>
+            描き直し指示
+            <textarea id="detailRewriteInstruction" class="note instruction" placeholder="例: MCPの説明なので、サーバとクライアントが道具を受け渡す構図にする。人物の顔ではなく、接続・道具・中継のイメージを中心に。"></textarea>
+          </label>
+          <label>
+            補足メモ
+            <textarea id="detailNote" class="note" placeholder="確認メモ、迷った点、採用条件など"></textarea>
+          </label>
+        </div>
       </div>
     </div>
   </dialog>
@@ -530,13 +667,21 @@
     const state = {
       items: [],
       referenceId: null,
-      selectedId: null
+      selectedId: null,
+      sourceLabel: "",
+      entriesById: new Map(),
+      metadataLoaded: false,
+      savedReviews: loadSavedReviews()
     };
 
     const els = {
       folderInput: document.getElementById("folderInput"),
       fileInput: document.getElementById("fileInput"),
       loadSample: document.getElementById("loadSample"),
+      sourcePath: document.getElementById("sourcePath"),
+      chapterSelect: document.getElementById("chapterSelect"),
+      loadFromSource: document.getElementById("loadFromSource"),
+      loadMessage: document.getElementById("loadMessage"),
       exportCsv: document.getElementById("exportCsv"),
       clearAll: document.getElementById("clearAll"),
       recompute: document.getElementById("recompute"),
@@ -546,6 +691,7 @@
       grid: document.getElementById("grid"),
       empty: document.getElementById("empty"),
       countMetric: document.getElementById("countMetric"),
+      sourceMetric: document.getElementById("sourceMetric"),
       referenceMetric: document.getElementById("referenceMetric"),
       averageMetric: document.getElementById("averageMetric"),
       reviewMetric: document.getElementById("reviewMetric"),
@@ -562,6 +708,8 @@
       detailEdge: document.getElementById("detailEdge"),
       detailInk: document.getElementById("detailInk"),
       detailFlags: document.getElementById("detailFlags"),
+      detailIssueType: document.getElementById("detailIssueType"),
+      detailRewriteInstruction: document.getElementById("detailRewriteInstruction"),
       detailNote: document.getElementById("detailNote"),
       closeDialog: document.getElementById("closeDialog")
     };
@@ -577,6 +725,7 @@
     els.folderInput.addEventListener("change", event => loadFiles(event.target.files));
     els.fileInput.addEventListener("change", event => loadFiles(event.target.files));
     els.loadSample.addEventListener("click", loadSample);
+    els.loadFromSource.addEventListener("click", loadFromSource);
     els.searchBox.addEventListener("input", render);
     els.sortMode.addEventListener("change", render);
     els.filterMode.addEventListener("change", render);
@@ -586,10 +735,33 @@
     els.closeDialog.addEventListener("click", () => els.detailDialog.close());
     els.detailNote.addEventListener("input", () => {
       const item = getSelected();
-      if (item) item.note = els.detailNote.value;
+      if (item) {
+        item.note = els.detailNote.value;
+        saveReview(item);
+        render();
+      }
+    });
+    els.detailIssueType.addEventListener("change", () => {
+      const item = getSelected();
+      if (item) {
+        item.issueType = els.detailIssueType.value;
+        if (item.issueType && !item.status) item.status = "微修正";
+        saveReview(item);
+        render();
+      }
+    });
+    els.detailRewriteInstruction.addEventListener("input", () => {
+      const item = getSelected();
+      if (item) {
+        item.rewriteInstruction = els.detailRewriteInstruction.value;
+        if (item.rewriteInstruction.trim() && !item.status) item.status = "微修正";
+        saveReview(item);
+        render();
+      }
     });
 
     async function loadFiles(fileList) {
+      await ensureEntryMetadata();
       const files = Array.from(fileList)
         .filter(file => file.type.startsWith("image/"))
         .sort((a, b) => displayName(a).localeCompare(displayName(b), "ja"));
@@ -602,9 +774,13 @@
         const url = URL.createObjectURL(file);
         const image = await decodeImage(url);
         const metrics = analyzeImage(image);
-        newItems.push({
+        const meta = metadataForName(name);
+        const item = {
           id: crypto.randomUUID(),
           name,
+          fileName: file.name,
+          entryId: meta.entryId,
+          entryTitle: meta.title,
           url,
           width: image.naturalWidth,
           height: image.naturalHeight,
@@ -613,10 +789,17 @@
           parts: {},
           flags: [],
           status: "",
+          issueType: "",
+          rewriteInstruction: "",
           note: ""
-        });
+        };
+        applySavedReview(item);
+        newItems.push(item);
       }
       state.items.push(...newItems);
+      if (newItems.length) {
+        state.sourceLabel = "手動選択";
+      }
       if (!state.referenceId && state.items.length) {
         state.referenceId = state.items[0].id;
         computeScores();
@@ -625,6 +808,7 @@
     }
 
     async function loadSample() {
+      await ensureEntryMetadata();
       const samplePaths = [
         "assets/ponchi/final/B-1.webp",
         "assets/ponchi/final/B-2.webp",
@@ -646,9 +830,13 @@
         if (existing.has(path)) continue;
         const image = await decodeImage(`../../${path}`);
         const metrics = analyzeImage(image);
-        newItems.push({
+        const meta = metadataForName(path);
+        const item = {
           id: crypto.randomUUID(),
-          name: path,
+          name: imageFileName(path),
+          fileName: imageFileName(path),
+          entryId: meta.entryId,
+          entryTitle: meta.title,
           url: `../../${path}`,
           width: image.naturalWidth,
           height: image.naturalHeight,
@@ -657,10 +845,17 @@
           parts: {},
           flags: [],
           status: "",
+          issueType: "",
+          rewriteInstruction: "",
           note: ""
-        });
+        };
+        applySavedReview(item);
+        newItems.push(item);
       }
       state.items.push(...newItems);
+      if (newItems.length) {
+        state.sourceLabel = "サンプル";
+      }
       if (!state.referenceId && state.items.length) {
         state.referenceId = state.items[0].id;
         computeScores();
@@ -668,8 +863,215 @@
       render();
     }
 
+    async function loadFromSource() {
+      await ensureEntryMetadata();
+      const sourcePath = normalizeSourcePath(els.sourcePath.value);
+      const chapter = els.chapterSelect.value;
+      els.loadMessage.textContent = "読み込み中...";
+      els.loadFromSource.disabled = true;
+
+      try {
+        const response = await fetch(sourcePath);
+        if (!response.ok) {
+          throw new Error(`${response.status} ${response.statusText}`);
+        }
+        const html = await response.text();
+        const paths = extractImagePaths(html, sourcePath, chapter);
+        const added = await loadImagePaths(paths, sourcePath);
+        state.sourceLabel = chapterLabel(chapter);
+        els.loadMessage.textContent = `${paths.length}件中 ${added}件を追加`;
+        render();
+      } catch (error) {
+        els.loadMessage.textContent = "読み込み失敗。ローカルサーバ経由で開いているか確認してください。";
+        console.error(error);
+      } finally {
+        els.loadFromSource.disabled = false;
+      }
+    }
+
+    function normalizeSourcePath(value) {
+      const trimmed = value.trim() || "../../assets/ponchi/final/";
+      return trimmed.endsWith("/") ? trimmed : `${trimmed}/`;
+    }
+
+    function extractImagePaths(html, sourcePath, chapter) {
+      const doc = new DOMParser().parseFromString(html, "text/html");
+      const prefix = chapter === "all" ? "" : `${chapter}-`;
+      const urls = Array.from(doc.querySelectorAll("a[href]"))
+        .map(link => link.getAttribute("href"))
+        .filter(Boolean)
+        .map(href => new URL(href, new URL(sourcePath, window.location.href)).href)
+        .filter(url => /\.(png|jpe?g|webp|gif)$/i.test(new URL(url).pathname))
+        .filter(url => {
+          const fileName = decodeURIComponent(new URL(url).pathname.split("/").pop() || "");
+          return !prefix || fileName.startsWith(prefix);
+        });
+
+      return preferWebpByBaseName(urls)
+        .sort((a, b) => imageFileName(a).localeCompare(imageFileName(b), "ja", { numeric: true }));
+    }
+
+    function preferWebpByBaseName(urls) {
+      const priority = { ".webp": 4, ".png": 3, ".jpg": 2, ".jpeg": 2, ".gif": 1 };
+      const best = new Map();
+      for (const url of urls) {
+        const fileName = imageFileName(url);
+        const match = fileName.match(/^(.*)(\.[^.]+)$/);
+        if (!match) continue;
+        const baseName = match[1];
+        const ext = match[2].toLowerCase();
+        const current = best.get(baseName);
+        if (!current || priority[ext] > priority[current.ext]) {
+          best.set(baseName, { url, ext });
+        }
+      }
+      return Array.from(best.values()).map(item => item.url);
+    }
+
+    async function loadImagePaths(paths, sourcePath) {
+      const existing = new Set(state.items.map(item => item.fileName || item.name));
+      let added = 0;
+      const newItems = [];
+      for (const url of paths) {
+        const fileName = imageFileName(url);
+        if (existing.has(fileName)) continue;
+        const image = await decodeImage(url);
+        const metrics = analyzeImage(image);
+        const meta = metadataForName(fileName);
+        const item = {
+          id: crypto.randomUUID(),
+          name: fileName,
+          fileName,
+          entryId: meta.entryId,
+          entryTitle: meta.title,
+          url,
+          width: image.naturalWidth,
+          height: image.naturalHeight,
+          metrics,
+          score: null,
+          parts: {},
+          flags: [],
+          status: "",
+          issueType: "",
+          rewriteInstruction: "",
+          note: ""
+        };
+        applySavedReview(item);
+        newItems.push(item);
+        added += 1;
+      }
+      state.items.push(...newItems);
+      if (!state.referenceId && state.items.length) {
+        state.referenceId = state.items[0].id;
+        computeScores();
+      }
+      return added;
+    }
+
+    function imageFileName(url) {
+      return decodeURIComponent(new URL(url, window.location.href).pathname.split("/").pop() || "");
+    }
+
+    function chapterLabel(chapter) {
+      const labels = {
+        all: "全て",
+        A: "A common",
+        B: "B service",
+        C: "C person",
+        D: "D model",
+        E: "E benchmark",
+        F: "F tool",
+        G: "G LLM",
+        H: "H history/workflow",
+        I: "I MCP",
+        J: "J general"
+      };
+      return labels[chapter] || chapter;
+    }
+
     function displayName(file) {
       return file.webkitRelativePath || file.name;
+    }
+
+    async function ensureEntryMetadata() {
+      if (state.metadataLoaded) return;
+      try {
+        const response = await fetch("../../ledgers/entries.csv");
+        if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+        const rows = parseCsv(await response.text());
+        const headers = rows.shift() || [];
+        const idIndex = headers.indexOf("new_id");
+        const titleIndex = headers.indexOf("title");
+        for (const row of rows) {
+          const id = row[idIndex];
+          if (!id) continue;
+          state.entriesById.set(id, {
+            id,
+            title: row[titleIndex] || ""
+          });
+        }
+      } catch (error) {
+        console.warn("entry metadata unavailable", error);
+      } finally {
+        state.metadataLoaded = true;
+      }
+    }
+
+    function parseCsv(text) {
+      const rows = [];
+      let row = [];
+      let cell = "";
+      let quoted = false;
+      for (let i = 0; i < text.length; i += 1) {
+        const char = text[i];
+        const next = text[i + 1];
+        if (quoted) {
+          if (char === '"' && next === '"') {
+            cell += '"';
+            i += 1;
+          } else if (char === '"') {
+            quoted = false;
+          } else {
+            cell += char;
+          }
+        } else if (char === '"') {
+          quoted = true;
+        } else if (char === ",") {
+          row.push(cell);
+          cell = "";
+        } else if (char === "\n") {
+          row.push(cell.replace(/\r$/, ""));
+          rows.push(row);
+          row = [];
+          cell = "";
+        } else {
+          cell += char;
+        }
+      }
+      if (cell || row.length) {
+        row.push(cell.replace(/\r$/, ""));
+        rows.push(row);
+      }
+      return rows;
+    }
+
+    function metadataForName(name) {
+      const entryId = entryIdFromName(name);
+      const metadata = entryId ? state.entriesById.get(entryId) : null;
+      return {
+        entryId: entryId || imageFileNameSafe(name).replace(/\.[^.]+$/, ""),
+        title: metadata ? metadata.title : ""
+      };
+    }
+
+    function entryIdFromName(name) {
+      const fileName = imageFileNameSafe(name);
+      const match = fileName.match(/^([A-J]-\d+)/);
+      return match ? match[1] : "";
+    }
+
+    function imageFileNameSafe(name) {
+      return String(name).split(/[\\/]/).pop() || String(name);
     }
 
     function decodeImage(url) {
@@ -851,12 +1253,20 @@
       const flags = item.flags.length
         ? item.flags.map(flag => `<span class="flag">${escapeHtml(flag)}</span>`).join("")
         : `<span class="flag">警告なし</span>`;
+      const commentFlag = hasReviewComment(item)
+        ? `<span class="flag comment">${escapeHtml(item.issueType || "コメントあり")}</span>`
+        : "";
+      const label = itemLabel(item);
+      const title = item.entryTitle || "名称未登録";
 
       card.innerHTML = `
-        <div class="image-wrap"><img src="${item.url}" alt="${escapeHtml(item.name)}"></div>
+        <div class="image-wrap"><img src="${item.url}" alt="${escapeHtml(label)}"></div>
         <div class="card-body">
           <div class="name-row">
-            <div class="file-name" title="${escapeHtml(item.name)}">${escapeHtml(item.name)}</div>
+            <div>
+              <div class="file-name" title="${escapeHtml(item.fileName || item.name)}">${escapeHtml(label)}</div>
+              <div class="entry-title" title="${escapeHtml(title)}">${escapeHtml(title)}</div>
+            </div>
             <div class="score ${scoreClass}">${item.score === null ? "-" : item.score}</div>
           </div>
           <div class="bars">
@@ -867,6 +1277,7 @@
             }).join("")}
           </div>
           <div class="flags">${flags}</div>
+          <div class="flags">${commentFlag}</div>
           <div class="controls" style="justify-content:flex-start;margin-top:10px">
             <button type="button" data-action="reference">基準にする</button>
             <button type="button" data-action="detail">詳細</button>
@@ -887,6 +1298,7 @@
       card.querySelectorAll("[data-status]").forEach(button => {
         button.addEventListener("click", () => {
           item.status = item.status === button.dataset.status ? "" : button.dataset.status;
+          saveReview(item);
           render();
         });
       });
@@ -894,11 +1306,60 @@
       return card;
     }
 
+    function hasReviewComment(item) {
+      return Boolean(item.issueType || item.rewriteInstruction || item.note);
+    }
+
+    function reviewKey(item) {
+      return item.entryId || imageFileNameSafe(item.fileName || item.name).replace(/\.[^.]+$/, "");
+    }
+
+    function loadSavedReviews() {
+      try {
+        return JSON.parse(localStorage.getItem("ponchiQualityReviews") || "{}");
+      } catch {
+        return {};
+      }
+    }
+
+    function persistSavedReviews() {
+      localStorage.setItem("ponchiQualityReviews", JSON.stringify(state.savedReviews));
+    }
+
+    function saveReview(item) {
+      const key = reviewKey(item);
+      if (!key) return;
+      const review = {
+        status: item.status || "",
+        issueType: item.issueType || "",
+        rewriteInstruction: item.rewriteInstruction || "",
+        note: item.note || "",
+        updatedAt: new Date().toISOString()
+      };
+      const hasContent = review.status || review.issueType || review.rewriteInstruction || review.note;
+      if (hasContent) {
+        state.savedReviews[key] = review;
+      } else {
+        delete state.savedReviews[key];
+      }
+      persistSavedReviews();
+    }
+
+    function applySavedReview(item) {
+      const saved = state.savedReviews[reviewKey(item)];
+      if (!saved) return;
+      item.status = saved.status || "";
+      item.issueType = saved.issueType || "";
+      item.rewriteInstruction = saved.rewriteInstruction || "";
+      item.note = saved.note || "";
+    }
+
     function filteredItems() {
       const query = els.searchBox.value.trim().toLowerCase();
       const mode = els.filterMode.value;
       const items = state.items.filter(item => {
-        if (query && !item.name.toLowerCase().includes(query)) return false;
+        const haystack = `${item.name} ${item.fileName || ""} ${item.entryId || ""} ${item.entryTitle || ""}`.toLowerCase();
+        if (query && !haystack.includes(query)) return false;
         if (mode === "needsReview" && !needsReview(item)) return false;
         if (mode === "unjudged" && item.status) return false;
         if (mode === "ok" && item.status !== "OK") return false;
@@ -909,7 +1370,7 @@
 
       const sortMode = els.sortMode.value;
       return items.sort((a, b) => {
-        if (sortMode === "nameAsc") return a.name.localeCompare(b.name, "ja");
+        if (sortMode === "nameAsc") return itemLabel(a).localeCompare(itemLabel(b), "ja", { numeric: true });
         if (sortMode === "scoreDesc") return safeScore(b) - safeScore(a);
         if (sortMode === "flagDesc") return b.flags.length - a.flags.length || safeScore(a) - safeScore(b);
         return safeScore(a) - safeScore(b);
@@ -931,7 +1392,8 @@
         : "-";
       const reference = getReference();
       els.countMetric.textContent = state.items.length;
-      els.referenceMetric.textContent = reference ? shortName(reference.name) : "未選択";
+      els.sourceMetric.textContent = state.sourceLabel || "-";
+      els.referenceMetric.textContent = reference ? itemLabel(reference) : "未選択";
       els.averageMetric.textContent = average;
       els.reviewMetric.textContent = state.items.filter(needsReview).length;
       els.judgedMetric.textContent = state.items.filter(item => item.status).length;
@@ -941,9 +1403,9 @@
       const item = state.items.find(candidate => candidate.id === id);
       if (!item) return;
       state.selectedId = id;
-      els.detailName.textContent = item.name;
+      els.detailName.textContent = item.entryTitle ? `${itemLabel(item)} ${item.entryTitle}` : itemLabel(item);
       els.detailImage.src = item.url;
-      els.detailImage.alt = item.name;
+      els.detailImage.alt = itemLabel(item);
       els.detailScore.textContent = item.score === null ? "-" : `${item.score} / 100`;
       els.detailSize.textContent = `${item.width} x ${item.height}`;
       els.detailColor.textContent = `R ${item.metrics.r.toFixed(1)}, G ${item.metrics.g.toFixed(1)}, B ${item.metrics.b.toFixed(1)}`;
@@ -953,6 +1415,8 @@
       els.detailEdge.textContent = item.metrics.edgeDensity.toFixed(3);
       els.detailInk.textContent = item.metrics.inkRatio.toFixed(3);
       els.detailFlags.textContent = item.flags.length ? item.flags.join(", ") : "なし";
+      els.detailIssueType.value = item.issueType || "";
+      els.detailRewriteInstruction.value = item.rewriteInstruction || "";
       els.detailNote.value = item.note || "";
       els.detailDialog.showModal();
     }
@@ -965,17 +1429,21 @@
       return state.items.find(item => item.id === state.referenceId);
     }
 
-    function shortName(name) {
-      const base = name.split(/[\\/]/).pop();
-      return base.length > 12 ? `${base.slice(0, 10)}...` : base;
+    function itemLabel(item) {
+      return item.entryId || imageFileNameSafe(item.fileName || item.name).replace(/\.[^.]+$/, "");
     }
 
     function exportCsv() {
       const headers = [
+        "entry_id",
+        "title",
         "name",
+        "file_name",
         "reference",
         "score",
         "status",
+        "issue_type",
+        "rewrite_instruction",
         "flags",
         "width",
         "height",
@@ -988,10 +1456,15 @@
       ];
       const reference = getReference();
       const rows = state.items.map(item => [
+        item.entryId || "",
+        item.entryTitle || "",
         item.name,
-        reference ? reference.name : "",
+        item.fileName || "",
+        reference ? itemLabel(reference) : "",
         item.score ?? "",
         item.status,
+        item.issueType || "",
+        item.rewriteInstruction || "",
         item.flags.join("|"),
         item.width,
         item.height,
@@ -1023,8 +1496,10 @@
       state.items = [];
       state.referenceId = null;
       state.selectedId = null;
+      state.sourceLabel = "";
       els.folderInput.value = "";
       els.fileInput.value = "";
+      els.loadMessage.textContent = "";
       render();
     }
 
