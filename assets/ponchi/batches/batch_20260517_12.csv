@@ -1,0 +1,13 @@
+order,lane,entry_id,title,category,status,md_path,priority
+1,1,J-32,ノイマン型,term_general,skeleton,,later
+2,2,J-43,SaaS,term_general,needs_review,content/entries/term_general/J-43_saas[人書].md,later
+3,3,J-50,AI 倫理,term_general,skeleton,,later
+4,4,J-55,個人情報保護法,term_general,drafting,,later
+5,1,J-62,チューリングテスト,term_general,drafting,,later
+6,2,H-2,ペアプログラミング,workflow,drafting,,later
+7,3,H-3,バイブコーディングの流儀,workflow,drafting,,later
+8,4,H-4,コードレビュー,workflow,drafting,,later
+9,1,E-31,WebArena,benchmark,needs_review,content/entries/benchmark/E-31_webarena[人書].md,later
+10,2,E-32,GAIA,benchmark,needs_review,content/entries/benchmark/E-32_gaia[人書].md,later
+11,3,E-33,AgentBench,benchmark,needs_review,content/entries/benchmark/E-33_agentbench[人書].md,later
+12,4,E-34,OSWorld,benchmark,needs_review,content/entries/benchmark/E-34_osworld[人書].md,later

@@ -1,0 +1,13 @@
+order,lane,entry_id,title,category,status,md_path,priority
+1,1,F-111,a11y,term_tool,needs_review,content/entries/term_tool/F-111_a11y[人書].md,later
+2,2,F-120,PostgreSQL,term_tool,needs_review,content/entries/term_tool/F-120_postgresql[人書].md,later
+3,3,F-121,SQLite,term_tool,needs_review,content/entries/term_tool/F-121_sqlite[人書].md,later
+4,4,F-122,Prisma,term_tool,needs_review,content/entries/term_tool/F-122_prisma[人書].md,later
+5,1,F-123,ORM,term_tool,needs_review,content/entries/term_tool/F-123_orm[人書].md,later
+6,2,F-130,OAuth,term_tool,needs_review,content/entries/term_tool/F-130_oauth[人書].md,later
+7,3,F-140,Mermaid,term_tool,needs_review,content/entries/term_tool/F-140_mermaid[人書].md,later
+8,4,F-141,PlantUML,term_tool,needs_review,content/entries/term_tool/F-141_plantuml[人書].md,later
+9,1,F-150,MIT ライセンス,term_tool,drafting,,later
+10,2,F-151,Apache 2.0,term_tool,needs_review,content/entries/term_tool/F-151_apache_2_0[人書].md,later
+11,3,F-152,GPL,term_tool,needs_review,content/entries/term_tool/F-152_gpl[人書].md,later
+12,4,F-153,Creative Commons,term_tool,needs_review,content/entries/term_tool/F-153_creative_commons[人書].md,later

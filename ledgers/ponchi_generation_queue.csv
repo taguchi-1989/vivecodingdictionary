@@ -1,15 +1,15 @@
 entry_id,title,category,status,md_path,has_svg,has_final_image,priority,notes
-A-1,まえがき,common,needs_review,content/entries/common/A-1_preface[AI直].md,True,False,common_review,needs_final_image
-A-2,この本の読み方,common,needs_review,content/entries/common/A-2_reading_guide[人書].md,True,False,common_review,needs_final_image
-A-3,図鑑の歩き方,common,needs_review,content/entries/common/A-3_walking_guide[AI整].md,False,False,common_review,missing_svg
-A-4,体験区分の凡例,common,needs_review,content/entries/common/A-4_experience_legend[AI整].md,False,False,common_review,missing_svg
-A-5,読者レベルの凡例,common,needs_review,content/entries/common/A-5_reader_level_legend[AI整].md,False,False,common_review,missing_svg
-A-6,評価日・時変情報の見方,common,needs_review,content/entries/common/A-6_evaluation_date_legend[AI整].md,False,False,common_review,missing_svg
-A-7,図のタイプ,common,needs_review,content/entries/common/A-7_figure_types_legend[AI整].md,False,False,common_review,missing_svg
-A-8,色・記号の凡例,common,needs_review,content/entries/common/A-8_color_symbol_legend[AI整].md,False,False,common_review,missing_svg
-A-9,索引,common,needs_review,content/entries/common/A-9_index[AI整].md,False,False,common_review,missing_svg
-A-10,更新履歴と更新方針,common,needs_review,content/entries/common/A-10_changelog[AI整].md,False,False,common_review,missing_svg
-A-11,略称表記,common,needs_review,content/entries/common/A-11_abbreviations[AI整].md,False,False,common_review,missing_svg
+A-1,まえがき,common,needs_review,content/entries/common/A-1_preface[AI直].md,True,True,done,complete
+A-2,この本の読み方,common,needs_review,content/entries/common/A-2_reading_guide[人書].md,True,True,done,complete
+A-3,図鑑の歩き方,common,needs_review,content/entries/common/A-3_walking_guide[AI整].md,False,True,done,final_image_without_svg
+A-4,体験区分の凡例,common,needs_review,content/entries/common/A-4_experience_legend[AI整].md,False,True,done,final_image_without_svg
+A-5,読者レベルの凡例,common,needs_review,content/entries/common/A-5_reader_level_legend[AI整].md,False,True,done,final_image_without_svg
+A-6,評価日・時変情報の見方,common,needs_review,content/entries/common/A-6_evaluation_date_legend[AI整].md,False,True,done,final_image_without_svg
+A-7,図のタイプ,common,needs_review,content/entries/common/A-7_figure_types_legend[AI整].md,False,True,done,final_image_without_svg
+A-8,色・記号の凡例,common,needs_review,content/entries/common/A-8_color_symbol_legend[AI整].md,False,True,done,final_image_without_svg
+A-9,索引,common,needs_review,content/entries/common/A-9_index[AI整].md,False,True,done,final_image_without_svg
+A-10,更新履歴と更新方針,common,needs_review,content/entries/common/A-10_changelog[AI整].md,False,True,done,final_image_without_svg
+A-11,略称表記,common,needs_review,content/entries/common/A-11_abbreviations[AI整].md,False,True,done,final_image_without_svg
 B-1,Gemini,service,ready,content/entries/service/B-1_gemini[済].md,True,True,done,complete
 B-2,Claude,service,ready,content/entries/service/B-2_claude[済].md,True,True,done,complete
 B-3,ChatGPT,service,ready,content/entries/service/B-3_chatgpt[済].md,True,True,done,complete
@@ -78,7 +78,7 @@ C-60,Ray Kurzweil,person_org,ready,content/entries/person/C-60_ray_kurzweil[済]
 C-80,AI大学,person_org,ready,content/entries/person/C-80_ai_daigaku[済].md,False,True,done,final_image_without_svg
 C-81,にゃんた,person_org,ready,content/entries/person/C-81_nyanta[済].md,False,True,done,final_image_without_svg
 C-82,まさお,person_org,ready,content/entries/person/C-82_masao[済].md,False,True,done,final_image_without_svg
-C-83,AI の羅針盤,person_org,drafting,,False,False,later,missing_svg
+C-83,AI の羅針盤,person_org,drafting,,False,True,done,final_image_without_svg
 D-1,Gemini 2 系,model,needs_review,content/entries/model/D-1_gemini2[人書].md,False,True,done,final_image_without_svg
 D-2,Gemini 2.5 系,model,needs_review,content/entries/model/D-2_gemini25[人書].md,False,True,done,final_image_without_svg
 D-3,Gemini 3 系,model,drafting,,False,True,done,final_image_without_svg
@@ -130,12 +130,12 @@ E-25,AIME,benchmark,ready,content/entries/benchmark/E-25_aime[済].md,False,True
 E-26,Humanity's Last Exam,benchmark,ready,content/entries/benchmark/E-26_humanity_s_last_exam[済].md,False,True,done,final_image_without_svg
 E-27,IQ Bench,benchmark,ready,content/entries/benchmark/E-27_iq_bench[済].md,False,True,done,final_image_without_svg
 E-30,TAU-Bench,benchmark,ready,content/entries/benchmark/E-30_tau_bench[済].md,False,True,done,final_image_without_svg
-E-31,WebArena,benchmark,needs_review,content/entries/benchmark/E-31_webarena[人書].md,False,False,later,missing_svg
-E-32,GAIA,benchmark,needs_review,content/entries/benchmark/E-32_gaia[人書].md,False,False,later,missing_svg
-E-33,AgentBench,benchmark,needs_review,content/entries/benchmark/E-33_agentbench[人書].md,False,False,later,missing_svg
-E-34,OSWorld,benchmark,needs_review,content/entries/benchmark/E-34_osworld[人書].md,False,False,later,missing_svg
+E-31,WebArena,benchmark,needs_review,content/entries/benchmark/E-31_webarena[人書].md,False,True,done,final_image_without_svg
+E-32,GAIA,benchmark,needs_review,content/entries/benchmark/E-32_gaia[人書].md,False,True,done,final_image_without_svg
+E-33,AgentBench,benchmark,needs_review,content/entries/benchmark/E-33_agentbench[人書].md,False,True,done,final_image_without_svg
+E-34,OSWorld,benchmark,needs_review,content/entries/benchmark/E-34_osworld[人書].md,False,True,done,final_image_without_svg
 E-50,Chatbot Arena,benchmark,ready,content/entries/benchmark/E-50_chatbot_arena[済].md,False,True,done,final_image_without_svg
-E-51,LMSYS Arena,benchmark,needs_review,content/entries/benchmark/E-51_lmsys_arena[人書].md,False,False,later,missing_svg
+E-51,LMSYS Arena,benchmark,needs_review,content/entries/benchmark/E-51_lmsys_arena[人書].md,False,True,done,final_image_without_svg
 F-1,JavaScript,term_tool,ready,content/entries/term_tool/F-1_javascript[済].md,True,True,done,complete
 F-2,TypeScript,term_tool,ready,content/entries/term_tool/F-2_typescript[済].md,True,True,done,complete
 F-3,Python,term_tool,ready,content/entries/term_tool/F-3_python[済].md,False,True,done,final_image_without_svg
@@ -156,7 +156,7 @@ F-17,Astro,term_tool,ready,content/entries/term_tool/F-17_astro[済].md,False,Tr
 F-20,ESLint,term_tool,ready,content/entries/term_tool/F-20_eslint[済].md,False,True,done,final_image_without_svg
 F-21,Prettier,term_tool,ready,content/entries/term_tool/F-21_prettier[済].md,False,True,done,final_image_without_svg
 F-30,VS Code,term_tool,ready,content/entries/term_tool/F-30_vs_code[済].md,False,True,done,final_image_without_svg
-F-34,VS Code 拡張機能,term_tool,drafting,,False,False,later,missing_svg
+F-34,VS Code 拡張機能,term_tool,drafting,,False,True,done,final_image_without_svg
 F-35,Markdown Preview Enhanced,term_tool,ready,content/entries/term_tool/F-35_markdown_preview_enhanced[済].md,False,True,done,final_image_without_svg
 F-36,Git Graph,term_tool,ready,content/entries/term_tool/F-36_git_graph[済].md,False,True,done,final_image_without_svg
 F-37,Japanese Language Pack for VS Code,term_tool,ready,content/entries/term_tool/F-37_japanese_language_pack_for_vs_code[済].md,False,True,done,final_image_without_svg
@@ -172,52 +172,52 @@ F-53,branch,term_tool,ready,content/entries/term_tool/F-53_branch[済].md,False,
 F-54,commit,term_tool,ready,content/entries/term_tool/F-54_commit[済].md,False,True,done,final_image_without_svg
 F-55,merge,term_tool,ready,content/entries/term_tool/F-55_merge[済].md,False,True,done,final_image_without_svg
 F-56,.gitignore,term_tool,ready,content/entries/term_tool/F-56_gitignore[済].md,False,True,done,final_image_without_svg
-F-57,リポジトリ,term_tool,needs_review,,False,False,later,missing_svg
-F-58,git stash,term_tool,needs_review,content/entries/term_tool/F-58_git_stash[済].md,False,False,later,missing_svg
-F-59,README.md,term_tool,needs_review,content/entries/term_tool/F-59_readme_md[人書].md,False,False,later,missing_svg
-F-60,GitHub,term_tool,needs_review,content/entries/term_tool/F-60_github[人書].md,False,False,later,missing_svg
-F-61,Pull Request,term_tool,needs_review,content/entries/term_tool/F-61_pull_request[人書].md,False,False,later,missing_svg
-F-62,GitHub Actions,term_tool,needs_review,content/entries/term_tool/F-62_github_actions[人書].md,False,False,later,missing_svg
-F-71,ripgrep (rg),term_tool,needs_review,content/entries/term_tool/F-71_ripgrep[人書].md,False,False,later,missing_svg
-F-80,Node.js,term_tool,needs_review,content/entries/term_tool/F-80_node_js[人書].md,False,False,later,missing_svg
-F-81,bash,term_tool,needs_review,content/entries/term_tool/F-81_bash[済].md,False,False,later,missing_svg
-F-82,WSL,term_tool,needs_review,content/entries/term_tool/F-82_wsl[済].md,False,False,later,missing_svg
-F-83,PowerShell,term_tool,needs_review,content/entries/term_tool/F-83_powershell[済].md,False,False,later,missing_svg
-F-84,Ghostty,term_tool,needs_review,content/entries/term_tool/F-84_ghostty[人書].md,False,False,later,missing_svg
-F-85,SuperClaude Framework,term_tool,needs_review,content/entries/term_tool/F-85_superclaude_framework[人書].md,False,False,later,missing_svg
-F-86,ollama,term_tool,needs_review,content/entries/term_tool/F-86_ollama[人書].md,False,False,later,missing_svg
-F-87,sudo,term_tool,needs_review,content/entries/term_tool/F-87_sudo[人書].md,False,False,later,missing_svg
-F-90,Docker,term_tool,needs_review,content/entries/term_tool/F-90_docker[人書].md,False,False,later,missing_svg
-F-91,.env,term_tool,needs_review,content/entries/term_tool/F-91_env[人書].md,False,False,later,missing_svg
-F-100,拡張子早見表,term_tool,needs_review,content/entries/term_tool/F-100_file_extensions_guide[人書].md,False,False,later,missing_svg
-F-101,.ico,term_tool,needs_review,content/entries/term_tool/F-101_ico[人書].md,False,False,later,missing_svg
-F-102,.mp4,term_tool,needs_review,content/entries/term_tool/F-102_mp4[人書].md,False,False,later,missing_svg
-F-103,.mp3,term_tool,needs_review,content/entries/term_tool/F-103_mp3[人書].md,False,False,later,missing_svg
-F-104,.webp,term_tool,needs_review,content/entries/term_tool/F-104_webp[人書].md,False,False,later,missing_svg
-F-110,Lighthouse,term_tool,needs_review,content/entries/term_tool/F-110_lighthouse[人書].md,False,False,later,missing_svg
-F-111,a11y,term_tool,needs_review,content/entries/term_tool/F-111_a11y[人書].md,False,False,later,missing_svg
-F-120,PostgreSQL,term_tool,needs_review,content/entries/term_tool/F-120_postgresql[人書].md,False,False,later,missing_svg
-F-121,SQLite,term_tool,needs_review,content/entries/term_tool/F-121_sqlite[人書].md,False,False,later,missing_svg
-F-122,Prisma,term_tool,needs_review,content/entries/term_tool/F-122_prisma[人書].md,False,False,later,missing_svg
-F-123,ORM,term_tool,needs_review,content/entries/term_tool/F-123_orm[人書].md,False,False,later,missing_svg
-F-130,OAuth,term_tool,needs_review,content/entries/term_tool/F-130_oauth[人書].md,False,False,later,missing_svg
-F-140,Mermaid,term_tool,needs_review,content/entries/term_tool/F-140_mermaid[人書].md,False,False,later,missing_svg
-F-141,PlantUML,term_tool,needs_review,content/entries/term_tool/F-141_plantuml[人書].md,False,False,later,missing_svg
-F-150,MIT ライセンス,term_tool,drafting,,False,False,later,missing_svg
-F-151,Apache 2.0,term_tool,needs_review,content/entries/term_tool/F-151_apache_2_0[人書].md,False,False,later,missing_svg
-F-152,GPL,term_tool,needs_review,content/entries/term_tool/F-152_gpl[人書].md,False,False,later,missing_svg
-F-153,Creative Commons,term_tool,needs_review,content/entries/term_tool/F-153_creative_commons[人書].md,False,False,later,missing_svg
-F-154,OSS,term_tool,needs_review,content/entries/term_tool/F-154_oss[人書].md,False,False,later,missing_svg
-F-160,DOM,term_tool,needs_review,content/entries/term_tool/F-160_dom[人書].md,False,False,later,missing_svg
-F-161,SSR,term_tool,needs_review,content/entries/term_tool/F-161_ssr[人書].md,False,False,later,missing_svg
-F-162,SSG,term_tool,needs_review,content/entries/term_tool/F-162_ssg[人書].md,False,False,later,missing_svg
-F-170,EC2,term_tool,needs_review,content/entries/term_tool/F-170_ec2[人書].md,False,False,later,missing_svg
-F-171,S3,term_tool,needs_review,content/entries/term_tool/F-171_s3[人書].md,False,False,later,missing_svg
-F-172,IAM,term_tool,needs_review,content/entries/term_tool/F-172_iam[人書].md,False,False,later,missing_svg
-F-180,OpenGL,term_tool,needs_review,content/entries/term_tool/F-180_opengl[人書].md,False,False,later,missing_svg
-F-181,WebGL,term_tool,needs_review,content/entries/term_tool/F-181_webgl[人書].md,False,False,later,missing_svg
-F-190,サブルーチン,term_tool,needs_review,content/entries/term_tool/F-190_subroutine[人書].md,False,False,later,missing_svg
-F-200,Rust,term_tool,needs_review,content/entries/term_tool/F-200_rust[人書].md,False,False,later,missing_svg
+F-57,リポジトリ,term_tool,needs_review,,False,True,done,final_image_without_svg
+F-58,git stash,term_tool,needs_review,content/entries/term_tool/F-58_git_stash[済].md,False,True,done,final_image_without_svg
+F-59,README.md,term_tool,needs_review,content/entries/term_tool/F-59_readme_md[人書].md,False,True,done,final_image_without_svg
+F-60,GitHub,term_tool,needs_review,content/entries/term_tool/F-60_github[人書].md,False,True,done,final_image_without_svg
+F-61,Pull Request,term_tool,needs_review,content/entries/term_tool/F-61_pull_request[人書].md,False,True,done,final_image_without_svg
+F-62,GitHub Actions,term_tool,needs_review,content/entries/term_tool/F-62_github_actions[人書].md,False,True,done,final_image_without_svg
+F-71,ripgrep (rg),term_tool,needs_review,content/entries/term_tool/F-71_ripgrep[人書].md,False,True,done,final_image_without_svg
+F-80,Node.js,term_tool,needs_review,content/entries/term_tool/F-80_node_js[人書].md,False,True,done,final_image_without_svg
+F-81,bash,term_tool,needs_review,content/entries/term_tool/F-81_bash[済].md,False,True,done,final_image_without_svg
+F-82,WSL,term_tool,needs_review,content/entries/term_tool/F-82_wsl[済].md,False,True,done,final_image_without_svg
+F-83,PowerShell,term_tool,needs_review,content/entries/term_tool/F-83_powershell[済].md,False,True,done,final_image_without_svg
+F-84,Ghostty,term_tool,needs_review,content/entries/term_tool/F-84_ghostty[人書].md,False,True,done,final_image_without_svg
+F-85,SuperClaude Framework,term_tool,needs_review,content/entries/term_tool/F-85_superclaude_framework[人書].md,False,True,done,final_image_without_svg
+F-86,ollama,term_tool,needs_review,content/entries/term_tool/F-86_ollama[人書].md,False,True,done,final_image_without_svg
+F-87,sudo,term_tool,needs_review,content/entries/term_tool/F-87_sudo[人書].md,False,True,done,final_image_without_svg
+F-90,Docker,term_tool,needs_review,content/entries/term_tool/F-90_docker[人書].md,False,True,done,final_image_without_svg
+F-91,.env,term_tool,needs_review,content/entries/term_tool/F-91_env[人書].md,False,True,done,final_image_without_svg
+F-100,拡張子早見表,term_tool,needs_review,content/entries/term_tool/F-100_file_extensions_guide[人書].md,False,True,done,final_image_without_svg
+F-101,.ico,term_tool,needs_review,content/entries/term_tool/F-101_ico[人書].md,False,True,done,final_image_without_svg
+F-102,.mp4,term_tool,needs_review,content/entries/term_tool/F-102_mp4[人書].md,False,True,done,final_image_without_svg
+F-103,.mp3,term_tool,needs_review,content/entries/term_tool/F-103_mp3[人書].md,False,True,done,final_image_without_svg
+F-104,.webp,term_tool,needs_review,content/entries/term_tool/F-104_webp[人書].md,False,True,done,final_image_without_svg
+F-110,Lighthouse,term_tool,needs_review,content/entries/term_tool/F-110_lighthouse[人書].md,False,True,done,final_image_without_svg
+F-111,a11y,term_tool,needs_review,content/entries/term_tool/F-111_a11y[人書].md,False,True,done,final_image_without_svg
+F-120,PostgreSQL,term_tool,needs_review,content/entries/term_tool/F-120_postgresql[人書].md,False,True,done,final_image_without_svg
+F-121,SQLite,term_tool,needs_review,content/entries/term_tool/F-121_sqlite[人書].md,False,True,done,final_image_without_svg
+F-122,Prisma,term_tool,needs_review,content/entries/term_tool/F-122_prisma[人書].md,False,True,done,final_image_without_svg
+F-123,ORM,term_tool,needs_review,content/entries/term_tool/F-123_orm[人書].md,False,True,done,final_image_without_svg
+F-130,OAuth,term_tool,needs_review,content/entries/term_tool/F-130_oauth[人書].md,False,True,done,final_image_without_svg
+F-140,Mermaid,term_tool,needs_review,content/entries/term_tool/F-140_mermaid[人書].md,False,True,done,final_image_without_svg
+F-141,PlantUML,term_tool,needs_review,content/entries/term_tool/F-141_plantuml[人書].md,False,True,done,final_image_without_svg
+F-150,MIT ライセンス,term_tool,drafting,,False,True,done,final_image_without_svg
+F-151,Apache 2.0,term_tool,needs_review,content/entries/term_tool/F-151_apache_2_0[人書].md,False,True,done,final_image_without_svg
+F-152,GPL,term_tool,needs_review,content/entries/term_tool/F-152_gpl[人書].md,False,True,done,final_image_without_svg
+F-153,Creative Commons,term_tool,needs_review,content/entries/term_tool/F-153_creative_commons[人書].md,False,True,done,final_image_without_svg
+F-154,OSS,term_tool,needs_review,content/entries/term_tool/F-154_oss[人書].md,False,True,done,final_image_without_svg
+F-160,DOM,term_tool,needs_review,content/entries/term_tool/F-160_dom[人書].md,False,True,done,final_image_without_svg
+F-161,SSR,term_tool,needs_review,content/entries/term_tool/F-161_ssr[人書].md,False,True,done,final_image_without_svg
+F-162,SSG,term_tool,needs_review,content/entries/term_tool/F-162_ssg[人書].md,False,True,done,final_image_without_svg
+F-170,EC2,term_tool,needs_review,content/entries/term_tool/F-170_ec2[人書].md,False,True,done,final_image_without_svg
+F-171,S3,term_tool,needs_review,content/entries/term_tool/F-171_s3[人書].md,False,True,done,final_image_without_svg
+F-172,IAM,term_tool,needs_review,content/entries/term_tool/F-172_iam[人書].md,False,True,done,final_image_without_svg
+F-180,OpenGL,term_tool,needs_review,content/entries/term_tool/F-180_opengl[人書].md,False,True,done,final_image_without_svg
+F-181,WebGL,term_tool,needs_review,content/entries/term_tool/F-181_webgl[人書].md,False,True,done,final_image_without_svg
+F-190,サブルーチン,term_tool,needs_review,content/entries/term_tool/F-190_subroutine[人書].md,False,True,done,final_image_without_svg
+F-200,Rust,term_tool,needs_review,content/entries/term_tool/F-200_rust[人書].md,False,True,done,final_image_without_svg
 G-1,Context (コンテキスト),term_llm,ready,content/entries/term/G-1_context[済].md,True,True,done,complete
 G-2,Token,term_llm,ready,content/entries/term_llm/G-2_token[済].md,False,True,done,final_image_without_svg
 G-3,Dictation,term_llm,ready,content/entries/term_llm/G-3_dictation[済].md,False,True,done,final_image_without_svg
@@ -259,27 +259,27 @@ G-45,段階的開示,term_llm,needs_review,,False,True,done,final_image_without_
 G-46,ナーフ（モデルの劣化体感）,term_llm,ready,content/entries/term_llm/G-46_narf[済].md,False,True,done,final_image_without_svg
 G-47,Auto-compact,term_llm,ready,content/entries/term_llm/G-47_auto_compact[済].md,False,True,done,final_image_without_svg
 H-1,TDD,workflow,ready,content/entries/workflow/H-1_tdd[済].md,False,True,done,final_image_without_svg
-H-2,ペアプログラミング,workflow,drafting,,False,False,later,missing_svg
-H-3,バイブコーディングの流儀,workflow,drafting,,False,False,later,missing_svg
-H-4,コードレビュー,workflow,drafting,,False,False,later,missing_svg
+H-2,ペアプログラミング,workflow,drafting,,False,True,done,final_image_without_svg
+H-3,バイブコーディングの流儀,workflow,drafting,,False,True,done,final_image_without_svg
+H-4,コードレビュー,workflow,drafting,,False,True,done,final_image_without_svg
 H-5,Scrum / Agile,workflow,ready,content/entries/workflow/H-5_scrum_agile[済].md,False,True,done,final_image_without_svg
 H-6,Git Flow,workflow,ready,content/entries/workflow/H-6_git_flow[済].md,False,True,done,final_image_without_svg
 H-7,CI/CD,workflow,ready,content/entries/workflow/H-7_ci_cd[済].md,False,True,done,final_image_without_svg
 H-8,DevOps,workflow,ready,content/entries/workflow/H-8_devops[済].md,False,True,done,final_image_without_svg
-H-50,Bard → Gemini,history,skeleton,,False,False,later,missing_svg
-H-51,Preview から正式版への流れ,history,skeleton,,False,False,later,missing_svg
-H-52,Copilot から Claude Code までの流れ,history,skeleton,,False,False,later,missing_svg
+H-50,Bard → Gemini,history,skeleton,,False,True,done,final_image_without_svg
+H-51,Preview から正式版への流れ,history,skeleton,,False,True,done,final_image_without_svg
+H-52,Copilot から Claude Code までの流れ,history,skeleton,,False,True,done,final_image_without_svg
 H-53,ChatGPT 登場,history,ready,content/entries/history/H-53_chatgpt_launch[済].md,True,True,done,complete
 H-54,GPT-4 リリース,history,ready,content/entries/history/H-54_gpt4_release[済].md,False,True,done,final_image_without_svg
 H-55,LLaMA のオープン化,history,ready,content/entries/history/H-55_llama_opensource[済].md,False,True,done,final_image_without_svg
 H-56,Claude のバージョン史,history,ready,content/entries/history/H-56_claude_version_history[済].md,False,True,done,final_image_without_svg
-H-57,Gemini の命名史,history,needs_review,,False,False,later,missing_svg
+H-57,Gemini の命名史,history,needs_review,,False,True,done,final_image_without_svg
 H-58,Transformer 論文,history,ready,content/entries/history/H-58_transformer_paper[済].md,False,True,done,final_image_without_svg
-H-59,AI エージェント元年,history,needs_review,,False,False,later,missing_svg
-H-60,Codex → GitHub Copilot の系譜,history,drafting,,False,False,later,missing_svg
-H-61,Preview 版という文化,history,needs_review,,False,False,later,missing_svg
-H-62,Anthropic 創業の流れ,history,drafting,,False,False,later,missing_svg
-H-63,Vibe Coding 命名,history,drafting,,False,False,later,missing_svg
+H-59,AI エージェント元年,history,needs_review,,False,True,done,final_image_without_svg
+H-60,Codex → GitHub Copilot の系譜,history,drafting,,False,True,done,final_image_without_svg
+H-61,Preview 版という文化,history,needs_review,,False,True,done,final_image_without_svg
+H-62,Anthropic 創業の流れ,history,drafting,,False,True,done,final_image_without_svg
+H-63,Vibe Coding 命名,history,drafting,,False,True,done,final_image_without_svg
 I-1,MCP,mcp,ready,content/entries/mcp/I-1_mcp[済].md,True,True,done,complete
 I-2,MCP Server,mcp,ready,content/entries/mcp/I-2_mcp_server[済].md,False,True,done,final_image_without_svg
 I-3,MCP Client,mcp,ready,content/entries/mcp/I-3_mcp_client[済].md,False,True,done,final_image_without_svg
@@ -297,8 +297,8 @@ I-24,Context7 MCP,mcp,ready,content/entries/mcp/I-24_context7_mcp[済].md,False,
 I-30,Notion MCP,mcp,ready,content/entries/mcp/I-30_notion_mcp[済].md,False,True,done,final_image_without_svg
 I-41,SQLite MCP,mcp,ready,content/entries/mcp/I-41_sqlite_mcp[済].md,False,True,done,final_image_without_svg
 I-50,AWS MCP,mcp,ready,content/entries/mcp/I-50_aws_mcp[済].md,False,True,done,final_image_without_svg
-I-80,自作 MCP のテンプレ,mcp,needs_review,,False,False,later,missing_svg
-I-81,MCP の登録・設定,mcp,drafting,,False,False,later,missing_svg
+I-80,自作 MCP のテンプレ,mcp,needs_review,,False,True,done,final_image_without_svg
+I-81,MCP の登録・設定,mcp,drafting,,False,True,done,final_image_without_svg
 J-1,AGI,term_general,ready,content/entries/term_general/J-1_agi[済].md,False,True,done,final_image_without_svg
 J-2,強い AI／弱い AI,term_general,ready,content/entries/term_general/J-2_strong_weak_ai[済].md,False,True,done,final_image_without_svg
 J-3,Singularity,term_general,ready,content/entries/term_general/J-3_singularity[済].md,False,True,done,final_image_without_svg
@@ -315,23 +315,23 @@ J-18,MoE,term_general,ready,content/entries/term_general/J-18_moe[済].md,False,
 J-19,量子化,term_general,ready,content/entries/term_general/J-19_quantization[済].md,False,True,done,final_image_without_svg
 J-20,Big Data,term_general,ready,content/entries/term_general/J-20_big_data[済].md,False,True,done,final_image_without_svg
 J-21,LoRA,term_general,ready,content/entries/term_general/J-21_lora[済].md,False,True,done,final_image_without_svg
-J-22,パラメータ数の単位,term_general,drafting,,False,False,later,missing_svg
+J-22,パラメータ数の単位,term_general,drafting,,False,True,done,final_image_without_svg
 J-23,拡散モデル,term_general,ready,content/entries/term_general/J-23_diffusion_model[済].md,False,True,done,final_image_without_svg
 J-31,第 5 世代コンピュータ,term_general,ready,content/entries/term_general/J-31_fifth_generation_computer[済].md,False,True,done,final_image_without_svg
-J-32,ノイマン型,term_general,skeleton,,False,False,later,missing_svg
+J-32,ノイマン型,term_general,skeleton,,False,True,done,final_image_without_svg
 J-33,量子コンピュータ,term_general,ready,content/entries/term_general/J-33_quantum-computer[済].md,False,True,done,final_image_without_svg
 J-40,IoT,term_general,ready,content/entries/term_general/J-40_iot[済].md,False,True,done,final_image_without_svg
 J-41,DX,term_general,ready,content/entries/term_general/J-41_dx[済].md,False,True,done,final_image_without_svg
 J-42,Web3,term_general,ready,content/entries/term_general/J-42_web3[済].md,False,True,done,final_image_without_svg
-J-43,SaaS,term_general,needs_review,content/entries/term_general/J-43_saas[人書].md,False,False,later,missing_svg
-J-50,AI 倫理,term_general,skeleton,,False,False,later,missing_svg
+J-43,SaaS,term_general,needs_review,content/entries/term_general/J-43_saas[人書].md,False,True,done,final_image_without_svg
+J-50,AI 倫理,term_general,skeleton,,False,True,done,final_image_without_svg
 J-51,Hallucination,term_general,ready,content/entries/term_general/J-51_hallucination[済].md,False,True,done,final_image_without_svg
 J-52,Sycophancy,term_general,ready,content/entries/term_general/J-52_sycophancy[済].md,False,True,done,final_image_without_svg
 J-53,著作権法 30 条の 4（日本）,term_general,ready,content/entries/term_general/J-53_copyright_law_30_4[済].md,False,True,done,final_image_without_svg
 J-54,ISO/IEC 42001,term_general,ready,content/entries/term_general/J-54_iso_iec_42001[済].md,False,True,done,final_image_without_svg
-J-55,個人情報保護法,term_general,drafting,,False,False,later,missing_svg
+J-55,個人情報保護法,term_general,drafting,,False,True,done,final_image_without_svg
 J-56,GDPR,term_general,ready,content/entries/term_general/J-56_gdpr[済].md,False,True,done,final_image_without_svg
-J-62,チューリングテスト,term_general,drafting,,False,False,later,missing_svg
+J-62,チューリングテスト,term_general,drafting,,False,True,done,final_image_without_svg
 J-70,VRAM,term_general,ready,content/entries/term_general/J-70_vram[済].md,False,True,done,final_image_without_svg
 J-71,RAM,term_general,ready,content/entries/term_general/J-71_ram[済].md,False,True,done,final_image_without_svg
 J-72,H100,term_general,ready,content/entries/term_general/J-72_h100[済].md,False,True,done,final_image_without_svg

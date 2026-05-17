@@ -1,0 +1,13 @@
+order,lane,entry_id,title,category,status,md_path,priority
+1,1,F-84,Ghostty,term_tool,needs_review,content/entries/term_tool/F-84_ghostty[人書].md,later
+2,2,F-85,SuperClaude Framework,term_tool,needs_review,content/entries/term_tool/F-85_superclaude_framework[人書].md,later
+3,3,F-86,ollama,term_tool,needs_review,content/entries/term_tool/F-86_ollama[人書].md,later
+4,4,F-87,sudo,term_tool,needs_review,content/entries/term_tool/F-87_sudo[人書].md,later
+5,1,F-90,Docker,term_tool,needs_review,content/entries/term_tool/F-90_docker[人書].md,later
+6,2,F-91,.env,term_tool,needs_review,content/entries/term_tool/F-91_env[人書].md,later
+7,3,F-100,拡張子早見表,term_tool,needs_review,content/entries/term_tool/F-100_file_extensions_guide[人書].md,later
+8,4,F-101,.ico,term_tool,needs_review,content/entries/term_tool/F-101_ico[人書].md,later
+9,1,F-102,.mp4,term_tool,needs_review,content/entries/term_tool/F-102_mp4[人書].md,later
+10,2,F-103,.mp3,term_tool,needs_review,content/entries/term_tool/F-103_mp3[人書].md,later
+11,3,F-104,.webp,term_tool,needs_review,content/entries/term_tool/F-104_webp[人書].md,later
+12,4,F-110,Lighthouse,term_tool,needs_review,content/entries/term_tool/F-110_lighthouse[人書].md,later

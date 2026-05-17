@@ -1,0 +1,12 @@
+order,lane,entry_id,title,category,status,md_path,priority
+1,1,A-1,まえがき,common,needs_review,content/entries/common/A-1_preface[AI直].md,common_review
+2,2,A-2,この本の読み方,common,needs_review,content/entries/common/A-2_reading_guide[人書].md,common_review
+3,3,A-3,図鑑の歩き方,common,needs_review,content/entries/common/A-3_walking_guide[AI整].md,common_review
+4,4,A-4,体験区分の凡例,common,needs_review,content/entries/common/A-4_experience_legend[AI整].md,common_review
+5,1,A-5,読者レベルの凡例,common,needs_review,content/entries/common/A-5_reader_level_legend[AI整].md,common_review
+6,2,A-6,評価日・時変情報の見方,common,needs_review,content/entries/common/A-6_evaluation_date_legend[AI整].md,common_review
+7,3,A-7,図のタイプ,common,needs_review,content/entries/common/A-7_figure_types_legend[AI整].md,common_review
+8,4,A-8,色・記号の凡例,common,needs_review,content/entries/common/A-8_color_symbol_legend[AI整].md,common_review
+9,1,A-9,索引,common,needs_review,content/entries/common/A-9_index[AI整].md,common_review
+10,2,A-10,更新履歴と更新方針,common,needs_review,content/entries/common/A-10_changelog[AI整].md,common_review
+11,3,A-11,略称表記,common,needs_review,content/entries/common/A-11_abbreviations[AI整].md,common_review

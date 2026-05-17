@@ -1,0 +1,14 @@
+order,lane,entry_id,title,category,status,md_path,priority
+1,1,E-51,LMSYS Arena,benchmark,needs_review,content/entries/benchmark/E-51_lmsys_arena[人書].md,later
+2,2,I-80,自作 MCP のテンプレ,mcp,needs_review,,later
+3,3,I-81,MCP の登録・設定,mcp,drafting,,later
+4,4,H-50,Bard → Gemini,history,skeleton,,later
+5,1,H-51,Preview から正式版への流れ,history,skeleton,,later
+6,2,H-52,Copilot から Claude Code までの流れ,history,skeleton,,later
+7,3,H-57,Gemini の命名史,history,needs_review,,later
+8,4,H-59,AI エージェント元年,history,needs_review,,later
+9,1,H-60,Codex → GitHub Copilot の系譜,history,drafting,,later
+10,2,H-61,Preview 版という文化,history,needs_review,,later
+11,3,H-62,Anthropic 創業の流れ,history,drafting,,later
+12,4,H-63,Vibe Coding 命名,history,drafting,,later
+13,1,C-83,AI の羅針盤,person_org,drafting,,later
