@@ -81,17 +81,17 @@ C-82,まさお,person_org,ready,content/entries/person/C-82_masao[済].md,False,
 C-83,AI の羅針盤,person_org,drafting,,False,False,later,missing_svg
 D-1,Gemini 2 系,model,needs_review,content/entries/model/D-1_gemini2[人書].md,False,True,done,final_image_without_svg
 D-2,Gemini 2.5 系,model,needs_review,content/entries/model/D-2_gemini25[人書].md,False,True,done,final_image_without_svg
-D-3,Gemini 3 系,model,drafting,,False,False,later,missing_svg
+D-3,Gemini 3 系,model,drafting,,False,True,done,final_image_without_svg
 D-4,Gemini 3.1 系,model,needs_review,content/entries/model/D-4_gemini_3_1[人書].md,False,True,done,final_image_without_svg
-D-10,Claude 3 系,model,skeleton,,False,False,later,missing_svg
+D-10,Claude 3 系,model,skeleton,,False,True,done,final_image_without_svg
 D-11,Claude 3.5 系,model,ready,content/entries/model/D-11_claude35[済].md,True,True,done,complete
 D-12,Claude 4 系,model,ready,content/entries/model/D-12_claude4[済].md,True,True,done,complete
-D-13,Claude 4.5 系,model,skeleton,,False,False,later,missing_svg
+D-13,Claude 4.5 系,model,skeleton,,False,True,done,final_image_without_svg
 D-14,Claude Mythos Preview,model,needs_review,content/entries/model/D-14_claude_mythos_preview[人書].md,False,True,done,final_image_without_svg
 D-20,GPT-5 系,model,needs_review,content/entries/model/D-20_gpt5[人書].md,False,True,done,final_image_without_svg
 D-21,GPT-4 系,model,needs_review,content/entries/model/D-21_gpt4[人書].md,False,True,done,final_image_without_svg
 D-22,o1 系,model,needs_review,content/entries/model/D-22_o1[人書].md,False,True,done,final_image_without_svg
-D-23,o3 系,model,skeleton,,False,False,later,missing_svg
+D-23,o3 系,model,skeleton,,False,True,done,final_image_without_svg
 D-24,GPT-3 系,model,needs_review,content/entries/model/D-24_gpt3[人書].md,False,True,done,final_image_without_svg
 D-25,GPT-1 / GPT-2 系,model,ready,content/entries/model/D-25_gpt1_gpt2[済].md,False,True,done,final_image_without_svg
 D-26,gpt-oss,model,ready,content/entries/model/D-26_gpt_oss[済].md,False,True,done,final_image_without_svg
@@ -142,7 +142,7 @@ F-3,Python,term_tool,ready,content/entries/term_tool/F-3_python[済].md,False,Tr
 F-4,HTML,term_tool,ready,content/entries/term_tool/F-4_html[済].md,False,True,done,final_image_without_svg
 F-5,CSS,term_tool,ready,content/entries/term_tool/F-5_css[済].md,False,True,done,final_image_without_svg
 F-6,Markdown,term_tool,ready,content/entries/term_tool/F-6_markdown[済].md,False,True,done,final_image_without_svg
-F-7,YAML,term_tool,needs_review,content/entries/term_tool/F-7_yaml[人書].md,False,False,later,missing_svg
+F-7,YAML,term_tool,needs_review,content/entries/term_tool/F-7_yaml[人書].md,False,True,done,final_image_without_svg
 F-8,JSON,term_tool,ready,content/entries/term_tool/F-8_json[済].md,False,True,done,final_image_without_svg
 F-9,SVG,term_tool,ready,content/entries/term_tool/F-9_svg[済].md,False,True,done,final_image_without_svg
 F-10,React,term_tool,ready,content/entries/term_tool/F-10_react[済].md,False,True,done,final_image_without_svg
@@ -150,7 +150,7 @@ F-11,Next.js,term_tool,ready,content/entries/term_tool/F-11_next_js[済].md,Fals
 F-12,Electron,term_tool,ready,content/entries/term_tool/F-12_electron[済].md,False,True,done,final_image_without_svg
 F-13,Tauri,term_tool,ready,content/entries/term_tool/F-13_tauri[済].md,False,True,done,final_image_without_svg
 F-14,three.js,term_tool,ready,content/entries/term_tool/F-14_three_js[済].md,False,True,done,final_image_without_svg
-F-15,shadcn/ui,term_tool,needs_review,content/entries/term_tool/F-15_shadcn_ui[人書].md,False,False,later,missing_svg
+F-15,shadcn/ui,term_tool,needs_review,content/entries/term_tool/F-15_shadcn_ui[人書].md,False,True,done,final_image_without_svg
 F-16,Tailwind CSS,term_tool,ready,content/entries/term_tool/F-16_tailwind_css[済].md,False,True,done,final_image_without_svg
 F-17,Astro,term_tool,ready,content/entries/term_tool/F-17_astro[済].md,False,True,done,final_image_without_svg
 F-20,ESLint,term_tool,ready,content/entries/term_tool/F-20_eslint[済].md,False,True,done,final_image_without_svg
@@ -221,20 +221,20 @@ F-200,Rust,term_tool,needs_review,content/entries/term_tool/F-200_rust[人書].m
 G-1,Context (コンテキスト),term_llm,ready,content/entries/term/G-1_context[済].md,True,True,done,complete
 G-2,Token,term_llm,ready,content/entries/term_llm/G-2_token[済].md,False,True,done,final_image_without_svg
 G-3,Dictation,term_llm,ready,content/entries/term_llm/G-3_dictation[済].md,False,True,done,final_image_without_svg
-G-4,System Prompt,term_llm,needs_review,content/entries/term_llm/G-4_system_prompt[人書].md,False,False,later,missing_svg
+G-4,System Prompt,term_llm,needs_review,content/entries/term_llm/G-4_system_prompt[人書].md,False,True,done,final_image_without_svg
 G-5,Context Window,term_llm,ready,content/entries/term_llm/G-5_context_window[済].md,False,True,done,final_image_without_svg
 G-6,One-shot,term_llm,ready,content/entries/term_llm/G-6_one_shot[済].md,False,True,done,final_image_without_svg
 G-7,指示追従性,term_llm,ready,content/entries/term_llm/G-7_instruction-following[済].md,False,True,done,final_image_without_svg
-G-8,決定論的／非決定論的,term_llm,needs_review,,False,False,later,missing_svg
-G-9,effort レベル,term_llm,drafting,,False,False,later,missing_svg
+G-8,決定論的／非決定論的,term_llm,needs_review,,False,True,done,final_image_without_svg
+G-9,effort レベル,term_llm,drafting,,False,True,done,final_image_without_svg
 G-10,Prompt Engineering,term_llm,ready,content/entries/term_llm/G-10_prompt_engineering[済].md,False,True,done,final_image_without_svg
 G-11,Context Engineering,term_llm,ready,content/entries/term_llm/G-11_context_engineering[済].md,False,True,done,final_image_without_svg
-G-12,Agent Design,term_llm,needs_review,content/entries/term_llm/G-12_agent_design[人書].md,False,False,later,missing_svg
+G-12,Agent Design,term_llm,needs_review,content/entries/term_llm/G-12_agent_design[人書].md,False,True,done,final_image_without_svg
 G-13,Few-shot Learning,term_llm,ready,content/entries/term_llm/G-13_few_shot_learning[済].md,False,True,done,final_image_without_svg
 G-14,Thinking モデル,term_llm,ready,content/entries/term_llm/G-14_thinking_model[済].md,False,True,done,final_image_without_svg
 G-15,RAG,term_llm,ready,content/entries/term_llm/G-15_rag[済].md,False,True,done,final_image_without_svg
 G-16,Embedding,term_llm,ready,content/entries/term_llm/G-16_embedding[済].md,False,True,done,final_image_without_svg
-G-17,ベクトル DB,term_llm,drafting,,False,False,later,missing_svg
+G-17,ベクトル DB,term_llm,drafting,,False,True,done,final_image_without_svg
 G-18,Chain of Thought,term_llm,ready,content/entries/term_llm/G-18_chain_of_thought[済].md,False,True,done,final_image_without_svg
 G-19,Prompt Caching,term_llm,ready,content/entries/term_llm/G-19_prompt_caching[済].md,False,True,done,final_image_without_svg
 G-20,CLAUDE.md,tool_agent,ready,content/entries/tool_agent/G-20_claude_md[済].md,False,True,done,final_image_without_svg
@@ -255,7 +255,7 @@ G-41,Subagent,term_llm,ready,content/entries/term_llm/G-41_subagent[済].md,Fals
 G-42,Worktree,term_llm,ready,content/entries/term_llm/G-42_worktree[済].md,False,True,done,final_image_without_svg
 G-43,オーケストレーション,term_llm,ready,content/entries/term_llm/G-43_orchestration[済].md,False,True,done,final_image_without_svg
 G-44,マルチエージェント協調,term_llm,ready,content/entries/term_llm/G-44_multi_agent_coordination[済].md,False,True,done,final_image_without_svg
-G-45,段階的開示,term_llm,needs_review,,False,False,later,missing_svg
+G-45,段階的開示,term_llm,needs_review,,False,True,done,final_image_without_svg
 G-46,ナーフ（モデルの劣化体感）,term_llm,ready,content/entries/term_llm/G-46_narf[済].md,False,True,done,final_image_without_svg
 G-47,Auto-compact,term_llm,ready,content/entries/term_llm/G-47_auto_compact[済].md,False,True,done,final_image_without_svg
 H-1,TDD,workflow,ready,content/entries/workflow/H-1_tdd[済].md,False,True,done,final_image_without_svg
