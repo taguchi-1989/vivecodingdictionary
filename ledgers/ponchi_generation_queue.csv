@@ -70,9 +70,9 @@ C-52,Demis Hassabis,person_org,ready,content/entries/person/C-52_demis_hassabis[
 C-53,Andrej Karpathy,person_org,ready,content/entries/person/C-53_andrej_karpathy[済].md,False,True,done,final_image_without_svg
 C-54,Ilya Sutskever,person,ready,content/entries/person/C-54_ilya_sutskever[済].md,False,True,done,final_image_without_svg
 C-55,Mira Murati,person_org,ready,content/entries/person/C-55_mira_murati[済].md,False,True,done,final_image_without_svg
-C-56,Yann LeCun,person_org,ready,content/entries/person/C-56_yann_lecun[済].md,False,False,ready_missing_svg,missing_svg
+C-56,Yann LeCun,person_org,ready,content/entries/person/C-56_yann_lecun[済].md,False,True,done,final_image_without_svg
 C-57,Geoffrey Hinton,person_org,ready,content/entries/person/C-57_geoffrey_hinton[済].md,False,True,done,final_image_without_svg
-C-58,Elon Musk,person_org,ready,content/entries/person/C-58_elon_musk[済].md,False,False,ready_missing_svg,missing_svg
+C-58,Elon Musk,person_org,ready,content/entries/person/C-58_elon_musk[済].md,False,True,done,final_image_without_svg
 C-59,Jensen Huang,person_org,ready,content/entries/person/C-59_jensen_huang[済].md,False,True,done,final_image_without_svg
 C-60,Ray Kurzweil,person_org,ready,content/entries/person/C-60_ray_kurzweil[済].md,False,True,done,final_image_without_svg
 C-80,AI大学,person_org,ready,content/entries/person/C-80_ai_daigaku[済].md,False,True,done,final_image_without_svg
@@ -237,10 +237,10 @@ G-16,Embedding,term_llm,ready,content/entries/term_llm/G-16_embedding[済].md,Fa
 G-17,ベクトル DB,term_llm,drafting,,False,False,later,missing_svg
 G-18,Chain of Thought,term_llm,ready,content/entries/term_llm/G-18_chain_of_thought[済].md,False,True,done,final_image_without_svg
 G-19,Prompt Caching,term_llm,ready,content/entries/term_llm/G-19_prompt_caching[済].md,False,True,done,final_image_without_svg
-G-20,CLAUDE.md,tool_agent,ready,content/entries/tool_agent/G-20_claude_md[済].md,False,False,ready_missing_svg,missing_svg
-G-21,AGENTS.md,tool_agent,ready,content/entries/tool_agent/G-21_agents_md[済].md,False,False,ready_missing_svg,missing_svg
-G-22,SKILL.md,tool_agent,ready,content/entries/tool_agent/G-22_skill_md[済].md,False,False,ready_missing_svg,missing_svg
-G-23,.claude/settings.json,tool_agent,ready,content/entries/tool_agent/G-23_claude_settings_json[済].md,False,False,ready_missing_svg,missing_svg
+G-20,CLAUDE.md,tool_agent,ready,content/entries/tool_agent/G-20_claude_md[済].md,False,True,done,final_image_without_svg
+G-21,AGENTS.md,tool_agent,ready,content/entries/tool_agent/G-21_agents_md[済].md,False,True,done,final_image_without_svg
+G-22,SKILL.md,tool_agent,ready,content/entries/tool_agent/G-22_skill_md[済].md,False,True,done,final_image_without_svg
+G-23,.claude/settings.json,tool_agent,ready,content/entries/tool_agent/G-23_claude_settings_json[済].md,False,True,done,final_image_without_svg
 G-30,Tool Use,term_llm,ready,content/entries/term_llm/G-30_tool_use[済].md,False,True,done,final_image_without_svg
 G-31,Hook,term_llm,ready,content/entries/term_llm/G-31_hook[済].md,False,True,done,final_image_without_svg
 G-32,Slash Command,term_llm,ready,content/entries/term_llm/G-32_slash_command[済].md,False,True,done,final_image_without_svg
@@ -270,11 +270,11 @@ H-50,Bard → Gemini,history,skeleton,,False,False,later,missing_svg
 H-51,Preview から正式版への流れ,history,skeleton,,False,False,later,missing_svg
 H-52,Copilot から Claude Code までの流れ,history,skeleton,,False,False,later,missing_svg
 H-53,ChatGPT 登場,history,ready,content/entries/history/H-53_chatgpt_launch[済].md,True,True,done,complete
-H-54,GPT-4 リリース,history,ready,content/entries/history/H-54_gpt4_release[済].md,False,False,ready_missing_svg,missing_svg
-H-55,LLaMA のオープン化,history,ready,content/entries/history/H-55_llama_opensource[済].md,False,False,ready_missing_svg,missing_svg
-H-56,Claude のバージョン史,history,ready,content/entries/history/H-56_claude_version_history[済].md,False,False,ready_missing_svg,missing_svg
+H-54,GPT-4 リリース,history,ready,content/entries/history/H-54_gpt4_release[済].md,False,True,done,final_image_without_svg
+H-55,LLaMA のオープン化,history,ready,content/entries/history/H-55_llama_opensource[済].md,False,True,done,final_image_without_svg
+H-56,Claude のバージョン史,history,ready,content/entries/history/H-56_claude_version_history[済].md,False,True,done,final_image_without_svg
 H-57,Gemini の命名史,history,needs_review,,False,False,later,missing_svg
-H-58,Transformer 論文,history,ready,content/entries/history/H-58_transformer_paper[済].md,False,False,ready_missing_svg,missing_svg
+H-58,Transformer 論文,history,ready,content/entries/history/H-58_transformer_paper[済].md,False,True,done,final_image_without_svg
 H-59,AI エージェント元年,history,needs_review,,False,False,later,missing_svg
 H-60,Codex → GitHub Copilot の系譜,history,drafting,,False,False,later,missing_svg
 H-61,Preview 版という文化,history,needs_review,,False,False,later,missing_svg
@@ -285,18 +285,18 @@ I-2,MCP Server,mcp,ready,content/entries/mcp/I-2_mcp_server[済].md,False,True,d
 I-3,MCP Client,mcp,ready,content/entries/mcp/I-3_mcp_client[済].md,False,True,done,final_image_without_svg
 I-4,MCP Transport,mcp,ready,content/entries/mcp/I-4_mcp_transport[済].md,False,True,done,final_image_without_svg
 I-5,MCP SDK,mcp,ready,content/entries/mcp/I-5_mcp_sdk[済].md,False,True,done,final_image_without_svg
-I-10,Filesystem MCP,mcp,ready,content/entries/mcp/I-10_filesystem_mcp[済].md,False,False,ready_missing_svg,missing_svg
-I-11,GitHub MCP,mcp,ready,content/entries/mcp/I-11_github_mcp[済].md,False,False,ready_missing_svg,missing_svg
-I-12,Git MCP,mcp,ready,content/entries/mcp/I-12_git_mcp[済].md,False,False,ready_missing_svg,missing_svg
-I-13,Slack MCP,mcp,ready,content/entries/mcp/I-13_slack_mcp[済].md,False,False,ready_missing_svg,missing_svg
-I-20,Playwright MCP,mcp,ready,content/entries/mcp/I-20_playwright_mcp[済].md,False,False,ready_missing_svg,missing_svg
-I-21,Puppeteer MCP,mcp,ready,content/entries/mcp/I-21_puppeteer_mcp[済].md,False,False,ready_missing_svg,missing_svg
-I-22,Chrome DevTools MCP,mcp,ready,content/entries/mcp/I-22_chrome_devtools_mcp[済].md,False,False,ready_missing_svg,missing_svg
-I-23,Serena MCP,mcp,ready,content/entries/mcp/I-23_serena_mcp[済].md,False,False,ready_missing_svg,missing_svg
-I-24,Context7 MCP,mcp,ready,content/entries/mcp/I-24_context7_mcp[済].md,False,False,ready_missing_svg,missing_svg
-I-30,Notion MCP,mcp,ready,content/entries/mcp/I-30_notion_mcp[済].md,False,False,ready_missing_svg,missing_svg
-I-41,SQLite MCP,mcp,ready,content/entries/mcp/I-41_sqlite_mcp[済].md,False,False,ready_missing_svg,missing_svg
-I-50,AWS MCP,mcp,ready,content/entries/mcp/I-50_aws_mcp[済].md,False,False,ready_missing_svg,missing_svg
+I-10,Filesystem MCP,mcp,ready,content/entries/mcp/I-10_filesystem_mcp[済].md,False,True,done,final_image_without_svg
+I-11,GitHub MCP,mcp,ready,content/entries/mcp/I-11_github_mcp[済].md,False,True,done,final_image_without_svg
+I-12,Git MCP,mcp,ready,content/entries/mcp/I-12_git_mcp[済].md,False,True,done,final_image_without_svg
+I-13,Slack MCP,mcp,ready,content/entries/mcp/I-13_slack_mcp[済].md,False,True,done,final_image_without_svg
+I-20,Playwright MCP,mcp,ready,content/entries/mcp/I-20_playwright_mcp[済].md,False,True,done,final_image_without_svg
+I-21,Puppeteer MCP,mcp,ready,content/entries/mcp/I-21_puppeteer_mcp[済].md,False,True,done,final_image_without_svg
+I-22,Chrome DevTools MCP,mcp,ready,content/entries/mcp/I-22_chrome_devtools_mcp[済].md,False,True,done,final_image_without_svg
+I-23,Serena MCP,mcp,ready,content/entries/mcp/I-23_serena_mcp[済].md,False,True,done,final_image_without_svg
+I-24,Context7 MCP,mcp,ready,content/entries/mcp/I-24_context7_mcp[済].md,False,True,done,final_image_without_svg
+I-30,Notion MCP,mcp,ready,content/entries/mcp/I-30_notion_mcp[済].md,False,True,done,final_image_without_svg
+I-41,SQLite MCP,mcp,ready,content/entries/mcp/I-41_sqlite_mcp[済].md,False,True,done,final_image_without_svg
+I-50,AWS MCP,mcp,ready,content/entries/mcp/I-50_aws_mcp[済].md,False,True,done,final_image_without_svg
 I-80,自作 MCP のテンプレ,mcp,needs_review,,False,False,later,missing_svg
 I-81,MCP の登録・設定,mcp,drafting,,False,False,later,missing_svg
 J-1,AGI,term_general,ready,content/entries/term_general/J-1_agi[済].md,False,True,done,final_image_without_svg

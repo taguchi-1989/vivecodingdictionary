@@ -86,7 +86,10 @@ def write_queue(rows: list[QueueRow]) -> None:
 def sync_queue() -> list[QueueRow]:
     entries = read_csv(ENTRIES)
     svg_ids = {p.stem for p in DRAFT_SVG_DIR.glob("*.svg")}
-    final_ids = {p.stem for p in FINAL_DIR.glob("*.png")} if FINAL_DIR.exists() else set()
+    final_ids = set()
+    if FINAL_DIR.exists():
+        final_ids.update(p.stem for p in FINAL_DIR.glob("*.png"))
+        final_ids.update(p.stem for p in FINAL_DIR.glob("*.webp"))
     rows: list[QueueRow] = []
 
     for entry in entries:
