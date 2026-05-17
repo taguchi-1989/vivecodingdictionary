@@ -374,11 +374,20 @@ LEVEL_ICON_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" str
 PONCHI_ICON_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/><path d="M9 12l-2 3m8-3l2 3"/></svg>'
 
 
+def _ponchi_final_asset(entry_id: str) -> tuple[Path, str] | None:
+    """final ディレクトリで .webp を優先し、無ければ .png を返す。"""
+    for ext in ("webp", "png"):
+        p = PONCHI_FINAL_DIR / f"{entry_id}.{ext}"
+        if p.exists():
+            return p, f"../../../assets/ponchi/final/{entry_id}.{ext}"
+    return None
+
+
 def load_ponchi_asset(entry_id: str) -> tuple[str, bool]:
-    """final PNG -> draft SVG -> placeholder の順でポンチ絵 HTML を返す。"""
-    png_path = PONCHI_FINAL_DIR / f"{entry_id}.png"
-    if png_path.exists():
-        rel = f"../../../assets/ponchi/final/{entry_id}.png"
+    """final WebP/PNG -> draft SVG -> placeholder の順でポンチ絵 HTML を返す。"""
+    final = _ponchi_final_asset(entry_id)
+    if final is not None:
+        _, rel = final
         return f'<img src="{rel}" alt="" loading="lazy">', True
 
     svg_path = PONCHI_SVG_DIR / f"{entry_id}.svg"
@@ -504,9 +513,9 @@ def render_main_figure(fm: dict, entry_id: str) -> str:
         "workflow": "ワークフロー図",
         "timeline": "タイムライン",
     }.get(ft, "図")
-    png_path = PONCHI_FINAL_DIR / f"{entry_id}.png"
-    if png_path.exists():
-        rel = f"../../../assets/ponchi/final/{entry_id}.png"
+    final = _ponchi_final_asset(entry_id)
+    if final is not None:
+        _, rel = final
         return f'''
       <div class="section-heading"><span class="label">{label}</span></div>
       <div class="figure figure--image figure--standalone" style="padding:10px;text-align:center;border-bottom:1.5px solid var(--ink-blue) !important;border-bottom-left-radius:var(--radius-lg) !important;border-bottom-right-radius:var(--radius-lg) !important;">
@@ -1041,7 +1050,7 @@ def render_page(entry: dict, prev: dict | None, next_: dict | None, drawer_html:
         code_icon=CODE_ICON_SVG,
         pin_icon=PIN_ICON_SVG,
         ponchi_slot_html=(
-            '' if (PONCHI_FINAL_DIR / f"{entry_id}.png").exists()
+            '' if _ponchi_final_asset(entry_id) is not None
             else f'''
       <div class="ponchi-slot">
         <div class="ponchi-icon {"ponchi-icon--real" if ponchi_is_real else ""}">{ponchi_asset}</div>

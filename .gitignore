@@ -51,3 +51,7 @@ drafts/prototypes/preview/
 drafts/pdf/
 ledgers/_compression_batches/
 scripts/_batch_*.py
+
+# ポンチ絵の原寸 PNG はローカル保管のみ（デプロイ・追跡は .webp）。
+# 再生成: python3 scripts/convert_ponchi_to_webp.py
+assets/ponchi/final/*.png
