@@ -106,16 +106,20 @@ Deep Learning、Ilya Sutskever、AI 倫理
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 一般のニュースでは名前を耳にせず馴染みがありません。
 - Google を退社した背景に思いがありそうですが掴みきれません。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 深層学習を作った人はすごいですね。
 - 👍 良い点: よく分かりません。
 - 👎 ダメな点: よく分かりません。
 - 👥 誰向けか: 深層学習の歴史を俯瞰したい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

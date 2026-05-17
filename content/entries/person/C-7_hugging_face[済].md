@@ -105,16 +105,20 @@ transformers、Llama、Mistral、Gradio。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 商用利用可能なのか単なるテスト用なのかの区別がつきづらいです。
 - 悪意の有無も含め、個人情報を入力するのには抵抗があります。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: AI ニュースで実装されたと耳にしました。
 - 👍 良い点: AI モデルのデファクトスタンダードな置き場です。
 - 👎 ダメな点: 著作権や機密の扱いが不安で、デプロイもコールドスタートが起きました。
 - 👥 誰向けか: AI を活用する側より提供する側向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

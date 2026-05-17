@@ -103,16 +103,20 @@ Claude Code、Windsurf Cascade、Tool Use
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - Cursor を有料課金していないと、そもそも出会いません
 - コードを見ながら開発する習慣がないと出会いません
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: コーディング系 YouTuber の評判は良いようです
 - 👍 良い点: 出来は良いらしいです。触っていないので未確認です
 - 👎 ダメな点: 自社でフロンティアモデルを開発していない点が不安です
 - 👥 誰向けか: 自分でコードを全て理解して進めたい人向けでしょうか
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

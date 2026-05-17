@@ -106,17 +106,21 @@ Vercel、GitHub、Heroku、デプロイ。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 環境変数の設定場所が分かりづらく、本番だけ落ちることがあります。
 - フロントと分けると複雑になるので本体ごと Render に入れる方が楽です。
 - 管理画面がとっつきにくく、最初はどのメニューを開けばよいか迷います。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: LLM が「Render がいい」と勧めてくる候補です。
 - 👍 良い点: FastAPI / Flask を無料でデプロイできます。
 - 👎 ダメな点: 無料プランはコールドスタートで 30 秒かかりストレスです。
 - 👥 誰向けか: Python バックを無料で公開したい個人開発者向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

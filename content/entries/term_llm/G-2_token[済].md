@@ -102,17 +102,21 @@ Context Window、Prompt Engineering、料金プラン（B-50〜52）。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - パケットみたいなものだとは思うけど、何の単位かが分かりづらいです。
 - 英語と日本語で消費が違い、裏で Thinking が動くトークンもあります。
 - 量も単価も分からず、いくらかかるかの価格感が掴めません。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: LLM のパケットみたいなもの。触れば必ず出てくるやつです。
 - 👍 良い点: 「いくら使った」を測る通貨的な単位として使えます。
 - 👎 ダメな点: Prompt Caching も絡んで値段が読みにくいです。
 - 👥 誰向けか: AI を触る人なら全員押さえておきたい単位です。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

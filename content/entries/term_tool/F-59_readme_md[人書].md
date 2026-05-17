@@ -106,16 +106,20 @@ CLAUDE.md、Markdown、git
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 英語ベースで読む気になれず .md の拡張子にも最初は抵抗がありました。
 - 書くべき箇所とそうでない箇所の境界が最初は微妙に分かりにくかったです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 最初に読むものだけど、ドキュメントだけでは読む気がしない。
 - 👍 良い点: エージェントが作ってくれるので自分で触らずに済みます。
 - 👎 ダメな点: バージョン管理が甘いと古い情報が残りがちで管理が課題です。
 - 👥 誰向けか: アプリを作る人・使う人どちらにも関係します。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

@@ -107,17 +107,21 @@ ChatGPT や Gemini に「Deep Research」ボタンとして登場します。Per
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - Gemini も ChatGPT も実在しない論文を持ってくる幻覚が多い。
 - 裏取りを人が一件ずつ確認するのは大変でバリデーターとの組み合わせが必要。
 - うまく回せばコンサル資料レベルのアウトプットを自動化できる。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 騒がれていたが凄さが分からず他の機能の方がすごいと思った。
 - 👍 良い点: 検索してまとめるタスクをかなり任せられる。
 - 👎 ダメな点: ハルシネーションが課題。
 - 👥 誰向けか: 何かを調べる人は、まず一発かましてみるのが絶対良い。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

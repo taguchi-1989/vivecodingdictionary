@@ -103,17 +103,21 @@ Tool Use（G-30）、MCP（I-1）、Agent。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - Tool Use に比べて聞きなじみがないです。
 - JSON を知らない人には「JSON 形式で返す」説明がちんぷんかんぷんです。
 - 規格としてどこまで支配的になるかも見えません。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: ちゃんと見たのは今回が初めて。
 - 👍 良い点: 出力が固定されるのは良いことだと思う。
 - 👎 ダメな点: 馴染みが薄い。あと自分でシステム／ツールの使い分けをするのが難しそう。
 - 👥 誰向けか: 自作の応答システムを作る人向け。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

@@ -104,17 +104,21 @@ o1 系、o3 系、Extended Thinking
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 昔はプロンプトで誘導していたが、Thinking Model なら自動でやってくれます
 - 「Thinking Model」と「Reasoning Model」の違いが結構難しいです
 - 速さより精度がほしいときは、基本これを選ぶことになります
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: o1 登場でベンチマークスコアがぐっと伸びたのが記憶に残っています
 - 👍 良い点: 今のモデルを使う人なら知らず知らず使っているくらい当たり前です
 - 👎 ダメな点: 速度が遅いので、ファストモデルとの使い分けも考えたいです
 - 👥 誰向けか: 最近は頭出しもしてくれるので、幅広く使いやすくなりました
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

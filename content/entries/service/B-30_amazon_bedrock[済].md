@@ -106,17 +106,21 @@ AWS、Claude、Vertex AI。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - AWS（IAM・コンソール）の知識なしでは API 呼び出しまで辿り着けません
 - 2026 年に gpt-oss 等が追加されるまで OpenAI モデルは非対応でした
 - ガバナンス面の判断材料が分かりづらく、本番運用の根拠を掴みにくいです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: セキュアな業務利用を相談すると候補に挙がってきました
 - 👍 良い点: エンタープライズのセキュリティ・データ保護要件を満たせるそうです
 - 👎 ダメな点: 個人未実装で LiteLLM 等との差別化が掴めていません
 - 👥 誰向けか: 企業の情報システム・インフラ担当エンジニア向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

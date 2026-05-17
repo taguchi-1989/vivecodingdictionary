@@ -108,17 +108,21 @@ Imagen、DALL-E、Stable Diffusion
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 正式名が長く API 設定でどれを選ぶか迷いました。
 - 画像生成を頼んでもうまく出ないことがあり不安定に感じました。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象:既存モデルの蓄積進化なのに過大評価されている印象でした
 - 👍 良い点:0 からキャラクターを作る用途には十分な性能がありました
 - 👎 ダメな点:日本語入力が苦手で、資料作りには使いにくいです
 - 👥 誰向けか:クリエイターが案出しに使う用途に向いていると思います
 - 後継の Nano Banana 2 や Pro は日本語も上達し、かなり感動しました
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

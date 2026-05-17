@@ -102,16 +102,20 @@ MMLU-Pro、Chatbot Arena、SWE-Bench
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 文字列はたまに見るのですが、何を測っているのか全然知りませんでした
 - 各社モデル発表時のベンチマークが出てきますが、よく分からないですよね
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 何か書いてある、数字というイメージです
 - 👍 良い点: 人の能力に近い水準で測れる点が良さそうです
 - 👎 ダメな点: ベンチ特化のモデルが出そうで KPI 化されすぎな印象です
 - 👥 誰向けか: モデルの賢さを評価する人向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

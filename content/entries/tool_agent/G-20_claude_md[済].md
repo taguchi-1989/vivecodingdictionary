@@ -104,17 +104,21 @@ AGENTS.md、Memory、Context Window
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - どこに置けばよいか、何を書けばよいかが最初は分かりません
 - 全部書き込むとコンテキストが膨らみ、モデルの賢さが下がりがちです
 - そもそも「.md」というファイル形式自体に馴染みがありません
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: ここに書けば Claude に伝わる、楽だなという印象でした
 - 👍 良い点: 方針・ルールをファイルに切り出して Claude に運用させられます
 - 👎 ダメな点: 詰め込みすぎると逆効果で、委任体系の設計が必要になります
 - 👥 誰向けか: バイブコーディングをする人、特に CC を使う人には必修の概念です
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

@@ -108,15 +108,19 @@ ASI、Singularity、ARC-AGI
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 定義が曖昧で、現在の AI から何がどう変わるのかをイメージしにくいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: Sam Altman 関連のニュースで初めて意識した、という印象です
 - 👍 良い点: 究極的にはホワイトカラーの仕事を置き換えうる、という議論の出発点になります
 - 👎 ダメな点: 定義が曖昧で、議論が「どこをゴールに置くか」次第で大きくぶれてしまいます
 - 👥 誰向けか: シンギュラリティや未来の働き方を議論したい人向けです
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

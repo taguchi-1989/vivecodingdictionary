@@ -108,16 +108,20 @@ MATH（E-24）、AIME（E-25）、Chain of Thought（G-18）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 今回調べていて初めて聞きました。
 - 今さら追わなくてもいいベンチマークなのかなと感じ、学ぶ意欲がわきませんでした。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 今回初めて知りました。
 - 👍 良い点: 定型的な性能を測るのによさそうです。
 - 👎 ダメな点: 高性能 LLM の差別化には使えません。
 - 👥 誰向けか: 基礎から押さえたい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

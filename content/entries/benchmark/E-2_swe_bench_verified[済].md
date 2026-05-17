@@ -103,16 +103,20 @@ SWE-Bench、Multi-SWE-Bench、HumanEval
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - SWE-Bench 自体が不明瞭なまま「Verified」と言われても違いが掴めません。
 - 何を測っているのかがイメージしにくいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: SWE-bench の精度向上版という印象です。
 - 👍 良い点: 人手検証で信頼性を高めている点が良いと思います。
 - 👎 ダメな点: 既に飽和しかけている点が気になります。
 - 👥 誰向けか: モデルのコーディング性能をざっと判断したい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

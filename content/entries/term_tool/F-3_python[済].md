@@ -105,17 +105,21 @@ NumPy、pandas、PyTorch、pip、Jupyter。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 読むことはできても、書こうとするとエラーが出やすい印象があります。
 - 形式や領域によって使い方が違い、「Python」でもレベル感がバラバラです。
 - TS で書くか Python で書くかを迷う場面が結構あります。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 機械学習で使われる言語というイメージでした。
 - 👍 良い点: LLM との相性が良く、Excel 代替にも使えます。
 - 👎 ダメな点: Excel に比べ視覚的でなく操作への慣れが必要。
 - 👥 誰向けか: LLM でデータ分析・科技計算をする人は全員触っておきたい。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

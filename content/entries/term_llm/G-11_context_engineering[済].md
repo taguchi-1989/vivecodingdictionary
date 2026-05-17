@@ -102,17 +102,21 @@ Context（G-1）, System Prompt（G-4）, RAG
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - エージェントを触っていない人には「コンテキスト」が全く通じません。
 - 一般名称ではないのに一般名称化していると思い込む人も出ています。
 -
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 文脈が必要という気づきと一致した言葉で「当然必要」と思いました。
 - 👍 良い点: 必要な情報を渡せば AI のカスタマイズが効き、狙った出力を得やすいです。
 - 👎 ダメな点: 実は一番コストがかかる部分で、最大のボトルネックです。
 - 👥 誰向けか: 組織で運用する人はここがボトルネックだと認識しておくべきです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

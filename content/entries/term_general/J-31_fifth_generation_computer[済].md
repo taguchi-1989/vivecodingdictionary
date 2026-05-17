@@ -100,17 +100,21 @@ ICOT、エキスパートシステム、Prolog、Deep Learning
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 名前は聞くけど、そこから先がまた難しい。
 - 当事者でないため、どんな形で進められたのかがイメージしにくいです。
 - 今のどこに繋がっているのかも、自分の中でうまく繋がらない。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 日本が世界をリードしようとした時代の話。
 - 👍 良い点: 思想は良かったらしい。
 - 👎 ダメな点: リードするまでは行かなかったよね。
 - 👥 誰向けか: 歴史が好きな人かな。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

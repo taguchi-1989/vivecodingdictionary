@@ -104,17 +104,21 @@ Hook、Skill、CLAUDE.md
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 自定義コマンドとデフォルト組み込みコマンドが混在していて分かりにくいです
 - VS Code 版と Claude Desktop 版で使えるコマンドが違い、原因が掴みにくいです
 - Claude Code 経由で作業すると自作コマンドを使わず、ハーネス化しないと部分最適になりがちです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 黒い画面を触る人が好きそうな印象がありました。
 - 👍 良い点: 指示をまとめられるショートカット的な使い方ができます。
 - 👎 ダメな点: 自作しないと何ができるか分からず、環境差もあります。
 - 👥 誰向けか: 自分でコマンドを打つ人かエージェントに任せる人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

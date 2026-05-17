@@ -200,22 +200,29 @@ status: drafting         # drafting / sample / needs_source / needs_review / rea
 ## 非エンジニアのつまずき
 
 <!-- 箇条書き 3 項目固定。各項目 推奨 30〜50 字／上限 60 字（2026-05-02 改）。
-     「何が分かりにくかったか」を事実寄りに、短く。著者本人のみ記入。 -->
+     「何が分かりにくかったか」を事実寄りに、短く。著者本人のみ記入。
+     ↓ user-input ブロック内が RepoEdit（スマホ編集 PWA）で唯一書き換え可能な領域。
+     マーカー自体は絶対に消さない。 -->
 
+<!-- user-input:start key="stumble" -->
 - 
 - 
 - 
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
 <!-- 4 行固定。各 推奨 25〜40 字／上限 45 字（2026-05-02 改）。冒頭の絵文字ラベルはそのまま維持。
-     誌面 v2 で 誰向けか のアイコンは 🎯 から 👥 に変更済み。 -->
+     誌面 v2 で 誰向けか のアイコンは 🎯 から 👥 に変更済み。
+     ↓ user-input ブロック内が RepoEdit で編集可能。マーカーは消さない。 -->
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 
 - 👍 良い点: 
 - 👎 ダメな点: 
 - 👥 誰向けか: 
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

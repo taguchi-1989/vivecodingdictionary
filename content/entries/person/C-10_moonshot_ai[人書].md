@@ -106,17 +106,21 @@ Kimi（D-44）、DeepSeek V3（D-46）、Qwen（D-43）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 「六小虎」の 6 社名と代表モデルがいっぺんに出てくると整理しきれません。
 - 社名と代表モデル名が結びつかず「どこの会社？」となりがちです。
 - 中国系企業と代表モデルの対応関係を線で結ぶのに時間がかかります。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象:
 - 👍 良い点:
 - 👎 ダメな点:
 - 👥 誰向けか:
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

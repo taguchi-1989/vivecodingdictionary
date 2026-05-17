@@ -101,15 +101,19 @@ Papers With Code、Hugging Face Papers、Semantic Scholar
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 査読前も混じっていて玉石混交なので、サイト内検索だけで探すのはしんどいです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 最先端の論文が無料で置いてある点に魅力を感じます
 - 👍 良い点: AI の検索・要約と組み合わせ、引用数で注目論文を追えます
 - 👎 ダメな点: 主張に幅がある論文も多く、全部見ようとすると時間が足りません
 - 👥 誰向けか: AI 経由で研究動向を素早く追いたい人向けです
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

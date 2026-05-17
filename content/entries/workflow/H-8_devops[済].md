@@ -123,15 +123,19 @@ GitOps、SRE、DevSecOps
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 2025 年前後で DevOps の意味合いが変わってきている感覚があり、文脈の取り方が難しいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 理想論だな、できたらいいな、という感想でした
 - 👍 良い点: 運用側の知見が開発側に継続的に反映され、改善ループが回りやすくなります。
 - 👎 ダメな点: 案件ベースの仕事だとプロジェクトの区切りが付けづらくなります。
 - 👥 誰向けか: 自社サービスを内部で保守し続ける組織向けで、案件ベースとは相性が悪い印象です。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

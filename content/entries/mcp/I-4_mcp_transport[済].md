@@ -104,16 +104,20 @@ MCP Server、JSON-RPC、SSE（Server-Sent Events）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - エージェントがやってくれると特に意識することはありません
 - 切り分けに使うところまでいかず、チャットで聞いて従うことになりそうです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 今回初めてです
 - 👍 良い点: MCP の解像度が上がります
 - 👎 ダメな点: 二系統の理解が難しいです
 - 👥 誰向けか: 開発者向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

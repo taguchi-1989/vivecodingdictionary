@@ -113,17 +113,21 @@ Permission, Auto Mode, Slash Command
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 「いい感じにやってほしい」と思っていると、プランが面倒くさく感じます。
 - 手戻り経験がないと重要性を肌感覚で理解しにくいです。
 -
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: モードの切り替えが面倒くさい。
 - 👍 良い点: 計画に時間を使うことで最終的に時短になり質が上がります。
 - 👎 ダメな点: 重要性を肌感覚で理解するのが難しいです。
 - 👥 誰向けか: AI にタスクを委ねる人すべて。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

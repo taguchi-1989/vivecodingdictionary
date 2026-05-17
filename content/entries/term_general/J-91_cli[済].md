@@ -105,16 +105,20 @@ bash、PowerShell、ターミナルエミュレータ
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - ターミナルを触ること自体に強いハードルがあり怖い・壊しそうという感覚がある。
 - どこへ行けばいいか分からず、「自分が触るものじゃない」と最初は思ってしまう。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 黒い画面を触る感じはかっこいいけど、とっつきづらい。
 - 👍 良い点: AI エージェントと組み合わせるならほぼ必須で効率がいい。
 - 👎 ダメな点: とっつきづらさがある。実は GUI よりずっとよく整理できる
 - 👥 誰向けか: エージェントを活用していこうとしている人ならほぼ全員。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

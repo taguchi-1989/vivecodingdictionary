@@ -102,15 +102,19 @@ Claude、Anthropic、Claude の料金プラン
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - Claude Code との違いが実感しにくく、開発者向けと一般向けで評価が割れています。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: Claude Code を一般人向けにした感じです。
 - 👍 良い点: MCP が使えない場面でも Computer Use で力技が効きます。
 - 👎 ダメな点: トークン消費が大きく、Plus プランだとコスパが見えにくいです。
 - 👥 誰向けか: 一般タスクを Claude に任せたい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

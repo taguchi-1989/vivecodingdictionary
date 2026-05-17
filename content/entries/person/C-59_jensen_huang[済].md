@@ -109,16 +109,20 @@ NVIDIA、H100、CUDA
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - NVIDIA は知っていても Jensen Huang 個人の知名度は一般に高くない印象です。
 - どういう思想で経営しているのかがまだ把握しきれていません。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象:NVIDIA の舵取りで世界一の企業に育てたのはすごいです
 - 👍 良い点:CUDA を核に、オープン／クローズ戦略が巧みです
 - 👎 ダメな点:よく分かりません
 - 👥 誰向けか:LLM 動向を追うなら見ておくべき人物です
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

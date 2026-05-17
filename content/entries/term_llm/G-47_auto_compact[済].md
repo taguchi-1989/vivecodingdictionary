@@ -112,17 +112,21 @@ Context Window、CLAUDE.md
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 勝手に圧縮してくれる一方、昔のタスクは忘れられ精度が落ちていきます。
 - 「発動させないように使う」リテラシーがユーザー側に要求されます。
 -
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 勝手にやってくれてめっちゃ楽。
 - 👍 良い点: 長い会話が継続できない問題を解決してくれる点。
 - 👎 ダメな点: 結局精度は落ちるので、使わないに越したことはないです。
 - 👥 誰向けか: サブエージェントで「委任」の必要性を感じ始めた人向けです。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

@@ -105,17 +105,21 @@ llama.cpp、Ollama、Hugging Face
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - モデルサイズ（7B / 70B など）の意味が分かりづらく、どれを選ぶか掴めません。
 - 
 - 
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: OSS（オープンソース）の文脈で名前を見かける、という入口でした
 - 👍 良い点: 無料で利用でき、軽量モデルなら手元で試せます
 - 👎 ダメな点: フルサイズのモデルを動かすにはデータセンター級のマシンスペックが要求されます
 - 👥 誰向けか: 研究者向け、というのが正直な印象です（個人で扱える範囲はまだ限定的）
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

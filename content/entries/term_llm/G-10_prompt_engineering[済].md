@@ -108,17 +108,21 @@ Few-shot, Context Engineering（G-11）, System Prompt
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 昔は画像生成でネガティブプロンプトを細かく書くのが流行りでした。
 - 今は「いい感じで」と渡した方が良い結果になる場面も増えました。
 - どこまで指示を絞り、どこまで AI に任せるかの切り分けが難しいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 絵を描くために必要な呪文、というイメージ。
 - 👍 良い点: ハーネス化されていない場面ではまだしっかり指示する必要があります。
 - 👎 ダメな点: 最適な指示の形がモデルの賢さで変わるのでいつまでベストか分かりません。
 - 👥 誰向けか: ハーネス・Context Engineering に内包されつつある印象です。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

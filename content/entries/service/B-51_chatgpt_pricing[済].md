@@ -108,17 +108,21 @@ ChatGPT、OpenAI、API、GPT-5。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 無料で満足している人に課金の価値を説明するのが難しいです
 - Pro の常用ハードルは高いが、Codex なら Plus 課金でも使えます
 - エンタープライズのデータ保護仕様を決裁者向けに説明しにくいです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: Pro $200 は高すぎと感じたが、今は時間単価で安く感じます
 - 👍 良い点: Plus $20 は得られるリターンが大きく、コスパが高いです
 - 👎 ダメな点: $20→$200 の段差が大きく、踏み込みづらかったです
 - 👥 誰向けか: LLM を試し比べながら使い分けたい人向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

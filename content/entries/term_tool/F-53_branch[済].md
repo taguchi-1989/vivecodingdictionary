@@ -104,16 +104,20 @@ merge、rebase、pull request。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - オフィス仕事では出てこない概念で、適当にやると main と競合してブランチを捨てる羽目になりました
 - AI に伝えると適切なブランチ名をつけてくれるようになり楽になりました
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 概念が理解しにくいというのが最初の印象でした
 - 👍 良い点: 商用版と開発版を分けて持てるのは今では手放せない機能です
 - 👎 ダメな点: 必要性を理解するためにリテラシーが前提として必要です
 - 👥 誰向けか: 複数環境や複数人で開発・運用していく人向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

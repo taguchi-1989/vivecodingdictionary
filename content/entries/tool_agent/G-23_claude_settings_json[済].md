@@ -107,17 +107,21 @@ Hook、Permission、CLAUDE.md
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 生で触ろうとするとどう書けばよいか分かりません。
 - AI に頼むと登録してくれますが、ファイルの場所が分からないことがあります。
 - 設定の全体像が見えないと後から自分で直せません。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 実体として初めて認識した。
 - 👍 良い点: フックやスキルの発動、権限などの設定をここで一元的にできる。
 - 👎 ダメな点: この存在に気づくまでがハードルで、ちゃんと理解しないと辿り着けない。
 - 👥 誰向けか: 存在自体はバイブコーダー全員が押さえておいていい。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

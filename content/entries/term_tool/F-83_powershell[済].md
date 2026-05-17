@@ -112,17 +112,21 @@ bash、WSL、Azure
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - PowerShell とコマンドプロンプトで微妙に違い、片方しかできないことがあります。
 - 管理者権限の扱いも異なり、ターミナルごとに挙動が変わります。
 - 似た環境が複数あって言語も微妙に異なり、わかりにくいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 上位互換かと思いきや、下位互換性があると知りました。
 - 👍 良い点: コマンドプロンプトよりリッチです。
 - 👎 ダメな点: 互換しないところがあります。
 - 👥 誰向けか: インストールやツール整理をする人向けです。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

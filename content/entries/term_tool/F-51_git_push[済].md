@@ -104,16 +104,20 @@ force push、upstream 設定、push フック、CI トリガー。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 「プッシュ＝外へ押し出す」の方向性を掴むまで時間がかかりました。
 - どこまでやったら誰に反映されるのかを覚えるのも最初はハードルが高かったです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 最初はほぼ他の手段で動かしていた記憶があります。
 - 👍 良い点: シンプルですが、これがあるから成り立つ基本的な操作です。
 - 👎 ダメな点: どのブランチへ push か把握しにくい場面がある。
 - 👥 誰向けか: エージェンティック・バイブコーディングをする人にマストです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

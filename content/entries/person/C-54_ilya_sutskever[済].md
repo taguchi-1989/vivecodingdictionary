@@ -103,16 +103,20 @@ OpenAI、ASI、Geoffrey Hinton
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - OpenAI 以外にも、こうして辞めた人がいるとは知りませんでした
 - 名前が読みづらいです。ロシア系・スラブ系の人名で呼びづらいです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象:今回初めて知りました
 - 👍 良い点:安全性に関心があるのは良いことだと思います
 - 👎 ダメな点:わかりません
 - 👥 誰向けか:フロンティア企業の内部力学を知りたい人
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

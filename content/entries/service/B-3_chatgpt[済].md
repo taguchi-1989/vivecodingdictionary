@@ -105,17 +105,21 @@ GPT-5 系、Custom GPT、DALL·E、OpenAI API
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - ChatGPT と Codex の位置関係がわかりにくいです。
 - 無料から有料に上げて何がどう良くなるか見えにくいです。
 - 3 つの入口（chatgpt.com・Custom GPT・API）の使い分けが掴みにくいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 意図をくみ取ってくれることに感動しました。
 - 👍 良い点: 更新が早く、バランスが良く外れが少ないです。
 - 👎 ダメな点: 画像生成やコーディングなど特化モデルには一歩譲ります。
 - 👥 誰向けか: あらゆる人に薦められます。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

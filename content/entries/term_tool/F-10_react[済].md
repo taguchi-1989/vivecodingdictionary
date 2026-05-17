@@ -104,16 +104,20 @@ Next.js、JSX、State、Props、TypeScript。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - HTML/CSS/JS の後に別の枠組みが出てきて戸惑いました。「なぜ React か」を腹落ちさせるのに時間がかかりました。
 - Astro 系で進めようとして、React に辿り着くまでに遠回りをしました。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: なぜ使わなければいけないのか分からず、面倒に感じました。
 - 👍 良い点: バニラの HTML/CSS より部品化できる設計は良いと思います。
 - 👎 ダメな点: 「なぜ必要か」の説明が不足しがちで、学習コストが地味に効いてきます。
 - 👥 誰向けか: ある程度の規模の Web 画面を AI と組み立てたい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

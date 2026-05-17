@@ -112,16 +112,20 @@ Subagent、オーケストレーション、AutoGen
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 役割を分けるのは人間の組織と同じ発想で、AI でもうまく機能するのが面白いです。
 - Anthropic 等のブログを追いかけないと自分では発想できないのが大変です。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 言葉自体は今回初めて聞いた。
 - 👍 良い点: 実装の精度を上げられる。役割を定義しておけば、毎回バグ修正の指示を出さずに済む。
 - 👎 ダメな点: 「こういう使い方をするといい」と知ること自体が一番のハードルになりそう。
 - 👥 誰向けか: 品質の高いコードを一発で生成したい人向け。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

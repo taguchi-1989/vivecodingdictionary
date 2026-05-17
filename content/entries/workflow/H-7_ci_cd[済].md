@@ -109,16 +109,20 @@ GitHub Actions、DevOps、テスト自動化。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 何の略称か分からず、自分の作業に何が効くのかも分かりません
 - PR ごとに走らせると Actions の無料枠をすぐ超えます。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 用語の段階で、何を言われているのか分かりませんでした
 - 👍 良い点: AI コードを継続監査するバイブコーディングの安全装置です。
 - 👎 ダメな点: ローカルでバグを潰してから出さないと CI 枠をすぐ消費。
 - 👥 誰向けか: バイブコーディングで開発・公開まで自走したい人にほぼ必須。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

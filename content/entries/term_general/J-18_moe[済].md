@@ -104,16 +104,20 @@ Transformer（J-13）、LLM（J-14）、Mixtral（D-41）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 略称だけ見ても何の略か咄嗟に出てこない用語です。
 - GPT-4 系採用は噂で、クローズドゆえ「予想」止まりのもどかしさ。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 「GPT-4 はなぜ賢い」議論で名前を見たのが入り口です。
 - 👍 良い点: 賢さとコスト両立のブレイクスルーで、現代モデル効率の核です。
 - 👎 ダメな点: エキスパートの区切り方設計が難しく、実装上の壁は高いです。
 - 👥 誰向けか: 概念だけ押さえれば充分で、全員が深掘りする必要はありません。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

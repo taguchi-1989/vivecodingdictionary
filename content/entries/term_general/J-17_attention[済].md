@@ -104,15 +104,19 @@ Transformer（J-13）、LLM（J-14）、Deep Learning（J-11）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 詳しい人との会話で不意に出てきて躓きやすく、アテンションエコノミーとも混同しやすいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: Transformer の文脈で初めて目にした言葉です
 - 👍 良い点: ここを押さえると現代 LLM の原理原則を一段深く理解できます。
 - 👎 ダメな点: Attention だけでは現行モデルのすごさをすべて説明できません。
 - 👥 誰向けか: 原理原則を腰を据えて理解したい人にとって、必ず通る用語です
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

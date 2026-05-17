@@ -108,16 +108,20 @@ Google DeepMind、AlphaFold、AlphaGo（D-60）。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - Google がすごいのは分かりますが、具体的に誰がすごいのかが分かりづらいです
 - 名前を聞いたことがなく、ニュースでも認知しづらいです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象:AlphaGo や AlphaFold もやっていてすごいです
 - 👍 良い点:技術的にはトップの一人なのだと思います
 - 👎 ダメな点:よく分からないです
 - 👥 誰向けか:ニュースをあまり追わない人には届きにくいです
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

@@ -107,17 +107,21 @@ IFEval、MT-Bench、System Prompt
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - サンプリング調整なのかモデル自体の能力なのか、区別がよく分からない。
 - そもそも何が嬉しいのか、コーディングをやっていないと分かりづらい指標。
 -
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: コーディング能力の文脈で見た。
 - 👍 良い点: ここが高いとエージェントとして能力を発揮できる。
 - 👎 ダメな点: 低いとチャットはできても仕事はできない感じになっちゃう。
 - 👥 誰向けか: エージェントタスク向きのモデルを選定して使う人向け。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

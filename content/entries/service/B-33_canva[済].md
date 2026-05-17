@@ -108,15 +108,19 @@ Magic Studio、Figma、DALL-E
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - テンプレートベースなので仕上がりが似やすいです。細かいフィロソフィーを反映しにくく、使い込むほど Canva にロックインされる印象があります。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 品質が均一化されやすい、良くも悪くも両面ある印象です。
 - 👍 良い点: Office より見栄えの良い成果物を手早く作れます。
 - 👎 ダメな点: AI デザインツールと比べ料金以外の優位点が打ち出しづらくなってきています。
 - 👥 誰向けか: テンプレートベースでチャット感覚に資料を仕上げたい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

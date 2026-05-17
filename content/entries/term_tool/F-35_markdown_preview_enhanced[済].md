@@ -106,15 +106,19 @@ Mermaid、PlantUML、KaTeX
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - PDF 印刷目的で導入を検討し便利と感じましたが、テレメトリーの仕組みを知り会社利用は難しいと判断してやめました。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 多機能でとても便利、と最初は感じました。
 - 👍 良い点: PDF 書き出しや Mermaid リアルタイムプレビューなど便利な機能が揃っています。
 - 👎 ダメな点: セキュリティ面でエンタープライズには向かず、機密環境では使うべきでないと判断しました。
 - 👥 誰向けか: 最近は代替手段を先に検討するほうが良いかもしれません。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

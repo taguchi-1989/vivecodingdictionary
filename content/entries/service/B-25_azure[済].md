@@ -106,15 +106,19 @@ Azure OpenAI、AWS、Google Cloud。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 「Azure というクラウド上で動いている」という前提を共有できておらず会話で躓きやすいです。読み方「アジュール」も初見には伝わりにくいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: Microsoft エコシステムに統合されている点が良さそうと感じました。
 - 👍 良い点: クラウドとして出来は悪くなく、評価も上がってきています。
 - 👎 ダメな点: ChatGPT MCP と Microsoft MCP がコンフリクトするなど組み合わせの見極めが大変です。
 - 👥 誰向けか: 業務で Microsoft ソフトを使っている人は押さえておくと良いです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

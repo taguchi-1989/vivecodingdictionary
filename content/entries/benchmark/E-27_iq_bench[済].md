@@ -104,15 +104,19 @@ AGI、ARC-AGI、GPQA
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - Gemini 2.5 プレビューで IQ 130 超えと出ていたのが後日 110 程度に落ち着くなど、ばらつきがあります。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 人に説明するときにとても分かりやすく、指標としても伝わりやすいです
 - 👍 良い点: モデルの賢さを伝えるのに、これ以上ないほど直感的に分かりやすい指標です
 - 👎 ダメな点: 計測タイミングで上下しやすいうえ、フロンティアモデルだとほぼ上限に張りついてしまいます
 - 👥 誰向けか: モデルの賢さをざっくり理解したい人向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

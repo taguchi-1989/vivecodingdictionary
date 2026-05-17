@@ -113,16 +113,20 @@ AlphaZero、MuZero、Google DeepMind
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 名前は知っていても、どんな仕組みで動いているのかは難しいです。
 - LLM などの現在の AI とどうつながっているのかが分かりにくいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: AI 史の象徴的な転換点の一つだと思います。
 - 👍 良い点: 人類をある側面で超えたことが明確に語りやすいです。
 - 👎 ダメな点: AlphaGo 自体は一般人が触れるサービスではなかった点です。
 - 👥 誰向けか: AI の歴史を語りたい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

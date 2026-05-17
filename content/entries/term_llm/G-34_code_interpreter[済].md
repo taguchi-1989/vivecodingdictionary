@@ -108,16 +108,20 @@ Tool Use、Function Calling、Python
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 「LLM は計算できない」と思っている人が、このパラダイムに苦労しがちです
 - Python が裏で走っていると伝えるのが難しく、説明が長くなりがちです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 革命的だと思いました
 - 👍 良い点: Python が動くので計算が得意で、今は特に強いです
 - 👎 ダメな点: 結果確認に図などの仕組みを合わせないと効率が上がりません
 - 👥 誰向けか: 科学技術計算から Excel まで、幅広いデータ作業をする人向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

@@ -110,15 +110,19 @@ MCP、MCP Server、Context Window
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 公式情報を取ってくれる価値は感じますが、足す利点が掴めません
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 名前をよく聞く MCP のひとつです
 - 👍 良い点: 依存関係で困ったとき公式の情報を取ってくれるそうです
 - 👎 ダメな点: Codex など GPT 系の検索で代用できそうに思えます
 - 👥 誰向けか: バージョンアップに追従したいときに向きます
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

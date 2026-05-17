@@ -109,16 +109,20 @@ Few-shot Learning、Prompt Engineering、Zero-shot
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 「ワンショットの賢さ」と言われても意味が分からないと文脈を追えない。
 - 「エージェント向きでない」とセットで出てきてチャット利用者には掴みにくい。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: Gemini はこれが賢い、という文脈で聞いた覚えがある。
 - 👍 良い点: HTML 生成など非常に賢い出力が出てくることはある。
 - 👎 ダメな点: 長期タスク性能と別物と認識しないと誤解しやすい。
 - 👥 誰向けか: エージェント委任者はワンショットと長期性能を別物と押さえて。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

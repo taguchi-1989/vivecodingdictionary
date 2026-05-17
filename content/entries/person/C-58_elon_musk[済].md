@@ -108,16 +108,20 @@ xAI（C-5）、Grok（D-30）、OpenAI（C-1）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 「X やテスラの人」の印象が強く、AI での影響力を見落としがちです
 - 発言に一貫性があるとは限らず、引っ張られないよう注意が必要です
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象:ハイパーループやテスラの創業者で、色々やっている人です
 - 👍 良い点:バイタリティと知名度は人類レベルでトップクラスだと思います
 - 👎 ダメな点:感情的に動く面があります
 - 👥 誰向けか:名前を知る程度なら一般人にも届きます
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

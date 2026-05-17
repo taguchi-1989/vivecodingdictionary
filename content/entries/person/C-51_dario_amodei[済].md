@@ -108,16 +108,20 @@ Anthropic（C-2）、Constitutional AI、RSP、Claude。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - ニュースではあまり見かけず、どんな人物か把握しにくいです。
 - どういう背景でどのくらいの影響力を持つ方なのかが掴み切れません。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: Anthropic の創業者ということで、やはりすごい方だと思います。
 - 👍 良い点: エッセイで自身の考えを発信しているのが良さそうです。
 - 👎 ダメな点: 個人としての活動がまだよく分かりません。
 - 👥 誰向けか: AI 企業のトップの発信を追いたい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

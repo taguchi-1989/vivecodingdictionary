@@ -108,17 +108,21 @@ Extended Thinking、Claude 4.5 系の詳細、Claude Code での自動選択。
 
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - どの版・ティアを使うか意識しづらく、いつの間にか挙動やコストが変わります。
 - マイナー版が増える一方でナーフを感じる場面も混じり、右肩上がりではありません。
 - 他社と比べて料金が高めで、気軽に回しづらい場面があります。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象:
 - 👍 良い点:
 - 👎 ダメな点:
 - 👥 誰向けか:
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

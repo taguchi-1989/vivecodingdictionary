@@ -106,16 +106,20 @@ CSS（F-5）、JavaScript（F-1）、DOM（F-160）。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - CSS や JS を中に書き込むと責任範囲が分かりにくくなります。
 - タグの読み解きが辛く、使い方を覚えるのに時間がかかりました。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: Web で使われる言語という認識でした。
 - 👍 良い点: 単一ファイルで配布すれば軽く動くものが作れます。
 - 👎 ダメな点: 「どこまで HTML に含めるか」という設計判断が難しいです。
 - 👥 誰向けか: ファイルを受け渡して確認する人に最も扱いやすい形式です。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

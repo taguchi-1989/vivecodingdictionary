@@ -98,15 +98,19 @@ Red-Green-Refactor の 3 ステップと「テストが先」の意味。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 「TDD でやって」は賢いモデルは通じますが弱いモデルだと手こずります。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 一見めんどくさそうだな、というのが正直な第一印象でした
 - 👍 良い点: テストを書いてから実装するので、結果として確実性が上がります
 - 👎 ダメな点: 弱いモデルだとコンテキスト圧迫でうまく回らない場面がある。
 - 👥 誰向けか: 品質を担保したいエンジニア寄りの人向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

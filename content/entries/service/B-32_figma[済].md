@@ -108,16 +108,20 @@ Dev Mode、Auto Layout、Figma Make
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 料金と権限設定のハードルがあり、使い込まないとお作法が掴めません。
 - AI エージェント全盛の今、追加課金してまで入れる必要があるか疑問になります。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 「デザイナー協業のツールはこれがデフォルト」と教えてもらいました。
 - 👍 良い点: 2023 年当時はデザイナー協業の標準ツールとして優れていました。
 - 👎 ダメな点: 2026 年現在、AI ベースのフローと比べると位置づけが揺らいでいます。
 - 👥 誰向けか: 従来のデザイナー協業フローで仕事を回したい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

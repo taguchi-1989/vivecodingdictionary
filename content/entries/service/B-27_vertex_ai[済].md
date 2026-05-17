@@ -106,15 +106,19 @@ Model Garden、Vertex AI Studio、BigQuery ML
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - ビッグデータ文脈で知りましたが、今は Gemini の GCP ルートが主戦場で「難しい人向け」のイメージが強いです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: ビッグデータ解析の記事で初めて見ました。
 - 👍 良い点: クラウドで重い計算を回せてローカルマシンを軽くできます。
 - 👎 ダメな点: 契約形態・機密管理・社内規約の整理まで必要で運用設計が重いです。
 - 👥 誰向けか: Google 基盤でビッグデータ解析を活用したい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

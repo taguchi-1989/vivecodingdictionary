@@ -103,15 +103,19 @@ git fetch、git merge、rebase、conflict 解消。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 環境を変えると pull 忘れが増え、どこが最新か混乱しがちです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: プッシュとプルの方向がなかなか頭に入りませんでした。
 - 👍 良い点: ローカル・リモートをまたいで他者の成果を取り込むのに絶対必要な操作です。
 - 👎 ダメな点: やり忘れるとコンフリクトの原因になります。習慣化するまでが大変です。
 - 👥 誰向けか: 複数環境や複数人で開発する人には必須です。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

@@ -104,16 +104,20 @@ Llama 系、DeepSeek、ファインチューニング
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 無料で使えると思いましたが、モデルが大きすぎて動きませんでした
 - 動くサイズはフロンティアモデルより性能が低く使えませんでした
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象:GPT が oss になって使えることに感動しました
 - 👍 良い点:オープンモデルなので自由にいじれます
 - 👎 ダメな点:本気で動かすにはデータセンター並みの GPU が要ります
 - 👥 誰向けか:oss を使って開発したい人向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

@@ -105,15 +105,19 @@ VRAM、CUDA、Tensor コア、H100、FLOPS。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 「グラボ」とも呼ばれ名称が複数あります。RTX の世代差の判断基準が掴みづらいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: ゲーム用に使うもの、という入口でした
 - 👍 良い点: ゲーム用に開発されたものが LLM の学習・推論にも転用できる点
 - 👎 ダメな点: ハイエンド PC でないと性能を発揮できず、電源容量の制約も大きいです。
 - 👥 誰向けか: ある程度 PC を使い込む人が押さえておきたい指標です。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

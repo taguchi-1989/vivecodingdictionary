@@ -114,16 +114,20 @@ Hallucination、RLHF、Prompt Engineering
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 名前は馴染みが薄いですが、AI が傷つけない方向に寄り添う挙動は誰でも見たことがあるはずです。
 - 仕事では「誰も傷つけない AI」が使い物にならない場面が多々あります。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 名前自体はよく分からないところから入りました
 - 👍 良い点: 何となく感じていることを言語化してくれる場面があり、便利な側面はあります
 - 👎 ダメな点: 会話で「Sycophancy」と出して通じづらいのが難点です
 - 👥 誰向けか: ある程度リテラシーがある人と AI の議論をする時の語彙です
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

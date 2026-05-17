@@ -109,17 +109,21 @@ JavaScript、型推論、tsconfig
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - JS すら難しいのに TS と言われてもマジで分からず、とっつきづらい。
 - 「TS」と拡張子も変わるし、「上位互換」と言われてもピンと来ない。
 - 概念だけ押さえれば充分。コードを読む力は大事で書く練習は後回しでよい。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 必要性も分からず辛かったですが、必須の道でした。
 - 👍 良い点: 型定義が使えて、LLM 前提なら十分活かせます。
 - 👎 ダメな点: 「JS の上位互換」がイメージしづらく初見の印象が悪いです。
 - 👥 誰向けか: バイブコーディングで AI に長めのコードを書かせていく人。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

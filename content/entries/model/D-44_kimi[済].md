@@ -103,16 +103,20 @@ DeepSeek、Qwen、Moonshot AI
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 馴染みのないベンダーという印象があります
 - 動かすときに相当なマシンパワーが必要です
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: Opus 4.5 級と評判が良いオープンモデル
 - 👍 良い点: Claude Code でエージェント自作に推奨される印象
 - 👎 ダメな点: マシンパワーと情報漏洩でしょうか
 - 👥 誰向けか: 自分でエージェントハーネスを組みたい人
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

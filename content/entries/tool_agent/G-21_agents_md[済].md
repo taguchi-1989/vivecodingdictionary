@@ -104,15 +104,19 @@ CLAUDE.md、SKILL.md、System Prompt
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - CLAUDE.md との使い分けで迷い、横断的に動かすと似た内容を二重に書いてしまいます。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: CLAUDE.md とほぼ同じ位置づけのファイル、という印象でした
 - 👍 良い点: ベンダー横断でエージェントへの共通指示を出せる点が良いです
 - 👎 ダメな点: CLAUDE.md 同様、何を詰め込むかの設計が肝で欲張ると逆効果です。
 - 👥 誰向けか: バイブコーディングをする人全員にとって、押さえておくべき概念です
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

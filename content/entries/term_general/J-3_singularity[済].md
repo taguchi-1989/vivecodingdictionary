@@ -106,15 +106,19 @@ AGI（J-1）、ASI（J-4）、AI 倫理（J-50）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - AGI → ASI → Singularity の順番通りに進むのか、自分の中に疑問が残ります。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 非常にキャッチーで耳に残る言葉です
 - 👍 良い点: バックキャストで未来から逆算して考えるときの起点として便利な概念です
 - 👎 ダメな点: 定義が人によってバラバラで、議論が噛み合わなくなりがちです
 - 👥 誰向けか: 未来を見据えて議論したい人向けです
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

@@ -106,17 +106,21 @@ Next.js、CI/CD、デプロイ、v0（ブイゼロ）。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - Pro に上げたら無料分が消えた感覚で、課金の境目が分かりづらいです。
 - Hobby は個人限定で商用は Pro（月 20 ドル〜）必須。ビルドが増えると毎月溶けます。
 - 環境変数のダッシュボード設定に慣れるまでローカルとの差で戸惑います。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: Web アプリ作成で Next.js のデプロイ先として真っ先に勧められます。
 - 👍 良い点: 環境変数を入れれば外部サービス連携も完結します。
 - 👎 ダメな点: Pro 以上の従量課金が高くつき、ビルドだけで月の予算が溶けがちです。
 - 👥 誰向けか: 自分の Web アプリを公開してみたいバイブコーディング中級者向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

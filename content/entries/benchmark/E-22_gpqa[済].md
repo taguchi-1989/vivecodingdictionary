@@ -101,16 +101,20 @@ MMLU-Pro、o1、arXiv:2311.12022
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - かなり馴染みの薄いものだと思います
 - 博士で 65% と言われても、その凄さは博士でないと分かりません
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 今回初めて見ました
 - 👍 良い点: 人間のすごい人を基準にしつつ、事前学習で取り込めない設計にしているのが面白いです
 - 👎 ダメな点: 最適化が進むとベンチマーク偏重のような歪みが出やすそうです
 - 👥 誰向けか: モデルを評価したい人向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

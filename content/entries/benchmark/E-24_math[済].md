@@ -109,15 +109,19 @@ GSM8K、AIME、Thinking モデル
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - Level 5 が他ベンチマークでどの位置かイメージしにくいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象:今回初めて知りました
 - 👍 良い点:段階別なので 1 つで能力を幅広く測れるのが良いです
 - 👎 ダメな点:難易度の感覚がつかみにくいです
 - 👥 誰向けか:結構マニアックな層向けかなと思います
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

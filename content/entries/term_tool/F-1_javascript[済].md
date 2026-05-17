@@ -105,17 +105,21 @@ TypeScript（F-2）、React（F-10）、Node.js（F-80）。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - Java と JavaScript が違うことも分かりづらく、「JS」ファイルは触れる気がしません。
 - 「○○ JS」と付くライブラリが多くて何が何なのか分からなくなります。
 -
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 触ることへの抵抗感がある。
 - 👍 良い点: HTML の中に組み込めて挙動を確認できたり、用途がめちゃくちゃ広い。
 - 👎 ダメな点: 普段の業務で積極的に触らない人からすると、ハードルが高い。
 - 👥 誰向けか: 「実はみんな使っている」と意識したい人、まず色々やってみたい人。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

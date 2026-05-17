@@ -115,17 +115,21 @@ JEPA、CNN、Deep Learning
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - CNN を作った研究者が AI の新潮流になっている点が気になります。
 - なぜ伸びているのか、どこが焦点なのかが分かりません。
+<!-- user-input:end key="stumble" -->
 
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: CNN を開発した人はすごいです。
 - 👍 良い点: よく分かりません。
 - 👎 ダメな点: よく分かりません。
 - 👥 誰向けか: AI 系の歴史を勉強する人は必ず通りそうです。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

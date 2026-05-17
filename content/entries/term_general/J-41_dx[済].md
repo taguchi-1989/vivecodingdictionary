@@ -109,15 +109,19 @@ IoT、SaaS、AI 活用、クラウド、アジャイル。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - デジタイゼーション・デジタライゼーション・DX の違いを整理しないまま使う人が多いです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: コンサルが好みそうなバズワード、という印象です
 - 👍 良い点: 旗印として掲げると、社内で予算が取りやすくなる場面があります
 - 👎 ダメな点: 中身が空洞になりがちで、看板倒れのプロジェクトになりやすいです
 - 👥 誰向けか: 経営層への説明や予算折衝で、共通言語として持っておきたい人向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

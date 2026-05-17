@@ -107,16 +107,20 @@ Sora、Flow、Google DeepMind
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - Whisk から動画を生成できましたが、思ったようなシーンの切り替えになりません
 - Gemini からやっても思った通りの感じにならず、結局使えませんでした
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: ベンチマークでほぼ 1 位だったので、すごいと思いました
 - 👍 良い点: Google のサブスク範囲内で無料で使えたところです
 - 👎 ダメな点: 指示追従性が低く、今考えると使いづらいです
 - 👥 誰向けか: 昔のモデルを試してみたい人向けかなと思います
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

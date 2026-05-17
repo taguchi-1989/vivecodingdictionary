@@ -105,16 +105,20 @@ CLI、Computer Use、VLM
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 当たり前すぎる操作を GUI と名づけられると、逆に理解しづらいです。
 - CLI と対比しないと、何が GUI なのかが掴みにくい。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: まあ、こんなもんか。
 - 👍 良い点: 誰でもパソコンを分かりやすく使えるようにしたところ。
 - 👎 ダメな点: AI エージェントから触りづらいのが、場面によっては致命的。
 - 👥 誰向けか: 自動化を進めようとしている人、その文脈で会話する人。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

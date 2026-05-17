@@ -107,16 +107,20 @@ Machine Learning、RAG、Hadoop
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 良いデータかゴミかが見分けづらく、ゴミ入れゴミ出しになりがちです。
 - 条件・狙いを明確にしないと解析が成立せず、結論を間違えてしまいます。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: バズワード好きな人がこぞって使っていた、という印象です
 - 👍 良い点: 因果なしに人の認知を超えたパターンを浮かび上がらせられます。
 - 👎 ダメな点: 説明不可能性とゴミデータの取り扱いの難しさが大きな課題です。
 - 👥 誰向けか: DS や過去の技術として押さえたい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

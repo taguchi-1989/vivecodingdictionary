@@ -106,16 +106,20 @@ OpenAI API、whisper.cpp、Dictation（G-3）。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - OpenAI が ChatGPT 以外もやっているのに、あまり有名ではないです。
 - 実際にどうやって入れて、どのタイミングで使えばよいのかが分かりづらいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: OSS で使えるという点に好感があります。
 - 👍 良い点: 組み込みシステムとして成立させられます。
 - 👎 ダメな点: モデルが大きく基本ローカル前提、API 利用は課金が嵩みます。
 - 👥 誰向けか: 自分でローカルに入れて使う人向け。裏側で動く例もありそうです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

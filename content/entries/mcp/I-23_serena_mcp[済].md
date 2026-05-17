@@ -109,16 +109,20 @@ MCP Server、LSP、Context Engineering
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 「すごくいい、トークン効率が上がる」と言われますが、原理がまったく分かりません
 - 入れたはいいものの、ちゃんと起動しているのかも分かっていません
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: バイブコーダーの人がかなりおすすめしたいやつなのでしょう
 - 👍 良い点: 確かにトークンの使用効率は下がった気がします
 - 👎 ダメな点: 最近のものだともういらないのかな？ 区別がつかず分かりません
 - 👥 誰向けか: 少し昔のエージェントツールを使っている人向けでしょうか
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

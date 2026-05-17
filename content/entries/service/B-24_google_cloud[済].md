@@ -106,16 +106,20 @@ Vertex AI、BigQuery、AWS。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - GCP という名前が分かりにくく、データの流れや安全な使い方が掴みにくいです。
 - Vertex AI も実例はあっても自分で使うときの手順が分かりにくいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: API 経由で Gemini を安全に使えるなら助かるな、という印象です
 - 👍 良い点: セキュアに使える前提が整っているとされています
 - 👎 ダメな点: 手順が分かりにくく、他社 API との併用も面倒な場面があります。
 - 👥 誰向けか: API でセキュアに開発したい人向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

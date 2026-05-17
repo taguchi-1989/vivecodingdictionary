@@ -114,15 +114,19 @@ Azure、OpenAI、GPT-4
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - どのネットワーク経路で動いているか分かりづらいです。Azure 経由なら「外」とは別という説明が地味にしんどいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 企業内部で ChatGPT API を使う仕組みを比較的簡単に構築できる点が魅力です。
 - 👍 良い点: ChatGPT を従量課金で使えるのが助かります。
 - 👎 ダメな点: OpenAI 本家から Azure 提供まで 1〜2 週間程度のラグがあるイメージです。
 - 👥 誰向けか: 企業内部でセキュアに API 課金で使いたい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

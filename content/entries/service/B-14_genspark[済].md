@@ -101,15 +101,19 @@ Perplexity（B-12）、Deep Research（G-35）、Super Agent。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 機能実装は速い一方、情報漏洩リスクと印象マーケティングへの過度な注力が気になります。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 面白い機動力があります
 - 👍 良い点: 実装する方向性のセンスは良いと感じる場面があります
 - 👎 ダメな点: セキュリティ面に不安があり、会社では使いにくいです
 - 👥 誰向けか: 個人利用で、情報漏洩リスクをそこまで気にしない人向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

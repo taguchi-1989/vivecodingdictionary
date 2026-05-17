@@ -126,17 +126,21 @@ git branch、git commit、git merge
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 「stash」という言葉に馴染みがなく、何をする操作かピンと来ませんでした。
 - 退避中に main が進み、宙ぶらりになった変更を捨てた経験があります。
 - 消されずに残るのは良い点ですが、存在を忘れがちです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: よくわからないけど、Claude Code が提案して勝手にやってることがありました
 - 👍 良い点: コンフリクトなどを解消してくれると思います
 - 👎 ダメな点: これはまあ結構ブラックボックス気味になりますね
 - 👥 誰向けか: AI エージェントを使って開発している人向けかなと思います
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

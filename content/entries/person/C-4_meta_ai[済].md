@@ -104,17 +104,21 @@ Llama、PyTorch、Yann LeCun、FAIR。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - Llama は OSS でも大型は GPU が必要で個人には大変です。
 - メタバースに力を入れていたはずが、戦略の流れが追いきれません。
 - FB・Instagram 運営元という背景で個人的には好きになりきれません。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: GAFA の一角という大きな存在として認識していました。
 - 👍 良い点: Llama をオープンウェイトで配り続ける姿勢が独自性です。
 - 👎 ダメな点: Qwen など他のオープンモデルと比べ優位性が薄く感じます。
 - 👥 誰向けか: FB 全盛期を覚えていて Meta を追いたい世代向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

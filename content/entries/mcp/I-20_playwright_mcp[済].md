@@ -104,15 +104,19 @@ Playwright、MCP Server、E2E テスト。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 普通に仕事をしていたら名前を聞かないです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象:確認が非常に楽になって最高です
 - 👍 良い点:実際の操作を代行してくれて使い方が現代的です
 - 👎 ダメな点:ペルソナを設定しても網羅は難しい点に注意です
 - 👥 誰向けか:バイブコーディングをする人すべてに向きます
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

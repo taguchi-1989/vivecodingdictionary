@@ -104,16 +104,20 @@ MCP、MCP Server、Slack MCP
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - ネイティブな Notion ユーザーではないので、正直なところ何とも言えません
 - どこにどう整理すればよいかが、触っていないため判断できません
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: Notion に MCP があるのは便利そうです
 - 👍 良い点: MCP 経由なので効率が高いのではないでしょうか
 - 👎 ダメな点: 使ってみないと使い心地が想像できません
 - 👥 誰向けか: Notion のアクティブユーザー向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

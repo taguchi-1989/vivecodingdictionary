@@ -104,15 +104,19 @@ MCP Server、MCP、Filesystem MCP
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - SQL と SQLite（SQL ライト）の関係が分かりづらいです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: SQL を操作できる MCP なのかな
 - 👍 良い点: ローカル完結で DB を叩いてくれて便利そうです
 - 👎 ダメな点: PostgreSQL との互換性まわりがハードル
 - 👥 誰向けか: ローカル完結の小規模システムを作る人向け
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

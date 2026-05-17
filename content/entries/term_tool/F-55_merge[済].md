@@ -108,17 +108,21 @@ rebase、conflict 解消、pull request。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - コンフリクトが解消できずブランチごと捨てたこともありました。
 - エラーが意味不明で作業が無駄になったときはつらかったです。
 - 最近はコストが低くなったためか、merge をあまり意識しなくなっています。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 「くっつけるんだろうな」という素朴な感覚でした。
 - 👍 良い点: 並列開発の成果を取り込む仕組みとして適切に機能しています。
 - 👎 ダメな点: 素直にマージできないときがありますが、それは開発側の問題であることが多いです。
 - 👥 誰向けか: 継続的に運用していく人には必要な操作です。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

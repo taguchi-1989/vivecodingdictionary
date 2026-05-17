@@ -104,16 +104,20 @@ Ollama、ファインチューニング、MoE
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 中華系のモデルということで警戒感が高いです
 - ニュースに登場しないと知名度が低いです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: arXiv 論文でかなり引用され、性能比較に使われている印象です
 - 👍 良い点: ローカル運用で 2.5 系は第一候補です
 - 👎 ダメな点: 中華系への警戒感があり情報精査が必要です
 - 👥 誰向けか: LLM 研究者と個人ローカル運用層向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

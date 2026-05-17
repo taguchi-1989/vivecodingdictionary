@@ -108,16 +108,20 @@ git、.env、GitHub の gitignore テンプレリポジトリ
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - ドット始まりの隠しファイルで存在自体に気づきにくいです。
 - OneDrive と混在すると Git と競合し、書き方の作法は AI に任せています。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 「無視するんだ」という感覚でした。
 - 👍 良い点: `.env` などを確実に除外できる作法として定着しています。
 - 👎 ダメな点: 自分でどう書けばいいか理解するまでハードルがあります。
 - 👥 誰向けか: ローカル・リモートリポジトリを使う人全員に必要です。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

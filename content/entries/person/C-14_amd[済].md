@@ -105,17 +105,21 @@ NVIDIA、ROCm、GPU
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 読み方がわかりません
 - CPU と GPU とマザーボードの相性が不安です
 - Radeon など製品名も読みにくいです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: Intel と NVIDIA の対抗馬という印象です
 - 👍 良い点: 製造を TSMC に委ね微細化で先行しています
 - 👎 ダメな点: 知名度と周辺機器の相性に不安が残ります
 - 👥 誰向けか: セカンドベンダーとして使いたい人向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

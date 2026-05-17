@@ -103,16 +103,20 @@ Microsoft Copilot、Microsoft Graph、Azure
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 実用に耐えないのにできるかのように打ち出す企業姿勢がどうなのかと感じます。
 - 特に 2023〜2025 年はその印象が強かったです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 打ち出し内容と実態の差が大きく、看板倒れに見えました
 - 👍 良い点: 私の触り方では、これといって出てきません
 - 👎 ダメな点: 他社同種ツールと比べて総じて時代遅れに感じます。
 - 👥 誰向けか: AI 未経験で MS 製で揃えたい人向けに留まる印象です。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

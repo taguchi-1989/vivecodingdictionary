@@ -105,15 +105,19 @@ JSON Schema、JSONL、REST API。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 名前が何を指すか最初は分からず、波括弧の中身も読み取れず非常に読みにくく感じました。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 何のために使うのか最初は分かりませんでした。
 - 👍 良い点: 構造がしっかり取れて、決まった動きをさせるのに非常に相性が良いです。
 - 👎 ダメな点: とにかく人が読みにくいです。
 - 👥 誰向けか: 人間が直接読み書きするより AI や設計者が扱うもので、設計として使う人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

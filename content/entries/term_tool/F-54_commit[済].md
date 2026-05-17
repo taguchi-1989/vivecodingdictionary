@@ -106,16 +106,20 @@ commit message 規約、rebase、cherry-pick。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 「結果にコミット」の意味が先に浮かび、Git 操作としてしっくり来ませんでした。
 - どの粒度でコミットすれば良いか分からず、感覚でやっていました。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 「結果にコミットする」という意味しか頭になかったです。
 - 👍 良い点: 差分でスナップショット保存でき、どこまで進んだか確認できます。
 - 👎 ダメな点: 分割単位が分かりにくく、進捗管理と組み合わせると難しいです。
 - 👥 誰向けか: バイブコーディングをする人には必須の知識です。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

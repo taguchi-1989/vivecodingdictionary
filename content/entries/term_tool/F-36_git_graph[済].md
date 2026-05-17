@@ -113,16 +113,20 @@ GitLens、SourceTree、GitHub Desktop
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - おすすめの拡張機能を調べたときに紹介されて導入しました。
 - Git の概念が分かっていないと使いこなせず、エージェントに任せすぎると現在地が分からなくなります。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 便利かもしれない、視覚的には分かりやすい、という印象でした。
 - 👍 良い点: 混乱をある程度防ぐことができます。
 - 👎 ダメな点: これだけでブランチ乱立や現在地不明の問題をすべて解決できるわけではありません。
 - 👥 誰向けか: マルチエージェント開発をしている人は導入しておいても良いと思います。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

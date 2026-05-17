@@ -111,16 +111,20 @@ HTML（F-4）、Tailwind CSS、Figma。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - HTML がどの CSS ファイルを読み込むのか分かりにくく、分け方で迷いました。
 - 似たスタイルを何度も書いて、どこを直せばよいか分からなくなった経験があります。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: フォント・色・配置を設定できるんだ、という発見がありました。
 - 👍 良い点: コードベースで自由に設定できます。
 - 👎 ダメな点: 直感的には分かりにくく、ファイル配置設計も難しいです。
 - 👥 誰向けか: バイブコーディングをする人は全員触ることになります。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

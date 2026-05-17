@@ -106,17 +106,21 @@ SSD、SATA、NAS
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 昔のノートは HDD で衝撃で物理破壊してデータが飛ぶこともありました。
 - SSD に慣れてしまったあとだと HDD がどうしても遅く感じてしまいます
 - 機械式なので寿命がある点も、SSD と比べると気になります
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: パソコンの容量といえば最初は HDD でした
 - 👍 良い点: いまでも大容量保存の用途で現役で活躍している点
 - 👎 ダメな点: 衝撃に弱く、サイズも大きくなりがちな点
 - 👥 誰向けか: 安価な PC や大容量バックアップ用に使いたい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

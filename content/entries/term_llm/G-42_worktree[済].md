@@ -104,17 +104,21 @@ branch、Subagent、並列実行、Claude Code。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 1 人作業だと必要性を感じにくく、並列実行が必要になって初めて意味が見えます。
 - 複数並行中にどこで作業していたか忘れてマージし損ねることがあります。
 -
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 衝突しないのが良い。以前衝突した経験があるので助かります。
 - 👍 良い点: タスクベースで切れるところ。
 - 👎 ダメな点: どの粒度で切るか、課題管理をどうするかが難しいです。
 - 👥 誰向けか: コーディングの効率を上げたい人、チームで開発する人向け。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

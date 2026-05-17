@@ -107,15 +107,19 @@ GPU、RAM、Apple Silicon
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - i7 でも世代の方が性能差として大きく、数字の単純比較が難しいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 「i7 を選んでおけば間違いない」と思い込んでいました
 - 👍 良い点: 端的にパソコンのスペックを決める部分
 - 👎 ダメな点: メモリや SSD がボトルネックになると性能が出ない点。
 - 👥 誰向けか: 常識的にパソコンを触る人なら、押さえておいて損はない指標です
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

@@ -109,17 +109,21 @@ HDD、NVMe、M.2
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - SATA・NVMe・M.2 など規格が複数あり、名称だけでは性能が判断しにくいです。
 - HDD より値段が高く、大容量帯では価格差が広がります。
 -
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 出始めの頃は容量が小さかった、という記憶です
 - 👍 良い点: 速くて衝撃にも強く、基本的にいいことずくめです
 - 👎 ダメな点: 値段が比較的高い点（最近は安くなる傾向にあるとはいえ）
 - 👥 誰向けか: いまどきパソコンを買う人はほぼ全員、これを選ぶことになります
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

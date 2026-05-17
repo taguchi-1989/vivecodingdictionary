@@ -107,15 +107,19 @@ Gemini、Google One、Vertex AI。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - Ultra にする明確なメリットを感じづらく、Pro 以下で足りる印象です。Google One との抱き合わせで料金構造が分かりづらく、解約時の切り離しも面倒でロックインを感じます。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 月 3,000 円程度で必要十分にカバーできる印象です。
 - 👍 良い点: 月 3,000 円台で Google 系サービスをまとめて使える点です。
 - 👎 ダメな点: Ultra の月 3 万円台は私の用途では明確なメリットを感じませんでした。
 - 👥 誰向けか: Google エコシステムを軸に使う人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

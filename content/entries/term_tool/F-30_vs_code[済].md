@@ -106,15 +106,19 @@ Cursor（B-4）、GitHub Copilot（B-5）、拡張機能
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 拡張を入れるほど重くなり、全体把握に時間がかかりました。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 黒い画面でかっこいい感じですが、最初は難しそうでした。
 - 👍 良い点: ターミナル統合でフォルダ構成も見やすく、痒いところに手が届きます。
 - 👎 ダメな点: エージェントマルチタスク開発ではベストとは言い切れない場面があります。
 - 👥 誰向けか: デスクトップで開発したい人全般に向いています。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

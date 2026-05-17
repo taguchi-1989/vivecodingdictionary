@@ -108,16 +108,20 @@ Playwright MCP、Chrome DevTools MCP、MCP Server
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - PDF を作りたいだけなのに、できることが多すぎて何を任せればよいか迷います
 - 依存関係が見えづらく、どこまで指示を細かく書くべきか判断しにくいです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象:何でもできすぎて、PDF 周りでもよく分かりません
 - 👍 良い点:PDF 生成もできるので、出版関係では使わない手はないです
 - 👎 ダメな点:機能が多く初見は難しい。文字化けや LaTeX に注意
 - 👥 誰向けか:PDF で受け渡しをする人すべてに向きます
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

@@ -108,16 +108,20 @@ arXiv、Perplexity、Llama
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 基本英語のサイトで、何なのかが分かりにくいです。
 - AI 要約で敷居は下がりましたが書き込む側に回るのはハードルがあります。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: テック系情報がトピックごとに集まってくるのでフレッシュです。
 - 👍 良い点: X に比べ議論が丁寧で反対意見も並ぶので参考になります。
 - 👎 ダメな点: ラッパーなしで追うと SNS 特性でコストが大きくなります。
 - 👥 誰向けか: ベストプラクティスや一次情報を素早く拾いたい開発者向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

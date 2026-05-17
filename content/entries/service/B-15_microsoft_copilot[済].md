@@ -104,15 +104,19 @@ Microsoft 365 Copilot、GitHub Copilot、Edge Copilot
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - Microsoft 側の独自調整で性能が落ちている印象が強いです（最近少し改善されました）
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: ナーフされすぎていて意図がよく分かりません
 - 👍 良い点: エンタープライズのセキュリティ要件をクリアして使える点は利点です
 - 👎 ダメな点: 回答品質が低く感じる場面が多いです
 - 👥 誰向けか: 会社から「使え」と言われている人向けのイメージです
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

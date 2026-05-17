@@ -108,15 +108,19 @@ Transformer（J-13）、Attention（J-17）、LLM（J-14）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 逐次処理から「逐次でなくてよい」という発想の転換点が理解しにくいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 名前は知っていても何がブレイクスルーだったか自分の言葉で言えるか怪しいです。
 - 👍 良い点: LLM の歴史を振り返るとき、まずここを起点に考えると筋が通ります。
 - 👎 ダメな点: 現在から見ると無駄も多く完成形ではなかった、という見方もできます。
 - 👥 誰向けか: LLM の歴史的な流れも含めて理解したい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

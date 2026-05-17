@@ -106,17 +106,21 @@ Context Engineering、RAG、Prompt Caching。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 昔のモデルは Context Window が小さく、分割などの工夫が必要でした。
 - コンテキストを圧縮すると文脈がおかしくなることがよくありました。
 -
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 覚えられる範囲がちっちゃいのが課題なんだな。
 - 👍 良い点: 最近のモデルは改善が進み、ボトルネックは解消されつつあります。
 - 👎 ダメな点: 全部入れようとするプロセス自体が間違いで、依然として課題はゼロではありません。
 - 👥 誰向けか: LLM を使って何かをやる人には知識として必要。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

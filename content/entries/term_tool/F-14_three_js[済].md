@@ -108,16 +108,20 @@ WebGL、React Three Fiber、Babylon.js
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - ブラウザで 3D が動くと知って驚きました。
 - AI に任せれば動きますがブラックボックス化しやすいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: Unity を使わなくても 3D が作れるんだと驚きました。
 - 👍 良い点: 表現の幅が非常に広く、使いこなせれば高品質なものができます。
 - 👎 ダメな点: ブラックボックス化しやすく手を加えると途端に難しくなります。
 - 👥 誰向けか: 3D 可視化・デジタルツイン用途を目指す人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

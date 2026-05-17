@@ -104,16 +104,20 @@ Ollama、ファインチューニング、Gemini
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - どこの会社がやっているのか分かりづらいです
 - Gemini と名前と世代番号が似ていて勘違いしやすいです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: Ollama 経由でダウンロードして使えるのが嬉しいです
 - 👍 良い点: Google オープンウェイトでセキュリティ説明しやすく、ローカル運用できます。
 - 👎 ダメな点: エージェンティックに動かすにはそれなりのマシンパワーが必要です
 - 👥 誰向けか: エンタープライズでエージェント活用したい人向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

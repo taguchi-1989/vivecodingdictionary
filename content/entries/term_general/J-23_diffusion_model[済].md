@@ -104,16 +104,20 @@ Stable Diffusion（D-54）、DDPM 論文、U-Net
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - Stable Diffusion で画像生成が出てきた当初は分かりやすかったです
 - GPT 系の画像・動画生成との境界がはっきり区別しきれません
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: Stable Diffusion 全盛期によく耳にしました
 - 👍 良い点: ノイズ除去を繰り返してそれっぽい画像を生み出す仕組みが面白いです
 - 👎 ダメな点: 特に日本語のテキスト描画では文字化けが目立ちます
 - 👥 誰向けか: Stable Diffusion などで画像生成を試している人向けです
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

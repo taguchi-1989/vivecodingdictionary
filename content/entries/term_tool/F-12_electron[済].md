@@ -103,16 +103,20 @@ Node.js、Tauri、JavaScript
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - Next.js との相性が悪く、片方を動かすともう片方が壊れることが何度もありました。
 - 配布まわりも難しく、完成と言えるものを出すまでに苦労しました。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 自分でインストール可能なアプリが作れると気づいたときの感動は大きかったです。
 - 👍 良い点: スタンドアロンのデスクトップ環境を作る用途にはかなり良い選択です。
 - 👎 ダメな点: セキュリティが甘く、業務利用には向かず個人の遊び・試作向けの印象です。
 - 👥 誰向けか: インストールできるアプリを自分で作る感動を味わいたい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

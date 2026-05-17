@@ -105,16 +105,20 @@ DeepSeek V3、o1 系、強化学習
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 世間で話題になりましたが、実際に触っていないと何がすごいのか分かりにくいです。
 - ホスト型サービスで試してはみたものの、安全性の判断がしにくいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: o1 と比べられなかったが、賢いモデルという印象です。
 - 👍 良い点: 賢いモデルをホスト型サービスで実質無料に使えた点です。
 - 👎 ダメな点: セキュリティ面の懸念が残ります。
 - 👥 誰向けか: OpenAI 一択以外の選択肢を探している人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

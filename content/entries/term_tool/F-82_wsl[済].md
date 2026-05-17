@@ -107,17 +107,21 @@ bash、Docker、VS Code Remote
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - Windows で Claude Code を使おうとすると WSL を入れるよう促されます。
 - OS は Windows なのにどこに立ち上げるのかという感覚がピンと来ませんでした。
 -
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 入れないと Claude Code が動かなかったので、かなり苦労しました
 - 👍 良い点: Linux 環境のツールを Windows で使えるのは良いと思います
 - 👎 ダメな点: 以前はセットアップが結構大変でした
 - 👥 誰向けか: 割と先端的な開発者向けかなと思います
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

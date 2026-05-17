@@ -104,16 +104,20 @@ DeepSeek V3、Qwen、CodeGeeX
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 一般認知度がかなり低く、知らない人には「何それ？」となります。
 - API 利用時に中国系モデルゆえの情報漏洩リスクが気になります。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: YouTuber が推していて名前を知った印象です。
 - 👍 良い点: 以前は API 料金が安くてコスパが良いと評判でした。
 - 👎 ダメな点: 最近値上げしたという話もあります。
 - 👥 誰向けか: LLM をコスパで選びたい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

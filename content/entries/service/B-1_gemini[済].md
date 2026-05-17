@@ -104,17 +104,21 @@ Gemini 2.5 系、Vertex AI、AI Studio、Workspace 個別機能。
 
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - プレビュー期間が長くモデルが安定せず、業務での運用負荷が重いです。
 - プラン名や連携の呼び方が頻繁に変わり、情報がすぐ古くなります。
 - 検索が強いイメージから期待しますが、ハルシネーションが多めでギャップを感じます。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象:
 - 👍 良い点:
 - 👎 ダメな点:
 - 👥 誰向けか:
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

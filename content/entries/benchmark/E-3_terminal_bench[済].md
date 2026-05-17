@@ -103,17 +103,21 @@ SWE-Bench、TAU-Bench、AgentBench
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - ターミナル自体がとっつきにくいです。
 - 何を測っているのかがイメージしにくいです。
 - スコアの差が実用上どの程度の意味を持つのかが比べにくいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: エージェントユースに適したベンチマークの一つという印象です。
 - 👍 良い点: エージェントのターミナル操作能力を測れる点が良いです。
 - 👎 ダメな点: モデルが賢くなるほどスコアが飽和しないかが気になります。
 - 👥 誰向けか: オープン・クローズ問わずモデルの実力を比較したい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

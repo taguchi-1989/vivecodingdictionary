@@ -112,16 +112,20 @@ Rust、bash、VS Code
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 名前から検索機能だと結びつかず、ちゃんと調べるまで何なのか分かりませんでした。
 - AI エージェントの処理履歴で出てくることがあり、ずっと何なのか気になっていました。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: AI エージェントの処理中に見かけて気になっていました。
 - 👍 良い点: 検索が速いのが強みで、エージェントの調査も速く終わります。
 - 👎 ダメな点: 名前から機能が全くイメージできません。
 - 👥 誰向けか: エージェントで開発している人向けです。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

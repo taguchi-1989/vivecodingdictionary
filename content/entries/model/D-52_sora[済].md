@@ -104,16 +104,20 @@ DALL-E、Veo、動画生成 AI の比較。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - ChatGPT 有料プランでないと使えず、もどかしい思いをしました。
 - 発表から一般公開まで約 1 年近く焦らされた感じがありました。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: これで映画が撮れる、映画はいらないと思ったほどの衝撃でした。
 - 👍 良い点: 動画生成の常識を打ち破った歴史的なモデルです。
 - 👎 ダメな点: 現在の最新モデルと比べると見劣りし、サービスも終了しています。
 - 👥 誰向けか: 動画生成の歴史を振り返りたい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

@@ -106,15 +106,19 @@ AI 倫理、ISO/IEC 42001、EU AI Act
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 日本企業にも実質的に関わる話で、サービス設計時に意識しないと足元をすくわれます。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 欧州だけの話なのかな、と最初は思っていました
 - 👍 良い点: 個人情報をきちんと守る担保になる点
 - 👎 ダメな点: 影響範囲が大きく、サービスを出すときには対応がマストになる点
 - 👥 誰向けか: 個人情報を扱うサービスに関わる人すべて
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

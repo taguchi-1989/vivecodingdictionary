@@ -104,17 +104,21 @@ Whisper、Aqua Voice、Prompt Engineering。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 「ディクテーション」という言葉が一般に通じないと知って驚きました。
 - 録音されていないと気づかず喋り続けることがあり、録音状態を確認する癖が必要です。
 - 言い直しが増えてキーボード入力に戻したくなることもあります。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 入力めっちゃ楽。
 - 👍 良い点: 誤変換があっても AI に通せば直せることが多いです。
 - 👎 ダメな点: 便利さを伝えにくく、人目も気になります。
 - 👥 誰向けか: パソコンを触るすべての人。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

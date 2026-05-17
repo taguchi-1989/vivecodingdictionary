@@ -111,15 +111,19 @@ ESLint、VS Code、TypeScript
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 設定に誤りがあると起動のたびに違うコードが生成されフォーマットが崩れる状況に陥り、かなり苦労しました。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: フォーマッターとしてまず入れておくと良い、という感じで紹介されました。
 - 👍 良い点: 出力の形を統一してくれるので、機械的に運用できてとても便利です。
 - 👎 ダメな点: 設定を押さえないと機能せず、AI に任せる場合も設定まで含めた指示が必要です。
 - 👥 誰向けか: エージェントでコーディングを進めていく人には必要です。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

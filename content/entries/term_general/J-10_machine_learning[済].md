@@ -103,15 +103,19 @@ Deep Learning、Neural Network、LLM
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 2025 年以前は「AI 導入」の多くが機械学習レベルで、相手との認識合わせが難しかったです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 最初は難しく感じたが、原理を押さえると難しくない感覚です。
 - 👍 良い点: 自分で再現でき、原理を理解に落とし込みやすいです。
 - 👎 ダメな点: LLM 文脈と紛らわしく、何を指すか曖昧なまま使われがちです。
 - 👥 誰向けか: データサイエンスをやる人はもちろん、利用者全般の土台用語です。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

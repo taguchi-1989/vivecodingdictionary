@@ -102,15 +102,19 @@ SWE-Bench、WebArena、GAIA
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 馴染みが薄く、名前（頭文字）からどんなものかが想像しづらいです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 今回初めて知りました。
 - 👍 良い点: ツール呼び出しの巧拙を測れるのは重要だと思います。
 - 👎 ダメな点: 基準スコアの水準に馴染みがなく掴みづらいです。
 - 👥 誰向けか: エージェントとして動かす LLM を選定したい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

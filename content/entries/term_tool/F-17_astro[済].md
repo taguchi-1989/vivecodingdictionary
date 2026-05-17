@@ -106,15 +106,19 @@ SSG（F-162）、React、Tailwind CSS（F-16）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - HTML の次に勧められましたが、AI に全部任せないとうまく動かず苦労しました。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: バニラ HTML から一歩進める選択肢として AI に勧められました。
 - 👍 良い点: メジャーなフレームワークですが、正直まだよく把握できていません。
 - 👎 ダメな点: 非エンジニアが触るにはハードルが高く、かなり苦労しました。
 - 👥 誰向けか: コンテンツを継続管理したい人向けですが、私はまだ掴みきれていません。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

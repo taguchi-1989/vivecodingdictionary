@@ -111,16 +111,20 @@ AGI、ASI、Singularity
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 「強い」が性能ではなく自我の有無を指す点がズレを生みます。
 - 「強い AI」が実現したら人の存在にも触れる議論になり、怖さを感じます。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 将棋などで「人より強い AI」のような意味かと思っていました
 - 👍 良い点: 哲学的な議論や、人間の存在意義を問う議論の入り口になります
 - 👎 ダメな点: 良い点の裏返しで、議論が抽象的になりすぎて結論が出にくくなりがちです
 - 👥 誰向けか: 未来の AI のあり方を見据えて議論したい人向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

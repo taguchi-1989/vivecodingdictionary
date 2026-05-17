@@ -106,15 +106,19 @@ Rollup、esbuild、HMR、ESM。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 気づくと使われているツールですが、ログを見ると壊れていることもあります。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 「バイト」と読むのかと思っていたら「ビート」なんだ、という発見がありました。
 - 👍 良い点: 意識しなくてもビルドをうまく処理してくれる安心感があります。
 - 👎 ダメな点: 正直まだよく分かっていません。
 - 👥 誰向けか: エージェント開発をしている人の多くがお世話になっているツールだと思います。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

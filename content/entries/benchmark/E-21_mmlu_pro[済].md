@@ -101,16 +101,20 @@ MMLU、GPQA、arXiv:2406.01574
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - MMLU を知らないと「Pro」と言われても何が違うか分かりません。
 - ランダム正解率がスコアに与える影響が数学的に掴みにくいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 今回初めてちゃんと認識しました。
 - 👍 良い点: ベンチマーク側を強化して差別化を図っている点が良いと思います。
 - 👎 ダメな点: 10 択化による評価トークンの増加が気になります。
 - 👥 誰向けか: モデルの知識・推論力を評価したいモデル開発者向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

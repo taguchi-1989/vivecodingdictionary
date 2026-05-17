@@ -108,15 +108,19 @@ npm, Vite, monorepo
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 名前だけでは npm との関係が読み解きにくく、把握に時間がかかりました。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: ターミナルでたまに見かけるな、という感じでした。
 - 👍 良い点: npm より軽量・高速なパッケージマネージャーです。
 - 👎 ダメな点: 非エンジニアにはとっつきにくい印象があります。
 - 👥 誰向けか: AI エージェントから指示されたとき対応できる人向けです。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

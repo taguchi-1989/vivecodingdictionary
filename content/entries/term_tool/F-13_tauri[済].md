@@ -111,15 +111,19 @@ Electron、Rust、shadcn/ui
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - AI に教えてもらって初めて知りました。当時は学習リソースが少なく AI も苦手そうで、概念理解に時間がかかりました。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: Electron の代替として紹介されました。
 - 👍 良い点: 軽量に実装できる点が良く、仕組みとしては筋が良いと感じます。
 - 👎 ダメな点: 学習リソースが少なく AI も苦手そうな印象がありました。
 - 👥 誰向けか: ネイティブアプリを軽量に配布したい人向けだと思います。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

@@ -109,17 +109,21 @@ RAG、Context（G-1）、Prompt Engineering
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - ハーネスで囲わないと弱い AI は信頼しきれず、最後は人が確認が必要です。
 - どんな人でも騙されうる点が非常に厄介です。
 - ハーネスが作れていない裏返しでもあり、リテラシー不足にも行き着きます。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 嘘をつかれた！という驚き
 - 👍 良い点: ない（性質上）
 - 👎 ダメな点: 流暢なので騙されやすいです
 - 👥 誰向けか: LLM を使う人すべて
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

@@ -106,15 +106,19 @@ Radix UI、Tailwind CSS、v0
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 名前の読み方が分からず AI に勧められるたびに調べ直していました。使ってはいたけどよく分かっていなかったというのが正直なところです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 謎の呪文のような名前で最初は全く分かりませんでした。
 - 👍 良い点: コンポーネントをまとめて管理できベストプラクティスとして定着しています。
 - 👎 ダメな点: 
 - 👥 誰向けか: AI エージェントを使ってアプリを作る人は、ほぼ全員が通ることになると思います。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

@@ -110,16 +110,20 @@ JSON（F-8）、GitHub Actions、Docker Compose。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 名前が読みにくく、単独の `.yaml` としてほとんど目にしないため驚くことがあります
 - インデントのルールが厳密で、知らないと突然壊れます
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: Markdown ファイルの一部という感覚でした。
 - 👍 良い点: 人間が読みやすく、AI との相性もそこそこある印象です。
 - 👎 ダメな点: JSON に比べると型の厳密さが完璧ではない印象があります。
 - 👥 誰向けか: 
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

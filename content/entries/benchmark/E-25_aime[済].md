@@ -107,15 +107,19 @@ GSM8K, MATH, Thinking モデル
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 初めて知りましたが、問題例を見ないとレベル感が想像できません。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 今回初めて知りました。
 - 👍 良い点: 人間が理解できる問題で能力を測れる点が良いです。
 - 👎 ダメな点: 現行モデルでは差がつきにくくなってきています。
 - 👥 誰向けか: ベンチマーク変遷を調べたい研究者寄りの人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

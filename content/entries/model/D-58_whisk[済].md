@@ -105,16 +105,20 @@ Imagen、DALL-E、Gemini
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - Gemini や NotebookLM に比べて知名度が低いです
 - 画像生成中心のため、最近は触っていない人も多い印象です
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 無料で使えて嬉しいです。プロプラン前提ですが
 - 👍 良い点: 画像が 2 枚同時に出てきて選びやすいです
 - 👎 ダメな点: 動画生成系には劣る印象で、UI もやや雑然としています
 - 👥 誰向けか: 無料で画像や短い動画を気軽に試したい人向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

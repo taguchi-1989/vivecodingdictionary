@@ -104,15 +104,19 @@ MCP、MCP Server、Notion MCP
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - Teams をメインに使っているので、Slack は触ったことがありません。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: Slack の方が便利そうですが、Teams 標準で評価は下がります。
 - 👍 良い点: Slack の全域を横断検索できそうです（要確認）。
 - 👎 ダメな点: Slack 有料プランでないと試せないかもしれません。
 - 👥 誰向けか: Slack を日常的に使っているユーザー向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

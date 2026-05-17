@@ -105,16 +105,20 @@ xAI、Grok-4 Heavy の推論能力、LLM 比較。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - エコシステムとして X を使っていないとそもそも触れません
 - 商用的な正確さをどう担保しているのかわかりません
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 三大 AI メーカーに割って入った印象です
 - 👍 良い点: 緩くて安くて使いやすいという評判をよく聞きます
 - 👎 ダメな点: ChatGPT 蒸留を認めており出自に疑義が残ります
 - 👥 誰向けか: API を安く運用したい人や X 利用者向けです
+<!-- user-input:end key="my_comment" -->
 
 
 

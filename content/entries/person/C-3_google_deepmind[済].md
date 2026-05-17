@@ -114,17 +114,21 @@ Gemini（B-1）、AlphaFold、Google Cloud（B-24）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 「Google」と「Google DeepMind」の違いが分かりづらく混乱します。
 - 旧名 Bard のしょぼい印象だけ残る人もいます（2024 年に Gemini へ改名）。
 - 広告ビジネスを AI で食う動きがあり、外から戦略の整合性が読みづらいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: Transformer 論文も Google 発で、研究組織としてすごいです。
 - 👍 良い点: 実験的サービスを次々出し、無料枠も広くてありがたいです。
 - 👎 ダメな点: 似た AI 製品が並び、統制の弱さを感じます。
 - 👥 誰向けか: AI を使う立場なら押さえておきたい組織です。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

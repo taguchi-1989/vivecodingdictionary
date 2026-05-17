@@ -112,15 +112,19 @@ GPU、H100、量子化
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - CUDA コアと Tensor コアの違いや行列計算の仕組みがイメージしきれません。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 行列計算に特化したコアかな、という想像で入りました。
 - 👍 良い点: 世代ごとに強くなり LLM の性能向上とコスト低減に効いている点です。
 - 👎 ダメな点: 正直よく分かりません。立ち位置を正しく説明できるかで止まります。
 - 👥 誰向けか: 原理原則を理解したい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

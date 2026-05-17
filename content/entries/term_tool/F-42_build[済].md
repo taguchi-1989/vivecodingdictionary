@@ -105,16 +105,20 @@ Vite、webpack、TypeScript
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - どこからどこまでがビルドか最初は掴みにくく、CI のエラーに対処しにくかったです。
 - CI 走行中に静的解析＋ビルドで 8 分かかることがあり、待ち時間がつらかったです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: C 言語を触っていた頃に初めて見た言葉だと思います。
 - 👍 良い点: 本番に必ず必要なシンプルな役割のプロセスです。
 - 👎 ダメな点: 時間がかかることがあり待ちの辛さを感じます。
 - 👥 誰向けか: 開発をする人全般に必要なプロセスです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

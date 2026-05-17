@@ -131,18 +131,22 @@ interface / type / generics は後からでよい。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 「型」が何を意味するのか、最初は直感しづらい
 - エラーが出ると、何が悪いのか読みにくい
 - JavaScript と何が違うのか明確になりにくい
 - 全部理解しないと使えないように見えてしまう
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 最初は少し驚いたが、意図はかなりまっとう
 - 👍 良い点: 早い段階で事故を減らしやすい
 - 👎 ダメな点: 初学者には記述の圧がある
 - 🎯 誰向けか: React / Next.js に触る人、共同開発に入る人
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

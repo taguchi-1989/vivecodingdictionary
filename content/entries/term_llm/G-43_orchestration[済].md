@@ -110,17 +110,21 @@ Subagent、LangGraph、マルチエージェント協調
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - LLM との壁打ちで慣れたが、音楽のイメージから入ると共通言語化が難しい。
 - マルチエージェント活用の話ができるかがハーネス利用者の試金石になる。
 - MoE に近く、最強 1 人ではなく専門家が集まってやる感じ。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: LLM 側からプッシュされてきた言葉、という印象。
 - 👍 良い点: 特定の領域を、得意なエージェントにしっかり委任できる。
 - 👎 ダメな点: なぜこうしなきゃいけないのか、勘所をつかむのが少し難しい。
 - 👥 誰向けか: エージェントで動かしていく人向け。しっかり使う人向け。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

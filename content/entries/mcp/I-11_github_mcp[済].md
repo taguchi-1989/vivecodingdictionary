@@ -102,17 +102,21 @@ MCP Server、GitHub API、Tool Use。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - アクセストークン取得の手順でつまずきやすく、意味も分かりにくいです。
 - たまに接続が切れることがあります。
 - トークンに有効期限があり、気づかず失効していることがあります。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: Claude Code から GitHub 操作を自動でやってくれて便利です。
 - 👍 良い点: GitHub へのデータ転送を Claude Code から直接できます。
 - 👎 ダメな点: 仕組みの理解は難しく、権限設定には注意が必要です。
 - 👥 誰向けか: コーディングをする人全般向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

@@ -106,17 +106,21 @@ ChatGPT、GPT-5、Sam Altman、OpenAI API ドキュメント。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - ChatGPT 以外（API・DALL·E・Sora・Codex）が何か分かりにくいです
 - Codex CLI は PowerShell や WSL2 が絡み Windows インストールに苦労します
 - GPT-4o と GPT-4.1 が並ぶとモデル名を言い間違えそうになります
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: ChatGPT で AI ブームを作ったフロンティア企業という印象でした
 - 👍 良い点: 流行の先端で切磋琢磨し、LLM では常にトップクラスの存在です
 - 👎 ダメな点: Open の名に反してクローズドな部分が大きく、企業体質に危うさを感じます
 - 👥 誰向けか: AI を使う側のすべての人が押さえておくべき企業です
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

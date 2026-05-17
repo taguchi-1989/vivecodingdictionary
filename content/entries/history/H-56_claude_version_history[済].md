@@ -97,15 +97,19 @@ Claude 3 系、Claude 4 系、Extended Thinking
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - Opus は料金が高く、Max まで踏み込まないと実力感をつかみにくいです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: Sonnet 3.5 が「そこそこ賢いモデル」として話題になっていた印象です
 - 👍 良い点: Opus 4.5 系はコーディング用途でかなり手応えがありました
 - 👎 ダメな点: Sonnet 4 は計画を立てるのに実装精度が追いつかず台パンしたくなりました
 - 👥 誰向けか: 過去バージョンの実力感を把握したい人に向いています
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

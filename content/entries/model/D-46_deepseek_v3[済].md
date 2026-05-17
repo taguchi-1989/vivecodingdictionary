@@ -103,16 +103,20 @@ Mixture of Experts、DeepSeek R1、ファインチューニング
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - ニュースで名前をよく聞きますが、中国系という点で警戒感があります。
 - API 料金が安いと聞きますが、どう使えば安全なのかが分かりません。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: ディープシークショックと言われるほどの強いモデルという印象です。
 - 👍 良い点: アリーナでも評判が良く、安さもあり広く使われた印象です。
 - 👎 ダメな点: 機密情報をどこまで入れていいかが課題です。
 - 👥 誰向けか: 激安でコーディング補助を使いたい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

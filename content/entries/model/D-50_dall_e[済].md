@@ -103,16 +103,20 @@ ChatGPT 統合済みの DALL-E 3 が現在の入口です。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 良いものができても、少し修正しようとするとすぐに絵が崩れます。
 - 出力の絵柄が一定のクセに偏りやすいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 自分の絵より上手くて結構感動しました。
 - 👍 良い点: 一定品質のものをたくさん作れる点が良いです。
 - 👎 ダメな点: AI っぽさが出やすく、確率的な均一感が気になります。
 - 👥 誰向けか: Midjourney から次のツールを探している人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

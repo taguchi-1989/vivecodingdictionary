@@ -1,5 +1,7 @@
 # モバイル・コメント投入フロー 要件定義
 
+> **2026-05-17 追記：** 本書の Obsidian + `mobile_inbox/` 二段運用は、[RepoEdit](https://github.com/Taguchi-1989/RepoEdit)（PWA + Cloudflare Worker）を使う新方式に置き換え予定です。新方式はエントリ内 `user-input` ブロックを直接編集できるため、`mobile_inbox/` の中間フォーマットや `/import-comments` の翻訳ステップが不要になります。新方式の手順は [mobile_repoedit_setup.md](mobile_repoedit_setup.md) を参照。本書は新方式が安定するまで併走運用の参考資料として残します。
+
 *外出先のスマホ（Android）で著者コメント・つまずき・AI 生成部分への指摘を書き溜め、PC で落ち着いて本編 Markdown に取り込むための仕組みの要件定義です。v0.1（2026-04-24）。*
 
 ## 1. 目的と背景

@@ -105,15 +105,19 @@ Whisper、Dictation、バイブコーディング
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 有償という点でハードルが高く感じます。Windows の無料ディクテーション機能で足りる人も多いです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: YouTuber が推しているイメージがあります。私は使っていません
 - 👍 良い点: 音声認識の精度は良いという話を耳にします
 - 👎 ダメな点: セキュリティ面・価格面のハードルから、自分は積極的に使う場面がありません
 - 👥 誰向けか: 音声認識の精度をどうしても高めたい人向けです
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

@@ -97,15 +97,19 @@ Deep Learning（J-11）、Transformer（J-13）、Machine Learning（J-10）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 神経細胞を模した、までは分かるが活性化関数などの詳細は一気に難しくなります
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 名前の響きがかっこよく感じます
 - 👍 良い点: 3 層構造で層を増やすほど表現力が伸びるシンプルな仕組みが良いです
 - 👎 ダメな点: 多層に重ねるほど説明不可能性が増していく点はネックです
 - 👥 誰向けか: データサイエンティストや機械学習を本格的にやる人に押さえてほしい用語です
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

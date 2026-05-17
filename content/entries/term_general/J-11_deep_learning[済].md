@@ -104,15 +104,19 @@ Neural Network（J-12）、Transformer（J-13）、GPU（J-77）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 多層化で重み調整が難しく、説明不可能性が残る点が悩ましくもあり魅力でもあります
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: AlphaGo のあたりで初めて存在を認識しました
 - 👍 良い点: 人間のバイアスを超えていける場面が出てくる点が面白いです
 - 👎 ダメな点: 説明不可能性が残り、標準業務での再現性・説明性に不安があります
 - 👥 誰向けか: 強モデルを目指す人や AI 史の主軸として押さえたい人向けです
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

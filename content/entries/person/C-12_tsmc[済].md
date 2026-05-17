@@ -105,17 +105,21 @@ NVIDIA、H100、GPU
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 急に出てきた感のある企業名で、熊本に工場ができたと聞きます
 - どの工程の技術力がすごいのかが分かりづらいです
+<!-- user-input:end key="stumble" -->
 
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象:微細化での高性能化が Intel より強い印象です
 - 👍 良い点:世界最強の技術力で大きな影響を与える企業です
 - 👎 ダメな点:台湾という地政学的リスクはどうしてもあります
 - 👥 誰向けか:一般ビジネスパーソンが知っておくべきです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

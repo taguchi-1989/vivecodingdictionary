@@ -102,17 +102,21 @@ MCP SDK、各種 MCP（GitHub／Playwright／Notion）、自作 MCP のテンプ
 
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 何の略で何の役に立つかピンと来ず、「AI の USB-C」もイメージが結びつきません
 - Server と Client のどちらが自分側か混乱しやすく、設定時に迷います
 - 入れた MCP の安全性（権限・データ漏れ）の判断が難しく、追加に不安を感じます
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 名前のキャッチーさが先行している印象です。
 - 👍 良い点: LLM からのソフトウェア操作が容易になります。
 - 👎 ダメな点: 入れすぎるとコンテキストを圧迫します。
 - 👥 誰向けか: エージェントユースを試したい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

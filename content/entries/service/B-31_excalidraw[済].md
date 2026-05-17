@@ -106,17 +106,21 @@ Mermaid、Figma、PlantUML
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 手書き風の見た目が好みではなく、最初の見た目で離脱しがちです。
 - 何のために起動するか分かりづらく、触る動機が湧きません。
 - Mac ユーザーが好んで使うイメージがあり、自分の環境に馴染むか不安です。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: AI 系の YouTuber が解説動画でよく画面に出していた印象が強かったです
 - 👍 良い点: 無料でラフ図がブラウザ起動だけで描けるそうです
 - 👎 ダメな点: Mermaid との差別化が掴めず使う動機が湧きません。
 - 👥 誰向けか: AI 系の YouTuber や、手書き風の見た目が好きな人向けです
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

@@ -109,16 +109,20 @@ MCP Server（I-2）、MCP Client（I-3）、自作 MCP（I-80）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - SDK というものに馴染みがありません
 - ユーザー側が意識することは少ないです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象:社内システムに応答させるのに使えそうです
 - 👍 良い点:自作のロジックを公開できます
 - 👎 ダメな点:リテラシーがないと概念すら厳しいです
 - 👥 誰向けか:社内サービスを AI に代行させたい開発者向け
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

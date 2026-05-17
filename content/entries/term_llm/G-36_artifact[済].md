@@ -104,16 +104,20 @@ Canvas、Tool Use、Claude.ai
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - Claude 史を知らないと「Artifact」という言葉が通じにくいです。
 - 日本語の共通言語を作りづらい点が一番の課題です。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 成果物を貯めるワークスペースというイメージです。
 - 👍 良い点: チャットだけから一歩先に進んだ感があります。
 - 👎 ダメな点: 今はもっと大規模なやり方が主流で、使っている人が少ない印象です。
 - 👥 誰向けか: 歴史的な文脈で捉える人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

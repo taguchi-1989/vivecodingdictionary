@@ -120,16 +120,20 @@ React（F-10）、Vercel（B-20）、App Router
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 「なぜ Next.js まで必要か」が腹落ちしないまま使い始めていました。
 - バージョンアップ時の互換性まわりで手間がかかりやすいフレームワークです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: なぜ必要か分からないまま AI が推すのでついていきました。
 - 👍 良い点: TypeScript 系では事実上の標準になりつつある点は認めます。
 - 👎 ダメな点: 重い上に Vercel へのロックインが気になります。
 - 👥 誰向けか: 自作アプリを作りたい人向けですが、経験がないと扱いが難しいです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

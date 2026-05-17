@@ -105,16 +105,20 @@ AI 大学、まさお、AI の羅針盤
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 昔の動画を見ると、すでに陳腐化している内容も多くあります
 - データサイエンティスト兼業との立場から、インセンティブを確認したいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: how to が非常に分かりやすい YouTube チャンネルです
 - 👍 良い点: オフィスワーカーのボリュームゾーンに刺さる構成です
 - 👎 ダメな点: 正確でない内容も混じり、ベストプラクティスとは言えない解説もあります
 - 👥 誰向けか: リテラシーをやや背伸びして身につけたいオフィスワーカー向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

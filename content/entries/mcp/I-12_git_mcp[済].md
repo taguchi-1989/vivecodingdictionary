@@ -117,16 +117,20 @@ MCP Server、GitHub MCP、git
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 全権委任して致命的な破壊行為をされました（Sonnet 4 時代）
 - 面倒で全権委任したくなりますが、事前の権限見極めが必要です
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: ローカル承認の回数が減って楽になりそうです
 - 👍 良い点: エージェントのトークン数が下がりそうです
 - 👎 ダメな点: 権限設定を怠ると致命的な操作が起こり得ます
 - 👥 誰向けか: コーディングをする人全般に向いています
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

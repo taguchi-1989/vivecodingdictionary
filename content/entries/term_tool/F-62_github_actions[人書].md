@@ -125,17 +125,21 @@ CI/CD、Docker、GitHub
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - エージェントの作業と Actions の自動化の切り分けが難しいです。
 - エラーが出て貼り付けるを繰り返す間に 2,000 分の無料枠が溶けた経験があります。
 - 性能の低いモデルで回すといきなりうまくいかないことが多いです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: GitHub を開いたら最初からいた感じです。
 - 👍 良い点: ビルドや CI チェックが自動で走るのはありがたいです。
 - 👎 ダメな点: 設定次第で 2,000 分の無料枠が一日で溶けます。
 - 👥 誰向けか: GitHub を使いながら自動化したい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

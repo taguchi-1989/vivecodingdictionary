@@ -109,15 +109,19 @@ OpenAI（C-1）、Sam Altman（C-50）、Thinking モデル（G-14）。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - OpenAI 退社騒動の際、何が原因で辞めたのかがまだよく分かりません。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: AI 分野のトップ研究者の一人という印象です。
 - 👍 良い点: まだよく把握できていません。
 - 👎 ダメな点: まだよく分かりません。
 - 👥 誰向けか: OpenAI 内部の動向を詳しく追いたい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

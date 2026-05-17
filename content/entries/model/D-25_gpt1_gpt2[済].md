@@ -105,16 +105,20 @@ GPT-3 系、Transformer 論文、Scaling Law
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - GPT-3 から認知し始めたので、2 という数字が何を意味するのか分かりません
 - これを覚えても、役に立つことはあまりなさそうな印象を受けます
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: GPT-3 以降に触れた身として、振り返っておきたい世代です
 - 👍 良い点: 従来主流だったディープラーニング系と別系統から出てきた点がすごいです
 - 👎 ダメな点: 性能的にはまだ実用化には遠い段階です
 - 👥 誰向けか: AI の歴史を学びたい人向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

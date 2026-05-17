@@ -107,16 +107,20 @@ GGUF、AWQ、bitsandbytes
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 「量子化」という言葉が硬く、性能トレードオフを感覚的に掴みづらいです
 - フロンティアモデルのレンジ分けに量子化のコツがあるはずですが、表に出ない部分が多いです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: モデル名の 4bit / 8bit 表記で量子化を知りました。
 - 👍 良い点: スマホでも動くモデルが出てきてエッジ実行の可能性が広がります。
 - 👎 ダメな点: やりすぎると性能劣化が顕著になります。
 - 👥 誰向けか: リソース制約の環境でモデルを動かしたい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

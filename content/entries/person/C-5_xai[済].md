@@ -103,15 +103,19 @@ Grok、Colossus、Elon Musk、OpenAI との比較。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 私だけかもしれませんが、X を使っていないと存在感がわかりません
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: Grok 4.1 Fast はコスパが良いと噂で聞きました
 - 👍 良い点: 三大 AI に対し第 4 の軸として立ちつつある点です
 - 👎 ダメな点: OpenAI の蒸留疑惑を公言するのはまずいです
 - 👥 誰向けか: X ユーザー向けという印象です
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

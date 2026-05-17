@@ -104,15 +104,19 @@ CLAUDE.md、Slash Command、AGENTS.md
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - SKILL.md と CLAUDE.md の切り分けが難しく、最初は迷いが出ます。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: なぜこれを別ファイルとして使い分けるのか、最初はあまり理解できませんでした
 - 👍 良い点: 必要な手順だけ読み込まれ、文脈をコンパクトに保てる点が良いです。
 - 👎 ダメな点: メンテしないと複雑化しやすく、作りっぱなしには向きません。
 - 👥 誰向けか: バイブコーディングをある程度自動化させたい人の必修概念です。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

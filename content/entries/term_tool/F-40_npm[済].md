@@ -101,16 +101,20 @@ pnpm、yarn、package-lock.json、npmjs.com。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - pip の経験があるので npm 自体はすんなり入りましたが、綴りが npm か mpn か混乱しました。
 - ターミナルはタイポが命取りで、音声で日本語指示できる環境のほうが非エンジニアには楽です。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: コマンドをよく間違える、という体験からのスタートでした。
 - 👍 良い点: 慣れればパッケージを楽に引っ張ってこられて便利です。
 - 👎 ダメな点: 1 文字ミスが命取りになるターミナルは非エンジニアにハードルが高いです。
 - 👥 誰向けか: JavaScript 系のパッケージを管理・インストールする人全般に必要です。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

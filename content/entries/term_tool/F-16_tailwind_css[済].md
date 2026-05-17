@@ -110,15 +110,19 @@ CSS, shadcn/ui, Prettier
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 使い所を考えないと画一的なデザインになりやすくテンプレ感が出ます。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: かっこいい CSS が書けるのかな、という期待がありました。
 - 👍 良い点: AI コードのベストプラクティスとして定着し、学習リソースも豊富です。
 - 👎 ダメな点: デザインがテンプレ感になりやすい点が気になります。
 - 👥 誰向けか: AI エージェントでアプリを作る人はほぼ全員触ることになります。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

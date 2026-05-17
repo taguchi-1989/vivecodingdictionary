@@ -109,16 +109,20 @@ Veo、Imagen、Whisk
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 回数上限があり気軽には使いづらいです
 - クレジット消費の幅がイメージしづらいです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象:Google プロプランで Gemini と一緒に使える点
 - 👍 良い点:Google のエコシステムの 1 つとして組み込まれている点です
 - 👎 ダメな点:本格利用していませんが、クレジット消費は多そうです
 - 👥 誰向けか:動画編集をする人や新しいものを試したい人向けです
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

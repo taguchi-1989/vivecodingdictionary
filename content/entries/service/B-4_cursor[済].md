@@ -115,17 +115,21 @@ Composer（D-35）、VS Code（F-30）、GitHub Copilot（B-5）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - Cursor を入れても VS Code との違いがよくわかりませんでした。
 - 学習に使われると聞き、会社で使っていいかが不明でした。
 - Claude Code に移行して自分で書かなくなり、出番がありませんでした。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: AI ニュース界隈で「良い」と騒がれていた印象でした
 - 👍 良い点: コードをちゃんと書く人には良いです
 - 👎 ダメな点: コードを書かない人だと触ってもメリットを感じにくいです
 - 👥 誰向けか: システムエンジニア向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

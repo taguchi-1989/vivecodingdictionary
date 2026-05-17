@@ -105,15 +105,19 @@ LLM、ViT（Vision Transformer）、マルチモーダル
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - LLM とごっちゃになりやすく、マルチモーダル化で用語の切り分けが難しいです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: ロボットのビジョン文脈で初めて知った言葉です
 - 👍 良い点: 言語モデルと視覚モデルを切り分けて正確に指せる点が良いです
 - 👎 ダメな点: LLM も馴染まない中、VLM を日常会話で使うのはさらにハードルが高いです
 - 👥 誰向けか: AI 活用を推進する人で、用語を厳密に使いたい人向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

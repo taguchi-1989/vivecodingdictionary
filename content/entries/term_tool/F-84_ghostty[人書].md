@@ -108,16 +108,20 @@ bash、WSL、Warp
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 開発系 YouTuber が推しているのは知っていましたが、Windows では入れられませんでした
 - Mac 限定な面もあり、VS Code のターミナルとの差がわかりませんでした
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: なんかかっこいい感じはします
 - 👍 良い点:
 - 👎 ダメな点:
 - 👥 誰向けか:
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

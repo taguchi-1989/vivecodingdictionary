@@ -108,16 +108,20 @@ Linux、WSL、bash
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - まず何と読むのかわからないし、聞いたこともない、というところから始まる。
 - Linux の中の一部が Ubuntu、というその位置づけが分かりづらい。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 読めない。
 - 👍 良い点: Windows なしでもパソコンの OS として機能できるところ。
 - 👎 ダメな点: 使っていくにはやっぱり多少の知識が必要。
 - 👥 誰向けか: サーバー・AI エージェント・ロボット OS を使う人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

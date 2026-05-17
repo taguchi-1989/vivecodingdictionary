@@ -104,15 +104,19 @@ GPQA、SWE-Bench Verified、AGI
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 博士課程レベルの問題があらゆる分野から集められていると聞くと、響きとして「すごい」と感じます。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 名前がかっこいいです
 - 👍 良い点: 最難ベンチの一つで、フロンティアモデルの性能差を測る指標として良さそうです。
 - 👎 ダメな点: 低性能モデルは判別できず、突破されたら人類が勝てる領域はほぼ残りません。
 - 👥 誰向けか: 最上位モデルの性能を手っ取り早く評価したい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

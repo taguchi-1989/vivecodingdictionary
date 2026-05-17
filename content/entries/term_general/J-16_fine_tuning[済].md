@@ -137,15 +137,19 @@ LoRA、RAG、Prompt Engineering
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 性能の弱いモデルをチューニングしようとする人が多いですが、最善策かは慎重に考える必要があります。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: GPT-3.5 の頃に企業利用を進めたい人がよく試していました。
 - 👍 良い点: 短期間で見える成果が出せる場合は即効性のある選択肢です。
 - 👎 ダメな点: より賢いモデルが出るたびに過去のチューニング資産が無駄になります。
 - 👥 誰向けか: まず代替手段を検討すべきで、安易に手を出さない人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

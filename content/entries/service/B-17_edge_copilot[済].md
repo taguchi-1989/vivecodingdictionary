@@ -106,17 +106,21 @@ Microsoft Copilot、Microsoft 365 Copilot、ChatGPT
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 入力内容が学習に使われるか分かりづらく、業務情報を入れてよいか毎回迷います。
 - フロンティアモデルには届かず、込み入った相談だと回答が浅く感じます。
 - 文脈の持ち越しが弱く、続きを聞くたびに経緯を説明し直す必要があります。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: Bing Image Creator 時代に触り、ブラウザでここまで遊べるのかと驚きました
 - 👍 良い点: 無料で誰でもすぐに触れる手軽さです。
 - 👎 ダメな点: 賢さは最新モデルに比べると物足りなく感じます。
 - 👥 誰向けか: お金を絶対にかけたくない無課金ユーザー向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

@@ -101,17 +101,21 @@ Constitutional AI、RSP、Interpretability の論文。
 
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 社名の読み方「アンソロピック？アンスロピック？」と一瞬迷います。
 - SaaS の死と結びつけて語られ、伝統業界には脅威に映ります。
 - OpenAI と何が違うのかが外から見ると分かりにくいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: OpenAI からスピンアウトした企業として認識していました
 - 👍 良い点: 倫理観のある AI（Constitutional AI）を掲げつつ性能でもトップクラスです
 - 👎 ダメな点: 最近は安全性路線がやや揺らいでいる印象で若干不安を感じます。
 - 👥 誰向けか: 企業名は一般常識になりつつあり、AI を使う人すべてに押さえてほしい会社です。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

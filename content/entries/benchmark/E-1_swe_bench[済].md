@@ -100,17 +100,21 @@ SWE-Bench Verified、Multi-SWE-Bench、Aider LeaderBoard
 
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 評価条件が揃わないと比較できず、各社の数字をそのまま使えません。
 - 80 点超でも実務体感が違うことがあり、スコアを鵜呑みにすると困ります。
 - 自分の業務に近い問題かどうか判断がつかず、採用の足場にしにくいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 2025 年ごろからスコア比較の常連になった印象です。
 - 👍 良い点: エージェント力をスコアで見比べられます。
 - 👎 ダメな点: 頭打ち気味で上位モデルの差を測りにくくなっています。
 - 👥 誰向けか: モデルの賢さをベンチマークで把握したい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

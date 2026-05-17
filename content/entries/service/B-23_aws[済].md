@@ -106,17 +106,21 @@ Amazon Bedrock、Google Cloud、Azure。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - カード登録でエラーが出やすく、会員登録の画面が混み入っています
 - 200 ドル無料枠はアカウント紐づけで、放置アカウントだと再取得しにくいです
 - EC2・S3・Lambda は名前から中身が想像しづらく、辞書なしでは判別できません
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 「クラウドといえばここ」という印象で、何でもできそうに見えました
 - 👍 良い点: 幅が広く、LLM に設定を任せられます。閉域網で守れる点も心強いです
 - 👎 ダメな点: 使い方によっては料金が嵩み、コスト感が読めない不安があります
 - 👥 誰向けか: 企業システムを本格的に組む人向け。無骨な命名に慣れる人向きです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

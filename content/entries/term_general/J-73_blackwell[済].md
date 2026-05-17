@@ -103,15 +103,19 @@ H100、GPU、NVLink
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - マニアックな話で、世代名は陳腐化しやすい固有名詞という印象です。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 最新世代の GPU で名前がかっこいいと思いました。
 - 👍 良い点: アーキテクチャの物理的進歩で推論コストが下がる流れが好ましいです。
 - 👎 ダメな点: 実質 NVIDIA にロックインされているのでは、と感じます。
 - 👥 誰向けか: 最先端の話題で会話する人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

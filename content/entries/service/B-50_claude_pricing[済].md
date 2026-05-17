@@ -107,17 +107,21 @@ Claude、Claude Code、API、Anthropic。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - CC は無料では使えず、Pro も上限に達しやすく、本格利用には Max が必要です
 - CC は当初 Max 専用でリリースされ、後から Pro でも使えるよう拡張されました
 - Max 5x（月 100 ドル）/ 20x（月 200 ドル）は固定費が高く踏み込みにくいです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 月 100・200 ドルは高いと感じつつ、周囲の Max 評が良くて気になりました
 - 👍 良い点: Opus はコーディングで折り紙付きで、上限が大きく使い続けられます
 - 👎 ダメな点: 料金が高く、週次レートリミットも体感ではかなりきついです
 - 👥 誰向けか: バイブコーディングに本気な人向け。料金分を使い倒す人に絞られます
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

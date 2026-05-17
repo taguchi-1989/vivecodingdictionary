@@ -103,16 +103,20 @@ MCP、MCP Server、GitHub MCP、Playwright MCP。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 普段目にも耳にもしません
 - 自分で構築すべきものなのか分かりません
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 今回はじめて試してみました
 - 👍 良い点: Claude Code に任せれば意識せず色々できます
 - 👎 ダメな点: 権限設定をミスすると大変です
 - 👥 誰向けか: 自作のハーネスを組む人向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

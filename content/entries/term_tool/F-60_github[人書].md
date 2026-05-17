@@ -102,16 +102,20 @@ Pull Request（F-61）、GitHub Actions（F-62）、git（F-50）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 社内導入時に相当な抵抗があり、英語画面で操作に慣れるまで時間がかかりました。
 - GitHub エコシステムの強さは動かさないと分からず認識にハードルがある。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: エンジニアが良いと言っていても最初は良さが分かりませんでした
 - 👍 良い点: 無料範囲が広くプライベートと公開を分けて使えて超便利です
 - 👎 ダメな点: とっかかりが少し難しいです。
 - 👥 誰向けか: エージェントワークをする人にはほぼ全員向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

@@ -102,16 +102,20 @@ MCP Client、Filesystem MCP、GitHub MCP、MCP Transport
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 具体例がどちらか分かりにくいです。ユーザー側ではなくサービス側でしょうか。
 - 似たような単語が多くて辛いです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: キャッチーな感じです。
 - 👍 良い点: LLM のエージェントユースが捗り、精度が上がります。
 - 👎 ダメな点: セキュリティ的に危ないものもあります。
 - 👥 誰向けか: エージェントユース向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

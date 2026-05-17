@@ -97,16 +97,20 @@ MoE、Ollama、La Plateforme
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 名前自体がそもそもそんなに有名ではありません
 - どこからどう使い始めればよいのか、手順が分かりません
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: オープンモデル系で最初に名前が挙がるベンダーです
 - 👍 良い点: オープンでフロンティアに次ぐ性能がある点です
 - 👎 ダメな点: エコシステムが薄く使いづらい印象です
 - 👥 誰向けか: LLM を比較検証したい人やベンチマーク用途の人です
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

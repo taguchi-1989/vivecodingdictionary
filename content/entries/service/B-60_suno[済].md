@@ -107,15 +107,19 @@ ElevenLabs、ACE-Step 1.5、Sora
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 無料プランと商用利用の規約が分かりづらく、どこまで使えるかをウォッチし続ける必要があります。パッと楽しむ用途にはお勧めです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 楽曲生成がここまで手軽になったことに驚きました。
 - 👍 良い点: 世代ごとにクオリティが上がり「いい曲」が量産できるレベルです。
 - 👎 ダメな点: 個人固有の偏りが薄く均質な仕上がりになりやすいです。
 - 👥 誰向けか: 音楽生成を自分で楽しみたい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

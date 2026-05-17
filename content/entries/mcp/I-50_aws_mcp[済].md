@@ -105,18 +105,22 @@ MCP、MCP Server、Amazon Bedrock
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - AWS 自体の初期設定で、MCP に到達する前につまずきそうです
 - AWS のやりたい概念が分からないと、MCP の提案も判断できません
 - MCP の前に AWS 自体の学習が必要になりそうです
+<!-- user-input:end key="stumble" -->
 
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: AI エージェントと対話で要件を詰めれば使えそうです
 - 👍 良い点: 画面のポチポチ操作をせずに済みそうです
 - 👎 ダメな点: AWS 自体の知識が多少必要になります
 - 👥 誰向けか: 企業で AWS 環境を構築する人向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

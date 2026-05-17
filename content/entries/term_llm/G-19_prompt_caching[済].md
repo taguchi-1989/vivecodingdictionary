@@ -108,17 +108,21 @@ Context Engineering、System Prompt、Token
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 最近聞いたばかりで、Serena MCP がこれに当たるかも（要確認）。
 - Claude Code 初期に「トークン効率を上げる」と話題になっていたのはキャッシュの話だと思います。
 - 業務では意識しないが、個人で遊ぶと気になり始める部分です。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: Serena MCP でキャッシュしてコストが下がる話が流行っていました。
 - 👍 良い点: トークン効率が上がります。
 - 👎 ダメな点: 今は CC ハーネスに組み込まれ、MCP で使う必要はないと思います。
 - 👥 誰向けか: 歴史的な文脈で見るくらいの位置づけです。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

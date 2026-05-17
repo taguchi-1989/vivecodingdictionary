@@ -111,15 +111,19 @@ VS Code, Marketplace, Cursor
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 入れないと英語表示のままで最初の関門になりますが、入れれば後は大変ではありません
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: これで日本語になってくれてよかった、という安堵感がありました。
 - 👍 良い点: 日本語で扱えるようになる点に尽きます。
 - 👎 ダメな点: これを入れないと VS Code 全体が英語のままで、非常に使いづらいです。
 - 👥 誰向けか: 日本語環境で VS Code を使いたい人全般に必要です。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

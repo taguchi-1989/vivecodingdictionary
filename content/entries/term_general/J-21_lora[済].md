@@ -107,15 +107,19 @@ QLoRA、Fine-tuning（J-16）、パラメータ数（J-22）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 「LoRA で微調整する」という話を聞いたとき、何となく分かったようで分かっていない感覚でした。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 名前が可愛らしい用語、という印象です。
 - 👍 良い点: フル Fine-tuning より少ないリソースで個人 PC でも調整できます。
 - 👎 ダメな点: 元モデルが入れ替わると調整がやり直しになりがちです。
 - 👥 誰向けか: 画像生成で自分好みに調整したい個人ユーザー向けです。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

@@ -108,15 +108,19 @@ NVIDIA, LPU, GroqCloud
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - xAI の Grok と Groq の区別が非常に分かりづらいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 名前が Grok と混同しやすいです。
 - 👍 良い点: OSS 系モデルを高速に回せます。
 - 👎 ダメな点: フロンティアモデル比では性能面で見劣りします。
 - 👥 誰向けか: 速度重視のマニア層向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

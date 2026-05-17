@@ -106,16 +106,20 @@ Prompt Engineering、Context Engineering、Zero-shot
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - チャットで初めて認識した程度で、チューニング的な概念と捉えています
 - 自分の仕事に効くのか、実用に持っていけるかが難しいです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 今回初めてちゃんと見たかも。
 - 👍 良い点: Claude や GPT の応答をその場で調整できる点が良さそうです。
 - 👎 ダメな点: Gemini など回答が過去に引っ張られ、エコーチェンバー化しやすいです。
 - 👥 誰向けか: AI の出力をメタ的に扱っていく人向け。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

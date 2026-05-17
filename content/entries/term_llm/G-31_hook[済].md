@@ -104,17 +104,21 @@ Tool Use（G-30）／settings.json（G-23）／Slash Command。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 複数ルールを口頭で指定したとき 100% 効いているか確認しづらいです。
 - モデルの問題か登録ミスかの判別がつきません。
 - 自分で細かく調整するときの手順が分からずつまずきます。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 条件付けで動かせるので、使いこなせれば便利そう。
 - 👍 良い点: コミット前のチェックなどを自動で回せるのが良い。
 - 👎 ダメな点: 細かい設定はハードルが高く、Claude Code 任せになりがちです。
 - 👥 誰向けか: エージェント自動化を試みて Hook が効かず不安になった人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

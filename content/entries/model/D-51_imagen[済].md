@@ -106,16 +106,20 @@ Vertex AI、Gemini API、DALL-E との比較。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 画像生成モデルの名前があまり有名ではありません
 - Whisk などで使うときにどの版か表示されにくく分かりづらいです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: Google の画像生成モデルは上手です
 - 👍 良い点: Whisk でほぼ使い放題、しかも無料で使えました
 - 👎 ダメな点: Nano Banana や GPT の画像生成より劣ります
 - 👥 誰向けか: 以前の世代の画像生成レベルを知りたい人
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

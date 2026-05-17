@@ -103,15 +103,19 @@ Attention、LLM（J-14）、Deep Learning（J-11）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 以前の機械学習の限界点と Transformer がなぜ突破できたかを押さえないと、すごさが伝わりません。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 名前がかっこいいモデル、という印象です
 - 👍 良い点: Attention 機構でそれまでのボトルネックを一気に超えた点が革命的です。
 - 👎 ダメな点: これ単体では現代の LLM にならず、他の工夫も含めないと理解が浅くなります。
 - 👥 誰向けか: LLM の仕組みをちゃんと理解したい人には必須の用語です
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

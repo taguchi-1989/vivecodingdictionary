@@ -116,17 +116,21 @@ Cursor（B-4）、VS Code（F-30）、GitHub（F-60）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 「GitHub」という言葉自体にアレルギーがあり入りにくかったです。
 - M365 / Edge / GitHub の各 Copilot の違いが分かりにくかったです。
 - 入力コードが学習に使われるか不明でした（ビジネス以上なら使われない仕組みです）。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: Claude Code と比べると使いづらく感じました
 - 👍 良い点: アップデートが頻繁で、いまではエージェント的な操作もできるようになりました
 - 👎 ダメな点: 寛大だった使用量が 2026 年 6 月からトークンベース課金に下がりました。
 - 👥 誰向けか: 企業で自分用のツールを作って使いたい市民開発者向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

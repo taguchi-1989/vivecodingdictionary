@@ -115,17 +115,21 @@ WSL、PowerShell、シェルスクリプト
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - コマンドプロンプトに bash コマンドをコピペしても動きません。
 - bash は WSL などの Linux 環境で動くという点の理解が必要です。
 - コマンドプロンプトと PowerShell も似ていて理解できませんでした。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: コマンドプロンプトっぽいけど違うみたいです
 - 👍 良い点: Linux ベースの操作ができます
 - 👎 ダメな点: Windows ベースだと少し工夫が必要でひと手間かかります
 - 👥 誰向けか: LLM をエージェントとして使っていく人には結構ポイントになると思います
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

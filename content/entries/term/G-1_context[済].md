@@ -99,17 +99,21 @@ Context Engineering、Prompt Caching、RAG、Memory。
 
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 「コンテキスト」は日常語と距離があり、「文脈」と言ってくれた方が伝わりやすいと感じます。
 - 入れすぎても少なすぎても劣化すると言われますが、ちょうどよい量の感覚が掴めません。
 - 会話が長くなると重要な情報が勝手に圧縮・消去されることがあります。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象:
 - 👍 良い点:
 - 👎 ダメな点:
 - 👥 誰向けか:
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

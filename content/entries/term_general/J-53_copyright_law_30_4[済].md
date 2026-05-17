@@ -106,15 +106,19 @@ TDM 例外、Fair Use、文化庁ガイドライン
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - LLM で進めても法務確認が必要で法務も判断しきれず宙吊りになりがちです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 国内で学習させてベースモデルが作れる根拠、と読めます
 - 👍 良い点: 法的な根拠として明示できる点
 - 👎 ダメな点: 線引きが難しい点
 - 👥 誰向けか: 社内データで学習させる場面に関わる人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

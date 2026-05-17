@@ -106,15 +106,19 @@ AGI、Singularity、AI 倫理
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - AGI 到達が現実味を帯びるにつれ ASI の議論も切実になりましたが、人間側の認知が追いついていない印象です
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 今回初めて見た言葉です。
 - 👍 良い点: LLM の進化を見て ASI 相当に到達しうると感じる場面が増えました。
 - 👎 ダメな点: バイアスが働きやすく客観的に語るのが難しいです。
 - 👥 誰向けか: 今と未来をまたいで AI のあり方を議論したい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

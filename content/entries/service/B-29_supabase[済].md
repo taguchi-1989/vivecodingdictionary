@@ -109,16 +109,20 @@ PostgreSQL、Row Level Security、pgvector
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - DB＋認証が一括で乗る利点が最初はピンと来ませんでした。
 - SQL エディタの挙動もデータベース概念なしでは理解が難しい部分です。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: LLM に「無料 DB ならここ」と紹介されたサイトです。
 - 👍 良い点: 慣れれば比較的楽で、AI への委任もしやすい環境です。
 - 👎 ダメな点: 初学者にとっての取っ付きにくさはあります。
 - 👥 誰向けか: 個人サイトや小〜中規模サービスを運用したい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

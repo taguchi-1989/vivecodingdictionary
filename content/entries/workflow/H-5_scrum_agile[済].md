@@ -106,15 +106,19 @@ Kanban、XP、SAFe、DevOps
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - ひとり開発だとそのまま当てはめづらい概念です。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: SE の人が組織で回すやり方、という印象です
 - 👍 良い点: 従来のエンジニアリングスタイルだと、進め方の効率が上がっていく仕組みです
 - 👎 ダメな点: AI エージェントで自動化できる工程を人手で回す必要が薄い印象です。
 - 👥 誰向けか: AI エージェントを前提に置かない、従来型のチーム開発をする人向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

@@ -103,17 +103,21 @@ Extended Thinking、Artifacts、MCP、Projects、ナーフ（G-46）。
 
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - SE からの評価が高い理由が最初わかりませんでした。
 - 画像生成や検索がなく、ChatGPT と比べて何がすごいのかつかめませんでした。
 - ナーフ騒ぎで性能の見え方が安定せず、評価が定まりにくかったです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 環境構築が思ったより大変でした（VS Code や Node.js でつまずきました）。
 - 👍 良い点: Claude Code がファイル編集まで自動実行してくれた瞬間に感動しました。
 - 👎 ダメな点: 価格が高く、Sonnet だと表面的な修正しか入りません。
 - 👥 誰向けか: しっかり扱えるリテラシーの高い人が活きる印象です。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

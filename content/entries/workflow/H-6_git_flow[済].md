@@ -105,15 +105,19 @@ GitHub Flow、Trunk-Based Development、CI/CD
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - そもそも馴染みのない言葉で、図を見ても自分の作業にどう紐づくのかが掴みにくいです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 今回初めて聞いた言葉です
 - 👍 良い点: ブランチ運用の形としては綺麗にまとまっている感じがあります
 - 👎 ダメな点: 人間が運用すると認知コストが高く、ひとり開発だと過剰になりがちです
 - 👥 誰向けか: チームで明確なリリース管理が必要な現場向けで、個人開発には重い印象です
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

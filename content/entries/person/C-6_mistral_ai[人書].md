@@ -108,17 +108,21 @@ D-41 Mistral 系モデル、B-25 Azure、C-1 OpenAI
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 会社名と代表モデル名がほぼ同じで「どっちの話？」となりやすいです。
 - 「Mistral」が文脈で会社かモデルかに振れ、記事を読むとき読み替えが要ります。
 - 企業の話なのか個別モデルの話なのか、辞書を引いた瞬間に整理しづらいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象:
 - 👍 良い点:
 - 👎 ダメな点:
 - 👥 誰向けか:
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

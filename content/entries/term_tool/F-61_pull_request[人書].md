@@ -107,16 +107,20 @@ GitHub Actions、コードレビュー、branch
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 名前が悪くて分かりづらいです。「承認依頼」と理解していますが名前からは結びつきません。
 - git のプル・プッシュのリクエストと説明すると理解できますが、日本語でそのまま扱うのは難しいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 名前から動作が想像できません。
 - 👍 良い点: 監査の仕組みとしてバイブコーダーには絶対必要なものです。
 - 👎 ダメな点: 名前が分かりづらく概念理解に時間がかかります。
 - 👥 誰向けか: バイブコーダー全員が押さえるべきです。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

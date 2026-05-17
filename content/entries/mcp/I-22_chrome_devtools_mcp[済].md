@@ -106,15 +106,19 @@ MCP Server、Playwright MCP、Chrome DevTools Protocol
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - Playwright との差分が分かりにくく、どちらを使うか判断が難しいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象:Playwright と並ぶブラウザ操作役で便利そうです
 - 👍 良い点:Chrome のパフォーマンス計測も任せられるようです
 - 👎 ダメな点:Chrome 専用で Firefox や Safari は使えません
 - 👥 誰向けか:Chrome だけ対応させたい人向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

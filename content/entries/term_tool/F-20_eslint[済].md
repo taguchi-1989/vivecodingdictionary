@@ -110,16 +110,20 @@ Prettier、TypeScript、CI/CD
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - JS なのになぜ ES という略称なのか最初は分かりませんでした。「リント」の意味を掴むまでも時間がかかりました。
 - チェックを厳しくすると `any` 型だらけになって収拾がつかなくなるジレンマを経験しました。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: チェックしてくれるなら良いツールだろうと感じました。
 - 👍 良い点: 機械的にチェックできる仕組みは必須です。今や入れておくべきツールです。
 - 👎 ダメな点: AI エージェントと組み合わせると設定が崩れやすくなります。
 - 👥 誰向けか: AI エージェントにかなりの部分を任せていきたい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

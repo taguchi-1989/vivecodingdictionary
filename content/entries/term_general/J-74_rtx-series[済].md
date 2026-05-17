@@ -111,17 +111,21 @@ VRAM、Tensor コア、H100
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - マイニング→ゲーム→ローカル LLM と用途が広がりすぎて把握しづらいです
 - Quadro との混同や 40/50 世代の違いが追えなくなりがちです
 - RTX 2070 Ti 世代の記憶が強く、50 世代を聞くと「随分先まで来た」と感じます
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: レイトレーシングのゲーム用、という印象でした
 - 👍 良い点: ゲーム用からローカル LLM の推論まで幅広く使える点
 - 👎 ダメな点: 最近は値段が高騰しすぎている点
 - 👥 誰向けか: ハイスペック PC を使う人で、一般層からは縁遠い水準になっています
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

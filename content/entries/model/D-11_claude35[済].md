@@ -105,17 +105,21 @@ Artifacts、Computer use、Claude 4 系。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 3.5 Sonnet に初代と v2 があり、どちらの話か分かりにくいです。
 - 古い LLM が「最新は 3.5 Sonnet」と返し現役把握がずれます。
 - Opus が最上位と思われがちですが 3.5 系は Sonnet が先行。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象:
 - 👍 良い点:
 - 👎 ダメな点:
 - 👥 誰向けか:
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

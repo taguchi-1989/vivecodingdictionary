@@ -100,15 +100,19 @@ Jamstack、CI/CD、サーバレス、Vercel（バーセル）。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - index.html の配置やフォルダ命名のお作法で苦労しました。今は AI エージェントに任せれば困らない領域です。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 自分のブログをネットに公開できる感動がありました。
 - 👍 良い点: 無料から始められて操作も比較的簡単です。
 - 👎 ダメな点: お作法はあり、初心者は AI に伴走してもらわないと詰まりやすいです。
 - 👥 誰向けか: ブログや自分のメディアを発信したい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

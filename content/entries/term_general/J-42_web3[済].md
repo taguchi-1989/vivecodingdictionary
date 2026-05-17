@@ -108,15 +108,19 @@ Web の世代比較と「分散」の意味から入るのが近道です。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - フィンテック以外の広がり（NFT・DAO・分散型 SNS）がピンと来ません。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 本体（プロダクト）と周辺（投機）の区別がいまひとつ分かりませんでした。
 - 👍 良い点: 分散・自己主権の思想は時代の対抗軸として面白いです。
 - 👎 ダメな点: 投機色が先行し、技術として何を解決したいか伝わりにくいです。
 - 👥 誰向けか: フィンテック・暗号資産や Web 次世代像を考えたい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

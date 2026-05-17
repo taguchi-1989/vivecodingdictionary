@@ -112,15 +112,19 @@ Markdown Preview Enhanced（F-35）、Mermaid（F-140）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 目次生成は便利ですが、LaTeX や Mermaid 入り PDF 印刷でうまくいかずハマりやすかったです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: Word にある機能を Markdown でも使えるのが便利だな、という感覚でした。
 - 👍 良い点: 自分で触るときの細かい効率化につながります。
 - 👎 ダメな点: できないことがあり、楽な別の方法もあるため最近は使う機会が減っています。
 - 👥 誰向けか: Markdown を自分で直接書いて管理したい人向けです。
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

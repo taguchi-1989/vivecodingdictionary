@@ -108,15 +108,19 @@ CDN、Workers、R2、Vercel、Netlify。
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 管理画面が英語中心で取っ付きにくく、内部検索もトップから辿る前提で使いづらいです。
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: CDN とドメイン管理を一括でやってくれる印象です。
 - 👍 良い点: 提供範囲が広く価格も安め、信頼できるブランドです。
 - 👎 ダメな点: 管理画面の検索機能の使い勝手はいまひとつです。
 - 👥 誰向けか: 公開・運用まで通したいバイブコーダー向けです。
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

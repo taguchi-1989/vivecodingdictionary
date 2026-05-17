@@ -104,16 +104,20 @@ Ollama、ファインチューニング、量子化（Quantization）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 大きいモデルはデータセンター級 GPU が要り、個人 PC では動かせません
 - フロンティアモデルしか追わない人には印象が薄いです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: LLM の論文でよく名前を聞く印象です
 - 👍 良い点: オープンソース戦略で比較的自由に使えます
 - 👎 ダメな点: Facebook の思想があまり好きではありません
 - 👥 誰向けか: LLM 研究者向けかなと思います
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

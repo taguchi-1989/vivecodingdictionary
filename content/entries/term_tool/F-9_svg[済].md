@@ -107,16 +107,20 @@ HTML（F-4）、CSS（F-5）、JavaScript（F-1）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 画像のつもりで開くとテキストの羅列が出てきて驚きました
 - できることの多さに期待が膨らむ一方、実際には難しい場面もあります
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 軽くしっかりした画像が出せ、LLM に書かせられると知って驚きました
 - 👍 良い点: LLM が得意で再現性があり、後から編集もできる点が優れています
 - 👎 ダメな点: LLM の精度がまだ足りず、CAD 相当のレベルには至っていません
 - 👥 誰向けか: 編集可能な画像を作りたい人向けで、今後の可能性に注目です
+<!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
 

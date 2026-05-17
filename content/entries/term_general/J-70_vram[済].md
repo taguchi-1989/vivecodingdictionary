@@ -107,17 +107,21 @@ GPU（J-77）、パラメータ数（J-22）、量子化（J-19）
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - コンシューマー GPU だとフロンティアモデルが載りきらない理由がここに集約されます。
 - Mac 開発者が多いのは RAM と VRAM を共通化してコスパが良いからです。
 - 
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: メモリにも色々あるんだな、と知る入口でした
 - 👍 良い点: GPU の性能を「動くかどうか」で単純に評価できる指標になる点
 - 👎 ダメな点: そもそも動かない、という制約はやはり厳しいです
 - 👥 誰向けか: ローカル llm 試す人は必須かな
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

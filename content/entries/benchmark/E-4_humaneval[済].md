@@ -102,15 +102,19 @@ SWE-Bench、MBPP、pass@k
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - Python 評価なのに名前に Python が入らず分かりづらいです
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: 今回調べていて初めて見ました
 - 👍 良い点: Python コードを点数で評価できる点が良いです
 - 👎 ダメな点: 飽和気味で、今の最低限が分かる程度でしょうか
 - 👥 誰向けか: モデルの強さを最低限把握したい人向けです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->

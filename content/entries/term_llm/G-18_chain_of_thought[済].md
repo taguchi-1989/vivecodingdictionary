@@ -111,17 +111,21 @@ Prompt Engineering, Thinking モデル, Self-Consistency
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 非エンジニアのつまずき
 
+<!-- user-input:start key="stumble" -->
 - 昔の AI の本では「こう指示するといい」と書かれていた手法です
 - 今のモデルでやるとトークンの無駄遣いになるだけです
 - 「昔は必要、今は不要」という文脈で説明するコストが面倒です
+<!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
+<!-- user-input:start key="my_comment" -->
 - 🙂 第一印象: これで AI の出力を賢くできると思いました
 - 👍 良い点: 昔は実際にスコアが上がり、手元でできるハック手法として良かったです
 - 👎 ダメな点: 今はモデルに組み込まれていて、もう要らなくなっています
 - 👥 誰向けか: 昔のモデルを使う人向け。量子化モデルでも不要になったレベルです
+<!-- user-input:end key="my_comment" -->
 
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
