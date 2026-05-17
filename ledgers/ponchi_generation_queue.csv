@@ -326,23 +326,23 @@ J-42,Web3,term_general,ready,content/entries/term_general/J-42_web3[済].md,Fals
 J-43,SaaS,term_general,needs_review,content/entries/term_general/J-43_saas[人書].md,False,False,later,missing_svg
 J-50,AI 倫理,term_general,skeleton,,False,False,later,missing_svg
 J-51,Hallucination,term_general,ready,content/entries/term_general/J-51_hallucination[済].md,False,True,done,final_image_without_svg
-J-52,Sycophancy,term_general,ready,content/entries/term_general/J-52_sycophancy[済].md,False,False,ready_missing_svg,missing_svg
-J-53,著作権法 30 条の 4（日本）,term_general,ready,content/entries/term_general/J-53_copyright_law_30_4[済].md,False,False,ready_missing_svg,missing_svg
-J-54,ISO/IEC 42001,term_general,ready,content/entries/term_general/J-54_iso_iec_42001[済].md,False,False,ready_missing_svg,missing_svg
+J-52,Sycophancy,term_general,ready,content/entries/term_general/J-52_sycophancy[済].md,False,True,done,final_image_without_svg
+J-53,著作権法 30 条の 4（日本）,term_general,ready,content/entries/term_general/J-53_copyright_law_30_4[済].md,False,True,done,final_image_without_svg
+J-54,ISO/IEC 42001,term_general,ready,content/entries/term_general/J-54_iso_iec_42001[済].md,False,True,done,final_image_without_svg
 J-55,個人情報保護法,term_general,drafting,,False,False,later,missing_svg
-J-56,GDPR,term_general,ready,content/entries/term_general/J-56_gdpr[済].md,False,False,ready_missing_svg,missing_svg
+J-56,GDPR,term_general,ready,content/entries/term_general/J-56_gdpr[済].md,False,True,done,final_image_without_svg
 J-62,チューリングテスト,term_general,drafting,,False,False,later,missing_svg
-J-70,VRAM,term_general,ready,content/entries/term_general/J-70_vram[済].md,False,False,ready_missing_svg,missing_svg
-J-71,RAM,term_general,ready,content/entries/term_general/J-71_ram[済].md,False,False,ready_missing_svg,missing_svg
-J-72,H100,term_general,ready,content/entries/term_general/J-72_h100[済].md,False,False,ready_missing_svg,missing_svg
-J-73,Blackwell,term_general,ready,content/entries/term_general/J-73_blackwell[済].md,False,False,ready_missing_svg,missing_svg
-J-74,RTX シリーズ,term_general,ready,content/entries/term_general/J-74_rtx-series[済].md,False,False,ready_missing_svg,missing_svg
-J-75,Tensor コア,term_general,ready,content/entries/term_general/J-75_tensor-core[済].md,False,False,ready_missing_svg,missing_svg
-J-76,CPU,term_general,ready,content/entries/term_general/J-76_cpu[済].md,False,False,ready_missing_svg,missing_svg
-J-77,GPU (概念),term_general,ready,content/entries/term_general/J-77_gpu[済].md,False,False,ready_missing_svg,missing_svg
-J-78,HDD,term_general,ready,content/entries/term_general/J-78_hdd[済].md,False,False,ready_missing_svg,missing_svg
-J-79,SSD,term_general,ready,content/entries/term_general/J-79_ssd[済].md,False,False,ready_missing_svg,missing_svg
-J-80,SATA,term_general,ready,content/entries/term_general/J-80_sata[済].md,False,False,ready_missing_svg,missing_svg
+J-70,VRAM,term_general,ready,content/entries/term_general/J-70_vram[済].md,False,True,done,final_image_without_svg
+J-71,RAM,term_general,ready,content/entries/term_general/J-71_ram[済].md,False,True,done,final_image_without_svg
+J-72,H100,term_general,ready,content/entries/term_general/J-72_h100[済].md,False,True,done,final_image_without_svg
+J-73,Blackwell,term_general,ready,content/entries/term_general/J-73_blackwell[済].md,False,True,done,final_image_without_svg
+J-74,RTX シリーズ,term_general,ready,content/entries/term_general/J-74_rtx-series[済].md,False,True,done,final_image_without_svg
+J-75,Tensor コア,term_general,ready,content/entries/term_general/J-75_tensor-core[済].md,False,True,done,final_image_without_svg
+J-76,CPU,term_general,ready,content/entries/term_general/J-76_cpu[済].md,False,True,done,final_image_without_svg
+J-77,GPU (概念),term_general,ready,content/entries/term_general/J-77_gpu[済].md,False,True,done,final_image_without_svg
+J-78,HDD,term_general,ready,content/entries/term_general/J-78_hdd[済].md,False,True,done,final_image_without_svg
+J-79,SSD,term_general,ready,content/entries/term_general/J-79_ssd[済].md,False,True,done,final_image_without_svg
+J-80,SATA,term_general,ready,content/entries/term_general/J-80_sata[済].md,False,True,done,final_image_without_svg
 J-81,M.2,term_general,ready,content/entries/term_general/J-81_m_2[済].md,False,False,ready_missing_svg,missing_svg
 J-90,GUI,term_general,ready,content/entries/term_general/J-90_gui[済].md,False,False,ready_missing_svg,missing_svg
 J-91,CLI,term_general,ready,content/entries/term_general/J-91_cli[済].md,False,False,ready_missing_svg,missing_svg
