@@ -1,0 +1,1043 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ponchi Quality Review</title>
+  <style>
+    :root {
+      --bg: #f6f4ef;
+      --panel: #ffffff;
+      --ink: #202124;
+      --muted: #666b70;
+      --line: #d8d2c7;
+      --good: #1d7a4d;
+      --warn: #a66a00;
+      --bad: #b3261e;
+      --blue: #245e9d;
+      --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--line);
+      background: rgba(246, 244, 239, 0.96);
+      backdrop-filter: blur(10px);
+    }
+
+    .topbar {
+      display: grid;
+      grid-template-columns: minmax(220px, 1fr) auto;
+      gap: 16px;
+      align-items: center;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 14px 18px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    button,
+    .file-button,
+    select,
+    input[type="search"] {
+      min-height: 34px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--panel);
+      color: var(--ink);
+      font: inherit;
+      font-size: 13px;
+    }
+
+    button,
+    .file-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 0 12px;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+    }
+
+    button.primary {
+      border-color: #194d82;
+      background: #245e9d;
+      color: white;
+    }
+
+    button:disabled {
+      cursor: not-allowed;
+      opacity: 0.55;
+    }
+
+    input[type="file"] {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+    }
+
+    main {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 18px;
+    }
+
+    .toolbar {
+      display: grid;
+      grid-template-columns: 1fr auto auto auto;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    input[type="search"] {
+      width: 100%;
+      padding: 0 11px;
+    }
+
+    select {
+      padding: 0 10px;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(130px, 1fr));
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 10px 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .metric-label {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .metric-value {
+      margin-top: 2px;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 12px;
+    }
+
+    .card {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      min-height: 330px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .card.reference {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 2px rgba(36, 94, 157, 0.18);
+    }
+
+    .image-wrap {
+      display: grid;
+      place-items: center;
+      height: 178px;
+      background:
+        linear-gradient(45deg, #e9e5dc 25%, transparent 25%),
+        linear-gradient(-45deg, #e9e5dc 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #e9e5dc 75%),
+        linear-gradient(-45deg, transparent 75%, #e9e5dc 75%);
+      background-color: #f9f8f4;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+      background-size: 20px 20px;
+    }
+
+    .image-wrap img {
+      display: block;
+      max-width: 100%;
+      max-height: 176px;
+      object-fit: contain;
+    }
+
+    .card-body {
+      padding: 10px;
+    }
+
+    .name-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      align-items: center;
+      min-width: 0;
+    }
+
+    .file-name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .score {
+      min-width: 45px;
+      text-align: right;
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .score.good {
+      color: var(--good);
+    }
+
+    .score.warn {
+      color: var(--warn);
+    }
+
+    .score.bad {
+      color: var(--bad);
+    }
+
+    .bars {
+      display: grid;
+      gap: 5px;
+      margin-top: 9px;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 62px 1fr 34px;
+      gap: 6px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .bar {
+      height: 6px;
+      border-radius: 999px;
+      background: #ece7de;
+      overflow: hidden;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      border-radius: 999px;
+      background: var(--blue);
+    }
+
+    .flags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      min-height: 23px;
+      margin-top: 9px;
+    }
+
+    .flag {
+      border-radius: 999px;
+      background: #f2eadc;
+      color: #6d4b16;
+      padding: 2px 7px;
+      font-size: 11px;
+    }
+
+    .status-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--line);
+    }
+
+    .status-row button {
+      min-height: 36px;
+      border: 0;
+      border-right: 1px solid var(--line);
+      border-radius: 0;
+      box-shadow: none;
+      background: #fbfaf7;
+    }
+
+    .status-row button:last-child {
+      border-right: 0;
+    }
+
+    .status-row button.active[data-status="OK"] {
+      background: #e4f2eb;
+      color: var(--good);
+      font-weight: 700;
+    }
+
+    .status-row button.active[data-status="微修正"] {
+      background: #fff0d6;
+      color: var(--warn);
+      font-weight: 700;
+    }
+
+    .status-row button.active[data-status="NG"] {
+      background: #fce6e3;
+      color: var(--bad);
+      font-weight: 700;
+    }
+
+    .empty {
+      display: grid;
+      place-items: center;
+      min-height: 420px;
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.5);
+      color: var(--muted);
+      text-align: center;
+      padding: 28px;
+    }
+
+    .empty strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--ink);
+      font-size: 18px;
+    }
+
+    dialog {
+      width: min(860px, calc(100vw - 32px));
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 0;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    dialog::backdrop {
+      background: rgba(0, 0, 0, 0.35);
+    }
+
+    .dialog-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      padding: 12px 14px;
+    }
+
+    .dialog-body {
+      display: grid;
+      grid-template-columns: minmax(240px, 340px) 1fr;
+      gap: 14px;
+      padding: 14px;
+    }
+
+    .dialog-body img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: contain;
+      background: #f7f5ef;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+    }
+
+    .details {
+      display: grid;
+      align-content: start;
+      gap: 8px;
+    }
+
+    .detail-line {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 10px;
+      border-bottom: 1px solid #eee9df;
+      padding-bottom: 7px;
+      font-size: 13px;
+    }
+
+    .detail-line span:first-child {
+      color: var(--muted);
+    }
+
+    .note {
+      width: 100%;
+      min-height: 90px;
+      resize: vertical;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 8px;
+      font: inherit;
+    }
+
+    @media (max-width: 780px) {
+      .topbar,
+      .toolbar,
+      .dialog-body {
+        grid-template-columns: 1fr;
+      }
+
+      .controls {
+        justify-content: flex-start;
+      }
+
+      .summary {
+        grid-template-columns: repeat(2, minmax(130px, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <div>
+        <h1>Ponchi Quality Review</h1>
+        <div class="subtitle">基準画像を選び、生成画像の見た目のばらつきを一覧で確認する</div>
+      </div>
+      <div class="controls">
+        <label class="file-button">
+          画像フォルダ
+          <input id="folderInput" type="file" webkitdirectory directory multiple accept="image/*">
+        </label>
+        <label class="file-button">
+          画像を追加
+          <input id="fileInput" type="file" multiple accept="image/*">
+        </label>
+        <button id="loadSample" type="button">サンプル読込</button>
+        <button id="exportCsv" type="button" disabled>CSV出力</button>
+        <button id="clearAll" type="button">クリア</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="summary" aria-label="summary">
+      <div class="metric">
+        <div class="metric-label">読み込み枚数</div>
+        <div id="countMetric" class="metric-value">0</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">基準画像</div>
+        <div id="referenceMetric" class="metric-value">未選択</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">平均スコア</div>
+        <div id="averageMetric" class="metric-value">-</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">要確認</div>
+        <div id="reviewMetric" class="metric-value">0</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">人間判定済み</div>
+        <div id="judgedMetric" class="metric-value">0</div>
+      </div>
+    </section>
+
+    <section class="toolbar" aria-label="filters">
+      <input id="searchBox" type="search" placeholder="ファイル名で絞り込み">
+      <select id="sortMode">
+        <option value="scoreAsc">スコア低い順</option>
+        <option value="scoreDesc">スコア高い順</option>
+        <option value="nameAsc">名前順</option>
+        <option value="flagDesc">警告多い順</option>
+      </select>
+      <select id="filterMode">
+        <option value="all">全て</option>
+        <option value="needsReview">要確認のみ</option>
+        <option value="unjudged">未判定のみ</option>
+        <option value="ok">OK</option>
+        <option value="fix">微修正</option>
+        <option value="ng">NG</option>
+      </select>
+      <button id="recompute" class="primary" type="button" disabled>再スコア</button>
+    </section>
+
+    <section id="grid" class="grid" aria-label="image grid"></section>
+    <section id="empty" class="empty">
+      <div>
+        <strong>画像フォルダを選んで開始</strong>
+        <code>assets/ponchi/final</code> を選ぶと、WebP画像をまとめて読み込めます。読み込み後、カードの「基準にする」を押すとスコアが付きます。
+      </div>
+    </section>
+  </main>
+
+  <dialog id="detailDialog">
+    <div class="dialog-head">
+      <strong id="detailName">detail</strong>
+      <button id="closeDialog" type="button">閉じる</button>
+    </div>
+    <div class="dialog-body">
+      <img id="detailImage" alt="">
+      <div class="details">
+        <div class="detail-line"><span>スコア</span><strong id="detailScore">-</strong></div>
+        <div class="detail-line"><span>サイズ</span><span id="detailSize">-</span></div>
+        <div class="detail-line"><span>色</span><span id="detailColor">-</span></div>
+        <div class="detail-line"><span>明るさ</span><span id="detailLuma">-</span></div>
+        <div class="detail-line"><span>彩度</span><span id="detailSat">-</span></div>
+        <div class="detail-line"><span>コントラスト</span><span id="detailContrast">-</span></div>
+        <div class="detail-line"><span>エッジ密度</span><span id="detailEdge">-</span></div>
+        <div class="detail-line"><span>被写体量</span><span id="detailInk">-</span></div>
+        <div class="detail-line"><span>警告</span><span id="detailFlags">-</span></div>
+        <label>
+          メモ
+          <textarea id="detailNote" class="note" placeholder="修正指示、再生成理由、気になる点"></textarea>
+        </label>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    const state = {
+      items: [],
+      referenceId: null,
+      selectedId: null
+    };
+
+    const els = {
+      folderInput: document.getElementById("folderInput"),
+      fileInput: document.getElementById("fileInput"),
+      loadSample: document.getElementById("loadSample"),
+      exportCsv: document.getElementById("exportCsv"),
+      clearAll: document.getElementById("clearAll"),
+      recompute: document.getElementById("recompute"),
+      searchBox: document.getElementById("searchBox"),
+      sortMode: document.getElementById("sortMode"),
+      filterMode: document.getElementById("filterMode"),
+      grid: document.getElementById("grid"),
+      empty: document.getElementById("empty"),
+      countMetric: document.getElementById("countMetric"),
+      referenceMetric: document.getElementById("referenceMetric"),
+      averageMetric: document.getElementById("averageMetric"),
+      reviewMetric: document.getElementById("reviewMetric"),
+      judgedMetric: document.getElementById("judgedMetric"),
+      detailDialog: document.getElementById("detailDialog"),
+      detailName: document.getElementById("detailName"),
+      detailImage: document.getElementById("detailImage"),
+      detailScore: document.getElementById("detailScore"),
+      detailSize: document.getElementById("detailSize"),
+      detailColor: document.getElementById("detailColor"),
+      detailLuma: document.getElementById("detailLuma"),
+      detailSat: document.getElementById("detailSat"),
+      detailContrast: document.getElementById("detailContrast"),
+      detailEdge: document.getElementById("detailEdge"),
+      detailInk: document.getElementById("detailInk"),
+      detailFlags: document.getElementById("detailFlags"),
+      detailNote: document.getElementById("detailNote"),
+      closeDialog: document.getElementById("closeDialog")
+    };
+
+    const metricLabels = [
+      ["color", "色差"],
+      ["luma", "明度"],
+      ["contrast", "濃淡"],
+      ["edge", "線密度"],
+      ["ink", "被写体"]
+    ];
+
+    els.folderInput.addEventListener("change", event => loadFiles(event.target.files));
+    els.fileInput.addEventListener("change", event => loadFiles(event.target.files));
+    els.loadSample.addEventListener("click", loadSample);
+    els.searchBox.addEventListener("input", render);
+    els.sortMode.addEventListener("change", render);
+    els.filterMode.addEventListener("change", render);
+    els.recompute.addEventListener("click", computeScores);
+    els.exportCsv.addEventListener("click", exportCsv);
+    els.clearAll.addEventListener("click", clearAll);
+    els.closeDialog.addEventListener("click", () => els.detailDialog.close());
+    els.detailNote.addEventListener("input", () => {
+      const item = getSelected();
+      if (item) item.note = els.detailNote.value;
+    });
+
+    async function loadFiles(fileList) {
+      const files = Array.from(fileList)
+        .filter(file => file.type.startsWith("image/"))
+        .sort((a, b) => displayName(a).localeCompare(displayName(b), "ja"));
+
+      const existing = new Set(state.items.map(item => item.name));
+      const newItems = [];
+      for (const file of files) {
+        const name = displayName(file);
+        if (existing.has(name)) continue;
+        const url = URL.createObjectURL(file);
+        const image = await decodeImage(url);
+        const metrics = analyzeImage(image);
+        newItems.push({
+          id: crypto.randomUUID(),
+          name,
+          url,
+          width: image.naturalWidth,
+          height: image.naturalHeight,
+          metrics,
+          score: null,
+          parts: {},
+          flags: [],
+          status: "",
+          note: ""
+        });
+      }
+      state.items.push(...newItems);
+      if (!state.referenceId && state.items.length) {
+        state.referenceId = state.items[0].id;
+        computeScores();
+      }
+      render();
+    }
+
+    async function loadSample() {
+      const samplePaths = [
+        "assets/ponchi/final/B-1.webp",
+        "assets/ponchi/final/B-2.webp",
+        "assets/ponchi/final/B-3.webp",
+        "assets/ponchi/final/B-4.webp",
+        "assets/ponchi/final/B-8.webp",
+        "assets/ponchi/final/D-12.webp",
+        "assets/ponchi/final/F-1.webp",
+        "assets/ponchi/final/F-2.webp",
+        "assets/ponchi/final/G-1.webp",
+        "assets/ponchi/final/J-14.webp",
+        "assets/ponchi/final/C-1.webp",
+        "assets/ponchi/final/E-1.webp"
+      ];
+
+      const existing = new Set(state.items.map(item => item.name));
+      const newItems = [];
+      for (const path of samplePaths) {
+        if (existing.has(path)) continue;
+        const image = await decodeImage(`../../${path}`);
+        const metrics = analyzeImage(image);
+        newItems.push({
+          id: crypto.randomUUID(),
+          name: path,
+          url: `../../${path}`,
+          width: image.naturalWidth,
+          height: image.naturalHeight,
+          metrics,
+          score: null,
+          parts: {},
+          flags: [],
+          status: "",
+          note: ""
+        });
+      }
+      state.items.push(...newItems);
+      if (!state.referenceId && state.items.length) {
+        state.referenceId = state.items[0].id;
+        computeScores();
+      }
+      render();
+    }
+
+    function displayName(file) {
+      return file.webkitRelativePath || file.name;
+    }
+
+    function decodeImage(url) {
+      return new Promise((resolve, reject) => {
+        const image = new Image();
+        image.onload = () => resolve(image);
+        image.onerror = reject;
+        image.src = url;
+      });
+    }
+
+    function analyzeImage(image) {
+      const size = 96;
+      const canvas = document.createElement("canvas");
+      canvas.width = size;
+      canvas.height = size;
+      const ctx = canvas.getContext("2d", { willReadFrequently: true });
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(0, 0, size, size);
+
+      const scale = Math.min(size / image.naturalWidth, size / image.naturalHeight);
+      const w = image.naturalWidth * scale;
+      const h = image.naturalHeight * scale;
+      const x = (size - w) / 2;
+      const y = (size - h) / 2;
+      ctx.drawImage(image, x, y, w, h);
+
+      const data = ctx.getImageData(0, 0, size, size).data;
+      let r = 0;
+      let g = 0;
+      let b = 0;
+      let luma = 0;
+      let sat = 0;
+      let contrastSum = 0;
+      let ink = 0;
+      const lumas = new Float32Array(size * size);
+
+      for (let i = 0, p = 0; i < data.length; i += 4, p += 1) {
+        const rr = data[i];
+        const gg = data[i + 1];
+        const bb = data[i + 2];
+        const aa = data[i + 3] / 255;
+        const lr = rr * aa + 255 * (1 - aa);
+        const lg = gg * aa + 255 * (1 - aa);
+        const lb = bb * aa + 255 * (1 - aa);
+        const lum = 0.2126 * lr + 0.7152 * lg + 0.0722 * lb;
+        const max = Math.max(lr, lg, lb);
+        const min = Math.min(lr, lg, lb);
+        r += lr;
+        g += lg;
+        b += lb;
+        luma += lum;
+        sat += max === 0 ? 0 : (max - min) / max;
+        if (lum < 246) ink += 1;
+        lumas[p] = lum;
+      }
+
+      const n = size * size;
+      r /= n;
+      g /= n;
+      b /= n;
+      luma /= n;
+      sat /= n;
+      ink /= n;
+
+      for (let i = 0; i < lumas.length; i += 1) {
+        contrastSum += Math.abs(lumas[i] - luma);
+      }
+
+      let edge = 0;
+      for (let yy = 1; yy < size; yy += 1) {
+        for (let xx = 1; xx < size; xx += 1) {
+          const current = lumas[yy * size + xx];
+          const left = lumas[yy * size + xx - 1];
+          const up = lumas[(yy - 1) * size + xx];
+          if (Math.abs(current - left) + Math.abs(current - up) > 42) {
+            edge += 1;
+          }
+        }
+      }
+
+      return {
+        r,
+        g,
+        b,
+        luma,
+        saturation: sat,
+        contrast: contrastSum / n,
+        edgeDensity: edge / n,
+        inkRatio: ink,
+        aspect: image.naturalWidth / image.naturalHeight
+      };
+    }
+
+    function computeScores() {
+      const reference = getReference();
+      if (!reference) return;
+      for (const item of state.items) {
+        const result = compareMetrics(reference.metrics, item.metrics);
+        item.score = result.score;
+        item.parts = result.parts;
+        item.flags = result.flags;
+      }
+      render();
+    }
+
+    function compareMetrics(ref, target) {
+      const colorDiff = distance([ref.r, ref.g, ref.b], [target.r, target.g, target.b]) / 441.7;
+      const lumaDiff = Math.abs(ref.luma - target.luma) / 255;
+      const satDiff = Math.abs(ref.saturation - target.saturation);
+      const contrastDiff = Math.abs(ref.contrast - target.contrast);
+      const edgeDiff = Math.abs(ref.edgeDensity - target.edgeDensity);
+      const inkDiff = Math.abs(ref.inkRatio - target.inkRatio);
+      const aspectDiff = Math.min(Math.abs(ref.aspect - target.aspect) / Math.max(ref.aspect, 0.1), 1);
+
+      const parts = {
+        color: quality(colorDiff, 0.23),
+        luma: quality(lumaDiff, 0.20),
+        saturation: quality(satDiff, 0.22),
+        contrast: quality(contrastDiff, 20),
+        edge: quality(edgeDiff, 0.095),
+        ink: quality(inkDiff, 0.45),
+        aspect: quality(aspectDiff, 0.20)
+      };
+
+      const score = Math.round(
+        parts.color * 0.20 +
+        parts.luma * 0.13 +
+        parts.saturation * 0.10 +
+        parts.contrast * 0.14 +
+        parts.edge * 0.16 +
+        parts.ink * 0.20 +
+        parts.aspect * 0.07
+      );
+
+      const flags = [];
+      if (parts.color < 72) flags.push("色味");
+      if (parts.luma < 72) flags.push("明るさ");
+      if (parts.contrast < 70) flags.push("濃淡");
+      if (parts.edge < 70) flags.push("線密度");
+      if (parts.ink < 70) flags.push("余白");
+      if (parts.aspect < 80) flags.push("比率");
+      if (score < 70) flags.push("外れ値");
+
+      return { score, parts, flags };
+    }
+
+    function distance(a, b) {
+      return Math.sqrt(a.reduce((sum, value, index) => sum + (value - b[index]) ** 2, 0));
+    }
+
+    function quality(diff, tolerance) {
+      return Math.max(0, Math.round(100 * (1 - diff / tolerance)));
+    }
+
+    function render() {
+      computeSummary();
+      const items = filteredItems();
+      els.grid.innerHTML = "";
+      els.empty.hidden = state.items.length > 0;
+      els.grid.hidden = state.items.length === 0;
+
+      const fragment = document.createDocumentFragment();
+      for (const item of items) {
+        fragment.appendChild(renderCard(item));
+      }
+      els.grid.appendChild(fragment);
+
+      els.recompute.disabled = !getReference();
+      els.exportCsv.disabled = state.items.length === 0;
+    }
+
+    function renderCard(item) {
+      const card = document.createElement("article");
+      card.className = "card";
+      if (item.id === state.referenceId) card.classList.add("reference");
+
+      const scoreClass = item.score === null ? "" : item.score >= 85 ? "good" : item.score >= 70 ? "warn" : "bad";
+      const flags = item.flags.length
+        ? item.flags.map(flag => `<span class="flag">${escapeHtml(flag)}</span>`).join("")
+        : `<span class="flag">警告なし</span>`;
+
+      card.innerHTML = `
+        <div class="image-wrap"><img src="${item.url}" alt="${escapeHtml(item.name)}"></div>
+        <div class="card-body">
+          <div class="name-row">
+            <div class="file-name" title="${escapeHtml(item.name)}">${escapeHtml(item.name)}</div>
+            <div class="score ${scoreClass}">${item.score === null ? "-" : item.score}</div>
+          </div>
+          <div class="bars">
+            ${metricLabels.map(([key, label]) => {
+              const value = key === "color" ? item.parts.color : item.parts[key];
+              const display = value === undefined ? 0 : value;
+              return `<div class="bar-row"><span>${label}</span><div class="bar"><span style="width:${display}%"></span></div><span>${value === undefined ? "-" : value}</span></div>`;
+            }).join("")}
+          </div>
+          <div class="flags">${flags}</div>
+          <div class="controls" style="justify-content:flex-start;margin-top:10px">
+            <button type="button" data-action="reference">基準にする</button>
+            <button type="button" data-action="detail">詳細</button>
+          </div>
+        </div>
+        <div class="status-row">
+          <button type="button" data-status="OK" class="${item.status === "OK" ? "active" : ""}">OK</button>
+          <button type="button" data-status="微修正" class="${item.status === "微修正" ? "active" : ""}">微修正</button>
+          <button type="button" data-status="NG" class="${item.status === "NG" ? "active" : ""}">NG</button>
+        </div>
+      `;
+
+      card.querySelector('[data-action="reference"]').addEventListener("click", () => {
+        state.referenceId = item.id;
+        computeScores();
+      });
+      card.querySelector('[data-action="detail"]').addEventListener("click", () => openDetail(item.id));
+      card.querySelectorAll("[data-status]").forEach(button => {
+        button.addEventListener("click", () => {
+          item.status = item.status === button.dataset.status ? "" : button.dataset.status;
+          render();
+        });
+      });
+
+      return card;
+    }
+
+    function filteredItems() {
+      const query = els.searchBox.value.trim().toLowerCase();
+      const mode = els.filterMode.value;
+      const items = state.items.filter(item => {
+        if (query && !item.name.toLowerCase().includes(query)) return false;
+        if (mode === "needsReview" && !needsReview(item)) return false;
+        if (mode === "unjudged" && item.status) return false;
+        if (mode === "ok" && item.status !== "OK") return false;
+        if (mode === "fix" && item.status !== "微修正") return false;
+        if (mode === "ng" && item.status !== "NG") return false;
+        return true;
+      });
+
+      const sortMode = els.sortMode.value;
+      return items.sort((a, b) => {
+        if (sortMode === "nameAsc") return a.name.localeCompare(b.name, "ja");
+        if (sortMode === "scoreDesc") return safeScore(b) - safeScore(a);
+        if (sortMode === "flagDesc") return b.flags.length - a.flags.length || safeScore(a) - safeScore(b);
+        return safeScore(a) - safeScore(b);
+      });
+    }
+
+    function safeScore(item) {
+      return item.score === null ? 101 : item.score;
+    }
+
+    function needsReview(item) {
+      return item.score !== null && (item.score < 70 || item.flags.length >= 2);
+    }
+
+    function computeSummary() {
+      const scores = state.items.map(item => item.score).filter(score => score !== null);
+      const average = scores.length
+        ? Math.round(scores.reduce((sum, score) => sum + score, 0) / scores.length)
+        : "-";
+      const reference = getReference();
+      els.countMetric.textContent = state.items.length;
+      els.referenceMetric.textContent = reference ? shortName(reference.name) : "未選択";
+      els.averageMetric.textContent = average;
+      els.reviewMetric.textContent = state.items.filter(needsReview).length;
+      els.judgedMetric.textContent = state.items.filter(item => item.status).length;
+    }
+
+    function openDetail(id) {
+      const item = state.items.find(candidate => candidate.id === id);
+      if (!item) return;
+      state.selectedId = id;
+      els.detailName.textContent = item.name;
+      els.detailImage.src = item.url;
+      els.detailImage.alt = item.name;
+      els.detailScore.textContent = item.score === null ? "-" : `${item.score} / 100`;
+      els.detailSize.textContent = `${item.width} x ${item.height}`;
+      els.detailColor.textContent = `R ${item.metrics.r.toFixed(1)}, G ${item.metrics.g.toFixed(1)}, B ${item.metrics.b.toFixed(1)}`;
+      els.detailLuma.textContent = item.metrics.luma.toFixed(1);
+      els.detailSat.textContent = item.metrics.saturation.toFixed(3);
+      els.detailContrast.textContent = item.metrics.contrast.toFixed(1);
+      els.detailEdge.textContent = item.metrics.edgeDensity.toFixed(3);
+      els.detailInk.textContent = item.metrics.inkRatio.toFixed(3);
+      els.detailFlags.textContent = item.flags.length ? item.flags.join(", ") : "なし";
+      els.detailNote.value = item.note || "";
+      els.detailDialog.showModal();
+    }
+
+    function getSelected() {
+      return state.items.find(item => item.id === state.selectedId);
+    }
+
+    function getReference() {
+      return state.items.find(item => item.id === state.referenceId);
+    }
+
+    function shortName(name) {
+      const base = name.split(/[\\/]/).pop();
+      return base.length > 12 ? `${base.slice(0, 10)}...` : base;
+    }
+
+    function exportCsv() {
+      const headers = [
+        "name",
+        "reference",
+        "score",
+        "status",
+        "flags",
+        "width",
+        "height",
+        "luma",
+        "saturation",
+        "contrast",
+        "edge_density",
+        "ink_ratio",
+        "note"
+      ];
+      const reference = getReference();
+      const rows = state.items.map(item => [
+        item.name,
+        reference ? reference.name : "",
+        item.score ?? "",
+        item.status,
+        item.flags.join("|"),
+        item.width,
+        item.height,
+        item.metrics.luma.toFixed(2),
+        item.metrics.saturation.toFixed(4),
+        item.metrics.contrast.toFixed(2),
+        item.metrics.edgeDensity.toFixed(4),
+        item.metrics.inkRatio.toFixed(4),
+        item.note
+      ]);
+      const csv = [headers, ...rows].map(row => row.map(csvCell).join(",")).join("\n");
+      const blob = new Blob([`\ufeff${csv}`], { type: "text/csv;charset=utf-8" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = `ponchi_quality_review_${new Date().toISOString().slice(0, 10)}.csv`;
+      link.click();
+      URL.revokeObjectURL(link.href);
+    }
+
+    function csvCell(value) {
+      const text = String(value ?? "");
+      return `"${text.replaceAll('"', '""')}"`;
+    }
+
+    function clearAll() {
+      for (const item of state.items) {
+        URL.revokeObjectURL(item.url);
+      }
+      state.items = [];
+      state.referenceId = null;
+      state.selectedId = null;
+      els.folderInput.value = "";
+      els.fileInput.value = "";
+      render();
+    }
+
+    function escapeHtml(value) {
+      return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#39;");
+    }
+
+    render();
+  </script>
+</body>
+</html>
