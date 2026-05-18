@@ -176,7 +176,7 @@
 
     .summary {
       display: grid;
-      grid-template-columns: repeat(6, minmax(130px, 1fr));
+      grid-template-columns: repeat(7, minmax(120px, 1fr));
       gap: 10px;
       margin-bottom: 16px;
     }
@@ -211,6 +211,62 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
       gap: 12px;
+    }
+
+    .regen-panel {
+      display: grid;
+      gap: 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      margin-bottom: 16px;
+      padding: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .regen-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .regen-title {
+      font-weight: 700;
+    }
+
+    .regen-subtitle {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .regen-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 8px;
+    }
+
+    .regen-item {
+      display: grid;
+      gap: 4px;
+      border: 1px solid #e4ddd2;
+      border-radius: 6px;
+      background: #fbfaf7;
+      padding: 8px;
+      font-size: 12px;
+    }
+
+    .regen-item strong {
+      font-size: 13px;
+    }
+
+    .regen-reason {
+      color: var(--bad);
+    }
+
+    .regen-instruction {
+      color: var(--muted);
     }
 
     .card {
@@ -585,6 +641,10 @@
         <div id="reviewMetric" class="metric-value">0</div>
       </div>
       <div class="metric">
+        <div class="metric-label">再生成候補</div>
+        <div id="regenMetric" class="metric-value">0</div>
+      </div>
+      <div class="metric">
         <div class="metric-label">人間判定済み</div>
         <div id="judgedMetric" class="metric-value">0</div>
       </div>
@@ -601,12 +661,26 @@
       <select id="filterMode">
         <option value="all">全て</option>
         <option value="needsReview">要確認のみ</option>
+        <option value="regen">再生成候補のみ</option>
         <option value="unjudged">未判定のみ</option>
         <option value="ok">OK</option>
         <option value="fix">微修正</option>
         <option value="ng">NG</option>
       </select>
       <button id="recompute" class="primary" type="button" disabled>再スコア</button>
+    </section>
+
+    <section class="regen-panel" aria-label="regeneration queue">
+      <div class="regen-head">
+        <div>
+          <div class="regen-title">再生成候補</div>
+          <div class="regen-subtitle">スコア下位10%、NG、修正理由あり、描き直し指示ありを自動で集める</div>
+        </div>
+        <div class="controls">
+          <button id="exportRegenCsv" type="button" disabled>再生成CSV</button>
+        </div>
+      </div>
+      <div id="regenList" class="regen-list"></div>
     </section>
 
     <section id="grid" class="grid" aria-label="image grid"></section>
@@ -695,7 +769,10 @@
       referenceMetric: document.getElementById("referenceMetric"),
       averageMetric: document.getElementById("averageMetric"),
       reviewMetric: document.getElementById("reviewMetric"),
+      regenMetric: document.getElementById("regenMetric"),
       judgedMetric: document.getElementById("judgedMetric"),
+      regenList: document.getElementById("regenList"),
+      exportRegenCsv: document.getElementById("exportRegenCsv"),
       detailDialog: document.getElementById("detailDialog"),
       detailName: document.getElementById("detailName"),
       detailImage: document.getElementById("detailImage"),
@@ -731,6 +808,7 @@
     els.filterMode.addEventListener("change", render);
     els.recompute.addEventListener("click", computeScores);
     els.exportCsv.addEventListener("click", exportCsv);
+    els.exportRegenCsv.addEventListener("click", exportRegenCsv);
     els.clearAll.addEventListener("click", clearAll);
     els.closeDialog.addEventListener("click", () => els.detailDialog.close());
     els.detailNote.addEventListener("input", () => {
@@ -1229,6 +1307,7 @@
 
     function render() {
       computeSummary();
+      renderRegenQueue();
       const items = filteredItems();
       els.grid.innerHTML = "";
       els.empty.hidden = state.items.length > 0;
@@ -1242,6 +1321,7 @@
 
       els.recompute.disabled = !getReference();
       els.exportCsv.disabled = state.items.length === 0;
+      els.exportRegenCsv.disabled = regenerationCandidates().length === 0;
     }
 
     function renderCard(item) {
@@ -1361,6 +1441,7 @@
         const haystack = `${item.name} ${item.fileName || ""} ${item.entryId || ""} ${item.entryTitle || ""}`.toLowerCase();
         if (query && !haystack.includes(query)) return false;
         if (mode === "needsReview" && !needsReview(item)) return false;
+        if (mode === "regen" && !regenerationCandidates().some(candidate => candidate.item.id === item.id)) return false;
         if (mode === "unjudged" && item.status) return false;
         if (mode === "ok" && item.status !== "OK") return false;
         if (mode === "fix" && item.status !== "微修正") return false;
@@ -1391,12 +1472,53 @@
         ? Math.round(scores.reduce((sum, score) => sum + score, 0) / scores.length)
         : "-";
       const reference = getReference();
+      const regenCount = regenerationCandidates().length;
       els.countMetric.textContent = state.items.length;
       els.sourceMetric.textContent = state.sourceLabel || "-";
       els.referenceMetric.textContent = reference ? itemLabel(reference) : "未選択";
       els.averageMetric.textContent = average;
       els.reviewMetric.textContent = state.items.filter(needsReview).length;
+      els.regenMetric.textContent = regenCount;
       els.judgedMetric.textContent = state.items.filter(item => item.status).length;
+    }
+
+    function regenerationCandidates() {
+      const scored = state.items
+        .filter(item => item.score !== null)
+        .sort((a, b) => safeScore(a) - safeScore(b));
+      const bottomCount = scored.length ? Math.max(1, Math.ceil(scored.length * 0.10)) : 0;
+      const bottomIds = new Set(scored.slice(0, bottomCount).map(item => item.id));
+      const candidates = [];
+      for (const item of state.items) {
+        const reasons = [];
+        if (bottomIds.has(item.id)) reasons.push("下位10%");
+        if (item.score !== null && item.score < 70) reasons.push("低スコア");
+        if (item.status === "NG") reasons.push("NG");
+        if (item.issueType) reasons.push(item.issueType);
+        if (item.rewriteInstruction) reasons.push("描き直し指示あり");
+        if (!reasons.length) continue;
+        candidates.push({ item, reasons: Array.from(new Set(reasons)) });
+      }
+      return candidates.sort((a, b) => safeScore(a.item) - safeScore(b.item));
+    }
+
+    function renderRegenQueue() {
+      const candidates = regenerationCandidates();
+      if (!candidates.length) {
+        els.regenList.innerHTML = `<div class="regen-subtitle">候補なし。画像を読み込んで基準を選ぶと、自動で下位10%が出ます。</div>`;
+        return;
+      }
+      els.regenList.innerHTML = candidates.slice(0, 24).map(({ item, reasons }) => {
+        const instruction = item.rewriteInstruction || "詳細から描き直し指示を追加";
+        return `
+          <div class="regen-item">
+            <strong>${escapeHtml(itemLabel(item))} ${escapeHtml(item.entryTitle || "")}</strong>
+            <span>score: ${item.score ?? "-"}</span>
+            <span class="regen-reason">${escapeHtml(reasons.join(" / "))}</span>
+            <span class="regen-instruction">${escapeHtml(instruction)}</span>
+          </div>
+        `;
+      }).join("");
     }
 
     function openDetail(id) {
@@ -1480,6 +1602,38 @@
       const link = document.createElement("a");
       link.href = URL.createObjectURL(blob);
       link.download = `ponchi_quality_review_${new Date().toISOString().slice(0, 10)}.csv`;
+      link.click();
+      URL.revokeObjectURL(link.href);
+    }
+
+    function exportRegenCsv() {
+      const headers = [
+        "entry_id",
+        "title",
+        "score",
+        "status",
+        "regen_reasons",
+        "issue_type",
+        "rewrite_instruction",
+        "note",
+        "file_name"
+      ];
+      const rows = regenerationCandidates().map(({ item, reasons }) => [
+        item.entryId || "",
+        item.entryTitle || "",
+        item.score ?? "",
+        item.status || "",
+        reasons.join("|"),
+        item.issueType || "",
+        item.rewriteInstruction || "",
+        item.note || "",
+        item.fileName || item.name || ""
+      ]);
+      const csv = [headers, ...rows].map(row => row.map(csvCell).join(",")).join("\n");
+      const blob = new Blob([`\ufeff${csv}`], { type: "text/csv;charset=utf-8" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = `ponchi_regen_queue_${new Date().toISOString().slice(0, 10)}.csv`;
       link.click();
       URL.revokeObjectURL(link.href);
     }
