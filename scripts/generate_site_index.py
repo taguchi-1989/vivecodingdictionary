@@ -156,7 +156,7 @@ def build_html(items: list[tuple[Path, str]]) -> str:
                 if code:
                     parts.append(f'<span class="code">{html.escape(code)}</span>')
                 parts.append(
-                    f'<a href="{html.escape(rel)}">{html.escape(label)}</a></li>\n'
+                    f'<a href="/{html.escape(rel)}">{html.escape(label)}</a></li>\n'
                 )
             parts.append("    </ul>\n")
 
