@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>バイブコーディング図鑑 — 管理トップ</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "Hiragino Sans", "Yu Gothic UI", system-ui, sans-serif; margin: 0; background: #f3f6fb; color: #1a2333; }
+  header { background: #0c2552; color: #fff; padding: 18px 24px; position: sticky; top: 0; z-index: 5; }
+  header h1 { margin: 0; font-size: 1.05rem; font-weight: 800; }
+  header .sub { font-size: 0.78rem; opacity: 0.8; margin-top: 2px; }
+  main { max-width: 1100px; margin: 0 auto; padding: 24px; }
+  h2 { font-size: 1rem; color: #0c2552; border-left: 5px solid #2a5db0; padding: 4px 10px; margin: 28px 0 10px; }
+  h3 { font-size: 0.85rem; color: #2a5db0; margin: 14px 0 6px; }
+  ul.grid { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 4px 12px; }
+  ul.grid li { font-size: 0.82rem; line-height: 1.5; }
+  ul.grid a { color: #1a3a6c; text-decoration: none; padding: 3px 6px; border-radius: 4px; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  ul.grid a:hover { background: #e6eef9; }
+  .code { color: #2a5db0; font-weight: 700; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.78rem; margin-right: 4px; }
+  .filter { margin: 8px 0 18px; }
+  .filter input { width: 100%; padding: 8px 12px; border: 1px solid #d4dded; border-radius: 6px; font-size: 0.9rem; }
+  footer { color: #6c7a91; font-size: 0.75rem; padding: 24px; text-align: center; }
+  footer a { color: #2a5db0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>バイブコーディング図鑑 — 管理トップ</h1>
+  <div class="sub">作りかけ含め、全 HTML ページにリンクで飛べる目次です。</div>
+</header>
+<main>
+  <div class="filter"><input id="q" type="search" placeholder="絞り込み（ID やタイトルで検索）..." autofocus></div>
+  <h2>誌面モック / Design Philosophy v2</h2>
+    <ul class="grid">
+      <li data-search="b3_chatgpt_spread b-3 chatgpt 見開き — 他エントリ適応確認"><a href="prototypes/mockups/design_philosophy_v2/b3_chatgpt_spread.html">B-3 ChatGPT 見開き — 他エントリ適応確認</a></li>
+      <li data-search="typescript_spread typescript 見開き — iter 1"><a href="prototypes/mockups/design_philosophy_v2/typescript_spread.html">TypeScript 見開き — iter 1</a></li>
+    </ul>
+  <h2>誌面モック / A・B・C 案</h2>
+    <ul class="grid">
+      <li data-search="design_a_v2_human バイブコーディング図鑑 — 誌面モック a案 v2：人物入り clean zukan"><a href="prototypes/mockups/design_A_v2_human.html">バイブコーディング図鑑 — 誌面モック A案 v2：人物入り Clean Zukan</a></li>
+      <li data-search="design_a_zukan バイブコーディング図鑑 — 誌面モック a案：clean zukan"><a href="prototypes/mockups/design_A_zukan.html">バイブコーディング図鑑 — 誌面モック A案：Clean Zukan</a></li>
+      <li data-search="design_b_editorial バイブコーディング図鑑 — 誌面モック b案：editorial navy"><a href="prototypes/mockups/design_B_editorial.html">バイブコーディング図鑑 — 誌面モック B案：Editorial Navy</a></li>
+      <li data-search="design_c_blueprint バイブコーディング図鑑 — 誌面モック c案：blueprint / tech note"><a href="prototypes/mockups/design_C_blueprint.html">バイブコーディング図鑑 — 誌面モック C案：Blueprint / Tech Note</a></li>
+      <li data-search="index バイブコーディング図鑑 — モック一覧"><a href="prototypes/mockups/index.html">バイブコーディング図鑑 — モック一覧</a></li>
+    </ul>
+  <h2>表紙・裏表紙</h2>
+    <ul class="grid">
+      <li data-search="vibe-coding-back-cover vibecoding 図鑑 裏表紙案"><a href="covers/vibe-coding-back-cover.html">VibeCoding 図鑑 裏表紙案</a></li>
+      <li data-search="vibe-coding-cover-a バイブコーディング用語図鑑 表紙案a"><a href="covers/vibe-coding-cover-a.html">バイブコーディング用語図鑑 表紙案A</a></li>
+      <li data-search="vibe-coding-cover-rich バイブコーディング用語図鑑 表紙リッチ案"><a href="covers/vibe-coding-cover-rich.html">バイブコーディング用語図鑑 表紙リッチ案</a></li>
+      <li data-search="vibe-coding-cover-sell バイブコーディング図鑑 表紙再設計案"><a href="covers/vibe-coding-cover-sell.html">バイブコーディング図鑑 表紙再設計案</a></li>
+    </ul>
+  <h2>オープニング見開き</h2>
+    <ul class="grid">
+      <li data-search="opening-spread-annotated 冒頭見開き 注釈ページ"><a href="opening/opening-spread-annotated.html">冒頭見開き 注釈ページ</a></li>
+    </ul>
+  <h2>ツール</h2>
+    <ul class="grid">
+      <li data-search="ponchi_quality_review ponchi quality review"><a href="tools/ponchi_quality_review.html">Ponchi Quality Review</a></li>
+    </ul>
+  <h2>エントリプレビュー (A〜J)</h2>
+    <h3>目次・一覧</h3>
+    <ul class="grid">
+      <li data-search="index バイブコーディング図鑑 preview 目次"><a href="prototypes/preview/index.html">バイブコーディング図鑑 preview 目次</a></li>
+      <li data-search="overview バイブコーディング図鑑 — 全エントリ一覧"><a href="prototypes/preview/overview.html">バイブコーディング図鑑 — 全エントリ一覧</a></li>
+    </ul>
+    <h3>A</h3>
+    <ul class="grid">
+      <li data-search="a-1 まえがき — バイブコーディング図鑑 preview"><span class="code">A-1</span><a href="prototypes/preview/A-1.html">まえがき — バイブコーディング図鑑 preview</a></li>
+      <li data-search="a-2 この本の読み方 — バイブコーディング図鑑 preview"><span class="code">A-2</span><a href="prototypes/preview/A-2.html">この本の読み方 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="a-3 図鑑の歩き方 — バイブコーディング図鑑 preview"><span class="code">A-3</span><a href="prototypes/preview/A-3.html">図鑑の歩き方 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="a-4 体験区分の凡例 — バイブコーディング図鑑 preview"><span class="code">A-4</span><a href="prototypes/preview/A-4.html">体験区分の凡例 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="a-5 読者レベルの凡例 — バイブコーディング図鑑 preview"><span class="code">A-5</span><a href="prototypes/preview/A-5.html">読者レベルの凡例 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="a-6 評価日・時変情報の見方 — バイブコーディング図鑑 preview"><span class="code">A-6</span><a href="prototypes/preview/A-6.html">評価日・時変情報の見方 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="a-7 図のタイプ — バイブコーディング図鑑 preview"><span class="code">A-7</span><a href="prototypes/preview/A-7.html">図のタイプ — バイブコーディング図鑑 preview</a></li>
+      <li data-search="a-8 色・記号の凡例 — バイブコーディング図鑑 preview"><span class="code">A-8</span><a href="prototypes/preview/A-8.html">色・記号の凡例 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="a-9 索引 — バイブコーディング図鑑 preview"><span class="code">A-9</span><a href="prototypes/preview/A-9.html">索引 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="a-10 更新履歴と更新方針 — バイブコーディング図鑑 preview"><span class="code">A-10</span><a href="prototypes/preview/A-10.html">更新履歴と更新方針 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="a-11 略称表記 — バイブコーディング図鑑 preview"><span class="code">A-11</span><a href="prototypes/preview/A-11.html">略称表記 — バイブコーディング図鑑 preview</a></li>
+    </ul>
+    <h3>B</h3>
+    <ul class="grid">
+      <li data-search="b-1 gemini — バイブコーディング図鑑 preview"><span class="code">B-1</span><a href="prototypes/preview/B-1.html">Gemini — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-2 claude — バイブコーディング図鑑 preview"><span class="code">B-2</span><a href="prototypes/preview/B-2.html">Claude — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-3 chatgpt — バイブコーディング図鑑 preview"><span class="code">B-3</span><a href="prototypes/preview/B-3.html">ChatGPT — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-4 cursor — バイブコーディング図鑑 preview"><span class="code">B-4</span><a href="prototypes/preview/B-4.html">Cursor — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-5 github copilot — バイブコーディング図鑑 preview"><span class="code">B-5</span><a href="prototypes/preview/B-5.html">GitHub Copilot — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-6 windsurf — バイブコーディング図鑑 preview"><span class="code">B-6</span><a href="prototypes/preview/B-6.html">Windsurf — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-7 claude code — バイブコーディング図鑑 preview"><span class="code">B-7</span><a href="prototypes/preview/B-7.html">Claude Code — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-8 codex — バイブコーディング図鑑 preview"><span class="code">B-8</span><a href="prototypes/preview/B-8.html">Codex — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-9 v0 — バイブコーディング図鑑 preview"><span class="code">B-9</span><a href="prototypes/preview/B-9.html">v0 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-10 devin — バイブコーディング図鑑 preview"><span class="code">B-10</span><a href="prototypes/preview/B-10.html">Devin — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-11 bolt.new — バイブコーディング図鑑 preview"><span class="code">B-11</span><a href="prototypes/preview/B-11.html">Bolt.new — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-12 perplexity — バイブコーディング図鑑 preview"><span class="code">B-12</span><a href="prototypes/preview/B-12.html">Perplexity — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-13 elevenlabs — バイブコーディング図鑑 preview"><span class="code">B-13</span><a href="prototypes/preview/B-13.html">ElevenLabs — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-14 genspark — バイブコーディング図鑑 preview"><span class="code">B-14</span><a href="prototypes/preview/B-14.html">Genspark — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-15 microsoft copilot — バイブコーディング図鑑 preview"><span class="code">B-15</span><a href="prototypes/preview/B-15.html">Microsoft Copilot — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-16 microsoft 365 copilot — バイブコーディング図鑑 preview"><span class="code">B-16</span><a href="prototypes/preview/B-16.html">Microsoft 365 Copilot — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-17 edge copilot — バイブコーディング図鑑 preview"><span class="code">B-17</span><a href="prototypes/preview/B-17.html">Edge Copilot — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-18 aqua voice — バイブコーディング図鑑 preview"><span class="code">B-18</span><a href="prototypes/preview/B-18.html">Aqua Voice — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-19 claude cowork — バイブコーディング図鑑 preview"><span class="code">B-19</span><a href="prototypes/preview/B-19.html">Claude Cowork — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-20 vercel — バイブコーディング図鑑 preview"><span class="code">B-20</span><a href="prototypes/preview/B-20.html">Vercel — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-21 netlify — バイブコーディング図鑑 preview"><span class="code">B-21</span><a href="prototypes/preview/B-21.html">Netlify — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-22 cloudflare — バイブコーディング図鑑 preview"><span class="code">B-22</span><a href="prototypes/preview/B-22.html">Cloudflare — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-23 aws — バイブコーディング図鑑 preview"><span class="code">B-23</span><a href="prototypes/preview/B-23.html">AWS — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-24 google cloud — バイブコーディング図鑑 preview"><span class="code">B-24</span><a href="prototypes/preview/B-24.html">Google Cloud — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-25 azure — バイブコーディング図鑑 preview"><span class="code">B-25</span><a href="prototypes/preview/B-25.html">Azure — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-26 azure openai — バイブコーディング図鑑 preview"><span class="code">B-26</span><a href="prototypes/preview/B-26.html">Azure OpenAI — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-27 vertex ai — バイブコーディング図鑑 preview"><span class="code">B-27</span><a href="prototypes/preview/B-27.html">Vertex AI — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-28 render — バイブコーディング図鑑 preview"><span class="code">B-28</span><a href="prototypes/preview/B-28.html">Render — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-29 supabase — バイブコーディング図鑑 preview"><span class="code">B-29</span><a href="prototypes/preview/B-29.html">Supabase — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-30 amazon bedrock — バイブコーディング図鑑 preview"><span class="code">B-30</span><a href="prototypes/preview/B-30.html">Amazon Bedrock — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-31 excalidraw — バイブコーディング図鑑 preview"><span class="code">B-31</span><a href="prototypes/preview/B-31.html">Excalidraw — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-32 figma — バイブコーディング図鑑 preview"><span class="code">B-32</span><a href="prototypes/preview/B-32.html">Figma — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-33 canva — バイブコーディング図鑑 preview"><span class="code">B-33</span><a href="prototypes/preview/B-33.html">Canva — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-40 reddit — バイブコーディング図鑑 preview"><span class="code">B-40</span><a href="prototypes/preview/B-40.html">Reddit — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-41 arxiv — バイブコーディング図鑑 preview"><span class="code">B-41</span><a href="prototypes/preview/B-41.html">arXiv — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-50 claude の料金プラン — バイブコーディング図鑑 preview"><span class="code">B-50</span><a href="prototypes/preview/B-50.html">Claude の料金プラン — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-51 chatgpt の料金プラン — バイブコーディング図鑑 preview"><span class="code">B-51</span><a href="prototypes/preview/B-51.html">ChatGPT の料金プラン — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-52 gemini の料金プラン — バイブコーディング図鑑 preview"><span class="code">B-52</span><a href="prototypes/preview/B-52.html">Gemini の料金プラン — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-60 suno — バイブコーディング図鑑 preview"><span class="code">B-60</span><a href="prototypes/preview/B-60.html">Suno — バイブコーディング図鑑 preview</a></li>
+      <li data-search="b-61 ace-step 1.5 — バイブコーディング図鑑 preview"><span class="code">B-61</span><a href="prototypes/preview/B-61.html">ACE-Step 1.5 — バイブコーディング図鑑 preview</a></li>
+    </ul>
+    <h3>C</h3>
+    <ul class="grid">
+      <li data-search="c-1 openai — バイブコーディング図鑑 preview"><span class="code">C-1</span><a href="prototypes/preview/C-1.html">OpenAI — バイブコーディング図鑑 preview</a></li>
+      <li data-search="c-2 anthropic — バイブコーディング図鑑 preview"><span class="code">C-2</span><a href="prototypes/preview/C-2.html">Anthropic — バイブコーディング図鑑 preview</a></li>
+      <li data-search="c-3 google deepmind — バイブコーディング図鑑 preview"><span class="code">C-3</span><a href="prototypes/preview/C-3.html">Google DeepMind — バイブコーディング図鑑 preview</a></li>
+      <li data-search="c-4 meta ai — バイブコーディング図鑑 preview"><span class="code">C-4</span><a href="prototypes/preview/C-4.html">Meta AI — バイブコーディング図鑑 preview</a></li>
+      <li data-search="c-5 xai — バイブコーディング図鑑 preview"><span class="code">C-5</span><a href="prototypes/preview/C-5.html">xAI — バイブコーディング図鑑 preview</a></li>
+      <li data-search="c-6 mistral ai — バイブコーディング図鑑 preview"><span class="code">C-6</span><a href="prototypes/preview/C-6.html">Mistral AI — バイブコーディング図鑑 preview</a></li>
+      <li data-search="c-7 hugging face — バイブコーディング図鑑 preview"><span class="code">C-7</span><a href="prototypes/preview/C-7.html">Hugging Face — バイブコーディング図鑑 preview</a></li>
+      <li data-search="c-8 microsoft ai — バイブコーディング図鑑 preview"><span class="code">C-8</span><a href="prototypes/preview/C-8.html">Microsoft AI — バイブコーディング図鑑 preview</a></li>
+      <li data-search="c-9 nvidia — バイブコーディング図鑑 preview"><span class="code">C-9</span><a href="prototypes/preview/C-9.html">NVIDIA — バイブコーディング図鑑 preview</a></li>
+      <li data-search="c-10 moonshot ai — バイブコーディング図鑑 preview"><span class="code">C-10</span><a href="prototypes/preview/C-10.html">Moonshot AI — バイブコーディング図鑑 preview</a></li>
+      <li data-search="c-11 z.ai — バイブコーディング図鑑 preview"><span class="code">C-11</span><a href="prototypes/preview/C-11.html">Z.ai — バイブコーディング図鑑 preview</a></li>
+      <li data-search="c-12 tsmc — バイブコーディング図鑑 preview"><span class="code">C-12</span><a href="prototypes/preview/C-12.html">TSMC — バイブコーディング図鑑 preview</a></li>
+      <li data-search="c-13 groq — バイブコーディング図鑑 preview"><span class="code">C-13</span><a href="prototypes/preview/C-13.html">Groq — バイブコーディング図鑑 preview</a></li>
+      <li data-search="c-14 amd — バイブコーディング図鑑 preview"><span class="code">C-14</span><a href="prototypes/preview/C-14.html">AMD — バイブコーディング図鑑 preview</a></li>
+      <li data-search="c-50 sam altman — バイブコーディング図鑑 preview"><span class="code">C-50</span><a href="prototypes/preview/C-50.html">Sam Altman — バイブコーディング図鑑 preview</a></li>
+      <li data-search="c-51 dario amodei — バイブコーディング図鑑 preview"><span class="code">C-51</span><a href="prototypes/preview/C-51.html">Dario Amodei — バイブコーディング図鑑 preview</a></li>
+      <li data-search="c-52 demis hassabis — バイブコーディング図鑑 preview"><span class="code">C-52</span><a href="prototypes/preview/C-52.html">Demis Hassabis — バイブコーディング図鑑 preview</a></li>
+      <li data-search="c-53 andrej karpathy — バイブコーディング図鑑 preview"><span class="code">C-53</span><a href="prototypes/preview/C-53.html">Andrej Karpathy — バイブコーディング図鑑 preview</a></li>
+      <li data-search="c-54 ilya sutskever — バイブコーディング図鑑 preview"><span class="code">C-54</span><a href="prototypes/preview/C-54.html">Ilya Sutskever — バイブコーディング図鑑 preview</a></li>
+      <li data-search="c-55 mira murati — バイブコーディング図鑑 preview"><span class="code">C-55</span><a href="prototypes/preview/C-55.html">Mira Murati — バイブコーディング図鑑 preview</a></li>
+      <li data-search="c-56 yann lecun — バイブコーディング図鑑 preview"><span class="code">C-56</span><a href="prototypes/preview/C-56.html">Yann LeCun — バイブコーディング図鑑 preview</a></li>
+      <li data-search="c-57 geoffrey hinton — バイブコーディング図鑑 preview"><span class="code">C-57</span><a href="prototypes/preview/C-57.html">Geoffrey Hinton — バイブコーディング図鑑 preview</a></li>
+      <li data-search="c-58 elon musk — バイブコーディング図鑑 preview"><span class="code">C-58</span><a href="prototypes/preview/C-58.html">Elon Musk — バイブコーディング図鑑 preview</a></li>
+      <li data-search="c-59 jensen huang — バイブコーディング図鑑 preview"><span class="code">C-59</span><a href="prototypes/preview/C-59.html">Jensen Huang — バイブコーディング図鑑 preview</a></li>
+      <li data-search="c-60 ray kurzweil — バイブコーディング図鑑 preview"><span class="code">C-60</span><a href="prototypes/preview/C-60.html">Ray Kurzweil — バイブコーディング図鑑 preview</a></li>
+      <li data-search="c-80 ai大学 — バイブコーディング図鑑 preview"><span class="code">C-80</span><a href="prototypes/preview/C-80.html">AI大学 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="c-81 にゃんた — バイブコーディング図鑑 preview"><span class="code">C-81</span><a href="prototypes/preview/C-81.html">にゃんた — バイブコーディング図鑑 preview</a></li>
+      <li data-search="c-82 まさお — バイブコーディング図鑑 preview"><span class="code">C-82</span><a href="prototypes/preview/C-82.html">まさお — バイブコーディング図鑑 preview</a></li>
+    </ul>
+    <h3>D</h3>
+    <ul class="grid">
+      <li data-search="d-1 gemini 2 系 — バイブコーディング図鑑 preview"><span class="code">D-1</span><a href="prototypes/preview/D-1.html">Gemini 2 系 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-2 gemini 2.5 系 — バイブコーディング図鑑 preview"><span class="code">D-2</span><a href="prototypes/preview/D-2.html">Gemini 2.5 系 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-4 gemini 3.1 系 — バイブコーディング図鑑 preview"><span class="code">D-4</span><a href="prototypes/preview/D-4.html">Gemini 3.1 系 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-11 claude 3.5 系 — バイブコーディング図鑑 preview"><span class="code">D-11</span><a href="prototypes/preview/D-11.html">Claude 3.5 系 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-12 claude 4 系 — バイブコーディング図鑑 preview"><span class="code">D-12</span><a href="prototypes/preview/D-12.html">Claude 4 系 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-14 claude mythos preview — バイブコーディング図鑑 preview"><span class="code">D-14</span><a href="prototypes/preview/D-14.html">Claude Mythos Preview — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-20 gpt-5 系 — バイブコーディング図鑑 preview"><span class="code">D-20</span><a href="prototypes/preview/D-20.html">GPT-5 系 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-21 gpt-4 系 — バイブコーディング図鑑 preview"><span class="code">D-21</span><a href="prototypes/preview/D-21.html">GPT-4 系 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-22 o1 系 — バイブコーディング図鑑 preview"><span class="code">D-22</span><a href="prototypes/preview/D-22.html">o1 系 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-24 gpt-3 系 — バイブコーディング図鑑 preview"><span class="code">D-24</span><a href="prototypes/preview/D-24.html">GPT-3 系 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-25 gpt-1 / gpt-2 系 — バイブコーディング図鑑 preview"><span class="code">D-25</span><a href="prototypes/preview/D-25.html">GPT-1 / GPT-2 系 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-26 gpt-oss — バイブコーディング図鑑 preview"><span class="code">D-26</span><a href="prototypes/preview/D-26.html">gpt-oss — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-30 grok 系 — バイブコーディング図鑑 preview"><span class="code">D-30</span><a href="prototypes/preview/D-30.html">Grok 系 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-35 cursor composer — バイブコーディング図鑑 preview"><span class="code">D-35</span><a href="prototypes/preview/D-35.html">Cursor Composer — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-40 llama 系 — バイブコーディング図鑑 preview"><span class="code">D-40</span><a href="prototypes/preview/D-40.html">Llama 系 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-41 mistral 系 — バイブコーディング図鑑 preview"><span class="code">D-41</span><a href="prototypes/preview/D-41.html">Mistral 系 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-42 gemma 系 — バイブコーディング図鑑 preview"><span class="code">D-42</span><a href="prototypes/preview/D-42.html">Gemma 系 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-43 qwen 系 — バイブコーディング図鑑 preview"><span class="code">D-43</span><a href="prototypes/preview/D-43.html">Qwen 系 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-44 kimi — バイブコーディング図鑑 preview"><span class="code">D-44</span><a href="prototypes/preview/D-44.html">Kimi — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-45 glm — バイブコーディング図鑑 preview"><span class="code">D-45</span><a href="prototypes/preview/D-45.html">GLM — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-46 deepseek v3 — バイブコーディング図鑑 preview"><span class="code">D-46</span><a href="prototypes/preview/D-46.html">DeepSeek V3 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-47 deepseek r1 — バイブコーディング図鑑 preview"><span class="code">D-47</span><a href="prototypes/preview/D-47.html">DeepSeek R1 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-50 dall-e — バイブコーディング図鑑 preview"><span class="code">D-50</span><a href="prototypes/preview/D-50.html">DALL-E — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-51 imagen — バイブコーディング図鑑 preview"><span class="code">D-51</span><a href="prototypes/preview/D-51.html">Imagen — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-52 sora — バイブコーディング図鑑 preview"><span class="code">D-52</span><a href="prototypes/preview/D-52.html">Sora — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-53 veo — バイブコーディング図鑑 preview"><span class="code">D-53</span><a href="prototypes/preview/D-53.html">Veo — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-54 stable diffusion — バイブコーディング図鑑 preview"><span class="code">D-54</span><a href="prototypes/preview/D-54.html">Stable Diffusion — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-55 nano banana — バイブコーディング図鑑 preview"><span class="code">D-55</span><a href="prototypes/preview/D-55.html">Nano Banana — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-56 seedance — バイブコーディング図鑑 preview"><span class="code">D-56</span><a href="prototypes/preview/D-56.html">Seedance — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-57 flow — バイブコーディング図鑑 preview"><span class="code">D-57</span><a href="prototypes/preview/D-57.html">Flow — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-58 whisk — バイブコーディング図鑑 preview"><span class="code">D-58</span><a href="prototypes/preview/D-58.html">Whisk — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-60 alphago — バイブコーディング図鑑 preview"><span class="code">D-60</span><a href="prototypes/preview/D-60.html">AlphaGo — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-70 amical — バイブコーディング図鑑 preview"><span class="code">D-70</span><a href="prototypes/preview/D-70.html">Amical — バイブコーディング図鑑 preview</a></li>
+      <li data-search="d-71 whisper — バイブコーディング図鑑 preview"><span class="code">D-71</span><a href="prototypes/preview/D-71.html">Whisper — バイブコーディング図鑑 preview</a></li>
+    </ul>
+    <h3>E</h3>
+    <ul class="grid">
+      <li data-search="e-1 swe-bench — バイブコーディング図鑑 preview"><span class="code">E-1</span><a href="prototypes/preview/E-1.html">SWE-Bench — バイブコーディング図鑑 preview</a></li>
+      <li data-search="e-2 swe-bench verified — バイブコーディング図鑑 preview"><span class="code">E-2</span><a href="prototypes/preview/E-2.html">SWE-Bench Verified — バイブコーディング図鑑 preview</a></li>
+      <li data-search="e-3 terminal-bench — バイブコーディング図鑑 preview"><span class="code">E-3</span><a href="prototypes/preview/E-3.html">Terminal-Bench — バイブコーディング図鑑 preview</a></li>
+      <li data-search="e-4 humaneval — バイブコーディング図鑑 preview"><span class="code">E-4</span><a href="prototypes/preview/E-4.html">HumanEval — バイブコーディング図鑑 preview</a></li>
+      <li data-search="e-20 mmlu — バイブコーディング図鑑 preview"><span class="code">E-20</span><a href="prototypes/preview/E-20.html">MMLU — バイブコーディング図鑑 preview</a></li>
+      <li data-search="e-21 mmlu-pro — バイブコーディング図鑑 preview"><span class="code">E-21</span><a href="prototypes/preview/E-21.html">MMLU-Pro — バイブコーディング図鑑 preview</a></li>
+      <li data-search="e-22 gpqa — バイブコーディング図鑑 preview"><span class="code">E-22</span><a href="prototypes/preview/E-22.html">GPQA — バイブコーディング図鑑 preview</a></li>
+      <li data-search="e-23 gsm8k — バイブコーディング図鑑 preview"><span class="code">E-23</span><a href="prototypes/preview/E-23.html">GSM8K — バイブコーディング図鑑 preview</a></li>
+      <li data-search="e-24 math — バイブコーディング図鑑 preview"><span class="code">E-24</span><a href="prototypes/preview/E-24.html">MATH — バイブコーディング図鑑 preview</a></li>
+      <li data-search="e-25 aime — バイブコーディング図鑑 preview"><span class="code">E-25</span><a href="prototypes/preview/E-25.html">AIME — バイブコーディング図鑑 preview</a></li>
+      <li data-search="e-26 humanity&amp;#x27;s last exam — バイブコーディング図鑑 preview"><span class="code">E-26</span><a href="prototypes/preview/E-26.html">Humanity&amp;#x27;s Last Exam — バイブコーディング図鑑 preview</a></li>
+      <li data-search="e-27 iq bench — バイブコーディング図鑑 preview"><span class="code">E-27</span><a href="prototypes/preview/E-27.html">IQ Bench — バイブコーディング図鑑 preview</a></li>
+      <li data-search="e-30 tau-bench — バイブコーディング図鑑 preview"><span class="code">E-30</span><a href="prototypes/preview/E-30.html">TAU-Bench — バイブコーディング図鑑 preview</a></li>
+      <li data-search="e-31 webarena — バイブコーディング図鑑 preview"><span class="code">E-31</span><a href="prototypes/preview/E-31.html">WebArena — バイブコーディング図鑑 preview</a></li>
+      <li data-search="e-32 gaia — バイブコーディング図鑑 preview"><span class="code">E-32</span><a href="prototypes/preview/E-32.html">GAIA — バイブコーディング図鑑 preview</a></li>
+      <li data-search="e-33 agentbench — バイブコーディング図鑑 preview"><span class="code">E-33</span><a href="prototypes/preview/E-33.html">AgentBench — バイブコーディング図鑑 preview</a></li>
+      <li data-search="e-34 osworld — バイブコーディング図鑑 preview"><span class="code">E-34</span><a href="prototypes/preview/E-34.html">OSWorld — バイブコーディング図鑑 preview</a></li>
+      <li data-search="e-50 chatbot arena — バイブコーディング図鑑 preview"><span class="code">E-50</span><a href="prototypes/preview/E-50.html">Chatbot Arena — バイブコーディング図鑑 preview</a></li>
+      <li data-search="e-51 lmsys arena — バイブコーディング図鑑 preview"><span class="code">E-51</span><a href="prototypes/preview/E-51.html">LMSYS Arena — バイブコーディング図鑑 preview</a></li>
+    </ul>
+    <h3>F</h3>
+    <ul class="grid">
+      <li data-search="f-1 javascript — バイブコーディング図鑑 preview"><span class="code">F-1</span><a href="prototypes/preview/F-1.html">JavaScript — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-2 typescript — バイブコーディング図鑑 preview"><span class="code">F-2</span><a href="prototypes/preview/F-2.html">TypeScript — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-3 python — バイブコーディング図鑑 preview"><span class="code">F-3</span><a href="prototypes/preview/F-3.html">Python — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-4 html — バイブコーディング図鑑 preview"><span class="code">F-4</span><a href="prototypes/preview/F-4.html">HTML — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-5 css — バイブコーディング図鑑 preview"><span class="code">F-5</span><a href="prototypes/preview/F-5.html">CSS — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-6 markdown — バイブコーディング図鑑 preview"><span class="code">F-6</span><a href="prototypes/preview/F-6.html">Markdown — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-7 yaml — バイブコーディング図鑑 preview"><span class="code">F-7</span><a href="prototypes/preview/F-7.html">YAML — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-8 json — バイブコーディング図鑑 preview"><span class="code">F-8</span><a href="prototypes/preview/F-8.html">JSON — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-9 svg — バイブコーディング図鑑 preview"><span class="code">F-9</span><a href="prototypes/preview/F-9.html">SVG — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-10 react — バイブコーディング図鑑 preview"><span class="code">F-10</span><a href="prototypes/preview/F-10.html">React — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-11 next.js — バイブコーディング図鑑 preview"><span class="code">F-11</span><a href="prototypes/preview/F-11.html">Next.js — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-12 electron — バイブコーディング図鑑 preview"><span class="code">F-12</span><a href="prototypes/preview/F-12.html">Electron — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-13 tauri — バイブコーディング図鑑 preview"><span class="code">F-13</span><a href="prototypes/preview/F-13.html">Tauri — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-14 three.js — バイブコーディング図鑑 preview"><span class="code">F-14</span><a href="prototypes/preview/F-14.html">three.js — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-15 shadcn/ui — バイブコーディング図鑑 preview"><span class="code">F-15</span><a href="prototypes/preview/F-15.html">shadcn/ui — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-16 tailwind css — バイブコーディング図鑑 preview"><span class="code">F-16</span><a href="prototypes/preview/F-16.html">Tailwind CSS — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-17 astro — バイブコーディング図鑑 preview"><span class="code">F-17</span><a href="prototypes/preview/F-17.html">Astro — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-20 eslint — バイブコーディング図鑑 preview"><span class="code">F-20</span><a href="prototypes/preview/F-20.html">ESLint — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-21 prettier — バイブコーディング図鑑 preview"><span class="code">F-21</span><a href="prototypes/preview/F-21.html">Prettier — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-30 vs code — バイブコーディング図鑑 preview"><span class="code">F-30</span><a href="prototypes/preview/F-30.html">VS Code — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-35 markdown preview enhanced — バイブコーディング図鑑 preview"><span class="code">F-35</span><a href="prototypes/preview/F-35.html">Markdown Preview Enhanced — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-36 git graph — バイブコーディング図鑑 preview"><span class="code">F-36</span><a href="prototypes/preview/F-36.html">Git Graph — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-37 japanese language pack for vs code — バイブコーディング図鑑 preview"><span class="code">F-37</span><a href="prototypes/preview/F-37.html">Japanese Language Pack for VS Code — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-38 markdown all in one — バイブコーディング図鑑 preview"><span class="code">F-38</span><a href="prototypes/preview/F-38.html">Markdown All in One — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-40 npm — バイブコーディング図鑑 preview"><span class="code">F-40</span><a href="prototypes/preview/F-40.html">npm — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-41 vite — バイブコーディング図鑑 preview"><span class="code">F-41</span><a href="prototypes/preview/F-41.html">Vite — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-42 ビルド — バイブコーディング図鑑 preview"><span class="code">F-42</span><a href="prototypes/preview/F-42.html">ビルド — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-44 pnpm — バイブコーディング図鑑 preview"><span class="code">F-44</span><a href="prototypes/preview/F-44.html">pnpm — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-50 git — バイブコーディング図鑑 preview"><span class="code">F-50</span><a href="prototypes/preview/F-50.html">git — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-51 git push — バイブコーディング図鑑 preview"><span class="code">F-51</span><a href="prototypes/preview/F-51.html">git push — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-52 git pull — バイブコーディング図鑑 preview"><span class="code">F-52</span><a href="prototypes/preview/F-52.html">git pull — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-53 branch — バイブコーディング図鑑 preview"><span class="code">F-53</span><a href="prototypes/preview/F-53.html">branch — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-54 commit — バイブコーディング図鑑 preview"><span class="code">F-54</span><a href="prototypes/preview/F-54.html">commit — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-55 merge — バイブコーディング図鑑 preview"><span class="code">F-55</span><a href="prototypes/preview/F-55.html">merge — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-56 .gitignore — バイブコーディング図鑑 preview"><span class="code">F-56</span><a href="prototypes/preview/F-56.html">.gitignore — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-58 git stash — バイブコーディング図鑑 preview"><span class="code">F-58</span><a href="prototypes/preview/F-58.html">git stash — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-59 readme.md — バイブコーディング図鑑 preview"><span class="code">F-59</span><a href="prototypes/preview/F-59.html">README.md — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-60 github — バイブコーディング図鑑 preview"><span class="code">F-60</span><a href="prototypes/preview/F-60.html">GitHub — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-61 pull request — バイブコーディング図鑑 preview"><span class="code">F-61</span><a href="prototypes/preview/F-61.html">Pull Request — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-62 github actions — バイブコーディング図鑑 preview"><span class="code">F-62</span><a href="prototypes/preview/F-62.html">GitHub Actions — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-71 ripgrep (rg) — バイブコーディング図鑑 preview"><span class="code">F-71</span><a href="prototypes/preview/F-71.html">ripgrep (rg) — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-80 node.js — バイブコーディング図鑑 preview"><span class="code">F-80</span><a href="prototypes/preview/F-80.html">Node.js — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-81 bash — バイブコーディング図鑑 preview"><span class="code">F-81</span><a href="prototypes/preview/F-81.html">bash — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-82 wsl — バイブコーディング図鑑 preview"><span class="code">F-82</span><a href="prototypes/preview/F-82.html">WSL — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-83 powershell — バイブコーディング図鑑 preview"><span class="code">F-83</span><a href="prototypes/preview/F-83.html">PowerShell — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-84 ghostty — バイブコーディング図鑑 preview"><span class="code">F-84</span><a href="prototypes/preview/F-84.html">Ghostty — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-85 superclaude framework — バイブコーディング図鑑 preview"><span class="code">F-85</span><a href="prototypes/preview/F-85.html">SuperClaude Framework — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-86 ollama — バイブコーディング図鑑 preview"><span class="code">F-86</span><a href="prototypes/preview/F-86.html">ollama — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-87 sudo — バイブコーディング図鑑 preview"><span class="code">F-87</span><a href="prototypes/preview/F-87.html">sudo — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-90 docker — バイブコーディング図鑑 preview"><span class="code">F-90</span><a href="prototypes/preview/F-90.html">Docker — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-91 .env — バイブコーディング図鑑 preview"><span class="code">F-91</span><a href="prototypes/preview/F-91.html">.env — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-100 拡張子早見表 — バイブコーディング図鑑 preview"><span class="code">F-100</span><a href="prototypes/preview/F-100.html">拡張子早見表 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-101 .ico — バイブコーディング図鑑 preview"><span class="code">F-101</span><a href="prototypes/preview/F-101.html">.ico — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-102 .mp4 — バイブコーディング図鑑 preview"><span class="code">F-102</span><a href="prototypes/preview/F-102.html">.mp4 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-103 .mp3 — バイブコーディング図鑑 preview"><span class="code">F-103</span><a href="prototypes/preview/F-103.html">.mp3 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-104 .webp — バイブコーディング図鑑 preview"><span class="code">F-104</span><a href="prototypes/preview/F-104.html">.webp — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-110 lighthouse — バイブコーディング図鑑 preview"><span class="code">F-110</span><a href="prototypes/preview/F-110.html">Lighthouse — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-111 a11y — バイブコーディング図鑑 preview"><span class="code">F-111</span><a href="prototypes/preview/F-111.html">a11y — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-120 postgresql — バイブコーディング図鑑 preview"><span class="code">F-120</span><a href="prototypes/preview/F-120.html">PostgreSQL — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-121 sqlite — バイブコーディング図鑑 preview"><span class="code">F-121</span><a href="prototypes/preview/F-121.html">SQLite — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-122 prisma — バイブコーディング図鑑 preview"><span class="code">F-122</span><a href="prototypes/preview/F-122.html">Prisma — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-123 orm — バイブコーディング図鑑 preview"><span class="code">F-123</span><a href="prototypes/preview/F-123.html">ORM — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-130 oauth — バイブコーディング図鑑 preview"><span class="code">F-130</span><a href="prototypes/preview/F-130.html">OAuth — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-140 mermaid — バイブコーディング図鑑 preview"><span class="code">F-140</span><a href="prototypes/preview/F-140.html">Mermaid — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-141 plantuml — バイブコーディング図鑑 preview"><span class="code">F-141</span><a href="prototypes/preview/F-141.html">PlantUML — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-151 apache 2.0 — バイブコーディング図鑑 preview"><span class="code">F-151</span><a href="prototypes/preview/F-151.html">Apache 2.0 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-152 gpl — バイブコーディング図鑑 preview"><span class="code">F-152</span><a href="prototypes/preview/F-152.html">GPL — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-153 creative commons — バイブコーディング図鑑 preview"><span class="code">F-153</span><a href="prototypes/preview/F-153.html">Creative Commons — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-154 oss — バイブコーディング図鑑 preview"><span class="code">F-154</span><a href="prototypes/preview/F-154.html">OSS — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-160 dom — バイブコーディング図鑑 preview"><span class="code">F-160</span><a href="prototypes/preview/F-160.html">DOM — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-161 ssr — バイブコーディング図鑑 preview"><span class="code">F-161</span><a href="prototypes/preview/F-161.html">SSR — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-162 ssg — バイブコーディング図鑑 preview"><span class="code">F-162</span><a href="prototypes/preview/F-162.html">SSG — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-170 ec2 — バイブコーディング図鑑 preview"><span class="code">F-170</span><a href="prototypes/preview/F-170.html">EC2 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-171 s3 — バイブコーディング図鑑 preview"><span class="code">F-171</span><a href="prototypes/preview/F-171.html">S3 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-172 iam — バイブコーディング図鑑 preview"><span class="code">F-172</span><a href="prototypes/preview/F-172.html">IAM — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-180 opengl — バイブコーディング図鑑 preview"><span class="code">F-180</span><a href="prototypes/preview/F-180.html">OpenGL — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-181 webgl — バイブコーディング図鑑 preview"><span class="code">F-181</span><a href="prototypes/preview/F-181.html">WebGL — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-190 サブルーチン — バイブコーディング図鑑 preview"><span class="code">F-190</span><a href="prototypes/preview/F-190.html">サブルーチン — バイブコーディング図鑑 preview</a></li>
+      <li data-search="f-200 rust — バイブコーディング図鑑 preview"><span class="code">F-200</span><a href="prototypes/preview/F-200.html">Rust — バイブコーディング図鑑 preview</a></li>
+    </ul>
+    <h3>G</h3>
+    <ul class="grid">
+      <li data-search="g-1 context (コンテキスト) — バイブコーディング図鑑 preview"><span class="code">G-1</span><a href="prototypes/preview/G-1.html">Context (コンテキスト) — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-2 token — バイブコーディング図鑑 preview"><span class="code">G-2</span><a href="prototypes/preview/G-2.html">Token — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-3 dictation — バイブコーディング図鑑 preview"><span class="code">G-3</span><a href="prototypes/preview/G-3.html">Dictation — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-4 system prompt — バイブコーディング図鑑 preview"><span class="code">G-4</span><a href="prototypes/preview/G-4.html">System Prompt — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-5 context window — バイブコーディング図鑑 preview"><span class="code">G-5</span><a href="prototypes/preview/G-5.html">Context Window — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-6 one-shot — バイブコーディング図鑑 preview"><span class="code">G-6</span><a href="prototypes/preview/G-6.html">One-shot — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-7 指示追従性 — バイブコーディング図鑑 preview"><span class="code">G-7</span><a href="prototypes/preview/G-7.html">指示追従性 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-10 prompt engineering — バイブコーディング図鑑 preview"><span class="code">G-10</span><a href="prototypes/preview/G-10.html">Prompt Engineering — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-11 context engineering — バイブコーディング図鑑 preview"><span class="code">G-11</span><a href="prototypes/preview/G-11.html">Context Engineering — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-12 agent design — バイブコーディング図鑑 preview"><span class="code">G-12</span><a href="prototypes/preview/G-12.html">Agent Design — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-13 few-shot learning — バイブコーディング図鑑 preview"><span class="code">G-13</span><a href="prototypes/preview/G-13.html">Few-shot Learning — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-14 thinking モデル — バイブコーディング図鑑 preview"><span class="code">G-14</span><a href="prototypes/preview/G-14.html">Thinking モデル — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-15 rag — バイブコーディング図鑑 preview"><span class="code">G-15</span><a href="prototypes/preview/G-15.html">RAG — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-16 embedding — バイブコーディング図鑑 preview"><span class="code">G-16</span><a href="prototypes/preview/G-16.html">Embedding — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-18 chain of thought — バイブコーディング図鑑 preview"><span class="code">G-18</span><a href="prototypes/preview/G-18.html">Chain of Thought — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-19 prompt caching — バイブコーディング図鑑 preview"><span class="code">G-19</span><a href="prototypes/preview/G-19.html">Prompt Caching — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-20 claude.md — バイブコーディング図鑑 preview"><span class="code">G-20</span><a href="prototypes/preview/G-20.html">CLAUDE.md — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-21 agents.md — バイブコーディング図鑑 preview"><span class="code">G-21</span><a href="prototypes/preview/G-21.html">AGENTS.md — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-22 skill.md — バイブコーディング図鑑 preview"><span class="code">G-22</span><a href="prototypes/preview/G-22.html">SKILL.md — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-23 .claude/settings.json — バイブコーディング図鑑 preview"><span class="code">G-23</span><a href="prototypes/preview/G-23.html">.claude/settings.json — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-30 tool use — バイブコーディング図鑑 preview"><span class="code">G-30</span><a href="prototypes/preview/G-30.html">Tool Use — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-31 hook — バイブコーディング図鑑 preview"><span class="code">G-31</span><a href="prototypes/preview/G-31.html">Hook — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-32 slash command — バイブコーディング図鑑 preview"><span class="code">G-32</span><a href="prototypes/preview/G-32.html">Slash Command — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-33 function calling — バイブコーディング図鑑 preview"><span class="code">G-33</span><a href="prototypes/preview/G-33.html">Function Calling — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-34 code interpreter — バイブコーディング図鑑 preview"><span class="code">G-34</span><a href="prototypes/preview/G-34.html">Code Interpreter — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-35 deep research — バイブコーディング図鑑 preview"><span class="code">G-35</span><a href="prototypes/preview/G-35.html">Deep Research — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-36 artifact — バイブコーディング図鑑 preview"><span class="code">G-36</span><a href="prototypes/preview/G-36.html">Artifact — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-38 plan mode — バイブコーディング図鑑 preview"><span class="code">G-38</span><a href="prototypes/preview/G-38.html">Plan Mode — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-39 permission — バイブコーディング図鑑 preview"><span class="code">G-39</span><a href="prototypes/preview/G-39.html">Permission — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-40 バイブコーディング — バイブコーディング図鑑 preview"><span class="code">G-40</span><a href="prototypes/preview/G-40.html">バイブコーディング — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-41 subagent — バイブコーディング図鑑 preview"><span class="code">G-41</span><a href="prototypes/preview/G-41.html">Subagent — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-42 worktree — バイブコーディング図鑑 preview"><span class="code">G-42</span><a href="prototypes/preview/G-42.html">Worktree — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-43 オーケストレーション — バイブコーディング図鑑 preview"><span class="code">G-43</span><a href="prototypes/preview/G-43.html">オーケストレーション — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-44 マルチエージェント協調 — バイブコーディング図鑑 preview"><span class="code">G-44</span><a href="prototypes/preview/G-44.html">マルチエージェント協調 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-46 ナーフ（モデルの劣化体感） — バイブコーディング図鑑 preview"><span class="code">G-46</span><a href="prototypes/preview/G-46.html">ナーフ（モデルの劣化体感） — バイブコーディング図鑑 preview</a></li>
+      <li data-search="g-47 auto-compact — バイブコーディング図鑑 preview"><span class="code">G-47</span><a href="prototypes/preview/G-47.html">Auto-compact — バイブコーディング図鑑 preview</a></li>
+    </ul>
+    <h3>H</h3>
+    <ul class="grid">
+      <li data-search="h-1 tdd — バイブコーディング図鑑 preview"><span class="code">H-1</span><a href="prototypes/preview/H-1.html">TDD — バイブコーディング図鑑 preview</a></li>
+      <li data-search="h-5 scrum / agile — バイブコーディング図鑑 preview"><span class="code">H-5</span><a href="prototypes/preview/H-5.html">Scrum / Agile — バイブコーディング図鑑 preview</a></li>
+      <li data-search="h-6 git flow — バイブコーディング図鑑 preview"><span class="code">H-6</span><a href="prototypes/preview/H-6.html">Git Flow — バイブコーディング図鑑 preview</a></li>
+      <li data-search="h-7 ci/cd — バイブコーディング図鑑 preview"><span class="code">H-7</span><a href="prototypes/preview/H-7.html">CI/CD — バイブコーディング図鑑 preview</a></li>
+      <li data-search="h-8 devops — バイブコーディング図鑑 preview"><span class="code">H-8</span><a href="prototypes/preview/H-8.html">DevOps — バイブコーディング図鑑 preview</a></li>
+      <li data-search="h-53 chatgpt 登場 — バイブコーディング図鑑 preview"><span class="code">H-53</span><a href="prototypes/preview/H-53.html">ChatGPT 登場 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="h-54 gpt-4 リリース — バイブコーディング図鑑 preview"><span class="code">H-54</span><a href="prototypes/preview/H-54.html">GPT-4 リリース — バイブコーディング図鑑 preview</a></li>
+      <li data-search="h-55 llama のオープン化 — バイブコーディング図鑑 preview"><span class="code">H-55</span><a href="prototypes/preview/H-55.html">LLaMA のオープン化 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="h-56 claude のバージョン史 — バイブコーディング図鑑 preview"><span class="code">H-56</span><a href="prototypes/preview/H-56.html">Claude のバージョン史 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="h-58 transformer 論文 — バイブコーディング図鑑 preview"><span class="code">H-58</span><a href="prototypes/preview/H-58.html">Transformer 論文 — バイブコーディング図鑑 preview</a></li>
+    </ul>
+    <h3>I</h3>
+    <ul class="grid">
+      <li data-search="i-1 mcp — バイブコーディング図鑑 preview"><span class="code">I-1</span><a href="prototypes/preview/I-1.html">MCP — バイブコーディング図鑑 preview</a></li>
+      <li data-search="i-2 mcp server — バイブコーディング図鑑 preview"><span class="code">I-2</span><a href="prototypes/preview/I-2.html">MCP Server — バイブコーディング図鑑 preview</a></li>
+      <li data-search="i-3 mcp client — バイブコーディング図鑑 preview"><span class="code">I-3</span><a href="prototypes/preview/I-3.html">MCP Client — バイブコーディング図鑑 preview</a></li>
+      <li data-search="i-4 mcp transport — バイブコーディング図鑑 preview"><span class="code">I-4</span><a href="prototypes/preview/I-4.html">MCP Transport — バイブコーディング図鑑 preview</a></li>
+      <li data-search="i-5 mcp sdk — バイブコーディング図鑑 preview"><span class="code">I-5</span><a href="prototypes/preview/I-5.html">MCP SDK — バイブコーディング図鑑 preview</a></li>
+      <li data-search="i-10 filesystem mcp — バイブコーディング図鑑 preview"><span class="code">I-10</span><a href="prototypes/preview/I-10.html">Filesystem MCP — バイブコーディング図鑑 preview</a></li>
+      <li data-search="i-11 github mcp — バイブコーディング図鑑 preview"><span class="code">I-11</span><a href="prototypes/preview/I-11.html">GitHub MCP — バイブコーディング図鑑 preview</a></li>
+      <li data-search="i-12 git mcp — バイブコーディング図鑑 preview"><span class="code">I-12</span><a href="prototypes/preview/I-12.html">Git MCP — バイブコーディング図鑑 preview</a></li>
+      <li data-search="i-13 slack mcp — バイブコーディング図鑑 preview"><span class="code">I-13</span><a href="prototypes/preview/I-13.html">Slack MCP — バイブコーディング図鑑 preview</a></li>
+      <li data-search="i-20 playwright mcp — バイブコーディング図鑑 preview"><span class="code">I-20</span><a href="prototypes/preview/I-20.html">Playwright MCP — バイブコーディング図鑑 preview</a></li>
+      <li data-search="i-21 puppeteer mcp — バイブコーディング図鑑 preview"><span class="code">I-21</span><a href="prototypes/preview/I-21.html">Puppeteer MCP — バイブコーディング図鑑 preview</a></li>
+      <li data-search="i-22 chrome devtools mcp — バイブコーディング図鑑 preview"><span class="code">I-22</span><a href="prototypes/preview/I-22.html">Chrome DevTools MCP — バイブコーディング図鑑 preview</a></li>
+      <li data-search="i-23 serena mcp — バイブコーディング図鑑 preview"><span class="code">I-23</span><a href="prototypes/preview/I-23.html">Serena MCP — バイブコーディング図鑑 preview</a></li>
+      <li data-search="i-24 context7 mcp — バイブコーディング図鑑 preview"><span class="code">I-24</span><a href="prototypes/preview/I-24.html">Context7 MCP — バイブコーディング図鑑 preview</a></li>
+      <li data-search="i-30 notion mcp — バイブコーディング図鑑 preview"><span class="code">I-30</span><a href="prototypes/preview/I-30.html">Notion MCP — バイブコーディング図鑑 preview</a></li>
+      <li data-search="i-41 sqlite mcp — バイブコーディング図鑑 preview"><span class="code">I-41</span><a href="prototypes/preview/I-41.html">SQLite MCP — バイブコーディング図鑑 preview</a></li>
+      <li data-search="i-50 aws mcp — バイブコーディング図鑑 preview"><span class="code">I-50</span><a href="prototypes/preview/I-50.html">AWS MCP — バイブコーディング図鑑 preview</a></li>
+    </ul>
+    <h3>J</h3>
+    <ul class="grid">
+      <li data-search="j-1 agi — バイブコーディング図鑑 preview"><span class="code">J-1</span><a href="prototypes/preview/J-1.html">AGI — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-2 強い ai／弱い ai — バイブコーディング図鑑 preview"><span class="code">J-2</span><a href="prototypes/preview/J-2.html">強い AI／弱い AI — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-3 singularity — バイブコーディング図鑑 preview"><span class="code">J-3</span><a href="prototypes/preview/J-3.html">Singularity — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-4 asi — バイブコーディング図鑑 preview"><span class="code">J-4</span><a href="prototypes/preview/J-4.html">ASI — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-10 machine learning — バイブコーディング図鑑 preview"><span class="code">J-10</span><a href="prototypes/preview/J-10.html">Machine Learning — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-11 deep learning — バイブコーディング図鑑 preview"><span class="code">J-11</span><a href="prototypes/preview/J-11.html">Deep Learning — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-12 neural network — バイブコーディング図鑑 preview"><span class="code">J-12</span><a href="prototypes/preview/J-12.html">Neural Network — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-13 transformer — バイブコーディング図鑑 preview"><span class="code">J-13</span><a href="prototypes/preview/J-13.html">Transformer — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-14 llm — バイブコーディング図鑑 preview"><span class="code">J-14</span><a href="prototypes/preview/J-14.html">LLM — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-15 vlm — バイブコーディング図鑑 preview"><span class="code">J-15</span><a href="prototypes/preview/J-15.html">VLM — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-16 fine-tuning — バイブコーディング図鑑 preview"><span class="code">J-16</span><a href="prototypes/preview/J-16.html">Fine-tuning — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-17 attention — バイブコーディング図鑑 preview"><span class="code">J-17</span><a href="prototypes/preview/J-17.html">Attention — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-18 moe — バイブコーディング図鑑 preview"><span class="code">J-18</span><a href="prototypes/preview/J-18.html">MoE — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-19 量子化 — バイブコーディング図鑑 preview"><span class="code">J-19</span><a href="prototypes/preview/J-19.html">量子化 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-20 big data — バイブコーディング図鑑 preview"><span class="code">J-20</span><a href="prototypes/preview/J-20.html">Big Data — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-21 lora — バイブコーディング図鑑 preview"><span class="code">J-21</span><a href="prototypes/preview/J-21.html">LoRA — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-23 拡散モデル — バイブコーディング図鑑 preview"><span class="code">J-23</span><a href="prototypes/preview/J-23.html">拡散モデル — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-31 第 5 世代コンピュータ — バイブコーディング図鑑 preview"><span class="code">J-31</span><a href="prototypes/preview/J-31.html">第 5 世代コンピュータ — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-33 量子コンピュータ — バイブコーディング図鑑 preview"><span class="code">J-33</span><a href="prototypes/preview/J-33.html">量子コンピュータ — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-40 iot — バイブコーディング図鑑 preview"><span class="code">J-40</span><a href="prototypes/preview/J-40.html">IoT — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-41 dx — バイブコーディング図鑑 preview"><span class="code">J-41</span><a href="prototypes/preview/J-41.html">DX — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-42 web3 — バイブコーディング図鑑 preview"><span class="code">J-42</span><a href="prototypes/preview/J-42.html">Web3 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-43 saas — バイブコーディング図鑑 preview"><span class="code">J-43</span><a href="prototypes/preview/J-43.html">SaaS — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-51 hallucination — バイブコーディング図鑑 preview"><span class="code">J-51</span><a href="prototypes/preview/J-51.html">Hallucination — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-52 sycophancy — バイブコーディング図鑑 preview"><span class="code">J-52</span><a href="prototypes/preview/J-52.html">Sycophancy — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-53 著作権法 30 条の 4（日本） — バイブコーディング図鑑 preview"><span class="code">J-53</span><a href="prototypes/preview/J-53.html">著作権法 30 条の 4（日本） — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-54 iso/iec 42001 — バイブコーディング図鑑 preview"><span class="code">J-54</span><a href="prototypes/preview/J-54.html">ISO/IEC 42001 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-56 gdpr — バイブコーディング図鑑 preview"><span class="code">J-56</span><a href="prototypes/preview/J-56.html">GDPR — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-70 vram — バイブコーディング図鑑 preview"><span class="code">J-70</span><a href="prototypes/preview/J-70.html">VRAM — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-71 ram — バイブコーディング図鑑 preview"><span class="code">J-71</span><a href="prototypes/preview/J-71.html">RAM — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-72 h100 — バイブコーディング図鑑 preview"><span class="code">J-72</span><a href="prototypes/preview/J-72.html">H100 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-73 blackwell — バイブコーディング図鑑 preview"><span class="code">J-73</span><a href="prototypes/preview/J-73.html">Blackwell — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-74 rtx シリーズ — バイブコーディング図鑑 preview"><span class="code">J-74</span><a href="prototypes/preview/J-74.html">RTX シリーズ — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-75 tensor コア — バイブコーディング図鑑 preview"><span class="code">J-75</span><a href="prototypes/preview/J-75.html">Tensor コア — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-76 cpu — バイブコーディング図鑑 preview"><span class="code">J-76</span><a href="prototypes/preview/J-76.html">CPU — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-77 gpu (概念) — バイブコーディング図鑑 preview"><span class="code">J-77</span><a href="prototypes/preview/J-77.html">GPU (概念) — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-78 hdd — バイブコーディング図鑑 preview"><span class="code">J-78</span><a href="prototypes/preview/J-78.html">HDD — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-79 ssd — バイブコーディング図鑑 preview"><span class="code">J-79</span><a href="prototypes/preview/J-79.html">SSD — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-80 sata — バイブコーディング図鑑 preview"><span class="code">J-80</span><a href="prototypes/preview/J-80.html">SATA — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-81 m.2 — バイブコーディング図鑑 preview"><span class="code">J-81</span><a href="prototypes/preview/J-81.html">M.2 — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-90 gui — バイブコーディング図鑑 preview"><span class="code">J-90</span><a href="prototypes/preview/J-90.html">GUI — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-91 cli — バイブコーディング図鑑 preview"><span class="code">J-91</span><a href="prototypes/preview/J-91.html">CLI — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-92 linux — バイブコーディング図鑑 preview"><span class="code">J-92</span><a href="prototypes/preview/J-92.html">Linux — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-93 ubuntu — バイブコーディング図鑑 preview"><span class="code">J-93</span><a href="prototypes/preview/J-93.html">Ubuntu — バイブコーディング図鑑 preview</a></li>
+      <li data-search="j-100 識字（リテラシー） — バイブコーディング図鑑 preview"><span class="code">J-100</span><a href="prototypes/preview/J-100.html">識字（リテラシー） — バイブコーディング図鑑 preview</a></li>
+    </ul>
+</main>
+<footer>
+  Repo: <a href="https://github.com/Taguchi-1989/ViveCodingDictionary">Taguchi-1989/ViveCodingDictionary</a>
+  ／ 再生成: <code>python3 scripts/generate_site_index.py</code>
+</footer>
+<script>
+  const q = document.getElementById('q');
+  const items = document.querySelectorAll('li[data-search]');
+  q.addEventListener('input', () => {
+    const v = q.value.trim().toLowerCase();
+    items.forEach(li => {
+      li.style.display = !v || li.dataset.search.includes(v) ? '' : 'none';
+    });
+  });
+</script>
+</body>
+</html>

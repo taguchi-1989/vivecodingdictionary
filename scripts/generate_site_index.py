@@ -1,0 +1,176 @@
+#!/usr/bin/env python3
+"""Generate drafts/index.html — a top management page linking to every HTML
+preview/mockup/cover/tool under drafts/. Re-run after adding new HTML files.
+
+Cloudflare Pages build output directory: `drafts`
+"""
+from __future__ import annotations
+
+import html
+import re
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+DRAFTS = ROOT / "drafts"
+OUT = DRAFTS / "index.html"
+
+TITLE_RE = re.compile(r"<title>(.*?)</title>", re.S | re.I)
+
+
+def read_title(path: Path) -> str:
+    try:
+        text = path.read_text(encoding="utf-8", errors="ignore")
+    except Exception:
+        return path.stem
+    m = TITLE_RE.search(text)
+    if not m:
+        return path.stem
+    return re.sub(r"\s+", " ", m.group(1)).strip() or path.stem
+
+
+def collect() -> list[tuple[Path, str]]:
+    items = []
+    for p in DRAFTS.rglob("*.html"):
+        if p == OUT:
+            continue
+        items.append((p, read_title(p)))
+    items.sort(key=lambda x: str(x[0]).lower())
+    return items
+
+
+SECTIONS = [
+    ("誌面モック / Design Philosophy v2", "prototypes/mockups/design_philosophy_v2/"),
+    ("誌面モック / A・B・C 案", "prototypes/mockups/"),
+    ("表紙・裏表紙", "covers/"),
+    ("オープニング見開き", "opening/"),
+    ("ツール", "tools/"),
+    ("エントリプレビュー (A〜J)", "prototypes/preview/"),
+]
+
+
+def section_of(rel: str) -> str:
+    for label, prefix in SECTIONS:
+        if rel.startswith(prefix):
+            return label
+    return "その他"
+
+
+def letter_of(rel: str) -> str | None:
+    if not rel.startswith("prototypes/preview/"):
+        return None
+    name = rel.split("/")[-1]
+    if name in ("index.html", "overview.html"):
+        return "目次・一覧"
+    if len(name) >= 1 and name[0].isalpha():
+        return name[0].upper()
+    return "その他"
+
+
+def build_html(items: list[tuple[Path, str]]) -> str:
+    groups: dict[str, dict[str, list[tuple[str, str]]]] = {}
+    for path, title in items:
+        rel = path.relative_to(DRAFTS).as_posix()
+        sec = section_of(rel)
+        sub = letter_of(rel) or ""
+        groups.setdefault(sec, {}).setdefault(sub, []).append((rel, title))
+
+    parts: list[str] = []
+    parts.append("""<!doctype html>
+<html lang=\"ja\">
+<head>
+<meta charset=\"utf-8\">
+<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">
+<title>バイブコーディング図鑑 — 管理トップ</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, \"Hiragino Sans\", \"Yu Gothic UI\", system-ui, sans-serif; margin: 0; background: #f3f6fb; color: #1a2333; }
+  header { background: #0c2552; color: #fff; padding: 18px 24px; position: sticky; top: 0; z-index: 5; }
+  header h1 { margin: 0; font-size: 1.05rem; font-weight: 800; }
+  header .sub { font-size: 0.78rem; opacity: 0.8; margin-top: 2px; }
+  main { max-width: 1100px; margin: 0 auto; padding: 24px; }
+  h2 { font-size: 1rem; color: #0c2552; border-left: 5px solid #2a5db0; padding: 4px 10px; margin: 28px 0 10px; }
+  h3 { font-size: 0.85rem; color: #2a5db0; margin: 14px 0 6px; }
+  ul.grid { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 4px 12px; }
+  ul.grid li { font-size: 0.82rem; line-height: 1.5; }
+  ul.grid a { color: #1a3a6c; text-decoration: none; padding: 3px 6px; border-radius: 4px; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  ul.grid a:hover { background: #e6eef9; }
+  .code { color: #2a5db0; font-weight: 700; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.78rem; margin-right: 4px; }
+  .filter { margin: 8px 0 18px; }
+  .filter input { width: 100%; padding: 8px 12px; border: 1px solid #d4dded; border-radius: 6px; font-size: 0.9rem; }
+  footer { color: #6c7a91; font-size: 0.75rem; padding: 24px; text-align: center; }
+  footer a { color: #2a5db0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>バイブコーディング図鑑 — 管理トップ</h1>
+  <div class=\"sub\">作りかけ含め、全 HTML ページにリンクで飛べる目次です。</div>
+</header>
+<main>
+  <div class=\"filter\"><input id=\"q\" type=\"search\" placeholder=\"絞り込み（ID やタイトルで検索）...\" autofocus></div>
+""")
+
+    for sec_label, _ in SECTIONS:
+        if sec_label not in groups:
+            continue
+        parts.append(f"  <h2>{html.escape(sec_label)}</h2>\n")
+        subs = groups[sec_label]
+        sub_keys = sorted(subs.keys(), key=lambda k: (k == "目次・一覧" and "0" or k))
+        for sub in sub_keys:
+            entries = subs[sub]
+
+            def sort_key(e: tuple[str, str]):
+                name = e[0].split("/")[-1].removesuffix(".html")
+                m = re.match(r"^([A-Z])-(\d+)$", name)
+                if m:
+                    return (m.group(1), int(m.group(2)))
+                return ("~", 0, name)
+
+            entries.sort(key=sort_key)
+            if sub:
+                parts.append(f"    <h3>{html.escape(sub)}</h3>\n")
+            parts.append('    <ul class="grid">\n')
+            for rel, title in entries:
+                name = rel.split("/")[-1].removesuffix(".html")
+                code = name if re.match(r"^[A-Z]-\d+$", name) else ""
+                label = title if not code else title
+                parts.append(
+                    f'      <li data-search="{html.escape((name + " " + title).lower())}">'
+                )
+                if code:
+                    parts.append(f'<span class="code">{html.escape(code)}</span>')
+                parts.append(
+                    f'<a href="{html.escape(rel)}">{html.escape(label)}</a></li>\n'
+                )
+            parts.append("    </ul>\n")
+
+    parts.append("""</main>
+<footer>
+  Repo: <a href=\"https://github.com/Taguchi-1989/ViveCodingDictionary\">Taguchi-1989/ViveCodingDictionary</a>
+  ／ 再生成: <code>python3 scripts/generate_site_index.py</code>
+</footer>
+<script>
+  const q = document.getElementById('q');
+  const items = document.querySelectorAll('li[data-search]');
+  q.addEventListener('input', () => {
+    const v = q.value.trim().toLowerCase();
+    items.forEach(li => {
+      li.style.display = !v || li.dataset.search.includes(v) ? '' : 'none';
+    });
+  });
+</script>
+</body>
+</html>
+""")
+    return "".join(parts)
+
+
+def main() -> None:
+    items = collect()
+    OUT.write_text(build_html(items), encoding="utf-8")
+    print(f"wrote {OUT} ({len(items)} pages)")
+
+
+if __name__ == "__main__":
+    main()
