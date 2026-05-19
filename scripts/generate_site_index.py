@@ -8,7 +8,10 @@ from __future__ import annotations
 
 import html
 import re
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
+
+JST = timezone(timedelta(hours=9))
 
 ROOT = Path(__file__).resolve().parent.parent
 DRAFTS = ROOT / "drafts"
@@ -117,7 +120,7 @@ def build_html(items: list[tuple[Path, str]]) -> str:
 <body>
 <header>
   <h1>バイブコーディング図鑑 — 管理トップ</h1>
-  <div class=\"sub\">作りかけ含め、全 HTML ページにリンクで飛べる目次です。</div>
+  <div class=\"sub\">作りかけ含め、全 HTML ページにリンクで飛べる目次です。最終更新: __UPDATED__</div>
 </header>
 <main>
   <div class=\"filter\"><input id=\"q\" type=\"search\" placeholder=\"絞り込み（ID やタイトルで検索）...\" autofocus></div>
@@ -180,8 +183,10 @@ def build_html(items: list[tuple[Path, str]]) -> str:
 
 def main() -> None:
     items = collect()
-    OUT.write_text(build_html(items), encoding="utf-8")
-    print(f"wrote {OUT} ({len(items)} pages)")
+    stamp = datetime.now(JST).strftime("%Y-%m-%d %H:%M JST")
+    html_out = build_html(items).replace("__UPDATED__", html.escape(stamp))
+    OUT.write_text(html_out, encoding="utf-8")
+    print(f"wrote {OUT} ({len(items)} pages, updated {stamp})")
 
 
 if __name__ == "__main__":
