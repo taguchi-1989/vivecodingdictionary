@@ -25,7 +25,19 @@ def read_title(path: Path) -> str:
     m = TITLE_RE.search(text)
     if not m:
         return path.stem
-    return re.sub(r"\s+", " ", m.group(1)).strip() or path.stem
+    title = re.sub(r"\s+", " ", m.group(1)).strip()
+    for suffix in (
+        " — バイブコーディング図鑑 preview",
+        " — バイブコーディング図鑑",
+        " - バイブコーディング図鑑 preview",
+        "バイブコーディング図鑑 — ",
+        "バイブコーディング図鑑 ",
+    ):
+        if title.endswith(suffix):
+            title = title[: -len(suffix)].strip()
+        if title.startswith(suffix):
+            title = title[len(suffix) :].strip()
+    return title or path.stem
 
 
 def collect() -> list[tuple[Path, str]]:
