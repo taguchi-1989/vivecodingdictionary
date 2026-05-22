@@ -107,19 +107,19 @@ WebContainers、Vite（F-41）、v0（B-9）
 ## 非エンジニアのつまずき
 
 <!-- user-input:start key="stumble" -->
--
--
--
+- v0 と Bolt.new の名前は聞くが、両者の違いや良さが分かりにくいです。
+- UI 系のツールなので、始める動機が見えにくいです。
+- 使ってみたところでリターンが分かりにくく、踏み出しにくいです。
 <!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
 <!-- user-input:start key="my_comment" -->
-- 🙂 第一印象:
-- 👍 良い点:
-- 👎 ダメな点:
-- 👥 誰向けか:
+- 🙂 第一印象: 1〜2 年前の文脈では良いという評判を聞いていました。
+- 👍 良い点: 使っていないため、はっきりとした良さは分かりません。
+- 👎 ダメな点: Codex や Claude Code に役割を巻き取られている印象です。
+- 👥 誰向けか: 今更感があり、今から使い始めるのは難しい印象です。
 <!-- user-input:end key="my_comment" -->
 
 

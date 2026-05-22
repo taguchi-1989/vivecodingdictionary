@@ -105,19 +105,19 @@ Deep Research（G-35）、Sonar API、Prompt Engineering。
 ## 非エンジニアのつまずき
 
 <!-- user-input:start key="stumble" -->
--
--
--
+- モデルを切り替えて選べますが、何を選べばよいか判断しにくかったです。
+- 各モデルの違いが見えにくく、比較して選ぶのが難しいです。
+- 無料期間が終わると継続するモチベーションを保ちにくいです。
 <!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
 <!-- user-input:start key="my_comment" -->
-- 🙂 第一印象:
-- 👍 良い点:
-- 👎 ダメな点:
-- 👥 誰向けか:
+- 🙂 第一印象: ソフトバンクの無料キャンペーンで触り、「使える」と感じました。
+- 👍 良い点: 最新モデルも割と使えて、検索特化の使い勝手が良かったです。
+- 👎 ダメな点: 自社モデルがなく、ChatGPT や Claude に検索機能で追いつかれた印象です。
+- 👥 誰向けか: 無料で始めやすい入口として良かったが、今の状況は正直分かりません。
 <!-- user-input:end key="my_comment" -->
 
 

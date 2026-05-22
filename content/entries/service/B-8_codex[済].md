@@ -108,19 +108,19 @@ OpenAI（C-1）、ChatGPT（B-3）、Claude Code（B-7）
 ## 非エンジニアのつまずき
 
 <!-- user-input:start key="stumble" -->
--
--
--
+- 初めは Mac しか使えず、Windows はサポートに癖があり、苦戦したのは昔の思い出です。
+- とはいえ約 10 ヶ月前の話で、今は環境まわりが全然違います。
+- ChatGPT と Codex は何が違うのか、という点でつまずきやすいです。
 <!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
 <!-- user-input:start key="my_comment" -->
-- 🙂 第一印象:
-- 👍 良い点:
-- 👎 ダメな点:
-- 👥 誰向けか:
+- 🙂 第一印象: プレビュー版の頃はやりづらく、つまる感じでした。
+- 👍 良い点: どんどん進化し、2026 年 5 月時点で一番使いやすく、開発体験が非常に良いです。
+- 👎 ダメな点: 今のところ致命的な弱点は感じません。
+- 👥 誰向けか: ChatGPT の延長で有料契約し、すべての人が使うべきだと感じます。
 <!-- user-input:end key="my_comment" -->
 
 
