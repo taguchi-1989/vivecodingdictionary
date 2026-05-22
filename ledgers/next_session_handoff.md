@@ -1,3 +1,35 @@
+# 次セッションへの引き継ぎ（2026-05-23 v11 更新）
+
+## 2026-05-23 セッション成果
+
+### Cloudflare Pages デプロイ
+- 管理トップ `drafts/index.html` を新設（全 334 HTML ページへのリンク一覧、検索付き）
+- `scripts/generate_site_index.py` でいつでも再生成可能
+- `scripts/build_site.sh` を Cloudflare Build command に設定（preview_gen + 画像コピー + index 生成）
+- カスタムドメイン `vibe.zealbootcamp.com` を設定中（DNS 伝播待ち）
+- Build output directory: `drafts`
+
+### 著者記入欄 対話入力（23 件完了）
+音声口述 → Claude 転記の対話形式で進めた。コミット `cf9ba7d`・`865f2fb`・`3321490`。
+
+| グループ | 完了件数 | エントリ |
+| :-- | --: | :-- |
+| B 群（ツール） | 8 件 | B-1, B-6〜B-12 |
+| C 群（人物・企業） | 4 件 | C-6, C-10, C-11, C-50 |
+| D 群（モデル系統） | 11 件 | D-1,2,4,11,12,14,20,21,22,24,70 |
+
+### 著者記入 残り 50 件（`ledgers/author_fill_queue.md` に一覧）
+- A 群 11 件（前付け：まえがき・凡例類）
+- E 群 5 件（ベンチマーク系）
+- F 群 31 件（基盤技術：最多）
+- G 群 2 件
+- J 群 1 件
+
+次セッションは `ledgers/author_fill_queue.md` を開いて続きから。
+対話形式（音声口述 → Claude 転記）で進める。
+
+---
+
 # 次セッションへの引き継ぎ（2026-04-30 v10 更新 / 累計 245 件本書き完走）
 
 *2026-04-29〜2026-04-30 にかけて、`entry-writer` 5 並列 × 49 バッチ で letter 横断 245 件を本書き。skeleton 305 → 42（−263）、drafting → 263、needs_review → 39、archived 8 → 23、☆ 違反 0 で着地。残スケルトン約 42 件。次セッションはこのファイルの「2026-04-30 セッション成果」を確認し、残り 42 件のうち 30 件束を `entry-writer` で進めるか、needs_review に積まれた 39 件の著者欄記入に進むか選んでください。*
