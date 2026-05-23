@@ -125,19 +125,19 @@ llama.cpp、VRAM、GGUF 量子化
 ## 非エンジニアのつまずき
 
 <!-- user-input:start key="stumble" -->
-- 
-- 
-- 
+- ローカル LLM は GPU の VRAM 量に大きく左右され、家の PC では入りきらないことがあります。
+- ollama に入る全モデルが自分の PC で使えるわけではなく、見極めが難しいです。
+- 大きいモデルは VRAM がたくさん必要で、ハードルが高くなります。
 <!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
 <!-- user-input:start key="my_comment" -->
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象: ローカルでできるなら今後 PC で全部済むのでは、と期待しました。
+- 👍 良い点: フリーで回せて、特に小さいモデルなら気軽に試せるのが嬉しいです。
+- 👎 ダメな点: 大きいモデルは VRAM のでかい GPU が必要で、現実的に厳しいです。
+- 👥 誰向けか: Mac ユーザーが一番向いています。RAM と VRAM が共有でコスパ良好です。
 <!-- user-input:end key="my_comment" -->
 
 
