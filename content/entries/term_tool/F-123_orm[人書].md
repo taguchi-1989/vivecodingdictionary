@@ -126,19 +126,19 @@ Prisma、SQLAlchemy、N+1 問題
 ## 非エンジニアのつまずき
 
 <!-- user-input:start key="stumble" -->
-- 
-- 
-- 
+- table と class の対応や、SQL なしで操作できる仕組みがピンと来ません。
+- Prisma など個別実装と ORM という概念名が混ざって登場し、整理がつきません。
+- 理解より先に Claude へスキーマ生成を任せて済ませてしまうことが多いです。
 <!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
 <!-- user-input:start key="my_comment" -->
-- 🙂 第一印象: 
-- 👍 良い点: 
-- 👎 ダメな点: 
-- 👥 誰向けか: 
+- 🙂 第一印象: 名前を見ても何の略か分からず、難しい語だと身構えました。
+- 👍 良い点: 楽に DB を扱えるらしい、というところまでは想像できます。
+- 👎 ダメな点: 自分の中で噛み砕けておらず、現時点では勉強中の概念です。
+- 👥 誰向けか: しっかり理解したい人向けです。私自身もまだ追いついていません。
 <!-- user-input:end key="my_comment" -->
 
 
