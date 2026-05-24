@@ -112,19 +112,19 @@ Mermaid、VS Code 拡張、Graphviz
 ## 非エンジニアのつまずき
 
 <!-- user-input:start key="stumble" -->
--
--
--
+- Mermaid より表現力は高いものの、AI の学習量が少なくエラーが頻発します。
+- 間違った構文が返ってきて、修正地獄になることがあります。
+- 学習量や GitHub の対応差から、日常用途は Mermaid に寄せたほうが楽です。
 <!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
 <!-- user-input:start key="my_comment" -->
-- 🙂 第一印象:
-- 👍 良い点:
-- 👎 ダメな点:
-- 👥 誰向けか:
+- 🙂 第一印象: 表現力が高く、図のアーティストに出会ったような感動がありました。
+- 👍 良い点: アーキテクトとして使い込みたくなる機能がたくさん揃っています。
+- 👎 ダメな点: マイナーで AI 学習量が少なく、任せきりにできず手直しが必要です。
+- 👥 誰向けか: どうしても PlantUML を使いたい人向けで、AI 任せは難しいです。
 <!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -165,3 +165,4 @@ Mermaid、VS Code 拡張、Graphviz
 
 - ローカル実行の前提：Java（JRE 8 以上）と Graphviz が必要。導入コストがあるため、初学者には [PlantUML Server](https://www.plantuml.com/plantuml/uml/) から始めることを薦める
 - Graphviz 不要な図種：シーケンス図・アクティビティ図（新構文）・マインドマップは Graphviz なしで描画できる場合がある（バージョン依存）
+- **2026-05 時点の状況メモ**：Mermaid は GitHub・Notion のネイティブレンダリング対応で日常用途の優位が深まっており、LLM の学習量も Mermaid のほうが多く一発成功率が高めとされる傾向。PlantUML は本格 UML や複雑な企業システム設計では依然有効で、用途で選び分けるのが現実的。AI 構文精度の差は両者とも改善が続いているため、半年〜1 年ごとに再評価が必要
