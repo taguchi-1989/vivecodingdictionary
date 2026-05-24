@@ -104,19 +104,19 @@ WebArena、OSWorld、GAIA
 ## 非エンジニアのつまずき
 
 <!-- user-input:start key="stumble" -->
--
--
--
+- 今回初めて聞いた語で、他のエージェント系ベンチとの違いが見えにくいです。
+- どこまでメジャーで、どのモデルがどれだけ取れるかの相場感が分かりません。
+- 8 環境の中で何が得意・苦手かを読み解くには、ある程度の前提知識が必要です。
 <!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
 <!-- user-input:start key="my_comment" -->
-- 🙂 第一印象:
-- 👍 良い点:
-- 👎 ダメな点:
-- 👥 誰向けか:
+- 🙂 第一印象: 今回初めて見たベンチで、清華大学発というところに新鮮さを感じました。
+- 👍 良い点: 8 環境という広さで評価するので、単一領域では見えない弱点が出やすい設計です。
+- 👎 ダメな点: 全体平均だけでは誤解を生みやすく、環境別で読み解く手間が要ります。
+- 👥 誰向けか: AI の進歩を定点観測したい人にとって、多面的な物差しとして役立つ指標です。
 <!-- user-input:end key="my_comment" -->
 
 
@@ -162,3 +162,7 @@ WebArena、OSWorld、GAIA
 - 8 環境の内訳：OS、Database、Knowledge Graph、Card Game、Lateral Thinking Puzzles、House Holding、Web Shopping、Web Browsing
 - スコア比較時は「Avg.（全環境平均）」と「環境別スコア」を区別して引用するのが正確。同じ環境同士の比較が前提
 - GPT-4 が初期に高成績を記録し、その後 Claude・Gemini・GLM・Qwen 系が追随する形で更新が続いています
+- **2026-05 時点の状況メモ**
+  - 8 環境構成（OS Shell / DB SQL / 知識グラフ / カードゲーム / 家事シミュ / Web ショッピング / Web ブラウジング / 横思考パズル）はエージェントベンチの中で最も範囲が広く、単一ドメインベンチで見逃す弱点を補う設計
+  - 個別モデルの最新スコアは Tsinghua THUDM/AgentBench の GitHub README が一次情報
+  - 2026-04 に UC Berkeley/RDI が「報酬ハッキングで主要エージェントベンチ 8 種が攻略可能」と報告。第三者の Epoch AI / BenchLM スコアと併読が推奨される
