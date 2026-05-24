@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>前付け 3 - A-3 + A-9 図鑑の歩き方と索引 (front_map_index)</title>
+<link rel="stylesheet" href="../prototypes/mockups/design_philosophy_v2/base.css">
+<link rel="stylesheet" href="_common.css">
+<style>
+  /* 左ページ: A〜J 地図 + 3 ルート */
+  .chapter-map {
+    flex: 1;
+    border: 1.5px dashed var(--ink-blue);
+    border-radius: 8px;
+    padding: var(--sp-5);
+    margin: var(--sp-5) 0;
+    background: var(--paper);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-4);
+  }
+  .chapter-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--sp-2);
+    flex: 1;
+  }
+  .chapter-node {
+    border: 1.5px solid var(--ink);
+    border-radius: 6px;
+    padding: var(--sp-2);
+    background: var(--paper);
+    text-align: center;
+    font-size: 11px;
+    color: var(--ink);
+    position: relative;
+  }
+  .chapter-node .letter {
+    font-family: var(--font-en);
+    font-weight: 900;
+    font-size: 22px;
+    color: var(--ink-blue);
+    display: block;
+    margin-bottom: 2px;
+  }
+  .chapter-node .theme {
+    font-size: 10.5px;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+  /* 3 ルート凡例 */
+  .route-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .route {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .route .swatch {
+    width: 28px;
+    height: 4px;
+    border-radius: 2px;
+  }
+  .route .swatch.r1 { background: #B7D3F7; }
+  .route .swatch.r2 { background: #5FBF8F; }
+  .route .swatch.r3 { background: #E59450; border: 1px dotted #C97F3A; }
+  .route .name { font-weight: 700; color: var(--ink-blue-900); }
+
+  /* 右ページ: ミニ索引 10章 × 3語 */
+  .mini-index {
+    flex: 1;
+    margin: var(--sp-5) 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-3) var(--sp-5);
+    align-content: start;
+  }
+  .index-block {
+    border-bottom: 1px dashed var(--rule-strong);
+    padding-bottom: var(--sp-2);
+  }
+  .index-block .chap {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+  .index-block .chap .letter {
+    font-family: var(--font-en);
+    font-weight: 900;
+    font-size: 16px;
+    color: var(--ink-blue);
+  }
+  .index-block .chap .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .index-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 11.5px;
+    line-height: 1.7;
+    color: var(--ink-2);
+  }
+  .index-note {
+    margin-top: var(--sp-4);
+    font-size: 11px;
+    color: var(--ink-3);
+    font-style: italic;
+    text-align: right;
+  }
+
+  .use-index {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--sp-3);
+    margin-top: var(--sp-4);
+    font-size: 11px;
+    line-height: 1.6;
+  }
+  .use-index .kind {
+    background: var(--paper-2);
+    border-radius: 4px;
+    padding: var(--sp-2);
+  }
+  .use-index .kind strong {
+    color: var(--ink-blue-900);
+    display: block;
+    margin-bottom: 2px;
+    font-size: 11.5px;
+  }
+</style>
+</head>
+<body class="vbcd">
+
+<div class="draft-stamp">FRONT 03 · A-3 + A-9 · DRAFT</div>
+
+<div class="spread">
+
+  <!-- 左ページ: A-3 図鑑の歩き方 -->
+  <section class="page left">
+    <div class="section-label">A-3 · FRONT · WALKING GUIDE</div>
+    <h1 class="front-title-sm">図鑑の歩き方</h1>
+    <p class="front-lead">
+      通読は不要。気になる語から引いて、関連用語のピルでつなぐ造りです。<br>
+      letter 順と掲載順は別。「どこから入っても帰ってこれる」設計にしています。
+    </p>
+
+    <div class="chapter-map">
+      <div class="chapter-grid">
+        <div class="chapter-node"><span class="letter">A</span><span class="theme">はじめに</span></div>
+        <div class="chapter-node"><span class="letter">B</span><span class="theme">サービス</span></div>
+        <div class="chapter-node"><span class="letter">C</span><span class="theme">人・組織</span></div>
+        <div class="chapter-node"><span class="letter">D</span><span class="theme">モデル</span></div>
+        <div class="chapter-node"><span class="letter">E</span><span class="theme">ベンチマーク</span></div>
+        <div class="chapter-node"><span class="letter">F</span><span class="theme">従来コード</span></div>
+        <div class="chapter-node"><span class="letter">G</span><span class="theme">バイブ特有</span></div>
+        <div class="chapter-node"><span class="letter">H</span><span class="theme">歴史</span></div>
+        <div class="chapter-node"><span class="letter">I</span><span class="theme">MCP</span></div>
+        <div class="chapter-node"><span class="letter">J</span><span class="theme">一般語彙</span></div>
+      </div>
+
+      <div class="route-legend">
+        <div class="route">
+          <div class="swatch r1"></div>
+          <span class="name">①索引引き:</span>
+          <span>A-9 から気になる語へ直接飛ぶ（最短）</span>
+        </div>
+        <div class="route">
+          <div class="swatch r2"></div>
+          <span class="name">②業界マップ順:</span>
+          <span>A → C → D → B → I（人 → モデル → サービス → MCP）</span>
+        </div>
+        <div class="route">
+          <div class="swatch r3"></div>
+          <span class="name">③レベル別:</span>
+          <span>A-5 の reader_level に合わせて拾う</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-foot">
+      <div class="left-meta">2026.05 · Draft</div>
+      <div class="right-meta">A-3 · FRONT</div>
+    </div>
+    <div class="page-num">08</div>
+  </section>
+
+  <!-- 右ページ: A-9 ミニ索引 -->
+  <section class="page right">
+    <div class="section-label">A-9 · FRONT · MINI INDEX</div>
+    <h1 class="front-title-sm">索引 — ミニ版</h1>
+    <p class="front-lead">
+      巻末に letter 順 / 五十音順 / アルファベット順の本物索引を収録。<br>
+      ここでは章ごとの代表語 3 つで本書のスケールを掴んでください。
+    </p>
+
+    <div class="mini-index">
+      <div class="index-block">
+        <div class="chap"><span class="letter">A</span><span class="label">はじめに</span></div>
+        <ul><li>まえがき</li><li>この本の読み方</li><li>略称表記</li></ul>
+      </div>
+      <div class="index-block">
+        <div class="chap"><span class="letter">B</span><span class="label">サービス</span></div>
+        <ul><li>Gemini</li><li>ChatGPT</li><li>Claude Code</li></ul>
+      </div>
+      <div class="index-block">
+        <div class="chap"><span class="letter">C</span><span class="label">人・組織</span></div>
+        <ul><li>OpenAI</li><li>Anthropic</li><li>Demis Hassabis</li></ul>
+      </div>
+      <div class="index-block">
+        <div class="chap"><span class="letter">D</span><span class="label">モデル</span></div>
+        <ul><li>Gemini 2 系</li><li>Claude 3 系</li><li>GPT-4 系</li></ul>
+      </div>
+      <div class="index-block">
+        <div class="chap"><span class="letter">E</span><span class="label">ベンチマーク</span></div>
+        <ul><li>SWE-Bench</li><li>MMLU</li><li>Chatbot Arena</li></ul>
+      </div>
+      <div class="index-block">
+        <div class="chap"><span class="letter">F</span><span class="label">従来コード</span></div>
+        <ul><li>TypeScript</li><li>HTML</li><li>Markdown</li></ul>
+      </div>
+      <div class="index-block">
+        <div class="chap"><span class="letter">G</span><span class="label">バイブ特有</span></div>
+        <ul><li>Context Window</li><li>System Prompt</li><li>CLAUDE.md</li></ul>
+      </div>
+      <div class="index-block">
+        <div class="chap"><span class="letter">H</span><span class="label">歴史</span></div>
+        <ul><li>ChatGPT 公開</li><li>GPT-4 リリース</li><li>Transformer 論文</li></ul>
+      </div>
+      <div class="index-block">
+        <div class="chap"><span class="letter">I</span><span class="label">MCP</span></div>
+        <ul><li>MCP Server</li><li>GitHub MCP</li><li>Filesystem MCP</li></ul>
+      </div>
+      <div class="index-block">
+        <div class="chap"><span class="letter">J</span><span class="label">一般語彙</span></div>
+        <ul><li>機械学習</li><li>Hallucination</li><li>GPU</li></ul>
+      </div>
+    </div>
+
+    <div class="use-index">
+      <div class="kind"><strong>letter 順</strong>ID から位置で引く（F-2 など）</div>
+      <div class="kind"><strong>五十音順</strong>日本語名で引く（「コンテキスト」など）</div>
+      <div class="kind"><strong>アルファベット順</strong>略称で引く（GPT, MCP, RAG など）</div>
+    </div>
+
+    <div class="index-note">巻末に本物索引（letter / 五十音 / アルファベット）を収録します</div>
+
+    <div class="page-foot">
+      <div class="left-meta">A-9 · FRONT</div>
+      <div class="right-meta">📖 バイブコーディング図鑑</div>
+    </div>
+    <div class="page-num">09</div>
+  </section>
+
+</div>
+
+</body>
+</html>

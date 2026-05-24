@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>前付け 7 見開き たたき台一覧</title>
+<link rel="stylesheet" href="../prototypes/mockups/design_philosophy_v2/base.css">
+<style>
+  body {
+    margin: 0;
+    padding: 48px;
+    background: #F3F6FB;
+    font-family: var(--font-jp);
+    color: var(--ink);
+  }
+  .container { max-width: 1100px; margin: 0 auto; }
+  h1 { font-size: 32px; font-weight: 900; margin: 0 0 8px 0; }
+  .sub {
+    color: var(--ink-2);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .card {
+    background: white;
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 24px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s, transform 0.15s;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .card:hover {
+    border-color: var(--ink-blue);
+    transform: translateY(-2px);
+  }
+  .card .num {
+    font-family: var(--font-en);
+    font-size: 12px;
+    color: var(--ink-blue);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  .card h2 {
+    font-size: 20px;
+    font-weight: 900;
+    margin: 0;
+  }
+  .card .layout {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--ink-2);
+    background: var(--paper-2);
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    width: fit-content;
+  }
+  .card .ids {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .card .id-tag {
+    background: var(--ink-blue-50);
+    color: var(--ink-blue-900);
+    font-family: var(--font-en);
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-weight: 700;
+  }
+  .card .desc {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--ink-2);
+  }
+  .meta-bar {
+    background: white;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 32px;
+    border-left: 4px solid var(--ink-blue);
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--ink);
+  }
+  .meta-bar strong { color: var(--ink-blue-900); }
+  .meta-bar code {
+    background: var(--paper-2);
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>前付け 7 見開き — HTML たたき台</h1>
+  <div class="sub">
+    A 群（A-1〜A-11）を <code style="background: var(--paper-2); padding: 2px 6px; border-radius: 3px;">spread_v1</code> ではなく独自レイアウトで作る、画像生成の下絵としての HTML。<br>
+    詳細仕様は <a href="../../docs/front_section_layout.md" style="color: var(--ink-blue);">docs/front_section_layout.md</a> 参照。
+  </div>
+
+  <div class="meta-bar">
+    <strong>使い方:</strong> 各カードをクリックして見開きを開く。本文・レイアウトは Claude が起こした下絵。<br>
+    <strong>次の工程:</strong> 著者がレビュー → 画像生成プロンプトに反映 → 最終版を確定。本 HTML は印刷用ではなく、絵の構図確認のためのワイヤー。
+  </div>
+
+  <div class="grid">
+
+    <a href="0_concept_spread.html" class="card">
+      <div class="num">FRONT 00</div>
+      <h2>扉「知らないことばで、止まらない。」</h2>
+      <span class="layout">front_concept_spread</span>
+      <div class="ids"><span class="id-tag">front_concept</span></div>
+      <div class="desc">表紙のコピーを受けて本書の使い方を 1 見開きで伝える扉。左：3 コマで「困る→引く→戻る」の流れ。右：見開きミニチュア＋約束。</div>
+    </a>
+
+    <a href="1_a1_preface.html" class="card">
+      <div class="num">FRONT 01</div>
+      <h2>まえがき（巻頭言）</h2>
+      <span class="layout">front_essay</span>
+      <div class="ids"><span class="id-tag">A-1</span></div>
+      <div class="desc">著者の声で書く essay。左：大判の「ことばの橋」イラスト＋短いリード。右：2 段組の本文（ドロップキャップあり）。</div>
+    </a>
+
+    <a href="2_a2_anatomy.html" class="card">
+      <div class="num">FRONT 02</div>
+      <h2>見開きの読み方（分解図）</h2>
+      <span class="layout">front_anatomy</span>
+      <div class="ids"><span class="id-tag">A-2</span></div>
+      <div class="desc">本編 1 エントリの実物見開きを半透明で敷き、13 個のコールアウト矢印で各部位（タイトル／タグライン／6 視点／著者欄等）を指す分解図。</div>
+    </a>
+
+    <a href="3_a3_a9_map_index.html" class="card">
+      <div class="num">FRONT 03</div>
+      <h2>図鑑の歩き方と索引</h2>
+      <span class="layout">front_map_index</span>
+      <div class="ids"><span class="id-tag">A-3</span><span class="id-tag">A-9</span></div>
+      <div class="desc">左（A-3）：A〜J の章地図と 3 ルート凡例。右（A-9）：10 章 × 3 語のミニ索引と 3 系統の索引使い分け。</div>
+    </a>
+
+    <a href="4_a4_a5_a6_legend_marks.html" class="card">
+      <div class="num">FRONT 04</div>
+      <h2>この本の注意マーク</h2>
+      <span class="layout">front_legend_marks</span>
+      <div class="ids"><span class="id-tag">A-4</span><span class="id-tag">A-5</span><span class="id-tag">A-6</span></div>
+      <div class="desc">左（A-4 + A-5）：体験区分 ●◐○ と読者レベル 1〜6 はしご。右（A-6）：時変フラグ 3 つのカード（evaluation_date / version_status / pricing_note）。</div>
+    </a>
+
+    <a href="5_a7_a8_swatch.html" class="card">
+      <div class="num">FRONT 05</div>
+      <h2>図と色の見本帳</h2>
+      <span class="layout">front_swatch</span>
+      <div class="ids"><span class="id-tag">A-7</span><span class="id-tag">A-8</span></div>
+      <div class="desc">左（A-7）：5 種類の図タイプ（structure / timeline / comparison / before_after / workflow）ミニサムネ。右（A-8）：色トーン・バッジ 6 種・ピル・6 視点アイコンのスウォッチ。</div>
+    </a>
+
+    <a href="6_a10_a11_log_glossary.html" class="card">
+      <div class="num">FRONT 06</div>
+      <h2>更新履歴と略称</h2>
+      <span class="layout">front_log_glossary</span>
+      <div class="ids"><span class="id-tag">A-10</span><span class="id-tag">A-11</span></div>
+      <div class="desc">左（A-10）：横向きタイムライン＋次に変わる予定枠。右（A-11）：略称 10 件の 4 列表（略称 / 正式名称 / 読み / 初出）。</div>
+    </a>
+
+  </div>
+</div>
+
+</body>
+</html>

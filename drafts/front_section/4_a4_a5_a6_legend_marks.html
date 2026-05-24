@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>前付け 4 - A-4 + A-5 + A-6 注意マークの凡例 (front_legend_marks)</title>
+<link rel="stylesheet" href="../prototypes/mockups/design_philosophy_v2/base.css">
+<link rel="stylesheet" href="_common.css">
+<style>
+  /* 左ページ上段: A-4 体験区分 */
+  .exp-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-3);
+    margin: var(--sp-4) 0 var(--sp-7) 0;
+  }
+  .exp-row {
+    display: grid;
+    grid-template-columns: 60px 110px 1fr;
+    align-items: center;
+    gap: var(--sp-3);
+    padding: var(--sp-3);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+  }
+  .exp-row .mark {
+    font-size: 28px;
+    line-height: 1;
+    text-align: center;
+    color: var(--ink-blue-900);
+  }
+  .exp-row .enum {
+    font-family: var(--font-en);
+    font-weight: 700;
+    font-size: 12px;
+    color: var(--ink-blue);
+    letter-spacing: 0.04em;
+    background: var(--ink-blue-50);
+    padding: 3px 6px;
+    border-radius: 4px;
+    text-align: center;
+  }
+  .exp-row .desc { font-size: 13px; line-height: 1.6; color: var(--ink); }
+
+  /* 左ページ下段: A-5 読者レベルはしご */
+  .level-ladder {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: var(--sp-3);
+  }
+  .level-row {
+    display: grid;
+    grid-template-columns: 36px 100px 1fr;
+    align-items: center;
+    gap: var(--sp-3);
+    padding: var(--sp-2) var(--sp-3);
+    border-radius: 4px;
+  }
+  .level-row .num {
+    font-family: var(--font-en);
+    font-weight: 900;
+    font-size: 22px;
+    text-align: center;
+    line-height: 1;
+    color: var(--ink-blue-900);
+  }
+  .level-row .name {
+    font-weight: 700;
+    font-size: 12.5px;
+    color: var(--ink-blue-900);
+  }
+  .level-row .ex {
+    font-size: 11.5px;
+    color: var(--ink-2);
+    line-height: 1.5;
+  }
+  /* グラデーション 1〜6 (薄→濃) */
+  .level-row.l1 { background: #F5F9FE; }
+  .level-row.l2 { background: #EAF1FB; }
+  .level-row.l3 { background: #DEE9F8; }
+  .level-row.l4 { background: #C6D9F2; }
+  .level-row.l5 { background: #A9C5EB; }
+  .level-row.l6 { background: #8AB0E3; color: white; }
+  .level-row.l6 .num,
+  .level-row.l6 .name,
+  .level-row.l6 .ex { color: white; }
+
+  .sub-h {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--ink-blue);
+    letter-spacing: 0.04em;
+    margin: 0;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  /* 右ページ: A-6 時変フラグ */
+  .flag-section { margin-top: var(--sp-5); }
+  .flag-card {
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: var(--sp-4);
+    margin-bottom: var(--sp-3);
+    background: var(--paper);
+  }
+  .flag-card.required {
+    border-color: var(--ink-blue);
+    background: var(--paper-2);
+  }
+  .flag-card .flag-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .flag-card .code {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink-blue);
+    background: var(--ink-blue-50);
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+  .flag-card .req-badge {
+    font-family: var(--font-en);
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    background: var(--ink-blue);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+  .flag-card .opt-badge {
+    font-family: var(--font-en);
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    background: var(--paper-3);
+    color: var(--ink-blue-900);
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+  .flag-card .desc {
+    font-size: 12.5px;
+    line-height: 1.7;
+    color: var(--ink);
+  }
+  .flag-card .values {
+    margin-top: 6px;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .flag-card .value {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 2px 6px;
+  }
+
+  .footer-note {
+    margin-top: auto;
+    margin-bottom: var(--sp-5);
+    padding: var(--sp-3);
+    background: var(--ink-blue-50);
+    border-left: 3px solid var(--ink-blue);
+    font-size: 12px;
+    color: var(--ink-blue-900);
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body class="vbcd">
+
+<div class="draft-stamp">FRONT 04 · A-4 + A-5 + A-6 · DRAFT</div>
+
+<div class="spread">
+
+  <!-- 左ページ: A-4 体験区分 + A-5 読者レベル -->
+  <section class="page left">
+    <div class="section-label">A-4 + A-5 · FRONT · MARKS</div>
+    <h1 class="front-title-sm">この本の注意マーク</h1>
+
+    <!-- A-4 体験区分 -->
+    <h2 class="sub-h">A-4 · 体験区分 <span style="font-family: var(--font-en); font-size: 11px; color: var(--ink-3); margin-left: 8px;">experience_level</span></h2>
+    <p style="font-size: 12px; color: var(--ink-2); margin: 8px 0; line-height: 1.5;">
+      各エントリのタイトル横に、著者がどこまで触ったかの印を出します。
+    </p>
+    <div class="exp-list">
+      <div class="exp-row">
+        <div class="mark">●</div>
+        <div class="enum">hands_on</div>
+        <div class="desc">業務や個人で動かしたことがある</div>
+      </div>
+      <div class="exp-row">
+        <div class="mark">◐</div>
+        <div class="enum">partial</div>
+        <div class="desc">一部のみ触れた／概要を確認した</div>
+      </div>
+      <div class="exp-row">
+        <div class="mark">○</div>
+        <div class="enum">research_only</div>
+        <div class="desc">公開情報・他者の体験談ベース</div>
+      </div>
+    </div>
+
+    <!-- A-5 読者レベル -->
+    <h2 class="sub-h">A-5 · 読者レベル <span style="font-family: var(--font-en); font-size: 11px; color: var(--ink-3); margin-left: 8px;">reader_level 1〜6</span></h2>
+    <p style="font-size: 12px; color: var(--ink-2); margin: 8px 0 0 0; line-height: 1.5;">
+      各エントリを読むのに必要な前提知識の目安。範囲表記（<code style="background: var(--paper-2); padding: 0 4px; border-radius: 2px;">2-3</code>）は両端のレベルでも読めることを示します。
+    </p>
+    <div class="level-ladder">
+      <div class="level-row l1"><div class="num">1</div><div class="name">入門</div><div class="ex">ChatGPT / Hallucination</div></div>
+      <div class="level-row l2"><div class="num">2</div><div class="name">一般</div><div class="ex">Context / MCP / Cursor</div></div>
+      <div class="level-row l3"><div class="num">3</div><div class="name">中級</div><div class="ex">Tool Use / Hook / Slash Command</div></div>
+      <div class="level-row l4"><div class="num">4</div><div class="name">応用</div><div class="ex">TypeScript / Lint</div></div>
+      <div class="level-row l5"><div class="num">5</div><div class="name">上級</div><div class="ex">量子化 / LoRA / Tensor コア</div></div>
+      <div class="level-row l6"><div class="num">6</div><div class="name">専門</div><div class="ex">gpt-oss / ノイマン型 / Anthropic 創業史</div></div>
+    </div>
+
+    <div class="page-foot">
+      <div class="left-meta">2026.05 · Draft</div>
+      <div class="right-meta">A-4 + A-5 · FRONT</div>
+    </div>
+    <div class="page-num">10</div>
+  </section>
+
+  <!-- 右ページ: A-6 評価日・時変情報 -->
+  <section class="page right">
+    <div class="section-label">A-6 · FRONT · TIME-VARYING</div>
+    <h1 class="front-title-sm">評価日と時変フラグの見方</h1>
+    <p class="front-lead">
+      各エントリの記述が「どの時点のものか」を示す凡例です。<br>
+      AI 業界の速い変化に備えるため、3 つの時変フラグを設けています。
+    </p>
+
+    <div class="flag-section">
+      <div class="flag-card required">
+        <div class="flag-head">
+          <span class="code">evaluation_date</span>
+          <span class="req-badge">REQUIRED</span>
+        </div>
+        <div class="desc">
+          そのエントリを書いた／確認した日付（YYYY-MM-DD）。料金・モデル名・プレビュー状況など、時期で変わる情報は「この日時点では…」と読んでください。
+        </div>
+      </div>
+
+      <div class="flag-card">
+        <div class="flag-head">
+          <span class="code">version_status</span>
+          <span class="opt-badge">OPTIONAL</span>
+        </div>
+        <div class="desc">
+          モデルやサービスの状態。タグライン帯付近に小さなバッジで示します。
+        </div>
+        <div class="values">
+          <span class="value">active</span>
+          <span class="value">preview</span>
+          <span class="value">deprecated</span>
+        </div>
+      </div>
+
+      <div class="flag-card">
+        <div class="flag-head">
+          <span class="code">pricing_note</span>
+          <span class="opt-badge">OPTIONAL</span>
+        </div>
+        <div class="desc">
+          料金の発生有無を示します。具体的な価格は時変なので本文側に記載します。
+        </div>
+        <div class="values">
+          <span class="value">none</span>
+          <span class="value">paid</span>
+          <span class="value">freemium</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-note">
+      <strong>誌面での見え方:</strong> 評価日はエントリ左ページ下チロムに <code style="background: white; padding: 0 4px;">2026.05 · Draft</code> の書式で表示。時変フラグはタグライン帯付近にバッジで出ます。
+    </div>
+
+    <div class="page-foot">
+      <div class="left-meta">A-6 · FRONT</div>
+      <div class="right-meta">📖 バイブコーディング図鑑</div>
+    </div>
+    <div class="page-num">11</div>
+  </section>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>前付け 6 - A-10 + A-11 更新履歴と略称 (front_log_glossary)</title>
+<link rel="stylesheet" href="../prototypes/mockups/design_philosophy_v2/base.css">
+<link rel="stylesheet" href="_common.css">
+<style>
+  /* 左ページ: A-10 横向きタイムライン */
+  .timeline-wrap {
+    margin: var(--sp-5) 0;
+    padding: var(--sp-5) 0 var(--sp-3) 0;
+  }
+  .timeline {
+    position: relative;
+    padding: 24px 0 56px 0;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    right: 4px;
+    height: 2px;
+    background: var(--ink-blue-100);
+  }
+  .timeline-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
+    position: relative;
+  }
+  .tl-item {
+    position: relative;
+    text-align: center;
+    padding-top: 0;
+  }
+  .tl-item::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px; height: 14px;
+    background: var(--ink-blue);
+    border: 3px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px var(--ink-blue);
+    z-index: 1;
+  }
+  .tl-item .date {
+    font-family: var(--font-en);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--ink-blue);
+    letter-spacing: 0.04em;
+    margin-bottom: 22px;
+  }
+  .tl-item .label {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-top: 22px;
+    line-height: 1.4;
+  }
+  .tl-item .desc {
+    font-size: 10px;
+    color: var(--ink-2);
+    margin-top: 4px;
+    line-height: 1.5;
+  }
+  .tl-item.above .date { margin-top: 0; margin-bottom: 22px; }
+  .tl-item.above .label,
+  .tl-item.above .desc { display: none; }
+  .tl-item.below .date { display: none; }
+  /* 交互表示はせず、上下バランスを意識した単純レイアウト */
+
+  /* 次に変わる予定 */
+  .next-box {
+    border: 1.5px dashed var(--ink-blue);
+    border-radius: 8px;
+    padding: var(--sp-4);
+    background: var(--paper);
+    margin-top: var(--sp-4);
+  }
+  .next-box h3 {
+    font-size: 13px;
+    color: var(--ink-blue-900);
+    margin: 0 0 var(--sp-2) 0;
+    letter-spacing: 0.04em;
+  }
+  .next-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.85;
+    color: var(--ink);
+  }
+  .next-box li {
+    padding-left: 18px;
+    position: relative;
+  }
+  .next-box li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--ink-blue);
+    font-weight: 700;
+  }
+
+  /* 右ページ: A-11 略称 4 列表 */
+  .abbr-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--sp-4) 0;
+    font-size: 12px;
+  }
+  .abbr-table th {
+    text-align: left;
+    padding: 8px 10px;
+    background: var(--ink-blue-50);
+    color: var(--ink-blue-900);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    border-bottom: 2px solid var(--ink-blue);
+    font-weight: 700;
+  }
+  .abbr-table td {
+    padding: 8px 10px;
+    border-bottom: 1px dashed var(--rule-strong);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  .abbr-table td.abbr {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--ink-blue);
+    width: 80px;
+  }
+  .abbr-table td.full {
+    font-size: 12px;
+    color: var(--ink);
+  }
+  .abbr-table td.read {
+    font-size: 10.5px;
+    color: var(--ink-2);
+    width: 180px;
+  }
+  .abbr-table td.first {
+    font-family: var(--font-en);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--ink-blue);
+    width: 56px;
+    text-align: right;
+  }
+
+  .reading-rule {
+    margin-top: var(--sp-4);
+    padding: var(--sp-4);
+    background: var(--paper-2);
+    border-left: 3px solid var(--ink-blue);
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--ink);
+  }
+  .reading-rule strong { color: var(--ink-blue-900); }
+</style>
+</head>
+<body class="vbcd">
+
+<div class="draft-stamp">FRONT 06 · A-10 + A-11 · DRAFT</div>
+
+<div class="spread">
+
+  <!-- 左ページ: A-10 更新履歴 -->
+  <section class="page left">
+    <div class="section-label">A-10 · FRONT · CHANGELOG</div>
+    <h1 class="front-title-sm">更新履歴と更新方針</h1>
+    <p class="front-lead">
+      本書は AI 業界の動きに合わせて随時更新します。<br>
+      各エントリには <code style="background: var(--paper-2); padding: 0 4px; border-radius: 2px;">evaluation_date</code> を必ず付けます。
+    </p>
+
+    <div class="timeline-wrap">
+      <div style="font-size: 11px; letter-spacing: 0.1em; color: var(--ink-blue); margin-bottom: 8px;">MAJOR MILESTONES</div>
+      <div class="timeline">
+        <div class="timeline-row">
+          <div class="tl-item">
+            <div class="date">2026-04-21</div>
+            <div class="label">要件定義</div>
+            <div class="desc">本書のコンセプト確定</div>
+          </div>
+          <div class="tl-item">
+            <div class="date">2026-04-25</div>
+            <div class="label">v2 レイアウト凍結</div>
+            <div class="desc">見開き 2 ページ構造の確定</div>
+          </div>
+          <div class="tl-item">
+            <div class="date">2026-04-28</div>
+            <div class="label">スケルトン運用</div>
+            <div class="desc">339 件のスケルトン先行生成</div>
+          </div>
+          <div class="tl-item">
+            <div class="date">2026-04-30</div>
+            <div class="label">並列本書き完走</div>
+            <div class="desc">245 件本書き完了</div>
+          </div>
+          <div class="tl-item">
+            <div class="date">2026-05-13</div>
+            <div class="label">前付け 7 見開き</div>
+            <div class="desc">A 章を front_* に移行</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="next-box">
+      <h3>次に変わる予定</h3>
+      <ul>
+        <li>巻末索引（letter 順／五十音順／アルファベット順）の本物実装</li>
+        <li>B〜J 章エントリの著者欄記入（needs_review → ready 昇格）</li>
+        <li>残スケルトンの本書き完走</li>
+      </ul>
+    </div>
+
+    <div class="page-foot">
+      <div class="left-meta">2026.05 · Draft</div>
+      <div class="right-meta">A-10 · FRONT</div>
+    </div>
+    <div class="page-num">14</div>
+  </section>
+
+  <!-- 右ページ: A-11 略称表記 -->
+  <section class="page right">
+    <div class="section-label">A-11 · FRONT · ABBREVIATIONS</div>
+    <h1 class="front-title-sm">略称表記</h1>
+    <p class="front-lead">
+      本書は AI 業界で頻出する略称を本文中でそのまま使います。<br>
+      各エントリの初出ではタグライン冒頭で展開しています。
+    </p>
+
+    <table class="abbr-table">
+      <thead>
+        <tr>
+          <th>略称</th>
+          <th>正式名称</th>
+          <th>読み</th>
+          <th>初出</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="abbr">CC</td><td class="full">Claude Code</td><td class="read">シーシー</td><td class="first">B-7</td></tr>
+        <tr><td class="abbr">MCP</td><td class="full">Model Context Protocol</td><td class="read">モデルコンテキストプロトコル</td><td class="first">I-1</td></tr>
+        <tr><td class="abbr">LLM</td><td class="full">Large Language Model</td><td class="read">ラージランゲージモデル</td><td class="first">J-14</td></tr>
+        <tr><td class="abbr">a11y</td><td class="full">accessibility</td><td class="read">アクセシビリティ</td><td class="first">F-111</td></tr>
+        <tr><td class="abbr">i18n</td><td class="full">internationalization</td><td class="read">インターナショナリゼーション</td><td class="first">F-202</td></tr>
+        <tr><td class="abbr">AI</td><td class="full">Artificial Intelligence</td><td class="read">アーティフィシャルインテリジェンス</td><td class="first">J-1</td></tr>
+        <tr><td class="abbr">API</td><td class="full">Application Programming Interface</td><td class="read">エーピーアイ</td><td class="first">F-50</td></tr>
+        <tr><td class="abbr">RAG</td><td class="full">Retrieval Augmented Generation</td><td class="read">リトリーバルオーグメンテッドジェネレーション</td><td class="first">G-15</td></tr>
+        <tr><td class="abbr">GPU</td><td class="full">Graphics Processing Unit</td><td class="read">グラフィックスプロセッシングユニット</td><td class="first">J-77</td></tr>
+        <tr><td class="abbr">OSS</td><td class="full">Open Source Software</td><td class="read">オープンソースソフトウェア</td><td class="first">F-154</td></tr>
+      </tbody>
+    </table>
+
+    <div class="reading-rule">
+      <strong>読みの方針:</strong> タイトル直下の <code style="background: white; padding: 0 4px;">title_reading</code> スロットには「英単語をカタカナで並べた読み」を入れます。略称音読み（「えむしーぴー」など）は使いません。正式名称・日本語訳はタグライン冒頭に置きます。
+    </div>
+
+    <div style="font-size: 11px; color: var(--ink-3); margin-top: var(--sp-3); font-style: italic; text-align: right;">
+      初出ページからは関連用語ピルで辿れます
+    </div>
+
+    <div class="page-foot">
+      <div class="left-meta">A-11 · FRONT</div>
+      <div class="right-meta">📖 バイブコーディング図鑑</div>
+    </div>
+    <div class="page-num">15</div>
+  </section>
+
+</div>
+
+</body>
+</html>

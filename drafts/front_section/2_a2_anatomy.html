@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>前付け 2 - A-2 見開きの読み方 (front_anatomy)</title>
+<link rel="stylesheet" href="../prototypes/mockups/design_philosophy_v2/base.css">
+<link rel="stylesheet" href="_common.css">
+<style>
+  /* この見開きは「下地に半透明の本編 spread をひいて、コールアウト矢印で各部位を指す」分解図 */
+  .spread.anatomy {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* 中央に置く半透明の下地（本編エントリ風） */
+  .underlay {
+    position: absolute;
+    inset: 80px 56px 80px 56px;
+    display: flex;
+    opacity: 0.42;
+    pointer-events: none;
+    background: var(--paper-2);
+    border: 1px dashed var(--rule-strong);
+    border-radius: 6px;
+  }
+  .underlay-page {
+    flex: 1;
+    padding: 18px;
+    font-size: 10px;
+    color: var(--ink-3);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .underlay-page.left { border-right: 1px dashed var(--rule-strong); }
+
+  .u-title {
+    font-weight: 900;
+    font-size: 26px;
+    color: var(--ink);
+    line-height: 1;
+  }
+  .u-reading { font-size: 11px; color: var(--ink-3); }
+  .u-tag {
+    background: var(--ink-blue-100);
+    color: var(--ink-blue-900);
+    padding: 4px 6px;
+    border-radius: 2px;
+    font-size: 10px;
+  }
+  .u-h { font-weight: 700; font-size: 11px; color: var(--ink); margin-top: 4px; }
+  .u-fig {
+    height: 110px;
+    background: linear-gradient(135deg, #F3F6FB 0%, #EAF1FB 100%);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    margin: 6px 0;
+  }
+  .u-ponchi {
+    height: 80px;
+    background: var(--paper);
+    border: 1px dashed var(--ink-blue);
+    border-radius: 2px;
+    margin-top: 4px;
+  }
+  .u-talk {
+    background: var(--paper-2);
+    padding: 4px 6px;
+    border-radius: 2px;
+    font-style: italic;
+  }
+  .u-six {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4px;
+    margin-top: 4px;
+  }
+  .u-six > div {
+    background: var(--paper-3);
+    height: 36px;
+    border-radius: 2px;
+    padding: 3px;
+    font-size: 8px;
+  }
+  .u-flow {
+    display: flex;
+    gap: 4px;
+    margin-top: 4px;
+  }
+  .u-flow > div {
+    flex: 1;
+    background: var(--paper-2);
+    padding: 4px;
+    border-radius: 2px;
+    font-size: 8px;
+  }
+  .u-author {
+    background: var(--paper);
+    border: 1px dashed var(--rule-strong);
+    padding: 4px;
+    margin-top: 4px;
+    font-size: 9px;
+  }
+  .u-pills {
+    display: flex;
+    gap: 3px;
+    flex-wrap: wrap;
+  }
+  .u-pill {
+    background: var(--ink-blue-50);
+    color: var(--ink-blue-900);
+    border-radius: 999px;
+    padding: 1px 8px;
+    font-size: 8px;
+  }
+  .u-ref {
+    font-family: var(--font-en);
+    color: var(--ink-blue);
+    font-size: 9px;
+    margin-top: auto;
+  }
+
+  /* コールアウト */
+  .callouts {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+  }
+  .callout {
+    position: absolute;
+    width: 165px;
+    padding: 8px 10px;
+    background: var(--paper);
+    border: 1.5px solid var(--ink-blue);
+    border-radius: 6px;
+    font-size: 11px;
+    line-height: 1.55;
+    color: var(--ink);
+    box-shadow: 0 2px 6px rgba(26,26,26,.08);
+  }
+  .callout .num {
+    display: inline-block;
+    background: var(--ink-blue);
+    color: white;
+    font-family: var(--font-en);
+    font-weight: 700;
+    font-size: 10px;
+    padding: 1px 6px;
+    border-radius: 999px;
+    margin-right: 6px;
+  }
+  .callout .name {
+    font-weight: 700;
+    color: var(--ink-blue-900);
+  }
+  .callout .desc {
+    color: var(--ink-2);
+    font-size: 10.5px;
+    margin-top: 3px;
+  }
+
+  /* ヘッダ／フッタは zindex 上に */
+  .anatomy .section-label,
+  .anatomy .anatomy-title,
+  .anatomy .page-foot,
+  .anatomy .page-num {
+    position: relative;
+    z-index: 3;
+  }
+  .anatomy-title {
+    font-size: 22px;
+    font-weight: 900;
+    margin: 0 0 var(--sp-3) 0;
+  }
+  .anatomy-sub {
+    font-size: 12px;
+    color: var(--ink-2);
+    margin-bottom: var(--sp-3);
+  }
+</style>
+</head>
+<body class="vbcd">
+
+<div class="draft-stamp">FRONT 02 · A-2 ANATOMY · DRAFT</div>
+
+<div class="spread anatomy">
+
+  <!-- 半透明の下地（本編 F-2 TypeScript 想定） -->
+  <div class="underlay">
+    <div class="underlay-page left">
+      <div class="u-title">TypeScript</div>
+      <div class="u-reading">タイプスクリプト</div>
+      <div class="u-tag">JavaScript に静的型を加えた言語です。コンパイル時にエラーを発見できます。</div>
+      <div class="u-h">何をしてくれるか</div>
+      <div>JS のスーパーセットで…</div>
+      <div class="u-h">どこで出会うか</div>
+      <div>React や Next.js…</div>
+      <div class="u-fig">［ メイン図 ］</div>
+      <div class="u-talk">「TypeScript で型を付けて…」</div>
+      <div class="u-ponchi">［ 擬人化ポンチ絵 ］</div>
+    </div>
+    <div class="underlay-page right">
+      <div class="u-h">この用語の見どころ</div>
+      <div class="u-six">
+        <div>役割</div><div>うれしさ</div><div>注意点</div>
+        <div>どこで役立つか</div><div>はじめに</div><div>深掘り先</div>
+      </div>
+      <div class="u-h">開発フローでの位置</div>
+      <div class="u-flow">
+        <div>1. 設計</div><div>2. 実装</div><div>3. ビルド</div><div>4. 配布</div>
+      </div>
+      <div class="u-pills" style="margin-top: 6px;">
+        <span class="u-pill">JavaScript</span>
+        <span class="u-pill">React</span>
+        <span class="u-pill">Next.js</span>
+        <span class="u-pill">ESLint</span>
+      </div>
+      <div class="u-h">非エンジニアのつまずき</div>
+      <div class="u-author">- 型って何…<br>- 設定が複雑…</div>
+      <div class="u-h">私のコメント</div>
+      <div class="u-author">🙂 第一印象: …<br>👍 良い点: …</div>
+      <div class="u-ref">typescriptlang.org — checked 2026-05-13</div>
+    </div>
+  </div>
+
+  <!-- コールアウト 13 個 -->
+  <div class="callouts">
+    <div class="callout" style="top: 24px; left: 24px;">
+      <span class="num">01</span><span class="name">タイトル</span>
+      <div class="desc">その語の純粋名。読み・展開はタイトル下に分離します。</div>
+    </div>
+    <div class="callout" style="top: 110px; left: 24px;">
+      <span class="num">02</span><span class="name">タイトル読み</span>
+      <div class="desc">英単語をカタカナで並べた読み。略称音読みではありません。</div>
+    </div>
+    <div class="callout" style="top: 196px; left: 24px;">
+      <span class="num">03</span><span class="name">tagline 青帯</span>
+      <div class="desc">タイトルの言い換えではなく、一歩先の定義を 1〜2 文で。</div>
+    </div>
+    <div class="callout" style="top: 282px; left: 24px;">
+      <span class="num">04</span><span class="name">何をしてくれるか</span>
+      <div class="desc">その語が読者にとって何を解決するか、2〜4 文で。</div>
+    </div>
+    <div class="callout" style="top: 368px; left: 24px;">
+      <span class="num">05</span><span class="name">どこで出会うか</span>
+      <div class="desc">打ち合わせ・記事・AI の応答など、読者が実際に遭遇する場面。</div>
+    </div>
+    <div class="callout" style="top: 528px; left: 24px;">
+      <span class="num">06</span><span class="name">メイン図</span>
+      <div class="desc">Before/After や概念図など、理解のための主要図。</div>
+    </div>
+    <div class="callout" style="top: 700px; left: 24px;">
+      <span class="num">07</span><span class="name">擬人化ポンチ絵</span>
+      <div class="desc">語を「人」に置き換えた小さなキャラ図。記憶に残します。</div>
+    </div>
+    <div class="callout" style="top: 786px; left: 24px;">
+      <span class="num">08</span><span class="name">会話での使い方例</span>
+      <div class="desc">その語を自然に使う 1 文。下チロムに印字されます。</div>
+    </div>
+
+    <div class="callout" style="top: 24px; right: 24px;">
+      <span class="num">09</span><span class="name">6 視点</span>
+      <div class="desc">役割・うれしさ・注意点・どこで役立つか・はじめに・深掘り先。</div>
+    </div>
+    <div class="callout" style="top: 156px; right: 24px;">
+      <span class="num">10</span><span class="name">開発フロー</span>
+      <div class="desc">その語が登場する流れを 4 ステップで横並びに見せます。</div>
+    </div>
+    <div class="callout" style="top: 282px; right: 24px;">
+      <span class="num">11</span><span class="name">関連用語</span>
+      <div class="desc">3〜5 個のピル。次に読む語への入口です。</div>
+    </div>
+    <div class="callout" style="top: 408px; right: 24px;">
+      <span class="num">12</span><span class="name">著者欄</span>
+      <div class="desc">著者本人が「つまずき」「私のコメント」を書く枠。AI は触りません。</div>
+    </div>
+    <div class="callout" style="top: 656px; right: 24px;">
+      <span class="num">13</span><span class="name">参考 URL</span>
+      <div class="desc">時変情報を含むエントリは、確認日付付きで 1 本載せます。</div>
+    </div>
+  </div>
+
+  <!-- 左ページ（最低限） -->
+  <section class="page left">
+    <div class="section-label">A-2 · FRONT · ANATOMY</div>
+    <h1 class="anatomy-title">この本の読み方 — 見開きの分解</h1>
+    <p class="anatomy-sub">下地は本編 F-2 TypeScript の見開き（縮小・半透明）。13 個のコールアウトで各部位を指します。</p>
+
+    <div class="page-foot">
+      <div class="left-meta">2026.05 · Draft</div>
+      <div class="right-meta">A-2 · FRONT</div>
+    </div>
+    <div class="page-num">06</div>
+  </section>
+
+  <!-- 右ページ（最低限） -->
+  <section class="page right">
+    <div class="section-label">SPREAD V1 · 13 PARTS</div>
+
+    <div class="page-foot">
+      <div class="left-meta">A-2 · FRONT</div>
+      <div class="right-meta">📖 バイブコーディング図鑑</div>
+    </div>
+    <div class="page-num">07</div>
+  </section>
+
+</div>
+
+</body>
+</html>

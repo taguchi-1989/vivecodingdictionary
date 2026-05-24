@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>前付け 0 - 扉「知らないことばで、止まらない。」</title>
+<link rel="stylesheet" href="../prototypes/mockups/design_philosophy_v2/base.css">
+<link rel="stylesheet" href="_common.css">
+<style>
+  /* この見開き専用 */
+  .concept-copy {
+    font-weight: 900;
+    font-size: 52px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin: 0 0 var(--sp-7) 0;
+  }
+  .concept-copy .em { color: var(--ink-blue); }
+
+  /* 抽象人物 3 コマ */
+  .three-panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--sp-4);
+    margin-top: auto;
+    margin-bottom: var(--sp-8);
+  }
+  .panel {
+    aspect-ratio: 1 / 1;
+    border: 1.5px solid var(--ink);
+    border-radius: 12px;
+    padding: var(--sp-3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--paper);
+  }
+  .panel .num {
+    font-family: var(--font-en);
+    font-weight: 900;
+    font-size: 18px;
+    color: var(--ink-blue);
+    margin-bottom: var(--sp-2);
+  }
+  .panel .figure {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink-3);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+  }
+  .panel .label {
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--ink);
+    margin-top: var(--sp-2);
+  }
+
+  /* 右ページ: 見開きミニチュア */
+  .mini-spread {
+    display: flex;
+    gap: 0;
+    width: 100%;
+    height: 360px;
+    border: 1.5px solid var(--ink);
+    border-radius: 4px;
+    overflow: hidden;
+    margin: var(--sp-6) 0;
+    background: var(--paper-2);
+  }
+  .mini-page {
+    flex: 1;
+    padding: var(--sp-3);
+    position: relative;
+    font-size: 9px;
+    color: var(--ink-3);
+  }
+  .mini-page.left {
+    border-right: 1px dashed var(--rule-strong);
+  }
+  .mini-page .mini-label {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    font-family: var(--font-en);
+    font-size: 8px;
+    letter-spacing: 0.12em;
+    color: var(--ink-blue);
+  }
+  .mini-block {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    margin: 14px 0 6px 0;
+    padding: 4px 6px;
+    font-size: 8px;
+    border-radius: 2px;
+  }
+  .mini-block.tag { background: var(--ink-blue-50); border-color: var(--ink-blue-100); }
+  .mini-block.fig { height: 80px; background: linear-gradient(135deg, #F3F6FB 0%, #EAF1FB 100%); }
+  .mini-block.sixview { height: 90px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px; padding: 4px; }
+  .mini-block.sixview > div { background: var(--paper-3); border-radius: 1px; }
+
+  .mini-callouts {
+    list-style: none;
+    padding: 0;
+    margin: var(--sp-4) 0 0 0;
+    font-size: 12px;
+    color: var(--ink);
+    line-height: 1.7;
+  }
+  .mini-callouts li {
+    padding-left: 18px;
+    position: relative;
+  }
+  .mini-callouts li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--ink-blue);
+    font-weight: 700;
+  }
+
+  .promise {
+    margin-top: auto;
+    padding: var(--sp-4);
+    background: var(--ink-blue-50);
+    border-left: 4px solid var(--ink-blue);
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--ink-blue-900);
+  }
+</style>
+</head>
+<body class="vbcd">
+
+<div class="draft-stamp">FRONT 00 · CONCEPT SPREAD · DRAFT</div>
+
+<div class="spread">
+
+  <!-- 左ページ -->
+  <section class="page left">
+    <div class="section-label">VIBE CODING DICTIONARY</div>
+
+    <h1 class="concept-copy">
+      知らないことばで、<br>
+      <span class="em">止まらない。</span>
+    </h1>
+
+    <p class="front-body" style="max-width: 540px;">
+      AI や開発の現場では、知っている人には普通のことばが、初めて聞く人には会話を止める原因になります。この図鑑は、その止まり方をなくすための「戻れる場所」です。
+    </p>
+
+    <div class="three-panels">
+      <div class="panel">
+        <div class="num">01</div>
+        <div class="figure">[ 抽象人物：困る ]</div>
+        <div class="label">知らない語で<br>止まる</div>
+      </div>
+      <div class="panel">
+        <div class="num">02</div>
+        <div class="figure">[ 抽象人物：本を引く ]</div>
+        <div class="label">図鑑を<br>引く</div>
+      </div>
+      <div class="panel">
+        <div class="num">03</div>
+        <div class="figure">[ 抽象人物：会話に戻る ]</div>
+        <div class="label">会話に<br>戻る</div>
+      </div>
+    </div>
+
+    <div class="page-foot">
+      <div class="left-meta">2026.05 · Draft</div>
+      <div class="right-meta">FRONT 00 · OPENING</div>
+    </div>
+    <div class="page-num">02</div>
+  </section>
+
+  <!-- 右ページ -->
+  <section class="page right">
+    <div class="section-label">HOW TO READ</div>
+
+    <h2 class="front-title-sm">
+      1 項目は、見開き 2 ページ。<br>
+      <span style="color: var(--ink-blue);">左でつかみ、右で使う。</span>
+    </h2>
+
+    <p class="front-body">
+      各項目は、見開き 2 ページで完結します。左ページで意味と出会う場面をつかみ、右ページで役割・うれしさ・注意点・関連語を確認します。気になる語だけ読んで構いません。
+    </p>
+
+    <!-- 見開きミニチュア -->
+    <div class="mini-spread">
+      <div class="mini-page left">
+        <div class="mini-label">LEFT · つかむ</div>
+        <div class="mini-block tag">tagline 青帯</div>
+        <div class="mini-block">何をしてくれるか</div>
+        <div class="mini-block">どこで出会うか</div>
+        <div class="mini-block fig">メイン図</div>
+        <div class="mini-block" style="background: var(--paper-3);">擬人化ポンチ絵</div>
+      </div>
+      <div class="mini-page right">
+        <div class="mini-label">RIGHT · 使う</div>
+        <div class="mini-block sixview">
+          <div></div><div></div><div></div>
+          <div></div><div></div><div></div>
+        </div>
+        <div class="mini-block">開発フローでの位置</div>
+        <div class="mini-block">関連用語ピル</div>
+        <div class="mini-block" style="background: var(--paper-2);">著者欄（つまずき・コメント）</div>
+      </div>
+    </div>
+
+    <ul class="mini-callouts">
+      <li>左でその語が何かをつかむ</li>
+      <li>右で使い所と注意点を確認する</li>
+      <li>関連語から次の語へ飛ぶ</li>
+      <li>読み終えたら現場の会話に戻る</li>
+    </ul>
+
+    <div class="promise">
+      通読は不要です。気になる語だけ引いて、現場の会話に戻ってください。
+    </div>
+
+    <div class="page-foot">
+      <div class="left-meta">FRONT 00 · OPENING</div>
+      <div class="right-meta">📖 バイブコーディング図鑑</div>
+    </div>
+    <div class="page-num">03</div>
+  </section>
+
+</div>
+
+</body>
+</html>

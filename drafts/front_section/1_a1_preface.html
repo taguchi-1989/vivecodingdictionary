@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>前付け 1 - A-1 まえがき (front_essay)</title>
+<link rel="stylesheet" href="../prototypes/mockups/design_philosophy_v2/base.css">
+<link rel="stylesheet" href="_common.css">
+<style>
+  /* 左ページ: 大判イラスト + 短いリード */
+  .bridge-art {
+    flex: 1;
+    border: 1.5px solid var(--ink);
+    border-radius: 12px;
+    margin: var(--sp-7) 0 var(--sp-5) 0;
+    padding: var(--sp-5);
+    background: var(--paper);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink-3);
+    text-align: center;
+  }
+  .bridge-art .art-title {
+    font-family: var(--font-en);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: var(--ink-blue);
+    margin-bottom: var(--sp-3);
+  }
+  .bridge-art .art-frame {
+    width: 100%;
+    flex: 1;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F3F6FB 100%);
+    border: 1px dashed var(--rule-strong);
+    border-radius: 8px;
+    margin-bottom: var(--sp-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--ink-3);
+    padding: var(--sp-5);
+  }
+  .bridge-art .art-caption {
+    font-size: 12px;
+    color: var(--ink-2);
+    line-height: 1.6;
+  }
+
+  .lead-large {
+    border-left: 4px solid var(--ink-blue);
+    padding-left: var(--sp-4);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--ink);
+    margin: 0 0 var(--sp-3) 0;
+  }
+
+  /* 右ページ essay 2 段 */
+  .essay {
+    column-count: 2;
+    column-gap: var(--sp-7);
+    column-rule: 1px solid var(--rule);
+    font-size: 15px;
+    line-height: 1.95;
+    color: var(--ink);
+    letter-spacing: 0.03em;
+    flex: 1;
+    margin-top: var(--sp-5);
+  }
+  .essay p {
+    margin: 0 0 1.2em 0;
+    break-inside: avoid-column;
+  }
+  .essay .dropcap::first-letter {
+    font-size: 56px;
+    font-weight: 900;
+    color: var(--ink-blue);
+    line-height: 0.9;
+    float: left;
+    margin: 4px 8px 0 0;
+    font-family: var(--font-jp);
+  }
+  .essay-title {
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 1.3;
+    color: var(--ink);
+    margin: 0 0 var(--sp-3) 0;
+  }
+  .essay-by {
+    font-family: var(--font-en);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--ink-3);
+    margin-bottom: var(--sp-5);
+  }
+</style>
+</head>
+<body class="vbcd">
+
+<div class="draft-stamp">FRONT 01 · A-1 PREFACE · DRAFT</div>
+
+<div class="spread">
+
+  <!-- 左ページ: 大判の「ことばの橋」 + リード -->
+  <section class="page left">
+    <div class="section-label">A-1 · FRONT · PREFACE</div>
+
+    <p class="lead-large">
+      同じ日本語を話していても、<br>
+      同じ言語空間にいるとは限りません。
+    </p>
+
+    <div class="bridge-art">
+      <div class="art-title">FIGURE · ことばの橋</div>
+      <div class="art-frame">
+        <div>
+          <div style="font-size: 16px; color: var(--ink); margin-bottom: 12px;">
+            ［ 抽象人物 2 名 ─── 橋 ─── 抽象人物 2 名 ］
+          </div>
+          <div style="margin-top: 16px;">
+            橋の上に「ことば」と書かれた短冊。<br>
+            性別や職種が出ない抽象線画。濃紺主体・余白多め。
+          </div>
+        </div>
+      </div>
+      <div class="art-caption">
+        橋がこの本の比喩。読者がここを渡り、現場の会話に戻れることを示す。
+      </div>
+    </div>
+
+    <div class="page-foot">
+      <div class="left-meta">2026.05 · Draft</div>
+      <div class="right-meta">A-1 · FRONT</div>
+    </div>
+    <div class="page-num">04</div>
+  </section>
+
+  <!-- 右ページ: 巻頭言 essay 2 段 -->
+  <section class="page right">
+    <div class="section-label">PREFACE · 巻頭言</div>
+    <h1 class="essay-title">まえがき</h1>
+    <div class="essay-by">By the author</div>
+
+    <div class="essay">
+      <p class="dropcap">AI 開発やフロントエンド開発の現場では、「コンテキスト」「モデル」「API」「TypeScript」「Lint」のような言葉が当たり前のように飛び交います。触っている側には自然な語彙でも、初めて関わる人には、何を指しているのか、なぜ重要なのかが見えにくいものです。</p>
+
+      <p>打ち合わせで「コンテキストが足りない」と言われたとき、AI への指示が期待通りに返ってこないとき、Claude と ChatGPT の違いを聞かれたとき。そんな場面で手元に置き、気になる語から引いて数分で読める本を目指しました。</p>
+
+      <p>完全な入門書ではなく、会話の前提をそろえるための共通語彙集です。読者は、AI を仕事で使いたいけれどプログラミングで生計を立てているわけではない人を想定しています。私自身も同じ立場で、AI を使う側として現場の戸惑いを共有しています。</p>
+
+      <p>通読する必要はありません。気になることばだけ引いて、現場の会話に戻ってください。次の見開きから、この本の読み方を 1 ページに分解した「分解図」を用意しました。</p>
+    </div>
+
+    <div class="page-foot">
+      <div class="left-meta">A-1 · FRONT</div>
+      <div class="right-meta">📖 バイブコーディング図鑑</div>
+    </div>
+    <div class="page-num">05</div>
+  </section>
+
+</div>
+
+</body>
+</html>
