@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>あとがき — この本ができるまで</title>
+<link rel="stylesheet" href="../prototypes/mockups/design_philosophy_v2/base.css">
+<link rel="stylesheet" href="../front_section/_common.css">
+<style>
+  /* 左ページ: 大判イラスト + リード */
+  .author-ai-art {
+    flex: 1;
+    border: 1.5px solid var(--ink);
+    border-radius: 12px;
+    margin: var(--sp-7) 0 var(--sp-5) 0;
+    padding: var(--sp-5);
+    background: var(--paper);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink-3);
+    text-align: center;
+  }
+  .author-ai-art .art-title {
+    font-family: var(--font-en);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: var(--ink-blue);
+    margin-bottom: var(--sp-3);
+  }
+  .author-ai-art .art-frame {
+    width: 100%;
+    flex: 1;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F3F6FB 100%);
+    border: 1px dashed var(--rule-strong);
+    border-radius: 8px;
+    margin-bottom: var(--sp-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--ink-3);
+    padding: var(--sp-5);
+  }
+  .author-ai-art .art-caption {
+    font-size: 12px;
+    color: var(--ink-2);
+    line-height: 1.6;
+  }
+
+  .lead-large {
+    border-left: 4px solid var(--ink-blue);
+    padding-left: var(--sp-4);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--ink);
+    margin: 0 0 var(--sp-3) 0;
+  }
+
+  /* メイキング数値の小箱 */
+  .stat-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--sp-3);
+    margin: 0 0 var(--sp-5) 0;
+  }
+  .stat {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: var(--sp-3);
+    text-align: center;
+  }
+  .stat .num {
+    font-family: var(--font-en);
+    font-weight: 900;
+    font-size: 28px;
+    color: var(--ink-blue);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .stat .lbl {
+    font-size: 10.5px;
+    color: var(--ink-2);
+    letter-spacing: 0.04em;
+    line-height: 1.4;
+  }
+
+  /* 右ページ essay 2 段 */
+  .essay {
+    column-count: 2;
+    column-gap: var(--sp-7);
+    column-rule: 1px solid var(--rule);
+    font-size: 14.5px;
+    line-height: 1.95;
+    color: var(--ink);
+    letter-spacing: 0.03em;
+    flex: 1;
+    margin-top: var(--sp-5);
+  }
+  .essay p {
+    margin: 0 0 1.1em 0;
+    break-inside: avoid-column;
+  }
+  .essay p:first-of-type::first-letter {
+    font-size: 50px;
+    font-weight: 900;
+    color: var(--ink-blue);
+    line-height: 0.9;
+    float: left;
+    margin: 4px 8px 0 0;
+    font-family: var(--font-jp);
+  }
+  .essay h3 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink-blue-900);
+    border-left: 3px solid var(--ink-blue);
+    padding-left: 8px;
+    margin: 0 0 6px 0;
+    break-after: avoid-column;
+  }
+  .essay-title {
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 1.3;
+    color: var(--ink);
+    margin: 0 0 var(--sp-3) 0;
+  }
+  .essay-by {
+    font-family: var(--font-en);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--ink-3);
+    margin-bottom: var(--sp-5);
+  }
+
+  .signature {
+    margin-top: var(--sp-5);
+    padding-top: var(--sp-3);
+    border-top: 1px solid var(--rule);
+    font-size: 11px;
+    color: var(--ink-2);
+    text-align: right;
+    line-height: 1.7;
+    column-span: all;
+  }
+  .signature .date {
+    font-family: var(--font-en);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--ink-3);
+  }
+</style>
+</head>
+<body class="vbcd">
+
+<div class="draft-stamp">BACK · AFTERWORD · DRAFT</div>
+
+<div class="spread">
+
+  <!-- 左ページ: 大判の「人 × AI が一緒に書いている」 + リード -->
+  <section class="page left">
+    <div class="section-label">BACK · AFTERWORD</div>
+
+    <p class="lead-large">
+      この本は、<br>
+      AI を使うために、<br>
+      AI を使って書きました。
+    </p>
+
+    <div class="author-ai-art">
+      <div class="art-title">FIGURE · 著者と AI の共著</div>
+      <div class="art-frame">
+        <div>
+          <div style="font-size: 16px; color: var(--ink); margin-bottom: 12px;">
+            ［ 抽象人物 ─── 机 ─── AI のシルエット ］
+          </div>
+          <div style="margin-top: 16px;">
+            ノートを広げた人物が口述し、<br>
+            机の向こうの AI が同時に書く。<br>
+            橋は前付けと同じ濃紺の線画で。
+          </div>
+        </div>
+      </div>
+      <div class="art-caption">
+        まえがきの「ことばの橋」と対になる構図。<br>
+        本書がどう成り立ったかをこの 1 枚に集約します。
+      </div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat">
+        <div class="num">339</div>
+        <div class="lbl">候補エントリ</div>
+      </div>
+      <div class="stat">
+        <div class="num">245</div>
+        <div class="lbl">並列で本書き</div>
+      </div>
+      <div class="stat">
+        <div class="num">5×49</div>
+        <div class="lbl">並列 × バッチ</div>
+      </div>
+    </div>
+
+    <div class="page-foot">
+      <div class="left-meta">2026.05 · Draft</div>
+      <div class="right-meta">BACK · AFTERWORD</div>
+    </div>
+    <div class="page-num">—</div>
+  </section>
+
+  <!-- 右ページ: あとがき essay 2 段 -->
+  <section class="page right">
+    <div class="section-label">AFTERWORD · この本ができるまで</div>
+    <h1 class="essay-title">あとがき</h1>
+    <div class="essay-by">Behind the book — How it was made</div>
+
+    <div class="essay">
+
+      <p>「AI を使うために、AI を使って書く」と書くと、入れ子の遊びのようですが、実際そのとおりに進めました。AI 関連の用語が会話の入口で人を止めている場面を一冊にまとめたい、と思ったところから始めて、語彙集をひとりで 339 件書き切るのは現実的ではなく、Claude Code を中心にした多エージェントのオーケストレーションで進めることにしました。</p>
+
+      <h3>並列で書く</h3>
+
+      <p>5 エージェントの並列実行を 49 バッチに分けて、2 セッションで 245 件を本書きしました。スケルトン（YAML と空の見出しだけ）を全候補に先に作り、validator が機械チェックを通してから本文を書き起こすという流れです。バッチごとに失敗・再投入が混じるため、設計よりも運用のリトライ前提が効きました。</p>
+
+      <h3>声は人間が、整形は AI が</h3>
+
+      <p>著者欄の「非エンジニアのつまずき」と「私のコメント」だけは、AI に任せきれない部分として最後まで音声口述で残しました。雑に話したものを AI が 4 ラベル・字数ルールに整形して提示し、こちらが確認して書き込む。この対話パイプライン自体をスキル化して、誰でも同じ精度で進められるようにしてあります。</p>
+
+      <h3>AI で書けると、書くべきは違う</h3>
+
+      <p>書き終えて感じたのは、AI で書けることと AI で書くべきことは違うということです。事実の整理・構造の維持・字数管理は AI が得意で、本人の経験と判断は人間が担う。本書はその境界線を、ひとつの実例として記録したものでもあります。バイブコーディング、という本書のテーマそのものが、この協働の手法でした。</p>
+
+      <h3>本書はスナップショットです</h3>
+
+      <p>各エントリに evaluation_date を添えたのは、この本そのものがある時点のスナップショットだという自覚から来ています。AI が進化すれば本書も版を更新します。気になる語があれば本書を引いて、戻ってきた現場でその語を使ってみてください。それが「会話に戻る」ということです。</p>
+
+      <div class="signature">
+        2026 年 5 月 ／ 著者<br>
+        <span class="date">Built with Claude Code · oh-my-claudecode · 5 agents × 49 batches</span>
+      </div>
+
+    </div>
+
+    <div class="page-foot">
+      <div class="left-meta">BACK · AFTERWORD</div>
+      <div class="right-meta">📖 バイブコーディング図鑑</div>
+    </div>
+    <div class="page-num">—</div>
+  </section>
+
+</div>
+
+</body>
+</html>
