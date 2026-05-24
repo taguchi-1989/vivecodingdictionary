@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#123E82">
+<meta name="description" content="非エンジニア・周辺職種の人が、AI 開発まわりの語彙を「辞書引き」できるようにする図鑑。327 件の用語を本のように読めます。">
+<title>バイブコーディング図鑑 — AI まわりの語彙を辞書引きする本</title>
+<style>
+  :root {
+    --ink: #1A1A1A;
+    --ink-2: #4A5568;
+    --ink-3: #8A94A6;
+    --ink-blue: #2F7BE6;
+    --ink-blue-700: #1E5FBC;
+    --ink-blue-900: #123E82;
+    --ink-blue-50: #EAF1FB;
+    --ink-blue-100: #D6E4F8;
+    --paper: #FFFFFF;
+    --paper-2: #F3F6FB;
+    --paper-3: #EAF1FB;
+    --rule: #D6DEE8;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--paper-2);
+    color: var(--ink);
+    font-family: "Hiragino Sans", "Yu Gothic UI", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+  }
+  a { color: var(--ink-blue-700); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* ────── ヒーロー ────── */
+  .hero {
+    background: linear-gradient(135deg, var(--ink-blue-900) 0%, var(--ink-blue) 100%);
+    color: white;
+    padding: 56px 24px 40px 24px;
+    text-align: center;
+  }
+  .hero .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-size: 32px;
+    font-weight: 900;
+    margin: 0 0 12px 0;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+  .hero .tagline {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+    opacity: 0.95;
+  }
+  .hero .desc {
+    font-size: 14px;
+    line-height: 1.85;
+    opacity: 0.85;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+  }
+  .hero-stat {
+    text-align: center;
+  }
+  .hero-stat .num {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1;
+  }
+  .hero-stat .lbl {
+    font-size: 10px;
+    opacity: 0.7;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  /* ────── メイン CTA ────── */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 16px 16px 16px;
+  }
+
+  .main-cta {
+    display: block;
+    background: var(--ink-blue);
+    color: white;
+    padding: 22px 24px;
+    border-radius: 14px;
+    text-decoration: none;
+    margin-bottom: 16px;
+    transition: transform 0.1s, box-shadow 0.15s;
+    box-shadow: 0 4px 16px rgba(18,62,130,0.18);
+  }
+  .main-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(18,62,130,0.24);
+    text-decoration: none;
+  }
+  .main-cta:active { transform: translateY(0); }
+  .main-cta .label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    opacity: 0.85;
+    margin-bottom: 4px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .main-cta h2 {
+    font-size: 22px;
+    font-weight: 900;
+    margin: 0 0 4px 0;
+  }
+  .main-cta .sub {
+    font-size: 13px;
+    opacity: 0.92;
+  }
+  .main-cta .arrow {
+    float: right;
+    font-size: 24px;
+    margin-top: -22px;
+  }
+
+  /* ────── サブ CTA グリッド ────── */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .sub-cta {
+    background: white;
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 18px 16px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s, transform 0.1s;
+    display: block;
+  }
+  .sub-cta:hover {
+    border-color: var(--ink-blue);
+    text-decoration: none;
+  }
+  .sub-cta:active { transform: scale(0.98); }
+  .sub-cta .icon {
+    font-size: 28px;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .sub-cta h3 {
+    font-size: 15px;
+    font-weight: 900;
+    margin: 0 0 4px 0;
+    color: var(--ink);
+  }
+  .sub-cta p {
+    font-size: 12px;
+    color: var(--ink-2);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* ────── 説明セクション ────── */
+  .section {
+    background: white;
+    border-radius: 12px;
+    padding: 24px 20px;
+    margin-bottom: 16px;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 900;
+    margin: 0 0 12px 0;
+    color: var(--ink);
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--ink-blue-100);
+  }
+  .section h2 .small {
+    font-size: 11px;
+    color: var(--ink-3);
+    letter-spacing: 0.1em;
+    margin-left: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .section p {
+    margin: 0 0 12px 0;
+    font-size: 14px;
+    line-height: 1.85;
+    color: var(--ink);
+  }
+  .section ul {
+    padding-left: 20px;
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.85;
+  }
+  .section li { margin: 4px 0; }
+
+  /* ────── フッタ ────── */
+  footer {
+    text-align: center;
+    padding: 32px 16px 48px 16px;
+    font-size: 11px;
+    color: var(--ink-3);
+    line-height: 1.8;
+  }
+  footer a { color: var(--ink-blue-700); }
+  footer .license {
+    display: inline-block;
+    background: white;
+    border: 1px solid var(--rule);
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin: 4px 4px 0 4px;
+    font-size: 10px;
+  }
+
+  /* ────── PC ────── */
+  @media (min-width: 768px) {
+    .hero { padding: 80px 24px 60px 24px; }
+    .hero h1 { font-size: 42px; }
+    .hero .tagline { font-size: 20px; }
+    .container { padding: 40px 32px 20px 32px; }
+    .main-cta { padding: 28px 32px; }
+    .main-cta h2 { font-size: 26px; }
+    .grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .sub-cta { padding: 22px 20px; }
+    .section { padding: 28px 28px; }
+  }
+
+  @media (min-width: 1024px) {
+    .grid { grid-template-columns: repeat(4, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ────── ヒーロー ────── -->
+<header class="hero">
+  <div class="badge">VIBE CODING DICTIONARY</div>
+  <h1>バイブコーディング図鑑</h1>
+  <p class="tagline">知らないことばで、止まらない。</p>
+  <p class="desc">
+    AI 開発まわりの語彙を「辞書引き」できるようにする本。<br>
+    非エンジニア・周辺職種の人が、現場の会話の前提をそろえるための共通語彙集です。
+  </p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="num">327</div>
+      <div class="lbl">Entries</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num">10</div>
+      <div class="lbl">Chapters A-J</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num">4</div>
+      <div class="lbl">Reading Routes</div>
+    </div>
+  </div>
+</header>
+
+<!-- ────── メイン CTA ────── -->
+<div class="container">
+
+  <a href="drafts/book/index.html" class="main-cta">
+    <span class="arrow">→</span>
+    <div class="label">📖 START HERE</div>
+    <h2>本のように読む</h2>
+    <div class="sub">もくじから章・エントリを選んで本文を表示。327 件全て読めます。</div>
+  </a>
+
+  <div class="grid">
+    <a href="drafts/search/index.html" class="sub-cta">
+      <div class="icon">🔍</div>
+      <h3>検索する</h3>
+      <p>用語名・読み・ID・関連語で絞り込み。隣接概念も提示。</p>
+    </a>
+
+    <a href="drafts/reading_routes/index.html" class="sub-cta">
+      <div class="icon">🎯</div>
+      <h3>おすすめルート</h3>
+      <p>入門 / 業務 / 技術 / 鳥瞰 の 4 ルートで目的別に。</p>
+    </a>
+
+    <a href="drafts/front_section/index.html" class="sub-cta">
+      <div class="icon">📕</div>
+      <h3>前付け</h3>
+      <p>扉・まえがき・凡例の 7 見開きレイアウト。</p>
+    </a>
+
+    <a href="drafts/back_section/afterword.html" class="sub-cta">
+      <div class="icon">📜</div>
+      <h3>あとがき</h3>
+      <p>この本がどう作られたか。AI と人の共著の記録。</p>
+    </a>
+  </div>
+
+  <!-- ────── この本について ────── -->
+  <section class="section">
+    <h2>この本について <span class="small">about</span></h2>
+    <p>
+      AI 開発の現場では「コンテキスト」「モデル」「API」「TypeScript」のような言葉が当たり前のように飛び交います。
+      触っている側には自然な語彙でも、初めて関わる人には会話の入口で止まってしまう原因になります。
+    </p>
+    <p>
+      この本は完全な入門書ではなく、<strong>気になる語から引いて数分で読める共通語彙集</strong>です。
+      打ち合わせ前、AI へ指示を書く前、エンジニアと話す前に、必要な語だけ引いて現場に戻れるように作りました。
+    </p>
+    <p style="margin-bottom: 0;">
+      通読は不要です。気になることばだけ引いて、現場の会話に戻ってください。
+    </p>
+  </section>
+
+  <!-- ────── 4 つのビューの使い分け ────── -->
+  <section class="section">
+    <h2>4 つのビューの使い分け <span class="small">views</span></h2>
+    <ul>
+      <li><strong>📖 本のように読む</strong> — 左にもくじ、右に本文。章を開いてエントリをクリック。</li>
+      <li><strong>🔍 検索する</strong> — 「コンテキスト」「MCP」などを入力。隣接概念のサジェストも出ます。</li>
+      <li><strong>🎯 おすすめルート</strong> — 入門 / 業務 / 技術 / 鳥瞰 の 4 ルート別に、必修と推奨の読むべきセットを提示。</li>
+      <li><strong>📕 前付け</strong> — まえがき・凡例・索引などのレイアウト下絵（画像生成のたたき台）。</li>
+    </ul>
+  </section>
+
+  <!-- ────── ライセンス ────── -->
+  <section class="section">
+    <h2>ライセンス <span class="small">license</span></h2>
+    <p>
+      本リポジトリは <strong>デュアルライセンス</strong> で公開しています。
+    </p>
+    <ul>
+      <li>ソースコード（HTML/CSS/JS/Python）— <a href="LICENSE">MIT License</a></li>
+      <li>本の中身（エントリ md / ドキュメント本文）— <a href="LICENSE-CONTENT.md">CC BY-SA 4.0</a></li>
+    </ul>
+    <p style="margin-bottom: 0;">
+      改変・再配布・商用利用 OK。著者表示と、派生作品では同じ CC BY-SA 4.0 ライセンスの継承をお願いします。
+    </p>
+  </section>
+
+</div>
+
+<!-- ────── フッタ ────── -->
+<footer>
+  <div>
+    <span class="license">📜 Code: MIT</span>
+    <span class="license">📚 Content: CC BY-SA 4.0</span>
+  </div>
+  <div style="margin-top: 16px;">
+    © 2026 VibeCodingDictionary Author (Taguchi-1989)<br>
+    <a href="https://github.com/Taguchi-1989/ViveCodingDictionary">View on GitHub</a>
+  </div>
+</footer>
+
+</body>
+</html>
