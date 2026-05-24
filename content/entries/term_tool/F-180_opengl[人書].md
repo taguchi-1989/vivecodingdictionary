@@ -105,19 +105,19 @@ WebGL、Vulkan、three.js
 ## 非エンジニアのつまずき
 
 <!-- user-input:start key="stumble" -->
--
--
--
+- 名前から 3D グラフィックスとはすぐ結び付かず、何の API か分かりにくいです。
+- 高い GPU で動くのか、どの性能を見ればよいか、選定の指針が掴めません。
+- CAD やレンダリングの裏側で動いていると認識するまで、出会いどころが見えません。
 <!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
 <!-- user-input:start key="my_comment" -->
-- 🙂 第一印象:
-- 👍 良い点:
-- 👎 ダメな点:
-- 👥 誰向けか:
+- 🙂 第一印象: CAD を買う際の PC スペック相談で名前を聞き、初めて存在を知りました。
+- 👍 良い点: WebGL や派生 API にも知識が転用でき、3D の入口になります。
+- 👎 ダメな点: Vulkan 移行が進みつつあり、レガシー寄りになっていく将来性が気になります。
+- 👥 誰向けか: ソフトの仕組みを理解したい人と、CAD・3D ツールに触れる人に必要です。
 <!-- user-input:end key="my_comment" -->
 
 
@@ -163,3 +163,4 @@ WebGL、Vulkan、three.js
 - Apple は macOS 10.14（Mojave）で OpenGL を deprecated と宣言。Metal が主力
 - Android の OpenGL ES はモバイルゲームや AI 推論 UI で現役
 - 「Vulkan に置き換わった」と誤解されやすいが、多くの既存アプリは OpenGL で動き続けており共存状態
+- **2026-05 時点の状況メモ**：SolidWorks / NX / CATIA / Creo / Maya / Rhino / Archicad / SketchUp など主要 CAD・3D ツールは依然 OpenGL を主採用。Dassault Systèmes（SolidWorks）が AMD と協力して Vulkan 移行を進行中だが、業界全体の移行はまだ先。「レガシー寄りだが現役」が現状で、半年〜1 年単位で再評価が必要
