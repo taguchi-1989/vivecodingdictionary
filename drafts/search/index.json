@@ -4432,7 +4432,7 @@
     {
       "id": "G-40",
       "title": "バイブコーディング",
-      "title_reading": [],
+      "title_reading": "",
       "category": "term_llm",
       "subtype": "ops",
       "reader_level": "1-2",
@@ -4629,7 +4629,7 @@
     {
       "id": "G-7",
       "title": "指示追従性",
-      "title_reading": [],
+      "title_reading": "",
       "category": "term_llm",
       "subtype": "basic",
       "reader_level": "3-4",

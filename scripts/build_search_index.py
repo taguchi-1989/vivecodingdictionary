@@ -86,20 +86,31 @@ def extract_entry(path: Path) -> dict | None:
     if not entry_id or not title:
         return None
 
+    # related は list を期待。文字列 1 個 → リスト化、それ以外（空リスト含む）はそのまま空
     related = yaml_data.get("related_terms", [])
     if isinstance(related, str):
         related = [related]
+    elif not isinstance(related, list):
+        related = []
+    related = [str(r) for r in related if r]
+
+    # 値があるはずだが YAML パーサがリストとして拾ってしまう場合があるため強制 str 化
+    def s(key: str) -> str:
+        v = yaml_data.get(key, "")
+        if isinstance(v, list):
+            return v[0] if v else ""
+        return str(v) if v else ""
 
     return {
         "id": entry_id,
         "title": title,
-        "title_reading": yaml_data.get("title_reading", ""),
-        "category": yaml_data.get("category", ""),
-        "subtype": yaml_data.get("subtype", ""),
-        "reader_level": str(yaml_data.get("reader_level", "")),
-        "importance": yaml_data.get("importance", ""),
-        "status": yaml_data.get("status", ""),
-        "evaluation_date": yaml_data.get("evaluation_date", ""),
+        "title_reading": s("title_reading"),
+        "category": s("category"),
+        "subtype": s("subtype"),
+        "reader_level": s("reader_level"),
+        "importance": s("importance"),
+        "status": s("status"),
+        "evaluation_date": s("evaluation_date"),
         "tagline": tagline,
         "related": related,
         "path": str(path.relative_to(ROOT)).replace("\\", "/"),
