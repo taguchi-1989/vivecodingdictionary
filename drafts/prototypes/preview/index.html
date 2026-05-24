@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>バイブコーディング図鑑 preview 目次</title>
+<link rel="stylesheet" href="../mockups/design_philosophy_v2/base.css">
+<link rel="stylesheet" href="../mockups/design_philosophy_v2/overlay.css">
+<link rel="stylesheet" href="../mockups/design_philosophy_v2/overlay-tight.css">
+<style>
+body { margin: 0; padding: 40px 20px; background: #f3f6fb; font-family: var(--font-jp); color: var(--ink); }
+main { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; padding: 40px; border: 1px solid #dfe6ef; }
+h1 { font-size: 32px; color: var(--ink-blue-900); margin: 0 0 6px; font-weight: 900; }
+.sub { color: var(--ink-2); font-size: 13px; margin-bottom: 28px; }
+h2 { font-size: 17px; color: var(--ink-blue-700); margin: 24px 0 8px; padding: 4px 0 4px 10px; border-left: 4px solid var(--ink-blue); }
+ul { list-style: none; padding: 0; margin: 0 0 14px; }
+li { margin: 4px 0; }
+a { color: var(--ink); text-decoration: none; padding: 4px 8px; border-radius: 6px; display: inline-block; }
+a:hover { background: var(--ink-blue-50); color: var(--ink-blue-900); }
+.code { display: inline-block; width: 52px; font-weight: 700; color: var(--ink-blue-700); font-family: var(--font-mono, monospace); font-size: 13px; }
+.count { color: var(--ink-3); font-size: 12px; margin-left: 6px; }
+.meta { background: #eef3fb; padding: 12px 16px; border-radius: 8px; margin-bottom: 20px; font-size: 12px; color: var(--ink-2); }
+</style>
+</head>
+<body>
+<main>
+  <h1>バイブコーディング図鑑 <span style="color:var(--ink-blue-700);font-size:20px;">preview</span></h1>
+  <div class="sub">開発中に iter 22 レイアウトの反映を確認するためのプレビュー目次。本番は Astro + React（component_spec_v2.md §0）。</div>
+
+  <div class="meta">
+    <b>集計:</b> 全 320 エントリ（319 active / 1 archived）<br>
+    <b>生成日:</b> scripts/preview_gen.py を最後に実行した時点<br>
+    <b>更新方法:</b> markdown を書き換えたあと <code>python scripts/preview_gen.py</code>
+  </div>
+
+  <h2>A. はじめに・読み方<span class="count">（11 件）</span></h2>
+<ul><li><a href="A-1.html"><span class="code">A-01</span>まえがき</a></li>
+<li><a href="A-2.html"><span class="code">A-02</span>この本の読み方</a></li>
+<li><a href="A-3.html"><span class="code">A-03</span>図鑑の歩き方</a></li>
+<li><a href="A-4.html"><span class="code">A-04</span>体験区分の凡例</a></li>
+<li><a href="A-5.html"><span class="code">A-05</span>読者レベルの凡例</a></li>
+<li><a href="A-6.html"><span class="code">A-06</span>評価日・時変情報の見方</a></li>
+<li><a href="A-7.html"><span class="code">A-07</span>図のタイプ</a></li>
+<li><a href="A-8.html"><span class="code">A-08</span>色・記号の凡例</a></li>
+<li><a href="A-9.html"><span class="code">A-09</span>索引</a></li>
+<li><a href="A-10.html"><span class="code">A-10</span>更新履歴と更新方針</a></li>
+<li><a href="A-11.html"><span class="code">A-11</span>略称表記</a></li></ul>
+<h2>B. サービス<span class="count">（40 件）</span></h2>
+<ul><li><a href="B-1.html"><span class="code">B-01</span>Gemini</a></li>
+<li><a href="B-2.html"><span class="code">B-02</span>Claude</a></li>
+<li><a href="B-3.html"><span class="code">B-03</span>ChatGPT</a></li>
+<li><a href="B-4.html"><span class="code">B-04</span>Cursor</a></li>
+<li><a href="B-5.html"><span class="code">B-05</span>GitHub Copilot</a></li>
+<li><a href="B-6.html"><span class="code">B-06</span>Windsurf</a></li>
+<li><a href="B-7.html"><span class="code">B-07</span>Claude Code</a></li>
+<li><a href="B-8.html"><span class="code">B-08</span>Codex</a></li>
+<li><a href="B-9.html"><span class="code">B-09</span>v0</a></li>
+<li><a href="B-10.html"><span class="code">B-10</span>Devin</a></li>
+<li><a href="B-11.html"><span class="code">B-11</span>Bolt.new</a></li>
+<li><a href="B-12.html"><span class="code">B-12</span>Perplexity</a></li>
+<li><a href="B-13.html"><span class="code">B-13</span>ElevenLabs</a></li>
+<li><a href="B-14.html"><span class="code">B-14</span>Genspark</a></li>
+<li><a href="B-15.html"><span class="code">B-15</span>Microsoft Copilot</a></li>
+<li><a href="B-16.html"><span class="code">B-16</span>Microsoft 365 Copilot</a></li>
+<li><a href="B-17.html"><span class="code">B-17</span>Edge Copilot</a></li>
+<li><a href="B-18.html"><span class="code">B-18</span>Aqua Voice</a></li>
+<li><a href="B-19.html"><span class="code">B-19</span>Claude Cowork</a></li>
+<li><a href="B-20.html"><span class="code">B-20</span>Vercel</a></li>
+<li><a href="B-21.html"><span class="code">B-21</span>Netlify</a></li>
+<li><a href="B-22.html"><span class="code">B-22</span>Cloudflare</a></li>
+<li><a href="B-23.html"><span class="code">B-23</span>AWS</a></li>
+<li><a href="B-24.html"><span class="code">B-24</span>Google Cloud</a></li>
+<li><a href="B-25.html"><span class="code">B-25</span>Azure</a></li>
+<li><a href="B-26.html"><span class="code">B-26</span>Azure OpenAI</a></li>
+<li><a href="B-27.html"><span class="code">B-27</span>Vertex AI</a></li>
+<li><a href="B-28.html"><span class="code">B-28</span>Render</a></li>
+<li><a href="B-29.html"><span class="code">B-29</span>Supabase</a></li>
+<li><a href="B-30.html"><span class="code">B-30</span>Amazon Bedrock</a></li>
+<li><a href="B-31.html"><span class="code">B-31</span>Excalidraw</a></li>
+<li><a href="B-32.html"><span class="code">B-32</span>Figma</a></li>
+<li><a href="B-33.html"><span class="code">B-33</span>Canva</a></li>
+<li><a href="B-40.html"><span class="code">B-40</span>Reddit</a></li>
+<li><a href="B-41.html"><span class="code">B-41</span>arXiv</a></li>
+<li><a href="B-50.html"><span class="code">B-50</span>Claude の料金プラン</a></li>
+<li><a href="B-51.html"><span class="code">B-51</span>ChatGPT の料金プラン</a></li>
+<li><a href="B-52.html"><span class="code">B-52</span>Gemini の料金プラン</a></li>
+<li><a href="B-60.html"><span class="code">B-60</span>Suno</a></li>
+<li><a href="B-61.html"><span class="code">B-61</span>ACE-Step 1.5</a></li></ul>
+<h2>C. 人・会社<span class="count">（28 件）</span></h2>
+<ul><li><a href="C-1.html"><span class="code">C-01</span>OpenAI</a></li>
+<li><a href="C-2.html"><span class="code">C-02</span>Anthropic</a></li>
+<li><a href="C-3.html"><span class="code">C-03</span>Google DeepMind</a></li>
+<li><a href="C-4.html"><span class="code">C-04</span>Meta AI</a></li>
+<li><a href="C-5.html"><span class="code">C-05</span>xAI</a></li>
+<li><a href="C-6.html"><span class="code">C-06</span>Mistral AI</a></li>
+<li><a href="C-7.html"><span class="code">C-07</span>Hugging Face</a></li>
+<li><a href="C-8.html"><span class="code">C-08</span>Microsoft AI</a></li>
+<li><a href="C-9.html"><span class="code">C-09</span>NVIDIA</a></li>
+<li><a href="C-10.html"><span class="code">C-10</span>Moonshot AI</a></li>
+<li><a href="C-11.html"><span class="code">C-11</span>Z.ai</a></li>
+<li><a href="C-12.html"><span class="code">C-12</span>TSMC</a></li>
+<li><a href="C-13.html"><span class="code">C-13</span>Groq</a></li>
+<li><a href="C-14.html"><span class="code">C-14</span>AMD</a></li>
+<li><a href="C-50.html"><span class="code">C-50</span>Sam Altman</a></li>
+<li><a href="C-51.html"><span class="code">C-51</span>Dario Amodei</a></li>
+<li><a href="C-52.html"><span class="code">C-52</span>Demis Hassabis</a></li>
+<li><a href="C-53.html"><span class="code">C-53</span>Andrej Karpathy</a></li>
+<li><a href="C-54.html"><span class="code">C-54</span>Ilya Sutskever</a></li>
+<li><a href="C-55.html"><span class="code">C-55</span>Mira Murati</a></li>
+<li><a href="C-56.html"><span class="code">C-56</span>Yann LeCun</a></li>
+<li><a href="C-57.html"><span class="code">C-57</span>Geoffrey Hinton</a></li>
+<li><a href="C-58.html"><span class="code">C-58</span>Elon Musk</a></li>
+<li><a href="C-59.html"><span class="code">C-59</span>Jensen Huang</a></li>
+<li><a href="C-60.html"><span class="code">C-60</span>Ray Kurzweil</a></li>
+<li><a href="C-80.html"><span class="code">C-80</span>AI大学</a></li>
+<li><a href="C-81.html"><span class="code">C-81</span>にゃんた</a></li>
+<li><a href="C-82.html"><span class="code">C-82</span>まさお</a></li></ul>
+<h2>D. モデル<span class="count">（34 件）</span></h2>
+<ul><li><a href="D-1.html"><span class="code">D-01</span>Gemini 2 系</a></li>
+<li><a href="D-2.html"><span class="code">D-02</span>Gemini 2.5 系</a></li>
+<li><a href="D-4.html"><span class="code">D-04</span>Gemini 3.1 系</a></li>
+<li><a href="D-11.html"><span class="code">D-11</span>Claude 3.5 系</a></li>
+<li><a href="D-12.html"><span class="code">D-12</span>Claude 4 系</a></li>
+<li><a href="D-14.html"><span class="code">D-14</span>Claude Mythos Preview</a></li>
+<li><a href="D-20.html"><span class="code">D-20</span>GPT-5 系</a></li>
+<li><a href="D-21.html"><span class="code">D-21</span>GPT-4 系</a></li>
+<li><a href="D-22.html"><span class="code">D-22</span>o1 系</a></li>
+<li><a href="D-24.html"><span class="code">D-24</span>GPT-3 系</a></li>
+<li><a href="D-25.html"><span class="code">D-25</span>GPT-1 / GPT-2 系</a></li>
+<li><a href="D-26.html"><span class="code">D-26</span>gpt-oss</a></li>
+<li><a href="D-30.html"><span class="code">D-30</span>Grok 系</a></li>
+<li><a href="D-35.html"><span class="code">D-35</span>Cursor Composer</a></li>
+<li><a href="D-40.html"><span class="code">D-40</span>Llama 系</a></li>
+<li><a href="D-41.html"><span class="code">D-41</span>Mistral 系</a></li>
+<li><a href="D-42.html"><span class="code">D-42</span>Gemma 系</a></li>
+<li><a href="D-43.html"><span class="code">D-43</span>Qwen 系</a></li>
+<li><a href="D-44.html"><span class="code">D-44</span>Kimi</a></li>
+<li><a href="D-45.html"><span class="code">D-45</span>GLM</a></li>
+<li><a href="D-46.html"><span class="code">D-46</span>DeepSeek V3</a></li>
+<li><a href="D-47.html"><span class="code">D-47</span>DeepSeek R1</a></li>
+<li><a href="D-50.html"><span class="code">D-50</span>DALL-E</a></li>
+<li><a href="D-51.html"><span class="code">D-51</span>Imagen</a></li>
+<li><a href="D-52.html"><span class="code">D-52</span>Sora</a></li>
+<li><a href="D-53.html"><span class="code">D-53</span>Veo</a></li>
+<li><a href="D-54.html"><span class="code">D-54</span>Stable Diffusion</a></li>
+<li><a href="D-55.html"><span class="code">D-55</span>Nano Banana</a></li>
+<li><a href="D-56.html"><span class="code">D-56</span>Seedance</a></li>
+<li><a href="D-57.html"><span class="code">D-57</span>Flow</a></li>
+<li><a href="D-58.html"><span class="code">D-58</span>Whisk</a></li>
+<li><a href="D-60.html"><span class="code">D-60</span>AlphaGo</a></li>
+<li><a href="D-70.html"><span class="code">D-70</span>Amical</a></li>
+<li><a href="D-71.html"><span class="code">D-71</span>Whisper</a></li></ul>
+<h2>E. ベンチマーク<span class="count">（19 件）</span></h2>
+<ul><li><a href="E-1.html"><span class="code">E-01</span>SWE-Bench</a></li>
+<li><a href="E-2.html"><span class="code">E-02</span>SWE-Bench Verified</a></li>
+<li><a href="E-3.html"><span class="code">E-03</span>Terminal-Bench</a></li>
+<li><a href="E-4.html"><span class="code">E-04</span>HumanEval</a></li>
+<li><a href="E-20.html"><span class="code">E-20</span>MMLU</a></li>
+<li><a href="E-21.html"><span class="code">E-21</span>MMLU-Pro</a></li>
+<li><a href="E-22.html"><span class="code">E-22</span>GPQA</a></li>
+<li><a href="E-23.html"><span class="code">E-23</span>GSM8K</a></li>
+<li><a href="E-24.html"><span class="code">E-24</span>MATH</a></li>
+<li><a href="E-25.html"><span class="code">E-25</span>AIME</a></li>
+<li><a href="E-26.html"><span class="code">E-26</span>Humanity&#x27;s Last Exam</a></li>
+<li><a href="E-27.html"><span class="code">E-27</span>IQ Bench</a></li>
+<li><a href="E-30.html"><span class="code">E-30</span>TAU-Bench</a></li>
+<li><a href="E-31.html"><span class="code">E-31</span>WebArena</a></li>
+<li><a href="E-32.html"><span class="code">E-32</span>GAIA</a></li>
+<li><a href="E-33.html"><span class="code">E-33</span>AgentBench</a></li>
+<li><a href="E-34.html"><span class="code">E-34</span>OSWorld</a></li>
+<li><a href="E-50.html"><span class="code">E-50</span>Chatbot Arena</a></li>
+<li><a href="E-51.html"><span class="code">E-51</span>LMSYS Arena</a></li></ul>
+<h2>F. ことば・しくみ<span class="count">（79 件）</span></h2>
+<ul><li><a href="F-1.html"><span class="code">F-01</span>JavaScript</a></li>
+<li><a href="F-2.html"><span class="code">F-02</span>TypeScript</a></li>
+<li><a href="F-3.html"><span class="code">F-03</span>Python</a></li>
+<li><a href="F-4.html"><span class="code">F-04</span>HTML</a></li>
+<li><a href="F-5.html"><span class="code">F-05</span>CSS</a></li>
+<li><a href="F-6.html"><span class="code">F-06</span>Markdown</a></li>
+<li><a href="F-7.html"><span class="code">F-07</span>YAML</a></li>
+<li><a href="F-8.html"><span class="code">F-08</span>JSON</a></li>
+<li><a href="F-9.html"><span class="code">F-09</span>SVG</a></li>
+<li><a href="F-10.html"><span class="code">F-10</span>React</a></li>
+<li><a href="F-11.html"><span class="code">F-11</span>Next.js</a></li>
+<li><a href="F-12.html"><span class="code">F-12</span>Electron</a></li>
+<li><a href="F-13.html"><span class="code">F-13</span>Tauri</a></li>
+<li><a href="F-14.html"><span class="code">F-14</span>three.js</a></li>
+<li><a href="F-15.html"><span class="code">F-15</span>shadcn/ui</a></li>
+<li><a href="F-16.html"><span class="code">F-16</span>Tailwind CSS</a></li>
+<li><a href="F-17.html"><span class="code">F-17</span>Astro</a></li>
+<li><a href="F-20.html"><span class="code">F-20</span>ESLint</a></li>
+<li><a href="F-21.html"><span class="code">F-21</span>Prettier</a></li>
+<li><a href="F-30.html"><span class="code">F-30</span>VS Code</a></li>
+<li><a href="F-35.html"><span class="code">F-35</span>Markdown Preview Enhanced</a></li>
+<li><a href="F-36.html"><span class="code">F-36</span>Git Graph</a></li>
+<li><a href="F-37.html"><span class="code">F-37</span>Japanese Language Pack for VS Code</a></li>
+<li><a href="F-38.html"><span class="code">F-38</span>Markdown All in One</a></li>
+<li><a href="F-40.html"><span class="code">F-40</span>npm</a></li>
+<li><a href="F-41.html"><span class="code">F-41</span>Vite</a></li>
+<li><a href="F-42.html"><span class="code">F-42</span>ビルド</a></li>
+<li><a href="F-44.html"><span class="code">F-44</span>pnpm</a></li>
+<li><a href="F-50.html"><span class="code">F-50</span>git</a></li>
+<li><a href="F-51.html"><span class="code">F-51</span>git push</a></li>
+<li><a href="F-52.html"><span class="code">F-52</span>git pull</a></li>
+<li><a href="F-53.html"><span class="code">F-53</span>branch</a></li>
+<li><a href="F-54.html"><span class="code">F-54</span>commit</a></li>
+<li><a href="F-55.html"><span class="code">F-55</span>merge</a></li>
+<li><a href="F-56.html"><span class="code">F-56</span>.gitignore</a></li>
+<li><a href="F-58.html"><span class="code">F-58</span>git stash</a></li>
+<li><a href="F-59.html"><span class="code">F-59</span>README.md</a></li>
+<li><a href="F-60.html"><span class="code">F-60</span>GitHub</a></li>
+<li><a href="F-61.html"><span class="code">F-61</span>Pull Request</a></li>
+<li><a href="F-62.html"><span class="code">F-62</span>GitHub Actions</a></li>
+<li><a href="F-71.html"><span class="code">F-71</span>ripgrep (rg)</a></li>
+<li><a href="F-80.html"><span class="code">F-80</span>Node.js</a></li>
+<li><a href="F-81.html"><span class="code">F-81</span>bash</a></li>
+<li><a href="F-82.html"><span class="code">F-82</span>WSL</a></li>
+<li><a href="F-83.html"><span class="code">F-83</span>PowerShell</a></li>
+<li><a href="F-84.html"><span class="code">F-84</span>Ghostty</a></li>
+<li><a href="F-85.html"><span class="code">F-85</span>SuperClaude Framework</a></li>
+<li><a href="F-86.html"><span class="code">F-86</span>ollama</a></li>
+<li><a href="F-87.html"><span class="code">F-87</span>sudo</a></li>
+<li><a href="F-90.html"><span class="code">F-90</span>Docker</a></li>
+<li><a href="F-91.html"><span class="code">F-91</span>.env</a></li>
+<li><a href="F-100.html"><span class="code">F-100</span>拡張子早見表</a></li>
+<li><a href="F-101.html"><span class="code">F-101</span>.ico</a></li>
+<li><a href="F-102.html"><span class="code">F-102</span>.mp4</a></li>
+<li><a href="F-103.html"><span class="code">F-103</span>.mp3</a></li>
+<li><a href="F-104.html"><span class="code">F-104</span>.webp</a></li>
+<li><a href="F-110.html"><span class="code">F-110</span>Lighthouse</a></li>
+<li><a href="F-111.html"><span class="code">F-111</span>a11y</a></li>
+<li><a href="F-120.html"><span class="code">F-120</span>PostgreSQL</a></li>
+<li><a href="F-121.html"><span class="code">F-121</span>SQLite</a></li>
+<li><a href="F-122.html"><span class="code">F-122</span>Prisma</a></li>
+<li><a href="F-123.html"><span class="code">F-123</span>ORM</a></li>
+<li><a href="F-130.html"><span class="code">F-130</span>OAuth</a></li>
+<li><a href="F-140.html"><span class="code">F-140</span>Mermaid</a></li>
+<li><a href="F-141.html"><span class="code">F-141</span>PlantUML</a></li>
+<li><a href="F-151.html"><span class="code">F-151</span>Apache 2.0</a></li>
+<li><a href="F-152.html"><span class="code">F-152</span>GPL</a></li>
+<li><a href="F-153.html"><span class="code">F-153</span>Creative Commons</a></li>
+<li><a href="F-154.html"><span class="code">F-154</span>OSS</a></li>
+<li><a href="F-160.html"><span class="code">F-160</span>DOM</a></li>
+<li><a href="F-161.html"><span class="code">F-161</span>SSR</a></li>
+<li><a href="F-162.html"><span class="code">F-162</span>SSG</a></li>
+<li><a href="F-170.html"><span class="code">F-170</span>EC2</a></li>
+<li><a href="F-171.html"><span class="code">F-171</span>S3</a></li>
+<li><a href="F-172.html"><span class="code">F-172</span>IAM</a></li>
+<li><a href="F-180.html"><span class="code">F-180</span>OpenGL</a></li>
+<li><a href="F-181.html"><span class="code">F-181</span>WebGL</a></li>
+<li><a href="F-190.html"><span class="code">F-190</span>サブルーチン</a></li>
+<li><a href="F-200.html"><span class="code">F-200</span>Rust</a></li></ul>
+<h2>G. バイブ特有<span class="count">（36 件）</span></h2>
+<ul><li><a href="G-1.html"><span class="code">G-01</span>Context (コンテキスト)</a></li>
+<li><a href="G-2.html"><span class="code">G-02</span>Token</a></li>
+<li><a href="G-3.html"><span class="code">G-03</span>Dictation</a></li>
+<li><a href="G-4.html"><span class="code">G-04</span>System Prompt</a></li>
+<li><a href="G-5.html"><span class="code">G-05</span>Context Window</a></li>
+<li><a href="G-6.html"><span class="code">G-06</span>One-shot</a></li>
+<li><a href="G-7.html"><span class="code">G-07</span>指示追従性</a></li>
+<li><a href="G-10.html"><span class="code">G-10</span>Prompt Engineering</a></li>
+<li><a href="G-11.html"><span class="code">G-11</span>Context Engineering</a></li>
+<li><a href="G-12.html"><span class="code">G-12</span>Agent Design</a></li>
+<li><a href="G-13.html"><span class="code">G-13</span>Few-shot Learning</a></li>
+<li><a href="G-14.html"><span class="code">G-14</span>Thinking モデル</a></li>
+<li><a href="G-15.html"><span class="code">G-15</span>RAG</a></li>
+<li><a href="G-16.html"><span class="code">G-16</span>Embedding</a></li>
+<li><a href="G-18.html"><span class="code">G-18</span>Chain of Thought</a></li>
+<li><a href="G-19.html"><span class="code">G-19</span>Prompt Caching</a></li>
+<li><a href="G-20.html"><span class="code">G-20</span>CLAUDE.md</a></li>
+<li><a href="G-21.html"><span class="code">G-21</span>AGENTS.md</a></li>
+<li><a href="G-22.html"><span class="code">G-22</span>SKILL.md</a></li>
+<li><a href="G-23.html"><span class="code">G-23</span>.claude/settings.json</a></li>
+<li><a href="G-30.html"><span class="code">G-30</span>Tool Use</a></li>
+<li><a href="G-31.html"><span class="code">G-31</span>Hook</a></li>
+<li><a href="G-32.html"><span class="code">G-32</span>Slash Command</a></li>
+<li><a href="G-33.html"><span class="code">G-33</span>Function Calling</a></li>
+<li><a href="G-34.html"><span class="code">G-34</span>Code Interpreter</a></li>
+<li><a href="G-35.html"><span class="code">G-35</span>Deep Research</a></li>
+<li><a href="G-36.html"><span class="code">G-36</span>Artifact</a></li>
+<li><a href="G-38.html"><span class="code">G-38</span>Plan Mode</a></li>
+<li><a href="G-39.html"><span class="code">G-39</span>Permission</a></li>
+<li><a href="G-40.html"><span class="code">G-40</span>バイブコーディング</a></li>
+<li><a href="G-41.html"><span class="code">G-41</span>Subagent</a></li>
+<li><a href="G-42.html"><span class="code">G-42</span>Worktree</a></li>
+<li><a href="G-43.html"><span class="code">G-43</span>オーケストレーション</a></li>
+<li><a href="G-44.html"><span class="code">G-44</span>マルチエージェント協調</a></li>
+<li><a href="G-46.html"><span class="code">G-46</span>ナーフ（モデルの劣化体感）</a></li>
+<li><a href="G-47.html"><span class="code">G-47</span>Auto-compact</a></li></ul>
+<h2>H. 歴史<span class="count">（10 件）</span></h2>
+<ul><li><a href="H-1.html"><span class="code">H-01</span>TDD</a></li>
+<li><a href="H-5.html"><span class="code">H-05</span>Scrum / Agile</a></li>
+<li><a href="H-6.html"><span class="code">H-06</span>Git Flow</a></li>
+<li><a href="H-7.html"><span class="code">H-07</span>CI/CD</a></li>
+<li><a href="H-8.html"><span class="code">H-08</span>DevOps</a></li>
+<li><a href="H-53.html"><span class="code">H-53</span>ChatGPT 登場</a></li>
+<li><a href="H-54.html"><span class="code">H-54</span>GPT-4 リリース</a></li>
+<li><a href="H-55.html"><span class="code">H-55</span>LLaMA のオープン化</a></li>
+<li><a href="H-56.html"><span class="code">H-56</span>Claude のバージョン史</a></li>
+<li><a href="H-58.html"><span class="code">H-58</span>Transformer 論文</a></li></ul>
+<h2>I. MCP<span class="count">（17 件）</span></h2>
+<ul><li><a href="I-1.html"><span class="code">I-01</span>MCP</a></li>
+<li><a href="I-2.html"><span class="code">I-02</span>MCP Server</a></li>
+<li><a href="I-3.html"><span class="code">I-03</span>MCP Client</a></li>
+<li><a href="I-4.html"><span class="code">I-04</span>MCP Transport</a></li>
+<li><a href="I-5.html"><span class="code">I-05</span>MCP SDK</a></li>
+<li><a href="I-10.html"><span class="code">I-10</span>Filesystem MCP</a></li>
+<li><a href="I-11.html"><span class="code">I-11</span>GitHub MCP</a></li>
+<li><a href="I-12.html"><span class="code">I-12</span>Git MCP</a></li>
+<li><a href="I-13.html"><span class="code">I-13</span>Slack MCP</a></li>
+<li><a href="I-20.html"><span class="code">I-20</span>Playwright MCP</a></li>
+<li><a href="I-21.html"><span class="code">I-21</span>Puppeteer MCP</a></li>
+<li><a href="I-22.html"><span class="code">I-22</span>Chrome DevTools MCP</a></li>
+<li><a href="I-23.html"><span class="code">I-23</span>Serena MCP</a></li>
+<li><a href="I-24.html"><span class="code">I-24</span>Context7 MCP</a></li>
+<li><a href="I-30.html"><span class="code">I-30</span>Notion MCP</a></li>
+<li><a href="I-41.html"><span class="code">I-41</span>SQLite MCP</a></li>
+<li><a href="I-50.html"><span class="code">I-50</span>AWS MCP</a></li></ul>
+<h2>J. 一般語彙<span class="count">（45 件）</span></h2>
+<ul><li><a href="J-1.html"><span class="code">J-01</span>AGI</a></li>
+<li><a href="J-2.html"><span class="code">J-02</span>強い AI／弱い AI</a></li>
+<li><a href="J-3.html"><span class="code">J-03</span>Singularity</a></li>
+<li><a href="J-4.html"><span class="code">J-04</span>ASI</a></li>
+<li><a href="J-10.html"><span class="code">J-10</span>Machine Learning</a></li>
+<li><a href="J-11.html"><span class="code">J-11</span>Deep Learning</a></li>
+<li><a href="J-12.html"><span class="code">J-12</span>Neural Network</a></li>
+<li><a href="J-13.html"><span class="code">J-13</span>Transformer</a></li>
+<li><a href="J-14.html"><span class="code">J-14</span>LLM</a></li>
+<li><a href="J-15.html"><span class="code">J-15</span>VLM</a></li>
+<li><a href="J-16.html"><span class="code">J-16</span>Fine-tuning</a></li>
+<li><a href="J-17.html"><span class="code">J-17</span>Attention</a></li>
+<li><a href="J-18.html"><span class="code">J-18</span>MoE</a></li>
+<li><a href="J-19.html"><span class="code">J-19</span>量子化</a></li>
+<li><a href="J-20.html"><span class="code">J-20</span>Big Data</a></li>
+<li><a href="J-21.html"><span class="code">J-21</span>LoRA</a></li>
+<li><a href="J-23.html"><span class="code">J-23</span>拡散モデル</a></li>
+<li><a href="J-31.html"><span class="code">J-31</span>第 5 世代コンピュータ</a></li>
+<li><a href="J-33.html"><span class="code">J-33</span>量子コンピュータ</a></li>
+<li><a href="J-40.html"><span class="code">J-40</span>IoT</a></li>
+<li><a href="J-41.html"><span class="code">J-41</span>DX</a></li>
+<li><a href="J-42.html"><span class="code">J-42</span>Web3</a></li>
+<li><a href="J-43.html"><span class="code">J-43</span>SaaS</a></li>
+<li><a href="J-51.html"><span class="code">J-51</span>Hallucination</a></li>
+<li><a href="J-52.html"><span class="code">J-52</span>Sycophancy</a></li>
+<li><a href="J-53.html"><span class="code">J-53</span>著作権法 30 条の 4（日本）</a></li>
+<li><a href="J-54.html"><span class="code">J-54</span>ISO/IEC 42001</a></li>
+<li><a href="J-56.html"><span class="code">J-56</span>GDPR</a></li>
+<li><a href="J-70.html"><span class="code">J-70</span>VRAM</a></li>
+<li><a href="J-71.html"><span class="code">J-71</span>RAM</a></li>
+<li><a href="J-72.html"><span class="code">J-72</span>H100</a></li>
+<li><a href="J-73.html"><span class="code">J-73</span>Blackwell</a></li>
+<li><a href="J-74.html"><span class="code">J-74</span>RTX シリーズ</a></li>
+<li><a href="J-75.html"><span class="code">J-75</span>Tensor コア</a></li>
+<li><a href="J-76.html"><span class="code">J-76</span>CPU</a></li>
+<li><a href="J-77.html"><span class="code">J-77</span>GPU (概念)</a></li>
+<li><a href="J-78.html"><span class="code">J-78</span>HDD</a></li>
+<li><a href="J-79.html"><span class="code">J-79</span>SSD</a></li>
+<li><a href="J-80.html"><span class="code">J-80</span>SATA</a></li>
+<li><a href="J-81.html"><span class="code">J-81</span>M.2</a></li>
+<li><a href="J-90.html"><span class="code">J-90</span>GUI</a></li>
+<li><a href="J-91.html"><span class="code">J-91</span>CLI</a></li>
+<li><a href="J-92.html"><span class="code">J-92</span>Linux</a></li>
+<li><a href="J-93.html"><span class="code">J-93</span>Ubuntu</a></li>
+<li><a href="J-100.html"><span class="code">J-100</span>識字（リテラシー）</a></li></ul>
+</main>
+</body>
+</html>

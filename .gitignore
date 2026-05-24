@@ -42,7 +42,11 @@ __pycache__/
 drafts/prototypes/mockups/design_philosophy_v2/fonts/
 
 # Preview 生成器の出力（scripts/preview_gen.py で再生成可能）
-drafts/prototypes/preview/
+# 2026-05-24: GitHub Pages 公開のためコミット対象に変更（HTML のみ）
+# drafts/prototypes/preview/
+
+# PDF は容量大なので除外。必要時に scripts/preview_to_pdf.py で再生成
+drafts/prototypes/preview/pdf/
 
 # ルート直下の一時スクリーンショット（Playwright MCP の撮影結果）
 /*.png
