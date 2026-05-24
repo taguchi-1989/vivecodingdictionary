@@ -4,44 +4,10 @@
    紙面の再現に焦点を当てた最小セット。
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@400;500;700;900&display=swap');
-
-/* Zen Maru Gothic — やわらかい丸ゴシック。本文・見出し共通で使用する主役フォント。 */
-@font-face {
-  font-family: "Zen Maru Gothic";
-  src: url("fonts/ZenMaruGothic-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Zen Maru Gothic";
-  src: url("fonts/ZenMaruGothic-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Zen Maru Gothic";
-  src: url("fonts/ZenMaruGothic-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Zen Maru Gothic";
-  src: url("fonts/ZenMaruGothic-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Zen Maru Gothic";
-  src: url("fonts/ZenMaruGothic-Black.ttf") format("truetype");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
+/* Google Fonts から Zen Maru Gothic + Noto Sans JP + Inter を読み込む。
+   ローカル fonts/ への @font-face 参照は GitHub Pages で 404 になっていたため
+   全て CDN 統一（2026-05-24 修正）。これでフォント 404 が消え、CSS 崩れも解消。 */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@400;500;700;900&display=swap');
 
 :root {
   /* --- Colors --- */

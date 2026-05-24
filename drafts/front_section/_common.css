@@ -13,7 +13,7 @@ body {
   color: var(--ink);
 }
 
-/* 見開き全体 */
+/* 見開き全体（1500×1061px 固定。狭い画面では transform: scale で自動縮小） */
 .spread {
   display: flex;
   gap: 0;
@@ -21,6 +21,23 @@ body {
   margin: 0 auto;
   background: var(--paper);
   box-shadow: var(--shadow-paper);
+  transform-origin: top center;
+}
+
+/* モバイル: ビューポートに収まるように比例縮小（スクロールなし）*/
+@media (max-width: 1580px) {
+  body {
+    overflow-x: hidden;
+  }
+  .spread {
+    transform: scale(calc((100vw - 32px) / 1500));
+    margin-bottom: calc(1061px * ((100vw - 32px) / 1500) - 1061px + 40px);
+  }
+}
+
+/* 1500px 以上ならそのまま */
+@media (min-width: 1581px) {
+  .spread { transform: none; margin-bottom: 0; }
 }
 
 /* 1 ページ */
