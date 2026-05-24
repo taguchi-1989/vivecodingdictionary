@@ -470,7 +470,8 @@
     const title = norm(entry.title);
     const reading = norm(entry.title_reading);
     const tag = norm(entry.tagline);
-    const rel = entry.related.map(norm).join(' ');
+    const relArr = Array.isArray(entry.related) ? entry.related : [];
+    const rel = relArr.map(norm).join(' ');
 
     if (idn === qn) return 100;
     if (title === qn || reading === qn) return 90;
@@ -482,10 +483,27 @@
     return 0;
   }
 
+  // render を try/catch で包み、エラーが出てもユーザーに見える形にする
+  function safeRender() {
+    try {
+      render();
+    } catch (err) {
+      console.error('render error:', err);
+      const errBox = document.getElementById('jsError') || (() => {
+        const el = document.createElement('div');
+        el.id = 'jsError';
+        el.style.cssText = 'position:fixed;top:80px;left:20px;right:20px;padding:12px 16px;background:#FEE;border:2px solid #C44;border-radius:6px;color:#900;font-family:monospace;font-size:12px;z-index:9999';
+        document.body.appendChild(el);
+        return el;
+      })();
+      errBox.textContent = 'JS error: ' + (err && err.message ? err.message : String(err));
+    }
+  }
+
   function matchesFilters(entry) {
-    if (state.category && !entry.id.startsWith(state.category + '-')) return false;
+    if (state.category && !(entry.id || '').startsWith(state.category + '-')) return false;
     if (state.status && entry.status !== state.status) return false;
-    if (state.level && !entry.reader_level.startsWith(state.level)) return false;
+    if (state.level && !(entry.reader_level || '').startsWith(state.level)) return false;
     return true;
   }
 
@@ -602,16 +620,20 @@
   }
 
   // ───── イベント ─────
-  qInput.addEventListener('input', e => {
-    state.q = e.target.value;
-    render();
-  });
+  // 'input' と 'keyup' の両方を購読。input は通常の入力、keyup は IME 確定後の補助
+  function onQueryChange() {
+    state.q = qInput.value;
+    safeRender();
+  }
+  qInput.addEventListener('input', onQueryChange);
+  qInput.addEventListener('keyup', onQueryChange);
+  qInput.addEventListener('change', onQueryChange);
 
   clearBtn.addEventListener('click', () => {
     state.q = '';
     qInput.value = '';
     qInput.focus();
-    render();
+    safeRender();
   });
 
   document.addEventListener('keydown', e => {
@@ -621,7 +643,7 @@
     } else if (e.key === 'Escape' && document.activeElement === qInput) {
       state.q = '';
       qInput.value = '';
-      render();
+      safeRender();
     }
   });
 
@@ -633,7 +655,7 @@
       state[f] = v;
       document.querySelectorAll(`.filter-pill[data-filter="${f}"]`).forEach(p => p.classList.remove('active'));
       pill.classList.add('active');
-      render();
+      safeRender();
     });
   });
 
@@ -648,11 +670,11 @@
       state.q = rel;
       qInput.focus();
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      render();
+      safeRender();
     }
   });
 
-  render();
+  safeRender();
 })();
 </script>
 
