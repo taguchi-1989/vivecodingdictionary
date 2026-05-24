@@ -17,7 +17,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 ENTRIES_DIR = ROOT / "content" / "entries"
 OUTPUT = ROOT / "drafts" / "search" / "index.json"
-HTML_PATH = ROOT / "drafts" / "search" / "index.html"
+# JSON を注入する対象 HTML（検索 UI と本のリーダー）
+HTML_TARGETS = [
+    ROOT / "drafts" / "search" / "index.html",
+    ROOT / "drafts" / "book" / "index.html",
+]
 PLACEHOLDER = "__SEARCH_DATA_JSON__"
 
 YAML_RE = re.compile(r"^---\n(.+?)\n---\n", re.DOTALL)
@@ -81,6 +85,13 @@ def extract_entry(path: Path) -> dict | None:
     tagline = tagline_match.group(1).strip() if tagline_match else ""
     tagline = re.sub(r"\s+", " ", tagline)[:200]
 
+    # 本文：誌面に出る部分のみ（裏台帳メモ・ポンチ絵メモ・出典メモ・備考は除外）
+    # 「<!-- ━━━━━━━━ 裏台帳メモ」より前を本文として扱う
+    body_main_match = re.search(r"^(.*?)(?:<!--\s*━+\s*裏台帳メモ|$)", body, re.DOTALL)
+    body_main = body_main_match.group(1) if body_main_match else body
+    # HTML コメントを除去
+    body_main = re.sub(r"<!--.*?-->", "", body_main, flags=re.DOTALL).strip()
+
     entry_id = yaml_data.get("id", "")
     title = yaml_data.get("title", "")
     if not entry_id or not title:
@@ -112,6 +123,7 @@ def extract_entry(path: Path) -> dict | None:
         "status": s("status"),
         "evaluation_date": s("evaluation_date"),
         "tagline": tagline,
+        "body": body_main,
         "related": related,
         "path": str(path.relative_to(ROOT)).replace("\\", "/"),
     }
@@ -142,34 +154,36 @@ def main() -> int:
     )
     print(f"wrote {len(entries)} entries to {OUTPUT.relative_to(ROOT)}")
 
-    # 2) index.html の <script id="searchData"> 内に JSON を埋め込む。
+    # 2) 各 HTML の <script id="searchData"> 内に JSON を埋め込む。
     # これで file:// で開いても fetch を使わずに動く。
     # 何度ビルドしても冪等になるよう、常に script タグの中身を丸ごと置換する。
-    if HTML_PATH.exists():
-        html = HTML_PATH.read_text(encoding="utf-8")
-        compact = json.dumps(data_obj, ensure_ascii=False, separators=(",", ":"))
-        # <script> タグ内では </script> が現れるとブラウザがパースを止めるためエスケープ
-        compact = compact.replace("</", "<\\/")
+    compact = json.dumps(data_obj, ensure_ascii=False, separators=(",", ":"))
+    # <script> タグ内では </script> が現れるとブラウザがパースを止めるためエスケープ
+    compact = compact.replace("</", "<\\/")
 
-        pattern = re.compile(
-            r'(<script id="searchData" type="application/json">)(.*?)(</script>)',
-            re.DOTALL,
-        )
+    pattern = re.compile(
+        r'(<script id="searchData" type="application/json">)(.*?)(</script>)',
+        re.DOTALL,
+    )
+
+    for html_path in HTML_TARGETS:
+        if not html_path.exists():
+            print(f"WARNING: {html_path.relative_to(ROOT)} not found", file=sys.stderr)
+            continue
+        html = html_path.read_text(encoding="utf-8")
         new_html, n = pattern.subn(
             lambda m: m.group(1) + compact + m.group(3),
             html,
             count=1,
         )
         if n:
-            HTML_PATH.write_text(new_html, encoding="utf-8")
-            print(f"injected data into {HTML_PATH.relative_to(ROOT)} (script tag content)")
+            html_path.write_text(new_html, encoding="utf-8")
+            print(f"injected data into {html_path.relative_to(ROOT)}")
         else:
             print(
-                f"WARNING: searchData script tag not found in {HTML_PATH.relative_to(ROOT)}.",
+                f"WARNING: searchData script tag not found in {html_path.relative_to(ROOT)}.",
                 file=sys.stderr,
             )
-    else:
-        print(f"WARNING: {HTML_PATH.relative_to(ROOT)} not found", file=sys.stderr)
 
     return 0
 
