@@ -1,50 +1,112 @@
-﻿# 繝舌う繝悶さ繝ｼ繝・ぅ繝ｳ繧ｰ蝗ｳ髑・(VibeCodingDictionary)
+# バイブコーディング図鑑 (VibeCodingDictionary)
 
-髱槭お繝ｳ繧ｸ繝九い繝ｻ蜻ｨ霎ｺ閨ｷ遞ｮ縺ｮ莠ｺ縺・AI 髢狗匱縺ｾ繧上ｊ縺ｮ隱槫ｽ吶ｒ縲瑚ｾ樊嶌蠑輔″縲阪〒縺阪ｋ繧医≧縺ｫ縺吶ｋ蝗ｳ髑代・
-隧ｳ邏ｰ縺ｪ雜｣譌ｨ縺ｯ [docs/book_philosophy.md](docs/book_philosophy.md)縲∝濤遲・ぎ繧､繝峨・ [CLAUDE.md](CLAUDE.md) 繧貞盾辣ｧ縲・
-## 髢狗匱迥ｶ豕・ｼ・t a glance・・
-| 謖・ｨ・| 蛟､ |
-|------|----|
-| 繧ｨ繝ｳ繝医Μ邱乗焚 | 327 莉ｶ・・縲廱 遶・・|
-| [貂・ 螳梧・ | 245 莉ｶ |
-| [莠ｺ譖ｸ] 闡苓・ｬ・ｨ伜・蠕・■ | 64 莉ｶ |
-| [AI謨ｴ] / [AI逶ｴ] | 10 莉ｶ |
-| [蜃江 archived | 8 莉ｶ |
-| 譛ｬ譁・ｯ・ｺｦ荳ｭ螟ｮ蛟､ | 邏・397 蟄暦ｼ・S 隕区悽蝓ｺ貅・328 蟄励∵ｯ・121%・榎
-| ポンチ絵 PNG あり | 350 件（残 0 件）|
+非エンジニア・周辺職種の人が、AI 開発まわりの語彙を「辞書引き」できるようにする図鑑プロジェクトです。
+詳細な趣旨は [docs/book_philosophy.md](docs/book_philosophy.md)、編集ガイドは [CLAUDE.md](CLAUDE.md) を参照してください。
 
-## 髢狗匱譎ゅ・繝ｬ繝薙Η繝ｼ
+## 読者像
 
-繝ｭ繝ｼ繧ｫ繝ｫ縺ｧ `python3 scripts/preview_gen.py` 繧定ｵｰ繧峨○繧九→縲～drafts/prototypes/preview/` 驟堺ｸ九↓髢狗匱逕ｨ繝励Ξ繝薙Η繝ｼ縺檎函謌舌＆繧後∪縺呻ｼ域悽逡ｪ縺ｯ蛻･諡・ｽ薙′ Astro + React 縺ｧ螳溯｣・ｼ峨ら函謌千黄縺ｯ git 邂｡逅・､悶・
-### 荳ｻ隕√ム繝・す繝･繝懊・繝会ｼ郁ｦ√Ο繝ｼ繧ｫ繝ｫ逕滓・・・
-- **[蜈ｨ繧ｨ繝ｳ繝医Μ荳隕ｧ overview.html](drafts/prototypes/preview/overview.html)** 窶・蜷・お繝ｳ繝医Μ縺ｮ蜈ｨ 10 繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ蟄玲焚繝ｻ闡苓・ｬ・ｭ玲焚繝ｻ繝昴Φ繝∫ｵｵ譛臥┌繝ｻPDF/HTML 繝励Ξ繝薙Η繝ｼ繝ｪ繝ｳ繧ｯ繧・1 逕ｻ髱｢縺ｧ縲らｫ繝ｻ迥ｶ諷九・繝昴Φ繝∫ｵｵ縺ｧ邨槭ｊ霎ｼ縺ｿ蜿ｯ縲・- 蛟句挨繧ｨ繝ｳ繝医Μ HTML: `drafts/prototypes/preview/<ID>.html`
-- 蛟句挨繧ｨ繝ｳ繝医Μ PDF (199ﾃ・81mm 譛ｬ繧ｵ繧､繧ｺ): `drafts/prototypes/preview/pdf/<ID>.pdf`
+- AI を仕事で使いたいが、プログラミングで生計を立てているわけではない人
+- 打ち合わせで「コンテキストが足りない」と言われたとき、Claude と ChatGPT の違いを聞かれたとき、AI への指示が思うように返ってこないとき、手元で引きたい人
+- 完全な入門書ではなく、現場の会話の前提をそろえるための共通語彙集として
 
-### 逶｣譟ｻ繝ｬ繝昴・繝茨ｼ医さ繝溘ャ繝亥ｯｾ雎｡・・
-- **[蟄玲焚逶｣譟ｻ繧ｵ繝槭Μ](ledgers/density_audit.md)** 窶・TS 隕区悽蝓ｺ貅悶→蜷・そ繧ｯ繧ｷ繝ｧ繝ｳ縺ｮ max/謗ｨ螂ｨ繧ｿ繝ｼ繧ｲ繝・ヨ縲∫ｫ蛻･蟷ｳ蝮・∬ぇ螟ｧ繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ荳隕ｧ
-- **[蟄玲焚逶｣譟ｻ 隧ｳ邏ｰ陦ｨ](ledgers/density_audit_detail.md)** 窶・蜈ｨ 308 繧ｨ繝ｳ繝医Μ ﾃ・蜈ｨ繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ縺ｮ蟄玲焚陦ｨ・遺國 max 雜・≫夢 謗ｨ螂ｨ雜・ｼ・- **[蝓ｷ遲・━蜈亥ｺｦ](ledgers/writing_priority.md)** 窶・繧ｹ繝・・繧ｸ蛻･縺ｮ蝓ｷ遲・・- **[隕∫峩縺励く繝･繝ｼ](ledgers/revision_queue.md)** 窶・validator 閾ｪ蜍慕函謌舌≫・驕募渚・剰ｭｦ蜻奇ｼ乗嶌縺阪°縺托ｼ剰送閠・Ξ繝薙Η繝ｼ蠕・■縺ｮ荳隕ｧ
-- **[谺｡繧ｻ繝・す繝ｧ繝ｳ蠑輔″邯吶℃](ledgers/next_session_handoff.md)**
+## 開発状況（at a glance）
 
-## 荳ｻ縺ｪ繧ｹ繧ｯ繝ｪ繝励ヨ
+| 指標 | 値 |
+|:--|--:|
+| エントリ総数 | 327 件（A〜J 章） |
+| ☑ 完成 (ready) | 約 252 件 |
+| ✍ 著者書き待ち (needs_review) | 約 67 件 |
+| ⛬ archived | 8 件 |
+| ポンチ絵 PNG あり | 350 件 |
 
-| 繧ｹ繧ｯ繝ｪ繝励ヨ | 逕ｨ騾・|
-|-----------|------|
-| `scripts/generate_skeleton.py` | 繧ｹ繧ｱ繝ｫ繝医Φ・・AML + 蠢・育ｯ隕句・縺暦ｼ我ｸ諡ｬ逕滓・ |
-| `scripts/validate_entry.py` | 繧ｨ繝ｳ繝医Μ讀懆ｨｼ・亥ｭ玲焚繝ｻ讒矩繝ｻ繝医・繝ｳ・峨ゆｿ晏ｭ倥ヵ繝・け縺ｧ閾ｪ蜍募ｮ溯｡・|
-| `scripts/preview_gen.py` | 髢狗匱逕ｨ HTML 繝励Ξ繝薙Η繝ｼ逕滓・ |
-| `scripts/preview_to_pdf.py` | preview HTML 竊・199ﾃ・81mm PDF 蛹悶｛verflow 讀懷・ |
-| `scripts/density_audit.py` | 蟄玲焚繝舌Μ繧ｨ繝ｼ繧ｷ繝ｧ繝ｳ逶｣譟ｻ・医し繝槭Μ + 隧ｳ邏ｰ陦ｨ・・|
-| `scripts/overview_gen.py` | 蜈ｨ繧ｨ繝ｳ繝医Μ荳隕ｧ overview.html 逕滓・ |
-| `scripts/sync_entries_csv.py` | `ledgers/entries.csv` 繧偵ョ繧｣繧ｹ繧ｯ縺ｮ譛譁ｰ path 縺ｫ蜷梧悄 |
-| `scripts/update_review_queue.py` | revision_queue.md 閾ｪ蜍墓峩譁ｰ |
+## ディレクトリ構成
 
-## 繝峨く繝･繝｡繝ｳ繝・
-- [docs/v2_rules_summary.md](docs/v2_rules_summary.md) 窶・v2 遒ｺ螳壹Ν繝ｼ繝ｫ邱剰ｦｧ・域怙蛻昴↓隱ｭ繧・・- [docs/entry_schema.yaml](docs/entry_schema.yaml) 窶・蟄玲焚繝ｻ蠢・育ｯ縺ｮ讖滓｢ｰ蜿ｯ隱ｭ迚・- [docs/component_spec_v2.md](docs/component_spec_v2.md) 窶・螳溯｣・球蠖難ｼ・stro + React・峨∈縺ｮ蠑輔″貂｡縺嶺ｻ墓ｧ・- [docs/editorial_style.md](docs/editorial_style.md) 窶・繝医・繝ｳ繝ｻ譁・ｽ薙・蜴溷援
-- [docs/claude_layout_handoff.md](docs/claude_layout_handoff.md) 窶・螳溷ｯｸ PDF 繝ｬ繧､繧｢繧ｦ繝郁ｪｿ謨ｴ縺ｮ蠑輔″貂｡縺・- [templates/entry_template.md](templates/entry_template.md) 窶・繧ｨ繝ｳ繝医Μ縺ｮ讒矩繝・Φ繝励Ξ
+```
+content/
+  entries/         本のエントリ本文（A-1〜J-100、全 327 件）
+docs/              編集方針・仕様（スキーマ・スタイル・前付け仕様 等）
+templates/         エントリ・スケルトンのテンプレート
+ledgers/           編集台帳（候補一覧・進行状況・要直しキュー）
+scripts/           自動化スクリプト（生成・検証・索引）
+drafts/
+  prototypes/      v2 誌面プロトタイプ（HTML / CSS / 検証ツール）
+  front_section/   前付け 7 見開きの HTML たたき台
+  back_section/    あとがき HTML たたき台
+  reading_routes/  読者タイプ別おすすめルート HTML
+  search/          全 327 件の検索 UI（HTML 単体で動作）
+  IMAGE_GEN_TODO.md 画像生成枠の集約
+skills/            執筆・取り込みスキル
+.claude/           Claude Code 用エージェント設定
+```
 
-## ID 菴鍋ｳｻ
+## 主なスクリプト
 
-A縲廱 縺ｮ 10 蛹ｺ蛻・ｊ縲・0 逡ｪ蛻ｻ縺ｿ縺ｮ繧ｵ繝也ｯ・峇縲よｬ逡ｪ縺ｯ隧ｰ繧∫峩縺輔★縲∬ｿｽ蜉縺ｯ遨ｺ縺咲分蜿ｷ縺ｮ縺ｿ縲りｩｳ邏ｰ [docs/id_scheme.md](docs/id_scheme.md)縲・
-## 繝ｪ繝昴ず繝医Μ
+| スクリプト | 用途 |
+|:--|:--|
+| `scripts/generate_skeleton.py` | エントリのスケルトン生成（YAML + 必須節） |
+| `scripts/validate_entry.py` | エントリ検証（字数・構造・トーン）。保存時に自動実行 |
+| `scripts/update_review_queue.py` | `ledgers/revision_queue.md` の自動更新 |
+| `scripts/sync_entries_csv.py` | `ledgers/entries.csv` をディスクの最新 path に同期 |
+| `scripts/preview_gen.py` | 開発用 HTML プレビュー生成 |
+| `scripts/build_search_index.py` | 検索 UI のインデックス生成・HTML 注入 |
 
-<https://github.com/Taguchi-1989/ViveCodingDictionary> ・・main` 繝悶Λ繝ｳ繝・ｼ・
+## 主要ドキュメント
+
+- [docs/v2_rules_summary.md](docs/v2_rules_summary.md) — v2 確定ルール総覧（執筆前に最初に読む）
+- [docs/entry_schema.yaml](docs/entry_schema.yaml) — 字数・必須節の機械可読版
+- [docs/editorial_style.md](docs/editorial_style.md) — トーン・文体の原則
+- [docs/component_spec_v2.md](docs/component_spec_v2.md) — 実装担当（Astro + React）への引き渡し仕様
+- [docs/front_section_layout.md](docs/front_section_layout.md) — 前付け（A 章）の例外レイアウト仕様
+- [templates/entry_template.md](templates/entry_template.md) — エントリの構造テンプレート
+
+## 監視レポート（コミット対象）
+
+- [ledgers/revision_queue.md](ledgers/revision_queue.md) — validator 自動生成、要レビュー一覧
+- [ledgers/author_fill_queue.md](ledgers/author_fill_queue.md) — 著者欄記入待ちのエントリ
+- [ledgers/writing_priority.md](ledgers/writing_priority.md) — 執筆優先度
+- [ledgers/next_session_handoff.md](ledgers/next_session_handoff.md) — 次セッション引き継ぎ
+
+## ID 体系
+
+A〜J の 10 区切り、10 番刻みのサブ範囲。欠番は詰めず、追加は空き番号のみ。詳細は [docs/id_scheme.md](docs/id_scheme.md)。
+
+## ライセンス
+
+本リポジトリは **デュアルライセンス** で公開しています。コードと本文で適用範囲を分けています。
+
+| 対象 | ライセンス | 詳細 |
+|:--|:--|:--|
+| **ソースコード**（`scripts/` / `drafts/**/*.html` の構造・CSS・JS） | **MIT License** | [LICENSE](LICENSE) |
+| **本の中身**（`content/entries/**/*.md` / `docs/` / 本文テキスト） | **CC BY-SA 4.0** | [LICENSE-CONTENT.md](LICENSE-CONTENT.md) |
+
+### あなたができること
+
+- **読む・引用する** — 制限なし。SNS で紹介・記事で引用・授業教材で配布、すべて OK
+- **改変・派生作品を作る** — OK。「ライセンス」と「著者表示」を継承してください
+- **商用利用** — OK（CC BY-SA 4.0 は営利目的を含む）
+- **再配布** — OK。元の出典（著者名 / リポジトリ URL）の明記をお願いします
+- **派生作品の公開** — OK。ただし**同じ CC BY-SA 4.0** で公開する必要があります（継承条項）
+
+### クレジット表記例
+
+```
+Based on "バイブコーディング図鑑 (VibeCodingDictionary)" by Taguchi-1989,
+licensed under CC BY-SA 4.0.
+https://github.com/Taguchi-1989/ViveCodingDictionary
+```
+
+## 貢献について
+
+Issue や PR、誤字脱字の指摘、新規エントリの提案、いずれも歓迎します。プロジェクトの方針は [docs/book_philosophy.md](docs/book_philosophy.md)、執筆スタイルは [docs/editorial_style.md](docs/editorial_style.md) を先にご一読ください。
+
+ローカル開発の流れ：
+
+1. リポジトリを fork して clone
+2. `python3 scripts/generate_skeleton.py {ID}` で新規エントリの骨格生成
+3. テンプレに沿って執筆
+4. 保存時 `scripts/validate_entry.py` が自動で字数・構造を検証
+5. `status` を `needs_review` まで上げて PR
+
+## リポジトリ
+
+<https://github.com/Taguchi-1989/ViveCodingDictionary>（`main` ブランチ）
