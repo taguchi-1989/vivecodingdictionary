@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>読者タイプ別 おすすめルート — たたき台</title>
+<link rel="stylesheet" href="../prototypes/mockups/design_philosophy_v2/base.css">
+<style>
+  body {
+    margin: 0;
+    padding: 48px 32px 80px 32px;
+    background: #F3F6FB;
+    font-family: var(--font-jp);
+    color: var(--ink);
+  }
+  .container { max-width: 1280px; margin: 0 auto; }
+
+  /* ヘッダ */
+  .lead-block {
+    background: white;
+    border-radius: 12px;
+    padding: 32px 36px;
+    margin-bottom: 40px;
+    border-left: 6px solid var(--ink-blue);
+  }
+  .lead-block .eyebrow {
+    font-family: var(--font-en);
+    font-size: 11px;
+    color: var(--ink-blue);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .lead-block h1 {
+    font-size: 32px;
+    font-weight: 900;
+    margin: 0 0 12px 0;
+    line-height: 1.3;
+  }
+  .lead-block p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.85;
+    color: var(--ink-2);
+    max-width: 700px;
+  }
+
+  /* 4 カラム配置 */
+  .routes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .route-card {
+    background: white;
+    border-radius: 12px;
+    padding: 28px 28px 24px 28px;
+    border: 1.5px solid var(--rule);
+    display: flex;
+    flex-direction: column;
+  }
+  .route-card.r-entry { border-top: 6px solid #5FBF8F; }
+  .route-card.r-team  { border-top: 6px solid #4A8FE7; }
+  .route-card.r-tech  { border-top: 6px solid #E59450; }
+  .route-card.r-exec  { border-top: 6px solid #9B7FBC; }
+
+  .route-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+  .route-head .icon {
+    font-size: 24px;
+    line-height: 1;
+  }
+  .route-head h2 {
+    font-size: 22px;
+    font-weight: 900;
+    margin: 0;
+  }
+  .route-target {
+    font-size: 13px;
+    color: var(--ink-2);
+    line-height: 1.7;
+    margin: 0 0 12px 0;
+  }
+  .route-meta {
+    display: flex;
+    gap: 16px;
+    padding: 10px 14px;
+    background: var(--paper-2);
+    border-radius: 6px;
+    margin-bottom: 18px;
+    font-size: 11px;
+    color: var(--ink-2);
+  }
+  .route-meta .stat {
+    font-family: var(--font-en);
+    font-weight: 700;
+    color: var(--ink-blue-900);
+    font-size: 13px;
+  }
+  .route-meta .stat .unit {
+    font-size: 10px;
+    color: var(--ink-2);
+    font-weight: 500;
+    margin-left: 2px;
+  }
+
+  /* セクション見出し */
+  .section-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--ink-blue);
+    letter-spacing: 0.12em;
+    margin: 12px 0 8px 0;
+    padding-bottom: 4px;
+    border-bottom: 1px dashed var(--rule-strong);
+    text-transform: uppercase;
+  }
+  .section-title.optional {
+    color: var(--ink-3);
+  }
+
+  /* エントリリスト */
+  .entry-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: step;
+  }
+  .entry-row {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 10px;
+    padding: 7px 0;
+    border-bottom: 1px dashed var(--paper-3);
+    align-items: start;
+    counter-increment: step;
+  }
+  .entry-row:last-child { border-bottom: none; }
+  .entry-row::before {
+    content: counter(step);
+    font-family: var(--font-en);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--ink-3);
+    text-align: right;
+    padding-top: 1px;
+  }
+
+  .entry-body {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .entry-top {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .id-badge {
+    display: inline-block;
+    font-family: var(--font-en);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    background: var(--ink-blue-50);
+    color: var(--ink-blue-900);
+    padding: 1px 6px;
+    border-radius: 3px;
+  }
+  .entry-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.4;
+  }
+  .lv-badge {
+    font-family: var(--font-en);
+    font-size: 9px;
+    background: var(--paper-3);
+    color: var(--ink-2);
+    padding: 1px 4px;
+    border-radius: 2px;
+    font-weight: 700;
+  }
+  .lv-badge.lv1 { background: #F5F9FE; color: var(--ink-blue-700); }
+  .lv-badge.lv2 { background: #EAF1FB; color: var(--ink-blue-700); }
+  .lv-badge.lv3 { background: #DEE9F8; color: var(--ink-blue-900); }
+  .lv-badge.lv4 { background: #C6D9F2; color: var(--ink-blue-900); }
+  .lv-badge.lv5 { background: #A9C5EB; color: white; }
+  .lv-badge.lv6 { background: #8AB0E3; color: white; }
+
+  .entry-reason {
+    font-size: 11px;
+    color: var(--ink-2);
+    line-height: 1.5;
+  }
+
+  .goal {
+    margin-top: auto;
+    padding: 14px;
+    background: var(--ink-blue-50);
+    border-left: 3px solid var(--ink-blue);
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--ink-blue-900);
+  }
+  .goal strong { color: var(--ink-blue); display: block; margin-bottom: 4px; font-size: 11px; letter-spacing: 0.08em; }
+
+  /* draft マーク */
+  .draft-stamp {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-family: var(--font-en);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--ink-blue);
+    text-transform: uppercase;
+  }
+
+  .footnote {
+    margin-top: 40px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 1.85;
+    color: var(--ink-2);
+    border-top: 3px solid var(--ink-blue-100);
+  }
+  .footnote h3 {
+    font-size: 13px;
+    color: var(--ink-blue-900);
+    margin: 0 0 8px 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="draft-stamp">READING ROUTES · DRAFT</div>
+
+<div class="container">
+
+  <div class="lead-block">
+    <div class="eyebrow">Recommended Reading Routes</div>
+    <h1>あなたはどう読みますか？ — 4 つのおすすめルート</h1>
+    <p>
+      本書は letter A〜J の 340 件を辞書順に並べていますが、目的別に「最低限ここを読めば現場の会話で迷わない」セットを 4 ルート用意しました。<br>
+      順番通りに 1〜2 時間で読み切れる規模に絞っています。気になるルートから始めてください。
+    </p>
+  </div>
+
+  <div class="routes">
+
+    <!-- ────────────── ① 入門ルート ────────────── -->
+    <article class="route-card r-entry">
+      <div class="route-head">
+        <span class="icon">🟢</span>
+        <h2>① 入門ルート</h2>
+      </div>
+      <p class="route-target">
+        <strong>AI を触り始めたばかりの非エンジニア向け</strong><br>
+        ニュースで「ChatGPT」「Gemini」を見て、自分でも使い始めたい人。
+      </p>
+      <div class="route-meta">
+        <div><span class="stat">12<span class="unit">件</span></span></div>
+        <div><span class="stat">約 30<span class="unit">分</span></span></div>
+        <div><span class="stat">Lv 1-2</span></div>
+      </div>
+
+      <div class="section-title">まず読む（必修・8 件）</div>
+      <ul class="entry-list">
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">A-1</span><span class="entry-title">まえがき</span><span class="lv-badge lv1">1</span></div><div class="entry-reason">本書の目的と読み方をつかむ</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">B-3</span><span class="entry-title">ChatGPT</span><span class="lv-badge lv1">1</span></div><div class="entry-reason">最も有名な対話 AI から入る</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">B-2</span><span class="entry-title">Claude</span><span class="lv-badge lv1">1</span></div><div class="entry-reason">ChatGPT の対抗馬。3 大 AI の感覚を掴む</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">B-1</span><span class="entry-title">Gemini</span><span class="lv-badge lv1">1</span></div><div class="entry-reason">Google 版。3 つ並ぶと選びやすい</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">J-14</span><span class="entry-title">LLM</span><span class="lv-badge lv1">1</span></div><div class="entry-reason">そもそも何の技術なのかを知る</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">G-1</span><span class="entry-title">Context</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">AI と会話するときの最重要語</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">J-51</span><span class="entry-title">Hallucination</span><span class="lv-badge lv1">1</span></div><div class="entry-reason">AI が嘘をつく現象を知っておく</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">B-50</span><span class="entry-title">Claude の料金プラン</span><span class="lv-badge lv1">1</span></div><div class="entry-reason">無料／有料の感覚を持つ</div></div></li>
+      </ul>
+
+      <div class="section-title optional">余裕があれば（推奨・4 件）</div>
+      <ul class="entry-list">
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">G-2</span><span class="entry-title">Token</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">料金や上限の単位を理解する</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">C-1</span><span class="entry-title">OpenAI</span><span class="lv-badge lv1">1</span></div><div class="entry-reason">ChatGPT の作り手</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">C-2</span><span class="entry-title">Anthropic</span><span class="lv-badge lv1">1</span></div><div class="entry-reason">Claude の作り手</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">G-40</span><span class="entry-title">バイブコーディング</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">本書のテーマそのもの</div></div></li>
+      </ul>
+
+      <div class="goal">
+        <strong>GOAL</strong>
+        AI ニュースや雑談で「ChatGPT 使ったことある？」「Claude って何？」と聞かれて答えられる状態に。料金プランの違いも比較できる。
+      </div>
+    </article>
+
+    <!-- ────────────── ② 業務ルート ────────────── -->
+    <article class="route-card r-team">
+      <div class="route-head">
+        <span class="icon">🔵</span>
+        <h2>② 業務ルート</h2>
+      </div>
+      <p class="route-target">
+        <strong>仕事で AI を使いたい・チームに広めたい非エンジニア向け</strong><br>
+        打ち合わせやエンジニアとの会話に「乗れる」語彙を揃える。
+      </p>
+      <div class="route-meta">
+        <div><span class="stat">26<span class="unit">件</span></span></div>
+        <div><span class="stat">約 1.5<span class="unit">時間</span></span></div>
+        <div><span class="stat">Lv 2-3</span></div>
+      </div>
+
+      <div class="section-title">まず読む（必修・16 件）</div>
+      <ul class="entry-list">
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">A-1</span><span class="entry-title">まえがき</span><span class="lv-badge lv1">1</span></div><div class="entry-reason">本書の位置づけを把握</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">A-3</span><span class="entry-title">図鑑の歩き方</span><span class="lv-badge lv1">1</span></div><div class="entry-reason">ルートを選んで読む流儀</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">J-14</span><span class="entry-title">LLM</span><span class="lv-badge lv1">1</span></div><div class="entry-reason">基本技術を押さえる</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">B-2</span><span class="entry-title">Claude</span><span class="lv-badge lv1">1</span></div><div class="entry-reason">業務利用に強い対話 AI</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">B-3</span><span class="entry-title">ChatGPT</span><span class="lv-badge lv1">1</span></div><div class="entry-reason">最普及・比較の基準</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">B-7</span><span class="entry-title">Claude Code</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">エンジニアの会話に出てくる開発支援</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">G-1</span><span class="entry-title">Context</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">AI への指示の核</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">G-2</span><span class="entry-title">Token</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">料金・上限の単位</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">G-5</span><span class="entry-title">Context Window</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">なぜ「忘れる」のかが分かる</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">G-15</span><span class="entry-title">RAG</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">社内データに AI を当てる仕組み</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">G-40</span><span class="entry-title">バイブコーディング</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">AI と協働する仕事の流儀</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">I-1</span><span class="entry-title">MCP</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">AI と社内ツールをつなぐ規格</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">J-51</span><span class="entry-title">Hallucination</span><span class="lv-badge lv1">1</span></div><div class="entry-reason">業務利用のリスク認識</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">J-43</span><span class="entry-title">SaaS</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">AI サービスの提供形態を理解</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">F-130</span><span class="entry-title">OAuth</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">SSO や API 連携の前提</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">F-91</span><span class="entry-title">.env</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">API キーの扱い方</div></div></li>
+      </ul>
+
+      <div class="section-title optional">余裕があれば（推奨・10 件）</div>
+      <ul class="entry-list">
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">B-4</span><span class="entry-title">Cursor</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">エンジニアが使う AI エディタ</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">B-12</span><span class="entry-title">Perplexity</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">検索特化の AI</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">D-12</span><span class="entry-title">Claude 4 系</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">モデルの世代を把握</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">I-11</span><span class="entry-title">GitHub MCP</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">最も使われる MCP の実例</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">G-30</span><span class="entry-title">Tool Use</span><span class="lv-badge lv3">3</span></div><div class="entry-reason">AI が外部ツールを叩く仕組み</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">G-14</span><span class="entry-title">Thinking モデル</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">推論型 AI が何をやっているか</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">H-53</span><span class="entry-title">ChatGPT 登場</span><span class="lv-badge lv1">1</span></div><div class="entry-reason">この潮流の始まり</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">E-50</span><span class="entry-title">Chatbot Arena</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">モデル比較の業界指標</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">F-154</span><span class="entry-title">OSS</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">ライセンスの基本リテラシー</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">J-53</span><span class="entry-title">著作権法 30 条の 4</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">AI 学習データの法的位置</div></div></li>
+      </ul>
+
+      <div class="goal">
+        <strong>GOAL</strong>
+        エンジニアとの打ち合わせで「Context Window が足りない」「MCP で繋げばいい」が通じる。AI 導入の社内提案資料が自分で書けるレベル。
+      </div>
+    </article>
+
+    <!-- ────────────── ③ 技術ルート ────────────── -->
+    <article class="route-card r-tech">
+      <div class="route-head">
+        <span class="icon">🟠</span>
+        <h2>③ 技術ルート</h2>
+      </div>
+      <p class="route-target">
+        <strong>エンジニア寄り・実装に踏み込みたい人向け</strong><br>
+        AI 駆動開発の仕組みと、その裏側の技術用語を一望する。
+      </p>
+      <div class="route-meta">
+        <div><span class="stat">32<span class="unit">件</span></span></div>
+        <div><span class="stat">約 2<span class="unit">時間</span></span></div>
+        <div><span class="stat">Lv 2-5</span></div>
+      </div>
+
+      <div class="section-title">まず読む（必修・20 件）</div>
+      <ul class="entry-list">
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">A-1</span><span class="entry-title">まえがき</span><span class="lv-badge lv1">1</span></div><div class="entry-reason">本書の位置づけ</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">B-7</span><span class="entry-title">Claude Code</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">代表的な AI コーディングエージェント</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">B-4</span><span class="entry-title">Cursor</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">VS Code ベースの AI エディタ</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">G-20</span><span class="entry-title">CLAUDE.md</span><span class="lv-badge lv3">3</span></div><div class="entry-reason">Claude Code の設定ファイル</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">G-21</span><span class="entry-title">AGENTS.md</span><span class="lv-badge lv3">3</span></div><div class="entry-reason">エージェント設定の標準化</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">G-22</span><span class="entry-title">SKILL.md</span><span class="lv-badge lv3">3</span></div><div class="entry-reason">スキルの定義方式</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">G-30</span><span class="entry-title">Tool Use</span><span class="lv-badge lv3">3</span></div><div class="entry-reason">AI のツール実行</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">G-31</span><span class="entry-title">Hook</span><span class="lv-badge lv3">3</span></div><div class="entry-reason">CC の自動化フック</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">G-32</span><span class="entry-title">Slash Command</span><span class="lv-badge lv3">3</span></div><div class="entry-reason">CC のコマンド体系</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">G-41</span><span class="entry-title">Subagent</span><span class="lv-badge lv3">3</span></div><div class="entry-reason">エージェント分業</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">G-42</span><span class="entry-title">Worktree</span><span class="lv-badge lv3">3</span></div><div class="entry-reason">並列作業の基盤</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">I-1</span><span class="entry-title">MCP</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">エコシステムの規格</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">I-2</span><span class="entry-title">MCP Server</span><span class="lv-badge lv3">3</span></div><div class="entry-reason">提供側の実装</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">I-3</span><span class="entry-title">MCP Client</span><span class="lv-badge lv3">3</span></div><div class="entry-reason">利用側の実装</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">F-50</span><span class="entry-title">git</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">AI 駆動でも基盤になる</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">F-90</span><span class="entry-title">Docker</span><span class="lv-badge lv3">3</span></div><div class="entry-reason">環境再現の標準</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">F-2</span><span class="entry-title">TypeScript</span><span class="lv-badge lv4">4</span></div><div class="entry-reason">AI 生成コードに最頻出</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">J-13</span><span class="entry-title">Transformer</span><span class="lv-badge lv5">5</span></div><div class="entry-reason">LLM の基本アーキ</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">J-17</span><span class="entry-title">Attention</span><span class="lv-badge lv5">5</span></div><div class="entry-reason">Transformer の核</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">J-77</span><span class="entry-title">GPU</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">推論・学習の前提ハード</div></div></li>
+      </ul>
+
+      <div class="section-title optional">余裕があれば（推奨・12 件）</div>
+      <ul class="entry-list">
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">D-26</span><span class="entry-title">gpt-oss</span><span class="lv-badge lv6">6</span></div><div class="entry-reason">オープンウェイトの最先端</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">D-43</span><span class="entry-title">Qwen 系</span><span class="lv-badge lv3">3</span></div><div class="entry-reason">中国系オープンモデル</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">F-86</span><span class="entry-title">ollama</span><span class="lv-badge lv3">3</span></div><div class="entry-reason">ローカル LLM の実行基盤</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">G-11</span><span class="entry-title">Context Engineering</span><span class="lv-badge lv3">3</span></div><div class="entry-reason">設計の流儀</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">G-19</span><span class="entry-title">Prompt Caching</span><span class="lv-badge lv3">3</span></div><div class="entry-reason">コスト最適化の必須技</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">I-10</span><span class="entry-title">Filesystem MCP</span><span class="lv-badge lv3">3</span></div><div class="entry-reason">最初に使う MCP</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">I-11</span><span class="entry-title">GitHub MCP</span><span class="lv-badge lv3">3</span></div><div class="entry-reason">PR 管理を AI に渡す</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">F-200</span><span class="entry-title">Rust</span><span class="lv-badge lv4">4</span></div><div class="entry-reason">高速ツールの裏側</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">J-19</span><span class="entry-title">量子化</span><span class="lv-badge lv5">5</span></div><div class="entry-reason">モデル軽量化の手法</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">J-21</span><span class="entry-title">LoRA</span><span class="lv-badge lv5">5</span></div><div class="entry-reason">追加学習の標準</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">J-18</span><span class="entry-title">MoE</span><span class="lv-badge lv5">5</span></div><div class="entry-reason">最新モデルの仕組み</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">E-1</span><span class="entry-title">SWE-Bench</span><span class="lv-badge lv3">3</span></div><div class="entry-reason">コーディング能力の指標</div></div></li>
+      </ul>
+
+      <div class="goal">
+        <strong>GOAL</strong>
+        Claude Code / Cursor の設定ファイルを自分で書き、MCP で社内システムを繋げる。チームの AI 駆動開発フローを設計できるレベル。
+      </div>
+    </article>
+
+    <!-- ────────────── ④ 鳥瞰ルート ────────────── -->
+    <article class="route-card r-exec">
+      <div class="route-head">
+        <span class="icon">🟣</span>
+        <h2>④ 鳥瞰ルート</h2>
+      </div>
+      <p class="route-target">
+        <strong>経営層・意思決定者・概観派向け</strong><br>
+        各章 1〜2 件で全体像をつかみ、必要に応じて深掘りできる土台を作る。
+      </p>
+      <div class="route-meta">
+        <div><span class="stat">14<span class="unit">件</span></span></div>
+        <div><span class="stat">約 45<span class="unit">分</span></span></div>
+        <div><span class="stat">Lv 1-2</span></div>
+      </div>
+
+      <div class="section-title">各章から代表 1〜2 件（必修・全 14 件）</div>
+      <ul class="entry-list">
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">A-1</span><span class="entry-title">まえがき</span><span class="lv-badge lv1">1</span></div><div class="entry-reason">本書の目的</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">A-3</span><span class="entry-title">図鑑の歩き方</span><span class="lv-badge lv1">1</span></div><div class="entry-reason">他章への入口</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">B-2</span><span class="entry-title">Claude</span><span class="lv-badge lv1">1</span></div><div class="entry-reason">B 章サービスの代表</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">B-7</span><span class="entry-title">Claude Code</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">開発系の代表</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">C-2</span><span class="entry-title">Anthropic</span><span class="lv-badge lv1">1</span></div><div class="entry-reason">業界の中心プレイヤー</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">D-12</span><span class="entry-title">Claude 4 系</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">モデル世代の理解</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">E-50</span><span class="entry-title">Chatbot Arena</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">業界ベンチマークの読み方</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">F-50</span><span class="entry-title">git</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">開発の共通基盤</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">G-1</span><span class="entry-title">Context</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">AI 利用の核概念</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">G-40</span><span class="entry-title">バイブコーディング</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">本書のテーマ</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">H-53</span><span class="entry-title">ChatGPT 登場</span><span class="lv-badge lv1">1</span></div><div class="entry-reason">時代の節目</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">I-1</span><span class="entry-title">MCP</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">エコシステムの動き</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">J-14</span><span class="entry-title">LLM</span><span class="lv-badge lv1">1</span></div><div class="entry-reason">基本技術</div></div></li>
+        <li class="entry-row"><div class="entry-body"><div class="entry-top"><span class="id-badge">J-1</span><span class="entry-title">AGI</span><span class="lv-badge lv2">2</span></div><div class="entry-reason">業界が向かう先</div></div></li>
+      </ul>
+
+      <div class="goal">
+        <strong>GOAL</strong>
+        会議で「うちは MCP で社内システム繋げますか？」「Claude Code の運用方針は？」などの話題に立ち位置を持って入れる。各論は専門メンバーに任せられる土台。
+      </div>
+    </article>
+
+  </div>
+
+  <div class="footnote">
+    <h3>このページの位置づけ</h3>
+    本ページは A-3「図鑑の歩き方」の補助資料として、本書 340 件の中から「最低限ここを読めば現場の会話で迷わない」セットを 4 ルート用意した たたき台です。最終版では A-3 右ページの 3 ルート凡例と整合させる予定。<br>
+    各エントリの reader_level バッジは [docs/entry_schema.yaml](../../docs/entry_schema.yaml) `reader_level` の値。本ルート設計は ready エントリ（2026-05 時点 252 件）から選定しています。
+  </div>
+
+</div>
+
+</body>
+</html>
