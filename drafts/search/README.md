@@ -4,9 +4,11 @@
 
 ## 使い方
 
-1. `python3 scripts/build_search_index.py` でインデックス JSON を生成（既に生成済み）
-2. `drafts/search/index.html` をブラウザで開く
+1. `python3 scripts/build_search_index.py` でインデックスを生成・HTML に埋め込む
+2. `drafts/search/index.html` をブラウザで**ダブルクリックして開く**（`file://` でそのまま動きます）
 3. 検索窓に入力すると即座にフィルタ・サジェスト
+
+JSON データは HTML 内の `<script id="searchData" type="application/json">` タグに直接埋め込まれるため、ローカルサーバ不要・CORS 制約なし・オフラインで動きます。エントリを編集したらスクリプトを再実行してください（何度走らせても冪等）。
 
 ## 機能
 

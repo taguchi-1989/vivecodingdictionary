@@ -17,6 +17,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 ENTRIES_DIR = ROOT / "content" / "entries"
 OUTPUT = ROOT / "drafts" / "search" / "index.json"
+HTML_PATH = ROOT / "drafts" / "search" / "index.html"
+PLACEHOLDER = "__SEARCH_DATA_JSON__"
 
 YAML_RE = re.compile(r"^---\n(.+?)\n---\n", re.DOTALL)
 TAGLINE_RE = re.compile(r"^##\s*tagline\s*\n+\s*(.+?)(?:\n\s*\n|$)", re.MULTILINE | re.DOTALL)
@@ -116,20 +118,48 @@ def main() -> int:
             entries.append(entry)
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+    data_obj = {
+        "generated_at": Path(__file__).name,
+        "count": len(entries),
+        "entries": entries,
+    }
+
+    # 1) 通常の JSON ファイル（外部ツール用）。indent=2 で人間も読める形に
     OUTPUT.write_text(
-        json.dumps(
-            {
-                "generated_at": Path(__file__).name,
-                "count": len(entries),
-                "entries": entries,
-            },
-            ensure_ascii=False,
-            indent=2,
-        ),
+        json.dumps(data_obj, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
-
     print(f"wrote {len(entries)} entries to {OUTPUT.relative_to(ROOT)}")
+
+    # 2) index.html の <script id="searchData"> 内に JSON を埋め込む。
+    # これで file:// で開いても fetch を使わずに動く。
+    # 何度ビルドしても冪等になるよう、常に script タグの中身を丸ごと置換する。
+    if HTML_PATH.exists():
+        html = HTML_PATH.read_text(encoding="utf-8")
+        compact = json.dumps(data_obj, ensure_ascii=False, separators=(",", ":"))
+        # <script> タグ内では </script> が現れるとブラウザがパースを止めるためエスケープ
+        compact = compact.replace("</", "<\\/")
+
+        pattern = re.compile(
+            r'(<script id="searchData" type="application/json">)(.*?)(</script>)',
+            re.DOTALL,
+        )
+        new_html, n = pattern.subn(
+            lambda m: m.group(1) + compact + m.group(3),
+            html,
+            count=1,
+        )
+        if n:
+            HTML_PATH.write_text(new_html, encoding="utf-8")
+            print(f"injected data into {HTML_PATH.relative_to(ROOT)} (script tag content)")
+        else:
+            print(
+                f"WARNING: searchData script tag not found in {HTML_PATH.relative_to(ROOT)}.",
+                file=sys.stderr,
+            )
+    else:
+        print(f"WARNING: {HTML_PATH.relative_to(ROOT)} not found", file=sys.stderr)
+
     return 0
 
 
