@@ -113,19 +113,19 @@ WebArena、AgentBench、VLM
 ## 非エンジニアのつまずき
 
 <!-- user-input:start key="stumble" -->
--
--
--
+- 聞いたことはあっても、何を測っているのか把握できていません。
+- スコアが何 % あれば実用かの相場感が、感覚として持てません。
+- VLM 版とテキスト版でスコアが分かれ、引用時の条件揃えが難しいです。
 <!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
 <!-- user-input:start key="my_comment" -->
-- 🙂 第一印象:
-- 👍 良い点:
-- 👎 ダメな点:
-- 👥 誰向けか:
+- 🙂 第一印象: 見かけた程度でしたが、Computer Use の進歩を測る重要な指標だと知りました。
+- 👍 良い点: 実 OS 環境の操作タスクで、AI の実用度を肌感覚に近い形で評価できる点です。
+- 👎 ダメな点: 評価条件が複数あり、人間超え報告も出ているため絶対視は危ういです。
+- 👥 誰向けか: Computer Use 系ツールを比較したい人や、AI 進歩を定点観測したい人向けです。
 <!-- user-input:end key="my_comment" -->
 
 <!-- ━━━━━━━━ 裏台帳メモ（誌面には出さない） ━━━━━━━━ -->
@@ -170,3 +170,12 @@ WebArena、AgentBench、VLM
 
 - VLM（Vision Language Model）使用版とテキストのみ版では条件が異なるため、同一条件での比較が重要。スコア引用時は「VLM 版スコア」かどうかを確認すること。
 - GPT-4V スコア約 12%・人間スコア約 72% は公開時（2024 年 4 月）のデータ。Anthropic Computer Use（2024 年 10 月）・OpenAI Operator（2025 年）登場後にスコアが大幅に伸びており、evaluation_date 時点の最新値は個別に要確認。
+- **2026-05 時点のスコア状況**
+  - 人間ベースライン: 約 72.4%
+  - **OSWorld-Verified（厳格版）で AI が人間超えを達成**
+    - Claude Mythos Preview: 79.6%
+    - Claude Opus 4.7: 78.0%
+    - GPT-5.4: 75.0%
+  - 標準 OSWorld: Claude Opus 4.6 72.7% / Claude Sonnet 4.6 72.5%
+  - 公開時 GPT-4V 約 12% → 約 2 年で人間超えという急速な進歩
+  - 人間超え報告は Computer Use 系の象徴的成果として引用されるが、評価方法（VLM 版 / scaffold 有無）で差が出るため絶対視は避ける
