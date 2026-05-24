@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>バイブコーディング図鑑 — 検索</title>
+<link rel="stylesheet" href="../prototypes/mockups/design_philosophy_v2/base.css">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: #F3F6FB;
+    font-family: var(--font-jp);
+    color: var(--ink);
+    min-height: 100vh;
+  }
+
+  /* ───── 検索バー（sticky） ───── */
+  .search-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: white;
+    border-bottom: 1px solid var(--rule);
+    box-shadow: 0 2px 8px rgba(26,26,26,.04);
+  }
+  .search-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 32px 16px 32px;
+  }
+  .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .brand .title {
+    font-size: 16px;
+    font-weight: 900;
+    color: var(--ink);
+  }
+  .brand .sub {
+    font-family: var(--font-en);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: var(--ink-blue);
+    text-transform: uppercase;
+  }
+  .brand .count {
+    margin-left: auto;
+    font-family: var(--font-en);
+    font-size: 11px;
+    color: var(--ink-2);
+  }
+  .brand .count strong { color: var(--ink-blue); font-weight: 700; }
+
+  .search-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  .search-input {
+    flex: 1;
+    font-family: var(--font-jp);
+    font-size: 16px;
+    padding: 12px 16px;
+    border: 2px solid var(--ink-blue);
+    border-radius: 8px;
+    outline: none;
+    transition: box-shadow 0.15s;
+    background: white;
+  }
+  .search-input:focus {
+    box-shadow: 0 0 0 4px var(--ink-blue-100);
+  }
+  .search-clear {
+    padding: 10px 14px;
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    color: var(--ink-2);
+  }
+  .search-clear:hover {
+    background: var(--paper-3);
+  }
+
+  /* フィルタ行 */
+  .filters {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .filter-label {
+    font-size: 11px;
+    color: var(--ink-3);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-right: 4px;
+  }
+  .filter-pill {
+    padding: 4px 10px;
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    font-size: 11px;
+    color: var(--ink-2);
+    cursor: pointer;
+    font-family: var(--font-jp);
+    user-select: none;
+  }
+  .filter-pill:hover { background: var(--paper-3); }
+  .filter-pill.active {
+    background: var(--ink-blue);
+    color: white;
+    border-color: var(--ink-blue);
+  }
+  .filter-pill .num {
+    font-family: var(--font-en);
+    font-weight: 700;
+    margin-left: 4px;
+    opacity: 0.7;
+    font-size: 10px;
+  }
+  .filter-divider {
+    width: 1px;
+    height: 18px;
+    background: var(--rule);
+  }
+
+  /* ───── 結果リスト ───── */
+  .results-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 32px 80px 32px;
+  }
+  .result-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 16px;
+    font-size: 12px;
+    color: var(--ink-2);
+  }
+  .result-meta strong { color: var(--ink-blue); font-weight: 700; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .card {
+    background: white;
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: border-color 0.12s, transform 0.12s;
+  }
+  .card:hover {
+    border-color: var(--ink-blue);
+    transform: translateY(-1px);
+  }
+  .card.is-suggest {
+    background: linear-gradient(135deg, white 0%, var(--ink-blue-50) 100%);
+    border-color: var(--ink-blue-100);
+  }
+
+  .card-head {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .id-badge {
+    font-family: var(--font-en);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    background: var(--ink-blue);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+  .id-badge.cat-A { background: #8AB0E3; }
+  .id-badge.cat-B { background: #5FBF8F; }
+  .id-badge.cat-C { background: #E59450; }
+  .id-badge.cat-D { background: #9B7FBC; }
+  .id-badge.cat-E { background: #4A8FE7; }
+  .id-badge.cat-F { background: #6B7896; }
+  .id-badge.cat-G { background: #C97F3A; }
+  .id-badge.cat-H { background: #5B8FB0; }
+  .id-badge.cat-I { background: #7BB57B; }
+  .id-badge.cat-J { background: #C56970; }
+
+  .card-title {
+    font-size: 16px;
+    font-weight: 900;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+  .card-reading {
+    font-size: 11px;
+    color: var(--ink-3);
+    font-family: var(--font-jp);
+  }
+  .lv-chip {
+    font-family: var(--font-en);
+    font-size: 10px;
+    background: var(--paper-2);
+    color: var(--ink-2);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: 700;
+    margin-left: auto;
+  }
+  .lv-chip.lv1 { background: #F5F9FE; color: var(--ink-blue-700); }
+  .lv-chip.lv2 { background: #EAF1FB; color: var(--ink-blue-700); }
+  .lv-chip.lv3 { background: #DEE9F8; color: var(--ink-blue-900); }
+  .lv-chip.lv4 { background: #C6D9F2; color: var(--ink-blue-900); }
+  .lv-chip.lv5 { background: #A9C5EB; color: white; }
+  .lv-chip.lv6 { background: #8AB0E3; color: white; }
+
+  .status-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 4px;
+    flex-shrink: 0;
+  }
+  .status-dot.ready { background: #5FBF8F; }
+  .status-dot.needs_review { background: #E59450; }
+  .status-dot.drafting { background: #C97F3A; }
+  .status-dot.archived { background: var(--ink-3); }
+  .status-dot.sample { background: var(--ink-4); }
+  .status-dot.skeleton { background: var(--rule-strong); }
+
+  .card-tagline {
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--ink-2);
+  }
+
+  .card-related {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    padding-top: 6px;
+    border-top: 1px dashed var(--rule);
+    margin-top: 4px;
+  }
+  .rel-pill {
+    font-size: 10.5px;
+    background: var(--paper-2);
+    color: var(--ink-2);
+    padding: 2px 8px;
+    border-radius: 999px;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+  }
+  .rel-pill:hover {
+    background: var(--ink-blue-50);
+    color: var(--ink-blue-900);
+    border-color: var(--ink-blue-100);
+  }
+
+  /* マッチハイライト */
+  mark {
+    background: #FFEB3B66;
+    color: inherit;
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  /* 隣接候補のヘッダ */
+  .section-divider {
+    margin: 32px 0 16px 0;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--ink-blue-100);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--ink-blue);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-divider .icon {
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: var(--ink-blue-50);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink-blue);
+    font-size: 11px;
+  }
+
+  .empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--ink-3);
+    font-size: 13px;
+  }
+  .empty strong { color: var(--ink-2); display: block; margin-bottom: 8px; font-size: 14px; }
+
+  /* キーボードヒント */
+  .kbd-hint {
+    font-family: var(--font-en);
+    font-size: 10px;
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    border-bottom-width: 2px;
+    border-radius: 3px;
+    padding: 2px 6px;
+    color: var(--ink-2);
+  }
+
+  .draft-stamp {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-family: var(--font-en);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--ink-blue);
+    text-transform: uppercase;
+    z-index: 50;
+  }
+</style>
+</head>
+<body>
+
+<div class="draft-stamp">SEARCH UI · DRAFT</div>
+
+<!-- ───── 検索バー ───── -->
+<header class="search-header">
+  <div class="search-inner">
+    <div class="brand">
+      <span class="title">バイブコーディング図鑑</span>
+      <span class="sub">Search</span>
+      <span class="count">全 <strong id="totalCount">—</strong> 件</span>
+    </div>
+
+    <div class="search-row">
+      <input type="search" class="search-input" id="q" placeholder="例: コンテキスト ・ MCP ・ Claude ・ git …" autofocus>
+      <button class="search-clear" id="clearBtn" type="button">クリア</button>
+    </div>
+
+    <div class="filters">
+      <span class="filter-label">章</span>
+      <span class="filter-pill" data-filter="category" data-value="">全部</span>
+      <span class="filter-pill" data-filter="category" data-value="A">A はじめに</span>
+      <span class="filter-pill" data-filter="category" data-value="B">B サービス</span>
+      <span class="filter-pill" data-filter="category" data-value="C">C 人・組織</span>
+      <span class="filter-pill" data-filter="category" data-value="D">D モデル</span>
+      <span class="filter-pill" data-filter="category" data-value="E">E ベンチ</span>
+      <span class="filter-pill" data-filter="category" data-value="F">F ことば</span>
+      <span class="filter-pill" data-filter="category" data-value="G">G バイブ特有</span>
+      <span class="filter-pill" data-filter="category" data-value="H">H 歴史</span>
+      <span class="filter-pill" data-filter="category" data-value="I">I MCP</span>
+      <span class="filter-pill" data-filter="category" data-value="J">J 一般</span>
+
+      <span class="filter-divider"></span>
+
+      <span class="filter-label">状態</span>
+      <span class="filter-pill" data-filter="status" data-value="">全部</span>
+      <span class="filter-pill" data-filter="status" data-value="ready">完成</span>
+      <span class="filter-pill" data-filter="status" data-value="needs_review">レビュー待</span>
+      <span class="filter-pill" data-filter="status" data-value="drafting">書きかけ</span>
+      <span class="filter-pill" data-filter="status" data-value="skeleton">骨組のみ</span>
+
+      <span class="filter-divider"></span>
+
+      <span class="filter-label">レベル</span>
+      <span class="filter-pill" data-filter="level" data-value="">全部</span>
+      <span class="filter-pill" data-filter="level" data-value="1">Lv 1</span>
+      <span class="filter-pill" data-filter="level" data-value="2">Lv 2</span>
+      <span class="filter-pill" data-filter="level" data-value="3">Lv 3</span>
+      <span class="filter-pill" data-filter="level" data-value="4">Lv 4</span>
+      <span class="filter-pill" data-filter="level" data-value="5">Lv 5</span>
+      <span class="filter-pill" data-filter="level" data-value="6">Lv 6</span>
+    </div>
+  </div>
+</header>
+
+<main class="results-wrap">
+
+  <div class="result-meta">
+    <div>
+      検索結果: <strong id="hitCount">—</strong> 件
+      <span id="filterSummary" style="margin-left: 12px; color: var(--ink-3);"></span>
+    </div>
+    <div>
+      <span class="kbd-hint">/</span> でフォーカス · <span class="kbd-hint">Esc</span> でクリア
+    </div>
+  </div>
+
+  <div id="hits" class="grid"></div>
+
+  <div id="suggestSection" style="display: none;">
+    <div class="section-divider">
+      <span class="icon">≈</span> 隣接概念のサジェスト
+    </div>
+    <div id="suggestHits" class="grid"></div>
+  </div>
+
+  <div id="emptyState" class="empty" style="display: none;">
+    <strong>該当エントリが見つかりませんでした</strong>
+    別のキーワードや、章フィルタを「全部」に戻して試してください。
+  </div>
+
+</main>
+
+<script>
+(async () => {
+  const res = await fetch('./index.json');
+  const data = await res.json();
+  const all = data.entries;
+
+  document.getElementById('totalCount').textContent = data.count;
+
+  const qInput = document.getElementById('q');
+  const clearBtn = document.getElementById('clearBtn');
+  const hitsEl = document.getElementById('hits');
+  const suggestSection = document.getElementById('suggestSection');
+  const suggestHitsEl = document.getElementById('suggestHits');
+  const emptyEl = document.getElementById('emptyState');
+  const hitCount = document.getElementById('hitCount');
+  const filterSummary = document.getElementById('filterSummary');
+
+  const state = {
+    q: '',
+    category: '',
+    status: '',
+    level: '',
+  };
+
+  // ───── マッチング ─────
+  const norm = s => (s || '').toLowerCase().normalize('NFKC');
+
+  function score(entry, q) {
+    if (!q) return 1;
+    const qn = norm(q);
+    const idn = norm(entry.id);
+    const title = norm(entry.title);
+    const reading = norm(entry.title_reading);
+    const tag = norm(entry.tagline);
+    const rel = entry.related.map(norm).join(' ');
+
+    if (idn === qn) return 100;
+    if (title === qn || reading === qn) return 90;
+    if (title.startsWith(qn) || reading.startsWith(qn)) return 80;
+    if (title.includes(qn) || reading.includes(qn)) return 60;
+    if (idn.includes(qn)) return 40;
+    if (tag.includes(qn)) return 20;
+    if (rel.includes(qn)) return 10;
+    return 0;
+  }
+
+  function matchesFilters(entry) {
+    if (state.category && !entry.id.startsWith(state.category + '-')) return false;
+    if (state.status && entry.status !== state.status) return false;
+    if (state.level && !entry.reader_level.startsWith(state.level)) return false;
+    return true;
+  }
+
+  function highlight(text, q) {
+    if (!q || !text) return text;
+    try {
+      const re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+      return text.replace(re, '<mark>$1</mark>');
+    } catch {
+      return text;
+    }
+  }
+
+  function cardHTML(entry, q, isSuggest = false) {
+    const letter = (entry.id.match(/^([A-J])-/) || [])[1] || '';
+    const lvNum = (entry.reader_level || '').split('-')[0] || '';
+    const statusJa = {
+      ready: '完成', needs_review: 'レビュー待', drafting: '書きかけ',
+      archived: '凍結', sample: 'サンプル', skeleton: '骨組のみ',
+    }[entry.status] || entry.status;
+
+    const relPills = (entry.related || [])
+      .slice(0, 6)
+      .map(r => `<span class="rel-pill" data-rel="${escapeAttr(r)}">${escapeHTML(r)}</span>`)
+      .join('');
+
+    return `
+      <article class="card ${isSuggest ? 'is-suggest' : ''}">
+        <div class="card-head">
+          <span class="id-badge cat-${letter}">${entry.id}</span>
+          <span class="card-title">${highlight(escapeHTML(entry.title), q)}</span>
+          ${entry.title_reading ? `<span class="card-reading">${highlight(escapeHTML(entry.title_reading), q)}</span>` : ''}
+          ${lvNum ? `<span class="lv-chip lv${lvNum}">Lv ${entry.reader_level}</span>` : ''}
+          <span class="status-dot ${entry.status}" title="${statusJa}"></span>
+        </div>
+        ${entry.tagline ? `<div class="card-tagline">${highlight(escapeHTML(entry.tagline), q)}</div>` : ''}
+        ${relPills ? `<div class="card-related">${relPills}</div>` : ''}
+      </article>
+    `;
+  }
+
+  function escapeHTML(s) {
+    return String(s || '').replace(/[&<>"']/g, c => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[c]));
+  }
+  function escapeAttr(s) { return escapeHTML(s); }
+
+  function render() {
+    const q = state.q.trim();
+
+    // フィルタ適用
+    const filtered = all.filter(matchesFilters);
+
+    // スコアリング
+    const scored = filtered
+      .map(e => ({ entry: e, s: score(e, q) }))
+      .filter(x => x.s > 0)
+      .sort((a, b) => b.s - a.s);
+
+    hitCount.textContent = scored.length;
+
+    // フィルタサマリ
+    const parts = [];
+    if (state.category) parts.push(`章: ${state.category}`);
+    if (state.status) parts.push(`状態: ${state.status}`);
+    if (state.level) parts.push(`Lv ${state.level}`);
+    filterSummary.textContent = parts.length ? `(${parts.join(' · ')})` : '';
+
+    // 結果描画
+    if (scored.length === 0) {
+      hitsEl.innerHTML = '';
+      suggestSection.style.display = 'none';
+      emptyEl.style.display = q ? 'block' : 'none';
+      if (!q) hitsEl.innerHTML = filtered.slice(0, 40).map(e => cardHTML(e, '')).join('');
+      return;
+    }
+
+    emptyEl.style.display = 'none';
+
+    // 上位 40 件を本結果に
+    const primary = scored.slice(0, 40);
+    hitsEl.innerHTML = primary.map(({ entry }) => cardHTML(entry, q)).join('');
+
+    // 隣接概念サジェスト: トップ 3 件の related_terms を集めて、まだ表示してないものを別枠に
+    if (q && primary.length > 0) {
+      const shownIds = new Set(primary.map(p => p.entry.id));
+      const shownTitles = new Set(primary.map(p => p.entry.title));
+      const suggestPool = new Map();
+
+      for (const { entry } of primary.slice(0, 5)) {
+        for (const rel of entry.related || []) {
+          const relNorm = norm(rel);
+          const match = all.find(e =>
+            !shownIds.has(e.id) &&
+            (norm(e.title) === relNorm || norm(e.title_reading) === relNorm || norm(e.id) === relNorm)
+          );
+          if (match && !suggestPool.has(match.id)) {
+            suggestPool.set(match.id, match);
+          }
+        }
+      }
+
+      const suggests = Array.from(suggestPool.values()).slice(0, 8);
+      if (suggests.length > 0) {
+        suggestHitsEl.innerHTML = suggests.map(e => cardHTML(e, q, true)).join('');
+        suggestSection.style.display = 'block';
+      } else {
+        suggestSection.style.display = 'none';
+      }
+    } else {
+      suggestSection.style.display = 'none';
+    }
+  }
+
+  // ───── イベント ─────
+  qInput.addEventListener('input', e => {
+    state.q = e.target.value;
+    render();
+  });
+
+  clearBtn.addEventListener('click', () => {
+    state.q = '';
+    qInput.value = '';
+    qInput.focus();
+    render();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement !== qInput) {
+      e.preventDefault();
+      qInput.focus();
+    } else if (e.key === 'Escape' && document.activeElement === qInput) {
+      state.q = '';
+      qInput.value = '';
+      render();
+    }
+  });
+
+  // フィルタピル
+  document.querySelectorAll('.filter-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      const f = pill.dataset.filter;
+      const v = pill.dataset.value;
+      state[f] = v;
+      document.querySelectorAll(`.filter-pill[data-filter="${f}"]`).forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      render();
+    });
+  });
+
+  // 初期: 全フィルタの「全部」を active に
+  document.querySelectorAll('.filter-pill[data-value=""]').forEach(p => p.classList.add('active'));
+
+  // 関連用語クリックで再検索
+  document.body.addEventListener('click', e => {
+    if (e.target.classList.contains('rel-pill')) {
+      const rel = e.target.dataset.rel;
+      qInput.value = rel;
+      state.q = rel;
+      qInput.focus();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      render();
+    }
+  });
+
+  render();
+})();
+</script>
+
+</body>
+</html>
