@@ -103,19 +103,19 @@ Chatbot Arena、ELO レーティング、SWE-Bench Verified
 ## 非エンジニアのつまずき
 
 <!-- user-input:start key="stumble" -->
--
--
--
+- 順位は分かっても、点数差がモデル差にどれだけ効いているか掴めません。
+- LMSYS・LMArena・Chatbot Arena など呼び名が混在して、同じ系列と気づきにくいです。
+- 順位が週単位で入れ替わるため、最新を追わないと話題に乗り遅れます。
 <!-- user-input:end key="stumble" -->
 
 <!-- AUTHOR: user_only / AI-ASSIST: no -->
 ## 私のコメント
 
 <!-- user-input:start key="my_comment" -->
-- 🙂 第一印象:
-- 👍 良い点:
-- 👎 ダメな点:
-- 👥 誰向けか:
+- 🙂 第一印象: Chatbot Arena の時代から見ていて、統合や派生で動きが激しい印象です。
+- 👍 良い点: 人の評価が入るため、定性的な使用感が反映されて選定の手がかりになります。
+- 👎 ダメな点: 順位は分かっても点数差の意味が読み取りにくく、定量補完が要ります。
+- 👥 誰向けか: 今どのモデルが強いか、最新の体感ランキングを追いたい人に向く指標です。
 <!-- user-input:end key="my_comment" -->
 
 
@@ -163,3 +163,11 @@ Chatbot Arena、ELO レーティング、SWE-Bench Verified
 - LMSYS の正式名: Large Model Systems Organization。本文では略称のまま使用し、ここに補記。
 - 2024 年の独立分離は「LMSYS という研究グループの活動と、商業運営のプラットフォームを切り分ける」目的で行われた。本文ではこの経緯を 1 行に縮め、詳細はここに留める。
 - 個別モデルの順位は時変情報のため本文に記載しない。
+- **2026-05 時点のランキング状況**
+  - Text 部門 #1: Claude Opus 4.6（Elo 1504）
+  - 上位は Gemini 3.1 Pro Preview と Claude Opus 4.6 Thinking が 95% CI で同率タイ
+  - 数学・推論カテゴリ: GPT-5 が Elo 1561 で最高
+  - GPQA Diamond: Claude Mythos Preview 94.6% でハードサイエンス首位
+  - フロンティア帯: GPT-5 / Claude Opus 4.6 / Gemini 3.1 Pro / Grok 4 / DeepSeek V3.2（Elo 1450-1561）
+  - 投票数 600 万 + で運用。順位は週次で入れ替わるため、引用時は必ず日付を併記
+  - Preview タグのモデルは CI が広く、Elo が 20-40 ポイント揺れることがあるため絶対視は避ける
