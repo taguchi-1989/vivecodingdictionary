@@ -364,6 +364,27 @@ def extract_reference_url(body: str) -> tuple[str | None, str | None]:
     return None, None
 
 
+def extract_bikou(body: str) -> str:
+    """## 備考 から誌面に載せる短い補足を 1 つだけ返す。"""
+    section = strip_md(extract_section(body, "備考"))
+    lines: list[str] = []
+    for line in section.splitlines():
+        text = re.sub(r"^\s*[-*]\s+", "", line).strip()
+        if not text or text.startswith("<!--"):
+            continue
+        if re.search(r"\b(status|figure_type|experience_level|reader_level|title_reading)\b", text):
+            continue
+        if re.fullmatch(r"[（(]\s*.*?(なし|未記入|空).*?\s*[）)]", text):
+            continue
+        lines.append(text)
+    if not lines:
+        return ""
+    text = " ".join(lines)
+    parts = _split_into_sentences(text)
+    text = parts[0] if parts else text
+    return text[:96].rstrip() + ("…" if len(text) > 96 else "")
+
+
 # ─── HTML 部品 ────────────────────────────────────────
 
 BOOK_ICON_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>'
@@ -506,6 +527,14 @@ def render_tagline_tags(fm: dict) -> str:
 def render_main_figure(fm: dict, entry_id: str) -> str:
     """figure_type ごとのプレースホルダ。最終 PNG があればそれを仮置きする。"""
     ft = fm.get("figure_type", "structure")
+    final = _ponchi_final_asset(entry_id)
+    if final is not None:
+        _, rel = final
+        return f'''
+      <div class="section-heading"><span class="label">イメージ</span></div>
+      <div class="figure figure--image figure--standalone">
+        <img src="{rel}" alt="" loading="lazy">
+      </div>'''
     label = {
         "before_after": "Before / After",
         "structure": "構造図",
@@ -513,14 +542,6 @@ def render_main_figure(fm: dict, entry_id: str) -> str:
         "workflow": "ワークフロー図",
         "timeline": "タイムライン",
     }.get(ft, "図")
-    final = _ponchi_final_asset(entry_id)
-    if final is not None:
-        _, rel = final
-        return f'''
-      <div class="section-heading"><span class="label">{label}</span></div>
-      <div class="figure figure--image figure--standalone" style="padding:10px;text-align:center;border-bottom:1.5px solid var(--ink-blue) !important;border-bottom-left-radius:var(--radius-lg) !important;border-bottom-right-radius:var(--radius-lg) !important;">
-        <img src="{rel}" alt="" loading="lazy" style="max-width:88%;max-height:300px;height:auto;width:auto;object-fit:contain;display:inline-block;">
-      </div>'''
     return f'''
       <div class="section-heading"><span class="label">{label}</span></div>
       <div class="figure" style="min-height:140px;padding:22px;text-align:center;color:var(--ink-2);font-size:14px;">
@@ -773,7 +794,7 @@ body {{ margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: va
 
 <div class="spread">
 
-  <section class="vbcd page">
+  <section class="vbcd page page--left-compact">
     <div class="page-chrome-top">
       <div class="chrome-left">
         {book_icon}<span class="chrome-label">{tilde_top}</span>
@@ -784,7 +805,7 @@ body {{ margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: va
     <div class="page-body">
       <h1 class="title-hero">{title_main}</h1>
       {title_sub_html}
-      <div class="tagline-bar">{tagline}</div>
+      <div class="{tagline_class}">{tagline}</div>
       {tags}
 
       <div class="body-section">
@@ -805,6 +826,8 @@ body {{ margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: va
 
       {main_figure}
       {ponchi_slot_html}
+      <div class="section-heading"><span class="label">開発フローでの位置</span></div>
+      {flow_row}
     </div>
 
     <div class="page-chrome-bottom">
@@ -813,7 +836,7 @@ body {{ margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: va
     </div>
   </section>
 
-  <section class="vbcd page">
+  <section class="vbcd page page--right-tight">
     <div class="page-chrome-top">
       <div class="chrome-left">
         {book_icon}<span class="chrome-label">{title}の見方</span>
@@ -827,7 +850,7 @@ body {{ margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: va
         {seepoint_cells}
       </div>
 
-      <div class="bottom-row">
+      <div class="bottom-row bottom-row--stack">
         <div>
           <div class="section-heading"><span class="label">非エンジニアのつまずき</span></div>
           <div class="list-block">
@@ -846,11 +869,9 @@ body {{ margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: va
         </div>
       </div>
 
-      <div class="section-heading"><span class="label">開発フローでの位置</span></div>
-      {flow_row}
-
       <div class="section-heading"><span class="label">関連用語</span></div>
       {related_pills}
+      {bikou_box}
 
       <div class="references-row">
         <span class="ref-label">参考</span>
@@ -989,6 +1010,7 @@ def render_page(entry: dict, prev: dict | None, next_: dict | None, drawer_html:
         title_main, title_sub = split_title(entry["title"])
 
     tagline = strip_md(extract_section(body, "tagline")) or fm.get("tagline", "")
+    tagline_class = "tagline-bar tagline-bar--dense" if len(tagline) > 55 else "tagline-bar"
     nanishiteku_raw = strip_md(extract_section(body, "何をしてくれるか"))
     dokode_deau_raw = strip_md(extract_section(body, "どこで出会うか"))
     nanishiteku_html = render_body_html(nanishiteku_raw) or "<p>（未記入）</p>"
@@ -1002,7 +1024,7 @@ def render_page(entry: dict, prev: dict | None, next_: dict | None, drawer_html:
     seepoint_cells = "\n".join(render_seepoint_cell(i + 1, SEEPOINT_LABELS[i], seepoints[i]) for i in range(6))
 
     flow_steps = extract_flow_steps(body)
-    flow_html = render_flow_row(flow_steps)
+    flow_html = render_flow_row(flow_steps).replace('class="flow-row"', 'class="flow-row flow-row--compact"', 1)
 
     char_meta_html = render_char_meta(tagline, nanishiteku_raw, dokode_deau_raw, seepoints, kaiwa_raw)
 
@@ -1016,6 +1038,15 @@ def render_page(entry: dict, prev: dict | None, next_: dict | None, drawer_html:
     comment_items = render_comment_items(extract_comment_items(body))
 
     ref_url, ref_date = extract_reference_url(body)
+    bikou_raw = extract_bikou(body)
+    bikou_box = (
+        f'''
+      <div class="section-heading section-heading--note"><span class="label">備考</span></div>
+      <div class="note-box">
+        <p>{escape(bikou_raw)}</p>
+      </div>'''
+        if bikou_raw else ""
+    )
 
     title_sub_html = (
         f'<div class="title-hero-sub">{escape(title_sub)}</div>'
@@ -1065,6 +1096,7 @@ def render_page(entry: dict, prev: dict | None, next_: dict | None, drawer_html:
         page_right=f"{page_right:02d}",
         pages=entry.get("pages", DEFAULT_ENTRY_PAGES),
         tagline=escape(tagline),
+        tagline_class=tagline_class,
         tags=render_tagline_tags(fm),
         nanishiteku=nanishiteku_html,
         dokode_deau=dokode_deau_html,
@@ -1072,6 +1104,7 @@ def render_page(entry: dict, prev: dict | None, next_: dict | None, drawer_html:
         seepoint_cells=seepoint_cells,
         flow_row=flow_html,
         related_pills=related_html,
+        bikou_box=bikou_box,
         ref_url=escape(ref_url or "（未記入）"),
         ref_date=escape(ref_date or "—"),
         tsumazuki_items=tsumazuki_items,

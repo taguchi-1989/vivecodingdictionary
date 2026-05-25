@@ -110,7 +110,7 @@ body { margin: 0; padding: 40px 20px; background: #E5EAF0; font-family: var(--fo
 <div class="spread">
 
   <!-- ========== 左ページ p.04 ========== -->
-  <section class="vbcd page">
+  <section class="vbcd page page--left-compact">
     <div class="page-chrome-top">
       <div class="chrome-left">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
@@ -156,48 +156,33 @@ body { margin: 0; padding: 40px 20px; background: #E5EAF0; font-family: var(--fo
         </div>
       </div>
 
-      <div class="section-heading"><span class="label">Before / After</span></div>
-      <div class="figure-ba">
-        <div class="ba-cols">
-          <div class="ba-col">
-            <div class="ba-box">
-              <div class="ba-label">Before（JavaScript）</div>
-<pre><span class="kw">function</span> add(a, b) {
-  <span class="kw">return</span> a + b
-}
-add(<span class="str">'1'</span>, 2)</pre>
-            </div>
-            <div class="ba-caption warn">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-              実行して初めて違和感に気づく
-            </div>
-          </div>
-          <div class="ba-arrow">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </div>
-          <div class="ba-col">
-            <div class="ba-box">
-              <div class="ba-label">After（TypeScript）</div>
-<pre><span class="kw">function</span> add(a: <span class="kw">number</span>, b: <span class="kw">number</span>) {
-  <span class="kw">return</span> a + b
-}
-add(<span class="str">'1'</span>, 2) <span class="cm">// エラー</span></pre>
-            </div>
-            <div class="ba-caption ok">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              実行前に型のズレを見つけやすい
-            </div>
-          </div>
+      <div class="section-heading"><span class="label">イメージ</span></div>
+      <div class="ponchi-slot ponchi-slot--wide ponchi-slot--hero">
+        <div class="ponchi-icon">
+          <img src="../../../../assets/ponchi/experiments/F-2-typescript-wide-v21.png" alt="TypeScript の型チェックを使う 3 人の開発者" />
         </div>
       </div>
 
-      <div class="ponchi-slot">
-        <div class="ponchi-icon">
-          <img src="../../../../assets/ponchi/final/F-2.webp" alt="TypeScript を使う人" />
+      <div class="section-heading"><span class="label">開発フローでの位置</span></div>
+      <div class="flow-row flow-row--compact">
+        <div class="flow-step">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <div class="flow-label">JavaScript<br>を書く</div>
         </div>
-        <div class="ponchi-caption">
-          <div class="ponchi-title">TypeScript を使う人</div>
-          <p class="ponchi-hint">「型」を味方にしているエンジニアの 1 コマ。たとえば入力欄の前で型違いに気づいて「おっ」となる瞬間。</p>
+        <span class="flow-arrow">→</span>
+        <div class="flow-step">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><text x="12" y="16" text-anchor="middle" font-family="Inter" font-weight="900" font-size="9" fill="currentColor" stroke="none">TS</text></svg>
+          <div class="flow-label">TypeScript<br>が確認する</div>
+        </div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-step">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <div class="flow-label">エディタ/ビルド<br>で警告</div>
+        </div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-step">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <div class="flow-label">修正して<br>進む</div>
         </div>
       </div>
     </div>
@@ -213,7 +198,7 @@ add(<span class="str">'1'</span>, 2) <span class="cm">// エラー</span></pre>
   </section>
 
   <!-- ========== 右ページ p.05 ========== -->
-  <section class="vbcd page">
+  <section class="vbcd page page--right-tight">
     <div class="page-chrome-top">
       <div class="chrome-left">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
@@ -263,7 +248,7 @@ add(<span class="str">'1'</span>, 2) <span class="cm">// エラー</span></pre>
         </div>
       </div>
 
-      <div class="bottom-row">
+      <div class="bottom-row bottom-row--stack">
         <div>
           <div class="section-heading"><span class="label">非エンジニアのつまずき</span></div>
           <div class="list-block">
@@ -284,29 +269,6 @@ add(<span class="str">'1'</span>, 2) <span class="cm">// エラー</span></pre>
               <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><div><span class="cl">誰向けか:</span>React / Next.js に触る人、共同開発に入る人。</div></li>
             </ul>
           </div>
-        </div>
-      </div>
-
-      <div class="section-heading"><span class="label">開発フローでの位置</span></div>
-      <div class="flow-row">
-        <div class="flow-step">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          <div class="flow-label">JavaScript<br>を書く</div>
-        </div>
-        <span class="flow-arrow">→</span>
-        <div class="flow-step">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><text x="12" y="16" text-anchor="middle" font-family="Inter" font-weight="900" font-size="9" fill="currentColor" stroke="none">TS</text></svg>
-          <div class="flow-label">TypeScript<br>が確認する</div>
-        </div>
-        <span class="flow-arrow">→</span>
-        <div class="flow-step">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          <div class="flow-label">エディタ/ビルド<br>で警告</div>
-        </div>
-        <span class="flow-arrow">→</span>
-        <div class="flow-step">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          <div class="flow-label">修正して<br>進む</div>
         </div>
       </div>
 
