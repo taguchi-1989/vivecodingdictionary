@@ -6,7 +6,7 @@ category: term_general
 subtype: ml_basic
 experience_level: research_only
 reader_level: 3
-importance: B
+importance: C
 figure_type: structure
 page_layout: spread_v1
 start_date:
