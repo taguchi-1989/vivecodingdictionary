@@ -6,7 +6,7 @@ category: term_llm
 subtype: control
 experience_level: hands_on
 reader_level: 2
-importance: B
+importance: C
 figure_type: structure
 page_layout: spread_v1
 start_date: 2024-06
