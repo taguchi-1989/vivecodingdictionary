@@ -6,7 +6,7 @@ category: term_tool
 subtype: file_format
 experience_level: hands_on
 reader_level: 2-3
-importance: D
+importance: C
 figure_type: before_after
 page_layout: spread_v1
 start_date:

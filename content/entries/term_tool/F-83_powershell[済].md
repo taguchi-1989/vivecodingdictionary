@@ -6,7 +6,7 @@ category: term_tool
 subtype: shell
 experience_level: partial
 reader_level: 2-4
-importance: D
+importance: C
 figure_type: comparison
 page_layout: spread_v1
 start_date: 2006-11-14

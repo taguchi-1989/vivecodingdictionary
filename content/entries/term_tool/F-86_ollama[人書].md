@@ -9,7 +9,7 @@ subtype: runtime
 # ── 読者・体験 ──
 experience_level: hands_on
 reader_level: 3-5
-importance: D
+importance: C
 
 # ── 誌面形式 ──
 figure_type: structure

@@ -6,7 +6,7 @@ category: term_tool
 subtype: runtime
 experience_level: partial
 reader_level: 2-3
-importance: D
+importance: C
 figure_type: structure
 page_layout: spread_v1
 start_date: 2009-05-27
