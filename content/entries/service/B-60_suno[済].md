@@ -6,7 +6,7 @@ category: service
 subtype: creative_media
 experience_level: hands_on
 reader_level: 2-4
-importance: D
+importance: C
 figure_type: comparison
 page_layout: spread_v1
 start_date: 2023-01-01
