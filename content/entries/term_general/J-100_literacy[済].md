@@ -1,7 +1,7 @@
 ---
 id: J-100
-title: 識字
-title_reading: シキジ
+title: リテラシー
+title_reading: リテラシー
 category: term_general
 subtype: concept
 experience_level: research_only

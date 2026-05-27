@@ -6,7 +6,7 @@ category: term_general
 subtype: ethics_law
 experience_level: partial
 reader_level: 3-4
-importance: C
+importance: D
 figure_type: before_after
 page_layout: spread_v1
 start_date:

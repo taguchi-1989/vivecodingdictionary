@@ -6,7 +6,7 @@ category: history
 subtype: event
 experience_level: hands_on
 reader_level: 1
-importance: B
+importance: A
 figure_type: timeline
 page_layout: spread_v1
 start_date: 2022-11-30

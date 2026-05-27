@@ -6,7 +6,7 @@ category: workflow
 subtype: methodology
 experience_level: partial
 reader_level: 2-4
-importance: D
+importance: C
 figure_type: structure
 page_layout: spread_v1
 start_date:

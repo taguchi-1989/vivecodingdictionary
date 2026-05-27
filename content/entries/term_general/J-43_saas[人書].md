@@ -6,7 +6,7 @@ category: term_general
 subtype: buzzword
 experience_level: partial
 reader_level: 1-2
-importance: C
+importance: B
 figure_type: structure
 page_layout: spread_v1
 start_date:

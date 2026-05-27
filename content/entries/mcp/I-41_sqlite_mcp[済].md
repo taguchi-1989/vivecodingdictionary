@@ -6,7 +6,7 @@ category: mcp
 subtype: data
 experience_level: hands_on
 reader_level: 3
-importance: E
+importance: D
 figure_type: workflow
 page_layout: spread_v1
 start_date: 2024-11

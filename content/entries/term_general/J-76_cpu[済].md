@@ -6,7 +6,7 @@ category: term_general
 subtype: hardware
 experience_level: research_only
 reader_level: 1-2
-importance: D
+importance: A
 figure_type: comparison
 page_layout: spread_v1
 start_date:

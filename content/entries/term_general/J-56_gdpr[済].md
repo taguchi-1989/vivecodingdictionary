@@ -6,7 +6,7 @@ category: term_general
 subtype: ethics_law
 experience_level: research_only
 reader_level: 3-4
-importance: D
+importance: C
 figure_type: structure
 page_layout: spread_v1
 start_date: 2018-05-25

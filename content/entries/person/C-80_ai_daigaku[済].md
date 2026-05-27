@@ -5,7 +5,7 @@ category: person_org
 subtype: youtuber
 experience_level: research_only
 reader_level: 1-2
-importance: E
+importance: D
 figure_type: structure
 page_layout: spread_v1
 start_date:
