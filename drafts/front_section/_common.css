@@ -13,7 +13,7 @@ body {
   color: var(--ink);
 }
 
-/* 見開き全体（1500×1061px 固定。狭い画面では transform: scale で自動縮小） */
+/* 見開き全体 */
 .spread {
   display: flex;
   gap: 0;
@@ -21,23 +21,6 @@ body {
   margin: 0 auto;
   background: var(--paper);
   box-shadow: var(--shadow-paper);
-  transform-origin: top center;
-}
-
-/* モバイル: ビューポートに収まるように比例縮小（スクロールなし）*/
-@media (max-width: 1580px) {
-  body {
-    overflow-x: hidden;
-  }
-  .spread {
-    transform: scale(calc((100vw - 32px) / 1500));
-    margin-bottom: calc(1061px * ((100vw - 32px) / 1500) - 1061px + 40px);
-  }
-}
-
-/* 1500px 以上ならそのまま */
-@media (min-width: 1581px) {
-  .spread { transform: none; margin-bottom: 0; }
 }
 
 /* 1 ページ */
@@ -158,6 +141,38 @@ body {
   border-radius: 8px;
   padding: var(--sp-4) var(--sp-5);
   background: var(--paper);
+}
+
+/* 生成画像は「挿絵」ではなく、既存ページに馴染む薄い図版として扱う */
+.generated-art {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  mix-blend-mode: multiply;
+  filter: saturate(0.72) contrast(0.86) brightness(1.08);
+  opacity: 0.78;
+}
+
+.generated-art.faint {
+  opacity: 0.46;
+  filter: saturate(0.45) contrast(0.72) brightness(1.16);
+}
+
+.generated-art.soft {
+  opacity: 0.66;
+  filter: saturate(0.62) contrast(0.78) brightness(1.12);
+}
+
+.art-frame.has-generated,
+.panel .figure.has-generated,
+.fig-card .thumb.has-generated {
+  background: var(--paper);
+}
+
+.panel .figure.has-generated {
+  width: 100%;
+  min-height: 0;
 }
 
 /* 関連用語ピル */

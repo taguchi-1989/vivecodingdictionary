@@ -16,12 +16,22 @@
   .underlay {
     position: absolute;
     inset: 80px 56px 80px 56px;
-    display: flex;
-    opacity: 0.42;
+    opacity: 0.62;
     pointer-events: none;
-    background: var(--paper-2);
+    background: var(--paper);
     border: 1px dashed var(--rule-strong);
     border-radius: 6px;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .underlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    filter: grayscale(1) contrast(0.82) brightness(1.08);
+    opacity: 0.92;
+    mix-blend-mode: multiply;
   }
   .underlay-page {
     flex: 1;
@@ -125,7 +135,7 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-    z-index: 2;
+    z-index: 4;
   }
   .callout {
     position: absolute;
@@ -166,17 +176,25 @@
   .anatomy .page-foot,
   .anatomy .page-num {
     position: relative;
+    z-index: 5;
+  }
+  .anatomy .page {
+    background: transparent;
     z-index: 3;
   }
-  .anatomy-title {
+  .anatomy .anatomy-title {
     font-size: 22px;
     font-weight: 900;
-    margin: 0 0 var(--sp-3) 0;
+    margin: 0 0 var(--sp-3) 220px;
+    max-width: 460px;
+    line-height: 1.35;
   }
-  .anatomy-sub {
+  .anatomy .anatomy-sub {
     font-size: 12px;
     color: var(--ink-2);
-    margin-bottom: var(--sp-3);
+    margin: 0 0 var(--sp-3) 220px;
+    max-width: 460px;
+    line-height: 1.6;
   }
 </style>
 </head>
@@ -188,40 +206,7 @@
 
   <!-- 半透明の下地（本編 F-2 TypeScript 想定） -->
   <div class="underlay">
-    <div class="underlay-page left">
-      <div class="u-title">TypeScript</div>
-      <div class="u-reading">タイプスクリプト</div>
-      <div class="u-tag">JavaScript に静的型を加えた言語です。コンパイル時にエラーを発見できます。</div>
-      <div class="u-h">何をしてくれるか</div>
-      <div>JS のスーパーセットで…</div>
-      <div class="u-h">どこで出会うか</div>
-      <div>React や Next.js…</div>
-      <div class="u-fig">［ メイン図 ］</div>
-      <div class="u-talk">「TypeScript で型を付けて…」</div>
-      <div class="u-ponchi">［ 擬人化ポンチ絵 ］</div>
-    </div>
-    <div class="underlay-page right">
-      <div class="u-h">この用語の見どころ</div>
-      <div class="u-six">
-        <div>役割</div><div>うれしさ</div><div>注意点</div>
-        <div>どこで役立つか</div><div>はじめに</div><div>深掘り先</div>
-      </div>
-      <div class="u-h">開発フローでの位置</div>
-      <div class="u-flow">
-        <div>1. 設計</div><div>2. 実装</div><div>3. ビルド</div><div>4. 配布</div>
-      </div>
-      <div class="u-pills" style="margin-top: 6px;">
-        <span class="u-pill">JavaScript</span>
-        <span class="u-pill">React</span>
-        <span class="u-pill">Next.js</span>
-        <span class="u-pill">ESLint</span>
-      </div>
-      <div class="u-h">非エンジニアのつまずき</div>
-      <div class="u-author">- 型って何…<br>- 設定が複雑…</div>
-      <div class="u-h">私のコメント</div>
-      <div class="u-author">🙂 第一印象: …<br>👍 良い点: …</div>
-      <div class="u-ref">typescriptlang.org — checked 2026-05-13</div>
-    </div>
+    <img src="../../assets/front_section/generated/2-1_f2_spread_base.png" alt="">
   </div>
 
   <!-- コールアウト 13 個 -->
