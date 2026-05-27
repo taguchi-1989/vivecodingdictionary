@@ -5,7 +5,7 @@ title_reading: コデックス
 category: service
 subtype: ai_assistant
 experience_level: research_only
-reader_level: 2-3
+reader_level: 3
 importance: B
 figure_type: comparison
 page_layout: spread_v1
