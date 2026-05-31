@@ -42,6 +42,32 @@ AI 生成してはいけないもの:
 5. 公式素材の周囲に独自の枠、カード、バッジ、影、発光を足さない。
 6. 公式素材の利用条件とローカルパスを `docs/brand_usage_audit.md` に記録する。
 
+## 合成サイズ
+
+標準ポンチ絵キャンバスは `1254x627`。公式素材は小さな飾りではなく、読者が縮小プレビューでも識別できる大きさで置く。
+
+| 用途 | 対象 | 目安サイズ | 使い方 |
+| :-- | :-- | :-- | :-- |
+| 主ブランド lockup | サービス名入りの横長ロゴ、例: GitHub Copilot lockup | 横幅 `500-520px` | 原則として上部右側の白い余白に置く。公式素材の余白込みで縮小し、切り抜かない |
+| 主ブランド単体ロゴ | サービス名なしの公式マークを主役にする場合 | 横幅または高さ `180-240px` | lockup が無い場合だけ使う。読者理解に必要なとき以外は避ける |
+| 補助的な公式アイコン | 画面内の小さな補助記号 | 原則使わない。必要時も `120-160px` 程度まで | 複数ロゴの羅列や小さなブランドアイコン散布は避ける |
+| 汎用アイコン | フォルダ、雲、サーバ箱、矢印など | 構図に合わせる | ブランド素材ではないため、公式サイズ規定の対象外 |
+
+主ブランド lockup を `500-520px` にする理由:
+
+- `1254x627` の横幅に対して約 40% で、誌面プレビューや 200px 前後のサムネイルでも識別しやすい。
+- 小さすぎるロゴは「飾り」や「読めないノイズ」になり、公式素材を使う意味が薄くなる。
+- 公式素材を大きく扱う代わりに、画像生成側ではロゴ風の図形やブランドカラーを一切描かせない。
+
+配置ルール:
+
+- lockup は原則として上部右側の白い余白に置く。
+- 余白は、合成後の公式素材が窮屈に見えない程度に広く確保する。
+- ロゴの周囲に独自の枠、カード、ラベル、影、発光、吹き出しを足さない。
+- 公式素材に含まれる clearspace は切り落とさない。
+- 縦横比を変えず、横幅基準で縮小する。
+- 文字入り lockup が読めないサイズになる場合は、その画像ではロゴを使わず本文・キャプション側で補う。
+
 ## プロンプト共通ブロック
 
 ```text
@@ -52,6 +78,16 @@ identification is required, reserve a clean white clearspace area for a later
 official asset overlay. Generic non-branded icons such as folders, arrows,
 browser frames, server boxes, abstract nodes, and simple clouds are allowed
 only if they do not resemble any real brand asset.
+```
+
+公式素材の余白指定が必要なプロンプトでは、次も入れる。
+
+```text
+Official asset clearspace: reserve a clean blank white area in the upper right
+for a later official lockup overlay. On a 1254x627 canvas, the primary official
+lockup should be composited at about 500-520px wide, preserving the official
+asset's aspect ratio and built-in clearspace. Do not draw a box, card, label,
+badge, border, shadow, glow, placeholder, or icon in that area.
 ```
 
 ## チェックリスト

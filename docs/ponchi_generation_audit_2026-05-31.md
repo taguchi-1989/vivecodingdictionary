@@ -69,6 +69,11 @@ If brand identification is required, the generated base illustration must leave
 clean white clearspace and a verified official asset must be composited
 afterward.
 
+Primary official lockups on the standard `1254x627` canvas should be composited
+at about `500-520px` wide. This is intentionally large: the logo should remain
+identifiable in book previews and thumbnails, while the generated base image
+stays free of fake logos, fake icons, and brand-color substitutes.
+
 ## Character Rule
 
 The fixed cast is:
