@@ -15,6 +15,9 @@ mechanical 1:1 to 2:1 conversion work.
 - For entries where a logo or official icon materially improves reader
   comprehension, use an official asset as a deterministic overlay, unchanged in
   color and shape.
+- If the entry is itself a brand, product, service, or model family, treat the
+  logo as required once an official source exists. Do not avoid a logo only
+  because the name also appears in surrounding text.
 - If an official asset or usage permission is not confirmed, leave the brand
   asset out and record the item as blocked instead of generating a fake logo or
   fake icon.
@@ -63,21 +66,22 @@ regeneration prompts. In particular:
 - 350 final WebP files were mechanically converted to 2:1.
 - That conversion does not satisfy this regeneration task.
 - Local official brand asset inventory currently contains AWS and GitHub assets.
-- Main service logos such as Gemini, Claude, ChatGPT/OpenAI, Cursor, Codex,
-  GitHub Copilot, and Windsurf still need official source review before use.
+- Main service logos such as Gemini, ChatGPT/OpenAI, Codex, and Windsurf still
+  need official source review before use. Claude-family and Cursor official
+  sources have been confirmed and now need local asset import before overlay.
 
 ## Pilot queue
 
 | entry_id | title | brand asset status | regeneration intent | status |
 | --- | --- | --- | --- | --- |
-| B-1 | Gemini | official_brand_asset_required | Four entry points into one AI service: browser, Android phone, Docs/Gmail, cloud/developer context. | base_2to1_ready_logo_blocked |
-| B-2 | Claude | official_brand_asset_required | One assistant brand used by planner, developer, and operations worker. | base_2to1_ready_logo_blocked |
-| B-3 | ChatGPT | official_brand_asset_required | Conversational AI as a general-purpose everyday workbench, not a fake chat screenshot. | base_2to1_ready_logo_blocked |
-| B-4 | Cursor | official_brand_asset_required | AI-first editor helping a developer move between code, intent, and review. | base_2to1_ready_logo_blocked |
+| B-1 | Gemini | official_brand_asset_required | Four entry points into one AI service: browser, Android phone, Docs/Gmail, cloud/developer context. | official_logo_source_review_required |
+| B-2 | Claude | official_brand_asset_required | One assistant brand used by planner, developer, and operations worker. | official_logo_source_available_needs_import |
+| B-3 | ChatGPT | official_brand_asset_required | Conversational AI as a general-purpose everyday workbench, not a fake chat screenshot. | official_logo_source_review_required |
+| B-4 | Cursor | official_brand_asset_required | AI-first editor helping a developer move between code, intent, and review. | official_logo_source_available_needs_import |
 | B-5 | GitHub Copilot | official_brand_asset_available | Pair-programming support inside a repository workflow; use current GitHub Copilot visual guidance. | pilot_regenerated |
 | B-6 | Windsurf | official_brand_asset_required | AI coding environment that connects prompt, editor, and running app. | blocked_brand_asset |
-| B-7 | Claude Code | official_brand_asset_required | CLI agent working with files, terminal, and review loop; avoid fake terminal text. | blocked_brand_asset |
-| B-8 | Codex | official_brand_asset_required | Coding agent loop: task, local workspace, diff, tests, review. | base_2to1_ready_logo_blocked |
+| B-7 | Claude Code | official_brand_asset_required | CLI agent working with files, terminal, and review loop; avoid fake terminal text. | official_logo_source_available_needs_import |
+| B-8 | Codex | official_brand_asset_required | Coding agent loop: task, local workspace, diff, tests, review. | official_logo_source_review_required |
 | F-1 | JavaScript | brand_asset_avoid | Explain language/runtime ecosystem with generic JS/TS/browser/server symbols, not official logos or icons. | ready_for_regen |
 | F-60 | GitHub | official_brand_asset_available | Repository as collaboration hub: issues, PR, actions, and AI support. | official_logo_applied |
 
@@ -86,6 +90,13 @@ regeneration prompts. In particular:
 - OpenAI brand guidance allows logo use only when directly related to OpenAI
   services and says to use marks exactly as provided, without implying
   endorsement.
+- Anthropic has an official newsroom/press-kit path, so Claude and Claude 4 系
+  should move from optional/no-logo treatment to official-source import before
+  overlay.
+- Cursor has an official brand assets page, so B-4 should move to official
+  source import before overlay.
+- Google Brand Resource Center exists, but Gemini needs a concrete
+  product-icon/lockup choice and any required permission review before overlay.
 - GitHub Copilot guidance says that since 2025 Copilot no longer has a
   standalone logo centered on the old Copilot icon.
 - GitHub logo guidance permits secondary placement in news/blog/contextual

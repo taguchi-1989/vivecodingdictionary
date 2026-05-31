@@ -24,37 +24,50 @@ substitutes.
 ## OpenAI / ChatGPT / Codex
 
 - Source checked: `https://openai.com/brand/`
-- Status: blocked for local asset download in this environment because the page
-  presents a browser/cookie challenge to script access.
+- Source status: official brand guidance confirmed. The page identifies the
+  OpenAI name/logo plus ChatGPT and GPT brands as OpenAI trademarks, describes
+  wordmark and Blossom usage, and exposes logo downloads subject to OpenAI marks
+  terms.
+- Local status: no local asset imported yet.
 - Working rule:
   - Do not generate OpenAI, ChatGPT, or Codex logos, marks, icons, or product UI
     from prompts.
-  - Keep B-3 and B-8 in `blocked_brand_asset` until official downloadable assets
-    are available locally.
+  - Keep B-3 and B-8 in `official_logo_source_review_required` until the exact
+    asset choice is decided: OpenAI wordmark, ChatGPT-specific asset, or a
+    Codex-specific asset if one is officially published.
 
 ## Anthropic / Claude
 
-- Status: not yet confirmed in local assets.
+- Source checked: `https://www.anthropic.com/news`
+- Source status: official newsroom confirms a media assets / press kit path.
+- Local status: no local asset imported yet.
 - Working rule:
   - Do not generate Claude or Anthropic marks, icons, or brand-style substitutes
     from prompts.
-  - Keep B-2 and B-7 in `blocked_brand_asset` until official assets and usage
-    guidance are recorded.
+  - Treat B-2, B-7, and D-12 as logo-required Claude-family entries once the
+    press-kit asset is imported and recorded.
 
 ## Google / Gemini
 
-- Status: not yet confirmed in local assets.
+- Source checked: `https://about.google/brand-resource-center/`
+- Source status: official Google Brand Resource Center exists and redirects to
+  Partner Marketing Hub. Gemini still needs a concrete official product
+  icon/lockup selection and any required permission review before use.
+- Local status: no local Gemini asset imported yet.
 - Working rule:
   - Do not generate Gemini, Google, Android, Gmail, Docs, or Google Cloud marks,
     icons, logos, app UI, or brand-color substitutes from prompts.
-  - Keep B-1 in `blocked_brand_asset` until official assets and usage guidance
-    are recorded.
+  - Keep B-1 in `official_logo_source_review_required` until the exact Gemini
+    asset and usage conditions are recorded.
 
 ## Cursor / Windsurf
 
-- Status: not yet confirmed in local assets.
+- Cursor source checked: `https://cursor.com/brand`
+- Cursor source status: official brand guidelines confirm downloadable brand
+  assets, including logos, app icons, avatars, and a preferred horizontal lockup.
+- Windsurf status: not yet confirmed in local assets.
 - Working rule:
   - Do not generate Cursor or Windsurf marks, icons, logos, or product UI from
     prompts.
-  - Keep B-4 and B-6 in `blocked_brand_asset` until official assets and usage
-    guidance are recorded.
+  - Move B-4 to official source import before overlay.
+  - Keep B-6 blocked until an official Windsurf source is confirmed and recorded.
