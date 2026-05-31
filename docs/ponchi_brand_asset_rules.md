@@ -85,11 +85,31 @@ AI 生成してはいけないもの:
 - lockup は原則として上部右側の白い余白に置く。
 - 標準座標は `docs/ponchi_logo_overlay_pipeline.md` と `scripts/composite_official_logo.py` を正とする。`1254x627` では横幅 `520px`、右余白 `48px`、`x=686`, `y=36` を基本にする。右上寄せのため、横幅を変える場合は `x = 1254 - 48 - logo_width` で計算する。
 - 余白は、合成後の公式素材が窮屈に見えない程度に広く確保する。
-- AI 生成時は、右上に最大候補 `600px` の lockup が置ける程度の白い余白を作る。
+- AI 生成時は、右上に最大候補 `600px` の lockup が置ける程度の白い余白を作る。ただし、2:1 全体は完成した誌面として見えるように、余白の外側で主図解を成立させる。
+- ロゴ予定位置の下には、人物、顔、手、重要ノード、矢印、読者が意味を取る主図形を置かない。
+- 白い余白は「後から貼るための空き」ではなく、紙面・壁面・空のような静かな negative space として最初から構図に組み込む。
 - ロゴの周囲に独自の枠、カード、ラベル、影、発光、吹き出しを足さない。
 - 公式素材に含まれる clearspace は切り落とさない。
 - 縦横比を変えず、横幅基準で縮小する。
 - 文字入り lockup が読めないサイズになる場合は、その画像ではロゴを使わず本文・キャプション側で補う。
+
+## 2:1 ベース生成時の余白方針
+
+ロゴありのブランド回では、ベース画像とロゴ合成後の画像を別物として考えない。ベース画像の時点で、ロゴが入る右上を含めて 2:1 全体の視線設計を終わらせる。
+
+採用できるベース画像:
+
+- 右上 clearspace が白く静かで、ロゴを置いても主図解を隠さない。
+- 余白の外側に、説明したい概念、人物、矢印、ノードの主役が収まっている。
+- ロゴが入った後に、視線が「ロゴ -> 主図解」または「主図解 -> ロゴ」へ自然に流れる。
+- ロゴなし状態でも破綻しないが、ロゴを入れるとブランド識別が完成する。
+
+不採用にするベース画像:
+
+- 2:1 全面を小物や線で埋め、ロゴを載せると情報を隠す。
+- ロゴ予定位置に薄い模様、薄いアイコン、薄い文字、カード枠、プレースホルダーがある。
+- 右上余白だけが浮いて、未完成な空白に見える。
+- ロゴを入れると広告バナーやスポンサー枠のように見える。
 
 ## プロンプト共通ブロック
 
@@ -107,10 +127,14 @@ only if they do not resemble any real brand asset.
 
 ```text
 Official asset clearspace: reserve a clean blank white area in the upper right
-for a later official lockup overlay. On a 1254x627 canvas, the primary official
-lockup should be composited at about 500-520px wide, preserving the official
-asset's aspect ratio and built-in clearspace. Do not draw a box, card, label,
-badge, border, shadow, glow, placeholder, or icon in that area.
+for a later official lockup overlay, designed as intentional negative space
+inside the 2:1 composition. Keep the rest of the illustration complete and
+meaningful, but do not place any character, face, hand, important node, arrow,
+diagram element, text, icon, pattern, or decorative mark under the future logo
+area. On a 1254x627 canvas, the primary official lockup should be composited at
+about 500-520px wide, preserving the official asset's aspect ratio and built-in
+clearspace. Do not draw a box, card, label, badge, border, shadow, glow,
+placeholder, or icon in that area.
 ```
 
 ## チェックリスト

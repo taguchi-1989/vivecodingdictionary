@@ -29,7 +29,10 @@ mechanical 1:1 to 2:1 conversion work.
 2. For `official_brand_asset_required`, record source, usage guidance, local asset
    path, and any restrictions.
 3. Generate a 2:1 illustration with a deliberate blank/neutral placement area
-   for the brand mark when an official asset will be overlaid.
+   for the brand mark when an official asset will be overlaid. The base image
+   should still read as a finished 2:1 book illustration, but the future logo
+   area must not contain important characters, faces, hands, nodes, arrows,
+   diagram content, patterns, or placeholder marks.
 4. Composite the official brand asset deterministically after generation.
 5. Verify dimensions, legibility at small size, absence of fake text/logos/icons,
    and policy fit before replacing `assets/ponchi/final/*.webp`.
@@ -58,6 +61,9 @@ regeneration prompts. In particular:
 - For a primary service logo on a `1254x627` ponchi image, reserve enough
   upper-right clearspace for an unchanged official lockup about `500-520px`
   wide.
+- The 2:1 canvas should not be filled edge-to-edge with content when a logo will
+  be overlaid. Leave the logo clearspace as intentional negative space, then
+  build the main concept around it.
 - Do not put a custom box, card, border, badge, glow, or shadow around the
   logo. The logo must sit on clean white space.
 
