@@ -31,6 +31,9 @@ mechanical 1:1 to 2:1 conversion work.
 5. Verify dimensions, legibility at small size, absence of fake text/logos/icons,
    and policy fit before replacing `assets/ponchi/final/*.webp`.
 
+The current per-entry logo requirement matrix is recorded in
+`docs/ponchi_logo_requirement_matrix_2026-06-01.md`.
+
 ## Unified visual policy
 
 Use `docs/ponchi_image_generation_rules.md` as the source of truth for image
