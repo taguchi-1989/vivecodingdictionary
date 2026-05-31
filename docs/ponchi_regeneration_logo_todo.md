@@ -32,7 +32,10 @@ mechanical 1:1 to 2:1 conversion work.
    and policy fit before replacing `assets/ponchi/final/*.webp`.
 
 The current per-entry logo requirement matrix is recorded in
-`docs/ponchi_logo_requirement_matrix_2026-06-01.md`.
+`docs/ponchi_logo_requirement_matrix_2026-06-01.md`. Brand entries must first
+have a meaningful 2:1 base illustration before any official logo overlay is
+attempted. The current base regeneration audit is recorded in
+`docs/ponchi_brand_base_regeneration_2026-06-01.md`.
 
 ## Unified visual policy
 
@@ -67,14 +70,14 @@ regeneration prompts. In particular:
 
 | entry_id | title | brand asset status | regeneration intent | status |
 | --- | --- | --- | --- | --- |
-| B-1 | Gemini | official_brand_asset_required | Four entry points into one AI service: browser, Android phone, Docs/Gmail, cloud/developer context. | blocked_brand_asset |
-| B-2 | Claude | official_brand_asset_required | One assistant brand used by planner, developer, and operations worker. | blocked_brand_asset |
-| B-3 | ChatGPT | official_brand_asset_required | Conversational AI as a general-purpose everyday workbench, not a fake chat screenshot. | blocked_brand_asset |
-| B-4 | Cursor | official_brand_asset_required | AI-first editor helping a developer move between code, intent, and review. | blocked_brand_asset |
+| B-1 | Gemini | official_brand_asset_required | Four entry points into one AI service: browser, Android phone, Docs/Gmail, cloud/developer context. | base_2to1_ready_logo_blocked |
+| B-2 | Claude | official_brand_asset_required | One assistant brand used by planner, developer, and operations worker. | base_2to1_ready_logo_blocked |
+| B-3 | ChatGPT | official_brand_asset_required | Conversational AI as a general-purpose everyday workbench, not a fake chat screenshot. | base_2to1_ready_logo_blocked |
+| B-4 | Cursor | official_brand_asset_required | AI-first editor helping a developer move between code, intent, and review. | base_2to1_ready_logo_blocked |
 | B-5 | GitHub Copilot | official_brand_asset_available | Pair-programming support inside a repository workflow; use current GitHub Copilot visual guidance. | pilot_regenerated |
 | B-6 | Windsurf | official_brand_asset_required | AI coding environment that connects prompt, editor, and running app. | blocked_brand_asset |
 | B-7 | Claude Code | official_brand_asset_required | CLI agent working with files, terminal, and review loop; avoid fake terminal text. | blocked_brand_asset |
-| B-8 | Codex | official_brand_asset_required | Coding agent loop: task, local workspace, diff, tests, review. | blocked_brand_asset |
+| B-8 | Codex | official_brand_asset_required | Coding agent loop: task, local workspace, diff, tests, review. | base_2to1_ready_logo_blocked |
 | F-1 | JavaScript | brand_asset_avoid | Explain language/runtime ecosystem with generic JS/TS/browser/server symbols, not official logos or icons. | ready_for_regen |
 | F-60 | GitHub | official_brand_asset_available | Repository as collaboration hub: issues, PR, actions, and AI support. | official_logo_applied |
 
