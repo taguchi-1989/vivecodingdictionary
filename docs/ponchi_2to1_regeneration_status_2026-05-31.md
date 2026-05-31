@@ -90,14 +90,16 @@ python scripts\audit_image_sizes.py --suffix .webp
 - `1254x627` の主ブランド lockup は横幅 `500-520px` 目安で大きく扱う。小さな飾りにしない。
 - `1254x627` を標準サイズにする。
 - 200px 程度でも意味が残る構図にする。
+- 同じ画像風の枚数を増やすのではなく、`concept_map`, `process_flow`, `before_after`, `timeline_scale`, `collaboration_hub` などの用途別構図を混ぜる。
 
 ## 次にやること
 
 1. `B-5` を品質基準として目視確認する。
-2. ロゴ不要の `F-1 JavaScript` から再生成を続ける。
-3. `F-60 GitHub` は公式 GitHub ロゴ素材を使った後合成で進める。
-4. `B-1` から `B-8` のサービス系は、公式ロゴ素材と利用条件を確認してから進める。
-5. 各差し替え後に必ず実行する。
+2. `docs/ponchi_composition_variety_policy.md` の応用バッチに沿って、構図ファミリーの違う 5 枚を試す。
+3. ロゴ不要の `F-1 JavaScript`, `F-2 TypeScript`, `G-1 Context`, `J-14 LLM` は先に再生成できる。
+4. `F-60 GitHub` は公式 GitHub ロゴ素材を使った後合成で進める。
+5. `B-1` から `B-8` のサービス系は、公式ロゴ素材と利用条件を確認してから進める。
+6. 各差し替え後に必ず実行する。
 
 ```powershell
 python scripts\audit_image_sizes.py --suffix .webp

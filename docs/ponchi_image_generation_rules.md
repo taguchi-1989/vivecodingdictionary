@@ -111,6 +111,7 @@ only if they do not resemble any real brand asset.
 - 200px程度のサムネイルでも意味が分かる。
 - ロゴ、商標、実在UIの AI 生成での再現は避ける。
 - 人物・ロボットの一貫性は `docs/ponchi_character_bible.md` に従う。
+- 同じ構図の量産を避け、用途別の構図ファミリーは `docs/ponchi_composition_variety_policy.md` に従う。
 
 画像生成プロンプトでは、スタイル指定に以下を入れる。
 
@@ -134,6 +135,7 @@ brand_asset:
   asset_name:
   local_path:
 role_balance:
+composition_family:
 composition_type:
 characters:
   - female
@@ -148,7 +150,7 @@ clearspace:
 avoid:
 ```
 
-`role_balance` は `docs/ponchi_character_bible.md` の表から選ぶ。構図は毎回 `2人 + ロボット + 机 + PC` に固定しない。
+`role_balance` は `docs/ponchi_character_bible.md` の表から選ぶ。`composition_family` は `docs/ponchi_composition_variety_policy.md` の表から選ぶ。構図は毎回 `2人 + ロボット + 机 + PC` に固定しない。
 
 使える `composition_type`:
 
@@ -169,6 +171,7 @@ avoid:
 - 毎回、片方が立って説明し、片方が座って質問する形にしない。
 - 毎回、人物 2 人とロボットを全員出さない。
 - 毎回、中央ボードと左右人物にしない。
+- 5 枚程度のバッチで、同じ `composition_family` だけを繰り返さない。
 - 手の演技で説明しようとせず、図形、矢印、ノードで意味を作る。
 
 ## 禁則
