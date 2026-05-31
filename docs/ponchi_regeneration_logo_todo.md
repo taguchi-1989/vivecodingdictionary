@@ -73,7 +73,7 @@ regeneration prompts. In particular:
 | B-7 | Claude Code | official_brand_asset_required | CLI agent working with files, terminal, and review loop; avoid fake terminal text. | blocked_brand_asset |
 | B-8 | Codex | official_brand_asset_required | Coding agent loop: task, local workspace, diff, tests, review. | blocked_brand_asset |
 | F-1 | JavaScript | brand_asset_avoid | Explain language/runtime ecosystem with generic JS/TS/browser/server symbols, not official logos or icons. | ready_for_regen |
-| F-60 | GitHub | official_brand_asset_required | Repository as collaboration hub: issues, PR, actions, and AI support. | blocked_brand_asset |
+| F-60 | GitHub | official_brand_asset_available | Repository as collaboration hub: issues, PR, actions, and AI support. | official_logo_applied |
 
 ## Notes from source policy review
 
@@ -93,6 +93,16 @@ regeneration prompts. In particular:
 - The GitHub Copilot mark was overlaid afterward from the official GitHub logo
   ZIP downloaded from `https://brand.github.com/GitHub_Logos.zip`.
 - Experiment files are in `assets/ponchi/experiments/regeneration/`.
+- Final audit after replacement: 350 WebP files are still 2:1.
+
+## F-60 result
+
+- `F-60 GitHub` was regenerated as a `collaboration_hub` composition and saved
+  to `assets/ponchi/final/F-60.webp`.
+- The base illustration reserved clean upper-right white clearspace.
+- The official GitHub lockup was overlaid afterward from
+  `assets/logos/github/GitHub_Logos/GitHub Logos/PNG/GitHub_Lockup_Black_Clearspace.png`.
+- Overlay parameters: `width=520`, `x=686`, `y=36`.
 - Final audit after replacement: 350 WebP files are still 2:1.
 
 ## B-5 quality revision notes

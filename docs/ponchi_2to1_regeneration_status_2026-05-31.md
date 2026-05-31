@@ -68,7 +68,7 @@ python scripts\audit_image_sizes.py --suffix .webp
 | `B-7 Claude Code` | `blocked_brand_asset` | 公式ロゴ素材と利用条件の確認 |
 | `B-8 Codex` | `blocked_brand_asset` | OpenAI/Codex の公式素材確認 |
 | `F-1 JavaScript` | `ready_for_regen` | ロゴなしで再生成可能 |
-| `F-60 GitHub` | `blocked_brand_asset` | GitHub 公式ロゴ合成で進める候補 |
+| `F-60 GitHub` | `official_logo_applied` | GitHub 公式ロゴを後合成し `assets/ponchi/final/F-60.webp` に反映済み |
 
 ## ルールの入口
 
@@ -97,7 +97,7 @@ python scripts\audit_image_sizes.py --suffix .webp
 1. `B-5` を品質基準として目視確認する。
 2. `docs/ponchi_composition_variety_policy.md` の応用バッチに沿って、構図ファミリーの違う 5 枚を試す。
 3. ロゴ不要の `F-1 JavaScript`, `F-2 TypeScript`, `G-1 Context`, `J-14 LLM` は先に再生成できる。
-4. `F-60 GitHub` は公式 GitHub ロゴ素材を使った後合成で進める。
+4. `F-60 GitHub` は公式 GitHub ロゴ素材を使った後合成を完了済み。次は目視比較で本番採用を確定する。
 5. `B-1` から `B-8` のサービス系は、公式ロゴ素材と利用条件を確認してから進める。
 6. 各差し替え後に必ず実行する。
 

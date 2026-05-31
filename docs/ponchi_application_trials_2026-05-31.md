@@ -161,4 +161,16 @@ python scripts\audit_image_sizes.py --dir assets\ponchi\experiments\regeneration
 - `process_flow`
 - `collaboration_hub` + `brand_clearspace`
 
-次に本番へ進めるなら、ロゴ不要の `F-1`, `F-2`, `G-1`, `J-14` を候補にし、`F-60` は公式ロゴ合成済み画像を候補にする。
+`F-60` は公式ロゴ合成済み画像を `assets/ponchi/final/F-60.webp` に反映済み。ロゴ不要の `F-1`, `F-2`, `G-1`, `J-14` は引き続き本番差し替え候補として扱う。
+
+## F-60 本番反映
+
+反映日: 2026-06-01
+
+- source: `assets/ponchi/experiments/regeneration/application-trials-2026-05-31/F-60_github_collaboration_official_logo_1254x627.png`
+- output: `assets/ponchi/final/F-60.webp`
+- official logo: `assets/logos/github/GitHub_Logos/GitHub Logos/PNG/GitHub_Lockup_Black_Clearspace.png`
+- overlay: `width=520`, `x=686`, `y=36`
+- final size: `1254x627`, aspect `2:1`
+
+ロゴは AI 生成ではなく、公式素材を決定論的に後合成した。ロゴ周辺に独自の枠、影、カード、バッジは追加していない。
