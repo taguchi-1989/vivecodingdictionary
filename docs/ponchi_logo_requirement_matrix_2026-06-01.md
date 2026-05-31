@@ -50,3 +50,7 @@ AWS と Ruby の素材はローカルにあるが、今回の 12 件の対象プ
 2. `official_logo_applied` は目視と寸法監査だけ行い、追加のロゴ生成はしない。
 3. `official_logo_required_blocked` は公式素材の取得・利用条件確認ができるまで、画像生成や本番差し替えを進めない。
 4. `logo_avoid` と `logo_optional_avoid` は、汎用図解として本番候補を進めてよい。
+
+## 適用監査
+
+`official_logo_applied` の確認結果は `docs/ponchi_logo_application_audit_2026-06-01.md` に記録する。
