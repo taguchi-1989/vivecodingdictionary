@@ -122,6 +122,55 @@ image should feel like a clear technical-book diagram with friendly human
 figures, not a rough drawing.
 ```
 
+## 生成前 scene_brief
+
+画像生成プロンプトを書く前に、必ず短い `scene_brief` を作る。これを決めずに直接プロンプトを書かない。
+
+```yaml
+entry_id:
+title:
+brand_asset:
+  mode: none | official_overlay_required | blocked_brand_asset
+  asset_name:
+  local_path:
+role_balance:
+composition_type:
+characters:
+  - female
+  - male
+  - robot
+hands_policy:
+  visible_hands_max:
+  gesture:
+scene_goal:
+main_symbols:
+clearspace:
+avoid:
+```
+
+`role_balance` は `docs/ponchi_character_bible.md` の表から選ぶ。構図は毎回 `2人 + ロボット + 机 + PC` に固定しない。
+
+使える `composition_type`:
+
+| 値 | 使う場面 |
+| :-- | :-- |
+| `board_review` | ボード上の図を確認する |
+| `single_laptop` | 1 人が PC で確認する |
+| `standing_board` | 机なしでボードを見る |
+| `cards_on_wall` | カードやノードを壁面に並べる |
+| `robot_console` | ロボットが小さな記号パネルを示す |
+| `diagram_first` | 人物より図解を主役にする |
+| `logo_clearspace` | 公式ロゴ後合成用の白い余白を主構図に含める |
+| `diagram_only` | 人物もロボットも出さない |
+
+避ける偏り:
+
+- 毎回、机、ノート、マグカップ、PC を置かない。
+- 毎回、片方が立って説明し、片方が座って質問する形にしない。
+- 毎回、人物 2 人とロボットを全員出さない。
+- 毎回、中央ボードと左右人物にしない。
+- 手の演技で説明しようとせず、図形、矢印、ノードで意味を作る。
+
 ## 禁則
 
 - 読める文字を画像内に入れない。
@@ -139,3 +188,7 @@ figures, not a rough drawing.
 3. 既存シリーズと線の密度が近いか。
 4. 被写体が小さすぎないか。
 5. 画像内の文字・ロゴ・ブランド色が混ざっていないか。
+6. Character A/B/C の同一キャラ感が保たれているか。
+7. `role_balance` が連続して偏っていないか。
+8. 手、指、持ち物、腕の接続が破綻していないか。
+9. 公式ロゴ後合成が必要な場合、白い余白が自然に残っているか。

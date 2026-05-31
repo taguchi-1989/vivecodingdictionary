@@ -59,16 +59,16 @@ python scripts\audit_image_sizes.py --suffix .webp
 
 | entry_id | 状態 | 次アクション |
 | :-- | :-- | :-- |
-| `B-1 Gemini` | `blocked_logo_asset` | 公式ロゴ素材と利用条件の確認 |
-| `B-2 Claude` | `blocked_logo_asset` | 公式ロゴ素材と利用条件の確認 |
-| `B-3 ChatGPT` | `blocked_logo_asset` | OpenAI 公式素材の確認、後合成方針 |
-| `B-4 Cursor` | `blocked_logo_asset` | 公式ロゴ素材と利用条件の確認 |
+| `B-1 Gemini` | `blocked_brand_asset` | 公式ロゴ素材と利用条件の確認 |
+| `B-2 Claude` | `blocked_brand_asset` | 公式ロゴ素材と利用条件の確認 |
+| `B-3 ChatGPT` | `blocked_brand_asset` | OpenAI 公式素材の確認、後合成方針 |
+| `B-4 Cursor` | `blocked_brand_asset` | 公式ロゴ素材と利用条件の確認 |
 | `B-5 GitHub Copilot` | `pilot_regenerated` | 完了済み。品質基準の基準例 |
-| `B-6 Windsurf` | `blocked_logo_asset` | 公式ロゴ素材と利用条件の確認 |
-| `B-7 Claude Code` | `blocked_logo_asset` | 公式ロゴ素材と利用条件の確認 |
-| `B-8 Codex` | `blocked_logo_asset` | OpenAI/Codex の公式素材確認 |
+| `B-6 Windsurf` | `blocked_brand_asset` | 公式ロゴ素材と利用条件の確認 |
+| `B-7 Claude Code` | `blocked_brand_asset` | 公式ロゴ素材と利用条件の確認 |
+| `B-8 Codex` | `blocked_brand_asset` | OpenAI/Codex の公式素材確認 |
 | `F-1 JavaScript` | `ready_for_regen` | ロゴなしで再生成可能 |
-| `F-60 GitHub` | `blocked_logo_asset` | GitHub 公式ロゴ合成で進める候補 |
+| `F-60 GitHub` | `blocked_brand_asset` | GitHub 公式ロゴ合成で進める候補 |
 
 ## ルールの入口
 

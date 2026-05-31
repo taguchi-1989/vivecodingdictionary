@@ -21,7 +21,7 @@
 
 ### Character A: Reader Woman
 
-用途: 読者、聞き手、非エンジニア視点、要件を確認する人。
+用途: 読者視点、要件確認、操作、説明、判断。女性キャラを「聞き手専用」に固定しない。
 
 - 成人女性に見えるが、個人を特定できない中性的な顔。
 - 肩くらいの黒髪。単純な外形で、細かい髪束は描かない。
@@ -31,7 +31,7 @@
 
 ### Character B: Teacher Man
 
-用途: 教える人、説明者、開発者視点、設計・レビュー・ターミナル操作。
+用途: 開発者視点、設計、レビュー、操作、説明、質問。男性キャラを「先生専用」に固定しない。
 
 - 成人男性に見えるが、個人を特定できない中性的な顔。
 - 短い黒髪。前髪は少しだけ横に流す。
@@ -54,11 +54,51 @@
 
 ## 使い分け
 
-- 読者の理解、疑問、要件確認: Character A を主役にする。
-- 開発ツールや言語、説明、設計: Character B を主役にする。
+- 読者の理解、疑問、要件確認: Character A を主役にしやすいが、説明役にもしてよい。
+- 開発ツールや言語、説明、設計: Character B を主役にしやすいが、確認役や質問役にもしてよい。
 - AI の支援や自律処理: Character C を小さく添える。
 - 1 枚に全員を入れる必要はない。主題が弱くなる場合は 1 人だけでよい。
 - 人物が不要な純粋な概念図では、キャラを入れず図形だけでもよい。
+
+## 役割ローテーション
+
+技術力や判断力を性別に紐づけない。キャラクターの見た目は固定するが、絵の中の役割は回ごとに変える。
+
+使える `role_balance`:
+
+| 値 | 構図 |
+| :-- | :-- |
+| `male_explains` | Character B がボードを示し、Character A が確認する |
+| `female_explains` | Character A がボードを示し、Character B が確認する |
+| `both_review` | 2 人とも同じ図を見て共同レビューする |
+| `female_operates_male_checks` | Character A が PC 操作、Character B が結果確認 |
+| `male_operates_female_checks` | Character B が PC 操作、Character A が結果確認 |
+| `solo_female_works` | Character A だけで操作・確認する |
+| `solo_male_works` | Character B だけで操作・確認する |
+| `robot_supports` | Character C が小さな記号カードで補助し、人間が確認する |
+| `diagram_only` | 人物もロボットも出さず、図解だけで見せる |
+
+同じ `role_balance` を連続させすぎない。特に「男性が説明、女性が聞く」構図だけに偏らないようにする。
+
+## 手とポーズ
+
+手や指は破綻しやすいため、ポーズは単純にする。
+
+避ける構図:
+
+- 両手を大きく見せる説明ポーズ。
+- 指差しとペン持ちを同時にさせる。
+- 片手に複数の物を持たせる。
+- 人物 2 人が同時に細かい物を操作する。
+- 手前に大きな手を置く。
+- Character C を含めて全員に棒やペンを持たせる。
+
+推奨:
+
+- 片手だけを軽く上げる。
+- もう片方の手は机、ノート、PC の陰に隠す。
+- 説明は手のポーズではなく、ボード上の矢印、ノード、チェックで表現する。
+- 持ち物は 1 人 1 つまでにする。
 
 ## プロンプト共通ブロック
 
@@ -75,6 +115,10 @@ rounded-rectangle head, two dot eyes, a small box body, thin line arms, white or
 very light gray body, and blue only as a tiny active-status accent. Keep faces
 symbolic and non-identifiable. Do not create new mascot designs, animal
 features, realistic portraits, brand marks, text, or clothing logos.
+Keep the character identities stable but rotate their roles. Do not always make
+the man the explainer and the woman the listener. Use simple poses with at most
+one clear hand gesture per person, and express explanations with arrows, nodes,
+and checks rather than complex fingers or hand-held objects.
 ```
 
 ## 目視確認
@@ -86,3 +130,5 @@ features, realistic portraits, brand marks, text, or clothing logos.
 - 顔が具体的すぎないか。
 - ロボットが企業マスコットや動物風になっていないか。
 - キャラが主題を邪魔していないか。
+- 性別による説明役・聞き手役の固定化が起きていないか。
+- 手、指、持ち物が破綻していないか。
