@@ -162,7 +162,7 @@ def build_html(items: list[tuple[Path, str]]) -> str:
 
     parts.append("""</main>
 <footer>
-  Repo: <a href=\"https://github.com/Taguchi-1989/ViveCodingDictionary\">Taguchi-1989/ViveCodingDictionary</a>
+  Repo: <a href=\"https://github.com/Taguchi-1989/VibeCodingDictionary\">Taguchi-1989/VibeCodingDictionary</a>
   ／ 再生成: <code>python3 scripts/generate_site_index.py</code>
 </footer>
 <script>

@@ -57,7 +57,7 @@ Obsidian Git プラグインは **isomorphic-git**（JavaScript 実装の git）
 1. 左下歯車 → コミュニティプラグイン → **Obsidian Git** の設定を開く
 2. 右サイドバーで **Obsidian Git のコマンドパレット**（アイコン）を開く、または左上ハンバーガーメニュー → コマンドパレット（`Ctrl+P` 相当）から `Obsidian Git: Clone an existing remote repo` を検索して実行
 3. ダイアログが出たら：
-   - **URL**: `https://<PAT>@github.com/Taguchi-1989/ViveCodingDictionary.git`
+   - **URL**: `https://<PAT>@github.com/Taguchi-1989/VibeCodingDictionary.git`
      - `<PAT>` のところに、Step 2 でコピーしたトークン文字列をそのまま埋め込む（前後の `@` と `https://` の間に入れる）
    - **Depth**: 空欄のまま
 4. クローンが走る（初回は 1〜3 分かかる）

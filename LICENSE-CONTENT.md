@@ -32,7 +32,7 @@
   - ライセンスへのリンクを提供してください
   - 変更があったらその旨を示してください
   - 元の著作者: **VibeCodingDictionary Author (Taguchi-1989)**
-  - 出典 URL: <https://github.com/Taguchi-1989/ViveCodingDictionary>
+  - 出典 URL: <https://github.com/Taguchi-1989/VibeCodingDictionary>
 
 - **継承 (SA)**
   - もしマテリアルをリミックス、改変、または別の作品のベースにした場合、あなたは改変したマテリアルを **元と同じ CC BY-SA 4.0 ライセンス** の下に頒布しなければなりません
@@ -42,7 +42,7 @@
 ```
 Based on "バイブコーディング図鑑 (VibeCodingDictionary)"
 by Taguchi-1989, licensed under CC BY-SA 4.0.
-https://github.com/Taguchi-1989/ViveCodingDictionary
+https://github.com/Taguchi-1989/VibeCodingDictionary
 ```
 
 ## 法的な詳細
