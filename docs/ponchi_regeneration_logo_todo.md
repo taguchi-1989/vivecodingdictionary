@@ -146,3 +146,44 @@ regeneration prompts. In particular:
   clean simple editorial diagram style: smooth uniform black lines, flat gray
   fills, minimal shading, no hatching, and no scratchy hand-drawn texture.
 - The revised prompt is stored at `assets/ponchi/prompts/B-5.md`.
+
+## Batch 002 remaining TODO
+
+Current batch: `ponchi-batch-002`, entries `B-10` through `B-29`.
+
+Completed in this checkpoint:
+
+- 20 prompt briefs exist under `assets/ponchi/pipeline_prompts/ponchi-batch-002/`.
+- 20 base images exist under `assets/ponchi/experiments/batches/ponchi-batch-002/`.
+- Base audit passes for all 20 items: see
+  `ledgers/ponchi_batch_002_base_audit.csv`.
+- Five official-logo overlays are staged as final review candidates:
+  `B-20 Vercel`, `B-21 Netlify`, `B-22 Cloudflare`, `B-28 Render`,
+  and `B-29 Supabase`.
+- Candidate sheet:
+  `assets/ponchi/final_candidates/ponchi-batch-002/final_candidates_contact_sheet.png`.
+
+Open TODO:
+
+- Visually approve or reject the five `review_pending` final candidates before
+  copying anything into `assets/ponchi/final/`.
+- Keep `assets/ponchi/final/*.webp` unchanged until explicit promotion. The
+  existing final WebP files are legacy evidence, not approved regenerated
+  images.
+- Resolve official logo source review for the 15 remaining `overlay_wait`
+  entries:
+  `B-10 Devin`, `B-11 Bolt.new`, `B-12 Perplexity`, `B-13 ElevenLabs`,
+  `B-14 Genspark`, `B-15 Microsoft Copilot`, `B-16 Microsoft 365 Copilot`,
+  `B-17 Edge Copilot`, `B-18 Aqua Voice`, `B-19 Claude Cowork`, `B-23 AWS`,
+  `B-24 Google Cloud`, `B-25 Azure`, `B-26 Azure OpenAI`, and `B-27 Vertex AI`.
+- For Microsoft, Google, and AWS entries, decide whether the official brand
+  lockup, product icon, or no-logo treatment is policy-correct before overlay.
+- Do not use third-party logo downloads. If an official source is unclear, keep
+  the item in `overlay_wait` and document the blocker in
+  `docs/brand_usage_audit.md`.
+- After each new official overlay, rerun:
+  `scripts/ponchi_batch_plan.py`, `scripts/ponchi_batch_audit.py`,
+  `scripts/ponchi_pipeline_dashboard.py`, and
+  `scripts/ponchi_stage_final_candidates.py`.
+- Continue prioritizing B and later chapters. A-series remediation remains
+  lower priority unless explicitly requested.

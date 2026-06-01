@@ -85,7 +85,8 @@ AI 生成してはいけないもの:
 - lockup は原則として上部右側の白い余白に置く。
 - 標準座標は `docs/ponchi_logo_overlay_pipeline.md` と `scripts/composite_official_logo.py` を正とする。`1254x627` では横幅 `520px`、右余白 `48px`、`x=686`, `y=36` を基本にする。右上寄せのため、横幅を変える場合は `x = 1254 - 48 - logo_width` で計算する。
 - 余白は、合成後の公式素材が窮屈に見えない程度に広く確保する。
-- AI 生成時は、右上に最大候補 `600px` の lockup が置ける程度の白い余白を作る。ただし、2:1 全体は完成した誌面として見えるように、余白の外側で主図解を成立させる。
+- AI 生成時は、実際に使う lockup に合わせた必要最小限の白い余白を作る。標準 `520px` lockup の場合、実効 clearspace はおおむね横 `520-580px`、縦 `150-220px` までを目安にする。右半分や上半分が空き地に見えるほど広く取らない。
+- 2:1 全体は完成した誌面として見えるように、余白の外側で主図解を成立させる。主図解、人物、フローのまとまりはキャンバス幅の半分以上を使う。
 - ロゴ予定位置の下には、人物、顔、手、重要ノード、矢印、読者が意味を取る主図形を置かない。
 - 白い余白は「後から貼るための空き」ではなく、紙面・壁面・空のような静かな negative space として最初から構図に組み込む。
 - ロゴの周囲に独自の枠、カード、ラベル、影、発光、吹き出しを足さない。
@@ -103,12 +104,16 @@ AI 生成してはいけないもの:
 - 余白の外側に、説明したい概念、人物、矢印、ノードの主役が収まっている。
 - ロゴが入った後に、視線が「ロゴ -> 主図解」または「主図解 -> ロゴ」へ自然に流れる。
 - ロゴなし状態でも破綻しないが、ロゴを入れるとブランド識別が完成する。
+- ロゴ clearspace 以外の領域が、意味のある主図解で十分に使われている。
+- `1254x627` では、非白領域の概算 bounding box coverage が 50% を大きく下回らない。
 
 不採用にするベース画像:
 
 - 2:1 全面を小物や線で埋め、ロゴを載せると情報を隠す。
 - ロゴ予定位置に薄い模様、薄いアイコン、薄い文字、カード枠、プレースホルダーがある。
 - 右上余白だけが浮いて、未完成な空白に見える。
+- 右側または上側がロゴ予定地以上に大きく空き、主題が小さく寄っている。
+- ロゴ予定地を確保するために、人物や主図解がサムネイルで読めないサイズになっている。
 - ロゴを入れると広告バナーやスポンサー枠のように見える。
 
 ## プロンプト共通ブロック
@@ -126,15 +131,17 @@ only if they do not resemble any real brand asset.
 公式素材の余白指定が必要なプロンプトでは、次も入れる。
 
 ```text
-Official asset clearspace: reserve a clean blank white area in the upper right
-for a later official lockup overlay, designed as intentional negative space
-inside the 2:1 composition. Keep the rest of the illustration complete and
-meaningful, but do not place any character, face, hand, important node, arrow,
-diagram element, text, icon, pattern, or decorative mark under the future logo
-area. On a 1254x627 canvas, the primary official lockup should be composited at
-about 500-520px wide, preserving the official asset's aspect ratio and built-in
-clearspace. Do not draw a box, card, label, badge, border, shadow, glow,
-placeholder, or icon in that area.
+Official asset clearspace: reserve a controlled clean blank white area in the
+upper right for a later official lockup overlay, designed as intentional
+negative space inside the 2:1 composition. Keep the rest of the illustration
+complete and meaningful; the main subject, character group, or diagram flow
+must occupy more than half of the canvas width. Do not place any character,
+face, hand, important node, arrow, diagram element, text, icon, pattern, or
+decorative mark under the future logo area. On a 1254x627 canvas, the primary
+official lockup should be composited at about 500-520px wide, preserving the
+official asset's aspect ratio and built-in clearspace. Do not reserve an empty
+half-page for the logo. Do not draw a box, card, label, badge, border, shadow,
+glow, placeholder, or icon in that area.
 ```
 
 ## チェックリスト
@@ -146,6 +153,7 @@ placeholder, or icon in that area.
 - GitHub の Octocat、Copilot アイコン、Gemini の星、OpenAI knot などに見える図形が混ざっていないか。
 - アプリ画面やクラウドコンソールの実 UI に見えるものがないか。
 - 汎用アイコンが、特定ブランドのサービスアイコンに寄っていないか。
+- ロゴ clearspace を取りすぎて、主図解が小さくなっていないか。
 
 ## 既知の注意
 

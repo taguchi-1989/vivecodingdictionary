@@ -1,0 +1,4 @@
+entry_id,source_file,raw_file,raw_size,standard_file,standard_size,bbox_coverage
+B-2,C:\Users\tgch1\.codex\generated_images\019e7cda-80be-7c42-8401-765b342aadb1\ig_0c31f715a96804df016a1d8dcf075c8191927e3d2766789d05.png,B-2_base_raw.png,1774x887,B-2_base_1254x627.png,1254x627,0.837
+B-3,C:\Users\tgch1\.codex\generated_images\019e7cda-80be-7c42-8401-765b342aadb1\ig_0c31f715a96804df016a1d8e2664108191b56cb4cc9ca4ecb9.png,B-3_base_raw.png,1774x887,B-3_base_1254x627.png,1254x627,0.798
+B-8,C:\Users\tgch1\.codex\generated_images\019e7cda-80be-7c42-8401-765b342aadb1\ig_0c31f715a96804df016a1d8e8eddcc81918b1f5a1f6ed2686e.png,B-8_base_raw.png,1774x887,B-8_base_1254x627.png,1254x627,0.667
