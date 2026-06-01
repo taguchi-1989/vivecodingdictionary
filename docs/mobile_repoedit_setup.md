@@ -57,7 +57,7 @@ pnpm install
 
 [github.com/settings/personal-access-tokens](https://github.com/settings/personal-access-tokens) で新規発行：
 
-- Repository access: **Only select repositories** → `Taguchi-1989/ViveCodingDictionary` ※リポ名 typo に注意
+- Repository access: **Only select repositories** → `Taguchi-1989/VibeCodingDictionary` ※リポ名 typo に注意
 - Repository permissions:
   - **Contents: Read and write**
 - 有効期限：90 日（更新カレンダーに入れておく）
@@ -93,7 +93,7 @@ openssl rand -hex 32 | wrangler secret put SESSION_SECRET
 ALLOWED_ORIGIN = "https://<your-pwa-host>"
 WEB_ORIGIN = "https://<your-pwa-host>"
 GITHUB_REPO_OWNER = "Taguchi-1989"
-GITHUB_REPO_NAME = "ViveCodingDictionary"   # 既存のリポ名（typo を含む）
+GITHUB_REPO_NAME = "VibeCodingDictionary"   # 既存のリポ名（typo を含む）
 GITHUB_BRANCH = "mobile-drafts"
 ALLOWED_LOGIN = "Taguchi-1989"               # 本人のみ通す
 ```

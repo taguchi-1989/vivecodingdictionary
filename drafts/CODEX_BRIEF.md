@@ -118,5 +118,5 @@ textures, generous whitespace. Three characters arranged side by side.
 
 ---
 
-参考リポジトリ: <https://github.com/Taguchi-1989/ViveCodingDictionary>
+参考リポジトリ: <https://github.com/Taguchi-1989/VibeCodingDictionary>
 ライセンス: コード MIT / 本文 CC BY-SA 4.0

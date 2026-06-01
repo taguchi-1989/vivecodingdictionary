@@ -2,7 +2,7 @@
 
 *2026-04-23 更新。letter 別・サブ分類付き。各エントリは「ID — タイトル — 一言」の三点セット。*
 
-*リポジトリ：<https://github.com/Taguchi-1989/ViveCodingDictionary>（以下ここで管理）*
+*リポジトリ：<https://github.com/Taguchi-1989/VibeCodingDictionary>（以下ここで管理）*
 
 *この回の変更： (1) xAI を 4 番目ベンダーとして D-30〜34 に挿入、その他クローズド（Cursor）を D-35〜39 に新設し、以降の D サブを全て +10 シフト、(2) Cursor Composer は G-37 → D-35 へ移動（モデルとして扱う）、(3) 「アクロミトス」→「Claude Mitos モデル」に訂正し D-14 に追加、(4) 「A step」→「ACE-Step 1.5」として B-61 で確定、(5) D-30 Grok（xAI 系）・F-44 pnpm を追加、(6) 番号運用の再検討を TODO 化。*
 
@@ -632,7 +632,7 @@
 
 ### リポジトリ
 
-- 管理場所：<https://github.com/Taguchi-1989/ViveCodingDictionary>
+- 管理場所：<https://github.com/Taguchi-1989/VibeCodingDictionary>
 
 ## カウント
 
