@@ -1,5 +1,7 @@
 # OS
 .DS_Store
+__MACOSX/
+._*
 Thumbs.db
 desktop.ini
 
@@ -59,3 +61,7 @@ scripts/_batch_*.py
 # ポンチ絵の原寸 PNG はローカル保管のみ（デプロイ・追跡は .webp）。
 # 再生成: python3 scripts/convert_ponchi_to_webp.py
 assets/ponchi/final/*.png
+
+# ロゴ素材ZIPの展開時に混ざる一時ファイル・今回のロゴ作業に不要なプレス素材
+assets/logos/anthropic/anthropic-press-kit-response.bin
+assets/logos/anthropic/anthropic-media-resources/Anthropic media resources/Anthropic leadership/
