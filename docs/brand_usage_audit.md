@@ -123,6 +123,41 @@ substitutes.
   - Use the official v0 light logo for B-9 on white logo clearspace.
   - Use the official Vercel light logotype for B-20 on white logo clearspace.
 
+## StackBlitz / Bolt.new
+
+- Source checked: `https://stackblitz.com/github/stackblitz/bolt.new`
+- Official repository asset checked:
+  `https://github.com/stackblitz/bolt.new/blob/main/icons/logo-text.svg`
+- Local assets:
+  - `assets/logos/bolt/bolt-logo-text-official.svg`
+  - `assets/logos/bolt/bolt-logo-text-official-512.png`
+  - `assets/logos/bolt/bolt-public-logo-official.svg`
+- Local status: official Bolt wordmark asset imported from the official
+  StackBlitz `bolt.new` repository and applied to B-11. A distinct `.new`
+  suffix lockup was not used.
+- Working rule:
+  - Do not generate Bolt.new marks, icons, logos, product UI, or brand-color
+    substitutes from prompts.
+  - Use the official Bolt wordmark from the StackBlitz `bolt.new` repository
+    on white logo clearspace.
+  - Do not synthesize a `.new` wordmark suffix.
+
+## Perplexity
+
+- Source checked: `https://www.perplexity.ai/hub/about`
+- Official brand guidelines checked: `https://live.standards.site/perplexity`
+- Official asset checked:
+  `https://firebasestorage.googleapis.com/v0/b/standards-site-beta.appspot.com/o/documents%2F6t12iheczyb%2F732776432bb%2FPerplexity-Primary-Lockup-Offblack.svg?alt=media&token=d99f057b-1d7e-46b5-92d7-545a258ff0f5`
+- Local assets:
+  - `assets/logos/perplexity/Perplexity-Primary-Lockup-Offblack.svg`
+  - `assets/logos/perplexity/Perplexity-Primary-Lockup-Offblack-512.png`
+- Local status: Perplexity official primary offblack lockup imported and
+  applied to B-12.
+- Working rule:
+  - Do not generate Perplexity marks, icons, logos, product UI, or brand-color
+    substitutes from prompts.
+  - Use the official offblack primary lockup for B-12 on white logo clearspace.
+
 ## Netlify
 
 - Source checked: `https://www.netlify.com/press/`
@@ -190,3 +225,71 @@ substitutes.
     substitutes from prompts.
   - Use the official Supabase light wordmark for B-29 on white logo
     clearspace.
+
+## ElevenLabs
+
+- Source checked: `https://elevenlabs.io/press`
+- Official logo assets checked:
+  - `ElevenLabs Logo black (SVG)`
+  - `Download all`
+- Local assets:
+  - `assets/logos/elevenlabs/elevenlabs-logo-black.svg`
+  - `assets/logos/elevenlabs/elevenlabs-logos.zip`
+- Local status: ElevenLabs official black SVG imported from the official press
+  page and applied to B-13.
+- Working rule:
+  - Do not generate ElevenLabs marks, icons, logos, product UI, or brand-color
+    substitutes from prompts.
+  - Use the official black SVG for B-13 on white logo clearspace.
+
+## Genspark
+
+- Source checked: `https://www.genspark.ai/brand`
+- Source status: official brand guidelines confirmed. The page documents logo
+  variants, light/dark usage, co-branding rules, and official downloads in
+  Figma, Adobe Illustrator, and PDF formats.
+- Local status: official source is confirmed, but local asset import is still
+  incomplete because direct local download is blocked by the site's Cloudflare
+  challenge in the shell environment.
+- Working rule:
+  - Do not generate Genspark marks, icons, logos, product UI, or brand-color
+    substitutes from prompts.
+  - Use only the full official lockup on light background once the official
+    asset file is imported.
+
+## Batch 002 unresolved source decisions
+
+These items remain blocked because the official-source question is not the same
+as having a recognizable logo somewhere on the web.
+
+- Microsoft / Copilot / Azure:
+  - Source checked: `https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks`
+  - Source status: Microsoft confirms that product names, logos, app icons, and
+    related designs are Microsoft brand assets and that many logo/app-icon uses
+    require a license first.
+  - Working decision: keep B-15, B-16, B-17, B-25, and B-26 in
+    `official_logo_source_review_required` until the specific product mark and
+    permitted usage are confirmed.
+- Google Cloud / Vertex AI:
+  - Sources checked:
+    - `https://about.google/brand-resource-center/`
+    - `https://cloud.google.com/icons/`
+  - Source status: Google has brand guidance and an official Google Cloud
+    product icon library, but B-24 and B-27 still need a policy-correct choice
+    between a brand lockup, product icon, or no-logo treatment.
+  - Working decision: keep B-24 and B-27 in
+    `official_logo_source_review_required`.
+- AWS:
+  - Source checked: `https://aws.amazon.com/trademark-guidelines/`
+  - Source status: AWS trademark guidance covers AWS marks and AWS logos. The
+    local AWS Architecture Icons package is useful for architecture diagrams but
+    is not the same as a primary AWS brand lockup for B-23.
+  - Working decision: keep B-23 in `official_logo_source_review_required`.
+- Claude Cowork:
+  - Sources checked:
+    - `https://support.claude.com/en/articles/9266767-what-is-the-claude-team-plan`
+    - `https://claude.com/pricing/team`
+  - Source status: official sources use Claude Team / Team plan language. A
+    distinct official `Claude Cowork` product logo has not been confirmed.
+  - Working decision: keep B-19 in `official_logo_source_review_required`; do
+    not apply the generic Claude logo until the entry naming decision is made.

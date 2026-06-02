@@ -1,0 +1,3 @@
+entry_id,title,source_file,source_type,candidate_png,candidate_webp,candidate_status
+C-1,OpenAI,assets\ponchi\experiments\batches\ponchi-batch-003\C-1_overlay_1254x627.png,review_pending_overlay,C-1_candidate.png,C-1_candidate.webp,review_pending
+C-2,Anthropic,assets\ponchi\experiments\batches\ponchi-batch-003\C-2_overlay_1254x627.png,review_pending_overlay,C-2_candidate.png,C-2_candidate.webp,review_pending

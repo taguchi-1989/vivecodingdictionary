@@ -157,25 +157,34 @@ Completed in this checkpoint:
 - 20 base images exist under `assets/ponchi/experiments/batches/ponchi-batch-002/`.
 - Base audit passes for all 20 items: see
   `ledgers/ponchi_batch_002_base_audit.csv`.
-- Five official-logo overlays are staged as final review candidates:
-  `B-20 Vercel`, `B-21 Netlify`, `B-22 Cloudflare`, `B-28 Render`,
-  and `B-29 Supabase`.
+- Six official-logo overlays are staged as final review candidates:
+  `B-13 ElevenLabs`, `B-20 Vercel`, `B-21 Netlify`, `B-22 Cloudflare`,
+  `B-28 Render`, and `B-29 Supabase`.
 - Candidate sheet:
   `assets/ponchi/final_candidates/ponchi-batch-002/final_candidates_contact_sheet.png`.
 
 Open TODO:
 
-- Visually approve or reject the five `review_pending` final candidates before
-  copying anything into `assets/ponchi/final/`.
+- Keep the eight accepted overlay candidates staged outside `assets/ponchi/final/`
+  until explicit promotion.
 - Keep `assets/ponchi/final/*.webp` unchanged until explicit promotion. The
   existing final WebP files are legacy evidence, not approved regenerated
   images.
-- Resolve official logo source review for the 15 remaining `overlay_wait`
+- Resolve official logo source review for the 12 remaining `overlay_wait`
   entries:
-  `B-10 Devin`, `B-11 Bolt.new`, `B-12 Perplexity`, `B-13 ElevenLabs`,
-  `B-14 Genspark`, `B-15 Microsoft Copilot`, `B-16 Microsoft 365 Copilot`,
-  `B-17 Edge Copilot`, `B-18 Aqua Voice`, `B-19 Claude Cowork`, `B-23 AWS`,
-  `B-24 Google Cloud`, `B-25 Azure`, `B-26 Azure OpenAI`, and `B-27 Vertex AI`.
+  `B-10 Devin`, `B-14 Genspark`, `B-15 Microsoft Copilot`,
+  `B-16 Microsoft 365 Copilot`, `B-17 Edge Copilot`, `B-18 Aqua Voice`,
+  `B-19 Claude Cowork`, `B-23 AWS`, `B-24 Google Cloud`, `B-25 Azure`,
+  `B-26 Azure OpenAI`, and `B-27 Vertex AI`.
+- `B-11 Bolt.new` moved out of `overlay_wait`: official StackBlitz `bolt.new`
+  repository wordmark was imported and overlaid.
+- `B-12 Perplexity` moved out of `overlay_wait`: official Perplexity Brand
+  Guidelines offblack primary lockup was imported and overlaid.
+- `B-13 ElevenLabs` moved out of `overlay_wait`: official press-page logo was
+  imported and overlaid.
+- `B-14 Genspark` moved from source review to source-available/import-blocked:
+  official brand page confirms the logo system and downloads, but local asset
+  import is still blocked by the site's Cloudflare challenge.
 - For Microsoft, Google, and AWS entries, decide whether the official brand
   lockup, product icon, or no-logo treatment is policy-correct before overlay.
 - Do not use third-party logo downloads. If an official source is unclear, keep

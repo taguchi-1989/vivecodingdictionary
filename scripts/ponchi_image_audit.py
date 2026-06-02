@@ -47,21 +47,57 @@ def clearspace_ink_ratio(image: Image.Image, x_start_ratio: float, y_end_ratio: 
     return ink / total
 
 
-def audit_image(path: Path, args: argparse.Namespace) -> dict[str, str]:
+def entry_id_from_path(path: Path) -> str:
+    name = path.name
+    for suffix in (
+        "_base_1254x627.png",
+        "_overlay_1254x627.png",
+        "_base_selected_1254x627.png",
+        ".webp",
+        ".png",
+    ):
+        if name.endswith(suffix):
+            return name[: -len(suffix)]
+    return path.stem.split("_", 1)[0]
+
+
+def load_clearspace_requirements(args: argparse.Namespace) -> dict[str, bool]:
+    if not args.ledger or not args.batch_id:
+        return {}
+    requirements: dict[str, bool] = {}
+    with args.ledger.open("r", encoding="utf-8-sig", newline="") as handle:
+        for row in csv.DictReader(handle):
+            if row.get("batch_id") != args.batch_id:
+                continue
+            entry_id = row.get("entry_id", "")
+            logo_need = row.get("logo_need", "")
+            logo_status = row.get("logo_status", "")
+            requirements[entry_id] = not (
+                logo_need in {"not_needed", "avoid", "none"}
+                or logo_status in {"logo_avoid", "not_required"}
+            )
+    return requirements
+
+
+def audit_image(path: Path, args: argparse.Namespace, clearspace_requirements: dict[str, bool]) -> dict[str, str]:
     image = Image.open(path)
     ink = ink_mask(image)
     density = bbox_coverage(image, ink)
     clearspace = clearspace_ink_ratio(image, args.clearspace_x_start, args.clearspace_y_end)
+    entry_id = entry_id_from_path(path)
+    clearspace_required = clearspace_requirements.get(entry_id, True)
     size_ok = image.size == (args.width, args.height)
     density_ok = density >= args.min_bbox_coverage
-    clearspace_ok = clearspace <= args.max_clearspace_ink
+    clearspace_ok = (clearspace <= args.max_clearspace_ink) if clearspace_required else True
     status = "pass" if size_ok and density_ok and clearspace_ok else "review"
     return {
         "file": str(path),
+        "entry_id": entry_id,
         "size": f"{image.width}x{image.height}",
         "size_ok": str(size_ok).lower(),
         "bbox_coverage": f"{density:.3f}",
         "density_ok": str(density_ok).lower(),
+        "clearspace_required": str(clearspace_required).lower(),
         "clearspace_ink_ratio": f"{clearspace:.4f}",
         "clearspace_ok": str(clearspace_ok).lower(),
         "status": status,
@@ -72,13 +108,14 @@ def write_markdown(rows: list[dict[str, str]], out: Path) -> None:
     out.parent.mkdir(parents=True, exist_ok=True)
     with out.open("w", encoding="utf-8", newline="\n") as handle:
         handle.write("# Ponchi Image Audit\n\n")
-        handle.write("| file | size | bbox | clearspace ink | status |\n")
-        handle.write("| :-- | :-- | --: | --: | :-- |\n")
+        handle.write("| file | size | bbox | clearspace required | clearspace ink | status |\n")
+        handle.write("| :-- | :-- | --: | :-- | --: | :-- |\n")
         for row in rows:
             handle.write(
                 "| "
                 f"`{Path(row['file']).name}` | `{row['size']}` | "
-                f"{row['bbox_coverage']} | {row['clearspace_ink_ratio']} | "
+                f"{row['bbox_coverage']} | `{row['clearspace_required']}` | "
+                f"{row['clearspace_ink_ratio']} | "
                 f"`{row['status']}` |\n"
             )
 
@@ -123,9 +160,12 @@ def main() -> int:
     parser.add_argument("--clearspace-x-start", type=float, default=0.60)
     parser.add_argument("--clearspace-y-end", type=float, default=0.25)
     parser.add_argument("--max-clearspace-ink", type=float, default=0.015)
+    parser.add_argument("--ledger", type=Path, default=None)
+    parser.add_argument("--batch-id", default=None)
     args = parser.parse_args()
 
-    rows = [audit_image(path, args) for path in args.images]
+    clearspace_requirements = load_clearspace_requirements(args)
+    rows = [audit_image(path, args, clearspace_requirements) for path in args.images]
     if args.out_csv:
         args.out_csv.parent.mkdir(parents=True, exist_ok=True)
         with args.out_csv.open("w", encoding="utf-8", newline="") as handle:

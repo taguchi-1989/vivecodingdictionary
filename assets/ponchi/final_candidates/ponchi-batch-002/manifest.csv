@@ -1,6 +1,9 @@
 entry_id,title,source_file,source_type,candidate_png,candidate_webp,candidate_status
-B-20,Vercel,assets\ponchi\experiments\batches\ponchi-batch-002\B-20_overlay_1254x627.png,review_pending_overlay,B-20_candidate.png,B-20_candidate.webp,review_pending
-B-21,Netlify,assets\ponchi\experiments\batches\ponchi-batch-002\B-21_overlay_1254x627.png,review_pending_overlay,B-21_candidate.png,B-21_candidate.webp,review_pending
-B-22,Cloudflare,assets\ponchi\experiments\batches\ponchi-batch-002\B-22_overlay_1254x627.png,review_pending_overlay,B-22_candidate.png,B-22_candidate.webp,review_pending
-B-28,Render,assets\ponchi\experiments\batches\ponchi-batch-002\B-28_overlay_1254x627.png,review_pending_overlay,B-28_candidate.png,B-28_candidate.webp,review_pending
-B-29,Supabase,assets\ponchi\experiments\batches\ponchi-batch-002\B-29_overlay_1254x627.png,review_pending_overlay,B-29_candidate.png,B-29_candidate.webp,review_pending
+B-11,Bolt.new,assets\ponchi\experiments\batches\ponchi-batch-002\B-11_overlay_1254x627.png,accepted_overlay,B-11_candidate.png,B-11_candidate.webp,accepted
+B-12,Perplexity,assets\ponchi\experiments\batches\ponchi-batch-002\B-12_overlay_1254x627.png,accepted_overlay,B-12_candidate.png,B-12_candidate.webp,accepted
+B-13,ElevenLabs,assets\ponchi\experiments\batches\ponchi-batch-002\B-13_overlay_1254x627.png,accepted_overlay,B-13_candidate.png,B-13_candidate.webp,accepted
+B-20,Vercel,assets\ponchi\experiments\batches\ponchi-batch-002\B-20_overlay_1254x627.png,accepted_overlay,B-20_candidate.png,B-20_candidate.webp,accepted
+B-21,Netlify,assets\ponchi\experiments\batches\ponchi-batch-002\B-21_overlay_1254x627.png,accepted_overlay,B-21_candidate.png,B-21_candidate.webp,accepted
+B-22,Cloudflare,assets\ponchi\experiments\batches\ponchi-batch-002\B-22_overlay_1254x627.png,accepted_overlay,B-22_candidate.png,B-22_candidate.webp,accepted
+B-28,Render,assets\ponchi\experiments\batches\ponchi-batch-002\B-28_overlay_1254x627.png,accepted_overlay,B-28_candidate.png,B-28_candidate.webp,accepted
+B-29,Supabase,assets\ponchi\experiments\batches\ponchi-batch-002\B-29_overlay_1254x627.png,accepted_overlay,B-29_candidate.png,B-29_candidate.webp,accepted

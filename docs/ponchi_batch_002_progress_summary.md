@@ -1,0 +1,46 @@
+# ponchi-batch-002 progress summary
+
+対象: `B-10` から `B-29` までの 20 件。
+
+## 数字サマリー
+
+| 段階 | 件数 | 対象 |
+| --- | ---: | --- |
+| 2:1 base 作成済み | 20 / 20 | B-10 - B-29 全件 |
+| 公式ロゴ確認済み | 9 / 20 | B-11, B-12, B-13, B-14, B-20, B-21, B-22, B-28, B-29 |
+| ロゴ後合成済み | 8 / 20 | B-11, B-12, B-13, B-20, B-21, B-22, B-28, B-29 |
+| final candidate 化済み | 8 / 20 | B-11, B-12, B-13, B-20, B-21, B-22, B-28, B-29 |
+| overlay_wait 残り | 12 / 20 | B-10, B-14, B-15, B-16, B-17, B-18, B-19, B-23, B-24, B-25, B-26, B-27 |
+| final 昇格済み | 0 / 20 | まだ `assets/ponchi/final/` へはコピーしない |
+
+## Entry 一覧
+
+| entry | title | 2:1 base | official logo source | logo overlay | final candidate | current status |
+| --- | --- | --- | --- | --- | --- | --- |
+| B-10 | Devin | done | waiting | not yet | not yet | overlay_wait |
+| B-11 | Bolt.new | done | done | done | accepted | overlay_audit |
+| B-12 | Perplexity | done | done | done | accepted | overlay_audit |
+| B-13 | ElevenLabs | done | done | done | accepted | overlay_audit |
+| B-14 | Genspark | done | source confirmed, import waiting | not yet | not yet | overlay_wait |
+| B-15 | Microsoft Copilot | done | waiting | not yet | not yet | overlay_wait |
+| B-16 | Microsoft 365 Copilot | done | waiting | not yet | not yet | overlay_wait |
+| B-17 | Edge Copilot | done | waiting | not yet | not yet | overlay_wait |
+| B-18 | Aqua Voice | done | waiting | not yet | not yet | overlay_wait |
+| B-19 | Claude Cowork | done | waiting | not yet | not yet | overlay_wait |
+| B-20 | Vercel | done | done | done | accepted | overlay_audit |
+| B-21 | Netlify | done | done | done | accepted | overlay_audit |
+| B-22 | Cloudflare | done | done | done | accepted | overlay_audit |
+| B-23 | AWS | done | waiting | not yet | not yet | overlay_wait |
+| B-24 | Google Cloud | done | waiting | not yet | not yet | overlay_wait |
+| B-25 | Azure | done | waiting | not yet | not yet | overlay_wait |
+| B-26 | Azure OpenAI | done | waiting | not yet | not yet | overlay_wait |
+| B-27 | Vertex AI | done | waiting | not yet | not yet | overlay_wait |
+| B-28 | Render | done | done | done | accepted | overlay_audit |
+| B-29 | Supabase | done | done | done | accepted | overlay_audit |
+
+## Generated locations
+
+- 2:1 base images: `assets/ponchi/experiments/batches/ponchi-batch-002/*_base_1254x627.png`
+- Logo overlay images: `assets/ponchi/experiments/batches/ponchi-batch-002/*_overlay_1254x627.png`
+- Final candidates: `assets/ponchi/final_candidates/ponchi-batch-002/`
+- Candidate contact sheet: `assets/ponchi/final_candidates/ponchi-batch-002/final_candidates_contact_sheet.png`
