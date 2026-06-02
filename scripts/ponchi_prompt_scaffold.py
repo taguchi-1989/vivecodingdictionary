@@ -816,6 +816,106 @@ BATCH_SCENE_OVERRIDES = {
         "supporting_subjects": "A person shows how relevant background changes an assistant's answer; no AI-company logos, chat product UI, readable text, or brand icons.",
         "view_mode": "structure_map",
     },
+    "G-2": {
+        "visual_subject": "A tokenization workflow: a sentence-like blank strip breaks into small colored chunks, then flows into a compact model input meter and output panel.",
+        "supporting_subjects": "A learner sees language split into countable pieces; no readable words, no letters, no tokenizer names, no model/provider logos.",
+        "view_mode": "operation_flow",
+    },
+    "G-3": {
+        "visual_subject": "A dictation workflow: microphone waveform blocks flow into speech recognition tiles, correction controls, and a blank document panel.",
+        "supporting_subjects": "A person speaks into a plain microphone while a laptop turns audio into structured blank text rows; no app UI, no logos, no readable text.",
+        "view_mode": "operation_flow",
+    },
+    "G-4": {
+        "visual_subject": "An instruction hierarchy: top-level rule card, developer instruction card, user request card, and assistant response panel stack in priority order.",
+        "supporting_subjects": "A developer arranges blank rule cards so an assistant follows the correct constraints; no model/provider logos, no chat UI, no readable text.",
+        "view_mode": "structure_map",
+    },
+    "G-5": {
+        "visual_subject": "A context capacity diagram: conversation cards, retrieved notes, and tool results fill a large window meter, with overflow cards waiting outside.",
+        "supporting_subjects": "A person manages which blank notes fit into the working context; no model/provider logos, no chat UI, no readable text.",
+        "view_mode": "structure_map",
+    },
+    "G-6": {
+        "visual_subject": "A one-shot learning setup: one example card guides an assistant response path, with before and after output panels shown as blank layouts.",
+        "supporting_subjects": "A learner gives one demonstration and sees the assistant follow the pattern; no model/provider logos, no readable text, no chat UI.",
+        "view_mode": "operation_flow",
+    },
+    "G-7": {
+        "visual_subject": "An instruction-following evaluation: a request card with checklist icons flows to an assistant panel, then to matching constraint tiles.",
+        "supporting_subjects": "A reviewer checks whether the output obeys structure, tone, and constraints using abstract ticks and alignment marks; no text or logos.",
+        "view_mode": "operation_flow",
+    },
+    "G-8": {
+        "visual_subject": "A deterministic versus nondeterministic comparison: one identical input card splits into a stable repeated output path and a varied output path.",
+        "supporting_subjects": "A person compares repeatability and variation with abstract dice-like randomness and lock-like stability symbols; no labels, no words, no logos.",
+        "view_mode": "before_after",
+    },
+    "G-9": {
+        "visual_subject": "A reasoning effort control panel: low, medium, and high effort lanes expand from quick answer cards to deeper planning and verification cards.",
+        "supporting_subjects": "A user chooses how much invisible work the assistant spends before responding; no model/provider logos, no readable labels, no chat UI.",
+        "view_mode": "structure_map",
+    },
+    "G-10": {
+        "visual_subject": "A prompt refinement workflow: rough request card goes through constraint, example, format, and review blocks before becoming a cleaner instruction card.",
+        "supporting_subjects": "A prompt writer iterates blank instruction cards and sees clearer output structure; no model/provider logos, no readable prompt text.",
+        "view_mode": "operation_flow",
+    },
+    "G-11": {
+        "visual_subject": "A context engineering workflow: goal card, background notes, retrieved facts, tool outputs, and memory cards assemble into one organized context pack.",
+        "supporting_subjects": "A developer selects relevant blank materials before sending them to an assistant; no model/provider logos, no readable text, no chat UI.",
+        "view_mode": "structure_map",
+    },
+    "G-12": {
+        "visual_subject": "An agent design architecture: planner, memory, tool router, action executor, and feedback loop cards connect around a central assistant core.",
+        "supporting_subjects": "A developer designs how an autonomous workflow decides, acts, observes, and revises; no model/provider logos, no readable labels, no product UI.",
+        "view_mode": "structure_map",
+    },
+    "G-13": {
+        "visual_subject": "A few-shot learning setup: several example input-output cards establish a pattern, then a new blank input follows the same output path.",
+        "supporting_subjects": "A learner provides multiple demonstrations before the assistant generalizes; no model/provider logos, no readable words, no chat UI.",
+        "view_mode": "operation_flow",
+    },
+    "G-14": {
+        "visual_subject": "A thinking model workspace: hidden scratch area, planning cards, verification loop, and final answer panel are separated by a privacy boundary.",
+        "supporting_subjects": "A user receives a concise result while abstract internal work happens behind a translucent boundary; no model/provider logos, no readable text.",
+        "view_mode": "structure_map",
+    },
+    "G-15": {
+        "visual_subject": "A retrieval-augmented generation workflow: user question goes to search index, retrieves document cards, then feeds an assistant answer panel.",
+        "supporting_subjects": "A developer connects relevant knowledge to generation; no model/provider logos, no search-engine UI, no readable text.",
+        "view_mode": "operation_flow",
+    },
+    "G-16": {
+        "visual_subject": "An embedding workflow: text/image cards transform into numeric vector dots, then cluster by similarity in a coordinate-like space.",
+        "supporting_subjects": "A learner sees different content mapped into nearby and distant positions; no model/provider logos, no readable text, no math labels.",
+        "view_mode": "operation_flow",
+    },
+    "G-17": {
+        "visual_subject": "A vector database search workflow: query vector enters a similarity index, finds nearest neighbor cards, and returns relevant knowledge tiles.",
+        "supporting_subjects": "A developer searches by meaning rather than exact words; no database/product logos, no readable text, no SQL or code.",
+        "view_mode": "operation_flow",
+    },
+    "G-18": {
+        "visual_subject": "A reasoning chain diagram: a problem card flows through several intermediate thought-step tiles into a checked final answer panel.",
+        "supporting_subjects": "A reviewer sees step-by-step structure without revealing readable reasoning text; no model/provider logos, no chat UI, no words.",
+        "view_mode": "operation_flow",
+    },
+    "G-19": {
+        "visual_subject": "A prompt caching workflow: reusable prefix cards are stored in a cache shelf, then combined with fresh request cards for faster response flow.",
+        "supporting_subjects": "A developer reuses stable context while changing the latest task; no model/provider logos, no readable text, no product UI.",
+        "view_mode": "operation_flow",
+    },
+    "G-20": {
+        "visual_subject": "An agent instruction file workflow: a generic markdown-like file card defines project rules, tool preferences, and task boundaries for an assistant workspace.",
+        "supporting_subjects": "A developer edits a blank configuration file beside an abstract assistant panel; no Claude or Anthropic logos, no readable filename or text.",
+        "view_mode": "structure_map",
+    },
+    "G-21": {
+        "visual_subject": "A multi-agent instruction file workflow: one generic markdown-like file card coordinates several assistant role cards, tools, and handoff arrows.",
+        "supporting_subjects": "A developer sets shared operating rules for multiple abstract agents; no product logos, no readable filename or text, no chat UI.",
+        "view_mode": "structure_map",
+    },
 }
 
 

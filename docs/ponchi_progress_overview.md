@@ -39,8 +39,8 @@ Authoritative sources:
 
 | stage | count |
 | --- | ---: |
-| `brief_needed` | 216 |
-| `overlay_wait` | 103 |
+| `brief_needed` | 207 |
+| `overlay_wait` | 112 |
 | `overlay_audit` | 14 |
 | `overlay_ready` | 12 |
 | `prompt_review` | 4 |
@@ -60,8 +60,9 @@ Authoritative sources:
 | `ponchi-batch-009` | 20 / 20 | 20 / 20 | base complete; 8 entries remain `overlay_wait`, 1 is `overlay_audit` |
 | Wave 003 | 60 / 60 | 60 / 60 | Batches 007-009 base complete; official review/overlay remains |
 | `ponchi-batch-010` | 20 / 20 | 20 / 20 | base complete; 11 entries remain `overlay_wait` |
-| Wave 004 | 20 / 60 | 20 / 60 | Batch 010 base complete; Batches 011-012 not started |
-| Numerically tracked base total | 160 / 350 | 160 / 350 | Batch 003 plus Batches 004-010 |
+| `ponchi-batch-011` | 20 / 20 | 20 / 20 | base complete; 9 entries remain `overlay_wait` |
+| Wave 004 | 40 / 60 | 40 / 60 | Batches 010-011 base complete; Batch 012 not started |
+| Numerically tracked base total | 180 / 350 | 180 / 350 | Batch 003 plus Batches 004-011 |
 
 ## Wave map
 

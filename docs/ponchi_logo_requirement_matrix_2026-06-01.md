@@ -235,6 +235,26 @@
 | `F-190` | サブルーチン | not_needed | `logo_avoid` | none | Batch011 対象。関数呼び出しと再利用の概念図。言語ロゴ不要 |
 | `F-200` | Rust | required | `official_logo_source_review_required` | none | Batch011 対象。Rust 公式ロゴと利用条件を確認するまで、AI 生成ロゴは禁止してベースだけ作る |
 | `G-1` | Context | not_needed | `logo_avoid` | none | 概念図。ロゴ不要 |
+| `G-2` | Token | not_needed | `logo_avoid` | none | Batch012 対象。トークン化の概念図。AI 企業ロゴ不要 |
+| `G-3` | Dictation | not_needed | `logo_avoid` | none | Batch012 対象。音声入力から文字化の概念図。アプリロゴ不要 |
+| `G-4` | System Prompt | not_needed | `logo_avoid` | none | Batch012 対象。指示階層の概念図。モデル/プロバイダロゴ不要 |
+| `G-5` | Context Window | not_needed | `logo_avoid` | none | Batch012 対象。文脈容量の概念図。モデル/プロバイダロゴ不要 |
+| `G-6` | One-shot | not_needed | `logo_avoid` | none | Batch012 対象。1例からの学習/誘導の概念図。モデル/プロバイダロゴ不要 |
+| `G-7` | 指示追従性 | not_needed | `logo_avoid` | none | Batch012 対象。指示と出力の照合図。モデル/プロバイダロゴ不要 |
+| `G-8` | 決定論的／非決定論的 | not_needed | `logo_avoid` | none | Batch012 対象。同じ入力からの安定/ゆらぎ比較。モデル/プロバイダロゴ不要 |
+| `G-9` | effort レベル | not_needed | `logo_avoid` | none | Batch012 対象。推論労力の調整図。モデル/プロバイダロゴ不要 |
+| `G-10` | Prompt Engineering | not_needed | `logo_avoid` | none | Batch012 対象。プロンプト改善の概念図。モデル/プロバイダロゴ不要 |
+| `G-11` | Context Engineering | not_needed | `logo_avoid` | none | Batch012 対象。文脈組み立ての概念図。モデル/プロバイダロゴ不要 |
+| `G-12` | Agent Design | not_needed | `logo_avoid` | none | Batch012 対象。エージェント設計の概念図。モデル/プロバイダロゴ不要 |
+| `G-13` | Few-shot Learning | not_needed | `logo_avoid` | none | Batch012 対象。複数例による誘導の概念図。モデル/プロバイダロゴ不要 |
+| `G-14` | Thinking モデル | not_needed | `logo_avoid` | none | Batch012 対象。内部作業領域の概念図。モデル/プロバイダロゴ不要 |
+| `G-15` | RAG | not_needed | `logo_avoid` | none | Batch012 対象。検索拡張生成の概念図。モデル/プロバイダロゴ不要 |
+| `G-16` | Embedding | not_needed | `logo_avoid` | none | Batch012 対象。ベクトル化の概念図。モデル/プロバイダロゴ不要 |
+| `G-17` | ベクトル DB | not_needed | `logo_avoid` | none | Batch012 対象。ベクトル検索の概念図。DB/製品ロゴ不要 |
+| `G-18` | Chain of Thought | not_needed | `logo_avoid` | none | Batch012 対象。段階的推論の概念図。モデル/プロバイダロゴ不要 |
+| `G-19` | Prompt Caching | not_needed | `logo_avoid` | none | Batch012 対象。再利用される文脈キャッシュの概念図。モデル/プロバイダロゴ不要 |
+| `G-20` | CLAUDE.md | not_needed | `logo_avoid` | none | Batch012 対象。エージェント指示ファイルの汎用図解。Claude/Anthropic ロゴ不要 |
+| `G-21` | AGENTS.md | not_needed | `logo_avoid` | none | Batch012 対象。複数エージェント指示ファイルの汎用図解。製品ロゴ不要 |
 | `J-14` | LLM | not_needed | `logo_avoid` | none | 概念図。ロゴ不要 |
 
 ## ローカル公式素材あり

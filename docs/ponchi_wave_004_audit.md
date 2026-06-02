@@ -18,16 +18,19 @@ Wave 004 covers:
 | batch-010 logo_avoid | 9 |
 | batch-010 overlay_wait | 11 |
 | batch-010 official logo/icon source review required | 11 |
-| batch-011 prompt briefs | 0 |
-| batch-011 prompt lint pass | 0 |
-| batch-011 generated 2:1 bases | 0 |
-| batch-011 base audit pass | 0 |
+| batch-011 prompt briefs | 20 |
+| batch-011 prompt lint pass | 20 |
+| batch-011 generated 2:1 bases | 20 |
+| batch-011 base audit pass | 20 |
+| batch-011 logo_avoid | 11 |
+| batch-011 overlay_wait | 9 |
+| batch-011 official logo/icon source review required | 9 |
 | batch-012 prompt briefs | 0 |
 | batch-012 prompt lint pass | 0 |
 | batch-012 generated 2:1 bases | 0 |
 | batch-012 base audit pass | 0 |
-| Wave 004 generated 2:1 bases | 20 / 60 |
-| Wave 004 base audit pass | 20 / 60 |
+| Wave 004 generated 2:1 bases | 40 / 60 |
+| Wave 004 base audit pass | 40 / 60 |
 
 ## Batch 010 status
 
@@ -72,9 +75,9 @@ Current status:
 
 ## Immediate generation tasks
 
-- Continue Wave 004 with `ponchi-batch-011`.
-- Classify Batch 011 logo needs before generating prompts.
-- Apply the Batch 010 pattern for brand-risky entries: generate a meaningful
+- Continue Wave 004 with `ponchi-batch-012`.
+- Classify Batch 012 logo needs before generating prompts.
+- Apply the Batch 010/011 pattern for brand-risky entries: generate a meaningful
   non-logo base image, keep upper-right clearspace only for official-overlay
   entries, and leave the entry in `overlay_wait` until source review is done.
 - Do not promote or write any Wave 004 output to `assets/ponchi/final/`.
