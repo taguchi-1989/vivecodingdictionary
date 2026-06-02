@@ -56,23 +56,33 @@ Full goal:
   `docs/ponchi_batch_audits/ponchi-batch-011-base-contact-sheet.png`.
 - Batch 011 is 11 `logo_avoid` entries and 9 `overlay_wait` entries that need
   official source review before deterministic logo/icon overlay.
-- Wave 004 base generation is 40/60.
-- Total numerically tracked generated bases are now 180/350.
+- Batch 012 has 20/20 prompt briefs generated:
+  `assets/ponchi/pipeline_prompts/ponchi-batch-012/`.
+- Batch 012 prompt lint passes.
+- Batch 012 has 20/20 generated base images.
+- G-2 - G-21 base images are saved under
+  `assets/ponchi/experiments/batches/ponchi-batch-012/` and passed base audit.
+- Batch 012 contact sheet:
+  `docs/ponchi_batch_audits/ponchi-batch-012-base-contact-sheet.png`.
+- Batch 012 is 20 `logo_avoid` entries and requires no official overlays.
+- Wave 004 base generation is complete: 60/60 generated 2:1 bases and 60/60
+  base audit pass.
+- Total numerically tracked generated bases are now 200/350.
 
 ## Next best actions
 
-1. Continue Wave 004 / Batch 012:
-   - Inspect `ledgers/ponchi_generation_batches.csv` for `ponchi-batch-012`.
+1. Continue Wave 005 / Batch 013:
+   - Inspect `ledgers/ponchi_generation_batches.csv` for `ponchi-batch-013`.
    - Classify logo needs before generation.
    - Add scaffold overrides where the entry text is too abstract or brand-risky.
    - Scaffold prompts and run prompt lint.
 
-2. Generate and audit Batch 012:
+2. Generate and audit Batch 013:
    - Generate `1254x627` 2:1 bases.
    - Keep clearspace only for official-overlay entries.
    - Run `scripts\ponchi_image_audit.py` with the bundled Python runtime.
-   - Run `python scripts\ponchi_batch_audit.py ponchi-batch-012`.
-   - Run `python scripts\ponchi_batch_report.py ponchi-batch-012`.
+   - Run `python scripts\ponchi_batch_audit.py ponchi-batch-013`.
+   - Run `python scripts\ponchi_batch_report.py ponchi-batch-013`.
    - Run `python scripts\ponchi_pipeline_dashboard.py`.
 
 3. Continue official source review:

@@ -25,12 +25,15 @@ Wave 004 covers:
 | batch-011 logo_avoid | 11 |
 | batch-011 overlay_wait | 9 |
 | batch-011 official logo/icon source review required | 9 |
-| batch-012 prompt briefs | 0 |
-| batch-012 prompt lint pass | 0 |
-| batch-012 generated 2:1 bases | 0 |
-| batch-012 base audit pass | 0 |
-| Wave 004 generated 2:1 bases | 40 / 60 |
-| Wave 004 base audit pass | 40 / 60 |
+| batch-012 prompt briefs | 20 |
+| batch-012 prompt lint pass | 20 |
+| batch-012 generated 2:1 bases | 20 |
+| batch-012 base audit pass | 20 |
+| batch-012 logo_avoid | 20 |
+| batch-012 overlay_wait | 0 |
+| batch-012 official logo/icon source review required | 0 |
+| Wave 004 generated 2:1 bases | 60 / 60 |
+| Wave 004 base audit pass | 60 / 60 |
 
 ## Batch 010 status
 
@@ -75,9 +78,10 @@ Current status:
 
 ## Immediate generation tasks
 
-- Continue Wave 004 with `ponchi-batch-012`.
-- Classify Batch 012 logo needs before generating prompts.
-- Apply the Batch 010/011 pattern for brand-risky entries: generate a meaningful
+- Wave 004 base generation is complete: Batches 010-012 all have 20 / 20
+  generated 2:1 bases and 20 / 20 base audit pass.
+- Continue with Wave 005 / `ponchi-batch-013`.
+- Apply the Batch 010-012 pattern for brand-risky entries: generate a meaningful
   non-logo base image, keep upper-right clearspace only for official-overlay
   entries, and leave the entry in `overlay_wait` until source review is done.
 - Do not promote or write any Wave 004 output to `assets/ponchi/final/`.
@@ -87,7 +91,7 @@ Current status:
 Wave 004 is complete only when:
 
 - Batches 010-012 have current batch audit files.
-- Every entry has prompt, 2:1 base, and base audit results.
+- Every entry has prompt, 2:1 base, and base audit results. Done.
 - Every brand/channel/logo item is either `official_logo_applied`,
   `overlay_wait` with reason, or `blocked_brand_asset` with reason.
 - `docs/ponchi_wave_004_handoff.md` is updated with exact next actions.

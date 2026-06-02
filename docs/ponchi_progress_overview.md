@@ -61,8 +61,9 @@ Authoritative sources:
 | Wave 003 | 60 / 60 | 60 / 60 | Batches 007-009 base complete; official review/overlay remains |
 | `ponchi-batch-010` | 20 / 20 | 20 / 20 | base complete; 11 entries remain `overlay_wait` |
 | `ponchi-batch-011` | 20 / 20 | 20 / 20 | base complete; 9 entries remain `overlay_wait` |
-| Wave 004 | 40 / 60 | 40 / 60 | Batches 010-011 base complete; Batch 012 not started |
-| Numerically tracked base total | 180 / 350 | 180 / 350 | Batch 003 plus Batches 004-011 |
+| `ponchi-batch-012` | 20 / 20 | 20 / 20 | base complete; 20 entries are `logo_avoid` |
+| Wave 004 | 60 / 60 | 60 / 60 | Batches 010-012 base complete; official review/overlay remains |
+| Numerically tracked base total | 200 / 350 | 200 / 350 | Batch 003 plus Batches 004-012 |
 
 ## Wave map
 
@@ -71,8 +72,8 @@ Authoritative sources:
 | Wave 001 | `ponchi-batch-001` - `ponchi-batch-003` | 60 | finish B logo pipeline, classify Batch 003, generate first all-chapter base set | active |
 | Wave 002 | `ponchi-batch-004` - `ponchi-batch-006` | 60 | all non-B chapters in ledger order, 2:1 base and brand decisions | base_complete |
 | Wave 003 | `ponchi-batch-007` - `ponchi-batch-009` | 60 | all non-B chapters in ledger order, 2:1 base and brand decisions | base_complete |
-| Wave 004 | `ponchi-batch-010` - `ponchi-batch-012` | 60 | F-heavy batch generation and audit | active |
-| Wave 005 | `ponchi-batch-013` - `ponchi-batch-015` | 60 | F/G/I coverage and logo decisions | not_started |
+| Wave 004 | `ponchi-batch-010` - `ponchi-batch-012` | 60 | F-heavy batch generation and audit | base_complete |
+| Wave 005 | `ponchi-batch-013` - `ponchi-batch-015` | 60 | F/G/I coverage and logo decisions | next |
 | Wave 006 | `ponchi-batch-016` - `ponchi-batch-018` | 50 | remaining chapters completion and final cleanup | not_started |
 
 ## Operating gates
