@@ -1,0 +1,21 @@
+entry_id,title,source_file,source_type,candidate_png,candidate_webp,candidate_status
+F-4,HTML,assets\ponchi\experiments\batches\ponchi-batch-008\F-4_base_1254x627.png,review_pending_base,F-4_candidate.png,F-4_candidate.webp,review_pending
+F-5,CSS,assets\ponchi\experiments\batches\ponchi-batch-008\F-5_base_1254x627.png,review_pending_base,F-5_candidate.png,F-5_candidate.webp,review_pending
+F-6,Markdown,assets\ponchi\experiments\batches\ponchi-batch-008\F-6_base_1254x627.png,review_pending_base,F-6_candidate.png,F-6_candidate.webp,review_pending
+F-7,YAML,assets\ponchi\experiments\batches\ponchi-batch-008\F-7_base_1254x627.png,review_pending_base,F-7_candidate.png,F-7_candidate.webp,review_pending
+F-8,JSON,assets\ponchi\experiments\batches\ponchi-batch-008\F-8_base_1254x627.png,review_pending_base,F-8_candidate.png,F-8_candidate.webp,review_pending
+F-9,SVG,assets\ponchi\experiments\batches\ponchi-batch-008\F-9_base_1254x627.png,review_pending_base,F-9_candidate.png,F-9_candidate.webp,review_pending
+F-10,React,assets\ponchi\experiments\batches\ponchi-batch-008\F-10_overlay_1254x627.png,review_pending_overlay,F-10_candidate.png,F-10_candidate.webp,review_pending
+F-11,Next.js,assets\ponchi\experiments\batches\ponchi-batch-008\F-11_overlay_1254x627.png,review_pending_overlay,F-11_candidate.png,F-11_candidate.webp,review_pending
+F-12,Electron,assets\ponchi\experiments\batches\ponchi-batch-008\F-12_overlay_1254x627.png,review_pending_overlay,F-12_candidate.png,F-12_candidate.webp,review_pending
+F-13,Tauri,assets\ponchi\experiments\batches\ponchi-batch-008\F-13_overlay_1254x627.png,review_pending_overlay,F-13_candidate.png,F-13_candidate.webp,review_pending
+F-14,three.js,assets\ponchi\experiments\batches\ponchi-batch-008\F-14_overlay_1254x627.png,review_pending_overlay,F-14_candidate.png,F-14_candidate.webp,review_pending
+F-15,shadcn/ui,assets\ponchi\experiments\batches\ponchi-batch-008\F-15_overlay_1254x627.png,review_pending_overlay,F-15_candidate.png,F-15_candidate.webp,review_pending
+F-16,Tailwind CSS,assets\ponchi\experiments\batches\ponchi-batch-008\F-16_overlay_1254x627.png,review_pending_overlay,F-16_candidate.png,F-16_candidate.webp,review_pending
+F-17,Astro,assets\ponchi\experiments\batches\ponchi-batch-008\F-17_overlay_1254x627.png,review_pending_overlay,F-17_candidate.png,F-17_candidate.webp,review_pending
+F-20,ESLint,assets\ponchi\experiments\batches\ponchi-batch-008\F-20_overlay_1254x627.png,review_pending_overlay,F-20_candidate.png,F-20_candidate.webp,review_pending
+F-21,Prettier,assets\ponchi\experiments\batches\ponchi-batch-008\F-21_overlay_1254x627.png,review_pending_overlay,F-21_candidate.png,F-21_candidate.webp,review_pending
+F-30,VS Code,assets\ponchi\experiments\batches\ponchi-batch-008\F-30_overlay_1254x627.png,review_pending_overlay,F-30_candidate.png,F-30_candidate.webp,review_pending
+F-34,VS Code 拡張機能,assets\ponchi\experiments\batches\ponchi-batch-008\F-34_overlay_1254x627.png,review_pending_overlay,F-34_candidate.png,F-34_candidate.webp,review_pending
+F-35,Markdown Preview Enhanced,assets\ponchi\experiments\batches\ponchi-batch-008\F-35_overlay_1254x627.png,review_pending_overlay,F-35_candidate.png,F-35_candidate.webp,review_pending
+F-36,Git Graph,assets\ponchi\experiments\batches\ponchi-batch-008\F-36_overlay_1254x627.png,review_pending_overlay,F-36_candidate.png,F-36_candidate.webp,review_pending

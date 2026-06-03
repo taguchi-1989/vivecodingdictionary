@@ -1,0 +1,12 @@
+{
+  "base_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-001\\B-2_base_1254x627.png",
+  "official_asset": "assets\\logos\\anthropic\\anthropic-media-resources\\Anthropic media resources\\Anthropic logos\\Claude logos\\1 Claude logo\\PNG\\Claude logo - Slate.png",
+  "output_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-001\\B-2_overlay_1254x627.png",
+  "overlay_rect": {
+    "x": 686,
+    "y": 36,
+    "width": 520,
+    "height": 114
+  },
+  "note": "Only this rectangle may contain official-asset color exceptions."
+}

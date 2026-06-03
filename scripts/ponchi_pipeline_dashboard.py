@@ -24,6 +24,7 @@ STAGE_ORDER = [
     "overlay_wait",
     "overlay_ready",
     "overlay_audit",
+    "color_audit",
     "blocked_brand_asset",
 ]
 
@@ -198,6 +199,7 @@ def render(rows: list[dict[str, str]]) -> str:
     .prompt_review {{ color: var(--blue); }}
     .overlay_wait {{ color: var(--warn); border-color: #d9b45f; }}
     .overlay_ready, .overlay_audit {{ color: #1f5f3a; border-color: #9fceb0; }}
+    .color_audit {{ color: #123e82; border-color: #8db7e8; }}
     .blocked_brand_asset {{ color: var(--block); border-color: #d9a3a3; }}
     table {{ width: 100%; border-collapse: collapse; font-size: 13px; }}
     th, td {{ border-top: 1px solid var(--line); padding: 7px 8px; text-align: left; vertical-align: top; }}

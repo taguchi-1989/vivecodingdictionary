@@ -1,6 +1,21 @@
 entry_id,title,source_file,source_type,candidate_png,candidate_webp,candidate_status
+A-1,まえがき,assets\ponchi\experiments\batches\ponchi-batch-001\A-1_base_1254x627.png,review_pending_base,A-1_candidate.png,A-1_candidate.webp,review_pending
+A-2,この本の読み方,assets\ponchi\experiments\batches\ponchi-batch-001\A-2_base_1254x627.png,review_pending_base,A-2_candidate.png,A-2_candidate.webp,review_pending
+A-3,図鑑の歩き方,assets\ponchi\experiments\batches\ponchi-batch-001\A-3_base_1254x627.png,review_pending_base,A-3_candidate.png,A-3_candidate.webp,review_pending
+A-4,体験区分の凡例,assets\ponchi\experiments\batches\ponchi-batch-001\A-4_base_1254x627.png,review_pending_base,A-4_candidate.png,A-4_candidate.webp,review_pending
+A-5,読者レベルの凡例,assets\ponchi\experiments\batches\ponchi-batch-001\A-5_base_1254x627.png,review_pending_base,A-5_candidate.png,A-5_candidate.webp,review_pending
+A-6,評価日・時変情報の見方,assets\ponchi\experiments\batches\ponchi-batch-001\A-6_base_1254x627.png,review_pending_base,A-6_candidate.png,A-6_candidate.webp,review_pending
+A-7,図のタイプ,assets\ponchi\experiments\batches\ponchi-batch-001\A-7_base_1254x627.png,review_pending_base,A-7_candidate.png,A-7_candidate.webp,review_pending
+A-8,色・記号の凡例,assets\ponchi\experiments\batches\ponchi-batch-001\A-8_base_1254x627.png,review_pending_base,A-8_candidate.png,A-8_candidate.webp,review_pending
+A-9,索引,assets\ponchi\experiments\batches\ponchi-batch-001\A-9_base_1254x627.png,review_pending_base,A-9_candidate.png,A-9_candidate.webp,review_pending
+A-10,更新履歴と更新方針,assets\ponchi\experiments\batches\ponchi-batch-001\A-10_base_1254x627.png,review_pending_base,A-10_candidate.png,A-10_candidate.webp,review_pending
+A-11,略称表記,assets\ponchi\experiments\batches\ponchi-batch-001\A-11_base_1254x627.png,review_pending_base,A-11_candidate.png,A-11_candidate.webp,review_pending
+B-1,Gemini,assets\ponchi\experiments\batches\ponchi-batch-001\B-1_overlay_1254x627.png,review_pending_overlay,B-1_candidate.png,B-1_candidate.webp,review_pending
 B-2,Claude,assets\ponchi\experiments\batches\ponchi-batch-001\B-2_overlay_1254x627.png,review_pending_overlay,B-2_candidate.png,B-2_candidate.webp,review_pending
+B-3,ChatGPT,assets\ponchi\experiments\batches\ponchi-batch-001\B-3_overlay_1254x627.png,review_pending_overlay,B-3_candidate.png,B-3_candidate.webp,review_pending
 B-4,Cursor,assets\ponchi\experiments\batches\ponchi-batch-001\B-4_overlay_1254x627.png,review_pending_overlay,B-4_candidate.png,B-4_candidate.webp,review_pending
 B-5,GitHub Copilot,assets\ponchi\experiments\batches\ponchi-batch-001\B-5_overlay_1254x627.png,review_pending_overlay,B-5_candidate.png,B-5_candidate.webp,review_pending
+B-6,Windsurf,assets\ponchi\experiments\batches\ponchi-batch-001\B-6_overlay_1254x627.png,review_pending_overlay,B-6_candidate.png,B-6_candidate.webp,review_pending
 B-7,Claude Code,assets\ponchi\experiments\batches\ponchi-batch-001\B-7_overlay_1254x627.png,review_pending_overlay,B-7_candidate.png,B-7_candidate.webp,review_pending
+B-8,Codex,assets\ponchi\experiments\batches\ponchi-batch-001\B-8_overlay_1254x627.png,review_pending_overlay,B-8_candidate.png,B-8_candidate.webp,review_pending
 B-9,v0,assets\ponchi\experiments\batches\ponchi-batch-001\B-9_overlay_1254x627.png,review_pending_overlay,B-9_candidate.png,B-9_candidate.webp,review_pending

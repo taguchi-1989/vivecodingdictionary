@@ -1,0 +1,21 @@
+entry_id,title,source_file,source_type,candidate_png,candidate_webp,candidate_status
+F-123,ORM,assets\ponchi\experiments\batches\ponchi-batch-011\F-123_base_1254x627.png,review_pending_base,F-123_candidate.png,F-123_candidate.webp,review_pending
+F-130,OAuth,assets\ponchi\experiments\batches\ponchi-batch-011\F-130_base_1254x627.png,review_pending_base,F-130_candidate.png,F-130_candidate.webp,review_pending
+F-140,Mermaid,assets\ponchi\experiments\batches\ponchi-batch-011\F-140_overlay_1254x627.png,review_pending_overlay,F-140_candidate.png,F-140_candidate.webp,review_pending
+F-141,PlantUML,assets\ponchi\experiments\batches\ponchi-batch-011\F-141_overlay_1254x627.png,review_pending_overlay,F-141_candidate.png,F-141_candidate.webp,review_pending
+F-150,MIT ライセンス,assets\ponchi\experiments\batches\ponchi-batch-011\F-150_base_1254x627.png,review_pending_base,F-150_candidate.png,F-150_candidate.webp,review_pending
+F-151,Apache 2.0,assets\ponchi\experiments\batches\ponchi-batch-011\F-151_base_1254x627.png,review_pending_base,F-151_candidate.png,F-151_candidate.webp,review_pending
+F-152,GPL,assets\ponchi\experiments\batches\ponchi-batch-011\F-152_base_1254x627.png,review_pending_base,F-152_candidate.png,F-152_candidate.webp,review_pending
+F-153,Creative Commons,assets\ponchi\experiments\batches\ponchi-batch-011\F-153_overlay_1254x627.png,review_pending_overlay,F-153_candidate.png,F-153_candidate.webp,review_pending
+F-154,OSS,assets\ponchi\experiments\batches\ponchi-batch-011\F-154_base_1254x627.png,review_pending_base,F-154_candidate.png,F-154_candidate.webp,review_pending
+F-160,DOM,assets\ponchi\experiments\batches\ponchi-batch-011\F-160_base_1254x627.png,review_pending_base,F-160_candidate.png,F-160_candidate.webp,review_pending
+F-161,SSR,assets\ponchi\experiments\batches\ponchi-batch-011\F-161_base_1254x627.png,review_pending_base,F-161_candidate.png,F-161_candidate.webp,review_pending
+F-162,SSG,assets\ponchi\experiments\batches\ponchi-batch-011\F-162_base_1254x627.png,review_pending_base,F-162_candidate.png,F-162_candidate.webp,review_pending
+F-170,EC2,assets\ponchi\experiments\batches\ponchi-batch-011\F-170_overlay_1254x627.png,review_pending_overlay,F-170_candidate.png,F-170_candidate.webp,review_pending
+F-171,S3,assets\ponchi\experiments\batches\ponchi-batch-011\F-171_overlay_1254x627.png,review_pending_overlay,F-171_candidate.png,F-171_candidate.webp,review_pending
+F-172,IAM,assets\ponchi\experiments\batches\ponchi-batch-011\F-172_overlay_1254x627.png,review_pending_overlay,F-172_candidate.png,F-172_candidate.webp,review_pending
+F-180,OpenGL,assets\ponchi\experiments\batches\ponchi-batch-011\F-180_overlay_1254x627.png,review_pending_overlay,F-180_candidate.png,F-180_candidate.webp,review_pending
+F-181,WebGL,assets\ponchi\experiments\batches\ponchi-batch-011\F-181_overlay_1254x627.png,review_pending_overlay,F-181_candidate.png,F-181_candidate.webp,review_pending
+F-190,サブルーチン,assets\ponchi\experiments\batches\ponchi-batch-011\F-190_base_1254x627.png,review_pending_base,F-190_candidate.png,F-190_candidate.webp,review_pending
+F-200,Rust,assets\ponchi\experiments\batches\ponchi-batch-011\F-200_overlay_1254x627.png,review_pending_overlay,F-200_candidate.png,F-200_candidate.webp,review_pending
+G-1,Context (コンテキスト),assets\ponchi\experiments\batches\ponchi-batch-011\G-1_base_1254x627.png,review_pending_base,G-1_candidate.png,G-1_candidate.webp,review_pending

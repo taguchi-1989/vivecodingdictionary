@@ -26,6 +26,106 @@ TYPE_BY_CATEGORY = {
 }
 
 BATCH_SCENE_OVERRIDES = {
+    "A-1": {
+        "visual_subject": "A welcoming map for a technical picture dictionary: a reader opens a guidebook and sees broad paths through tools, concepts, and practice cards.",
+        "supporting_subjects": "Use blank chapter cards, route arrows, and a calm reading desk; no book title text, no logos, no readable labels.",
+        "view_mode": "structure_map",
+    },
+    "A-2": {
+        "visual_subject": "A reading-guide flow: a reader chooses a route, skims overview cards, dives into examples, then returns to a practical checklist.",
+        "supporting_subjects": "Show blank page spreads, bookmarks, and decision branches; no readable instructions, no product logos.",
+        "view_mode": "operation_flow",
+    },
+    "A-3": {
+        "visual_subject": "A field-guide walking route: entries are arranged like exhibits along a path, with cross-reference arrows and discovery markers.",
+        "supporting_subjects": "Use a museum-map or atlas metaphor with blank cards; no readable index text, no brand marks.",
+        "view_mode": "structure_map",
+    },
+    "A-4": {
+        "visual_subject": "An experience-category legend: several journey lanes show learning, building, comparing, and operating experiences as distinct colored card groups.",
+        "supporting_subjects": "Use abstract icons, swatches, and lane dividers without text; no service logos, no app UI.",
+        "view_mode": "structure_map",
+    },
+    "A-5": {
+        "visual_subject": "A reader-level ladder: beginner, practitioner, and advanced reading paths climb through increasingly detailed concept cards.",
+        "supporting_subjects": "Show level tiers, confidence gauges, and route choices as blank graphics; no readable labels, no badges.",
+        "view_mode": "structure_map",
+    },
+    "A-6": {
+        "visual_subject": "A time-sensitive information guide: an evaluation-date card connects to freshness indicators, update arrows, and caution markers.",
+        "supporting_subjects": "Show changing snapshots and verification loop; no readable dates, no calendar text, no product UI.",
+        "view_mode": "operation_flow",
+    },
+    "A-7": {
+        "visual_subject": "A figure-type legend: comparison, workflow, architecture, timeline, and decision-map panels are arranged as a visual taxonomy.",
+        "supporting_subjects": "Use miniature blank diagram thumbnails and category grouping; no readable labels, no logos.",
+        "view_mode": "structure_map",
+    },
+    "A-8": {
+        "visual_subject": "A color-and-symbol legend: swatches, arrows, warning markers, check markers, and neutral nodes explain how to read diagrams.",
+        "supporting_subjects": "Show symbols as abstract shapes only; no text labels, no official icons, no brand palette.",
+        "view_mode": "structure_map",
+    },
+    "A-9": {
+        "visual_subject": "An index navigation map: many entry cards connect through alphabetical-style tabs, cross-links, and search paths into a chosen destination card.",
+        "supporting_subjects": "Use tab shapes and reference arrows with no letters or readable words; no product search UI.",
+        "view_mode": "operation_flow",
+    },
+    "A-10": {
+        "visual_subject": "An update-history policy flow: change requests move through review, version snapshot, publication, and archive cards.",
+        "supporting_subjects": "Show a neutral timeline and maintenance loop; no readable changelog text, no dates, no product UI.",
+        "view_mode": "operation_flow",
+    },
+    "A-11": {
+        "visual_subject": "An abbreviation-reference map: short code-like chips connect to expanded concept cards and usage examples without showing readable text.",
+        "supporting_subjects": "Use paired small and large blank cards, glossary links, and lookup arrows; no actual abbreviations, no logos.",
+        "view_mode": "structure_map",
+    },
+    "B-1": {
+        "visual_subject": "A multimodal assistant service base scene: text, image, and task cards flow into a neutral assistant workspace, leaving a clean blank logo area in the upper right.",
+        "supporting_subjects": "Use generic assistant capability panels only; no Gemini logo, no Google colors, no product UI, no readable text.",
+        "view_mode": "operation_flow",
+    },
+    "B-2": {
+        "visual_subject": "A long-context assistant service base scene: documents and reasoning cards flow into a neutral assistant workspace, leaving a clean blank logo area in the upper right.",
+        "supporting_subjects": "Use calm abstract document and safety panels; no Claude logo, no Anthropic mark, no chat UI, no readable text.",
+        "view_mode": "operation_flow",
+    },
+    "B-3": {
+        "visual_subject": "A general chat-assistant service base scene: user request cards, tool cards, and answer cards form a neutral assistant loop, leaving a clean blank logo area in the upper right.",
+        "supporting_subjects": "Use abstract chat and reasoning blocks only; no ChatGPT or OpenAI logo, no product UI, no readable messages.",
+        "view_mode": "operation_flow",
+    },
+    "B-4": {
+        "visual_subject": "A coding-editor assistant base scene: source blocks, selection cards, and edit suggestions flow through a neutral editor-like workspace, leaving a clean blank logo area in the upper right.",
+        "supporting_subjects": "Use blank code bars and editor panels only; no Cursor logo, no real editor UI, no readable code.",
+        "view_mode": "operation_flow",
+    },
+    "B-5": {
+        "visual_subject": "A coding-completion assistant base scene: repository cards, autocomplete suggestions, and review cards move through a neutral development workflow, leaving a clean blank logo area in the upper right.",
+        "supporting_subjects": "Use generic branch and code panels; no GitHub logo, no Copilot mark, no readable code, no product UI.",
+        "view_mode": "operation_flow",
+    },
+    "B-6": {
+        "visual_subject": "An agentic coding workspace base scene: task cards, editor panels, and automated action loops coordinate in a neutral development board, leaving a clean blank logo area in the upper right.",
+        "supporting_subjects": "Use generic code and workflow cards only; no Windsurf logo, no brand palette, no product UI, no readable text.",
+        "view_mode": "operation_flow",
+    },
+    "B-7": {
+        "visual_subject": "A terminal-based coding assistant base scene: a developer request moves through planning, file edits, and verification cards, leaving a clean blank logo area in the upper right.",
+        "supporting_subjects": "Use blank terminal-like panels and file cards only; no Claude or Anthropic logo, no command text, no product UI.",
+        "view_mode": "operation_flow",
+    },
+    "B-8": {
+        "visual_subject": "A code-generation agent base scene: project files, task plan, patch cards, and test results flow through a neutral coding agent board, leaving a clean blank logo area in the upper right.",
+        "supporting_subjects": "Use generic coding blocks and verification cards; no Codex or OpenAI logo, no readable code, no product UI.",
+        "view_mode": "operation_flow",
+    },
+    "B-9": {
+        "visual_subject": "A UI-generation assistant base scene: prompt cards become layout blocks, component panels, and preview screens, leaving a clean blank logo area in the upper right.",
+        "supporting_subjects": "Use generic web-layout blocks only; no v0 logo, no Vercel mark, no readable UI text, no product UI.",
+        "view_mode": "operation_flow",
+    },
     "B-30": {
         "visual_subject": "A neutral managed-AI gateway diagram: four unlabeled model tiles flow into a central service hub, then out to a generic application panel, with small security-key and region-shield symbols nearby.",
         "supporting_subjects": "An operations worker comparing model choices on a blank tablet; no real console, no provider names, no product UI.",
@@ -916,6 +1016,556 @@ BATCH_SCENE_OVERRIDES = {
         "supporting_subjects": "A developer sets shared operating rules for multiple abstract agents; no product logos, no readable filename or text, no chat UI.",
         "view_mode": "structure_map",
     },
+    "G-22": {
+        "visual_subject": "A conditional instruction-file workflow: one always-loaded project memory card and several on-demand procedure cards feed a neutral assistant hub with solid versus dotted arrows.",
+        "supporting_subjects": "A developer chooses the needed procedure from blank file cards; no Claude logo, no readable filenames, no product UI, no chat bubbles with words.",
+        "view_mode": "structure_map",
+    },
+    "G-23": {
+        "visual_subject": "A layered project-configuration stack: global settings layer, shared repository settings layer, and private local override layer align around permission, hook, and environment-control blocks.",
+        "supporting_subjects": "A small team shares one repository workspace while a locked personal layer stays separate; no Claude logo, no readable JSON, no real editor UI.",
+        "view_mode": "structure_map",
+    },
+    "G-30": {
+        "visual_subject": "A tool-use loop: a user request enters an assistant decision hub, a tool executor runs an external action, and the result returns to a final answer panel.",
+        "supporting_subjects": "A laptop user and a generic server-tool box show the division between deciding, executing, returning results, and answering; no provider logos, no readable tool names.",
+        "view_mode": "operation_flow",
+    },
+    "G-31": {
+        "visual_subject": "A hook automation flow: an assistant action passes through a pre-check gate, an execution block, and a post-check script gate before returning a status result.",
+        "supporting_subjects": "A developer watches automatic checks run around a generic tool call; no Claude Code UI, no readable hook names, no terminal text.",
+        "view_mode": "operation_flow",
+    },
+    "G-32": {
+        "visual_subject": "A slash-command expansion flow: a short command gesture enters a command file card, expands into a reusable instruction bundle, then drives an assistant task panel.",
+        "supporting_subjects": "A keyboard user starts a predefined workflow from blank command cards; no slash text, no Claude logo, no chat UI, no readable file names.",
+        "view_mode": "operation_flow",
+    },
+    "G-33": {
+        "visual_subject": "A function-calling loop: a user request becomes a structured argument card, a host function gear executes it, and the returned result feeds a final response panel.",
+        "supporting_subjects": "A laptop user and host service box show schema, function execution, result return, and answer generation as abstract blocks; no JSON text or provider logos.",
+        "view_mode": "operation_flow",
+    },
+    "G-34": {
+        "visual_subject": "A before-after data analysis scene: before shows a person stuck with a spreadsheet stack, after shows an assistant execution area producing chart cards from uploaded data.",
+        "supporting_subjects": "A business user moves from manual data handling to a generic analysis workspace; no product UI, no chat screen, no readable chart labels.",
+        "view_mode": "before_after",
+    },
+    "G-35": {
+        "visual_subject": "A deep research loop: a question card launches repeated search, source gathering, summarizing, and verification loops, then returns a report bundle.",
+        "supporting_subjects": "A business reader receives a checked report from a neutral research assistant; no search engine UI, no web logos, no readable report text.",
+        "view_mode": "operation_flow",
+    },
+    "G-36": {
+        "visual_subject": "A split workspace concept: conversation blocks on one side produce an editable output panel on the other, separated by a clear vertical workspace boundary.",
+        "supporting_subjects": "A non-engineer reviews and edits a generated code-or-document panel shown only as abstract blocks; no Claude.ai UI, no readable code, no brand marks.",
+        "view_mode": "structure_map",
+    },
+    "G-38": {
+        "visual_subject": "A before-after control comparison: one side shows files changing immediately, the other side shows a readable-plan approval gate before implementation begins.",
+        "supporting_subjects": "A user reviews a checklist-like plan card before allowing work to proceed; no real buttons, no readable approval text, no product UI.",
+        "view_mode": "before_after",
+    },
+    "G-39": {
+        "visual_subject": "A permission decision tree: an incoming tool request is checked against rule cards and branches into allow, ask-for-confirmation, or deny paths using abstract symbols.",
+        "supporting_subjects": "A developer adjusts sliders and rule cards for a team workspace; no readable allow/deny text, no Claude UI, no product logos.",
+        "view_mode": "structure_map",
+    },
+    "G-40": {
+        "visual_subject": "A human-AI-code collaboration triangle: a person communicates intent, an assistant transforms it into code blocks, and the person verifies and loops back improvements.",
+        "supporting_subjects": "A non-engineer steers a coding workflow through intent, generation, checking, and refinement; no provider logos, no readable code, no chat UI.",
+        "view_mode": "structure_map",
+    },
+    "G-41": {
+        "visual_subject": "A subagent delegation diagram: a parent agent workspace sends a task into a separate bounded context room, then receives a compact result back.",
+        "supporting_subjects": "Two abstract assistant roles operate in separate boxes with a clear context boundary and return arrow; no product logos, no readable role names.",
+        "view_mode": "operation_flow",
+    },
+    "G-42": {
+        "visual_subject": "A worktree branching map: one central repository hub connects to three separate working directories where independent task lanes progress before merging back.",
+        "supporting_subjects": "Small abstract agent workers sit in separate folders to avoid interfering with each other; no mascots, no real repository UI, no readable branch names.",
+        "view_mode": "structure_map",
+    },
+    "G-43": {
+        "visual_subject": "An orchestration hub: a central coordinator breaks one large task into research, implementation, and review lanes, then gathers their outputs into one completion box.",
+        "supporting_subjects": "Specialist assistant roles exchange task cards through a central control point; no conductor imagery, no readable labels, no product logos.",
+        "view_mode": "structure_map",
+    },
+    "G-44": {
+        "visual_subject": "A multi-agent handoff flow: planner, executor, and reviewer workspaces pass artifacts left to right, with feedback arrows returning improvements before final assembly.",
+        "supporting_subjects": "Three role-specific abstract workers coordinate through shared blank task cards; no readable role text, no provider logos, no chat UI.",
+        "view_mode": "operation_flow",
+    },
+    "G-45": {
+        "visual_subject": "A progressive disclosure interface diagram: a simple first layer shows only essential controls, while deeper optional panels unfold only when needed.",
+        "supporting_subjects": "A learner opens additional detail in stages instead of seeing every option at once; no product UI, no readable settings text, no brand marks.",
+        "view_mode": "before_after",
+    },
+    "G-46": {
+        "visual_subject": "A model-update perception comparison: the same user compares an earlier satisfying response flow with a later weaker-feeling response flow after an update marker.",
+        "supporting_subjects": "A non-engineer checks subjective feeling against simple blank quality gauges; no social media UI, no model logos, no readable complaints.",
+        "view_mode": "before_after",
+    },
+    "G-47": {
+        "visual_subject": "An auto-compaction comparison: an overflowing long conversation stack compresses into a compact summary block that lets the work continue.",
+        "supporting_subjects": "A user watches context usage shrink while the next task arrow remains connected; no chat UI, no readable transcript, no product logos.",
+        "view_mode": "before_after",
+    },
+    "H-1": {
+        "visual_subject": "A test-driven development loop: failing test card, minimal implementation card, and cleanup card cycle around a central code quality hub using abstract status symbols.",
+        "supporting_subjects": "An engineer repeats the loop with changing expressions shown through simple posture only; use approved blue and grayscale status marks, no red or green colors, no readable test text.",
+        "view_mode": "operation_flow",
+    },
+    "H-2": {
+        "visual_subject": "A paired coding workspace: two people share one large neutral code workspace, one points at blank code blocks while the other types, with feedback arrows between them.",
+        "supporting_subjects": "Show collaboration, shared attention, and quick correction using blank cards and check marks; no readable code, no product UI, no brand marks.",
+        "view_mode": "operation_flow",
+    },
+    "H-3": {
+        "visual_subject": "A vibe-coding practice loop: goal card, assistant generation block, human verification, small correction loop, and cleanup checkpoint connect as a repeatable workflow.",
+        "supporting_subjects": "A non-engineer steers the loop with intent cards and verification tools; no provider logos, no chat UI, no readable code.",
+        "view_mode": "operation_flow",
+    },
+    "H-4": {
+        "visual_subject": "A code review workflow: a change bundle moves from author workspace to reviewer checklist, then returns with feedback marks before entering an accepted result box.",
+        "supporting_subjects": "One author and one reviewer compare blank diffs, risk markers, and check cards; no readable code, no repository UI, no brand marks.",
+        "view_mode": "operation_flow",
+    },
+    "H-5": {
+        "visual_subject": "An agile-method family map: one large iterative work cycle contains three smaller practice circles and a scaled outer connection, all shown as neutral process shapes.",
+        "supporting_subjects": "A small team reviews sprint-like cards around a loop; no method names as text, no logos, no product UI.",
+        "view_mode": "structure_map",
+    },
+    "H-6": {
+        "visual_subject": "A branching strategy comparison: a complex multi-branch lane on one side contrasts with a simpler two-lane flow on the other, with a developer choosing the simpler path.",
+        "supporting_subjects": "Use abstract branch lines, merge nodes, release tags, and cleanup symbols; no GitHub logo, no branch names, no readable labels.",
+        "view_mode": "before_after",
+    },
+    "H-7": {
+        "visual_subject": "A deployment pipeline: code cards move through test, build, and deploy gates, then reach a user-facing result panel with a monitoring check loop.",
+        "supporting_subjects": "A developer starts the pipeline and a user receives the updated generic app card; no service logos, no terminal text, no product UI.",
+        "view_mode": "operation_flow",
+    },
+    "H-8": {
+        "visual_subject": "A development-and-operations collaboration loop: coding, building, deploying, operating, and monitoring stages form a shared loop between development and operations workspaces.",
+        "supporting_subjects": "Two people coordinate across the loop using alert cards and deployment blocks; no cloud logos, no readable dashboard text, no product UI.",
+        "view_mode": "before_after",
+    },
+    "H-50": {
+        "visual_subject": "A product-renaming timeline: an early experimental assistant card evolves through a transition marker into a later unified assistant card, shown as neutral blank product tiles.",
+        "supporting_subjects": "A reader follows a name-change history using abstract timeline dots; no Google colors, no Gemini logo, no Bard logo, no product UI.",
+        "view_mode": "operation_flow",
+    },
+    "H-51": {
+        "visual_subject": "A preview-to-stable release flow: rough preview cards pass through feedback, fixes, and confidence gates before becoming a polished stable release card.",
+        "supporting_subjects": "Users send feedback cards back into the process; no product names, no official icons, no readable release labels.",
+        "view_mode": "operation_flow",
+    },
+    "H-52": {
+        "visual_subject": "A coding-assistant evolution timeline: early autocomplete help grows into chat assistance, then into agentic coding workflows across generic editor-like workspaces.",
+        "supporting_subjects": "A developer watches coding help become more capable over time; no GitHub, Copilot, Claude, OpenAI, or editor logos; no product UI.",
+        "view_mode": "operation_flow",
+    },
+    "H-53": {
+        "visual_subject": "A public AI launch timeline: research-only access on the left shifts through one central launch moment into widespread everyday users exploring blank assistant cards.",
+        "supporting_subjects": "Use a starburst launch marker and growing audience dots; no ChatGPT or OpenAI logo, no chat UI, no readable dates or service names.",
+        "view_mode": "before_after",
+    },
+    "H-54": {
+        "visual_subject": "A model-generation leap timeline: an earlier capable assistant card moves through a central breakthrough marker into stronger multimodal and reasoning capability cards.",
+        "supporting_subjects": "A surprised user compares before and after capability gauges; no OpenAI, ChatGPT, GPT, Bing, or Microsoft logos; no readable scores.",
+        "view_mode": "before_after",
+    },
+    "H-55": {
+        "visual_subject": "An open-model culture timeline: restricted research distribution opens into community experimentation, local laptop inference, and many derivative model cards.",
+        "supporting_subjects": "An individual developer runs a generic local model box; no Meta or LLaMA logo, no animal imagery, no Hugging Face icon, no readable names.",
+        "view_mode": "operation_flow",
+    },
+    "H-56": {
+        "visual_subject": "A model-version history timeline: successive assistant model cards become larger and more specialized over time, with tiers and capability bars shown as abstract blocks.",
+        "supporting_subjects": "An engineer points at a neutral timeline of versions and comparison gauges; no Claude or Anthropic logo, no model names, no readable dates.",
+        "view_mode": "operation_flow",
+    },
+    "H-57": {
+        "visual_subject": "A naming-history timeline: an earlier experimental name tile transitions through a rename marker into a later unified model-family tile with clearer identity.",
+        "supporting_subjects": "A reader traces the naming change using abstract cards and arrows; no Google colors, no Gemini logo, no Bard logo, no readable names.",
+        "view_mode": "operation_flow",
+    },
+    "H-58": {
+        "visual_subject": "A foundational paper timeline: an older sequence-processing era moves through a central paper breakthrough, then branches into modern language-model milestones and broad adoption.",
+        "supporting_subjects": "A researcher studies a blank paper card while later users interact with generic assistant cards; no paper title text, no model logos, no readable dates.",
+        "view_mode": "before_after",
+    },
+    "H-59": {
+        "visual_subject": "An AI-agent era map: simple assistants evolve into tool-using agents, multi-step workflows, and coordinated agent teams around a central year-change milestone.",
+        "supporting_subjects": "A user watches task cards move from one-step answers to autonomous action loops; no product logos, no readable year text, no chat UI.",
+        "view_mode": "operation_flow",
+    },
+    "H-60": {
+        "visual_subject": "A coding-assistant lineage timeline: research code model cards lead to autocomplete assistance, then to integrated coding partner and agent workflow cards.",
+        "supporting_subjects": "A developer sees code help mature through generic editor workspaces; no Codex, OpenAI, GitHub, or Copilot logos; no readable code.",
+        "view_mode": "operation_flow",
+    },
+    "H-61": {
+        "visual_subject": "A preview-release culture loop: early access users test rough feature cards, send feedback, and the product team iterates before stable release.",
+        "supporting_subjects": "Show uncertainty and learning using experiment beakers, feedback arrows, and confidence gauges; no product logos, no readable release text.",
+        "view_mode": "operation_flow",
+    },
+    "H-62": {
+        "visual_subject": "An AI-company founding flow: researchers leave a large neutral lab context, gather around a safety-focused startup table, and build a new model research path.",
+        "supporting_subjects": "Use abstract organization buildings, research paper cards, safety shield, and founding team silhouettes; no Anthropic or Claude logo, no real-person likenesses.",
+        "view_mode": "operation_flow",
+    },
+    "H-63": {
+        "visual_subject": "A naming-origin culture map: a loose community phrase spreads from casual coding sessions into shared practice cards and glossary adoption.",
+        "supporting_subjects": "Show blank conversation cards, coding practice blocks, and a neutral timeline of adoption; no product logos, no readable phrase text, no social UI.",
+        "view_mode": "operation_flow",
+    },
+    "I-1": {
+        "visual_subject": "A common connector protocol diagram: an assistant host connects through a central protocol band to several generic tool servers and external service boxes.",
+        "supporting_subjects": "Include a small before-after inset showing many separate custom connections becoming one shared connector lane; no Claude, GitHub, Notion, or service logos.",
+        "view_mode": "structure_map",
+    },
+    "I-2": {
+        "visual_subject": "A server-as-bridge diagram: a client request enters a central tool server bridge, which translates it into operations on generic external data and service boxes.",
+        "supporting_subjects": "Show tool cards, result cards, and a bridge-like server block; no service logos, no readable tool names, no product UI.",
+        "view_mode": "operation_flow",
+    },
+    "I-3": {
+        "visual_subject": "A client-side connection window: a host application gathers available server tools, selects one route, and receives result cards back.",
+        "supporting_subjects": "Show the client as a neutral control panel that calls multiple generic servers; no Claude, Cursor, or editor logos; no readable settings text.",
+        "view_mode": "operation_flow",
+    },
+    "I-4": {
+        "visual_subject": "A transport comparison: one local process lane and one remote network lane carry the same protocol messages between client and server.",
+        "supporting_subjects": "Use two parallel lanes with local computer/process icons versus cloud-like endpoint boxes; no command text, no URLs, no protocol labels.",
+        "view_mode": "before_after",
+    },
+    "I-5": {
+        "visual_subject": "An SDK construction workflow: tool, resource, and prompt definition cards flow into an SDK builder block, which produces client-server communication blocks.",
+        "supporting_subjects": "A developer assembles blank capability cards into a reusable implementation; no code text, no package logos, no readable API names.",
+        "view_mode": "operation_flow",
+    },
+    "I-10": {
+        "visual_subject": "A filesystem access gate: a client request passes through a locked file-operation gate into an allowed folder, while a blocked folder remains inaccessible.",
+        "supporting_subjects": "Show read, write, and list operations only as abstract arrows and blank file cards; no Claude logo, no terminal text, no path names.",
+        "view_mode": "structure_map",
+    },
+    "I-11": {
+        "visual_subject": "A repository-service connector: a client routes issue, pull-request, and file-operation cards through a central server into a generic repository workspace.",
+        "supporting_subjects": "Use generic branch, checklist, comment, and file cards; no GitHub logo, no Octocat, no real repository UI, no readable PR text.",
+        "view_mode": "operation_flow",
+    },
+    "I-12": {
+        "visual_subject": "A local version-control connector: status, diff, branch, and commit cards pass through a server gate into a local repository graph.",
+        "supporting_subjects": "Show abstract branch lines, staged cards, and result arrows; no Git logo, no GitHub logo, no branch names, no command text.",
+        "view_mode": "operation_flow",
+    },
+    "I-13": {
+        "visual_subject": "A team-chat connector: a client sends message search and channel-summary cards through a server into a generic team communication board.",
+        "supporting_subjects": "Show blank chat bubbles, channel columns, and notification cards; no Slack logo, no chat UI text, no emoji marks.",
+        "view_mode": "operation_flow",
+    },
+    "I-20": {
+        "visual_subject": "A browser-automation connector: a test request becomes page navigation, click, form, screenshot, and assertion cards across a generic browser panel.",
+        "supporting_subjects": "A developer inspects automated browser steps; no Playwright logo, no real website UI, no readable test text.",
+        "view_mode": "operation_flow",
+    },
+    "I-21": {
+        "visual_subject": "A browser-control comparison: one simple browser automation lane focuses on page actions and screenshots, contrasted with broader test automation options.",
+        "supporting_subjects": "Use generic browser frames, cursor arrows, screenshot cards, and PDF cards; no Puppeteer logo, no Chrome logo, no readable URL.",
+        "view_mode": "structure_map",
+    },
+    "I-22": {
+        "visual_subject": "A browser-performance measurement flow: an agent request passes through a devtools connector into a generic browser, then returns console, trace, and performance chart cards.",
+        "supporting_subjects": "Show metric gauges and trace blocks only as abstract graphics; no Chrome logo, no DevTools UI, no readable metric text.",
+        "view_mode": "operation_flow",
+    },
+    "I-23": {
+        "visual_subject": "A symbol-aware code navigation comparison: before shows many files flooding context, after shows selected symbol-reference cards and impact graph nodes.",
+        "supporting_subjects": "A developer compares broad file reading with focused symbol retrieval; no Serena logo, no readable code, no language logos.",
+        "view_mode": "before_after",
+    },
+    "I-24": {
+        "visual_subject": "A current-docs retrieval comparison: an outdated-memory answer path contrasts with a path that retrieves fresh official documentation cards before answering.",
+        "supporting_subjects": "Show blank prompt, docs, and answer cards with a freshness gauge; no Context7 logo, no library logos, no readable code.",
+        "view_mode": "before_after",
+    },
+    "I-30": {
+        "visual_subject": "A workspace-document connector: a client routes page search, page read, database query, and comment cards through a server into a generic document workspace.",
+        "supporting_subjects": "Use blank page cards, database grids, and comment bubbles; no Notion logo, no real workspace UI, no readable page text.",
+        "view_mode": "operation_flow",
+    },
+    "I-41": {
+        "visual_subject": "A local database connector: natural-language request cards pass through a server gate into a local database file, returning table and chart result cards.",
+        "supporting_subjects": "Show read-only versus write paths as abstract arrows and locks; no SQLite logo, no SQL text, no readable table data.",
+        "view_mode": "operation_flow",
+    },
+    "I-50": {
+        "visual_subject": "A cloud-resource connector fan-out: a client routes infrastructure request cards through a server group into generic storage, compute, database, and AI-service boxes.",
+        "supporting_subjects": "Show credential lock, resource fan-out, and confirmation cards; no AWS logo, no cloud provider icons, no console UI.",
+        "view_mode": "structure_map",
+    },
+    "I-80": {
+        "visual_subject": "A custom server template workflow: choose a data source, define tool cards, wire transport, test with a client, and package the server template.",
+        "supporting_subjects": "A developer assembles reusable MCP-like building blocks; no code text, no package logos, no readable config.",
+        "view_mode": "operation_flow",
+    },
+    "I-81": {
+        "visual_subject": "A registration-and-settings workflow: server details are added to a client settings card, permissions are checked, connection is tested, and tools become available.",
+        "supporting_subjects": "Show settings, permission, connection, and tool-list cards as blank abstract panels; no product UI, no readable JSON, no command text.",
+        "view_mode": "operation_flow",
+    },
+    "J-1": {
+        "visual_subject": "A capability ladder toward general intelligence: narrow task cards combine into broader planning, learning, memory, and tool-use capability layers around one neutral AI core.",
+        "supporting_subjects": "Show many domains converging into a single general problem-solving map; no product logos, no robot mascot, no readable labels.",
+        "view_mode": "structure_map",
+    },
+    "J-2": {
+        "visual_subject": "A comparison between narrow task AI and broad flexible AI: one side solves a single bounded task, while the other adapts across several abstract domains.",
+        "supporting_subjects": "Use two contrasting panels with task cards, transfer arrows, and capability gauges; no readable text, no product names, no brand colors.",
+        "view_mode": "before_after",
+    },
+    "J-3": {
+        "visual_subject": "A technological acceleration curve: small research milestones rise into a steep transformation curve, with society and infrastructure cards responding around it.",
+        "supporting_subjects": "Show caution markers, planning boards, and abstract future nodes; no calendar text, no famous-person likeness, no product UI.",
+        "view_mode": "operation_flow",
+    },
+    "J-4": {
+        "visual_subject": "A superintelligence scale diagram: human-scale reasoning cards sit beside a much larger abstract reasoning system with many interconnected strategy layers.",
+        "supporting_subjects": "Use scale contrast, safety boundary lines, and oversight loops; no threatening character, no logos, no readable labels.",
+        "view_mode": "structure_map",
+    },
+    "J-10": {
+        "visual_subject": "A machine-learning training loop: data examples flow into a model block, predictions are compared with outcomes, and feedback improves the next pass.",
+        "supporting_subjects": "Show dataset cards, training arrows, evaluation gauges, and iteration loop; no code text, no framework logo, no readable numbers.",
+        "view_mode": "operation_flow",
+    },
+    "J-11": {
+        "visual_subject": "A deep-learning layer stack: input patterns move through multiple hidden layers, each transforming features into richer abstract representations.",
+        "supporting_subjects": "Show layered nodes, feature maps, and output cards; no framework logos, no code, no readable layer names.",
+        "view_mode": "structure_map",
+    },
+    "J-12": {
+        "visual_subject": "A neural-network graph: connected input nodes, hidden nodes, and output nodes pass signals through weighted paths and activation gates.",
+        "supporting_subjects": "Use dense node-link geometry, signal highlights, and blank output cards; no equations, no logos, no readable symbols.",
+        "view_mode": "structure_map",
+    },
+    "J-13": {
+        "visual_subject": "A transformer attention block: token-like blank tiles interact through attention links, then pass through stacked processing blocks to produce an output sequence.",
+        "supporting_subjects": "Show parallel attention lines and residual-style flow as abstract arrows; no paper title, no formulas, no readable tokens.",
+        "view_mode": "operation_flow",
+    },
+    "J-14": {
+        "visual_subject": "A language-model context window: many blank word tiles enter a large model core, which predicts and composes the next response card.",
+        "supporting_subjects": "Show context, generation, and feedback cards as abstract tiles; no chat UI, no product logos, no readable words.",
+        "view_mode": "operation_flow",
+    },
+    "J-15": {
+        "visual_subject": "A vision-language model flow: image tiles and language tiles enter one shared model core, then produce grounded answer and caption cards.",
+        "supporting_subjects": "Show camera-like image panels, blank token tiles, and cross-modal arrows; no product UI, no readable captions, no logos.",
+        "view_mode": "operation_flow",
+    },
+    "J-16": {
+        "visual_subject": "A fine-tuning workflow: a base model card receives specialized example cards, trains through an adjustment loop, and becomes a task-specific model card.",
+        "supporting_subjects": "Show before-after model cards, dataset curation, validation, and deployment readiness; no model logos, no code, no readable dataset names.",
+        "view_mode": "before_after",
+    },
+    "J-17": {
+        "visual_subject": "An attention mechanism map: one query tile scans many context tiles, highlighting the most relevant connections before producing a focused output.",
+        "supporting_subjects": "Use spotlight beams, weighted arcs, and selected tiles; no formulas, no readable text, no paper marks.",
+        "view_mode": "structure_map",
+    },
+    "J-18": {
+        "visual_subject": "A mixture-of-experts router: an input card passes through a routing gate that activates only a few expert blocks before recombining outputs.",
+        "supporting_subjects": "Show many inactive expert cards and a few highlighted active paths; no vendor logos, no readable expert names, no code.",
+        "view_mode": "operation_flow",
+    },
+    "J-19": {
+        "visual_subject": "A quantization compression flow: a large high-precision model block is compressed through a scale-and-rounding step into a smaller efficient model block.",
+        "supporting_subjects": "Show memory chips, size bars, and accuracy-efficiency tradeoff gauges; no readable bit numbers, no hardware logos, no equations.",
+        "view_mode": "before_after",
+    },
+    "J-20": {
+        "visual_subject": "A big-data pipeline: many data streams gather into a lake-like storage hub, then feed analysis, model training, and decision cards.",
+        "supporting_subjects": "Show scale through many source tiles, filtering gates, and aggregate dashboards with blank charts; no database logos, no readable metrics.",
+        "view_mode": "operation_flow",
+    },
+    "J-21": {
+        "visual_subject": "A low-rank adapter workflow: a frozen base model block receives small adapter modules on the side, enabling a task-specific output without changing the whole model.",
+        "supporting_subjects": "Show lightweight plug-in cards, frozen lock marker, and narrow update path; no readable rank numbers, no framework logos, no code.",
+        "view_mode": "structure_map",
+    },
+    "J-22": {
+        "visual_subject": "A parameter-scale comparison: nested model blocks grow from small to huge, with memory and compute requirement cards increasing alongside them.",
+        "supporting_subjects": "Use abstract size stacks and gauge bars; no readable units, no numbers, no brand or hardware logos.",
+        "view_mode": "structure_map",
+    },
+    "J-23": {
+        "visual_subject": "A diffusion-generation process: noisy abstract pixels gradually denoise through repeated steps into a clean image-like composition card.",
+        "supporting_subjects": "Show a sequence of panels from noise to structure, with a guidance signal line; no real artwork copy, no readable prompt text, no product UI.",
+        "view_mode": "operation_flow",
+    },
+    "J-31": {
+        "visual_subject": "A historical AI-computer initiative map: symbolic reasoning cards, specialized hardware blocks, and national research program nodes connect into a period-specific roadmap.",
+        "supporting_subjects": "Show archival-style planning boards and machine blocks without readable dates or country marks; no official emblems, no product logos.",
+        "view_mode": "structure_map",
+    },
+    "J-32": {
+        "visual_subject": "A von Neumann architecture diagram: memory, control, arithmetic, input, and output blocks exchange signals through a central bus.",
+        "supporting_subjects": "Use clean abstract hardware blocks and data arrows; no readable labels, no chip vendor logos, no equations.",
+        "view_mode": "structure_map",
+    },
+    "J-33": {
+        "visual_subject": "A quantum-computing concept map: classical bit cards contrast with quantum state tiles, entanglement links, and a measurement gate producing result cards.",
+        "supporting_subjects": "Show abstract wave-like state arcs and circuit blocks; no vendor logos, no equations, no readable symbols.",
+        "view_mode": "structure_map",
+    },
+    "J-40": {
+        "visual_subject": "An internet-of-things network: small sensors, devices, and edge boxes send telemetry through a gateway into a neutral operations dashboard.",
+        "supporting_subjects": "Use home, factory, and field device silhouettes as generic icons; no product logos, no brand colors, no readable dashboard text.",
+        "view_mode": "operation_flow",
+    },
+    "J-41": {
+        "visual_subject": "A digital-transformation before-after: paper and siloed manual work become connected process cards, data flow, and continuous improvement loops.",
+        "supporting_subjects": "Show business workflow modernization without brand systems; no real enterprise UI, no readable process names.",
+        "view_mode": "before_after",
+    },
+    "J-42": {
+        "visual_subject": "A decentralized web structure: users connect through wallet-like identity cards, shared ledger blocks, and distributed application nodes.",
+        "supporting_subjects": "Use generic chain and network motifs only; no crypto logos, no token symbols, no readable addresses.",
+        "view_mode": "structure_map",
+    },
+    "J-43": {
+        "visual_subject": "A software-as-a-service delivery model: one central hosted app box serves many customer workspaces through subscription and update channels.",
+        "supporting_subjects": "Show cloud-hosted software, user workspaces, and recurring service loops; no vendor logos, no real app UI, no readable pricing text.",
+        "view_mode": "operation_flow",
+    },
+    "J-50": {
+        "visual_subject": "An AI ethics review board: model output cards pass through fairness, safety, privacy, and accountability checkpoints before release.",
+        "supporting_subjects": "Show diverse stakeholder silhouettes, risk cards, and approval gates; no official seals, no readable policy text.",
+        "view_mode": "operation_flow",
+    },
+    "J-51": {
+        "visual_subject": "A hallucination detection flow: a confident-looking answer card is checked against source cards, with unsupported parts routed to review and correction.",
+        "supporting_subjects": "Show verification magnifier, evidence links, and warning markers; no chat UI, no readable claims, no product logos.",
+        "view_mode": "before_after",
+    },
+    "J-52": {
+        "visual_subject": "A sycophancy behavior comparison: one path blindly agrees with a user card, while a better path checks evidence and politely corrects the answer.",
+        "supporting_subjects": "Use agreement bubbles, evidence cards, and correction loop as abstract panels; no readable dialog, no product UI.",
+        "view_mode": "before_after",
+    },
+    "J-53": {
+        "visual_subject": "A copyright-law training-data decision map: source material cards flow through legal condition gates into allowed analysis, restricted use, or review paths.",
+        "supporting_subjects": "Show document stacks, legal balance, and jurisdiction-neutral compliance arrows; no readable statute text, no official marks.",
+        "view_mode": "structure_map",
+    },
+    "J-54": {
+        "visual_subject": "An AI management-system compliance loop: risk assessment, governance controls, monitoring, and improvement cards cycle around an organization model.",
+        "supporting_subjects": "Use audit checklist blocks and control gates; no ISO logo, no certification seal, no readable standard number.",
+        "view_mode": "operation_flow",
+    },
+    "J-55": {
+        "visual_subject": "A personal-information protection flow: user data cards pass through consent, purpose, minimization, storage, and deletion gates.",
+        "supporting_subjects": "Show privacy shields, access locks, and lifecycle arrows; no government emblem, no legal text, no readable identifiers.",
+        "view_mode": "operation_flow",
+    },
+    "J-56": {
+        "visual_subject": "A data-protection compliance workflow: personal data moves through lawful basis, rights request, transfer, and audit-control checkpoints.",
+        "supporting_subjects": "Use neutral regulatory map cards and privacy gates; no EU flag, no official logo, no readable article numbers.",
+        "view_mode": "operation_flow",
+    },
+    "J-62": {
+        "visual_subject": "A Turing-test conversation setup: a judge receives blank response cards from two hidden rooms and compares behavior through an evaluation screen.",
+        "supporting_subjects": "Show concealed participant panels, question cards, and uncertainty markers; no readable conversation text, no real person likenesses.",
+        "view_mode": "structure_map",
+    },
+    "J-70": {
+        "visual_subject": "A graphics-memory capacity diagram: model layers and image batches load into dedicated memory chips, with overflow pressure shown as blocked cards.",
+        "supporting_subjects": "Show memory banks, bandwidth arrows, and workload tiles; no chip vendor logos, no readable capacity numbers.",
+        "view_mode": "structure_map",
+    },
+    "J-71": {
+        "visual_subject": "A system-memory workspace diagram: applications, data buffers, and cached files occupy general memory slots while the processor requests blocks.",
+        "supporting_subjects": "Show generic motherboard memory modules and data movement; no brand logos, no readable part numbers.",
+        "view_mode": "operation_flow",
+    },
+    "J-72": {
+        "visual_subject": "A high-end accelerator workload map: large model training cards flow through many parallel compute lanes on a generic accelerator board.",
+        "supporting_subjects": "Use abstract chip modules and cooling-flow lines; no NVIDIA logo, no product badge, no readable model name.",
+        "view_mode": "structure_map",
+    },
+    "J-73": {
+        "visual_subject": "A next-generation accelerator architecture comparison: previous compute blocks transition into denser memory, faster interconnect, and larger model-serving lanes.",
+        "supporting_subjects": "Show abstract generational hardware blocks; no NVIDIA logo, no product badge, no readable generation name.",
+        "view_mode": "before_after",
+    },
+    "J-74": {
+        "visual_subject": "A consumer GPU series comparison: several generic graphics cards scale from small to large with rendering, AI, and video workload cards attached.",
+        "supporting_subjects": "Show hardware lineup as neutral cards; no NVIDIA or RTX logo, no product badge, no readable model numbers.",
+        "view_mode": "structure_map",
+    },
+    "J-75": {
+        "visual_subject": "A tensor-processing core diagram: matrix tiles enter specialized parallel compute blocks and return accelerated model-operation result cards.",
+        "supporting_subjects": "Show grid multiplication as abstract colored blocks, not formulas; no vendor logos, no readable math, no chip branding.",
+        "view_mode": "operation_flow",
+    },
+    "J-76": {
+        "visual_subject": "A central-processor coordination map: a generic processor schedules tasks, talks to memory, storage, and accelerators, and manages control flow.",
+        "supporting_subjects": "Use abstract hardware blocks and bus arrows; no Intel, AMD, or Arm logos; no readable instruction text.",
+        "view_mode": "structure_map",
+    },
+    "J-77": {
+        "visual_subject": "A graphics-processing concept diagram: many parallel shader-like lanes transform geometry, pixels, and AI workload tiles into visual result cards.",
+        "supporting_subjects": "Show generic graphics hardware and parallel compute blocks; no vendor logos, no product badges, no readable model names.",
+        "view_mode": "structure_map",
+    },
+    "J-78": {
+        "visual_subject": "A hard-disk storage diagram: spinning platter rings, actuator arm, cache buffer, and file blocks show mechanical storage access.",
+        "supporting_subjects": "Use generic drive internals and data flow arrows; no manufacturer logo, no readable capacity text, no product label.",
+        "view_mode": "structure_map",
+    },
+    "J-79": {
+        "visual_subject": "A solid-state storage diagram: controller block routes data into flash memory cells, showing fast random access with no moving parts.",
+        "supporting_subjects": "Show generic NAND-like grid, controller, and read-write arrows; no manufacturer logo, no readable model text.",
+        "view_mode": "structure_map",
+    },
+    "J-80": {
+        "visual_subject": "A storage-interface connection diagram: a motherboard-like controller connects by a cabled lane to a separate storage drive and moves command/data blocks.",
+        "supporting_subjects": "Use generic connectors, cable path, and drive cards; no standard logo, no readable pin labels, no product badges.",
+        "view_mode": "operation_flow",
+    },
+    "J-81": {
+        "visual_subject": "A compact storage-module diagram: a slim card plugs directly into a board slot, using short high-speed lanes to reach the processor and memory.",
+        "supporting_subjects": "Show generic module, keyed slot, and lane arrows; no standard logo, no readable key labels, no manufacturer mark.",
+        "view_mode": "structure_map",
+    },
+    "J-90": {
+        "visual_subject": "A graphical user interface concept: windows, buttons, sliders, and pointer actions organize commands visually for a user.",
+        "supporting_subjects": "Use generic interface blocks only; no real OS chrome, no app icons, no readable labels.",
+        "view_mode": "structure_map",
+    },
+    "J-91": {
+        "visual_subject": "A command-line interface concept: a user sends typed-command blocks into a terminal-like panel, receiving structured result cards and automation arrows.",
+        "supporting_subjects": "Show command blocks as blank bars, not readable text; no shell logos, no real terminal prompt, no product UI.",
+        "view_mode": "operation_flow",
+    },
+    "J-92": {
+        "visual_subject": "An open operating-system architecture map: kernel-like core coordinates userspace apps, drivers, filesystems, and network services.",
+        "supporting_subjects": "Use neutral OS layers and hardware interface blocks; no Linux penguin, no distro logos, no readable command text.",
+        "view_mode": "structure_map",
+    },
+    "J-93": {
+        "visual_subject": "A desktop Linux distribution workflow: installer, package updates, desktop environment, and community support cards connect into a usable system.",
+        "supporting_subjects": "Use generic desktop and package boxes; no Ubuntu logo, no orange-purple brand palette, no readable package names.",
+        "view_mode": "operation_flow",
+    },
+    "J-100": {
+        "visual_subject": "A literacy decision map: a reader turns unknown technical terms into practical understanding through context, examples, verification, and application cards.",
+        "supporting_subjects": "Show learning steps, glossary cards, and confidence loop; no readable words, no book-cover text, no product logos.",
+        "view_mode": "operation_flow",
+    },
 }
 
 
@@ -1198,7 +1848,7 @@ Characters: female={female}, male={male}, robot={robot}. Use the recurring Chara
 
 Logo and brand rule: {'Keep the upper-right logo clearspace completely blank white, about the rightmost 40% of the top 25% of the image. Do not generate, imitate, redraw, or approximate any company or service logo. Outside that clearspace, keep the main subject large and complete.' if mode != 'none' else 'No official logo is needed. Do not draw, imitate, or hint at any company or service logo, app icon, product UI, brand mark, or brand color scheme.'}
 
-Color palette: strict white/black/gray plus approved blue accents only: #FFFFFF, #F7F9FC, #1A1A1A, #6B7280, #EAF1FB, #D6E6FA, #8DB7E8, #3F7FD1, #123E82.
+Color palette: strict white/black/gray plus approved blue accents only: #FFFFFF, #F7F9FC, #1A1A1A, #6B7280, #EAF1FB, #D6E6FA, #8DB7E8, #3F7FD1, #123E82. Do not use yellow, green, red, purple, brown, orange, rainbow colors, cyan, teal, purple-blue, decorative blue sparkles, colorful charts, photo thumbnails, product UI colors, brand colors, or any other blue. The only color exception is a later deterministic official asset overlay; do not include that exception in the generated illustration body.
 
 Style: clean simple editorial line illustration, smooth uniform black lines, flat light gray fills, minimal shading, no hatching, no pencil sketch, no painterly texture.
 

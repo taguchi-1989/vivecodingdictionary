@@ -7,36 +7,36 @@
 | 段階 | 件数 | 対象 |
 | --- | ---: | --- |
 | 2:1 base 作成済み | 20 / 20 | B-10 - B-29 全件 |
-| 公式ロゴ確認済み | 9 / 20 | B-11, B-12, B-13, B-14, B-20, B-21, B-22, B-28, B-29 |
-| ロゴ後合成済み | 8 / 20 | B-11, B-12, B-13, B-20, B-21, B-22, B-28, B-29 |
-| final candidate 化済み | 8 / 20 | B-11, B-12, B-13, B-20, B-21, B-22, B-28, B-29 |
-| overlay_wait 残り | 12 / 20 | B-10, B-14, B-15, B-16, B-17, B-18, B-19, B-23, B-24, B-25, B-26, B-27 |
+| 公式ロゴ確認済み | 18 / 20 | B-10, B-11, B-12, B-13, B-14, B-15, B-16, B-17, B-18, B-20, B-21, B-22, B-24, B-25, B-26, B-27, B-28, B-29 |
+| ロゴ後合成済み | 18 / 20 | B-10, B-11, B-12, B-13, B-14, B-15, B-16, B-17, B-18, B-20, B-21, B-22, B-24, B-25, B-26, B-27, B-28, B-29 |
+| final candidate 化済み | 18 / 20 | B-10, B-11, B-12, B-13, B-14, B-15, B-16, B-17, B-18, B-20, B-21, B-22, B-24, B-25, B-26, B-27, B-28, B-29 |
+| overlay_wait 残り | 2 / 20 | B-19, B-23 |
 | final 昇格済み | 0 / 20 | まだ `assets/ponchi/final/` へはコピーしない |
 
 ## Entry 一覧
 
 | entry | title | 2:1 base | official logo source | logo overlay | final candidate | current status |
 | --- | --- | --- | --- | --- | --- | --- |
-| B-10 | Devin | done | waiting | not yet | not yet | overlay_wait |
-| B-11 | Bolt.new | done | done | done | accepted | overlay_audit |
-| B-12 | Perplexity | done | done | done | accepted | overlay_audit |
-| B-13 | ElevenLabs | done | done | done | accepted | overlay_audit |
-| B-14 | Genspark | done | source confirmed, import waiting | not yet | not yet | overlay_wait |
-| B-15 | Microsoft Copilot | done | waiting | not yet | not yet | overlay_wait |
-| B-16 | Microsoft 365 Copilot | done | waiting | not yet | not yet | overlay_wait |
-| B-17 | Edge Copilot | done | waiting | not yet | not yet | overlay_wait |
-| B-18 | Aqua Voice | done | waiting | not yet | not yet | overlay_wait |
+| B-10 | Devin | done | done | done | review_pending | overlay_audit |
+| B-11 | Bolt.new | done | done | done | review_pending | overlay_audit |
+| B-12 | Perplexity | done | done | done | review_pending | overlay_audit |
+| B-13 | ElevenLabs | done | done | done | review_pending | overlay_audit |
+| B-14 | Genspark | done | done | done | review_pending | overlay_audit |
+| B-15 | Microsoft Copilot | done | official Copilot icon applied | done | review_pending | overlay_audit |
+| B-16 | Microsoft 365 Copilot | done | official Copilot-family icon applied; dedicated lockup not confirmed | done | review_pending | overlay_audit |
+| B-17 | Edge Copilot | done | official Copilot-family icon applied; Edge-specific lockup not confirmed | done | review_pending | overlay_audit |
+| B-18 | Aqua Voice | done | done | done | review_pending | overlay_audit |
 | B-19 | Claude Cowork | done | waiting | not yet | not yet | overlay_wait |
-| B-20 | Vercel | done | done | done | accepted | overlay_audit |
-| B-21 | Netlify | done | done | done | accepted | overlay_audit |
-| B-22 | Cloudflare | done | done | done | accepted | overlay_audit |
+| B-20 | Vercel | done | done | done | review_pending | overlay_audit |
+| B-21 | Netlify | done | done | done | review_pending | overlay_audit |
+| B-22 | Cloudflare | done | done | done | review_pending | overlay_audit |
 | B-23 | AWS | done | waiting | not yet | not yet | overlay_wait |
-| B-24 | Google Cloud | done | waiting | not yet | not yet | overlay_wait |
-| B-25 | Azure | done | waiting | not yet | not yet | overlay_wait |
-| B-26 | Azure OpenAI | done | waiting | not yet | not yet | overlay_wait |
-| B-27 | Vertex AI | done | waiting | not yet | not yet | overlay_wait |
-| B-28 | Render | done | done | done | accepted | overlay_audit |
-| B-29 | Supabase | done | done | done | accepted | overlay_audit |
+| B-24 | Google Cloud | done | done | done | review_pending | overlay_audit |
+| B-25 | Azure | done | done | done | review_pending | overlay_audit |
+| B-26 | Azure OpenAI | done | done | done | review_pending | overlay_audit |
+| B-27 | Vertex AI | done | done | done | review_pending | overlay_audit |
+| B-28 | Render | done | done | done | review_pending | overlay_audit |
+| B-29 | Supabase | done | done | done | review_pending | overlay_audit |
 
 ## Generated locations
 
@@ -44,3 +44,11 @@
 - Logo overlay images: `assets/ponchi/experiments/batches/ponchi-batch-002/*_overlay_1254x627.png`
 - Final candidates: `assets/ponchi/final_candidates/ponchi-batch-002/`
 - Candidate contact sheet: `assets/ponchi/final_candidates/ponchi-batch-002/final_candidates_contact_sheet.png`
+
+## Latest note
+
+B-15, B-16, and B-17 use the official Copilot icon extracted from the official
+Copilot homepage `https://copilot.microsoft.com/`. B-16 and B-17 remain
+review-pending because dedicated Microsoft 365 Copilot and Edge Copilot lockups
+were not confirmed locally; do not treat the generic Copilot-family icon as
+final approval.

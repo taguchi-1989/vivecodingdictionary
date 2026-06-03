@@ -1,0 +1,20 @@
+entry_id,title,source_file,source_type,candidate_png,candidate_webp,candidate_status
+D-42,Gemma 系,assets\ponchi\experiments\batches\ponchi-batch-006\D-42_overlay_1254x627.png,review_pending_overlay,D-42_candidate.png,D-42_candidate.webp,review_pending
+D-43,Qwen 系,assets\ponchi\experiments\batches\ponchi-batch-006\D-43_overlay_1254x627.png,review_pending_overlay,D-43_candidate.png,D-43_candidate.webp,review_pending
+D-44,Kimi,assets\ponchi\experiments\batches\ponchi-batch-006\D-44_overlay_1254x627.png,review_pending_overlay,D-44_candidate.png,D-44_candidate.webp,review_pending
+D-45,GLM,assets\ponchi\experiments\batches\ponchi-batch-006\D-45_overlay_1254x627.png,review_pending_overlay,D-45_candidate.png,D-45_candidate.webp,review_pending
+D-46,DeepSeek V3,assets\ponchi\experiments\batches\ponchi-batch-006\D-46_overlay_1254x627.png,review_pending_overlay,D-46_candidate.png,D-46_candidate.webp,review_pending
+D-47,DeepSeek R1,assets\ponchi\experiments\batches\ponchi-batch-006\D-47_overlay_1254x627.png,review_pending_overlay,D-47_candidate.png,D-47_candidate.webp,review_pending
+D-50,DALL-E,assets\ponchi\experiments\batches\ponchi-batch-006\D-50_overlay_1254x627.png,review_pending_overlay,D-50_candidate.png,D-50_candidate.webp,review_pending
+D-51,Imagen,assets\ponchi\experiments\batches\ponchi-batch-006\D-51_overlay_1254x627.png,review_pending_overlay,D-51_candidate.png,D-51_candidate.webp,review_pending
+D-52,Sora,assets\ponchi\experiments\batches\ponchi-batch-006\D-52_overlay_1254x627.png,review_pending_overlay,D-52_candidate.png,D-52_candidate.webp,review_pending
+D-53,Veo,assets\ponchi\experiments\batches\ponchi-batch-006\D-53_overlay_1254x627.png,review_pending_overlay,D-53_candidate.png,D-53_candidate.webp,review_pending
+D-54,Stable Diffusion,assets\ponchi\experiments\batches\ponchi-batch-006\D-54_overlay_1254x627.png,review_pending_overlay,D-54_candidate.png,D-54_candidate.webp,review_pending
+D-55,Nano Banana,assets\ponchi\experiments\batches\ponchi-batch-006\D-55_overlay_1254x627.png,review_pending_overlay,D-55_candidate.png,D-55_candidate.webp,review_pending
+D-57,Flow,assets\ponchi\experiments\batches\ponchi-batch-006\D-57_overlay_1254x627.png,review_pending_overlay,D-57_candidate.png,D-57_candidate.webp,review_pending
+D-58,Whisk,assets\ponchi\experiments\batches\ponchi-batch-006\D-58_overlay_1254x627.png,review_pending_overlay,D-58_candidate.png,D-58_candidate.webp,review_pending
+D-60,AlphaGo,assets\ponchi\experiments\batches\ponchi-batch-006\D-60_overlay_1254x627.png,review_pending_overlay,D-60_candidate.png,D-60_candidate.webp,review_pending
+D-70,Amical,assets\ponchi\experiments\batches\ponchi-batch-006\D-70_overlay_1254x627.png,review_pending_overlay,D-70_candidate.png,D-70_candidate.webp,review_pending
+D-71,Whisper,assets\ponchi\experiments\batches\ponchi-batch-006\D-71_overlay_1254x627.png,review_pending_overlay,D-71_candidate.png,D-71_candidate.webp,review_pending
+E-1,SWE-Bench,assets\ponchi\experiments\batches\ponchi-batch-006\E-1_base_1254x627.png,review_pending_base,E-1_candidate.png,E-1_candidate.webp,review_pending
+E-2,SWE-Bench Verified,assets\ponchi\experiments\batches\ponchi-batch-006\E-2_base_1254x627.png,review_pending_base,E-2_candidate.png,E-2_candidate.webp,review_pending

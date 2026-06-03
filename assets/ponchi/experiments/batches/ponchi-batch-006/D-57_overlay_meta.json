@@ -1,0 +1,13 @@
+{
+  "base_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-006\\D-57_base_1254x627.png",
+  "official_asset": "assets\\logos\\google-flow\\flow_favicon_w_on-approved-blue-plate.png",
+  "output_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-006\\D-57_overlay_1254x627.png",
+  "overlay_rect": {
+    "x": 1066,
+    "y": 36,
+    "width": 146,
+    "height": 62
+  },
+  "source_official_logo": "assets\\logos\\google-flow\\flow_favicon_w.png",
+  "note": "Official Google Flow favicon is unchanged and centered on an approved #123E82 plate for white-canvas visibility. Standalone Flow lockup was not confirmed; treat as a review-pending official icon overlay. Only this rectangle may contain official-asset color exceptions."
+}

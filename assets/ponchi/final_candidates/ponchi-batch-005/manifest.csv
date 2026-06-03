@@ -1,0 +1,21 @@
+entry_id,title,source_file,source_type,candidate_png,candidate_webp,candidate_status
+D-1,Gemini 2 系,assets\ponchi\experiments\batches\ponchi-batch-005\D-1_overlay_1254x627.png,review_pending_overlay,D-1_candidate.png,D-1_candidate.webp,review_pending
+D-2,Gemini 2.5 系,assets\ponchi\experiments\batches\ponchi-batch-005\D-2_overlay_1254x627.png,review_pending_overlay,D-2_candidate.png,D-2_candidate.webp,review_pending
+D-3,Gemini 3 系,assets\ponchi\experiments\batches\ponchi-batch-005\D-3_overlay_1254x627.png,review_pending_overlay,D-3_candidate.png,D-3_candidate.webp,review_pending
+D-4,Gemini 3.1 系,assets\ponchi\experiments\batches\ponchi-batch-005\D-4_overlay_1254x627.png,review_pending_overlay,D-4_candidate.png,D-4_candidate.webp,review_pending
+D-10,Claude 3 系,assets\ponchi\experiments\batches\ponchi-batch-005\D-10_overlay_1254x627.png,review_pending_overlay,D-10_candidate.png,D-10_candidate.webp,review_pending
+D-11,Claude 3.5 系,assets\ponchi\experiments\batches\ponchi-batch-005\D-11_overlay_1254x627.png,review_pending_overlay,D-11_candidate.png,D-11_candidate.webp,review_pending
+D-12,Claude 4 系,assets\ponchi\experiments\batches\ponchi-batch-005\D-12_overlay_1254x627.png,review_pending_overlay,D-12_candidate.png,D-12_candidate.webp,review_pending
+D-13,Claude 4.5 系,assets\ponchi\experiments\batches\ponchi-batch-005\D-13_overlay_1254x627.png,review_pending_overlay,D-13_candidate.png,D-13_candidate.webp,review_pending
+D-14,Claude Mythos Preview,assets\ponchi\experiments\batches\ponchi-batch-005\D-14_overlay_1254x627.png,review_pending_overlay,D-14_candidate.png,D-14_candidate.webp,review_pending
+D-20,GPT-5 系,assets\ponchi\experiments\batches\ponchi-batch-005\D-20_overlay_1254x627.png,review_pending_overlay,D-20_candidate.png,D-20_candidate.webp,review_pending
+D-21,GPT-4 系,assets\ponchi\experiments\batches\ponchi-batch-005\D-21_overlay_1254x627.png,review_pending_overlay,D-21_candidate.png,D-21_candidate.webp,review_pending
+D-22,o1 系,assets\ponchi\experiments\batches\ponchi-batch-005\D-22_overlay_1254x627.png,review_pending_overlay,D-22_candidate.png,D-22_candidate.webp,review_pending
+D-23,o3 系,assets\ponchi\experiments\batches\ponchi-batch-005\D-23_overlay_1254x627.png,review_pending_overlay,D-23_candidate.png,D-23_candidate.webp,review_pending
+D-24,GPT-3 系,assets\ponchi\experiments\batches\ponchi-batch-005\D-24_overlay_1254x627.png,review_pending_overlay,D-24_candidate.png,D-24_candidate.webp,review_pending
+D-25,GPT-1 / GPT-2 系,assets\ponchi\experiments\batches\ponchi-batch-005\D-25_overlay_1254x627.png,review_pending_overlay,D-25_candidate.png,D-25_candidate.webp,review_pending
+D-26,gpt-oss,assets\ponchi\experiments\batches\ponchi-batch-005\D-26_overlay_1254x627.png,review_pending_overlay,D-26_candidate.png,D-26_candidate.webp,review_pending
+D-30,Grok 系,assets\ponchi\experiments\batches\ponchi-batch-005\D-30_overlay_1254x627.png,review_pending_overlay,D-30_candidate.png,D-30_candidate.webp,review_pending
+D-35,Cursor Composer,assets\ponchi\experiments\batches\ponchi-batch-005\D-35_overlay_1254x627.png,review_pending_overlay,D-35_candidate.png,D-35_candidate.webp,review_pending
+D-40,Llama 系,assets\ponchi\experiments\batches\ponchi-batch-005\D-40_overlay_1254x627.png,review_pending_overlay,D-40_candidate.png,D-40_candidate.webp,review_pending
+D-41,Mistral 系,assets\ponchi\experiments\batches\ponchi-batch-005\D-41_overlay_1254x627.png,review_pending_overlay,D-41_candidate.png,D-41_candidate.webp,review_pending

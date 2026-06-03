@@ -1,0 +1,21 @@
+entry_id,title,source_file,source_type,candidate_png,candidate_webp,candidate_status
+G-2,Token,assets\ponchi\experiments\batches\ponchi-batch-012\G-2_base_1254x627.png,review_pending_base,G-2_candidate.png,G-2_candidate.webp,review_pending
+G-3,Dictation,assets\ponchi\experiments\batches\ponchi-batch-012\G-3_base_1254x627.png,review_pending_base,G-3_candidate.png,G-3_candidate.webp,review_pending
+G-4,System Prompt,assets\ponchi\experiments\batches\ponchi-batch-012\G-4_base_1254x627.png,review_pending_base,G-4_candidate.png,G-4_candidate.webp,review_pending
+G-5,Context Window,assets\ponchi\experiments\batches\ponchi-batch-012\G-5_base_1254x627.png,review_pending_base,G-5_candidate.png,G-5_candidate.webp,review_pending
+G-6,One-shot,assets\ponchi\experiments\batches\ponchi-batch-012\G-6_base_1254x627.png,review_pending_base,G-6_candidate.png,G-6_candidate.webp,review_pending
+G-7,指示追従性,assets\ponchi\experiments\batches\ponchi-batch-012\G-7_base_1254x627.png,review_pending_base,G-7_candidate.png,G-7_candidate.webp,review_pending
+G-8,決定論的／非決定論的,assets\ponchi\experiments\batches\ponchi-batch-012\G-8_base_1254x627.png,review_pending_base,G-8_candidate.png,G-8_candidate.webp,review_pending
+G-9,effort レベル,assets\ponchi\experiments\batches\ponchi-batch-012\G-9_base_1254x627.png,review_pending_base,G-9_candidate.png,G-9_candidate.webp,review_pending
+G-10,Prompt Engineering,assets\ponchi\experiments\batches\ponchi-batch-012\G-10_base_1254x627.png,review_pending_base,G-10_candidate.png,G-10_candidate.webp,review_pending
+G-11,Context Engineering,assets\ponchi\experiments\batches\ponchi-batch-012\G-11_base_1254x627.png,review_pending_base,G-11_candidate.png,G-11_candidate.webp,review_pending
+G-12,Agent Design,assets\ponchi\experiments\batches\ponchi-batch-012\G-12_base_1254x627.png,review_pending_base,G-12_candidate.png,G-12_candidate.webp,review_pending
+G-13,Few-shot Learning,assets\ponchi\experiments\batches\ponchi-batch-012\G-13_base_1254x627.png,review_pending_base,G-13_candidate.png,G-13_candidate.webp,review_pending
+G-14,Thinking モデル,assets\ponchi\experiments\batches\ponchi-batch-012\G-14_base_1254x627.png,review_pending_base,G-14_candidate.png,G-14_candidate.webp,review_pending
+G-15,RAG,assets\ponchi\experiments\batches\ponchi-batch-012\G-15_base_1254x627.png,review_pending_base,G-15_candidate.png,G-15_candidate.webp,review_pending
+G-16,Embedding,assets\ponchi\experiments\batches\ponchi-batch-012\G-16_base_1254x627.png,review_pending_base,G-16_candidate.png,G-16_candidate.webp,review_pending
+G-17,ベクトル DB,assets\ponchi\experiments\batches\ponchi-batch-012\G-17_base_1254x627.png,review_pending_base,G-17_candidate.png,G-17_candidate.webp,review_pending
+G-18,Chain of Thought,assets\ponchi\experiments\batches\ponchi-batch-012\G-18_base_1254x627.png,review_pending_base,G-18_candidate.png,G-18_candidate.webp,review_pending
+G-19,Prompt Caching,assets\ponchi\experiments\batches\ponchi-batch-012\G-19_base_1254x627.png,review_pending_base,G-19_candidate.png,G-19_candidate.webp,review_pending
+G-20,CLAUDE.md,assets\ponchi\experiments\batches\ponchi-batch-012\G-20_base_1254x627.png,review_pending_base,G-20_candidate.png,G-20_candidate.webp,review_pending
+G-21,AGENTS.md,assets\ponchi\experiments\batches\ponchi-batch-012\G-21_base_1254x627.png,review_pending_base,G-21_candidate.png,G-21_candidate.webp,review_pending

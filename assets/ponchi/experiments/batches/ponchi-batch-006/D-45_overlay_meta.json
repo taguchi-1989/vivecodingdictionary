@@ -1,0 +1,13 @@
+{
+  "base_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-006\\D-45_base_1254x627.png",
+  "official_asset": "assets\\logos\\z-ai\\z-ai-logo-official.512.png",
+  "output_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-006\\D-45_overlay_1254x627.png",
+  "overlay_rect": {
+    "x": 1082,
+    "y": 34,
+    "width": 108,
+    "height": 108
+  },
+  "source_official_logo": "assets\\logos\\z-ai\\z-ai-logo-official.svg",
+  "note": "Official Z.ai icon used as the developer/organization overlay for GLM. Dedicated GLM product logo was not confirmed; treat as review-pending. Only this rectangle may contain official-asset color exceptions."
+}

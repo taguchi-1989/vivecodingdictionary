@@ -194,7 +194,10 @@ Subject: {characters}
 Supporting idea: {keyword}
 Style/medium: soft hand-drawn editorial illustration, clean expressive linework, gentle paper texture, minimal detail, friendly but not childish, suitable for a printed technical glossary.
 Composition/framing: square composition, one clear scene, readable when reduced to a small book illustration, generous margins, no crowded UI details.
-Color palette: mostly black linework with white and very pale blue-gray paper tones; at most one subtle blue accent.
+Color palette: strict white/black/gray plus approved blue accents only:
+#FFFFFF, #F7F9FC, #1A1A1A, #6B7280, #EAF1FB, #D6E6FA, #8DB7E8, #3F7FD1, #123E82.
+Do not use yellow, green, red, purple, brown, orange, rainbow colors, cyan, teal, purple-blue, arbitrary blue variants, decorative blue sparkles, blue background fills, product UI colors, photo thumbnails, colorful charts, or brand colors.
+The only color exception is a later deterministic official asset overlay; do not include that exception in the generated illustration body.
 Text: No readable text inside the image. If speech bubbles appear, use only tiny abstract scribble marks.
 If the source scene mentions labels, UI text, column names, or speech words, represent them as abstract blocks, icon marks, checkmarks, dots, or short illegible scribbles instead of readable text; the printed page caption will carry the wording.
 Constraints: Do not draw official logos, trademarks, product UI screenshots, brand marks, model provider marks, or real people's likenesses. Do not make it look like an advertisement. Keep the concept human-centered.

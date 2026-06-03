@@ -1,0 +1,15 @@
+file,entry_id,size,size_ok,bbox_coverage,density_ok,clearspace_required,clearspace_ink_ratio,clearspace_ok,status
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\ponchi-batch-008\F-10_overlay_1254x627.png,F-10,1254x627,true,0.861,true,true,0.1210,true,pass
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\ponchi-batch-008\F-11_overlay_1254x627.png,F-11,1254x627,true,0.889,true,true,0.1116,true,pass
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\ponchi-batch-008\F-12_overlay_1254x627.png,F-12,1254x627,true,0.803,true,true,0.0415,true,pass
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\ponchi-batch-008\F-13_overlay_1254x627.png,F-13,1254x627,true,0.837,true,true,0.1417,true,pass
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\ponchi-batch-008\F-14_overlay_1254x627.png,F-14,1254x627,true,0.773,true,true,0.0472,true,pass
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\ponchi-batch-008\F-15_overlay_1254x627.png,F-15,1254x627,true,0.872,true,true,0.1862,true,pass
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\ponchi-batch-008\F-16_overlay_1254x627.png,F-16,1254x627,true,0.881,true,true,0.0789,true,pass
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\ponchi-batch-008\F-17_overlay_1254x627.png,F-17,1254x627,true,0.788,true,true,0.0913,true,pass
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\ponchi-batch-008\F-20_overlay_1254x627.png,F-20,1254x627,true,0.833,true,true,0.1530,true,pass
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\ponchi-batch-008\F-21_overlay_1254x627.png,F-21,1254x627,true,0.830,true,true,0.1424,true,pass
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\ponchi-batch-008\F-30_overlay_1254x627.png,F-30,1254x627,true,0.860,true,true,0.1670,true,pass
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\ponchi-batch-008\F-34_overlay_1254x627.png,F-34,1254x627,true,0.819,true,true,0.1670,true,pass
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\ponchi-batch-008\F-35_overlay_1254x627.png,F-35,1254x627,true,0.829,true,true,0.1260,true,pass
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\ponchi-batch-008\F-36_overlay_1254x627.png,F-36,1254x627,true,0.850,true,true,0.0483,true,pass

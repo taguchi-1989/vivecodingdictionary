@@ -14,8 +14,7 @@
 
 | stage | count |
 | --- | ---: |
-| `brief_needed` | 18 |
-| `prompt_review` | 2 |
+| `color_audit` | 20 |
 
 ## Prompt Lint Output
 
@@ -34,23 +33,23 @@ Generated base images must pass size, density, and logo-clearspace checks before
 
 | # | entry | title | stage | prompt | base | base audit | overlay | confirmation |
 | ---: | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | `E-3` | Terminal-Bench | `brief_needed` | yes | yes | `pass` | no | `not_reviewed` |
-| 2 | `E-4` | HumanEval | `brief_needed` | yes | yes | `pass` | no | `not_reviewed` |
-| 3 | `E-20` | MMLU | `brief_needed` | yes | yes | `pass` | no | `not_reviewed` |
-| 4 | `E-21` | MMLU-Pro | `brief_needed` | yes | yes | `pass` | no | `not_reviewed` |
-| 5 | `E-22` | GPQA | `brief_needed` | yes | yes | `pass` | no | `not_reviewed` |
-| 6 | `E-23` | GSM8K | `brief_needed` | yes | yes | `pass` | no | `not_reviewed` |
-| 7 | `E-24` | MATH | `brief_needed` | yes | yes | `pass` | no | `not_reviewed` |
-| 8 | `E-25` | AIME | `brief_needed` | yes | yes | `pass` | no | `not_reviewed` |
-| 9 | `E-26` | Humanity's Last Exam | `brief_needed` | yes | yes | `pass` | no | `not_reviewed` |
-| 10 | `E-27` | IQ Bench | `brief_needed` | yes | yes | `pass` | no | `not_reviewed` |
-| 11 | `E-30` | TAU-Bench | `brief_needed` | yes | yes | `pass` | no | `not_reviewed` |
-| 12 | `E-31` | WebArena | `brief_needed` | yes | yes | `pass` | no | `not_reviewed` |
-| 13 | `E-32` | GAIA | `brief_needed` | yes | yes | `pass` | no | `not_reviewed` |
-| 14 | `E-33` | AgentBench | `brief_needed` | yes | yes | `pass` | no | `not_reviewed` |
-| 15 | `E-34` | OSWorld | `brief_needed` | yes | yes | `pass` | no | `not_reviewed` |
-| 16 | `E-50` | Chatbot Arena | `brief_needed` | yes | yes | `pass` | no | `not_reviewed` |
-| 17 | `E-51` | LMSYS Arena | `brief_needed` | yes | yes | `pass` | no | `not_reviewed` |
-| 18 | `F-1` | JavaScript | `prompt_review` | yes | yes | `pass` | no | `not_reviewed` |
-| 19 | `F-2` | TypeScript | `prompt_review` | yes | yes | `pass` | no | `not_reviewed` |
-| 20 | `F-3` | Python | `brief_needed` | yes | yes | `pass` | no | `not_reviewed` |
+| 1 | `E-3` | Terminal-Bench | `color_audit` | yes | yes | `pass` | no | `not_reviewed` |
+| 2 | `E-4` | HumanEval | `color_audit` | yes | yes | `pass` | no | `not_reviewed` |
+| 3 | `E-20` | MMLU | `color_audit` | yes | yes | `pass` | no | `not_reviewed` |
+| 4 | `E-21` | MMLU-Pro | `color_audit` | yes | yes | `pass` | no | `not_reviewed` |
+| 5 | `E-22` | GPQA | `color_audit` | yes | yes | `pass` | no | `not_reviewed` |
+| 6 | `E-23` | GSM8K | `color_audit` | yes | yes | `pass` | no | `not_reviewed` |
+| 7 | `E-24` | MATH | `color_audit` | yes | yes | `pass` | no | `not_reviewed` |
+| 8 | `E-25` | AIME | `color_audit` | yes | yes | `pass` | no | `not_reviewed` |
+| 9 | `E-26` | Humanity's Last Exam | `color_audit` | yes | yes | `pass` | no | `not_reviewed` |
+| 10 | `E-27` | IQ Bench | `color_audit` | yes | yes | `pass` | no | `not_reviewed` |
+| 11 | `E-30` | TAU-Bench | `color_audit` | yes | yes | `pass` | no | `not_reviewed` |
+| 12 | `E-31` | WebArena | `color_audit` | yes | yes | `pass` | no | `not_reviewed` |
+| 13 | `E-32` | GAIA | `color_audit` | yes | yes | `pass` | no | `not_reviewed` |
+| 14 | `E-33` | AgentBench | `color_audit` | yes | yes | `pass` | no | `not_reviewed` |
+| 15 | `E-34` | OSWorld | `color_audit` | yes | yes | `pass` | no | `not_reviewed` |
+| 16 | `E-50` | Chatbot Arena | `color_audit` | yes | yes | `pass` | no | `not_reviewed` |
+| 17 | `E-51` | LMSYS Arena | `color_audit` | yes | yes | `pass` | no | `not_reviewed` |
+| 18 | `F-1` | JavaScript | `color_audit` | yes | yes | `pass` | no | `not_reviewed` |
+| 19 | `F-2` | TypeScript | `color_audit` | yes | yes | `pass` | no | `not_reviewed` |
+| 20 | `F-3` | Python | `color_audit` | yes | yes | `pass` | no | `not_reviewed` |

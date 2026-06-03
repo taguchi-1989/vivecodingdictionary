@@ -1,3 +1,20 @@
 entry_id,title,source_file,source_type,candidate_png,candidate_webp,candidate_status
+B-30,Amazon Bedrock,assets\ponchi\experiments\batches\ponchi-batch-003\B-30_overlay_1254x627.png,review_pending_overlay,B-30_candidate.png,B-30_candidate.webp,review_pending
+B-31,Excalidraw,assets\ponchi\experiments\batches\ponchi-batch-003\B-31_overlay_1254x627.png,review_pending_overlay,B-31_candidate.png,B-31_candidate.webp,review_pending
+B-32,Figma,assets\ponchi\experiments\batches\ponchi-batch-003\B-32_overlay_1254x627.png,review_pending_overlay,B-32_candidate.png,B-32_candidate.webp,review_pending
+B-33,Canva,assets\ponchi\experiments\batches\ponchi-batch-003\B-33_overlay_1254x627.png,review_pending_overlay,B-33_candidate.png,B-33_candidate.webp,review_pending
+B-40,Reddit,assets\ponchi\experiments\batches\ponchi-batch-003\B-40_overlay_1254x627.png,review_pending_overlay,B-40_candidate.png,B-40_candidate.webp,review_pending
+B-41,arXiv,assets\ponchi\experiments\batches\ponchi-batch-003\B-41_overlay_1254x627.png,review_pending_overlay,B-41_candidate.png,B-41_candidate.webp,review_pending
+B-50,Claude の料金プラン,assets\ponchi\experiments\batches\ponchi-batch-003\B-50_overlay_1254x627.png,review_pending_overlay,B-50_candidate.png,B-50_candidate.webp,review_pending
+B-51,ChatGPT の料金プラン,assets\ponchi\experiments\batches\ponchi-batch-003\B-51_overlay_1254x627.png,review_pending_overlay,B-51_candidate.png,B-51_candidate.webp,review_pending
+B-52,Gemini の料金プラン,assets\ponchi\experiments\batches\ponchi-batch-003\B-52_overlay_1254x627.png,review_pending_overlay,B-52_candidate.png,B-52_candidate.webp,review_pending
+B-60,Suno,assets\ponchi\experiments\batches\ponchi-batch-003\B-60_overlay_1254x627.png,review_pending_overlay,B-60_candidate.png,B-60_candidate.webp,review_pending
+B-61,ACE-Step 1.5,assets\ponchi\experiments\batches\ponchi-batch-003\B-61_overlay_1254x627.png,review_pending_overlay,B-61_candidate.png,B-61_candidate.webp,review_pending
 C-1,OpenAI,assets\ponchi\experiments\batches\ponchi-batch-003\C-1_overlay_1254x627.png,review_pending_overlay,C-1_candidate.png,C-1_candidate.webp,review_pending
 C-2,Anthropic,assets\ponchi\experiments\batches\ponchi-batch-003\C-2_overlay_1254x627.png,review_pending_overlay,C-2_candidate.png,C-2_candidate.webp,review_pending
+C-3,Google DeepMind,assets\ponchi\experiments\batches\ponchi-batch-003\C-3_overlay_1254x627.png,review_pending_overlay,C-3_candidate.png,C-3_candidate.webp,review_pending
+C-4,Meta AI,assets\ponchi\experiments\batches\ponchi-batch-003\C-4_overlay_1254x627.png,review_pending_overlay,C-4_candidate.png,C-4_candidate.webp,review_pending
+C-5,xAI,assets\ponchi\experiments\batches\ponchi-batch-003\C-5_overlay_1254x627.png,review_pending_overlay,C-5_candidate.png,C-5_candidate.webp,review_pending
+C-6,Mistral AI,assets\ponchi\experiments\batches\ponchi-batch-003\C-6_overlay_1254x627.png,review_pending_overlay,C-6_candidate.png,C-6_candidate.webp,review_pending
+C-7,Hugging Face,assets\ponchi\experiments\batches\ponchi-batch-003\C-7_overlay_1254x627.png,review_pending_overlay,C-7_candidate.png,C-7_candidate.webp,review_pending
+C-9,NVIDIA,assets\ponchi\experiments\batches\ponchi-batch-003\C-9_overlay_1254x627.png,review_pending_overlay,C-9_candidate.png,C-9_candidate.webp,review_pending

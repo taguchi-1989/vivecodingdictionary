@@ -26,7 +26,8 @@
 9. 密度監査を通す。
 10. 公式ロゴが必要なら後合成する。
 11. contact sheet で目視監査する。
-12. final へ昇格するか、再生成理由を記録する。
+12. `scripts/ponchi_color_audit.py` で本文色を監査する。
+13. `overlay_audit`、`color_audit_pass`、目視OK、公式素材出典記録が揃ったものだけを final 昇格候補にする。`assets/ponchi/final/` への実昇格は明示承認後に行う。
 
 ## Subject Stack
 
@@ -161,7 +162,8 @@ Logo and brand rule: <logo block based on brand_asset.mode>.
 
 Color palette: strict white/black/gray plus approved blue accents only:
 #FFFFFF, #F7F9FC, #1A1A1A, #6B7280, #EAF1FB, #D6E6FA, #8DB7E8, #3F7FD1, #123E82.
-Do not use yellow, green, red, purple, brown, orange, rainbow colors, decorative blue sparkles, blue background fills, or brand colors.
+Do not use yellow, green, red, purple, brown, orange, rainbow colors, cyan, teal, purple-blue, arbitrary blue variants, decorative blue sparkles, blue background fills, product UI colors, photo thumbnails, colorful charts, or brand colors.
+The only color exception is a later deterministic official asset overlay; do not include that exception in the generated illustration body.
 
 Style: clean simple editorial line illustration, smooth uniform black lines, flat light gray fills, minimal shading, no hatching, no pencil sketch, no painterly texture.
 
@@ -191,6 +193,8 @@ Required:
 
 - `1254x627` or cleanly normalizable to `1254x627`.
 - No generated logos, icons, official marks, brand colors, real UI, or readable text.
+- Generated body pixels use only the strict body palette from `docs/ponchi_color_acceptance_gate.md`.
+- No photo thumbnails, product UI, colorful charts, cyan/teal drift, purple-blue drift, or arbitrary brand-like blue.
 - Subject is visible as a few large blocks at 200px thumbnail size.
 - Main subject is not pushed into a corner.
 - For logo images, upper-right clearspace is blank but not oversized.
@@ -222,6 +226,16 @@ Required:
 - Logo does not cover or touch important diagram elements.
 - Logo does not make the image look like an advertisement banner.
 - Overlay output is still `1254x627`.
+- Overlay status does not imply color approval. For overlay candidates, audit the matching base image or overlay sidecar so official asset colors are excluded from the generated-body color check.
+
+### Color
+
+Required:
+
+- Run `scripts/ponchi_color_audit.py` against `assets/ponchi/final_candidates`.
+- Require `color_audit_pass` before any final promotion decision.
+- Treat `color_audit_review` as unresolved until visual review or deterministic cleanup proves the off-palette pixels are harmless antialiasing.
+- Treat `color_audit_fail` as a rerender/rebuild requirement.
 
 ## Batch Workflow
 
@@ -238,6 +252,8 @@ For a 20 image batch:
 9. Run density audit.
 10. Update an audit markdown with `accept`, `rerun`, `overlay_wait`, or `reject`.
 11. Only then run official logo overlays.
+12. Stage review-pending final candidates.
+13. Run the color audit and record pass/review/fail before final promotion review.
 
 ## Status Labels
 
@@ -247,6 +263,9 @@ For a 20 image batch:
 | `needs_rerun_density` | Subject is too small, too sparse, or too fine. |
 | `needs_rerun_clearspace` | Logo area is polluted or too large. |
 | `overlay_wait` | Base is usable but official logo asset is missing. |
-| `overlay_candidate` | Official logo overlay exists and needs final preview review. |
-| `final_ready` | Ready to promote to `assets/ponchi/final/`. |
+| `overlay_candidate` | Official logo overlay exists and needs final preview review. This does not imply color approval. |
+| `color_audit_pass` | Generated body palette passed the mechanical color gate. |
+| `color_audit_review` | Minor off-palette traces need visual confirmation or cleanup. |
+| `color_audit_fail` | Off-palette color is materially present and requires rerender/rebuild. |
+| `final_ready` | Ready to promote only after overlay/source review, color pass, human visual OK, and explicit final-promotion approval. |
 | `blocked_brand_asset` | Must not proceed until official asset is confirmed. |

@@ -41,6 +41,7 @@
     .prompt_review { color: var(--blue); }
     .overlay_wait { color: var(--warn); border-color: #d9b45f; }
     .overlay_ready, .overlay_audit { color: #1f5f3a; border-color: #9fceb0; }
+    .color_audit { color: #123e82; border-color: #8db7e8; }
     .blocked_brand_asset { color: var(--block); border-color: #d9a3a3; }
     table { width: 100%; border-collapse: collapse; font-size: 13px; }
     th, td { border-top: 1px solid var(--line); padding: 7px 8px; text-align: left; vertical-align: top; }
@@ -62,10 +63,10 @@
       <p>20件単位で scene brief、prompt、生成、監査、確認、final候補化を進めるための観察ページ。</p>
       <p>Source: <code>ledgers/ponchi_generation_batches.csv</code></p>
     </header>
-    <section class="summary"><article><strong>brief_needed</strong><span>207</span></article><article><strong>prompt_review</strong><span>4</span></article><article><strong>overlay_wait</strong><span>112</span></article><article><strong>overlay_ready</strong><span>12</span></article><article><strong>overlay_audit</strong><span>14</span></article><article><strong>blocked_brand_asset</strong><span>1</span></article></section>
+    <section class="summary"><article><strong>brief_needed</strong><span>0</span></article><article><strong>prompt_review</strong><span>0</span></article><article><strong>overlay_wait</strong><span>5</span></article><article><strong>overlay_ready</strong><span>0</span></article><article><strong>overlay_audit</strong><span>133</span></article><article><strong>color_audit</strong><span>212</span></article><article><strong>blocked_brand_asset</strong><span>0</span></article></section>
     <section>
       <h2>Logo Status</h2>
-      <table class="logo-table"><tbody><tr><td>blocked_brand_asset</td><td>1</td></tr><tr><td>logo_avoid</td><td>91</td></tr><tr><td>official_logo_applied</td><td>14</td></tr><tr><td>official_logo_available</td><td>12</td></tr><tr><td>official_logo_source_available_needs_import</td><td>8</td></tr><tr><td>official_logo_source_review_required</td><td>104</td></tr><tr><td>unclassified</td><td>120</td></tr></tbody></table>
+      <table class="logo-table"><tbody><tr><td>logo_avoid</td><td>212</td></tr><tr><td>official_logo_applied</td><td>133</td></tr><tr><td>official_logo_source_review_required</td><td>5</td></tr></tbody></table>
     </section>
     <section class="layout">
       
@@ -73,34 +74,34 @@
         <div class="batch-head">
           <div>
             <h2>ponchi-batch-001</h2>
-            <p>20 items / pipeline prompts 19 / base images 20 / final candidates 5</p>
+            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 20</p>
           </div>
           <div class="links">
-            <a href="../ledgers/ponchi_batches/ponchi-batch-001.md">report</a><a href="ponchi_batch_audits/ponchi-batch-001.md">audit</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-001/">prompts</a><a href="../assets/ponchi/final_candidates/ponchi-batch-001/final_candidates_contact_sheet.png">final candidates</a>
+            <a href="../ledgers/ponchi_batches/ponchi-batch-001.md">report</a><a href="ponchi_batch_audits/ponchi-batch-001.md">audit</a><a href="ponchi_batch_audits/ponchi-batch-001-base-contact-sheet.png">base sheet</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-001/">prompts</a><a href="../assets/ponchi/final_candidates/ponchi-batch-001/final_candidates_contact_sheet.png">final candidates</a>
           </div>
         </div>
-        <div class="badges"><span class="mini brief_needed">brief_needed 11</span><span class="mini overlay_wait">overlay_wait 3</span><span class="mini overlay_audit">overlay_audit 5</span><span class="mini blocked_brand_asset">blocked_brand_asset 1</span></div>
+        <div class="badges"><span class="mini overlay_audit">overlay_audit 9</span><span class="mini color_audit">color_audit 11</span></div>
         <table>
           <thead><tr><th>#</th><th>entry</th><th>title</th><th>stage</th><th>logo</th><th>confirm</th></tr></thead>
-          <tbody><tr><td>1</td><td><code>A-1</code></td><td>まえがき</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>2</td><td><code>A-2</code></td><td>この本の読み方</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>3</td><td><code>A-3</code></td><td>図鑑の歩き方</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>4</td><td><code>A-4</code></td><td>体験区分の凡例</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>5</td><td><code>A-5</code></td><td>読者レベルの凡例</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>6</td><td><code>A-6</code></td><td>評価日・時変情報の見方</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>7</td><td><code>A-7</code></td><td>図のタイプ</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>8</td><td><code>A-8</code></td><td>色・記号の凡例</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>9</td><td><code>A-9</code></td><td>索引</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>10</td><td><code>A-10</code></td><td>更新履歴と更新方針</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>11</td><td><code>A-11</code></td><td>略称表記</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>12</td><td><code>B-1</code></td><td>Gemini</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
+          <tbody><tr><td>1</td><td><code>A-1</code></td><td>まえがき</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>2</td><td><code>A-2</code></td><td>この本の読み方</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>3</td><td><code>A-3</code></td><td>図鑑の歩き方</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>4</td><td><code>A-4</code></td><td>体験区分の凡例</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>5</td><td><code>A-5</code></td><td>読者レベルの凡例</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>6</td><td><code>A-6</code></td><td>評価日・時変情報の見方</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>7</td><td><code>A-7</code></td><td>図のタイプ</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>8</td><td><code>A-8</code></td><td>色・記号の凡例</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>9</td><td><code>A-9</code></td><td>索引</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>10</td><td><code>A-10</code></td><td>更新履歴と更新方針</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>11</td><td><code>A-11</code></td><td>略称表記</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>12</td><td><code>B-1</code></td><td>Gemini</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
 <tr><td>13</td><td><code>B-2</code></td><td>Claude</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
-<tr><td>14</td><td><code>B-3</code></td><td>ChatGPT</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
+<tr><td>14</td><td><code>B-3</code></td><td>ChatGPT</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
 <tr><td>15</td><td><code>B-4</code></td><td>Cursor</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
 <tr><td>16</td><td><code>B-5</code></td><td>GitHub Copilot</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
-<tr><td>17</td><td><code>B-6</code></td><td>Windsurf</td><td><span class="stage blocked_brand_asset">blocked_brand_asset</span></td><td>blocked_brand_asset</td><td>not_reviewed</td></tr>
+<tr><td>17</td><td><code>B-6</code></td><td>Windsurf</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
 <tr><td>18</td><td><code>B-7</code></td><td>Claude Code</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
-<tr><td>19</td><td><code>B-8</code></td><td>Codex</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
+<tr><td>19</td><td><code>B-8</code></td><td>Codex</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
 <tr><td>20</td><td><code>B-9</code></td><td>v0</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr></tbody>
         </table>
       </section>
@@ -109,33 +110,33 @@
         <div class="batch-head">
           <div>
             <h2>ponchi-batch-002</h2>
-            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 8</p>
+            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 18</p>
           </div>
           <div class="links">
             <a href="../ledgers/ponchi_batches/ponchi-batch-002.md">report</a><a href="ponchi_batch_audits/ponchi-batch-002.md">audit</a><a href="ponchi_batch_audits/ponchi-batch-002-base-contact-sheet.png">base sheet</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-002/">prompts</a><a href="../assets/ponchi/final_candidates/ponchi-batch-002/final_candidates_contact_sheet.png">final candidates</a>
           </div>
         </div>
-        <div class="badges"><span class="mini overlay_wait">overlay_wait 12</span><span class="mini overlay_audit">overlay_audit 8</span></div>
+        <div class="badges"><span class="mini overlay_wait">overlay_wait 2</span><span class="mini overlay_audit">overlay_audit 18</span></div>
         <table>
           <thead><tr><th>#</th><th>entry</th><th>title</th><th>stage</th><th>logo</th><th>confirm</th></tr></thead>
-          <tbody><tr><td>1</td><td><code>B-10</code></td><td>Devin</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
+          <tbody><tr><td>1</td><td><code>B-10</code></td><td>Devin</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
 <tr><td>2</td><td><code>B-11</code></td><td>Bolt.new</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>accept_overlay</td></tr>
 <tr><td>3</td><td><code>B-12</code></td><td>Perplexity</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>accept_overlay</td></tr>
 <tr><td>4</td><td><code>B-13</code></td><td>ElevenLabs</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>accept_overlay</td></tr>
-<tr><td>5</td><td><code>B-14</code></td><td>Genspark</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_available_needs_import</td><td>not_reviewed</td></tr>
-<tr><td>6</td><td><code>B-15</code></td><td>Microsoft Copilot</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>7</td><td><code>B-16</code></td><td>Microsoft 365 Copilot</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>8</td><td><code>B-17</code></td><td>Edge Copilot</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>9</td><td><code>B-18</code></td><td>Aqua Voice</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
+<tr><td>5</td><td><code>B-14</code></td><td>Genspark</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>6</td><td><code>B-15</code></td><td>Microsoft Copilot</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>7</td><td><code>B-16</code></td><td>Microsoft 365 Copilot</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>8</td><td><code>B-17</code></td><td>Edge Copilot</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>9</td><td><code>B-18</code></td><td>Aqua Voice</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
 <tr><td>10</td><td><code>B-19</code></td><td>Claude Cowork</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
 <tr><td>11</td><td><code>B-20</code></td><td>Vercel</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>accept_overlay</td></tr>
 <tr><td>12</td><td><code>B-21</code></td><td>Netlify</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>accept_overlay</td></tr>
 <tr><td>13</td><td><code>B-22</code></td><td>Cloudflare</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>accept_overlay</td></tr>
 <tr><td>14</td><td><code>B-23</code></td><td>AWS</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>15</td><td><code>B-24</code></td><td>Google Cloud</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>16</td><td><code>B-25</code></td><td>Azure</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>17</td><td><code>B-26</code></td><td>Azure OpenAI</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>18</td><td><code>B-27</code></td><td>Vertex AI</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
+<tr><td>15</td><td><code>B-24</code></td><td>Google Cloud</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>16</td><td><code>B-25</code></td><td>Azure</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>17</td><td><code>B-26</code></td><td>Azure OpenAI</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>18</td><td><code>B-27</code></td><td>Vertex AI</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
 <tr><td>19</td><td><code>B-28</code></td><td>Render</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>accept_overlay</td></tr>
 <tr><td>20</td><td><code>B-29</code></td><td>Supabase</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>accept_overlay</td></tr></tbody>
         </table>
@@ -145,35 +146,35 @@
         <div class="batch-head">
           <div>
             <h2>ponchi-batch-003</h2>
-            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 2</p>
+            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 19</p>
           </div>
           <div class="links">
             <a href="../ledgers/ponchi_batches/ponchi-batch-003.md">report</a><a href="ponchi_batch_audits/ponchi-batch-003.md">audit</a><a href="ponchi_batch_audits/ponchi-batch-003-base-contact-sheet.png">base sheet</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-003/">prompts</a><a href="../assets/ponchi/final_candidates/ponchi-batch-003/final_candidates_contact_sheet.png">final candidates</a>
           </div>
         </div>
-        <div class="badges"><span class="mini overlay_wait">overlay_wait 18</span><span class="mini overlay_ready">overlay_ready 2</span></div>
+        <div class="badges"><span class="mini overlay_wait">overlay_wait 1</span><span class="mini overlay_audit">overlay_audit 19</span></div>
         <table>
           <thead><tr><th>#</th><th>entry</th><th>title</th><th>stage</th><th>logo</th><th>confirm</th></tr></thead>
-          <tbody><tr><td>1</td><td><code>B-30</code></td><td>Amazon Bedrock</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>2</td><td><code>B-31</code></td><td>Excalidraw</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>3</td><td><code>B-32</code></td><td>Figma</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>4</td><td><code>B-33</code></td><td>Canva</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>5</td><td><code>B-40</code></td><td>Reddit</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>6</td><td><code>B-41</code></td><td>arXiv</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>7</td><td><code>B-50</code></td><td>Claude の料金プラン</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_available_needs_import</td><td>not_reviewed</td></tr>
-<tr><td>8</td><td><code>B-51</code></td><td>ChatGPT の料金プラン</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>9</td><td><code>B-52</code></td><td>Gemini の料金プラン</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>10</td><td><code>B-60</code></td><td>Suno</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>11</td><td><code>B-61</code></td><td>ACE-Step 1.5</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>12</td><td><code>C-1</code></td><td>OpenAI</td><td><span class="stage overlay_ready">overlay_ready</span></td><td>official_logo_available</td><td>not_reviewed</td></tr>
-<tr><td>13</td><td><code>C-2</code></td><td>Anthropic</td><td><span class="stage overlay_ready">overlay_ready</span></td><td>official_logo_available</td><td>not_reviewed</td></tr>
-<tr><td>14</td><td><code>C-3</code></td><td>Google DeepMind</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>15</td><td><code>C-4</code></td><td>Meta AI</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>16</td><td><code>C-5</code></td><td>xAI</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>17</td><td><code>C-6</code></td><td>Mistral AI</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>18</td><td><code>C-7</code></td><td>Hugging Face</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
+          <tbody><tr><td>1</td><td><code>B-30</code></td><td>Amazon Bedrock</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>2</td><td><code>B-31</code></td><td>Excalidraw</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>3</td><td><code>B-32</code></td><td>Figma</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>4</td><td><code>B-33</code></td><td>Canva</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>5</td><td><code>B-40</code></td><td>Reddit</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>6</td><td><code>B-41</code></td><td>arXiv</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>7</td><td><code>B-50</code></td><td>Claude の料金プラン</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>8</td><td><code>B-51</code></td><td>ChatGPT の料金プラン</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>9</td><td><code>B-52</code></td><td>Gemini の料金プラン</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>10</td><td><code>B-60</code></td><td>Suno</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>11</td><td><code>B-61</code></td><td>ACE-Step 1.5</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>12</td><td><code>C-1</code></td><td>OpenAI</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>13</td><td><code>C-2</code></td><td>Anthropic</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>14</td><td><code>C-3</code></td><td>Google DeepMind</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>15</td><td><code>C-4</code></td><td>Meta AI</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>16</td><td><code>C-5</code></td><td>xAI</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>17</td><td><code>C-6</code></td><td>Mistral AI</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>18</td><td><code>C-7</code></td><td>Hugging Face</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
 <tr><td>19</td><td><code>C-8</code></td><td>Microsoft AI</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>20</td><td><code>C-9</code></td><td>NVIDIA</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr></tbody>
+<tr><td>20</td><td><code>C-9</code></td><td>NVIDIA</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr></tbody>
         </table>
       </section>
 
@@ -181,35 +182,35 @@
         <div class="batch-head">
           <div>
             <h2>ponchi-batch-004</h2>
-            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 0</p>
+            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 19</p>
           </div>
           <div class="links">
-            <a href="../ledgers/ponchi_batches/ponchi-batch-004.md">report</a><a href="ponchi_batch_audits/ponchi-batch-004.md">audit</a><a href="ponchi_batch_audits/ponchi-batch-004-base-contact-sheet.png">base sheet</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-004/">prompts</a>
+            <a href="../ledgers/ponchi_batches/ponchi-batch-004.md">report</a><a href="ponchi_batch_audits/ponchi-batch-004.md">audit</a><a href="ponchi_batch_audits/ponchi-batch-004-base-contact-sheet.png">base sheet</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-004/">prompts</a><a href="../assets/ponchi/final_candidates/ponchi-batch-004/final_candidates_contact_sheet.png">final candidates</a>
           </div>
         </div>
-        <div class="badges"><span class="mini brief_needed">brief_needed 11</span><span class="mini overlay_wait">overlay_wait 9</span></div>
+        <div class="badges"><span class="mini overlay_wait">overlay_wait 1</span><span class="mini overlay_audit">overlay_audit 8</span><span class="mini color_audit">color_audit 11</span></div>
         <table>
           <thead><tr><th>#</th><th>entry</th><th>title</th><th>stage</th><th>logo</th><th>confirm</th></tr></thead>
-          <tbody><tr><td>1</td><td><code>C-10</code></td><td>Moonshot AI</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>2</td><td><code>C-11</code></td><td>Z.ai</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
+          <tbody><tr><td>1</td><td><code>C-10</code></td><td>Moonshot AI</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>2</td><td><code>C-11</code></td><td>Z.ai</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
 <tr><td>3</td><td><code>C-12</code></td><td>TSMC</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>4</td><td><code>C-13</code></td><td>Groq</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>5</td><td><code>C-14</code></td><td>AMD</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>6</td><td><code>C-50</code></td><td>Sam Altman</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>7</td><td><code>C-51</code></td><td>Dario Amodei</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>8</td><td><code>C-52</code></td><td>Demis Hassabis</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>9</td><td><code>C-53</code></td><td>Andrej Karpathy</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>10</td><td><code>C-54</code></td><td>Ilya Sutskever</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>11</td><td><code>C-55</code></td><td>Mira Murati</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>12</td><td><code>C-56</code></td><td>Yann LeCun</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>13</td><td><code>C-57</code></td><td>Geoffrey Hinton</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>14</td><td><code>C-58</code></td><td>Elon Musk</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>15</td><td><code>C-59</code></td><td>Jensen Huang</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>16</td><td><code>C-60</code></td><td>Ray Kurzweil</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>17</td><td><code>C-80</code></td><td>AI大学</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>18</td><td><code>C-81</code></td><td>にゃんた</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>19</td><td><code>C-82</code></td><td>まさお</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>20</td><td><code>C-83</code></td><td>AI の羅針盤</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr></tbody>
+<tr><td>4</td><td><code>C-13</code></td><td>Groq</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>5</td><td><code>C-14</code></td><td>AMD</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>6</td><td><code>C-50</code></td><td>Sam Altman</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>7</td><td><code>C-51</code></td><td>Dario Amodei</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>8</td><td><code>C-52</code></td><td>Demis Hassabis</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>9</td><td><code>C-53</code></td><td>Andrej Karpathy</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>10</td><td><code>C-54</code></td><td>Ilya Sutskever</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>11</td><td><code>C-55</code></td><td>Mira Murati</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>12</td><td><code>C-56</code></td><td>Yann LeCun</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>13</td><td><code>C-57</code></td><td>Geoffrey Hinton</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>14</td><td><code>C-58</code></td><td>Elon Musk</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>15</td><td><code>C-59</code></td><td>Jensen Huang</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>16</td><td><code>C-60</code></td><td>Ray Kurzweil</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>17</td><td><code>C-80</code></td><td>AI大学</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>18</td><td><code>C-81</code></td><td>にゃんた</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>19</td><td><code>C-82</code></td><td>まさお</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>20</td><td><code>C-83</code></td><td>AI の羅針盤</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr></tbody>
         </table>
       </section>
 
@@ -217,35 +218,35 @@
         <div class="batch-head">
           <div>
             <h2>ponchi-batch-005</h2>
-            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 0</p>
+            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 20</p>
           </div>
           <div class="links">
-            <a href="../ledgers/ponchi_batches/ponchi-batch-005.md">report</a><a href="ponchi_batch_audits/ponchi-batch-005.md">audit</a><a href="ponchi_batch_audits/ponchi-batch-005-base-contact-sheet.png">base sheet</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-005/">prompts</a>
+            <a href="../ledgers/ponchi_batches/ponchi-batch-005.md">report</a><a href="ponchi_batch_audits/ponchi-batch-005.md">audit</a><a href="ponchi_batch_audits/ponchi-batch-005-base-contact-sheet.png">base sheet</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-005/">prompts</a><a href="../assets/ponchi/final_candidates/ponchi-batch-005/final_candidates_contact_sheet.png">final candidates</a>
           </div>
         </div>
-        <div class="badges"><span class="mini overlay_wait">overlay_wait 13</span><span class="mini overlay_ready">overlay_ready 7</span></div>
+        <div class="badges"><span class="mini overlay_audit">overlay_audit 20</span></div>
         <table>
           <thead><tr><th>#</th><th>entry</th><th>title</th><th>stage</th><th>logo</th><th>confirm</th></tr></thead>
-          <tbody><tr><td>1</td><td><code>D-1</code></td><td>Gemini 2 系</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>2</td><td><code>D-2</code></td><td>Gemini 2.5 系</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>3</td><td><code>D-3</code></td><td>Gemini 3 系</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>4</td><td><code>D-4</code></td><td>Gemini 3.1 系</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>5</td><td><code>D-10</code></td><td>Claude 3 系</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_available_needs_import</td><td>not_reviewed</td></tr>
-<tr><td>6</td><td><code>D-11</code></td><td>Claude 3.5 系</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_available_needs_import</td><td>not_reviewed</td></tr>
-<tr><td>7</td><td><code>D-12</code></td><td>Claude 4 系</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_available_needs_import</td><td>not_reviewed</td></tr>
-<tr><td>8</td><td><code>D-13</code></td><td>Claude 4.5 系</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_available_needs_import</td><td>not_reviewed</td></tr>
-<tr><td>9</td><td><code>D-14</code></td><td>Claude Mythos Preview</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_available_needs_import</td><td>not_reviewed</td></tr>
-<tr><td>10</td><td><code>D-20</code></td><td>GPT-5 系</td><td><span class="stage overlay_ready">overlay_ready</span></td><td>official_logo_available</td><td>not_reviewed</td></tr>
-<tr><td>11</td><td><code>D-21</code></td><td>GPT-4 系</td><td><span class="stage overlay_ready">overlay_ready</span></td><td>official_logo_available</td><td>not_reviewed</td></tr>
-<tr><td>12</td><td><code>D-22</code></td><td>o1 系</td><td><span class="stage overlay_ready">overlay_ready</span></td><td>official_logo_available</td><td>not_reviewed</td></tr>
-<tr><td>13</td><td><code>D-23</code></td><td>o3 系</td><td><span class="stage overlay_ready">overlay_ready</span></td><td>official_logo_available</td><td>not_reviewed</td></tr>
-<tr><td>14</td><td><code>D-24</code></td><td>GPT-3 系</td><td><span class="stage overlay_ready">overlay_ready</span></td><td>official_logo_available</td><td>not_reviewed</td></tr>
-<tr><td>15</td><td><code>D-25</code></td><td>GPT-1 / GPT-2 系</td><td><span class="stage overlay_ready">overlay_ready</span></td><td>official_logo_available</td><td>not_reviewed</td></tr>
-<tr><td>16</td><td><code>D-26</code></td><td>gpt-oss</td><td><span class="stage overlay_ready">overlay_ready</span></td><td>official_logo_available</td><td>not_reviewed</td></tr>
-<tr><td>17</td><td><code>D-30</code></td><td>Grok 系</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>18</td><td><code>D-35</code></td><td>Cursor Composer</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_available_needs_import</td><td>not_reviewed</td></tr>
-<tr><td>19</td><td><code>D-40</code></td><td>Llama 系</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>20</td><td><code>D-41</code></td><td>Mistral 系</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr></tbody>
+          <tbody><tr><td>1</td><td><code>D-1</code></td><td>Gemini 2 系</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>2</td><td><code>D-2</code></td><td>Gemini 2.5 系</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>3</td><td><code>D-3</code></td><td>Gemini 3 系</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>4</td><td><code>D-4</code></td><td>Gemini 3.1 系</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>5</td><td><code>D-10</code></td><td>Claude 3 系</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>6</td><td><code>D-11</code></td><td>Claude 3.5 系</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>7</td><td><code>D-12</code></td><td>Claude 4 系</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>8</td><td><code>D-13</code></td><td>Claude 4.5 系</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>9</td><td><code>D-14</code></td><td>Claude Mythos Preview</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>10</td><td><code>D-20</code></td><td>GPT-5 系</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>11</td><td><code>D-21</code></td><td>GPT-4 系</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>12</td><td><code>D-22</code></td><td>o1 系</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>13</td><td><code>D-23</code></td><td>o3 系</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>14</td><td><code>D-24</code></td><td>GPT-3 系</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>15</td><td><code>D-25</code></td><td>GPT-1 / GPT-2 系</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>16</td><td><code>D-26</code></td><td>gpt-oss</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>17</td><td><code>D-30</code></td><td>Grok 系</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>18</td><td><code>D-35</code></td><td>Cursor Composer</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>19</td><td><code>D-40</code></td><td>Llama 系</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>20</td><td><code>D-41</code></td><td>Mistral 系</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr></tbody>
         </table>
       </section>
 
@@ -253,35 +254,35 @@
         <div class="batch-head">
           <div>
             <h2>ponchi-batch-006</h2>
-            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 0</p>
+            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 19</p>
           </div>
           <div class="links">
-            <a href="../ledgers/ponchi_batches/ponchi-batch-006.md">report</a><a href="ponchi_batch_audits/ponchi-batch-006.md">audit</a><a href="ponchi_batch_audits/ponchi-batch-006-base-contact-sheet.png">base sheet</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-006/">prompts</a>
+            <a href="../ledgers/ponchi_batches/ponchi-batch-006.md">report</a><a href="ponchi_batch_audits/ponchi-batch-006.md">audit</a><a href="ponchi_batch_audits/ponchi-batch-006-base-contact-sheet.png">base sheet</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-006/">prompts</a><a href="../assets/ponchi/final_candidates/ponchi-batch-006/final_candidates_contact_sheet.png">final candidates</a>
           </div>
         </div>
-        <div class="badges"><span class="mini brief_needed">brief_needed 2</span><span class="mini overlay_wait">overlay_wait 15</span><span class="mini overlay_ready">overlay_ready 3</span></div>
+        <div class="badges"><span class="mini overlay_wait">overlay_wait 1</span><span class="mini overlay_audit">overlay_audit 17</span><span class="mini color_audit">color_audit 2</span></div>
         <table>
           <thead><tr><th>#</th><th>entry</th><th>title</th><th>stage</th><th>logo</th><th>confirm</th></tr></thead>
-          <tbody><tr><td>1</td><td><code>D-42</code></td><td>Gemma 系</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>2</td><td><code>D-43</code></td><td>Qwen 系</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>3</td><td><code>D-44</code></td><td>Kimi</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>4</td><td><code>D-45</code></td><td>GLM</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>5</td><td><code>D-46</code></td><td>DeepSeek V3</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>6</td><td><code>D-47</code></td><td>DeepSeek R1</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>7</td><td><code>D-50</code></td><td>DALL-E</td><td><span class="stage overlay_ready">overlay_ready</span></td><td>official_logo_available</td><td>not_reviewed</td></tr>
-<tr><td>8</td><td><code>D-51</code></td><td>Imagen</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>9</td><td><code>D-52</code></td><td>Sora</td><td><span class="stage overlay_ready">overlay_ready</span></td><td>official_logo_available</td><td>not_reviewed</td></tr>
-<tr><td>10</td><td><code>D-53</code></td><td>Veo</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>11</td><td><code>D-54</code></td><td>Stable Diffusion</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>12</td><td><code>D-55</code></td><td>Nano Banana</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
+          <tbody><tr><td>1</td><td><code>D-42</code></td><td>Gemma 系</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>2</td><td><code>D-43</code></td><td>Qwen 系</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>3</td><td><code>D-44</code></td><td>Kimi</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>4</td><td><code>D-45</code></td><td>GLM</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>5</td><td><code>D-46</code></td><td>DeepSeek V3</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>6</td><td><code>D-47</code></td><td>DeepSeek R1</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>7</td><td><code>D-50</code></td><td>DALL-E</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>8</td><td><code>D-51</code></td><td>Imagen</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>9</td><td><code>D-52</code></td><td>Sora</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>10</td><td><code>D-53</code></td><td>Veo</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>11</td><td><code>D-54</code></td><td>Stable Diffusion</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>12</td><td><code>D-55</code></td><td>Nano Banana</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
 <tr><td>13</td><td><code>D-56</code></td><td>Seedance</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>14</td><td><code>D-57</code></td><td>Flow</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>15</td><td><code>D-58</code></td><td>Whisk</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>16</td><td><code>D-60</code></td><td>AlphaGo</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>17</td><td><code>D-70</code></td><td>Amical</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>18</td><td><code>D-71</code></td><td>Whisper</td><td><span class="stage overlay_ready">overlay_ready</span></td><td>official_logo_available</td><td>not_reviewed</td></tr>
-<tr><td>19</td><td><code>E-1</code></td><td>SWE-Bench</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>20</td><td><code>E-2</code></td><td>SWE-Bench Verified</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr></tbody>
+<tr><td>14</td><td><code>D-57</code></td><td>Flow</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>15</td><td><code>D-58</code></td><td>Whisk</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>16</td><td><code>D-60</code></td><td>AlphaGo</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>17</td><td><code>D-70</code></td><td>Amical</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>18</td><td><code>D-71</code></td><td>Whisper</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>19</td><td><code>E-1</code></td><td>SWE-Bench</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>20</td><td><code>E-2</code></td><td>SWE-Bench Verified</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr></tbody>
         </table>
       </section>
 
@@ -289,35 +290,35 @@
         <div class="batch-head">
           <div>
             <h2>ponchi-batch-007</h2>
-            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 0</p>
+            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 20</p>
           </div>
           <div class="links">
-            <a href="../ledgers/ponchi_batches/ponchi-batch-007.md">report</a><a href="ponchi_batch_audits/ponchi-batch-007.md">audit</a><a href="ponchi_batch_audits/ponchi-batch-007-base-contact-sheet.png">base sheet</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-007/">prompts</a>
+            <a href="../ledgers/ponchi_batches/ponchi-batch-007.md">report</a><a href="ponchi_batch_audits/ponchi-batch-007.md">audit</a><a href="ponchi_batch_audits/ponchi-batch-007-base-contact-sheet.png">base sheet</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-007/">prompts</a><a href="../assets/ponchi/final_candidates/ponchi-batch-007/final_candidates_contact_sheet.png">final candidates</a>
           </div>
         </div>
-        <div class="badges"><span class="mini brief_needed">brief_needed 18</span><span class="mini prompt_review">prompt_review 2</span></div>
+        <div class="badges"><span class="mini color_audit">color_audit 20</span></div>
         <table>
           <thead><tr><th>#</th><th>entry</th><th>title</th><th>stage</th><th>logo</th><th>confirm</th></tr></thead>
-          <tbody><tr><td>1</td><td><code>E-3</code></td><td>Terminal-Bench</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>2</td><td><code>E-4</code></td><td>HumanEval</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>3</td><td><code>E-20</code></td><td>MMLU</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>4</td><td><code>E-21</code></td><td>MMLU-Pro</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>5</td><td><code>E-22</code></td><td>GPQA</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>6</td><td><code>E-23</code></td><td>GSM8K</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>7</td><td><code>E-24</code></td><td>MATH</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>8</td><td><code>E-25</code></td><td>AIME</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>9</td><td><code>E-26</code></td><td>Humanity&#x27;s Last Exam</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>10</td><td><code>E-27</code></td><td>IQ Bench</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>11</td><td><code>E-30</code></td><td>TAU-Bench</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>12</td><td><code>E-31</code></td><td>WebArena</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>13</td><td><code>E-32</code></td><td>GAIA</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>14</td><td><code>E-33</code></td><td>AgentBench</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>15</td><td><code>E-34</code></td><td>OSWorld</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>16</td><td><code>E-50</code></td><td>Chatbot Arena</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>17</td><td><code>E-51</code></td><td>LMSYS Arena</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>18</td><td><code>F-1</code></td><td>JavaScript</td><td><span class="stage prompt_review">prompt_review</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>19</td><td><code>F-2</code></td><td>TypeScript</td><td><span class="stage prompt_review">prompt_review</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>20</td><td><code>F-3</code></td><td>Python</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr></tbody>
+          <tbody><tr><td>1</td><td><code>E-3</code></td><td>Terminal-Bench</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>2</td><td><code>E-4</code></td><td>HumanEval</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>3</td><td><code>E-20</code></td><td>MMLU</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>4</td><td><code>E-21</code></td><td>MMLU-Pro</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>5</td><td><code>E-22</code></td><td>GPQA</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>6</td><td><code>E-23</code></td><td>GSM8K</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>7</td><td><code>E-24</code></td><td>MATH</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>8</td><td><code>E-25</code></td><td>AIME</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>9</td><td><code>E-26</code></td><td>Humanity&#x27;s Last Exam</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>10</td><td><code>E-27</code></td><td>IQ Bench</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>11</td><td><code>E-30</code></td><td>TAU-Bench</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>12</td><td><code>E-31</code></td><td>WebArena</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>13</td><td><code>E-32</code></td><td>GAIA</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>14</td><td><code>E-33</code></td><td>AgentBench</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>15</td><td><code>E-34</code></td><td>OSWorld</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>16</td><td><code>E-50</code></td><td>Chatbot Arena</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>17</td><td><code>E-51</code></td><td>LMSYS Arena</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>18</td><td><code>F-1</code></td><td>JavaScript</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>19</td><td><code>F-2</code></td><td>TypeScript</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>20</td><td><code>F-3</code></td><td>Python</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr></tbody>
         </table>
       </section>
 
@@ -325,35 +326,35 @@
         <div class="batch-head">
           <div>
             <h2>ponchi-batch-008</h2>
-            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 0</p>
+            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 20</p>
           </div>
           <div class="links">
-            <a href="../ledgers/ponchi_batches/ponchi-batch-008.md">report</a><a href="ponchi_batch_audits/ponchi-batch-008.md">audit</a><a href="ponchi_batch_audits/ponchi-batch-008-base-contact-sheet.png">base sheet</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-008/">prompts</a>
+            <a href="../ledgers/ponchi_batches/ponchi-batch-008.md">report</a><a href="ponchi_batch_audits/ponchi-batch-008.md">audit</a><a href="ponchi_batch_audits/ponchi-batch-008-base-contact-sheet.png">base sheet</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-008/">prompts</a><a href="../assets/ponchi/final_candidates/ponchi-batch-008/final_candidates_contact_sheet.png">final candidates</a>
           </div>
         </div>
-        <div class="badges"><span class="mini brief_needed">brief_needed 6</span><span class="mini overlay_wait">overlay_wait 14</span></div>
+        <div class="badges"><span class="mini overlay_audit">overlay_audit 14</span><span class="mini color_audit">color_audit 6</span></div>
         <table>
           <thead><tr><th>#</th><th>entry</th><th>title</th><th>stage</th><th>logo</th><th>confirm</th></tr></thead>
-          <tbody><tr><td>1</td><td><code>F-4</code></td><td>HTML</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>2</td><td><code>F-5</code></td><td>CSS</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>3</td><td><code>F-6</code></td><td>Markdown</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>4</td><td><code>F-7</code></td><td>YAML</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>5</td><td><code>F-8</code></td><td>JSON</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>6</td><td><code>F-9</code></td><td>SVG</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>7</td><td><code>F-10</code></td><td>React</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>8</td><td><code>F-11</code></td><td>Next.js</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>9</td><td><code>F-12</code></td><td>Electron</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>10</td><td><code>F-13</code></td><td>Tauri</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>11</td><td><code>F-14</code></td><td>three.js</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>12</td><td><code>F-15</code></td><td>shadcn/ui</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>13</td><td><code>F-16</code></td><td>Tailwind CSS</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>14</td><td><code>F-17</code></td><td>Astro</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>15</td><td><code>F-20</code></td><td>ESLint</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>16</td><td><code>F-21</code></td><td>Prettier</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>17</td><td><code>F-30</code></td><td>VS Code</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>18</td><td><code>F-34</code></td><td>VS Code 拡張機能</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>19</td><td><code>F-35</code></td><td>Markdown Preview Enhanced</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>20</td><td><code>F-36</code></td><td>Git Graph</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr></tbody>
+          <tbody><tr><td>1</td><td><code>F-4</code></td><td>HTML</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>2</td><td><code>F-5</code></td><td>CSS</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>3</td><td><code>F-6</code></td><td>Markdown</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>4</td><td><code>F-7</code></td><td>YAML</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>5</td><td><code>F-8</code></td><td>JSON</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>6</td><td><code>F-9</code></td><td>SVG</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>7</td><td><code>F-10</code></td><td>React</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>8</td><td><code>F-11</code></td><td>Next.js</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>9</td><td><code>F-12</code></td><td>Electron</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>10</td><td><code>F-13</code></td><td>Tauri</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>11</td><td><code>F-14</code></td><td>three.js</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>12</td><td><code>F-15</code></td><td>shadcn/ui</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>13</td><td><code>F-16</code></td><td>Tailwind CSS</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>14</td><td><code>F-17</code></td><td>Astro</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>15</td><td><code>F-20</code></td><td>ESLint</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>16</td><td><code>F-21</code></td><td>Prettier</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>17</td><td><code>F-30</code></td><td>VS Code</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>18</td><td><code>F-34</code></td><td>VS Code 拡張機能</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>19</td><td><code>F-35</code></td><td>Markdown Preview Enhanced</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>20</td><td><code>F-36</code></td><td>Git Graph</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr></tbody>
         </table>
       </section>
 
@@ -361,35 +362,35 @@
         <div class="batch-head">
           <div>
             <h2>ponchi-batch-009</h2>
-            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 0</p>
+            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 20</p>
           </div>
           <div class="links">
-            <a href="../ledgers/ponchi_batches/ponchi-batch-009.md">report</a><a href="ponchi_batch_audits/ponchi-batch-009.md">audit</a><a href="ponchi_batch_audits/ponchi-batch-009-base-contact-sheet.png">base sheet</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-009/">prompts</a>
+            <a href="../ledgers/ponchi_batches/ponchi-batch-009.md">report</a><a href="ponchi_batch_audits/ponchi-batch-009.md">audit</a><a href="ponchi_batch_audits/ponchi-batch-009-base-contact-sheet.png">base sheet</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-009/">prompts</a><a href="../assets/ponchi/final_candidates/ponchi-batch-009/final_candidates_contact_sheet.png">final candidates</a>
           </div>
         </div>
-        <div class="badges"><span class="mini brief_needed">brief_needed 11</span><span class="mini overlay_wait">overlay_wait 8</span><span class="mini overlay_audit">overlay_audit 1</span></div>
+        <div class="badges"><span class="mini overlay_audit">overlay_audit 9</span><span class="mini color_audit">color_audit 11</span></div>
         <table>
           <thead><tr><th>#</th><th>entry</th><th>title</th><th>stage</th><th>logo</th><th>confirm</th></tr></thead>
-          <tbody><tr><td>1</td><td><code>F-37</code></td><td>Japanese Language Pack for VS Code</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>2</td><td><code>F-38</code></td><td>Markdown All in One</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>3</td><td><code>F-40</code></td><td>npm</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>4</td><td><code>F-41</code></td><td>Vite</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>5</td><td><code>F-42</code></td><td>ビルド</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>6</td><td><code>F-44</code></td><td>pnpm</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>7</td><td><code>F-50</code></td><td>git</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>8</td><td><code>F-51</code></td><td>git push</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>9</td><td><code>F-52</code></td><td>git pull</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>10</td><td><code>F-53</code></td><td>branch</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>11</td><td><code>F-54</code></td><td>commit</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>12</td><td><code>F-55</code></td><td>merge</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>13</td><td><code>F-56</code></td><td>.gitignore</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>14</td><td><code>F-57</code></td><td>リポジトリ</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>15</td><td><code>F-58</code></td><td>git stash</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>16</td><td><code>F-59</code></td><td>README.md</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+          <tbody><tr><td>1</td><td><code>F-37</code></td><td>Japanese Language Pack for VS Code</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>2</td><td><code>F-38</code></td><td>Markdown All in One</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>3</td><td><code>F-40</code></td><td>npm</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>4</td><td><code>F-41</code></td><td>Vite</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>5</td><td><code>F-42</code></td><td>ビルド</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>6</td><td><code>F-44</code></td><td>pnpm</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>7</td><td><code>F-50</code></td><td>git</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>8</td><td><code>F-51</code></td><td>git push</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>9</td><td><code>F-52</code></td><td>git pull</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>10</td><td><code>F-53</code></td><td>branch</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>11</td><td><code>F-54</code></td><td>commit</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>12</td><td><code>F-55</code></td><td>merge</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>13</td><td><code>F-56</code></td><td>.gitignore</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>14</td><td><code>F-57</code></td><td>リポジトリ</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>15</td><td><code>F-58</code></td><td>git stash</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>16</td><td><code>F-59</code></td><td>README.md</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
 <tr><td>17</td><td><code>F-60</code></td><td>GitHub</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
-<tr><td>18</td><td><code>F-61</code></td><td>Pull Request</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>19</td><td><code>F-62</code></td><td>GitHub Actions</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>20</td><td><code>F-71</code></td><td>ripgrep (rg)</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr></tbody>
+<tr><td>18</td><td><code>F-61</code></td><td>Pull Request</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>19</td><td><code>F-62</code></td><td>GitHub Actions</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>20</td><td><code>F-71</code></td><td>ripgrep (rg)</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr></tbody>
         </table>
       </section>
 
@@ -397,35 +398,35 @@
         <div class="batch-head">
           <div>
             <h2>ponchi-batch-010</h2>
-            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 0</p>
+            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 20</p>
           </div>
           <div class="links">
-            <a href="../ledgers/ponchi_batches/ponchi-batch-010.md">report</a><a href="ponchi_batch_audits/ponchi-batch-010.md">audit</a><a href="ponchi_batch_audits/ponchi-batch-010-base-contact-sheet.png">base sheet</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-010/">prompts</a>
+            <a href="../ledgers/ponchi_batches/ponchi-batch-010.md">report</a><a href="ponchi_batch_audits/ponchi-batch-010.md">audit</a><a href="ponchi_batch_audits/ponchi-batch-010-base-contact-sheet.png">base sheet</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-010/">prompts</a><a href="../assets/ponchi/final_candidates/ponchi-batch-010/final_candidates_contact_sheet.png">final candidates</a>
           </div>
         </div>
-        <div class="badges"><span class="mini brief_needed">brief_needed 9</span><span class="mini overlay_wait">overlay_wait 11</span></div>
+        <div class="badges"><span class="mini overlay_audit">overlay_audit 10</span><span class="mini color_audit">color_audit 10</span></div>
         <table>
           <thead><tr><th>#</th><th>entry</th><th>title</th><th>stage</th><th>logo</th><th>confirm</th></tr></thead>
-          <tbody><tr><td>1</td><td><code>F-80</code></td><td>Node.js</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>2</td><td><code>F-81</code></td><td>bash</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>3</td><td><code>F-82</code></td><td>WSL</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>4</td><td><code>F-83</code></td><td>PowerShell</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>5</td><td><code>F-84</code></td><td>Ghostty</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>6</td><td><code>F-85</code></td><td>SuperClaude Framework</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>7</td><td><code>F-86</code></td><td>ollama</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>8</td><td><code>F-87</code></td><td>sudo</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>9</td><td><code>F-90</code></td><td>Docker</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>10</td><td><code>F-91</code></td><td>.env</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>11</td><td><code>F-100</code></td><td>拡張子早見表</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>12</td><td><code>F-101</code></td><td>.ico</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>13</td><td><code>F-102</code></td><td>.mp4</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>14</td><td><code>F-103</code></td><td>.mp3</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>15</td><td><code>F-104</code></td><td>.webp</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>16</td><td><code>F-110</code></td><td>Lighthouse</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>17</td><td><code>F-111</code></td><td>a11y</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>18</td><td><code>F-120</code></td><td>PostgreSQL</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>19</td><td><code>F-121</code></td><td>SQLite</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>20</td><td><code>F-122</code></td><td>Prisma</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr></tbody>
+          <tbody><tr><td>1</td><td><code>F-80</code></td><td>Node.js</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>2</td><td><code>F-81</code></td><td>bash</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>3</td><td><code>F-82</code></td><td>WSL</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>4</td><td><code>F-83</code></td><td>PowerShell</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>5</td><td><code>F-84</code></td><td>Ghostty</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>6</td><td><code>F-85</code></td><td>SuperClaude Framework</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>7</td><td><code>F-86</code></td><td>ollama</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>8</td><td><code>F-87</code></td><td>sudo</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>9</td><td><code>F-90</code></td><td>Docker</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>10</td><td><code>F-91</code></td><td>.env</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>11</td><td><code>F-100</code></td><td>拡張子早見表</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>12</td><td><code>F-101</code></td><td>.ico</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>13</td><td><code>F-102</code></td><td>.mp4</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>14</td><td><code>F-103</code></td><td>.mp3</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>15</td><td><code>F-104</code></td><td>.webp</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>16</td><td><code>F-110</code></td><td>Lighthouse</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>17</td><td><code>F-111</code></td><td>a11y</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>18</td><td><code>F-120</code></td><td>PostgreSQL</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>19</td><td><code>F-121</code></td><td>SQLite</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>20</td><td><code>F-122</code></td><td>Prisma</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr></tbody>
         </table>
       </section>
 
@@ -433,35 +434,35 @@
         <div class="batch-head">
           <div>
             <h2>ponchi-batch-011</h2>
-            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 0</p>
+            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 20</p>
           </div>
           <div class="links">
-            <a href="../ledgers/ponchi_batches/ponchi-batch-011.md">report</a><a href="ponchi_batch_audits/ponchi-batch-011.md">audit</a><a href="ponchi_batch_audits/ponchi-batch-011-base-contact-sheet.png">base sheet</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-011/">prompts</a>
+            <a href="../ledgers/ponchi_batches/ponchi-batch-011.md">report</a><a href="ponchi_batch_audits/ponchi-batch-011.md">audit</a><a href="ponchi_batch_audits/ponchi-batch-011-base-contact-sheet.png">base sheet</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-011/">prompts</a><a href="../assets/ponchi/final_candidates/ponchi-batch-011/final_candidates_contact_sheet.png">final candidates</a>
           </div>
         </div>
-        <div class="badges"><span class="mini brief_needed">brief_needed 10</span><span class="mini prompt_review">prompt_review 1</span><span class="mini overlay_wait">overlay_wait 9</span></div>
+        <div class="badges"><span class="mini overlay_audit">overlay_audit 9</span><span class="mini color_audit">color_audit 11</span></div>
         <table>
           <thead><tr><th>#</th><th>entry</th><th>title</th><th>stage</th><th>logo</th><th>confirm</th></tr></thead>
-          <tbody><tr><td>1</td><td><code>F-123</code></td><td>ORM</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>2</td><td><code>F-130</code></td><td>OAuth</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>3</td><td><code>F-140</code></td><td>Mermaid</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>4</td><td><code>F-141</code></td><td>PlantUML</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>5</td><td><code>F-150</code></td><td>MIT ライセンス</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>6</td><td><code>F-151</code></td><td>Apache 2.0</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>7</td><td><code>F-152</code></td><td>GPL</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>8</td><td><code>F-153</code></td><td>Creative Commons</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>9</td><td><code>F-154</code></td><td>OSS</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>10</td><td><code>F-160</code></td><td>DOM</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>11</td><td><code>F-161</code></td><td>SSR</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>12</td><td><code>F-162</code></td><td>SSG</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>13</td><td><code>F-170</code></td><td>EC2</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>14</td><td><code>F-171</code></td><td>S3</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>15</td><td><code>F-172</code></td><td>IAM</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>16</td><td><code>F-180</code></td><td>OpenGL</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>17</td><td><code>F-181</code></td><td>WebGL</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>18</td><td><code>F-190</code></td><td>サブルーチン</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>19</td><td><code>F-200</code></td><td>Rust</td><td><span class="stage overlay_wait">overlay_wait</span></td><td>official_logo_source_review_required</td><td>not_reviewed</td></tr>
-<tr><td>20</td><td><code>G-1</code></td><td>Context (コンテキスト)</td><td><span class="stage prompt_review">prompt_review</span></td><td>logo_avoid</td><td>not_reviewed</td></tr></tbody>
+          <tbody><tr><td>1</td><td><code>F-123</code></td><td>ORM</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>2</td><td><code>F-130</code></td><td>OAuth</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>3</td><td><code>F-140</code></td><td>Mermaid</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>4</td><td><code>F-141</code></td><td>PlantUML</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>5</td><td><code>F-150</code></td><td>MIT ライセンス</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>6</td><td><code>F-151</code></td><td>Apache 2.0</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>7</td><td><code>F-152</code></td><td>GPL</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>8</td><td><code>F-153</code></td><td>Creative Commons</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>9</td><td><code>F-154</code></td><td>OSS</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>10</td><td><code>F-160</code></td><td>DOM</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>11</td><td><code>F-161</code></td><td>SSR</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>12</td><td><code>F-162</code></td><td>SSG</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>13</td><td><code>F-170</code></td><td>EC2</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>14</td><td><code>F-171</code></td><td>S3</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>15</td><td><code>F-172</code></td><td>IAM</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>16</td><td><code>F-180</code></td><td>OpenGL</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>17</td><td><code>F-181</code></td><td>WebGL</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>18</td><td><code>F-190</code></td><td>サブルーチン</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>19</td><td><code>F-200</code></td><td>Rust</td><td><span class="stage overlay_audit">overlay_audit</span></td><td>official_logo_applied</td><td>not_reviewed</td></tr>
+<tr><td>20</td><td><code>G-1</code></td><td>Context (コンテキスト)</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr></tbody>
         </table>
       </section>
 
@@ -469,35 +470,35 @@
         <div class="batch-head">
           <div>
             <h2>ponchi-batch-012</h2>
-            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 0</p>
+            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 20</p>
           </div>
           <div class="links">
-            <a href="../ledgers/ponchi_batches/ponchi-batch-012.md">report</a><a href="ponchi_batch_audits/ponchi-batch-012.md">audit</a><a href="ponchi_batch_audits/ponchi-batch-012-base-contact-sheet.png">base sheet</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-012/">prompts</a>
+            <a href="../ledgers/ponchi_batches/ponchi-batch-012.md">report</a><a href="ponchi_batch_audits/ponchi-batch-012.md">audit</a><a href="ponchi_batch_audits/ponchi-batch-012-base-contact-sheet.png">base sheet</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-012/">prompts</a><a href="../assets/ponchi/final_candidates/ponchi-batch-012/final_candidates_contact_sheet.png">final candidates</a>
           </div>
         </div>
-        <div class="badges"><span class="mini brief_needed">brief_needed 20</span></div>
+        <div class="badges"><span class="mini color_audit">color_audit 20</span></div>
         <table>
           <thead><tr><th>#</th><th>entry</th><th>title</th><th>stage</th><th>logo</th><th>confirm</th></tr></thead>
-          <tbody><tr><td>1</td><td><code>G-2</code></td><td>Token</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>2</td><td><code>G-3</code></td><td>Dictation</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>3</td><td><code>G-4</code></td><td>System Prompt</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>4</td><td><code>G-5</code></td><td>Context Window</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>5</td><td><code>G-6</code></td><td>One-shot</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>6</td><td><code>G-7</code></td><td>指示追従性</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>7</td><td><code>G-8</code></td><td>決定論的／非決定論的</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>8</td><td><code>G-9</code></td><td>effort レベル</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>9</td><td><code>G-10</code></td><td>Prompt Engineering</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>10</td><td><code>G-11</code></td><td>Context Engineering</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>11</td><td><code>G-12</code></td><td>Agent Design</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>12</td><td><code>G-13</code></td><td>Few-shot Learning</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>13</td><td><code>G-14</code></td><td>Thinking モデル</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>14</td><td><code>G-15</code></td><td>RAG</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>15</td><td><code>G-16</code></td><td>Embedding</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>16</td><td><code>G-17</code></td><td>ベクトル DB</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>17</td><td><code>G-18</code></td><td>Chain of Thought</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>18</td><td><code>G-19</code></td><td>Prompt Caching</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>19</td><td><code>G-20</code></td><td>CLAUDE.md</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>20</td><td><code>G-21</code></td><td>AGENTS.md</td><td><span class="stage brief_needed">brief_needed</span></td><td>logo_avoid</td><td>not_reviewed</td></tr></tbody>
+          <tbody><tr><td>1</td><td><code>G-2</code></td><td>Token</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>2</td><td><code>G-3</code></td><td>Dictation</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>3</td><td><code>G-4</code></td><td>System Prompt</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>4</td><td><code>G-5</code></td><td>Context Window</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>5</td><td><code>G-6</code></td><td>One-shot</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>6</td><td><code>G-7</code></td><td>指示追従性</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>7</td><td><code>G-8</code></td><td>決定論的／非決定論的</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>8</td><td><code>G-9</code></td><td>effort レベル</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>9</td><td><code>G-10</code></td><td>Prompt Engineering</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>10</td><td><code>G-11</code></td><td>Context Engineering</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>11</td><td><code>G-12</code></td><td>Agent Design</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>12</td><td><code>G-13</code></td><td>Few-shot Learning</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>13</td><td><code>G-14</code></td><td>Thinking モデル</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>14</td><td><code>G-15</code></td><td>RAG</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>15</td><td><code>G-16</code></td><td>Embedding</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>16</td><td><code>G-17</code></td><td>ベクトル DB</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>17</td><td><code>G-18</code></td><td>Chain of Thought</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>18</td><td><code>G-19</code></td><td>Prompt Caching</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>19</td><td><code>G-20</code></td><td>CLAUDE.md</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>20</td><td><code>G-21</code></td><td>AGENTS.md</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr></tbody>
         </table>
       </section>
 
@@ -505,35 +506,35 @@
         <div class="batch-head">
           <div>
             <h2>ponchi-batch-013</h2>
-            <p>20 items / pipeline prompts 0 / base images 0 / final candidates 0</p>
+            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 20</p>
           </div>
           <div class="links">
-            
+            <a href="../ledgers/ponchi_batches/ponchi-batch-013.md">report</a><a href="ponchi_batch_audits/ponchi-batch-013.md">audit</a><a href="ponchi_batch_audits/ponchi-batch-013-base-contact-sheet.png">base sheet</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-013/">prompts</a><a href="../assets/ponchi/final_candidates/ponchi-batch-013/final_candidates_contact_sheet.png">final candidates</a>
           </div>
         </div>
-        <div class="badges"><span class="mini brief_needed">brief_needed 20</span></div>
+        <div class="badges"><span class="mini color_audit">color_audit 20</span></div>
         <table>
           <thead><tr><th>#</th><th>entry</th><th>title</th><th>stage</th><th>logo</th><th>confirm</th></tr></thead>
-          <tbody><tr><td>1</td><td><code>G-22</code></td><td>SKILL.md</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>2</td><td><code>G-23</code></td><td>.claude/settings.json</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>3</td><td><code>G-30</code></td><td>Tool Use</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>4</td><td><code>G-31</code></td><td>Hook</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>5</td><td><code>G-32</code></td><td>Slash Command</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>6</td><td><code>G-33</code></td><td>Function Calling</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>7</td><td><code>G-34</code></td><td>Code Interpreter</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>8</td><td><code>G-35</code></td><td>Deep Research</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>9</td><td><code>G-36</code></td><td>Artifact</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>10</td><td><code>G-38</code></td><td>Plan Mode</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>11</td><td><code>G-39</code></td><td>Permission</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>12</td><td><code>G-40</code></td><td>バイブコーディング</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>13</td><td><code>G-41</code></td><td>Subagent</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>14</td><td><code>G-42</code></td><td>Worktree</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>15</td><td><code>G-43</code></td><td>オーケストレーション</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>16</td><td><code>G-44</code></td><td>マルチエージェント協調</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>17</td><td><code>G-45</code></td><td>段階的開示</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>18</td><td><code>G-46</code></td><td>ナーフ（モデルの劣化体感）</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>19</td><td><code>G-47</code></td><td>Auto-compact</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>20</td><td><code>H-1</code></td><td>TDD</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr></tbody>
+          <tbody><tr><td>1</td><td><code>G-22</code></td><td>SKILL.md</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>2</td><td><code>G-23</code></td><td>.claude/settings.json</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>3</td><td><code>G-30</code></td><td>Tool Use</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>4</td><td><code>G-31</code></td><td>Hook</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>5</td><td><code>G-32</code></td><td>Slash Command</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>6</td><td><code>G-33</code></td><td>Function Calling</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>7</td><td><code>G-34</code></td><td>Code Interpreter</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>8</td><td><code>G-35</code></td><td>Deep Research</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>9</td><td><code>G-36</code></td><td>Artifact</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>10</td><td><code>G-38</code></td><td>Plan Mode</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>11</td><td><code>G-39</code></td><td>Permission</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>12</td><td><code>G-40</code></td><td>バイブコーディング</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>13</td><td><code>G-41</code></td><td>Subagent</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>14</td><td><code>G-42</code></td><td>Worktree</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>15</td><td><code>G-43</code></td><td>オーケストレーション</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>16</td><td><code>G-44</code></td><td>マルチエージェント協調</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>17</td><td><code>G-45</code></td><td>段階的開示</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>18</td><td><code>G-46</code></td><td>ナーフ（モデルの劣化体感）</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>19</td><td><code>G-47</code></td><td>Auto-compact</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>20</td><td><code>H-1</code></td><td>TDD</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr></tbody>
         </table>
       </section>
 
@@ -541,35 +542,35 @@
         <div class="batch-head">
           <div>
             <h2>ponchi-batch-014</h2>
-            <p>20 items / pipeline prompts 0 / base images 0 / final candidates 0</p>
+            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 20</p>
           </div>
           <div class="links">
-            
+            <a href="../ledgers/ponchi_batches/ponchi-batch-014.md">report</a><a href="ponchi_batch_audits/ponchi-batch-014.md">audit</a><a href="ponchi_batch_audits/ponchi-batch-014-base-contact-sheet.png">base sheet</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-014/">prompts</a><a href="../assets/ponchi/final_candidates/ponchi-batch-014/final_candidates_contact_sheet.png">final candidates</a>
           </div>
         </div>
-        <div class="badges"><span class="mini brief_needed">brief_needed 20</span></div>
+        <div class="badges"><span class="mini color_audit">color_audit 20</span></div>
         <table>
           <thead><tr><th>#</th><th>entry</th><th>title</th><th>stage</th><th>logo</th><th>confirm</th></tr></thead>
-          <tbody><tr><td>1</td><td><code>H-2</code></td><td>ペアプログラミング</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>2</td><td><code>H-3</code></td><td>バイブコーディングの流儀</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>3</td><td><code>H-4</code></td><td>コードレビュー</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>4</td><td><code>H-5</code></td><td>Scrum / Agile</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>5</td><td><code>H-6</code></td><td>Git Flow</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>6</td><td><code>H-7</code></td><td>CI/CD</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>7</td><td><code>H-8</code></td><td>DevOps</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>8</td><td><code>H-50</code></td><td>Bard → Gemini</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>9</td><td><code>H-51</code></td><td>Preview から正式版への流れ</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>10</td><td><code>H-52</code></td><td>Copilot から Claude Code までの流れ</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>11</td><td><code>H-53</code></td><td>ChatGPT 登場</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>12</td><td><code>H-54</code></td><td>GPT-4 リリース</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>13</td><td><code>H-55</code></td><td>LLaMA のオープン化</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>14</td><td><code>H-56</code></td><td>Claude のバージョン史</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>15</td><td><code>H-57</code></td><td>Gemini の命名史</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>16</td><td><code>H-58</code></td><td>Transformer 論文</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>17</td><td><code>H-59</code></td><td>AI エージェント元年</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>18</td><td><code>H-60</code></td><td>Codex → GitHub Copilot の系譜</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>19</td><td><code>H-61</code></td><td>Preview 版という文化</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>20</td><td><code>H-62</code></td><td>Anthropic 創業の流れ</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr></tbody>
+          <tbody><tr><td>1</td><td><code>H-2</code></td><td>ペアプログラミング</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>2</td><td><code>H-3</code></td><td>バイブコーディングの流儀</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>3</td><td><code>H-4</code></td><td>コードレビュー</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>4</td><td><code>H-5</code></td><td>Scrum / Agile</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>5</td><td><code>H-6</code></td><td>Git Flow</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>6</td><td><code>H-7</code></td><td>CI/CD</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>7</td><td><code>H-8</code></td><td>DevOps</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>8</td><td><code>H-50</code></td><td>Bard → Gemini</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>9</td><td><code>H-51</code></td><td>Preview から正式版への流れ</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>10</td><td><code>H-52</code></td><td>Copilot から Claude Code までの流れ</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>11</td><td><code>H-53</code></td><td>ChatGPT 登場</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>12</td><td><code>H-54</code></td><td>GPT-4 リリース</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>13</td><td><code>H-55</code></td><td>LLaMA のオープン化</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>14</td><td><code>H-56</code></td><td>Claude のバージョン史</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>15</td><td><code>H-57</code></td><td>Gemini の命名史</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>16</td><td><code>H-58</code></td><td>Transformer 論文</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>17</td><td><code>H-59</code></td><td>AI エージェント元年</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>18</td><td><code>H-60</code></td><td>Codex → GitHub Copilot の系譜</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>19</td><td><code>H-61</code></td><td>Preview 版という文化</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>20</td><td><code>H-62</code></td><td>Anthropic 創業の流れ</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr></tbody>
         </table>
       </section>
 
@@ -577,35 +578,35 @@
         <div class="batch-head">
           <div>
             <h2>ponchi-batch-015</h2>
-            <p>20 items / pipeline prompts 0 / base images 0 / final candidates 0</p>
+            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 20</p>
           </div>
           <div class="links">
-            
+            <a href="../ledgers/ponchi_batches/ponchi-batch-015.md">report</a><a href="ponchi_batch_audits/ponchi-batch-015.md">audit</a><a href="ponchi_batch_audits/ponchi-batch-015-base-contact-sheet.png">base sheet</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-015/">prompts</a><a href="../assets/ponchi/final_candidates/ponchi-batch-015/final_candidates_contact_sheet.png">final candidates</a>
           </div>
         </div>
-        <div class="badges"><span class="mini brief_needed">brief_needed 20</span></div>
+        <div class="badges"><span class="mini color_audit">color_audit 20</span></div>
         <table>
           <thead><tr><th>#</th><th>entry</th><th>title</th><th>stage</th><th>logo</th><th>confirm</th></tr></thead>
-          <tbody><tr><td>1</td><td><code>H-63</code></td><td>Vibe Coding 命名</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>2</td><td><code>I-1</code></td><td>MCP</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>3</td><td><code>I-2</code></td><td>MCP Server</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>4</td><td><code>I-3</code></td><td>MCP Client</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>5</td><td><code>I-4</code></td><td>MCP Transport</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>6</td><td><code>I-5</code></td><td>MCP SDK</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>7</td><td><code>I-10</code></td><td>Filesystem MCP</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>8</td><td><code>I-11</code></td><td>GitHub MCP</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>9</td><td><code>I-12</code></td><td>Git MCP</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>10</td><td><code>I-13</code></td><td>Slack MCP</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>11</td><td><code>I-20</code></td><td>Playwright MCP</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>12</td><td><code>I-21</code></td><td>Puppeteer MCP</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>13</td><td><code>I-22</code></td><td>Chrome DevTools MCP</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>14</td><td><code>I-23</code></td><td>Serena MCP</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>15</td><td><code>I-24</code></td><td>Context7 MCP</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>16</td><td><code>I-30</code></td><td>Notion MCP</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>17</td><td><code>I-41</code></td><td>SQLite MCP</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>18</td><td><code>I-50</code></td><td>AWS MCP</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>19</td><td><code>I-80</code></td><td>自作 MCP のテンプレ</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>20</td><td><code>I-81</code></td><td>MCP の登録・設定</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr></tbody>
+          <tbody><tr><td>1</td><td><code>H-63</code></td><td>Vibe Coding 命名</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>2</td><td><code>I-1</code></td><td>MCP</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>3</td><td><code>I-2</code></td><td>MCP Server</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>4</td><td><code>I-3</code></td><td>MCP Client</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>5</td><td><code>I-4</code></td><td>MCP Transport</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>6</td><td><code>I-5</code></td><td>MCP SDK</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>7</td><td><code>I-10</code></td><td>Filesystem MCP</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>8</td><td><code>I-11</code></td><td>GitHub MCP</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>9</td><td><code>I-12</code></td><td>Git MCP</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>10</td><td><code>I-13</code></td><td>Slack MCP</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>11</td><td><code>I-20</code></td><td>Playwright MCP</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>12</td><td><code>I-21</code></td><td>Puppeteer MCP</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>13</td><td><code>I-22</code></td><td>Chrome DevTools MCP</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>14</td><td><code>I-23</code></td><td>Serena MCP</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>15</td><td><code>I-24</code></td><td>Context7 MCP</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>16</td><td><code>I-30</code></td><td>Notion MCP</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>17</td><td><code>I-41</code></td><td>SQLite MCP</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>18</td><td><code>I-50</code></td><td>AWS MCP</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>19</td><td><code>I-80</code></td><td>自作 MCP のテンプレ</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>20</td><td><code>I-81</code></td><td>MCP の登録・設定</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr></tbody>
         </table>
       </section>
 
@@ -613,35 +614,35 @@
         <div class="batch-head">
           <div>
             <h2>ponchi-batch-016</h2>
-            <p>20 items / pipeline prompts 0 / base images 0 / final candidates 0</p>
+            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 20</p>
           </div>
           <div class="links">
-            
+            <a href="../ledgers/ponchi_batches/ponchi-batch-016.md">report</a><a href="ponchi_batch_audits/ponchi-batch-016.md">audit</a><a href="ponchi_batch_audits/ponchi-batch-016-base-contact-sheet.png">base sheet</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-016/">prompts</a><a href="../assets/ponchi/final_candidates/ponchi-batch-016/final_candidates_contact_sheet.png">final candidates</a>
           </div>
         </div>
-        <div class="badges"><span class="mini brief_needed">brief_needed 19</span><span class="mini prompt_review">prompt_review 1</span></div>
+        <div class="badges"><span class="mini color_audit">color_audit 20</span></div>
         <table>
           <thead><tr><th>#</th><th>entry</th><th>title</th><th>stage</th><th>logo</th><th>confirm</th></tr></thead>
-          <tbody><tr><td>1</td><td><code>J-1</code></td><td>AGI</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>2</td><td><code>J-2</code></td><td>強い AI／弱い AI</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>3</td><td><code>J-3</code></td><td>Singularity</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>4</td><td><code>J-4</code></td><td>ASI</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>5</td><td><code>J-10</code></td><td>Machine Learning</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>6</td><td><code>J-11</code></td><td>Deep Learning</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>7</td><td><code>J-12</code></td><td>Neural Network</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>8</td><td><code>J-13</code></td><td>Transformer</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>9</td><td><code>J-14</code></td><td>LLM</td><td><span class="stage prompt_review">prompt_review</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
-<tr><td>10</td><td><code>J-15</code></td><td>VLM</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>11</td><td><code>J-16</code></td><td>Fine-tuning</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>12</td><td><code>J-17</code></td><td>Attention</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>13</td><td><code>J-18</code></td><td>MoE</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>14</td><td><code>J-19</code></td><td>量子化</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>15</td><td><code>J-20</code></td><td>Big Data</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>16</td><td><code>J-21</code></td><td>LoRA</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>17</td><td><code>J-22</code></td><td>パラメータ数の単位</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>18</td><td><code>J-23</code></td><td>拡散モデル</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>19</td><td><code>J-31</code></td><td>第 5 世代コンピュータ</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>20</td><td><code>J-32</code></td><td>ノイマン型</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr></tbody>
+          <tbody><tr><td>1</td><td><code>J-1</code></td><td>AGI</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>2</td><td><code>J-2</code></td><td>強い AI／弱い AI</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>3</td><td><code>J-3</code></td><td>Singularity</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>4</td><td><code>J-4</code></td><td>ASI</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>5</td><td><code>J-10</code></td><td>Machine Learning</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>6</td><td><code>J-11</code></td><td>Deep Learning</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>7</td><td><code>J-12</code></td><td>Neural Network</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>8</td><td><code>J-13</code></td><td>Transformer</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>9</td><td><code>J-14</code></td><td>LLM</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>10</td><td><code>J-15</code></td><td>VLM</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>11</td><td><code>J-16</code></td><td>Fine-tuning</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>12</td><td><code>J-17</code></td><td>Attention</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>13</td><td><code>J-18</code></td><td>MoE</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>14</td><td><code>J-19</code></td><td>量子化</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>15</td><td><code>J-20</code></td><td>Big Data</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>16</td><td><code>J-21</code></td><td>LoRA</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>17</td><td><code>J-22</code></td><td>パラメータ数の単位</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>18</td><td><code>J-23</code></td><td>拡散モデル</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>19</td><td><code>J-31</code></td><td>第 5 世代コンピュータ</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>20</td><td><code>J-32</code></td><td>ノイマン型</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr></tbody>
         </table>
       </section>
 
@@ -649,35 +650,35 @@
         <div class="batch-head">
           <div>
             <h2>ponchi-batch-017</h2>
-            <p>20 items / pipeline prompts 0 / base images 0 / final candidates 0</p>
+            <p>20 items / pipeline prompts 20 / base images 20 / pass 20 / final candidates 20</p>
           </div>
           <div class="links">
-            
+            <a href="../ledgers/ponchi_batches/ponchi-batch-017.md">report</a><a href="ponchi_batch_audits/ponchi-batch-017.md">audit</a><a href="ponchi_batch_audits/ponchi-batch-017-base-contact-sheet.png">base sheet</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-017/">prompts</a><a href="../assets/ponchi/final_candidates/ponchi-batch-017/final_candidates_contact_sheet.png">final candidates</a>
           </div>
         </div>
-        <div class="badges"><span class="mini brief_needed">brief_needed 20</span></div>
+        <div class="badges"><span class="mini color_audit">color_audit 20</span></div>
         <table>
           <thead><tr><th>#</th><th>entry</th><th>title</th><th>stage</th><th>logo</th><th>confirm</th></tr></thead>
-          <tbody><tr><td>1</td><td><code>J-33</code></td><td>量子コンピュータ</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>2</td><td><code>J-40</code></td><td>IoT</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>3</td><td><code>J-41</code></td><td>DX</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>4</td><td><code>J-42</code></td><td>Web3</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>5</td><td><code>J-43</code></td><td>SaaS</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>6</td><td><code>J-50</code></td><td>AI 倫理</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>7</td><td><code>J-51</code></td><td>Hallucination</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>8</td><td><code>J-52</code></td><td>Sycophancy</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>9</td><td><code>J-53</code></td><td>著作権法 30 条の 4（日本）</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>10</td><td><code>J-54</code></td><td>ISO/IEC 42001</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>11</td><td><code>J-55</code></td><td>個人情報保護法</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>12</td><td><code>J-56</code></td><td>GDPR</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>13</td><td><code>J-62</code></td><td>チューリングテスト</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>14</td><td><code>J-70</code></td><td>VRAM</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>15</td><td><code>J-71</code></td><td>RAM</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>16</td><td><code>J-72</code></td><td>H100</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>17</td><td><code>J-73</code></td><td>Blackwell</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>18</td><td><code>J-74</code></td><td>RTX シリーズ</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>19</td><td><code>J-75</code></td><td>Tensor コア</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>20</td><td><code>J-76</code></td><td>CPU</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr></tbody>
+          <tbody><tr><td>1</td><td><code>J-33</code></td><td>量子コンピュータ</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>2</td><td><code>J-40</code></td><td>IoT</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>3</td><td><code>J-41</code></td><td>DX</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>4</td><td><code>J-42</code></td><td>Web3</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>5</td><td><code>J-43</code></td><td>SaaS</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>6</td><td><code>J-50</code></td><td>AI 倫理</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>7</td><td><code>J-51</code></td><td>Hallucination</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>8</td><td><code>J-52</code></td><td>Sycophancy</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>9</td><td><code>J-53</code></td><td>著作権法 30 条の 4（日本）</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>10</td><td><code>J-54</code></td><td>ISO/IEC 42001</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>11</td><td><code>J-55</code></td><td>個人情報保護法</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>12</td><td><code>J-56</code></td><td>GDPR</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>13</td><td><code>J-62</code></td><td>チューリングテスト</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>14</td><td><code>J-70</code></td><td>VRAM</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>15</td><td><code>J-71</code></td><td>RAM</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>16</td><td><code>J-72</code></td><td>H100</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>17</td><td><code>J-73</code></td><td>Blackwell</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>18</td><td><code>J-74</code></td><td>RTX シリーズ</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>19</td><td><code>J-75</code></td><td>Tensor コア</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>20</td><td><code>J-76</code></td><td>CPU</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr></tbody>
         </table>
       </section>
 
@@ -685,25 +686,25 @@
         <div class="batch-head">
           <div>
             <h2>ponchi-batch-018</h2>
-            <p>10 items / pipeline prompts 0 / base images 0 / final candidates 0</p>
+            <p>10 items / pipeline prompts 10 / base images 10 / pass 10 / final candidates 10</p>
           </div>
           <div class="links">
-            
+            <a href="../ledgers/ponchi_batches/ponchi-batch-018.md">report</a><a href="ponchi_batch_audits/ponchi-batch-018.md">audit</a><a href="ponchi_batch_audits/ponchi-batch-018-base-contact-sheet.png">base sheet</a><a href="../assets/ponchi/pipeline_prompts/ponchi-batch-018/">prompts</a><a href="../assets/ponchi/final_candidates/ponchi-batch-018/final_candidates_contact_sheet.png">final candidates</a>
           </div>
         </div>
-        <div class="badges"><span class="mini brief_needed">brief_needed 10</span></div>
+        <div class="badges"><span class="mini color_audit">color_audit 10</span></div>
         <table>
           <thead><tr><th>#</th><th>entry</th><th>title</th><th>stage</th><th>logo</th><th>confirm</th></tr></thead>
-          <tbody><tr><td>1</td><td><code>J-77</code></td><td>GPU (概念)</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>2</td><td><code>J-78</code></td><td>HDD</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>3</td><td><code>J-79</code></td><td>SSD</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>4</td><td><code>J-80</code></td><td>SATA</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>5</td><td><code>J-81</code></td><td>M.2</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>6</td><td><code>J-90</code></td><td>GUI</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>7</td><td><code>J-91</code></td><td>CLI</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>8</td><td><code>J-92</code></td><td>Linux</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>9</td><td><code>J-93</code></td><td>Ubuntu</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr>
-<tr><td>10</td><td><code>J-100</code></td><td>識字（リテラシー）</td><td><span class="stage brief_needed">brief_needed</span></td><td>unclassified</td><td>not_reviewed</td></tr></tbody>
+          <tbody><tr><td>1</td><td><code>J-77</code></td><td>GPU (概念)</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>2</td><td><code>J-78</code></td><td>HDD</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>3</td><td><code>J-79</code></td><td>SSD</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>4</td><td><code>J-80</code></td><td>SATA</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>5</td><td><code>J-81</code></td><td>M.2</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>6</td><td><code>J-90</code></td><td>GUI</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>7</td><td><code>J-91</code></td><td>CLI</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>8</td><td><code>J-92</code></td><td>Linux</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>9</td><td><code>J-93</code></td><td>Ubuntu</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr>
+<tr><td>10</td><td><code>J-100</code></td><td>識字（リテラシー）</td><td><span class="stage color_audit">color_audit</span></td><td>logo_avoid</td><td>not_reviewed</td></tr></tbody>
         </table>
       </section>
 

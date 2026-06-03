@@ -1,0 +1,12 @@
+{
+  "base_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-001\\B-3_base_1254x627.png",
+  "official_asset": "assets\\logos\\openai\\openai_wordmark_black_official_template_layer.png",
+  "output_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-001\\B-3_overlay_1254x627.png",
+  "overlay_rect": {
+    "x": 686,
+    "y": 36,
+    "width": 520,
+    "height": 141
+  },
+  "note": "Only this rectangle may contain official-asset color exceptions."
+}

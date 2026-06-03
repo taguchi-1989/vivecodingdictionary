@@ -9,6 +9,7 @@ the local install.
 from __future__ import annotations
 
 import argparse
+import json
 import shutil
 import subprocess
 from pathlib import Path
@@ -50,6 +51,12 @@ def parse_args() -> argparse.Namespace:
         "--warn-only-density",
         action="store_true",
         help="Print density warnings without failing the command",
+    )
+    parser.add_argument(
+        "--meta-out",
+        type=Path,
+        default=None,
+        help="Optional JSON sidecar recording the official asset path and overlay rectangle",
     )
     parser.add_argument("--magick", default="magick", help="ImageMagick executable")
     return parser.parse_args()
@@ -126,6 +133,17 @@ def audit_density(path: Path, minimum: float, warn_only: bool, magick: str) -> N
     print(message)
 
 
+def resized_logo_size(logo: Path, width: int, magick: str) -> tuple[int, int]:
+    result = subprocess.run(
+        [magick, str(logo), "-resize", f"{width}x", "-format", "%w %h", "info:"],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    resized_width, resized_height = [int(part) for part in result.stdout.split()]
+    return resized_width, resized_height
+
+
 def main() -> int:
     args = parse_args()
     require_file(args.input, "input")
@@ -171,6 +189,18 @@ def main() -> int:
         str(args.out),
     ]
     subprocess.run(cmd, check=True)
+    if args.meta_out:
+        logo_width, logo_height = resized_logo_size(args.logo, args.width, args.magick)
+        args.meta_out.parent.mkdir(parents=True, exist_ok=True)
+        meta = {
+            "base_image": str(args.input),
+            "official_asset": str(args.logo),
+            "output_image": str(args.out),
+            "overlay_rect": {"x": x, "y": args.y, "width": logo_width, "height": logo_height},
+            "note": "Only this rectangle may contain official-asset color exceptions.",
+        }
+        args.meta_out.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print(f"wrote {args.meta_out}")
     print(f"wrote {args.out}")
     print(f"logo_width={args.width} x={x} y={args.y}")
     return 0

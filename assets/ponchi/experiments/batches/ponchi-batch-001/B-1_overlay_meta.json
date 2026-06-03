@@ -1,0 +1,12 @@
+{
+  "base_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-001\\B-1_base_1254x627.png",
+  "official_asset": "assets\\logos\\gemini\\gemini_sparkle_4g_512_lt.png",
+  "output_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-001\\B-1_overlay_1254x627.png",
+  "overlay_rect": {
+    "x": 930,
+    "y": 100,
+    "width": 280,
+    "height": 280
+  },
+  "note": "Only this rectangle may contain official-asset color exceptions."
+}

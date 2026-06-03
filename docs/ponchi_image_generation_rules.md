@@ -8,6 +8,11 @@
 
 **白・黒・グレー・青系以外は使わない。**
 
+色の合格判定は `docs/ponchi_color_acceptance_gate.md` に従う。`overlay_audit`
+は色ルールの合格を意味しない。公式ロゴ・公式アイコンの色は後合成した
+公式素材ピクセルだけの例外であり、生成された本文イラスト側の多色化は
+不採用にする。
+
 許可する色:
 
 - `#FFFFFF` pure white: main background

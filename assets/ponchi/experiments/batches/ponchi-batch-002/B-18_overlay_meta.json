@@ -1,0 +1,14 @@
+{
+  "base_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-002\\B-18_base_1254x627.png",
+  "official_asset": "assets\\logos\\aqua-voice\\aquavoice-favicon.png",
+  "output_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-002\\B-18_overlay_1254x627.png",
+  "overlay_rect": {
+    "x": 1050,
+    "y": 42,
+    "width": 150,
+    "height": 150
+  },
+  "source_official_logo": "https://framerusercontent.com/images/KO3UUG0mbyyUBnMxZ3jjJyQu8I.png",
+  "source_page": "https://aquavoice.com/",
+  "note": "Official Aqua Voice favicon from the official homepage used as a review-pending icon overlay. A standalone Aqua Voice lockup was not confirmed. Only this rectangle may contain official-asset color exceptions."
+}

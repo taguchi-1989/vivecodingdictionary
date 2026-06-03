@@ -1,0 +1,13 @@
+{
+  "base_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-006\\D-54_base_1254x627.png",
+  "official_asset": "assets\\logos\\stability-ai\\stability-ai-white-dot-on-approved-blue-plate.png",
+  "output_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-006\\D-54_overlay_1254x627.png",
+  "overlay_rect": {
+    "x": 1034,
+    "y": 38,
+    "width": 190,
+    "height": 55
+  },
+  "source_official_logo": "assets\\logos\\stability-ai\\stability-ai-white-dot-desktop.png",
+  "note": "Official white Stability AI logo is unchanged and centered on an approved #123E82 plate for white-canvas visibility. Dedicated Stable Diffusion product logo was not confirmed; treat as a review-pending organization overlay. Only this rectangle may contain official-asset color exceptions."
+}

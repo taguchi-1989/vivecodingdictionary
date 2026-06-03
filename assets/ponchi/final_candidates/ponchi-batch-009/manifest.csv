@@ -1,0 +1,21 @@
+entry_id,title,source_file,source_type,candidate_png,candidate_webp,candidate_status
+F-37,Japanese Language Pack for VS Code,assets\ponchi\experiments\batches\ponchi-batch-009\F-37_overlay_1254x627.png,review_pending_overlay,F-37_candidate.png,F-37_candidate.webp,review_pending
+F-38,Markdown All in One,assets\ponchi\experiments\batches\ponchi-batch-009\F-38_overlay_1254x627.png,review_pending_overlay,F-38_candidate.png,F-38_candidate.webp,review_pending
+F-40,npm,assets\ponchi\experiments\batches\ponchi-batch-009\F-40_overlay_1254x627.png,review_pending_overlay,F-40_candidate.png,F-40_candidate.webp,review_pending
+F-41,Vite,assets\ponchi\experiments\batches\ponchi-batch-009\F-41_overlay_1254x627.png,review_pending_overlay,F-41_candidate.png,F-41_candidate.webp,review_pending
+F-42,ビルド,assets\ponchi\experiments\batches\ponchi-batch-009\F-42_base_1254x627.png,review_pending_base,F-42_candidate.png,F-42_candidate.webp,review_pending
+F-44,pnpm,assets\ponchi\experiments\batches\ponchi-batch-009\F-44_overlay_1254x627.png,review_pending_overlay,F-44_candidate.png,F-44_candidate.webp,review_pending
+F-50,git,assets\ponchi\experiments\batches\ponchi-batch-009\F-50_overlay_1254x627.png,review_pending_overlay,F-50_candidate.png,F-50_candidate.webp,review_pending
+F-51,git push,assets\ponchi\experiments\batches\ponchi-batch-009\F-51_base_1254x627.png,review_pending_base,F-51_candidate.png,F-51_candidate.webp,review_pending
+F-52,git pull,assets\ponchi\experiments\batches\ponchi-batch-009\F-52_base_1254x627.png,review_pending_base,F-52_candidate.png,F-52_candidate.webp,review_pending
+F-53,branch,assets\ponchi\experiments\batches\ponchi-batch-009\F-53_base_1254x627.png,review_pending_base,F-53_candidate.png,F-53_candidate.webp,review_pending
+F-54,commit,assets\ponchi\experiments\batches\ponchi-batch-009\F-54_base_1254x627.png,review_pending_base,F-54_candidate.png,F-54_candidate.webp,review_pending
+F-55,merge,assets\ponchi\experiments\batches\ponchi-batch-009\F-55_base_1254x627.png,review_pending_base,F-55_candidate.png,F-55_candidate.webp,review_pending
+F-56,.gitignore,assets\ponchi\experiments\batches\ponchi-batch-009\F-56_base_1254x627.png,review_pending_base,F-56_candidate.png,F-56_candidate.webp,review_pending
+F-57,リポジトリ,assets\ponchi\experiments\batches\ponchi-batch-009\F-57_base_1254x627.png,review_pending_base,F-57_candidate.png,F-57_candidate.webp,review_pending
+F-58,git stash,assets\ponchi\experiments\batches\ponchi-batch-009\F-58_base_1254x627.png,review_pending_base,F-58_candidate.png,F-58_candidate.webp,review_pending
+F-59,README.md,assets\ponchi\experiments\batches\ponchi-batch-009\F-59_base_1254x627.png,review_pending_base,F-59_candidate.png,F-59_candidate.webp,review_pending
+F-60,GitHub,assets\ponchi\experiments\batches\ponchi-batch-009\F-60_overlay_1254x627.png,review_pending_overlay,F-60_candidate.png,F-60_candidate.webp,review_pending
+F-61,Pull Request,assets\ponchi\experiments\batches\ponchi-batch-009\F-61_overlay_1254x627.png,review_pending_overlay,F-61_candidate.png,F-61_candidate.webp,review_pending
+F-62,GitHub Actions,assets\ponchi\experiments\batches\ponchi-batch-009\F-62_overlay_1254x627.png,review_pending_overlay,F-62_candidate.png,F-62_candidate.webp,review_pending
+F-71,ripgrep (rg),assets\ponchi\experiments\batches\ponchi-batch-009\F-71_base_1254x627.png,review_pending_base,F-71_candidate.png,F-71_candidate.webp,review_pending

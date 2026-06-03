@@ -34,6 +34,34 @@ REQUIRED_SUBJECT_STACK = [
     "excluded_subjects:",
 ]
 
+STRICT_COLOR_TOKENS = [
+    "#FFFFFF",
+    "#F7F9FC",
+    "#1A1A1A",
+    "#6B7280",
+    "#EAF1FB",
+    "#D6E6FA",
+    "#8DB7E8",
+    "#3F7FD1",
+    "#123E82",
+]
+
+REQUIRED_PROMPT_PHRASES = [
+    "strict white/black/gray plus approved blue accents only",
+    "Do not use yellow, green, red, purple, brown, orange, rainbow colors",
+    "brand colors",
+]
+
+FORBIDDEN_LOOSE_COLOR_PHRASES = [
+    "mostly black linework",
+    "very pale blue-gray paper tones",
+    "at most one subtle blue accent",
+    "青系、青灰",
+    "淡い水色",
+    "ロゴ入り",
+    "logo-bearing",
+]
+
 
 def extract_yaml_blocks(text: str) -> list[str]:
     return re.findall(r"```yaml\s*(.*?)```", text, flags=re.DOTALL)
@@ -83,6 +111,19 @@ def lint_file(path: Path) -> list[str]:
     for index, block in enumerate(blocks, start=1):
         for error in lint_block(block, index):
             errors.append(f"{path}: {error}")
+
+    for token in STRICT_COLOR_TOKENS:
+        if token not in text:
+            errors.append(f"{path}: missing strict color token {token}")
+
+    for phrase in REQUIRED_PROMPT_PHRASES:
+        if phrase not in text:
+            errors.append(f"{path}: missing required color/brand phrase: {phrase}")
+
+    for phrase in FORBIDDEN_LOOSE_COLOR_PHRASES:
+        if phrase in text:
+            errors.append(f"{path}: loose color phrase is forbidden: {phrase}")
+
     return errors
 
 

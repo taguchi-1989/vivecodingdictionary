@@ -1,0 +1,12 @@
+{
+  "base_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-002\\B-27_base_1254x627.png",
+  "official_asset": "assets\\logos\\google-cloud\\product-icons\\core-products-icons\\Unique Icons\\Vertex AI\\SVG\\VertexAI-512-color.svg",
+  "output_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-002\\B-27_overlay_1254x627.png",
+  "overlay_rect": {
+    "x": 1056,
+    "y": 42,
+    "width": 132,
+    "height": 132
+  },
+  "note": "Only this rectangle may contain official-asset color exceptions."
+}

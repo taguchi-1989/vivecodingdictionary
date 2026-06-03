@@ -25,7 +25,12 @@ def load_rows(batch_id: str, ledger: Path) -> list[dict[str, str]]:
         return [row for row in csv.DictReader(handle) if row["batch_id"] == batch_id]
 
 
-def candidate_source(row: dict[str, str], batch_dir: Path, include_overlay_audit: bool) -> tuple[Path, str] | None:
+def candidate_source(
+    row: dict[str, str],
+    batch_dir: Path,
+    include_overlay_audit: bool,
+    include_logo_avoid_base: bool,
+) -> tuple[Path, str] | None:
     entry_id = row["entry_id"]
     confirmation = row["confirmation_status"]
     stage = row["pipeline_stage"]
@@ -41,6 +46,9 @@ def candidate_source(row: dict[str, str], batch_dir: Path, include_overlay_audit
     if include_overlay_audit and stage == "overlay_audit":
         source = batch_dir / f"{entry_id}_overlay_1254x627.png"
         return (source, "review_pending_overlay") if source.exists() else None
+    if include_logo_avoid_base and row.get("logo_status") == "logo_avoid":
+        source = batch_dir / f"{entry_id}_base_1254x627.png"
+        return (source, "review_pending_base") if source.exists() else None
     return None
 
 
@@ -97,6 +105,8 @@ def write_audit(batch_id: str, rows: list[dict[str, str]], out_dir: Path, contac
             "## Gate",
             "",
             "- Promote to `assets/ponchi/final/` only after visual confirmation.",
+            "- `review_pending` means staged for review; it does not prove color-policy compliance.",
+            "- Run `scripts/ponchi_color_audit.py` and require `color_audit_pass` before final promotion.",
             "- Keep source official-logo provenance in `docs/brand_usage_audit.md`.",
             "- Keep rejected candidates in this folder for audit history unless the batch is intentionally reset.",
         ]
@@ -115,6 +125,11 @@ def main() -> int:
         "--include-overlay-audit",
         action="store_true",
         help="Stage overlay_audit items as review-pending candidates before user acceptance.",
+    )
+    parser.add_argument(
+        "--include-logo-avoid-base",
+        action="store_true",
+        help="Stage logo_avoid base images as review-pending candidates before user acceptance.",
     )
     args = parser.parse_args()
 
@@ -136,7 +151,12 @@ def main() -> int:
             stale.unlink()
     staged: list[dict[str, str]] = []
     for row in rows:
-        source_info = candidate_source(row, batch_dir, args.include_overlay_audit)
+        source_info = candidate_source(
+            row,
+            batch_dir,
+            args.include_overlay_audit,
+            args.include_logo_avoid_base,
+        )
         if not source_info:
             continue
         source, source_type = source_info

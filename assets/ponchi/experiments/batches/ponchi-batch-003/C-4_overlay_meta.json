@@ -1,0 +1,12 @@
+{
+  "base_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-003\\C-4_base_1254x627.png",
+  "official_asset": "assets\\logos\\meta-ai\\meta-ai-orbit-logo-gradient-3d_light.goto.png",
+  "output_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-003\\C-4_overlay_1254x627.png",
+  "overlay_rect": {
+    "x": 1068,
+    "y": 32,
+    "width": 122,
+    "height": 122
+  },
+  "note": "Only this rectangle may contain official-asset color exceptions."
+}

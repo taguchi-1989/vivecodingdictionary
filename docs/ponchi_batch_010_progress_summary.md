@@ -10,36 +10,38 @@ Target: 20 entries from `F-80` through `F-122`.
 | prompt lint pass | 20 / 20 | F-80 - F-122 all entries |
 | 2:1 base images created | 20 / 20 | F-80 - F-122 all entries |
 | 2:1 base audit pass | 20 / 20 | F-80 - F-122 all entries |
-| logo_avoid | 9 / 20 | F-81, F-87, F-91, F-100 - F-104, F-111 |
-| official logo/icon source review required | 11 / 20 | F-80, F-82 - F-86, F-90, F-110, F-120 - F-122 |
-| overlay_wait | 11 / 20 | F-80, F-82 - F-86, F-90, F-110, F-120 - F-122 |
-| final candidate created | 0 / 20 | not generated |
+| logo_avoid / confirmed logo-less | 10 / 20 | F-81, F-85, F-87, F-91, F-100 - F-104, F-111 |
+| overlay_audit | 10 / 20 | F-80, F-82, F-83, F-84, F-86, F-90, F-110, F-120, F-121, F-122 |
+| overlay_wait | 0 / 20 | none |
+| color_audit | 10 / 20 | F-81, F-85, F-87, F-91, F-100 - F-104, F-111 |
+| final candidate created | 20 / 20 | all batch entries staged as review_pending |
+| color audit pass | 20 / 20 | all staged candidates |
 | final promoted | 0 / 20 | do not copy to `assets/ponchi/final/` yet |
 
 ## Entry list
 
 | entry | title | prompt | 2:1 base | logo policy | current status |
 | --- | --- | --- | --- | --- | --- |
-| F-80 | Node.js | done | pass | waiting | overlay_wait |
-| F-81 | bash | done | pass | logo_avoid | base complete |
-| F-82 | WSL | done | pass | waiting | overlay_wait |
-| F-83 | PowerShell | done | pass | waiting | overlay_wait |
-| F-84 | Ghostty | done | pass | waiting | overlay_wait |
-| F-85 | SuperClaude Framework | done | pass | waiting | overlay_wait |
-| F-86 | ollama | done | pass | waiting | overlay_wait |
-| F-87 | sudo | done | pass | logo_avoid | base complete |
-| F-90 | Docker | done | pass | waiting | overlay_wait |
-| F-91 | .env | done | pass | logo_avoid | base complete |
-| F-100 | 拡張子早見表 | done | pass | logo_avoid | base complete |
-| F-101 | .ico | done | pass | logo_avoid | base complete |
-| F-102 | .mp4 | done | pass | logo_avoid | base complete |
-| F-103 | .mp3 | done | pass | logo_avoid | base complete |
-| F-104 | .webp | done | pass | logo_avoid | base complete |
-| F-110 | Lighthouse | done | pass | waiting | overlay_wait |
-| F-111 | a11y | done | pass | logo_avoid | base complete |
-| F-120 | PostgreSQL | done | pass | waiting | overlay_wait |
-| F-121 | SQLite | done | pass | waiting | overlay_wait |
-| F-122 | Prisma | done | pass | waiting | overlay_wait |
+| F-80 | Node.js | done | pass | applied | overlay_audit |
+| F-81 | bash | done | pass | logo_avoid | color_audit |
+| F-82 | WSL | done | pass | applied | overlay_audit |
+| F-83 | PowerShell | done | pass | applied | overlay_audit |
+| F-84 | Ghostty | done | pass | applied | overlay_audit |
+| F-85 | SuperClaude Framework | done | pass | confirmed logo-less after official repo review | color_audit |
+| F-86 | ollama | done | pass | applied | overlay_audit |
+| F-87 | sudo | done | pass | logo_avoid | color_audit |
+| F-90 | Docker | done | pass | applied | overlay_audit |
+| F-91 | .env | done | pass | logo_avoid | color_audit |
+| F-100 | 拡張子早見表 | done | pass | logo_avoid | color_audit |
+| F-101 | .ico | done | pass | logo_avoid | color_audit |
+| F-102 | .mp4 | done | pass | logo_avoid | color_audit |
+| F-103 | .mp3 | done | pass | logo_avoid | color_audit |
+| F-104 | .webp | done | pass | logo_avoid | color_audit |
+| F-110 | Lighthouse | done | pass | applied | overlay_audit |
+| F-111 | a11y | done | pass | logo_avoid | color_audit |
+| F-120 | PostgreSQL | done | pass | applied | overlay_audit |
+| F-121 | SQLite | done | pass | applied | overlay_audit |
+| F-122 | Prisma | done | pass | applied | overlay_audit |
 
 ## Generated locations
 
@@ -56,11 +58,13 @@ Target: 20 entries from `F-80` through `F-122`.
 Contact sheet review passed for all 20 generated bases. F-102, F-110, and
 F-111 were regenerated to remove text-like marks, brand-like UI, and animal
 imagery. The 11 official-logo entries have deterministic blank upper-right
-clearspace for later official-source compositing.
+clearspace for later official-source compositing or confirmed logo-less review.
+F-85 is confirmed logo-less after official repository review found no
+SuperClaude-specific logo, icon, or lockup; do not synthesize a wordmark or use
+Claude/Anthropic/GitHub marks.
 
 ## Next action
 
-Batch 010 base generation is complete. Wave 004 now has 20 / 60 generated
-2:1 bases and 20 / 60 base audit pass. Continue with `ponchi-batch-011`, or
-return to official source review and deterministic overlays. Do not promote
-anything to `assets/ponchi/final/` without explicit approval.
+Batch 010 base generation is complete, and all 20 entries are staged as
+review-pending candidates. Return to the remaining older `overlay_wait` rows.
+Do not promote anything to `assets/ponchi/final/` without explicit approval.

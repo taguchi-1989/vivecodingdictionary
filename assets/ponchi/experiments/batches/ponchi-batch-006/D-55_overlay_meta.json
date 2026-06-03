@@ -1,0 +1,12 @@
+{
+  "base_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-006\\D-55_base_1254x627.png",
+  "official_asset": "assets\\logos\\gemini\\gemini_sparkle_4g_512_lt.png",
+  "output_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-006\\D-55_overlay_1254x627.png",
+  "overlay_rect": {
+    "x": 1070,
+    "y": 28,
+    "width": 118,
+    "height": 118
+  },
+  "note": "Official Gemini sparkle used as a Gemini-family overlay for Nano Banana / Gemini 2.5 Flash Image. Dedicated Nano Banana product logo was not confirmed; treat as review-pending. Only this rectangle may contain official-asset color exceptions."
+}

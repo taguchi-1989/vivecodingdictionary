@@ -1,0 +1,20 @@
+entry_id,title,source_file,source_type,candidate_png,candidate_webp,candidate_status
+C-10,Moonshot AI,assets\ponchi\experiments\batches\ponchi-batch-004\C-10_overlay_1254x627.png,review_pending_overlay,C-10_candidate.png,C-10_candidate.webp,review_pending
+C-11,Z.ai,assets\ponchi\experiments\batches\ponchi-batch-004\C-11_overlay_1254x627.png,review_pending_overlay,C-11_candidate.png,C-11_candidate.webp,review_pending
+C-13,Groq,assets\ponchi\experiments\batches\ponchi-batch-004\C-13_overlay_1254x627.png,review_pending_overlay,C-13_candidate.png,C-13_candidate.webp,review_pending
+C-14,AMD,assets\ponchi\experiments\batches\ponchi-batch-004\C-14_overlay_1254x627.png,review_pending_overlay,C-14_candidate.png,C-14_candidate.webp,review_pending
+C-50,Sam Altman,assets\ponchi\experiments\batches\ponchi-batch-004\C-50_base_1254x627.png,review_pending_base,C-50_candidate.png,C-50_candidate.webp,review_pending
+C-51,Dario Amodei,assets\ponchi\experiments\batches\ponchi-batch-004\C-51_base_1254x627.png,review_pending_base,C-51_candidate.png,C-51_candidate.webp,review_pending
+C-52,Demis Hassabis,assets\ponchi\experiments\batches\ponchi-batch-004\C-52_base_1254x627.png,review_pending_base,C-52_candidate.png,C-52_candidate.webp,review_pending
+C-53,Andrej Karpathy,assets\ponchi\experiments\batches\ponchi-batch-004\C-53_base_1254x627.png,review_pending_base,C-53_candidate.png,C-53_candidate.webp,review_pending
+C-54,Ilya Sutskever,assets\ponchi\experiments\batches\ponchi-batch-004\C-54_base_1254x627.png,review_pending_base,C-54_candidate.png,C-54_candidate.webp,review_pending
+C-55,Mira Murati,assets\ponchi\experiments\batches\ponchi-batch-004\C-55_base_1254x627.png,review_pending_base,C-55_candidate.png,C-55_candidate.webp,review_pending
+C-56,Yann LeCun,assets\ponchi\experiments\batches\ponchi-batch-004\C-56_base_1254x627.png,review_pending_base,C-56_candidate.png,C-56_candidate.webp,review_pending
+C-57,Geoffrey Hinton,assets\ponchi\experiments\batches\ponchi-batch-004\C-57_base_1254x627.png,review_pending_base,C-57_candidate.png,C-57_candidate.webp,review_pending
+C-58,Elon Musk,assets\ponchi\experiments\batches\ponchi-batch-004\C-58_base_1254x627.png,review_pending_base,C-58_candidate.png,C-58_candidate.webp,review_pending
+C-59,Jensen Huang,assets\ponchi\experiments\batches\ponchi-batch-004\C-59_base_1254x627.png,review_pending_base,C-59_candidate.png,C-59_candidate.webp,review_pending
+C-60,Ray Kurzweil,assets\ponchi\experiments\batches\ponchi-batch-004\C-60_base_1254x627.png,review_pending_base,C-60_candidate.png,C-60_candidate.webp,review_pending
+C-80,AI大学,assets\ponchi\experiments\batches\ponchi-batch-004\C-80_overlay_1254x627.png,review_pending_overlay,C-80_candidate.png,C-80_candidate.webp,review_pending
+C-81,にゃんた,assets\ponchi\experiments\batches\ponchi-batch-004\C-81_overlay_1254x627.png,review_pending_overlay,C-81_candidate.png,C-81_candidate.webp,review_pending
+C-82,まさお,assets\ponchi\experiments\batches\ponchi-batch-004\C-82_overlay_1254x627.png,review_pending_overlay,C-82_candidate.png,C-82_candidate.webp,review_pending
+C-83,AI の羅針盤,assets\ponchi\experiments\batches\ponchi-batch-004\C-83_overlay_1254x627.png,review_pending_overlay,C-83_candidate.png,C-83_candidate.webp,review_pending

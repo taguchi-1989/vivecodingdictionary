@@ -1,0 +1,12 @@
+{
+  "base_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-001\\B-9_base_1254x627.png",
+  "official_asset": "assets\\logos\\vercel\\v0-assets\\v0\\Light\\v0-logo-light.png",
+  "output_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-001\\B-9_overlay_1254x627.png",
+  "overlay_rect": {
+    "x": 686,
+    "y": 36,
+    "width": 520,
+    "height": 248
+  },
+  "note": "Only this rectangle may contain official-asset color exceptions."
+}

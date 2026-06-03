@@ -1,0 +1,12 @@
+{
+  "base_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-003\\B-33_base_1254x627.png",
+  "official_asset": "assets\\logos\\canva\\Canva-logos\\Canva logos\\png\\512x512\\Canva type logo_512x180.png",
+  "output_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-003\\B-33_overlay_1254x627.png",
+  "overlay_rect": {
+    "x": 1038,
+    "y": 42,
+    "width": 170,
+    "height": 60
+  },
+  "note": "Only this rectangle may contain official-asset color exceptions."
+}

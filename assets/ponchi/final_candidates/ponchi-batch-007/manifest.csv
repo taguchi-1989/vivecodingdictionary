@@ -1,0 +1,21 @@
+entry_id,title,source_file,source_type,candidate_png,candidate_webp,candidate_status
+E-3,Terminal-Bench,assets\ponchi\experiments\batches\ponchi-batch-007\E-3_base_1254x627.png,review_pending_base,E-3_candidate.png,E-3_candidate.webp,review_pending
+E-4,HumanEval,assets\ponchi\experiments\batches\ponchi-batch-007\E-4_base_1254x627.png,review_pending_base,E-4_candidate.png,E-4_candidate.webp,review_pending
+E-20,MMLU,assets\ponchi\experiments\batches\ponchi-batch-007\E-20_base_1254x627.png,review_pending_base,E-20_candidate.png,E-20_candidate.webp,review_pending
+E-21,MMLU-Pro,assets\ponchi\experiments\batches\ponchi-batch-007\E-21_base_1254x627.png,review_pending_base,E-21_candidate.png,E-21_candidate.webp,review_pending
+E-22,GPQA,assets\ponchi\experiments\batches\ponchi-batch-007\E-22_base_1254x627.png,review_pending_base,E-22_candidate.png,E-22_candidate.webp,review_pending
+E-23,GSM8K,assets\ponchi\experiments\batches\ponchi-batch-007\E-23_base_1254x627.png,review_pending_base,E-23_candidate.png,E-23_candidate.webp,review_pending
+E-24,MATH,assets\ponchi\experiments\batches\ponchi-batch-007\E-24_base_1254x627.png,review_pending_base,E-24_candidate.png,E-24_candidate.webp,review_pending
+E-25,AIME,assets\ponchi\experiments\batches\ponchi-batch-007\E-25_base_1254x627.png,review_pending_base,E-25_candidate.png,E-25_candidate.webp,review_pending
+E-26,Humanity's Last Exam,assets\ponchi\experiments\batches\ponchi-batch-007\E-26_base_1254x627.png,review_pending_base,E-26_candidate.png,E-26_candidate.webp,review_pending
+E-27,IQ Bench,assets\ponchi\experiments\batches\ponchi-batch-007\E-27_base_1254x627.png,review_pending_base,E-27_candidate.png,E-27_candidate.webp,review_pending
+E-30,TAU-Bench,assets\ponchi\experiments\batches\ponchi-batch-007\E-30_base_1254x627.png,review_pending_base,E-30_candidate.png,E-30_candidate.webp,review_pending
+E-31,WebArena,assets\ponchi\experiments\batches\ponchi-batch-007\E-31_base_1254x627.png,review_pending_base,E-31_candidate.png,E-31_candidate.webp,review_pending
+E-32,GAIA,assets\ponchi\experiments\batches\ponchi-batch-007\E-32_base_1254x627.png,review_pending_base,E-32_candidate.png,E-32_candidate.webp,review_pending
+E-33,AgentBench,assets\ponchi\experiments\batches\ponchi-batch-007\E-33_base_1254x627.png,review_pending_base,E-33_candidate.png,E-33_candidate.webp,review_pending
+E-34,OSWorld,assets\ponchi\experiments\batches\ponchi-batch-007\E-34_base_1254x627.png,review_pending_base,E-34_candidate.png,E-34_candidate.webp,review_pending
+E-50,Chatbot Arena,assets\ponchi\experiments\batches\ponchi-batch-007\E-50_base_1254x627.png,review_pending_base,E-50_candidate.png,E-50_candidate.webp,review_pending
+E-51,LMSYS Arena,assets\ponchi\experiments\batches\ponchi-batch-007\E-51_base_1254x627.png,review_pending_base,E-51_candidate.png,E-51_candidate.webp,review_pending
+F-1,JavaScript,assets\ponchi\experiments\batches\ponchi-batch-007\F-1_base_1254x627.png,review_pending_base,F-1_candidate.png,F-1_candidate.webp,review_pending
+F-2,TypeScript,assets\ponchi\experiments\batches\ponchi-batch-007\F-2_base_1254x627.png,review_pending_base,F-2_candidate.png,F-2_candidate.webp,review_pending
+F-3,Python,assets\ponchi\experiments\batches\ponchi-batch-007\F-3_base_1254x627.png,review_pending_base,F-3_candidate.png,F-3_candidate.webp,review_pending

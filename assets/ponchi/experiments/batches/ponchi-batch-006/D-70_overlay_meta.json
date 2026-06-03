@@ -1,0 +1,12 @@
+{
+  "base_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-006\\D-70_base_1254x627.png",
+  "official_asset": "assets\\logos\\amical\\amical-icon.png",
+  "output_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-006\\D-70_overlay_1254x627.png",
+  "overlay_rect": {
+    "x": 1065,
+    "y": 18,
+    "width": 130,
+    "height": 130
+  },
+  "note": "Only this rectangle may contain official-asset color exceptions."
+}

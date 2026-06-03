@@ -1,0 +1,12 @@
+{
+  "base_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-002\\B-10_base_1254x627.png",
+  "official_asset": "assets\\logos\\devin\\devin-official-header-mark.svg",
+  "output_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-002\\B-10_overlay_1254x627.png",
+  "overlay_rect": {
+    "x": 1066,
+    "y": 34,
+    "width": 118,
+    "height": 134
+  },
+  "note": "Only this rectangle may contain official-asset color exceptions."
+}

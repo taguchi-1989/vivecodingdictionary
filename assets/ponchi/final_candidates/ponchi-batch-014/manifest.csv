@@ -1,0 +1,21 @@
+entry_id,title,source_file,source_type,candidate_png,candidate_webp,candidate_status
+H-2,ペアプログラミング,assets\ponchi\experiments\batches\ponchi-batch-014\H-2_base_1254x627.png,review_pending_base,H-2_candidate.png,H-2_candidate.webp,review_pending
+H-3,バイブコーディングの流儀,assets\ponchi\experiments\batches\ponchi-batch-014\H-3_base_1254x627.png,review_pending_base,H-3_candidate.png,H-3_candidate.webp,review_pending
+H-4,コードレビュー,assets\ponchi\experiments\batches\ponchi-batch-014\H-4_base_1254x627.png,review_pending_base,H-4_candidate.png,H-4_candidate.webp,review_pending
+H-5,Scrum / Agile,assets\ponchi\experiments\batches\ponchi-batch-014\H-5_base_1254x627.png,review_pending_base,H-5_candidate.png,H-5_candidate.webp,review_pending
+H-6,Git Flow,assets\ponchi\experiments\batches\ponchi-batch-014\H-6_base_1254x627.png,review_pending_base,H-6_candidate.png,H-6_candidate.webp,review_pending
+H-7,CI/CD,assets\ponchi\experiments\batches\ponchi-batch-014\H-7_base_1254x627.png,review_pending_base,H-7_candidate.png,H-7_candidate.webp,review_pending
+H-8,DevOps,assets\ponchi\experiments\batches\ponchi-batch-014\H-8_base_1254x627.png,review_pending_base,H-8_candidate.png,H-8_candidate.webp,review_pending
+H-50,Bard → Gemini,assets\ponchi\experiments\batches\ponchi-batch-014\H-50_base_1254x627.png,review_pending_base,H-50_candidate.png,H-50_candidate.webp,review_pending
+H-51,Preview から正式版への流れ,assets\ponchi\experiments\batches\ponchi-batch-014\H-51_base_1254x627.png,review_pending_base,H-51_candidate.png,H-51_candidate.webp,review_pending
+H-52,Copilot から Claude Code までの流れ,assets\ponchi\experiments\batches\ponchi-batch-014\H-52_base_1254x627.png,review_pending_base,H-52_candidate.png,H-52_candidate.webp,review_pending
+H-53,ChatGPT 登場,assets\ponchi\experiments\batches\ponchi-batch-014\H-53_base_1254x627.png,review_pending_base,H-53_candidate.png,H-53_candidate.webp,review_pending
+H-54,GPT-4 リリース,assets\ponchi\experiments\batches\ponchi-batch-014\H-54_base_1254x627.png,review_pending_base,H-54_candidate.png,H-54_candidate.webp,review_pending
+H-55,LLaMA のオープン化,assets\ponchi\experiments\batches\ponchi-batch-014\H-55_base_1254x627.png,review_pending_base,H-55_candidate.png,H-55_candidate.webp,review_pending
+H-56,Claude のバージョン史,assets\ponchi\experiments\batches\ponchi-batch-014\H-56_base_1254x627.png,review_pending_base,H-56_candidate.png,H-56_candidate.webp,review_pending
+H-57,Gemini の命名史,assets\ponchi\experiments\batches\ponchi-batch-014\H-57_base_1254x627.png,review_pending_base,H-57_candidate.png,H-57_candidate.webp,review_pending
+H-58,Transformer 論文,assets\ponchi\experiments\batches\ponchi-batch-014\H-58_base_1254x627.png,review_pending_base,H-58_candidate.png,H-58_candidate.webp,review_pending
+H-59,AI エージェント元年,assets\ponchi\experiments\batches\ponchi-batch-014\H-59_base_1254x627.png,review_pending_base,H-59_candidate.png,H-59_candidate.webp,review_pending
+H-60,Codex → GitHub Copilot の系譜,assets\ponchi\experiments\batches\ponchi-batch-014\H-60_base_1254x627.png,review_pending_base,H-60_candidate.png,H-60_candidate.webp,review_pending
+H-61,Preview 版という文化,assets\ponchi\experiments\batches\ponchi-batch-014\H-61_base_1254x627.png,review_pending_base,H-61_candidate.png,H-61_candidate.webp,review_pending
+H-62,Anthropic 創業の流れ,assets\ponchi\experiments\batches\ponchi-batch-014\H-62_base_1254x627.png,review_pending_base,H-62_candidate.png,H-62_candidate.webp,review_pending

@@ -1,0 +1,12 @@
+{
+  "base_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-001\\B-4_base_1254x627.png",
+  "official_asset": "assets\\logos\\cursor\\cursor-brand-assets\\General Logos\\Lockup Horizontal\\PNG\\LOCKUP_HORIZONTAL_2D_LIGHT.png",
+  "output_image": "assets\\ponchi\\experiments\\batches\\ponchi-batch-001\\B-4_overlay_1254x627.png",
+  "overlay_rect": {
+    "x": 686,
+    "y": 36,
+    "width": 520,
+    "height": 124
+  },
+  "note": "Only this rectangle may contain official-asset color exceptions."
+}
