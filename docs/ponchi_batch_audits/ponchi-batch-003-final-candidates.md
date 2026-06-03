@@ -28,6 +28,7 @@ These files are staged review candidates. They do not overwrite `assets/ponchi/f
 | `C-5` | xAI | `review_pending_overlay` | `C-5_candidate.png` | `C-5_candidate.webp` | `review_pending` |
 | `C-6` | Mistral AI | `review_pending_overlay` | `C-6_candidate.png` | `C-6_candidate.webp` | `review_pending` |
 | `C-7` | Hugging Face | `review_pending_overlay` | `C-7_candidate.png` | `C-7_candidate.webp` | `review_pending` |
+| `C-8` | Microsoft AI | `review_pending_base` | `C-8_candidate.png` | `C-8_candidate.webp` | `review_pending` |
 | `C-9` | NVIDIA | `review_pending_overlay` | `C-9_candidate.png` | `C-9_candidate.webp` | `review_pending` |
 
 ## Gate

@@ -23,6 +23,7 @@ These files are staged review candidates. They do not overwrite `assets/ponchi/f
 | `B-20` | Vercel | `accepted_overlay` | `B-20_candidate.png` | `B-20_candidate.webp` | `accepted` |
 | `B-21` | Netlify | `accepted_overlay` | `B-21_candidate.png` | `B-21_candidate.webp` | `accepted` |
 | `B-22` | Cloudflare | `accepted_overlay` | `B-22_candidate.png` | `B-22_candidate.webp` | `accepted` |
+| `B-23` | AWS | `review_pending_base` | `B-23_candidate.png` | `B-23_candidate.webp` | `review_pending` |
 | `B-24` | Google Cloud | `review_pending_overlay` | `B-24_candidate.png` | `B-24_candidate.webp` | `review_pending` |
 | `B-25` | Azure | `review_pending_overlay` | `B-25_candidate.png` | `B-25_candidate.webp` | `review_pending` |
 | `B-26` | Azure OpenAI | `review_pending_overlay` | `B-26_candidate.png` | `B-26_candidate.webp` | `review_pending` |

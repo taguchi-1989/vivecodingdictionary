@@ -29,7 +29,7 @@
 | 16 | `C-5` | xAI | `overlay_audit` | `official_logo_applied` | review official xAI favicon overlay before final promotion; source site blocks full page fetch | `not_reviewed` |
 | 17 | `C-6` | Mistral AI | `overlay_audit` | `official_logo_applied` | review official-logo overlay candidate | `not_reviewed` |
 | 18 | `C-7` | Hugging Face | `overlay_audit` | `official_logo_applied` | review official-logo overlay candidate | `not_reviewed` |
-| 19 | `C-8` | Microsoft AI | `overlay_wait` | `official_logo_source_review_required` | do not final; import/confirm official logo asset first | `not_reviewed` |
+| 19 | `C-8` | Microsoft AI | `color_audit` | `logo_avoid` | review confirmed logo-less Microsoft AI organization base candidate before final promotion; do not use Microsoft square mark or generated Microsoft AI wordmark | `not_reviewed` |
 | 20 | `C-9` | NVIDIA | `overlay_audit` | `official_logo_applied` | review official-logo overlay candidate | `not_reviewed` |
 
 ## Batch Commands

@@ -24,7 +24,7 @@
 | 11 | `B-20` | Vercel | `overlay_audit` | `official_logo_applied` | review existing official overlay before final promotion | `accept_overlay` |
 | 12 | `B-21` | Netlify | `overlay_audit` | `official_logo_applied` | review existing official overlay before final promotion | `accept_overlay` |
 | 13 | `B-22` | Cloudflare | `overlay_audit` | `official_logo_applied` | review existing official overlay before final promotion | `accept_overlay` |
-| 14 | `B-23` | AWS | `overlay_wait` | `official_logo_source_review_required` | do not final; import/confirm official logo asset first | `not_reviewed` |
+| 14 | `B-23` | AWS | `color_audit` | `logo_avoid` | review confirmed logo-less AWS cloud-platform base candidate before final promotion; do not apply AWS Smile Logo or third-party logo mirrors | `not_reviewed` |
 | 15 | `B-24` | Google Cloud | `overlay_audit` | `official_logo_applied` | review official Google Cloud logo overlay before final promotion | `not_reviewed` |
 | 16 | `B-25` | Azure | `overlay_audit` | `official_logo_applied` | review official-logo overlay candidate | `not_reviewed` |
 | 17 | `B-26` | Azure OpenAI | `overlay_audit` | `official_logo_applied` | review official-logo overlay candidate | `not_reviewed` |

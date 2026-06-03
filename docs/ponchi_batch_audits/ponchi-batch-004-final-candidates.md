@@ -12,6 +12,7 @@ These files are staged review candidates. They do not overwrite `assets/ponchi/f
 | --- | --- | --- | --- | --- | --- |
 | `C-10` | Moonshot AI | `review_pending_overlay` | `C-10_candidate.png` | `C-10_candidate.webp` | `review_pending` |
 | `C-11` | Z.ai | `review_pending_overlay` | `C-11_candidate.png` | `C-11_candidate.webp` | `review_pending` |
+| `C-12` | TSMC | `review_pending_base` | `C-12_candidate.png` | `C-12_candidate.webp` | `review_pending` |
 | `C-13` | Groq | `review_pending_overlay` | `C-13_candidate.png` | `C-13_candidate.webp` | `review_pending` |
 | `C-14` | AMD | `review_pending_overlay` | `C-14_candidate.png` | `C-14_candidate.webp` | `review_pending` |
 | `C-50` | Sam Altman | `review_pending_base` | `C-50_candidate.png` | `C-50_candidate.webp` | `review_pending` |

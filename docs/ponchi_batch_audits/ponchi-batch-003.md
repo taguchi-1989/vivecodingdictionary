@@ -14,8 +14,8 @@
 
 | stage | count |
 | --- | ---: |
+| `color_audit` | 1 |
 | `overlay_audit` | 19 |
-| `overlay_wait` | 1 |
 
 ## Prompt Lint Output
 
@@ -52,5 +52,5 @@ Generated base images must pass size, density, and logo-clearspace checks before
 | 16 | `C-5` | xAI | `overlay_audit` | yes | yes | `pass` | yes | `not_reviewed` |
 | 17 | `C-6` | Mistral AI | `overlay_audit` | yes | yes | `pass` | yes | `not_reviewed` |
 | 18 | `C-7` | Hugging Face | `overlay_audit` | yes | yes | `pass` | yes | `not_reviewed` |
-| 19 | `C-8` | Microsoft AI | `overlay_wait` | yes | yes | `pass` | no | `not_reviewed` |
+| 19 | `C-8` | Microsoft AI | `color_audit` | yes | yes | `pass` | no | `not_reviewed` |
 | 20 | `C-9` | NVIDIA | `overlay_audit` | yes | yes | `pass` | yes | `not_reviewed` |

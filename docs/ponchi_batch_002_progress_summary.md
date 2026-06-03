@@ -8,10 +8,10 @@
 | --- | ---: | --- |
 | 2:1 base 作成済み | 20 / 20 | B-10 - B-29 全件 |
 | 公式ロゴ確認済み | 18 / 20 | B-10, B-11, B-12, B-13, B-14, B-15, B-16, B-17, B-18, B-20, B-21, B-22, B-24, B-25, B-26, B-27, B-28, B-29 |
-| 公式ロゴなし確認済み | 1 / 20 | B-19 |
+| 公式ロゴなし確認済み | 2 / 20 | B-19, B-23 |
 | ロゴ後合成済み | 18 / 20 | B-10, B-11, B-12, B-13, B-14, B-15, B-16, B-17, B-18, B-20, B-21, B-22, B-24, B-25, B-26, B-27, B-28, B-29 |
-| final candidate 化済み | 19 / 20 | B-10, B-11, B-12, B-13, B-14, B-15, B-16, B-17, B-18, B-19, B-20, B-21, B-22, B-24, B-25, B-26, B-27, B-28, B-29 |
-| overlay_wait 残り | 1 / 20 | B-23 |
+| final candidate 化済み | 20 / 20 | B-10 - B-29 全件 |
+| overlay_wait 残り | 0 / 20 | none |
 | final 昇格済み | 0 / 20 | まだ `assets/ponchi/final/` へはコピーしない |
 
 ## Entry 一覧
@@ -31,7 +31,7 @@
 | B-20 | Vercel | done | done | done | review_pending | overlay_audit |
 | B-21 | Netlify | done | done | done | review_pending | overlay_audit |
 | B-22 | Cloudflare | done | done | done | review_pending | overlay_audit |
-| B-23 | AWS | done | waiting | not yet | not yet | overlay_wait |
+| B-23 | AWS | done | confirmed no clean primary logo overlay path | logo_avoid | review_pending | color_audit |
 | B-24 | Google Cloud | done | done | done | review_pending | overlay_audit |
 | B-25 | Azure | done | done | done | review_pending | overlay_audit |
 | B-26 | Azure OpenAI | done | done | done | review_pending | overlay_audit |
@@ -58,3 +58,10 @@ B-19 Claude Cowork was moved to the confirmed logo-less lane after official
 source review found Claude Team / Team plan language but no distinct
 `Claude Cowork` product logo. The generated base is staged as a strict-palette
 review-pending candidate; do not apply a generic Claude or Anthropic logo.
+
+B-23 AWS was moved to the confirmed logo-less lane after official source review
+found that AWS trademark guidance and the architecture-icons page do not provide
+a clean primary AWS logo overlay path for this dictionary image. The generated
+base is staged as a strict-palette review-pending candidate; do not apply the
+AWS Smile Logo, architecture icons as a primary brand lockup, or third-party
+logo mirrors.

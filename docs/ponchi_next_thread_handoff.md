@@ -7,22 +7,22 @@ This is the quick restart note for the next Codex thread.
 - Working branch: `main`.
 - Previous checkpoint commit before this continuation: `c9d605c`.
 - Current tracked 2:1 base progress: 350 / 350.
-- Current official overlay status: 133 entries in `overlay_audit` and 3 entries
+- Current official overlay status: 133 entries in `overlay_audit` and 0 entries
   still in `overlay_wait`. No rows remain in `blocked_brand_asset`.
-- Current non-brand status: 214 `logo_avoid` / confirmed-logo-less entries are in `color_audit` with
+- Current non-brand status: 217 `logo_avoid` / confirmed-logo-less entries are in `color_audit` with
   staged review-pending base candidates.
-- Current staged final-candidate status: 347 / 350 entries are staged as
+- Current staged final-candidate status: 350 / 350 entries are staged as
   review-pending or accepted final candidates without changing
   `assets/ponchi/final/`.
-- Current color-policy status: 347 mechanical color passes, 0 color reviews,
-  and 0 color failures. Treat the 347 staged files as review candidates only,
+- Current color-policy status: 350 mechanical color passes, 0 color reviews,
+  and 0 color failures. Treat the 350 staged files as review candidates only,
   not final-ready images.
 - Wave 004 is complete: 60 / 60 generated bases, 60 / 60 base audit pass.
 - Wave 005 is complete: 60 / 60 generated bases, 60 / 60 base audit pass.
 - Wave 006 is complete: 50 / 50 generated bases, 50 / 50 base audit pass.
 - Latest verified base batch: `ponchi-batch-002` already had 20 / 20 base audit pass.
-- Next target: official logo overlay cleanup and final-candidate review for the
-  remaining `overlay_wait` rows: B-23 AWS, C-8 Microsoft AI, and C-12 TSMC.
+- Next target: human visual review / final-promotion decision for staged
+  candidates. There are no remaining `overlay_wait` rows.
 
 ## Files to read first
 
@@ -50,14 +50,14 @@ This is the quick restart note for the next Codex thread.
 
 | stage | count |
 | --- | ---: |
-| `color_audit` | 214 |
-| `overlay_wait` | 3 |
+| `color_audit` | 217 |
+| `overlay_wait` | 0 |
 | `overlay_audit` | 133 |
 
 ## Restart plan
 
-1. Continue official logo overlay cleanup and final-candidate review.
-   The current color-policy gate is clean: 347 pass, 0 review, 0 fail.
+1. Continue final-candidate visual review and promotion planning.
+   The current color-policy gate is clean: 350 pass, 0 review, 0 fail.
 2. Keep Batch 012-014 best practices:
    - use abstract non-brand metaphors for `logo_avoid`;
    - keep white clearspace only where an official overlay is required;
@@ -65,8 +65,9 @@ This is the quick restart note for the next Codex thread.
 3. Keep the color gate active. All currently staged review-pending candidates
    pass `scripts/ponchi_color_audit.py`, but new overlays or regenerated bases
    must rerun the audit before final promotion.
-4. Start from remaining `overlay_wait` rows, confirm/import official assets,
-   overlay only deterministic official logos, then audit candidates.
+4. There are no remaining `overlay_wait` rows. If a brand decision is reopened,
+   confirm/import official assets first and overlay only deterministic official
+   logos.
 5. Run image audit, color audit, batch audit, batch report, and dashboard refresh.
 6. Stop for a commit/handoff checkpoint whenever the visible成果物 count grows past the next heavy threshold.
 
@@ -116,7 +117,8 @@ include:
   generated 2:1 bases.
 
 Batch 002 already had 20 / 20 generated 2:1 bases and 20 / 20 base audit pass.
-It now has 2 `overlay_wait` entries and 18 `overlay_audit` entries.
+It now has 18 `overlay_audit` entries and 2 confirmed logo-less `color_audit`
+entries.
 
 The current continuation also applied and staged deterministic official overlays:
 
@@ -231,8 +233,22 @@ current Microsoft AI page was saved as
 page title plus UHF text brand link `Microsoft AI`, but does not provide a
 dedicated Microsoft AI logo image or lockup. B-16 and B-17 remain
 review-pending as Copilot-family icon overlays rather than confirmed dedicated
-product lockups. C-8 Microsoft AI remains in `overlay_wait`; the Microsoft AI
-page text and favicon are not sufficient as an organization logo overlay.
+product lockups. C-8 Microsoft AI is now a confirmed logo-less `color_audit`
+candidate; the Microsoft AI page text and favicon are not sufficient as an
+organization logo overlay. Do not synthesize a Microsoft AI wordmark or
+substitute Microsoft square/Copilot/GitHub marks.
+
+Latest AWS note: B-23 is now a confirmed logo-less `color_audit` candidate.
+The saved official AWS trademark guidelines and architecture-icons page confirm
+AWS marks and AWS-approved architecture icons, but not a clean primary AWS logo
+overlay path for this dictionary image. Do not apply the AWS Smile Logo,
+architecture icons as a primary brand lockup, or third-party logo mirrors.
+
+Latest TSMC note: C-12 is now a confirmed logo-less `color_audit` candidate.
+The official TSMC site remained blocked by a Cloudflare JavaScript/cookie
+challenge in the shell environment, and no usable official TSMC logo asset was
+confirmed for deterministic overlay. Do not use third-party logo mirrors or a
+generated TSMC wordmark.
 
 Latest Windsurf note: B-6 uses
 `assets/logos/windsurf/windsurf-black-wordmark.svg`, the official black

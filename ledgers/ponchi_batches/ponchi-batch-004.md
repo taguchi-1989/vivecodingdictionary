@@ -13,7 +13,7 @@
 | ---: | --- | --- | --- | --- | --- | --- |
 | 1 | `C-10` | Moonshot AI | `overlay_audit` | `official_logo_applied` | review official-logo overlay candidate | `not_reviewed` |
 | 2 | `C-11` | Z.ai | `overlay_audit` | `official_logo_applied` | review official-logo overlay candidate | `not_reviewed` |
-| 3 | `C-12` | TSMC | `overlay_wait` | `official_logo_source_review_required` | do not final; import/confirm official logo asset first | `not_reviewed` |
+| 3 | `C-12` | TSMC | `color_audit` | `logo_avoid` | review confirmed logo-less TSMC semiconductor supply-chain base candidate before final promotion; do not use third-party logo mirrors or generated wordmark | `not_reviewed` |
 | 4 | `C-13` | Groq | `overlay_audit` | `official_logo_applied` | review official-logo overlay candidate | `not_reviewed` |
 | 5 | `C-14` | AMD | `overlay_audit` | `official_logo_applied` | review official-logo overlay candidate | `not_reviewed` |
 | 6 | `C-50` | Sam Altman | `color_audit` | `logo_avoid` | review color-pass non-brand base candidate before final promotion | `not_reviewed` |

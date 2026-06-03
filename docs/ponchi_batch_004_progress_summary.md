@@ -10,13 +10,13 @@
 | prompt lint pass | 20 / 20 | C-10 - C-83 全件 |
 | 2:1 base 作成済み | 20 / 20 | C-10 - C-14, C-50 - C-60, C-80 - C-83 |
 | 2:1 base audit pass | 20 / 20 | C-10 - C-14, C-50 - C-60, C-80 - C-83 |
-| 公式ロゴ/公式アイコン要確認 | 1 / 20 | C-12 |
+| 公式ロゴ/公式アイコン要確認 | 0 / 20 | none |
 | overlay_audit | 8 / 20 | C-10, C-11, C-13, C-14, C-80 - C-83 |
-| logo avoid | 11 / 20 | C-50 - C-60 |
-| overlay_wait | 1 / 20 | C-12 |
-| color_audit | 11 / 20 | C-50 - C-60 |
-| final candidate 化済み | 19 / 20 | C-10, C-11, C-13, C-14, C-50 - C-60, C-80 - C-83 |
-| color audit pass | 19 / 20 | final candidate 化済み全件 |
+| logo avoid | 12 / 20 | C-12, C-50 - C-60 |
+| overlay_wait | 0 / 20 | none |
+| color_audit | 12 / 20 | C-12, C-50 - C-60 |
+| final candidate 化済み | 20 / 20 | C-10 - C-14, C-50 - C-60, C-80 - C-83 |
+| color audit pass | 20 / 20 | final candidate 化済み全件 |
 | final 昇格済み | 0 / 20 | まだ `assets/ponchi/final/` へはコピーしない |
 
 ## Entry 一覧
@@ -25,7 +25,7 @@
 | --- | --- | --- | --- | --- | --- |
 | C-10 | Moonshot AI | done | pass | official applied | overlay_audit |
 | C-11 | Z.ai | done | pass | official applied | overlay_audit |
-| C-12 | TSMC | done | pass | waiting | overlay_wait |
+| C-12 | TSMC | done | pass | confirmed no usable official logo asset in this environment | color_audit |
 | C-13 | Groq | done | pass | official applied | overlay_audit |
 | C-14 | AMD | done | pass | official applied | overlay_audit |
 | C-50 | Sam Altman | done | pass | logo avoid | color_audit |
@@ -59,8 +59,10 @@
 Batch 004 base generation is complete. C-10 Moonshot AI, C-11 Z.ai, C-13 Groq,
 C-14 AMD, C-80 AI大学, C-81 にゃんた, C-82 まさお, and C-83 AI の羅針盤 now have
 deterministic official-logo or official-icon overlays staged as review-pending
-final candidates. C-50 - C-60 are staged as non-brand base candidates and pass
-the mechanical color gate. C-12 TSMC remains in `overlay_wait`. C-10 still reports
+final candidates. C-12 and C-50 - C-60 are staged as non-brand base candidates
+and pass the mechanical color gate. C-12 TSMC is a confirmed logo-less
+candidate because no usable official TSMC logo asset was confirmed in this
+environment. C-10 still reports
 `review` in the overlay image audit because its clearspace ink is high, so it
 needs visual review before any final promotion. Do not promote anything to
 `assets/ponchi/final/` without explicit approval.

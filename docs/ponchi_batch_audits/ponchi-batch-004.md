@@ -14,9 +14,8 @@
 
 | stage | count |
 | --- | ---: |
-| `color_audit` | 11 |
+| `color_audit` | 12 |
 | `overlay_audit` | 8 |
-| `overlay_wait` | 1 |
 
 ## Prompt Lint Output
 
@@ -37,7 +36,7 @@ Generated base images must pass size, density, and logo-clearspace checks before
 | ---: | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | `C-10` | Moonshot AI | `overlay_audit` | yes | yes | `pass` | yes | `not_reviewed` |
 | 2 | `C-11` | Z.ai | `overlay_audit` | yes | yes | `pass` | yes | `not_reviewed` |
-| 3 | `C-12` | TSMC | `overlay_wait` | yes | yes | `pass` | no | `not_reviewed` |
+| 3 | `C-12` | TSMC | `color_audit` | yes | yes | `pass` | no | `not_reviewed` |
 | 4 | `C-13` | Groq | `overlay_audit` | yes | yes | `pass` | yes | `not_reviewed` |
 | 5 | `C-14` | AMD | `overlay_audit` | yes | yes | `pass` | yes | `not_reviewed` |
 | 6 | `C-50` | Sam Altman | `color_audit` | yes | yes | `pass` | no | `not_reviewed` |

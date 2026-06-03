@@ -10,11 +10,12 @@
 | prompt lint pass | 20 / 20 | B-30 - C-9 全件 |
 | 2:1 base 作成済み | 20 / 20 | B-30 - C-9 全件 |
 | 2:1 base audit pass | 20 / 20 | B-30 - C-9 全件 |
-| 公式ロゴ/公式アイコン要確認 | 20 / 20 | B-30 - C-9 全件 |
+| 公式ロゴ/公式アイコン要確認 | 19 / 20 | B-30 - C-7, C-9 |
+| 公式ロゴなし確認済み | 1 / 20 | C-8 |
 | official overlay ready | 0 / 20 | overlay_ready は C-1/C-2 の後合成完了により解消 |
 | overlay_audit | 19 / 20 | B-30, B-31, B-32, B-33, B-40, B-41, B-50, B-51, B-52, B-60, B-61, C-1, C-2, C-3, C-4, C-5, C-6, C-7, C-9 |
-| overlay_wait | 1 / 20 | C-8 |
-| final candidate 化済み | 19 / 20 | overlay_audit entries staged as review_pending |
+| overlay_wait | 0 / 20 | none |
+| final candidate 化済み | 20 / 20 | B-30 - C-9 全件 |
 | final 昇格済み | 0 / 20 | まだ `assets/ponchi/final/` へはコピーしない |
 
 ## Entry 一覧
@@ -39,7 +40,7 @@
 | C-5 | xAI | done | pass | applied | review_pending | overlay_audit |
 | C-6 | Mistral AI | done | pass | applied | review_pending | overlay_audit |
 | C-7 | Hugging Face | done | pass | applied | review_pending | overlay_audit |
-| C-8 | Microsoft AI | done | pass | waiting | not yet | overlay_wait |
+| C-8 | Microsoft AI | done | pass | confirmed no dedicated image logo/lockup | logo_avoid | color_audit |
 | C-9 | NVIDIA | done | pass | applied | review_pending | overlay_audit |
 
 ## Generated locations
@@ -55,7 +56,9 @@
 
 ## Next action
 
-Review the 19 overlay candidates, then continue official logo source review and
-deterministic overlays for the remaining `overlay_wait` entry. Do not
-promote to `assets/ponchi/final/` until overlays are audited and explicitly
-approved.
+Review the 19 overlay candidates and the C-8 logo-less base candidate before
+any final promotion. C-8 Microsoft AI is staged as a confirmed logo-less
+candidate because the official Microsoft AI page confirms the page/title and
+text brand link but no dedicated Microsoft AI image logo or lockup. Do not
+promote to `assets/ponchi/final/` until candidates are visually reviewed and
+explicitly approved.

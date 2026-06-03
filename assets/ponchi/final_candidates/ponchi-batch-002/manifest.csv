@@ -12,6 +12,7 @@ B-19,Claude Cowork,assets\ponchi\experiments\batches\ponchi-batch-002\B-19_base_
 B-20,Vercel,assets\ponchi\experiments\batches\ponchi-batch-002\B-20_overlay_1254x627.png,accepted_overlay,B-20_candidate.png,B-20_candidate.webp,accepted
 B-21,Netlify,assets\ponchi\experiments\batches\ponchi-batch-002\B-21_overlay_1254x627.png,accepted_overlay,B-21_candidate.png,B-21_candidate.webp,accepted
 B-22,Cloudflare,assets\ponchi\experiments\batches\ponchi-batch-002\B-22_overlay_1254x627.png,accepted_overlay,B-22_candidate.png,B-22_candidate.webp,accepted
+B-23,AWS,assets\ponchi\experiments\batches\ponchi-batch-002\B-23_base_1254x627.png,review_pending_base,B-23_candidate.png,B-23_candidate.webp,review_pending
 B-24,Google Cloud,assets\ponchi\experiments\batches\ponchi-batch-002\B-24_overlay_1254x627.png,review_pending_overlay,B-24_candidate.png,B-24_candidate.webp,review_pending
 B-25,Azure,assets\ponchi\experiments\batches\ponchi-batch-002\B-25_overlay_1254x627.png,review_pending_overlay,B-25_candidate.png,B-25_candidate.webp,review_pending
 B-26,Azure OpenAI,assets\ponchi\experiments\batches\ponchi-batch-002\B-26_overlay_1254x627.png,review_pending_overlay,B-26_candidate.png,B-26_candidate.webp,review_pending

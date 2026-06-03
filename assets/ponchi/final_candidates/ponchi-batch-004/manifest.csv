@@ -1,6 +1,7 @@
 entry_id,title,source_file,source_type,candidate_png,candidate_webp,candidate_status
 C-10,Moonshot AI,assets\ponchi\experiments\batches\ponchi-batch-004\C-10_overlay_1254x627.png,review_pending_overlay,C-10_candidate.png,C-10_candidate.webp,review_pending
 C-11,Z.ai,assets\ponchi\experiments\batches\ponchi-batch-004\C-11_overlay_1254x627.png,review_pending_overlay,C-11_candidate.png,C-11_candidate.webp,review_pending
+C-12,TSMC,assets\ponchi\experiments\batches\ponchi-batch-004\C-12_base_1254x627.png,review_pending_base,C-12_candidate.png,C-12_candidate.webp,review_pending
 C-13,Groq,assets\ponchi\experiments\batches\ponchi-batch-004\C-13_overlay_1254x627.png,review_pending_overlay,C-13_candidate.png,C-13_candidate.webp,review_pending
 C-14,AMD,assets\ponchi\experiments\batches\ponchi-batch-004\C-14_overlay_1254x627.png,review_pending_overlay,C-14_candidate.png,C-14_candidate.webp,review_pending
 C-50,Sam Altman,assets\ponchi\experiments\batches\ponchi-batch-004\C-50_base_1254x627.png,review_pending_base,C-50_candidate.png,C-50_candidate.webp,review_pending

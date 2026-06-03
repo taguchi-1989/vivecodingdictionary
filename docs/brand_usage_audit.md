@@ -611,8 +611,9 @@ substitutes.
     synthesize a wordmark.
   - Use arXiv's official white logo unchanged, placed on a plain dark
     composition plate for visibility.
-  - Keep TSMC in `overlay_wait` until an official source can be accessed and
-    recorded; do not use third-party logo mirrors or redraw the TSMC wordmark.
+  - Move TSMC to confirmed logo-less `logo_avoid` / `color_audit`; no usable
+    official TSMC logo asset was confirmed in this environment.
+  - Do not use third-party logo mirrors or redraw the TSMC wordmark.
 
 ## Amazon Bedrock / Figma / Reddit / Canva
 
@@ -729,10 +730,10 @@ as having a recognizable logo somewhere on the web.
     B-15 Microsoft Copilot as a review-pending official icon overlay. Use that
     same official Copilot-family icon for B-16 Microsoft 365 Copilot and B-17
     Edge Copilot as review-pending overlays because dedicated product lockups
-    were not confirmed locally. Keep C-8 Microsoft AI in
-    `official_logo_source_review_required`; the saved official Microsoft AI
-    page confirms the Microsoft AI page title and UHF text brand link, but no
-    dedicated Microsoft AI logo image or organization lockup was confirmed.
+    were not confirmed locally. Move C-8 Microsoft AI to confirmed logo-less
+    `logo_avoid` / `color_audit`; the saved official Microsoft AI page confirms
+    the Microsoft AI page title and UHF text brand link, but no dedicated
+    Microsoft AI logo image or organization lockup was confirmed.
 - Google Cloud / Vertex AI:
   - Sources checked:
     - `https://about.google/brand-resource-center/`
@@ -755,7 +756,9 @@ as having a recognizable logo somewhere on the web.
     The official architecture icons page confirms AWS-approved diagram icons,
     not a general permission to use the AWS Smile Logo as a primary logo
     overlay for this dictionary image.
-  - Working decision: keep B-23 in `official_logo_source_review_required`.
+  - Working decision: move B-23 to confirmed logo-less `logo_avoid` /
+    `color_audit`. Do not use the AWS Smile Logo, architecture icons as a
+    primary AWS brand lockup, or third-party logo mirrors for this entry.
 - Claude Cowork:
   - Sources checked:
     - `https://support.claude.com/en/articles/9266767-what-is-the-claude-team-plan`
