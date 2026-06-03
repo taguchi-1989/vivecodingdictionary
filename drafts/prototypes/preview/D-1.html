@@ -223,7 +223,7 @@ body { margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: var
 
 <div class="spread">
 
-  <section class="vbcd page">
+  <section class="vbcd page page--left-compact">
     <div class="page-chrome-top">
       <div class="chrome-left">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span class="chrome-label">モデル</span>
@@ -258,11 +258,29 @@ body { margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: var
       </div>
 
       
-      <div class="section-heading"><span class="label">タイムライン</span></div>
-      <div class="figure figure--image figure--standalone" style="padding:10px;text-align:center;border-bottom:1.5px solid var(--ink-blue) !important;border-bottom-left-radius:var(--radius-lg) !important;border-bottom-right-radius:var(--radius-lg) !important;">
-        <img src="../../../assets/ponchi/final/D-1.webp" alt="" loading="lazy" style="max-width:88%;max-height:300px;height:auto;width:auto;object-fit:contain;display:inline-block;">
+      <div class="section-heading"><span class="label">イメージ</span></div>
+      <div class="figure figure--image figure--standalone">
+        <img src="../../../assets/ponchi/final/D-1.webp" alt="" loading="lazy">
       </div>
       
+      <div class="section-heading"><span class="label">開発フローでの位置</span></div>
+      <div class="flow-row flow-row--compact">
+        <div class="flow-step">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <div class="flow-label">タスクの重さを見積もる</div>
+        </div><span class="flow-arrow">→</span>
+        <div class="flow-step">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/></svg>
+          <div class="flow-label">モデルを選ぶ</div>
+        </div><span class="flow-arrow">→</span>
+        <div class="flow-step">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          <div class="flow-label">API または Google AI Studio で実行する</div>
+        </div><span class="flow-arrow">→</span>
+        <div class="flow-step">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+          <div class="flow-label">結果と費用を確認する</div>
+        </div></div>
     </div>
 
     <div class="page-chrome-bottom">
@@ -271,7 +289,7 @@ body { margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: var
     </div>
   </section>
 
-  <section class="vbcd page">
+  <section class="vbcd page page--right-tight">
     <div class="page-chrome-top">
       <div class="chrome-left">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span class="chrome-label">Gemini 2 系の見方</span>
@@ -326,7 +344,7 @@ body { margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: var
         </div>
       </div>
 
-      <div class="bottom-row">
+      <div class="bottom-row bottom-row--stack">
         <div>
           <div class="section-heading"><span class="label">非エンジニアのつまずき</span></div>
           <div class="list-block">
@@ -350,27 +368,13 @@ body { margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: var
         </div>
       </div>
 
-      <div class="section-heading"><span class="label">開発フローでの位置</span></div>
-      <div class="flow-row">
-        <div class="flow-step">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          <div class="flow-label">タスクの重さを見積もる</div>
-        </div><span class="flow-arrow">→</span>
-        <div class="flow-step">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/></svg>
-          <div class="flow-label">モデルを選ぶ</div>
-        </div><span class="flow-arrow">→</span>
-        <div class="flow-step">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-          <div class="flow-label">API または Google AI Studio で実行する</div>
-        </div><span class="flow-arrow">→</span>
-        <div class="flow-step">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
-          <div class="flow-label">結果と費用を確認する</div>
-        </div></div>
-
       <div class="section-heading"><span class="label">関連用語</span></div>
       <div class="related-row"><span class="related-pill">Gemini</span><span class="related-pill">Google DeepMind</span><span class="related-pill">Gemini 2.5 系</span><span class="related-pill">Flash</span><span class="related-pill">Vertex AI</span></div>
+      
+      <div class="section-heading section-heading--note"><span class="label">備考</span></div>
+      <div class="note-box">
+        <p>モデル名・価格・提供状況は時変情報です。</p>
+      </div>
 
       <div class="references-row">
         <span class="ref-label">参考</span>
