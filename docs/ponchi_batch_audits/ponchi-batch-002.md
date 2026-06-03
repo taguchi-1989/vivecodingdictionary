@@ -14,8 +14,9 @@
 
 | stage | count |
 | --- | ---: |
+| `color_audit` | 1 |
 | `overlay_audit` | 18 |
-| `overlay_wait` | 2 |
+| `overlay_wait` | 1 |
 
 ## Prompt Lint Output
 
@@ -50,7 +51,7 @@ Generated base images must pass size, density, and logo-clearspace checks before
 | 7 | `B-16` | Microsoft 365 Copilot | `overlay_audit` | yes | yes | `pass` | yes | `not_reviewed` |
 | 8 | `B-17` | Edge Copilot | `overlay_audit` | yes | yes | `pass` | yes | `not_reviewed` |
 | 9 | `B-18` | Aqua Voice | `overlay_audit` | yes | yes | `pass` | yes | `not_reviewed` |
-| 10 | `B-19` | Claude Cowork | `overlay_wait` | yes | yes | `pass` | no | `not_reviewed` |
+| 10 | `B-19` | Claude Cowork | `color_audit` | yes | yes | `pass` | no | `not_reviewed` |
 | 11 | `B-20` | Vercel | `overlay_audit` | yes | yes | `pass` | yes | `accept_overlay` |
 | 12 | `B-21` | Netlify | `overlay_audit` | yes | yes | `pass` | yes | `accept_overlay` |
 | 13 | `B-22` | Cloudflare | `overlay_audit` | yes | yes | `pass` | yes | `accept_overlay` |

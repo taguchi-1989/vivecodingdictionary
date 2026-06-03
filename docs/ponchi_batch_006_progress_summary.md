@@ -10,12 +10,12 @@
 | prompt lint pass | 20 / 20 | D-42 - E-2 全件 |
 | 2:1 base 作成済み | 20 / 20 | D-42 - E-2 全件 |
 | 2:1 base audit pass | 20 / 20 | D-42 - E-2 全件 |
-| 公式ロゴ/公式アイコン要確認 | 1 / 20 | D-56 |
+| 公式ロゴ/公式アイコン要確認 | 0 / 20 | none |
 | overlay_audit | 17 / 20 | D-42, D-43, D-44, D-45, D-46, D-47, D-50, D-51, D-52, D-53, D-54, D-55, D-57, D-58, D-60, D-70, D-71 |
-| overlay_wait | 1 / 20 | D-56 |
-| logo_avoid | 2 / 20 | E-1, E-2 |
-| final candidate 化済み | 17 / 20 | D-42, D-43, D-44, D-45, D-46, D-47, D-50, D-51, D-52, D-53, D-54, D-55, D-57, D-58, D-60, D-70, D-71 |
-| color audit pass | 17 / 17 staged candidates | D-42, D-43, D-44, D-45, D-46, D-47, D-50, D-51, D-52, D-53, D-54, D-55, D-57, D-58, D-60, D-70, D-71 |
+| overlay_wait | 0 / 20 | none |
+| logo_avoid | 3 / 20 | D-56, E-1, E-2 |
+| final candidate 化済み | 20 / 20 | D-42, D-43, D-44, D-45, D-46, D-47, D-50, D-51, D-52, D-53, D-54, D-55, D-56, D-57, D-58, D-60, D-70, D-71, E-1, E-2 |
+| color audit pass | 20 / 20 staged candidates | D-42, D-43, D-44, D-45, D-46, D-47, D-50, D-51, D-52, D-53, D-54, D-55, D-56, D-57, D-58, D-60, D-70, D-71, E-1, E-2 |
 | final 昇格済み | 0 / 20 | まだ `assets/ponchi/final/` へはコピーしない |
 
 ## Entry 一覧
@@ -34,7 +34,7 @@
 | D-53 | Veo | done | pass | official Google DeepMind icon applied | overlay_audit |
 | D-54 | Stable Diffusion | done | pass | official Stability AI org logo applied | overlay_audit |
 | D-55 | Nano Banana | done | pass | official Gemini sparkle applied | overlay_audit |
-| D-56 | Seedance | done | pass | waiting | overlay_wait |
+| D-56 | Seedance | done | pass | confirmed no distinct Seedance product logo; palette-normalized base candidate | color_audit |
 | D-57 | Flow | done | pass | official Flow favicon applied | overlay_audit |
 | D-58 | Whisk | done | pass | official Whisk favicon applied | overlay_audit |
 | D-60 | AlphaGo | done | pass | official Google DeepMind icon applied | overlay_audit |
@@ -60,7 +60,9 @@ Contact sheet review passed for the generated bases. D-58 was regenerated to
 remove animal-like visual references, and E-1/E-2 were regenerated to avoid
 red/green pass/fail color semantics. D-51 Imagen and D-60 AlphaGo were rebuilt
 as local strict-palette diagrams to remove photo/natural-color and orange
-drift; both now pass base, overlay, and color audits.
+drift; both now pass base, overlay, and color audits. D-56 Seedance was also
+palette-normalized after color audit review found off-palette body drift; it
+now passes the mechanical color gate as a logo-less candidate.
 
 ## Next action
 
@@ -68,8 +70,9 @@ Batch 006 base generation is complete. D-42 Gemma, D-43 Qwen, D-44 Kimi,
 D-45 GLM, D-46 DeepSeek V3, D-47 DeepSeek R1, D-50 DALL-E, D-51 Imagen, D-52 Sora,
 D-53 Veo, D-54 Stable Diffusion, D-55 Nano Banana, D-57 Flow, D-58 Whisk, D-60 AlphaGo, D-70 Amical, and D-71 Whisper now have
 deterministic official-logo overlays staged as review-pending final candidates.
-Continue with official source review and deterministic overlays for the
-remaining `overlay_wait` entry D-56 Seedance. D-70 uses the official Amical
+Batch 006 now has 20 / 20 staged review-pending candidates. D-56 Seedance is a
+confirmed logo-less candidate because the official Seedance page did not
+confirm a distinct product logo or lockup. D-70 uses the official Amical
 GitHub/website app icon, but the entry prose still describes a different
 Korean/NHN medical AI solution, so reconcile that before final promotion. Do
 not promote anything to

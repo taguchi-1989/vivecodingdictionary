@@ -19,6 +19,7 @@ These files are staged review candidates. They do not overwrite `assets/ponchi/f
 | `B-16` | Microsoft 365 Copilot | `review_pending_overlay` | `B-16_candidate.png` | `B-16_candidate.webp` | `review_pending` |
 | `B-17` | Edge Copilot | `review_pending_overlay` | `B-17_candidate.png` | `B-17_candidate.webp` | `review_pending` |
 | `B-18` | Aqua Voice | `review_pending_overlay` | `B-18_candidate.png` | `B-18_candidate.webp` | `review_pending` |
+| `B-19` | Claude Cowork | `review_pending_base` | `B-19_candidate.png` | `B-19_candidate.webp` | `review_pending` |
 | `B-20` | Vercel | `accepted_overlay` | `B-20_candidate.png` | `B-20_candidate.webp` | `accepted` |
 | `B-21` | Netlify | `accepted_overlay` | `B-21_candidate.png` | `B-21_candidate.webp` | `accepted` |
 | `B-22` | Cloudflare | `accepted_overlay` | `B-22_candidate.png` | `B-22_candidate.webp` | `accepted` |

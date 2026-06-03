@@ -14,9 +14,8 @@
 
 | stage | count |
 | --- | ---: |
-| `color_audit` | 2 |
+| `color_audit` | 3 |
 | `overlay_audit` | 17 |
-| `overlay_wait` | 1 |
 
 ## Prompt Lint Output
 
@@ -47,7 +46,7 @@ Generated base images must pass size, density, and logo-clearspace checks before
 | 10 | `D-53` | Veo | `overlay_audit` | yes | yes | `pass` | yes | `not_reviewed` |
 | 11 | `D-54` | Stable Diffusion | `overlay_audit` | yes | yes | `pass` | yes | `not_reviewed` |
 | 12 | `D-55` | Nano Banana | `overlay_audit` | yes | yes | `pass` | yes | `not_reviewed` |
-| 13 | `D-56` | Seedance | `overlay_wait` | yes | yes | `pass` | no | `not_reviewed` |
+| 13 | `D-56` | Seedance | `color_audit` | yes | yes | `pass` | no | `not_reviewed` |
 | 14 | `D-57` | Flow | `overlay_audit` | yes | yes | `pass` | yes | `not_reviewed` |
 | 15 | `D-58` | Whisk | `overlay_audit` | yes | yes | `pass` | yes | `not_reviewed` |
 | 16 | `D-60` | AlphaGo | `overlay_audit` | yes | yes | `pass` | yes | `not_reviewed` |

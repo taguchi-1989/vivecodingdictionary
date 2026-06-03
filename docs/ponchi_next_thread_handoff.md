@@ -7,21 +7,22 @@ This is the quick restart note for the next Codex thread.
 - Working branch: `main`.
 - Previous checkpoint commit before this continuation: `c9d605c`.
 - Current tracked 2:1 base progress: 350 / 350.
-- Current official overlay status: 133 entries in `overlay_audit` and 5 entries
+- Current official overlay status: 133 entries in `overlay_audit` and 3 entries
   still in `overlay_wait`. No rows remain in `blocked_brand_asset`.
-- Current non-brand status: 212 `logo_avoid` / confirmed-logo-less entries are in `color_audit` with
+- Current non-brand status: 214 `logo_avoid` / confirmed-logo-less entries are in `color_audit` with
   staged review-pending base candidates.
-- Current staged final-candidate status: 345 / 350 entries are staged as
+- Current staged final-candidate status: 347 / 350 entries are staged as
   review-pending or accepted final candidates without changing
   `assets/ponchi/final/`.
-- Current color-policy status: 345 mechanical color passes, 0 color reviews,
-  and 0 color failures. Treat the 345 staged files as review candidates only,
+- Current color-policy status: 347 mechanical color passes, 0 color reviews,
+  and 0 color failures. Treat the 347 staged files as review candidates only,
   not final-ready images.
 - Wave 004 is complete: 60 / 60 generated bases, 60 / 60 base audit pass.
 - Wave 005 is complete: 60 / 60 generated bases, 60 / 60 base audit pass.
 - Wave 006 is complete: 50 / 50 generated bases, 50 / 50 base audit pass.
 - Latest verified base batch: `ponchi-batch-002` already had 20 / 20 base audit pass.
-- Next target: official logo overlay cleanup and final-candidate review, starting from B-service `overlay_wait` rows.
+- Next target: official logo overlay cleanup and final-candidate review for the
+  remaining `overlay_wait` rows: B-23 AWS, C-8 Microsoft AI, and C-12 TSMC.
 
 ## Files to read first
 
@@ -49,14 +50,14 @@ This is the quick restart note for the next Codex thread.
 
 | stage | count |
 | --- | ---: |
-| `color_audit` | 212 |
-| `overlay_wait` | 5 |
+| `color_audit` | 214 |
+| `overlay_wait` | 3 |
 | `overlay_audit` | 133 |
 
 ## Restart plan
 
 1. Continue official logo overlay cleanup and final-candidate review.
-   The current color-policy gate is clean: 345 pass, 0 review, 0 fail.
+   The current color-policy gate is clean: 347 pass, 0 review, 0 fail.
 2. Keep Batch 012-014 best practices:
    - use abstract non-brand metaphors for `logo_avoid`;
    - keep white clearspace only where an official overlay is required;
@@ -175,11 +176,13 @@ Whisk lockup was not confirmed, so this is review-pending as an official icon
 overlay.
 
 Latest Seedance note: D-56 source review checked the official Seedance page
-`https://seed.bytedance.com/en/seedance` and saved it under
-`assets/logos/seedance/seedance-bytedance-page.html`. The fetched page only
-confirmed a small shared ByteDance Seed favicon, not a Seedance-specific logo
-or lockup, so D-56 remains in `overlay_wait`. Do not substitute ByteDance,
-Doubao, Jimeng, fal.ai, or Replicate branding for Seedance.
+`https://seed.bytedance.com/en/seedance` and saved the current fetched page as
+`assets/logos/seedance/seedance-official-page-2026-06-03.html` alongside the
+earlier saved page. The fetched page confirms the Seedance page/title and a
+shared site favicon / ByteDance Seed page mark, but not a distinct Seedance
+product logo or lockup. D-56 is now a confirmed logo-less `color_audit`
+candidate using the palette-normalized base image. Do not substitute
+ByteDance, Doubao, Jimeng, fal.ai, or Replicate branding for Seedance.
 
 Latest SuperClaude Framework note: F-85 source review checked the original
 `https://github.com/NomenAK/SuperClaude` repository and the current
@@ -222,11 +225,14 @@ brand button. The source page was saved as
 `assets/logos/microsoft-copilot/copilot-homepage.html`; the official wordmark
 and favicon were also saved under `assets/logos/microsoft-copilot/`.
 Microsoft.com marketing pages for Microsoft Copilot, Microsoft 365 Copilot,
-Edge Copilot, and Microsoft AI returned 403 from local shell access, so B-16
-and B-17 remain review-pending as Copilot-family icon overlays rather than
-confirmed dedicated product lockups. C-8 Microsoft AI remains in `overlay_wait`;
-the `microsoft.ai` favicon was fetched but is not sufficient as an organization
-lockup.
+Edge Copilot, and Microsoft AI were reviewed locally in separate passes. The
+current Microsoft AI page was saved as
+`assets/logos/microsoft-ai/microsoft-ai-page.html` and confirms the official
+page title plus UHF text brand link `Microsoft AI`, but does not provide a
+dedicated Microsoft AI logo image or lockup. B-16 and B-17 remain
+review-pending as Copilot-family icon overlays rather than confirmed dedicated
+product lockups. C-8 Microsoft AI remains in `overlay_wait`; the Microsoft AI
+page text and favicon are not sufficient as an organization logo overlay.
 
 Latest Windsurf note: B-6 uses
 `assets/logos/windsurf/windsurf-black-wordmark.svg`, the official black

@@ -22,6 +22,7 @@ These files are staged review candidates. They do not overwrite `assets/ponchi/f
 | `D-53` | Veo | `review_pending_overlay` | `D-53_candidate.png` | `D-53_candidate.webp` | `review_pending` |
 | `D-54` | Stable Diffusion | `review_pending_overlay` | `D-54_candidate.png` | `D-54_candidate.webp` | `review_pending` |
 | `D-55` | Nano Banana | `review_pending_overlay` | `D-55_candidate.png` | `D-55_candidate.webp` | `review_pending` |
+| `D-56` | Seedance | `review_pending_base` | `D-56_candidate.png` | `D-56_candidate.webp` | `review_pending` |
 | `D-57` | Flow | `review_pending_overlay` | `D-57_candidate.png` | `D-57_candidate.webp` | `review_pending` |
 | `D-58` | Whisk | `review_pending_overlay` | `D-58_candidate.png` | `D-58_candidate.webp` | `review_pending` |
 | `D-60` | AlphaGo | `review_pending_overlay` | `D-60_candidate.png` | `D-60_candidate.webp` | `review_pending` |

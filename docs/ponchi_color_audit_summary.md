@@ -7,7 +7,7 @@ For overlay candidates, the matching base image is audited when present so offic
 
 | status | count |
 | --- | ---: |
-| `pass` | 345 |
+| `pass` | 347 |
 | `review` | 0 |
 | `fail` | 0 |
 | `missing` | 0 |
@@ -22,11 +22,11 @@ For overlay candidates, the matching base image is audited when present so offic
 | batch | pass | review | fail | missing |
 | --- | ---: | ---: | ---: | ---: |
 | `ponchi-batch-001` | 20 | 0 | 0 | 0 |
-| `ponchi-batch-002` | 18 | 0 | 0 | 0 |
+| `ponchi-batch-002` | 19 | 0 | 0 | 0 |
 | `ponchi-batch-003` | 19 | 0 | 0 | 0 |
 | `ponchi-batch-004` | 19 | 0 | 0 | 0 |
 | `ponchi-batch-005` | 20 | 0 | 0 | 0 |
-| `ponchi-batch-006` | 19 | 0 | 0 | 0 |
+| `ponchi-batch-006` | 20 | 0 | 0 | 0 |
 | `ponchi-batch-007` | 20 | 0 | 0 | 0 |
 | `ponchi-batch-008` | 20 | 0 | 0 | 0 |
 | `ponchi-batch-009` | 20 | 0 | 0 | 0 |

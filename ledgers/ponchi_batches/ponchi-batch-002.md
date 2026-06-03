@@ -20,7 +20,7 @@
 | 7 | `B-16` | Microsoft 365 Copilot | `overlay_audit` | `official_logo_applied` | official Copilot family icon from copilot.microsoft.com applied as review-pending overlay; dedicated Microsoft 365 Copilot lockup not confirmed | `not_reviewed` |
 | 8 | `B-17` | Edge Copilot | `overlay_audit` | `official_logo_applied` | official Copilot family icon from copilot.microsoft.com applied as review-pending overlay; Edge-specific Copilot lockup not confirmed | `not_reviewed` |
 | 9 | `B-18` | Aqua Voice | `overlay_audit` | `official_logo_applied` | official Aqua Voice favicon from official homepage applied as review-pending icon overlay; standalone lockup not confirmed | `not_reviewed` |
-| 10 | `B-19` | Claude Cowork | `overlay_wait` | `official_logo_source_review_required` | do not final; import/confirm official logo asset first | `not_reviewed` |
+| 10 | `B-19` | Claude Cowork | `color_audit` | `logo_avoid` | review confirmed logo-less Claude collaboration base candidate before final promotion; do not apply generic Claude or Anthropic logo | `not_reviewed` |
 | 11 | `B-20` | Vercel | `overlay_audit` | `official_logo_applied` | review existing official overlay before final promotion | `accept_overlay` |
 | 12 | `B-21` | Netlify | `overlay_audit` | `official_logo_applied` | review existing official overlay before final promotion | `accept_overlay` |
 | 13 | `B-22` | Cloudflare | `overlay_audit` | `official_logo_applied` | review existing official overlay before final promotion | `accept_overlay` |

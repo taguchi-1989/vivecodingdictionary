@@ -358,16 +358,19 @@ substitutes.
 - Official assets checked:
   - `https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/favicon_1/favicon.ico`
 - Local source page: `assets/logos/seedance/seedance-bytedance-page.html`
+  and `assets/logos/seedance/seedance-official-page-2026-06-03.html`
 - Relevant local assets:
   - `assets/logos/seedance/bytedance-seed-favicon.ico`
   - `assets/logos/seedance/bytedance-seed-favicon.preview.png`
-- Local status: the official Seedance page was accessible and saved, but no
-  Seedance-specific logo or lockup was confirmed in the fetched page. The only
-  discovered official asset was a small shared ByteDance Seed site favicon.
+- Local status: the official Seedance page was accessible and saved. The page
+  confirms the Seedance page/title and contains shared site mark/favicon
+  material, but no distinct Seedance-specific product logo or lockup was
+  confirmed in the fetched page. The prior small shared ByteDance Seed favicon
+  is not sufficient as a Seedance product logo.
 - Working rule:
-  - Keep D-56 in `official_logo_source_review_required` / `overlay_wait`.
-  - Do not apply the shared favicon as a Seedance product logo unless a later
-    review explicitly accepts it as a review-pending site-icon fallback.
+  - D-56 is now a confirmed logo-less `logo_avoid` / `color_audit` candidate.
+  - Use the palette-normalized generated base as the review-pending candidate;
+    do not apply the shared favicon as a Seedance product logo.
   - Do not substitute ByteDance, Doubao, Jimeng, fal.ai, or Replicate branding
     for the Seedance model logo.
 
@@ -599,8 +602,9 @@ substitutes.
 - arXiv local asset:
   - `assets/logos/arxiv/arxiv-logo-one-color-white.svg`
 - TSMC source checked: `https://www.tsmc.com/english`
-- TSMC source status: official site returned 403 in the shell environment
-  during this pass, so no local official asset was imported.
+- TSMC source status: the official site returned a Cloudflare JavaScript /
+  cookie challenge in the shell environment during the 2026-06-03 pass, so no
+  official TSMC logo asset was imported.
 - Working rule:
   - Use NVIDIA's official horizontal logo from its logo/brand usage page.
   - Use Excalidraw's official repository favicon as the product mark; do not
@@ -608,7 +612,7 @@ substitutes.
   - Use arXiv's official white logo unchanged, placed on a plain dark
     composition plate for visibility.
   - Keep TSMC in `overlay_wait` until an official source can be accessed and
-    recorded.
+    recorded; do not use third-party logo mirrors or redraw the TSMC wordmark.
 
 ## Amazon Bedrock / Figma / Reddit / Canva
 
@@ -726,9 +730,9 @@ as having a recognizable logo somewhere on the web.
     same official Copilot-family icon for B-16 Microsoft 365 Copilot and B-17
     Edge Copilot as review-pending overlays because dedicated product lockups
     were not confirmed locally. Keep C-8 Microsoft AI in
-    `official_logo_source_review_required`; the `microsoft.ai` favicon is not
-    enough by itself to identify a Microsoft AI organization lockup for final
-    use.
+    `official_logo_source_review_required`; the saved official Microsoft AI
+    page confirms the Microsoft AI page title and UHF text brand link, but no
+    dedicated Microsoft AI logo image or organization lockup was confirmed.
 - Google Cloud / Vertex AI:
   - Sources checked:
     - `https://about.google/brand-resource-center/`
@@ -741,9 +745,16 @@ as having a recognizable logo somewhere on the web.
     Vertex AI product icon for B-27 as a review-pending official overlay.
 - AWS:
   - Source checked: `https://aws.amazon.com/trademark-guidelines/`
+  - Additional source checked: `https://aws.amazon.com/architecture/icons/`
+  - Local source pages:
+    - `assets/logos/aws/brand-review/aws-trademark-guidelines.html`
+    - `assets/logos/aws/brand-review/aws-architecture-icons-page.html`
   - Source status: AWS trademark guidance covers AWS marks and AWS logos. The
     local AWS Architecture Icons package is useful for architecture diagrams but
     is not the same as a primary AWS brand lockup for B-23.
+    The official architecture icons page confirms AWS-approved diagram icons,
+    not a general permission to use the AWS Smile Logo as a primary logo
+    overlay for this dictionary image.
   - Working decision: keep B-23 in `official_logo_source_review_required`.
 - Claude Cowork:
   - Sources checked:
@@ -751,8 +762,10 @@ as having a recognizable logo somewhere on the web.
     - `https://claude.com/pricing/team`
   - Source status: official sources use Claude Team / Team plan language. A
     distinct official `Claude Cowork` product logo has not been confirmed.
-  - Working decision: keep B-19 in `official_logo_source_review_required`; do
-    not apply the generic Claude logo until the entry naming decision is made.
+  - Working decision: move B-19 to confirmed logo-less `logo_avoid` /
+    `color_audit` and stage the generated base as a review-pending candidate.
+    Do not apply a generic Claude or Anthropic logo unless the entry is renamed
+    and the brand decision is reopened.
 - Aqua Voice:
   - Source checked: `https://aquavoice.com/`
   - Official assets checked:

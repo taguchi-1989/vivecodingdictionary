@@ -39,8 +39,8 @@ Authoritative sources:
 
 | stage | count |
 | --- | ---: |
-| `color_audit` | 212 |
-| `overlay_wait` | 5 |
+| `color_audit` | 214 |
+| `overlay_wait` | 3 |
 | `overlay_audit` | 133 |
 
 ## Latest 2:1 Base Progress
@@ -48,11 +48,11 @@ Authoritative sources:
 | scope | generated bases | base audit pass | note |
 | --- | ---: | ---: | --- |
 | `ponchi-batch-001` | 20 / 20 | 20 / 20 | base complete; 11 entries are `logo_avoid`, 9 overlays in `overlay_audit`, 0 remain `overlay_wait` |
-| `ponchi-batch-002` | 20 / 20 | 20 / 20 | base complete; 18 overlays in `overlay_audit`, 2 entries remain `overlay_wait` |
+| `ponchi-batch-002` | 20 / 20 | 20 / 20 | base complete; 18 overlays in `overlay_audit`, 1 entry remains `overlay_wait`, B-19 is confirmed logo-less in `color_audit` |
 | `ponchi-batch-003` | 20 / 20 | 20 / 20 | base complete; 19 overlays in `overlay_audit`, 1 entry remains `overlay_wait` |
 | `ponchi-batch-004` | 20 / 20 | 20 / 20 | base complete; 8 overlays in `overlay_audit`, 1 entry remains `overlay_wait`, 11 are `logo_avoid` |
 | `ponchi-batch-005` | 20 / 20 | 20 / 20 | base complete; 20 overlays in `overlay_audit`, 0 remain `overlay_wait` |
-| `ponchi-batch-006` | 20 / 20 | 20 / 20 | base complete; 17 overlays in `overlay_audit`, 1 entry remains `overlay_wait`, 2 are `logo_avoid` |
+| `ponchi-batch-006` | 20 / 20 | 20 / 20 | base complete; 17 overlays in `overlay_audit`, 0 remain `overlay_wait`, 3 are `logo_avoid`; D-56 is confirmed logo-less after Seedance source review |
 | Wave 002 | 60 / 60 | 60 / 60 | Batches 004-006 base complete; official review/overlay remains |
 | `ponchi-batch-007` | 20 / 20 | 20 / 20 | base complete; 20 entries are `logo_avoid` |
 | `ponchi-batch-008` | 20 / 20 | 20 / 20 | base complete; 14 overlays in `overlay_audit`, 6 are `logo_avoid`, 0 remain `overlay_wait` |
@@ -89,9 +89,9 @@ Authoritative sources:
 | metric | count |
 | --- | ---: |
 | official logo overlays in `overlay_audit` | 133 |
-| non-brand base candidates in `color_audit` | 212 |
-| review-pending final candidates staged | 345 |
-| remaining `overlay_wait` rows | 5 |
+| non-brand base candidates in `color_audit` | 214 |
+| review-pending final candidates staged | 347 |
+| remaining `overlay_wait` rows | 3 |
 | remaining `official_logo_source_available_needs_import` rows | 0 |
 | remaining `blocked_brand_asset` rows | 0 |
 
@@ -109,7 +109,7 @@ Latest audit command:
 
 | color gate status | count |
 | --- | ---: |
-| `color_audit_pass` | 345 |
+| `color_audit_pass` | 347 |
 | `color_audit_review` | 0 |
 | `color_audit_fail` | 0 |
 
@@ -120,8 +120,8 @@ Current color-gate artifacts:
 - `docs/ponchi_color_audit_summary.md`
 - `docs/ponchi_batch_audits/ponchi-color-audit-contact-sheet.png`
 
-All 345 staged final candidates now pass the mechanical color gate. This
-includes 133 official-overlay candidates and 212 non-brand base candidates.
+All 347 staged final candidates now pass the mechanical color gate. This
+includes 133 official-overlay candidates and 214 non-brand base candidates.
 The non-brand candidates were normalized to the strict body palette after an
 intermediate audit found 137 failures and 47 review rows. Batch 001 service
 candidates were rebuilt with the strict body palette. D-51 Imagen and D-60
@@ -132,14 +132,18 @@ promotion. B-6 Windsurf was unblocked after confirming the official Windsurf
 brand page and applying the official black wordmark as a deterministic overlay.
 F-85 SuperClaude Framework was moved to the non-brand `color_audit` lane after
 official repository review found no SuperClaude-specific logo, icon, or lockup.
+B-19 Claude Cowork and D-56 Seedance were also moved to the non-brand
+`color_audit` lane after official source review found no distinct product
+logo suitable for deterministic overlay; D-56's base was palette-normalized
+before restaging.
 
 Latest overlay pass:
 
 - `ponchi-batch-001`: B-1 Gemini, B-3 ChatGPT, B-6 Windsurf, and B-8 Codex deterministic official overlays staged as review-pending candidates. B-6 uses the official Windsurf black wordmark from `https://windsurf.com/brand`; the base was palette-normalized, and the overlay remains visual-review required because density was accepted with a warning for the spacious logo composition.
-- `ponchi-batch-002`: B-10 Devin, B-14 Genspark, B-15 Microsoft Copilot, B-16 Microsoft 365 Copilot, B-17 Edge Copilot, B-18 Aqua Voice, B-24 Google Cloud, B-25 Azure, B-26 Azure OpenAI, and B-27 Vertex AI deterministic official overlays staged as review-pending candidates. B-15 uses the official Copilot icon extracted from `copilot.microsoft.com`; B-16 and B-17 use the same official Copilot-family icon because dedicated Microsoft 365 Copilot / Edge Copilot lockups were not confirmed locally. These three remain product-logo review-pending before final promotion. B-18 uses the official Aqua Voice favicon from the official homepage; a standalone Aqua Voice lockup was not confirmed.
+- `ponchi-batch-002`: B-10 Devin, B-14 Genspark, B-15 Microsoft Copilot, B-16 Microsoft 365 Copilot, B-17 Edge Copilot, B-18 Aqua Voice, B-24 Google Cloud, B-25 Azure, B-26 Azure OpenAI, and B-27 Vertex AI deterministic official overlays staged as review-pending candidates. B-15 uses the official Copilot icon extracted from `copilot.microsoft.com`; B-16 and B-17 use the same official Copilot-family icon because dedicated Microsoft 365 Copilot / Edge Copilot lockups were not confirmed locally. These three remain product-logo review-pending before final promotion. B-18 uses the official Aqua Voice favicon from the official homepage; a standalone Aqua Voice lockup was not confirmed. B-19 Claude Cowork is staged as a logo-less base candidate because official sources use Claude Team / Team plan language and no distinct `Claude Cowork` product logo was confirmed; do not apply a generic Claude or Anthropic logo.
 - `ponchi-batch-003`: B-30, B-31, B-32, B-33, B-40, B-41, B-50, B-51, B-52, B-60, B-61, C-1, C-2, C-3, C-4, C-5, C-6, C-7, and C-9 deterministic official overlays staged as review-pending candidates. B-33 Canva uses the official Canva type logo from Canva's developer brand package. B-61 uses the official ACE-Step logo from the official GitHub repo and preserves the black-square artwork unchanged. C-4 Meta AI uses a Chrome-rendered PNG from the official Meta AI SVG because ImageMagick rendered that SVG blank/white.
 - `ponchi-batch-004`: C-10 Moonshot AI, C-11 Z.ai, C-13 Groq, C-14 AMD, C-80 AI大学, C-81 にゃんた, C-82 まさお, and C-83 AI の羅針盤 deterministic official overlays staged as review-pending candidates. C-80 - C-83 use official YouTube channel avatars as official icon overlays. C-83's source page displays `AI時代の羅針盤`, while the ledger title remains `AI の羅針盤`; keep that naming mismatch as a final-review note. C-10 still shows `review` in the Batch 004 overlay image audit because its clearspace ink is high; do not promote it without visual review.
-- `ponchi-batch-006`: D-42 Gemma, D-43 Qwen, D-44 Kimi, D-45 GLM, D-46 DeepSeek V3, D-47 DeepSeek R1, D-51 Imagen, D-53 Veo, D-54 Stable Diffusion, D-55 Nano Banana, D-57 Flow, D-58 Whisk, and D-70 Amical deterministic official overlays staged as review-pending candidates. D-45 uses the official Z.ai icon as a developer/organization overlay; a dedicated GLM product logo was not confirmed. D-54 uses the official Stability AI organization logo on an approved-blue plate; a dedicated Stable Diffusion product logo was not confirmed. D-55 uses the official Gemini sparkle as a Gemini-family overlay; a dedicated Nano Banana product logo was not confirmed. D-57 uses the official Google Flow favicon on an approved-blue plate; a standalone Flow lockup was not confirmed. D-58 uses the official Google Labs Whisk favicon; a standalone Whisk lockup was not confirmed. D-70 uses the official Amical GitHub/website app icon; its entry prose still conflicts with the official local-first dictation app source and needs final-review reconciliation.
+- `ponchi-batch-006`: D-42 Gemma, D-43 Qwen, D-44 Kimi, D-45 GLM, D-46 DeepSeek V3, D-47 DeepSeek R1, D-51 Imagen, D-53 Veo, D-54 Stable Diffusion, D-55 Nano Banana, D-57 Flow, D-58 Whisk, and D-70 Amical deterministic official overlays staged as review-pending candidates. D-45 uses the official Z.ai icon as a developer/organization overlay; a dedicated GLM product logo was not confirmed. D-54 uses the official Stability AI organization logo on an approved-blue plate; a dedicated Stable Diffusion product logo was not confirmed. D-55 uses the official Gemini sparkle as a Gemini-family overlay; a dedicated Nano Banana product logo was not confirmed. D-56 Seedance is staged as a logo-less, palette-normalized base candidate because the official Seedance page did not confirm a distinct Seedance product logo or lockup. D-57 uses the official Google Flow favicon on an approved-blue plate; a standalone Flow lockup was not confirmed. D-58 uses the official Google Labs Whisk favicon; a standalone Whisk lockup was not confirmed. D-70 uses the official Amical GitHub/website app icon; its entry prose still conflicts with the official local-first dictation app source and needs final-review reconciliation.
 - `ponchi-batch-005`: D-1 - D-4, D-10 - D-14, D-20 - D-26, D-30, D-35, and D-41 deterministic official overlays staged as review-pending candidates.
 - `ponchi-batch-005`: D-40 Llama 系 deterministic official Meta organization icon overlay staged as a review-pending candidate from the official Llama site source.
 - `ponchi-batch-006`: D-50, D-52, D-60, and D-71 deterministic official overlays staged as review-pending candidates.

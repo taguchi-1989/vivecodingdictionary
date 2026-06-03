@@ -23,7 +23,7 @@
 | 10 | `D-53` | Veo | `overlay_audit` | `official_logo_applied` | review official Google DeepMind icon overlay before final promotion | `not_reviewed` |
 | 11 | `D-54` | Stable Diffusion | `overlay_audit` | `official_logo_applied` | official Stability AI header logo applied on approved-blue plate as review-pending organization overlay; dedicated Stable Diffusion product logo not confirmed | `not_reviewed` |
 | 12 | `D-55` | Nano Banana | `overlay_audit` | `official_logo_applied` | official Gemini sparkle applied as review-pending Gemini-family overlay; dedicated Nano Banana product logo not confirmed | `not_reviewed` |
-| 13 | `D-56` | Seedance | `overlay_wait` | `official_logo_source_review_required` | do not final; import/confirm official logo asset first | `not_reviewed` |
+| 13 | `D-56` | Seedance | `color_audit` | `logo_avoid` | review confirmed logo-less Seedance base candidate before final promotion; do not substitute ByteDance, Doubao, Jimeng, fal.ai, or Replicate branding | `not_reviewed` |
 | 14 | `D-57` | Flow | `overlay_audit` | `official_logo_applied` | official Google Flow favicon applied on approved-blue plate as review-pending icon overlay; standalone Flow lockup not confirmed | `not_reviewed` |
 | 15 | `D-58` | Whisk | `overlay_audit` | `official_logo_applied` | official Google Labs Whisk favicon applied as review-pending icon overlay; standalone Whisk lockup not confirmed | `not_reviewed` |
 | 16 | `D-60` | AlphaGo | `overlay_audit` | `official_logo_applied` | review official-logo overlay candidate | `not_reviewed` |
