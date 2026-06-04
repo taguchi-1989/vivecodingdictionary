@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import csv
 import html
+import os
 from pathlib import Path
 
 
@@ -14,13 +15,7 @@ def rel_from_doc(path: str, docs_dir: Path) -> str:
     candidate = Path(path)
     if not candidate.is_absolute():
         candidate = Path.cwd() / candidate
-    try:
-        return candidate.resolve().relative_to(docs_dir.resolve()).as_posix()
-    except ValueError:
-        try:
-            return candidate.resolve().relative_to(Path.cwd().resolve()).as_posix()
-        except ValueError:
-            return candidate.resolve().as_posix()
+    return Path(os.path.relpath(candidate.resolve(), docs_dir.resolve())).as_posix()
 
 
 def status_class(value: str) -> str:
