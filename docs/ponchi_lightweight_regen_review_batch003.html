@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ponchi Lightweight Regen Review</title>
+<style>
+:root{color-scheme:light;--blue:#2563eb;--ink:#111827;--muted:#6b7280;--line:#dbe3ef;--bg:#f7f9fc;--bad:#b91c1c;--warn:#b45309;--ok:#166534;}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,'Yu Gothic',Meiryo,sans-serif;}
+header{position:sticky;top:0;z-index:2;background:white;border-bottom:1px solid var(--line);padding:14px 18px;}
+h1{font-size:20px;margin:0 0 8px;letter-spacing:0;}
+.meta{display:flex;gap:8px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+.pill{border:1px solid var(--line);border-radius:999px;background:#fff;padding:4px 8px;}
+main{padding:18px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:14px;}
+.card{background:white;border:1px solid var(--line);border-radius:8px;overflow:hidden;box-shadow:0 1px 2px rgba(15,23,42,.04);}
+.thumb{aspect-ratio:2/1;background:#eef2f7;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line);}
+.thumb img{width:100%;height:100%;object-fit:contain;display:block;}
+.empty{color:var(--muted);font-size:13px;}
+.body{padding:10px 12px 12px;}
+.title{font-weight:700;font-size:14px;margin-bottom:8px;display:flex;justify-content:space-between;gap:8px;}
+.row{font-size:12px;color:var(--muted);margin:4px 0;overflow-wrap:anywhere;}
+.badge{font-size:11px;border-radius:999px;padding:3px 7px;border:1px solid var(--line);white-space:nowrap;}
+.badge.pass{color:var(--ok);background:#ecfdf3;border-color:#bbf7d0;}
+.badge.review{color:var(--warn);background:#fff7ed;border-color:#fed7aa;}
+.badge.fail{color:var(--bad);background:#fef2f2;border-color:#fecaca;}
+.badge.pending{color:var(--muted);background:#f8fafc;}
+a{color:var(--blue);text-decoration:none;}
+a:hover{text-decoration:underline;}
+</style>
+</head>
+<body>
+<header>
+<h1>Ponchi Lightweight Regen Review - lightweight-regen-003</h1>
+<div class="meta">
+<span class="pill">items: 20</span>
+<span class="pill">image_pass_color_fail: 4</span>
+<span class="pill">image_pass_color_review: 16</span>
+</div>
+</header>
+<main>
+<div class="grid">
+<article class="card">
+<div class="thumb"><img src="assets/ponchi/experiments/batches/lightweight-regen-003/J-77_base_1254x627.png" alt="J-77"></div>
+<div class="body">
+<div class="title"><span>J-77 GPU (概念)</span><span class="badge review">image_pass_color_review</span></div>
+<div class="row">batch: lightweight-regen-003 / item 1</div>
+<div class="row">regen: lightweight_quality_regen</div>
+<div class="row">decision: replace_candidate_visual_review</div>
+<div class="row">logo: not_needed / not_required</div>
+<div class="row"><a href="assets/ponchi/pipeline_prompts/lightweight-regen-003/J-77.md">prompt</a></div>
+<div class="row"><a href="assets/ponchi/experiments/batches/lightweight-regen-003/J-77_base_1254x627.png">candidate file</a></div>
+</div>
+</article>
+<article class="card">
+<div class="thumb"><img src="assets/ponchi/experiments/batches/lightweight-regen-003/A-8_base_1254x627.png" alt="A-8"></div>
+<div class="body">
+<div class="title"><span>A-8 色・記号の凡例</span><span class="badge review">image_pass_color_review</span></div>
+<div class="row">batch: lightweight-regen-003 / item 2</div>
+<div class="row">regen: lightweight_quality_regen</div>
+<div class="row">decision: replace_candidate_visual_review</div>
+<div class="row">logo: not_needed / not_required</div>
+<div class="row"><a href="assets/ponchi/pipeline_prompts/lightweight-regen-003/A-8.md">prompt</a></div>
+<div class="row"><a href="assets/ponchi/experiments/batches/lightweight-regen-003/A-8_base_1254x627.png">candidate file</a></div>
+</div>
+</article>
+<article class="card">
+<div class="thumb"><img src="assets/ponchi/experiments/batches/lightweight-regen-003/J-55_base_1254x627.png" alt="J-55"></div>
+<div class="body">
+<div class="title"><span>J-55 個人情報保護法</span><span class="badge fail">image_pass_color_fail</span></div>
+<div class="row">batch: lightweight-regen-003 / item 3</div>
+<div class="row">regen: lightweight_quality_regen</div>
+<div class="row">decision: needs_color_fix_before_replace</div>
+<div class="row">logo: not_needed / not_required</div>
+<div class="row"><a href="assets/ponchi/pipeline_prompts/lightweight-regen-003/J-55.md">prompt</a></div>
+<div class="row"><a href="assets/ponchi/experiments/batches/lightweight-regen-003/J-55_base_1254x627.png">candidate file</a></div>
+</div>
+</article>
+<article class="card">
+<div class="thumb"><img src="assets/ponchi/experiments/batches/lightweight-regen-003/J-79_base_1254x627.png" alt="J-79"></div>
+<div class="body">
+<div class="title"><span>J-79 SSD</span><span class="badge review">image_pass_color_review</span></div>
+<div class="row">batch: lightweight-regen-003 / item 4</div>
+<div class="row">regen: lightweight_quality_regen</div>
+<div class="row">decision: replace_candidate_visual_review</div>
+<div class="row">logo: not_needed / not_required</div>
+<div class="row"><a href="assets/ponchi/pipeline_prompts/lightweight-regen-003/J-79.md">prompt</a></div>
+<div class="row"><a href="assets/ponchi/experiments/batches/lightweight-regen-003/J-79_base_1254x627.png">candidate file</a></div>
+</div>
+</article>
+<article class="card">
+<div class="thumb"><img src="assets/ponchi/experiments/batches/lightweight-regen-003/J-31_base_1254x627.png" alt="J-31"></div>
+<div class="body">
+<div class="title"><span>J-31 第 5 世代コンピュータ</span><span class="badge fail">image_pass_color_fail</span></div>
+<div class="row">batch: lightweight-regen-003 / item 5</div>
+<div class="row">regen: lightweight_quality_regen</div>
+<div class="row">decision: needs_color_fix_before_replace</div>
+<div class="row">logo: not_needed / not_required</div>
+<div class="row"><a href="assets/ponchi/pipeline_prompts/lightweight-regen-003/J-31.md">prompt</a></div>
+<div class="row"><a href="assets/ponchi/experiments/batches/lightweight-regen-003/J-31_base_1254x627.png">candidate file</a></div>
+</div>
+</article>
+<article class="card">
+<div class="thumb"><img src="assets/ponchi/experiments/batches/lightweight-regen-003/I-30_base_1254x627.png" alt="I-30"></div>
+<div class="body">
+<div class="title"><span>I-30 Notion MCP</span><span class="badge review">image_pass_color_review</span></div>
+<div class="row">batch: lightweight-regen-003 / item 6</div>
+<div class="row">regen: lightweight_quality_regen</div>
+<div class="row">decision: replace_candidate_visual_review</div>
+<div class="row">logo: not_needed / not_required</div>
+<div class="row"><a href="assets/ponchi/pipeline_prompts/lightweight-regen-003/I-30.md">prompt</a></div>
+<div class="row"><a href="assets/ponchi/experiments/batches/lightweight-regen-003/I-30_base_1254x627.png">candidate file</a></div>
+</div>
+</article>
+<article class="card">
+<div class="thumb"><img src="assets/ponchi/experiments/batches/lightweight-regen-003/J-51_base_1254x627.png" alt="J-51"></div>
+<div class="body">
+<div class="title"><span>J-51 Hallucination</span><span class="badge review">image_pass_color_review</span></div>
+<div class="row">batch: lightweight-regen-003 / item 7</div>
+<div class="row">regen: lightweight_quality_regen</div>
+<div class="row">decision: replace_candidate_visual_review</div>
+<div class="row">logo: not_needed / not_required</div>
+<div class="row"><a href="assets/ponchi/pipeline_prompts/lightweight-regen-003/J-51.md">prompt</a></div>
+<div class="row"><a href="assets/ponchi/experiments/batches/lightweight-regen-003/J-51_base_1254x627.png">candidate file</a></div>
+</div>
+</article>
+<article class="card">
+<div class="thumb"><img src="assets/ponchi/experiments/batches/lightweight-regen-003/A-11_base_1254x627.png" alt="A-11"></div>
+<div class="body">
+<div class="title"><span>A-11 略称表記</span><span class="badge review">image_pass_color_review</span></div>
+<div class="row">batch: lightweight-regen-003 / item 8</div>
+<div class="row">regen: lightweight_quality_regen</div>
+<div class="row">decision: replace_candidate_visual_review</div>
+<div class="row">logo: not_needed / not_required</div>
+<div class="row"><a href="assets/ponchi/pipeline_prompts/lightweight-regen-003/A-11.md">prompt</a></div>
+<div class="row"><a href="assets/ponchi/experiments/batches/lightweight-regen-003/A-11_base_1254x627.png">candidate file</a></div>
+</div>
+</article>
+<article class="card">
+<div class="thumb"><img src="assets/ponchi/experiments/batches/lightweight-regen-003/J-75_base_1254x627.png" alt="J-75"></div>
+<div class="body">
+<div class="title"><span>J-75 Tensor コア</span><span class="badge review">image_pass_color_review</span></div>
+<div class="row">batch: lightweight-regen-003 / item 9</div>
+<div class="row">regen: lightweight_quality_regen</div>
+<div class="row">decision: replace_candidate_visual_review</div>
+<div class="row">logo: not_needed / not_required</div>
+<div class="row"><a href="assets/ponchi/pipeline_prompts/lightweight-regen-003/J-75.md">prompt</a></div>
+<div class="row"><a href="assets/ponchi/experiments/batches/lightweight-regen-003/J-75_base_1254x627.png">candidate file</a></div>
+</div>
+</article>
+<article class="card">
+<div class="thumb"><img src="assets/ponchi/experiments/batches/lightweight-regen-003/J-76_base_1254x627.png" alt="J-76"></div>
+<div class="body">
+<div class="title"><span>J-76 CPU</span><span class="badge fail">image_pass_color_fail</span></div>
+<div class="row">batch: lightweight-regen-003 / item 10</div>
+<div class="row">regen: lightweight_quality_regen</div>
+<div class="row">decision: needs_color_fix_before_replace</div>
+<div class="row">logo: not_needed / not_required</div>
+<div class="row"><a href="assets/ponchi/pipeline_prompts/lightweight-regen-003/J-76.md">prompt</a></div>
+<div class="row"><a href="assets/ponchi/experiments/batches/lightweight-regen-003/J-76_base_1254x627.png">candidate file</a></div>
+</div>
+</article>
+<article class="card">
+<div class="thumb"><img src="assets/ponchi/experiments/batches/lightweight-regen-003/A-5_base_1254x627.png" alt="A-5"></div>
+<div class="body">
+<div class="title"><span>A-5 読者レベルの凡例</span><span class="badge review">image_pass_color_review</span></div>
+<div class="row">batch: lightweight-regen-003 / item 11</div>
+<div class="row">regen: lightweight_quality_regen</div>
+<div class="row">decision: replace_candidate_visual_review</div>
+<div class="row">logo: not_needed / not_required</div>
+<div class="row"><a href="assets/ponchi/pipeline_prompts/lightweight-regen-003/A-5.md">prompt</a></div>
+<div class="row"><a href="assets/ponchi/experiments/batches/lightweight-regen-003/A-5_base_1254x627.png">candidate file</a></div>
+</div>
+</article>
+<article class="card">
+<div class="thumb"><img src="assets/ponchi/experiments/batches/lightweight-regen-003/I-1_base_1254x627.png" alt="I-1"></div>
+<div class="body">
+<div class="title"><span>I-1 MCP</span><span class="badge review">image_pass_color_review</span></div>
+<div class="row">batch: lightweight-regen-003 / item 12</div>
+<div class="row">regen: lightweight_quality_regen</div>
+<div class="row">decision: replace_candidate_visual_review</div>
+<div class="row">logo: not_needed / not_required</div>
+<div class="row"><a href="assets/ponchi/pipeline_prompts/lightweight-regen-003/I-1.md">prompt</a></div>
+<div class="row"><a href="assets/ponchi/experiments/batches/lightweight-regen-003/I-1_base_1254x627.png">candidate file</a></div>
+</div>
+</article>
+<article class="card">
+<div class="thumb"><img src="assets/ponchi/experiments/batches/lightweight-regen-003/J-74_base_1254x627.png" alt="J-74"></div>
+<div class="body">
+<div class="title"><span>J-74 RTX シリーズ</span><span class="badge review">image_pass_color_review</span></div>
+<div class="row">batch: lightweight-regen-003 / item 13</div>
+<div class="row">regen: lightweight_quality_regen</div>
+<div class="row">decision: replace_candidate_visual_review</div>
+<div class="row">logo: not_needed / not_required</div>
+<div class="row"><a href="assets/ponchi/pipeline_prompts/lightweight-regen-003/J-74.md">prompt</a></div>
+<div class="row"><a href="assets/ponchi/experiments/batches/lightweight-regen-003/J-74_base_1254x627.png">candidate file</a></div>
+</div>
+</article>
+<article class="card">
+<div class="thumb"><img src="assets/ponchi/experiments/batches/lightweight-regen-003/J-18_base_1254x627.png" alt="J-18"></div>
+<div class="body">
+<div class="title"><span>J-18 MoE</span><span class="badge review">image_pass_color_review</span></div>
+<div class="row">batch: lightweight-regen-003 / item 14</div>
+<div class="row">regen: lightweight_quality_regen</div>
+<div class="row">decision: replace_candidate_visual_review</div>
+<div class="row">logo: not_needed / not_required</div>
+<div class="row"><a href="assets/ponchi/pipeline_prompts/lightweight-regen-003/J-18.md">prompt</a></div>
+<div class="row"><a href="assets/ponchi/experiments/batches/lightweight-regen-003/J-18_base_1254x627.png">candidate file</a></div>
+</div>
+</article>
+<article class="card">
+<div class="thumb"><img src="assets/ponchi/experiments/batches/lightweight-regen-003/J-71_base_1254x627.png" alt="J-71"></div>
+<div class="body">
+<div class="title"><span>J-71 RAM</span><span class="badge review">image_pass_color_review</span></div>
+<div class="row">batch: lightweight-regen-003 / item 15</div>
+<div class="row">regen: lightweight_quality_regen</div>
+<div class="row">decision: replace_candidate_visual_review</div>
+<div class="row">logo: not_needed / not_required</div>
+<div class="row"><a href="assets/ponchi/pipeline_prompts/lightweight-regen-003/J-71.md">prompt</a></div>
+<div class="row"><a href="assets/ponchi/experiments/batches/lightweight-regen-003/J-71_base_1254x627.png">candidate file</a></div>
+</div>
+</article>
+<article class="card">
+<div class="thumb"><img src="assets/ponchi/experiments/batches/lightweight-regen-003/A-3_base_1254x627.png" alt="A-3"></div>
+<div class="body">
+<div class="title"><span>A-3 図鑑の歩き方</span><span class="badge review">image_pass_color_review</span></div>
+<div class="row">batch: lightweight-regen-003 / item 16</div>
+<div class="row">regen: lightweight_quality_regen</div>
+<div class="row">decision: replace_candidate_visual_review</div>
+<div class="row">logo: not_needed / not_required</div>
+<div class="row"><a href="assets/ponchi/pipeline_prompts/lightweight-regen-003/A-3.md">prompt</a></div>
+<div class="row"><a href="assets/ponchi/experiments/batches/lightweight-regen-003/A-3_base_1254x627.png">candidate file</a></div>
+</div>
+</article>
+<article class="card">
+<div class="thumb"><img src="assets/ponchi/experiments/batches/lightweight-regen-003/I-20_base_1254x627.png" alt="I-20"></div>
+<div class="body">
+<div class="title"><span>I-20 Playwright MCP</span><span class="badge review">image_pass_color_review</span></div>
+<div class="row">batch: lightweight-regen-003 / item 17</div>
+<div class="row">regen: lightweight_quality_regen</div>
+<div class="row">decision: replace_candidate_visual_review</div>
+<div class="row">logo: not_needed / not_required</div>
+<div class="row"><a href="assets/ponchi/pipeline_prompts/lightweight-regen-003/I-20.md">prompt</a></div>
+<div class="row"><a href="assets/ponchi/experiments/batches/lightweight-regen-003/I-20_base_1254x627.png">candidate file</a></div>
+</div>
+</article>
+<article class="card">
+<div class="thumb"><img src="assets/ponchi/experiments/batches/lightweight-regen-003/A-6_base_1254x627.png" alt="A-6"></div>
+<div class="body">
+<div class="title"><span>A-6 評価日・時変情報の見方</span><span class="badge fail">image_pass_color_fail</span></div>
+<div class="row">batch: lightweight-regen-003 / item 18</div>
+<div class="row">regen: lightweight_quality_regen</div>
+<div class="row">decision: needs_color_fix_before_replace</div>
+<div class="row">logo: not_needed / not_required</div>
+<div class="row"><a href="assets/ponchi/pipeline_prompts/lightweight-regen-003/A-6.md">prompt</a></div>
+<div class="row"><a href="assets/ponchi/experiments/batches/lightweight-regen-003/A-6_base_1254x627.png">candidate file</a></div>
+</div>
+</article>
+<article class="card">
+<div class="thumb"><img src="assets/ponchi/experiments/batches/lightweight-regen-003/I-12_base_1254x627.png" alt="I-12"></div>
+<div class="body">
+<div class="title"><span>I-12 Git MCP</span><span class="badge review">image_pass_color_review</span></div>
+<div class="row">batch: lightweight-regen-003 / item 19</div>
+<div class="row">regen: lightweight_quality_regen</div>
+<div class="row">decision: replace_candidate_visual_review</div>
+<div class="row">logo: not_needed / not_required</div>
+<div class="row"><a href="assets/ponchi/pipeline_prompts/lightweight-regen-003/I-12.md">prompt</a></div>
+<div class="row"><a href="assets/ponchi/experiments/batches/lightweight-regen-003/I-12_base_1254x627.png">candidate file</a></div>
+</div>
+</article>
+<article class="card">
+<div class="thumb"><img src="assets/ponchi/experiments/batches/lightweight-regen-003/H-62_base_1254x627.png" alt="H-62"></div>
+<div class="body">
+<div class="title"><span>H-62 Anthropic 創業の流れ</span><span class="badge review">image_pass_color_review</span></div>
+<div class="row">batch: lightweight-regen-003 / item 20</div>
+<div class="row">regen: lightweight_quality_regen</div>
+<div class="row">decision: replace_candidate_visual_review</div>
+<div class="row">logo: not_needed / not_required</div>
+<div class="row"><a href="assets/ponchi/pipeline_prompts/lightweight-regen-003/H-62.md">prompt</a></div>
+<div class="row"><a href="assets/ponchi/experiments/batches/lightweight-regen-003/H-62_base_1254x627.png">candidate file</a></div>
+</div>
+</article>
+</div>
+</main>
+</body>
+</html>

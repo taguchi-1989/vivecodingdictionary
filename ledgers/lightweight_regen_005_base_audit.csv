@@ -1,0 +1,13 @@
+file,entry_id,size,size_ok,bbox_coverage,density_ok,clearspace_required,clearspace_ink_ratio,clearspace_ok,status
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\lightweight-regen-005\A-9_base_1254x627.png,A-9,1254x627,true,0.928,true,false,0.1069,true,pass
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\lightweight-regen-005\B-28_base_1254x627.png,B-28,1254x627,true,0.865,true,false,0.0897,true,pass
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\lightweight-regen-005\B-8_base_1254x627.png,B-8,1254x627,true,0.875,true,true,0.0530,false,review
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\lightweight-regen-005\D-51_base_1254x627.png,D-51,1254x627,true,0.874,true,false,0.1556,true,pass
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\lightweight-regen-005\D-60_base_1254x627.png,D-60,1254x627,true,0.914,true,false,0.1171,true,pass
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\lightweight-regen-005\J-11_base_1254x627.png,J-11,1254x627,true,0.898,true,false,0.1517,true,pass
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\lightweight-regen-005\J-14_base_1254x627.png,J-14,1254x627,true,0.924,true,false,0.0615,true,pass
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\lightweight-regen-005\J-17_base_1254x627.png,J-17,1254x627,true,0.862,true,false,0.0532,true,pass
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\lightweight-regen-005\J-20_base_1254x627.png,J-20,1254x627,true,0.915,true,false,0.1708,true,pass
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\lightweight-regen-005\J-40_base_1254x627.png,J-40,1254x627,true,0.884,true,false,0.1139,true,pass
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\lightweight-regen-005\J-43_base_1254x627.png,J-43,1254x627,true,0.885,true,false,0.0672,true,pass
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\lightweight-regen-005\J-78_base_1254x627.png,J-78,1254x627,true,0.864,true,false,0.2088,true,pass
