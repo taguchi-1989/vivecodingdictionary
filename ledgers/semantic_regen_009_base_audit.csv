@@ -1,0 +1,2 @@
+file,entry_id,size,size_ok,bbox_coverage,density_ok,clearspace_required,clearspace_ink_ratio,clearspace_ok,status
+assets\ponchi\experiments\batches\semantic-regen-009\B-19_base_1254x627.png,B-19,1254x627,true,0.854,true,false,0.0573,true,pass

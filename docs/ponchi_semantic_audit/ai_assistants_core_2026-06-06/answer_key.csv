@@ -1,0 +1,10 @@
+blind_image_id,entry_id,title,source_file,semantic_focus
+AI-Q001,B-15,Microsoft Copilot,assets/ponchi/final_candidates/semantic-regen-007/B-15_candidate.png,general Microsoft personal assistant/search/Windows tasks
+AI-Q002,B-16,Microsoft 365 Copilot,assets/ponchi/final_candidates/semantic-regen-007/B-16_candidate.png,"M365 work graph, documents, mail, calendar, meetings"
+AI-Q003,B-17,Edge Copilot,assets/ponchi/final_candidates/ponchi-batch-002/B-17_candidate.png,browser page plus sidebar web assistant
+AI-Q004,B-2,Claude,assets/ponchi/final_candidates/semantic-regen-003/B-2_candidate.png,long-document/artifact assistant in Anthropic/Claude context
+AI-Q005,B-19,Claude Cowork,assets/ponchi/final_candidates/semantic-regen-009/B-19_candidate.png,team workspace/project/connectors/artifacts collaboration
+AI-Q006,B-3,ChatGPT,assets/ponchi/final_candidates/semantic-regen-003/B-3_candidate.png,chat assistant with Custom GPT/API/tool ecosystem
+AI-Q007,B-1,Gemini,assets/ponchi/final_candidates/semantic-regen-003/B-1_candidate.png,Google multimodal assistant / model family map
+AI-Q008,B-14,Genspark,assets/ponchi/final_candidates/semantic-regen-003/B-14_candidate.png,multi-agent Sparkpage/report/slides/task creation
+AI-Q009,B-10,Devin,assets/ponchi/final_candidates/semantic-regen-003/B-10_candidate.png,autonomous software engineer issue-to-PR/review lifecycle

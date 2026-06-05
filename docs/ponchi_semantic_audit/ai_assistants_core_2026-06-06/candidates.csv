@@ -1,0 +1,10 @@
+entry_id,title,semantic_focus
+B-1,Gemini,Google multimodal assistant / model family map
+B-2,Claude,long-document/artifact assistant in Anthropic/Claude context
+B-3,ChatGPT,chat assistant with Custom GPT/API/tool ecosystem
+B-10,Devin,autonomous software engineer issue-to-PR/review lifecycle
+B-14,Genspark,multi-agent Sparkpage/report/slides/task creation
+B-15,Microsoft Copilot,general Microsoft personal assistant/search/Windows tasks
+B-16,Microsoft 365 Copilot,"M365 work graph, documents, mail, calendar, meetings"
+B-17,Edge Copilot,browser page plus sidebar web assistant
+B-19,Claude Cowork,team workspace/project/connectors/artifacts collaboration

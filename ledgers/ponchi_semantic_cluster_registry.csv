@@ -1,5 +1,5 @@
 cluster_id,chapter,cluster_label,entry_ids,primary_confusers,pass_mode,visual_axis,status,next_action
-B-ai-assistants-core,B,AI assistants core,B-1;B-2;B-3;B-10;B-14;B-15;B-16;B-17;B-19,B-1;B-2;B-3;B-15;B-16;B-17,exact_entry,service use case;app surface;logo dependency,active,continue cluster blind checks after current candidates
+B-ai-assistants-core,B,AI assistants core,B-1;B-2;B-3;B-10;B-14;B-15;B-16;B-17;B-19,B-1;B-2;B-3;B-15;B-16;B-17;B-19,exact_entry,service use case;app surface;logo dependency,reviewed,B-19 recomposed in semantic-regen-009; B-15/B-16 pulled from U002; core assistant sheet refreshed
 B-coding-assistants,B,Coding assistants,B-4;B-5;B-6;B-7;B-8;D-35,B-4;B-5;B-6;B-7;B-8;D-35,exact_entry,developer workflow;editor vs CLI vs repo PR vs agent cascade,reviewed,B-4/B-7 recomposed in semantic-regen-008; B-5/B-6 keep; B-8/D-35 held for broader retest
 B-ms-copilot,B,Microsoft Copilot family,B-15;B-16;B-17,B-15;B-16;B-17,exact_entry,general assistant vs M365 work graph vs browser sidebar,reviewed,B-15/B-16 recomposed in semantic-regen-007; B-17 held as browser-sidebar keep
 B-pricing,B,Pricing pages,B-50;B-51;B-52,B-1;B-2;B-3;B-27,exact_entry,pricing ladder;tiers;usage meters,active,B-52 improved in semantic-regen-001
