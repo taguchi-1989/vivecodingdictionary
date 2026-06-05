@@ -1,0 +1,7 @@
+entry_id,title,semantic_focus
+B-4,Cursor,"AI editor with project context, chat side panel, inline edit, file tree, preview"
+B-5,GitHub Copilot,"GitHub repo, PR review, ghost completion"
+B-6,Windsurf,"agentic cascade across files, tests, browser, and multi-file flow"
+B-7,Claude Code,terminal/CLI coding assistant loop with repo edits and command execution
+B-8,Codex,"agentic task execution, patch, test, result loop in OpenAI context"
+D-35,Cursor Composer,"Cursor multi-file composer planning, diff, and apply flow"

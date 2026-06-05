@@ -1,0 +1,14 @@
+{
+  "entry_id": "B-4",
+  "official_asset": "assets/logos/cursor/cursor-brand-assets/General Logos/Lockup Horizontal/PNG/LOCKUP_HORIZONTAL_2D_LIGHT.png",
+  "base_file": "assets/ponchi/experiments/batches/semantic-regen-008/B-4_base_1254x627.png",
+  "output_file": "assets/ponchi/experiments/batches/semantic-regen-008/B-4_overlay_1254x627.png",
+  "placement": {
+    "x": 950,
+    "y": 38,
+    "width": 270,
+    "height": 64
+  },
+  "clearspace": "rightmost 40% of top 25%",
+  "method": "deterministic PIL alpha composite after left-biased scaling and clearspace cleanup"
+}

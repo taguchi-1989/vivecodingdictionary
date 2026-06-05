@@ -1,0 +1,3 @@
+entry_id,title,source_file,source_type,candidate_png,candidate_webp,candidate_status
+B-4,Cursor,assets\ponchi\experiments\batches\semantic-regen-008\B-4_overlay_1254x627.png,review_pending_overlay,B-4_candidate.png,B-4_candidate.webp,review_pending
+B-7,Claude Code,assets\ponchi\experiments\batches\semantic-regen-008\B-7_overlay_1254x627.png,review_pending_overlay,B-7_candidate.png,B-7_candidate.webp,review_pending

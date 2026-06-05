@@ -1,0 +1,3 @@
+file,entry_id,size,size_ok,bbox_coverage,density_ok,clearspace_required,clearspace_ink_ratio,clearspace_ok,status
+assets\ponchi\experiments\batches\semantic-regen-008\B-4_overlay_1254x627.png,B-4,1254x627,true,0.831,true,true,0.0735,true,pass
+assets\ponchi\experiments\batches\semantic-regen-008\B-7_overlay_1254x627.png,B-7,1254x627,true,0.794,true,true,0.0684,true,pass

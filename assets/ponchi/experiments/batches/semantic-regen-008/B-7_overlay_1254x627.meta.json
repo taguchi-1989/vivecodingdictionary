@@ -1,0 +1,14 @@
+{
+  "entry_id": "B-7",
+  "official_asset": "assets/logos/anthropic/anthropic-media-resources/Anthropic media resources/Anthropic logos/Claude logos/2 Claude Code logo/PNG/Claude Code logo - Slate.png",
+  "base_file": "assets/ponchi/experiments/batches/semantic-regen-008/B-7_base_1254x627.png",
+  "output_file": "assets/ponchi/experiments/batches/semantic-regen-008/B-7_overlay_1254x627.png",
+  "placement": {
+    "x": 850,
+    "y": 48,
+    "width": 360,
+    "height": 49
+  },
+  "clearspace": "rightmost 40% of top 25%",
+  "method": "deterministic PIL alpha composite after left-biased scaling and clearspace cleanup"
+}

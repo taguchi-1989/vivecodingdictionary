@@ -1,0 +1,7 @@
+blind_image_id,entry_id,title,source_file,semantic_focus
+CA-Q001,B-4,Cursor,assets/ponchi/final_candidates/semantic-regen-008/B-4_candidate.png,"AI editor with project context, chat side panel, inline edit, file tree, preview"
+CA-Q002,D-35,Cursor Composer,assets/ponchi/final_candidates/semantic-regen-004/D-35_candidate.png,"Cursor multi-file composer planning, diff, and apply flow"
+CA-Q003,B-7,Claude Code,assets/ponchi/final_candidates/semantic-regen-008/B-7_candidate.png,terminal/CLI coding assistant loop with repo edits and command execution
+CA-Q004,B-8,Codex,assets/ponchi/final_candidates/ponchi-batch-001/B-8_candidate.png,"agentic task execution, patch, test, result loop in OpenAI context"
+CA-Q005,B-5,GitHub Copilot,assets/ponchi/final_candidates/semantic-regen-001/B-5_candidate.png,"GitHub repo, PR review, ghost completion"
+CA-Q006,B-6,Windsurf,assets/ponchi/final_candidates/semantic-regen-001/B-6_candidate.png,"agentic cascade across files, tests, browser, and multi-file flow"

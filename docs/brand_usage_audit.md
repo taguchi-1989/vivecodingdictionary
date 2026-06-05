@@ -1165,6 +1165,12 @@ final candidates:
   saved under `assets/logos/microsoft-copilot/`. The generated bodies were kept
   logo-free and the official icon was composited deterministically after
   clearspace cleanup.
+- `semantic-regen-008`: B-4 Cursor uses the official Cursor horizontal lockup
+  `assets/logos/cursor/cursor-brand-assets/General Logos/Lockup Horizontal/PNG/LOCKUP_HORIZONTAL_2D_LIGHT.png`.
+  B-7 Claude Code uses the official Claude Code Slate logo
+  `assets/logos/anthropic/anthropic-media-resources/Anthropic media resources/Anthropic logos/Claude logos/2 Claude Code logo/PNG/Claude Code logo - Slate.png`.
+  Both generated bodies were kept logo-free and the official assets were
+  composited deterministically after clearspace cleanup.
 
 All of these overlays were generated deterministically from local official
 assets, primarily by `scripts/composite_official_logo.py`; AMD uses an

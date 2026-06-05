@@ -2,7 +2,7 @@ unit_id,cluster_id,chapter,entry_ids,pass_mode,priority,status,next_action,commi
 U000,semantic-foundation,ALL,registry;rules;migration-plan,mixed,P0,completed,foundation and migration plan committed,committed
 U001,D-openai-model-series,D,D-20;D-21;D-22;D-23;D-24;D-25;D-26,mixed,P0,completed,D-25 recomposed; D-20/D-21/D-23 caption_required,committed
 U002,B-ms-copilot,B,B-15;B-16;B-17,exact_entry,P0,completed,B-15/B-16 recomposed and staged in semantic-regen-007; B-17 held as existing browser-sidebar keep,committed
-U003,B-coding-assistants,B,B-4;B-5;B-6;B-7;B-8;D-35,exact_entry,P0,ready,recompose B-4 and B-7; focus retest B-8 and D-35,commit_after_candidates
+U003,B-coding-assistants,B,B-4;B-5;B-6;B-7;B-8;D-35,exact_entry,P0,completed,B-4/B-7 recomposed and staged in semantic-regen-008; B-5/B-6 kept; B-8/D-35 held for broader assistant retest,committed
 U004,B-ai-assistants-core,B,B-1;B-2;B-3;B-10;B-14;B-15;B-16;B-17;B-19,exact_entry,P1,active,fold in results from U002/U003 and retest remaining confusions,commit_after_review
 U005,J-hardware-accelerators,J,J-70;J-72;J-73;J-74;J-75;J-76;J-77,exact_entry,P1,active,review after J-72/J-73/J-76 fixes,commit_after_review
 U006,D-provider-generation-series,D,D-1;D-2;D-3;D-4;D-10;D-11;D-12;D-13;D-20;D-21,cluster_family,P1,planned,classify caption_required vs capability_milestone,commit_after_review
