@@ -1,0 +1,10 @@
+entry_id,title,semantic_focus
+B-4,Cursor,AI editor with project/chat context
+B-5,GitHub Copilot,"GitHub repo, PR review, ghost completion"
+B-6,Windsurf,agentic cascade across files/test/browser
+B-7,Claude Code,terminal/CLI coding assistant in Claude context
+B-8,Codex,Codex coding agent / task execution
+B-15,Microsoft Copilot,general Microsoft Copilot assistant
+B-16,Microsoft 365 Copilot,M365 work documents/mail/meeting assistant
+B-17,Edge Copilot,browser/sidebar web assistant
+B-19,Claude Cowork,collaborative coworking with Claude

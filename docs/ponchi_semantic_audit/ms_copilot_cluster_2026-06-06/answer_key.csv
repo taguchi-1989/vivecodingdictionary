@@ -1,0 +1,10 @@
+blind_image_id,entry_id,title,source_file,semantic_focus
+MS-Q001,B-19,Claude Cowork,assets/ponchi/final_candidates/ponchi-batch-002/B-19_candidate.png,collaborative coworking with Claude
+MS-Q002,B-8,Codex,assets/ponchi/final_candidates/ponchi-batch-001/B-8_candidate.png,Codex coding agent / task execution
+MS-Q003,B-16,Microsoft 365 Copilot,assets/ponchi/final_candidates/ponchi-batch-002/B-16_candidate.png,M365 work documents/mail/meeting assistant
+MS-Q004,B-5,GitHub Copilot,assets/ponchi/final_candidates/semantic-regen-001/B-5_candidate.png,"GitHub repo, PR review, ghost completion"
+MS-Q005,B-6,Windsurf,assets/ponchi/final_candidates/semantic-regen-001/B-6_candidate.png,agentic cascade across files/test/browser
+MS-Q006,B-7,Claude Code,assets/ponchi/final_candidates/ponchi-batch-001/B-7_candidate.png,terminal/CLI coding assistant in Claude context
+MS-Q007,B-17,Edge Copilot,assets/ponchi/final_candidates/ponchi-batch-002/B-17_candidate.png,browser/sidebar web assistant
+MS-Q008,B-15,Microsoft Copilot,assets/ponchi/final_candidates/ponchi-batch-002/B-15_candidate.png,general Microsoft Copilot assistant
+MS-Q009,B-4,Cursor,assets/ponchi/final_candidates/ponchi-batch-001/B-4_candidate.png,AI editor with project/chat context

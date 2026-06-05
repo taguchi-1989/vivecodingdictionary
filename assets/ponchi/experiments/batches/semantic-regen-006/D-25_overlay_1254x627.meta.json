@@ -1,0 +1,14 @@
+{
+  "entry_id": "D-25",
+  "official_asset": "assets/logos/openai/openai_wordmark_black_official_template_layer.png",
+  "base_file": "assets/ponchi/experiments/batches/semantic-regen-006/D-25_base_1254x627.png",
+  "output_file": "assets/ponchi/experiments/batches/semantic-regen-006/D-25_overlay_1254x627.png",
+  "placement": {
+    "x": 954,
+    "y": 38,
+    "width": 258,
+    "height": 70
+  },
+  "clearspace": "rightmost 40% of top 25%",
+  "method": "deterministic PIL alpha composite after body palette normalization"
+}

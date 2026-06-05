@@ -1,0 +1,8 @@
+blind_image_id,entry_id,title,source_file,pass_mode,visual_axis
+DOAI-Q001,D-24,GPT-3 系,assets/ponchi/final_candidates/ponchi-batch-005/D-24_candidate.png,capability_milestone,large text-completion scale jump
+DOAI-Q002,D-25,GPT-1 / GPT-2 系,assets/ponchi/final_candidates/ponchi-batch-005/D-25_candidate.png,capability_milestone,early text-only research-era model stack
+DOAI-Q003,D-22,o1 系,assets/ponchi/final_candidates/semantic-regen-001/D-22_candidate.png,type_distinction,slow/deep reasoning ladder; math/code optimization cards
+DOAI-Q004,D-26,gpt-oss,assets/ponchi/final_candidates/ponchi-batch-005/D-26_candidate.png,deployment_context,"open-weight/package/deployment, not ChatGPT service"
+DOAI-Q005,D-21,GPT-4 系,assets/ponchi/final_candidates/ponchi-batch-005/D-21_candidate.png,capability_milestone,stronger general model; multimodal/vision doorway if supported by entry text
+DOAI-Q006,D-20,GPT-5 系,assets/ponchi/final_candidates/ponchi-batch-005/D-20_candidate.png,honest_ambiguous,latest frontier/general model; broader capability hub; no unsupported internal architecture
+DOAI-Q007,D-23,o3 系,assets/ponchi/final_candidates/ponchi-batch-005/D-23_candidate.png,type_distinction,reasoning successor; later/deeper reasoning branch

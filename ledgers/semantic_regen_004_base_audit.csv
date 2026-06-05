@@ -1,0 +1,6 @@
+file,entry_id,size,size_ok,bbox_coverage,density_ok,clearspace_required,clearspace_ink_ratio,clearspace_ok,status
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\semantic-regen-004\A-6_base_1254x627.png,A-6,1254x627,true,0.417,false,false,0.0000,true,review
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\semantic-regen-004\D-35_base_1254x627.png,D-35,1254x627,true,0.782,true,true,0.0000,true,pass
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\semantic-regen-004\I-10_base_1254x627.png,I-10,1254x627,true,0.832,true,false,0.0156,true,pass
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\semantic-regen-004\J-55_base_1254x627.png,J-55,1254x627,true,0.832,true,false,0.0156,true,pass
+D:\dev\VibeCodingDictionary\assets\ponchi\experiments\batches\semantic-regen-004\J-76_base_1254x627.png,J-76,1254x627,true,0.832,true,false,0.0247,true,pass

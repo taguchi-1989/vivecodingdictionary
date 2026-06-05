@@ -1,0 +1,8 @@
+entry_id,title,pass_mode,visual_axis
+D-20,GPT-5 系,honest_ambiguous,latest frontier/general model; broader capability hub; no unsupported internal architecture
+D-21,GPT-4 系,capability_milestone,stronger general model; multimodal/vision doorway if supported by entry text
+D-22,o1 系,type_distinction,slow/deep reasoning ladder; math/code optimization cards
+D-23,o3 系,type_distinction,reasoning successor; later/deeper reasoning branch
+D-24,GPT-3 系,capability_milestone,large text-completion scale jump
+D-25,GPT-1 / GPT-2 系,capability_milestone,early text-only research-era model stack
+D-26,gpt-oss,deployment_context,"open-weight/package/deployment, not ChatGPT service"
