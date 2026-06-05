@@ -1159,6 +1159,12 @@ final candidates:
   from the official Genspark site (`https://www.genspark.ai/favicon.ico`),
   retrieved 2026-06-03. The brand page lockup download still returned 403 from
   the local shell, so this favicon overlay remains review-pending.
+- `semantic-regen-007`: B-15 Microsoft Copilot and B-16 Microsoft 365 Copilot
+  use `assets/logos/microsoft-copilot/copilot-official-inline-icon.preview.png`,
+  a local PNG preview rendered from the official Copilot inline icon asset
+  saved under `assets/logos/microsoft-copilot/`. The generated bodies were kept
+  logo-free and the official icon was composited deterministically after
+  clearspace cleanup.
 
 All of these overlays were generated deterministically from local official
 assets, primarily by `scripts/composite_official_logo.py`; AMD uses an

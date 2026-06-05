@@ -1,0 +1,14 @@
+{
+  "entry_id": "B-15",
+  "official_asset": "assets/logos/microsoft-copilot/copilot-official-inline-icon.preview.png",
+  "base_file": "assets/ponchi/experiments/batches/semantic-regen-007/B-15_base_1254x627.png",
+  "output_file": "assets/ponchi/experiments/batches/semantic-regen-007/B-15_overlay_1254x627.png",
+  "placement": {
+    "x": 1122,
+    "y": 34,
+    "width": 92,
+    "height": 92
+  },
+  "clearspace": "rightmost 40% of top 25%",
+  "method": "deterministic PIL alpha composite after clearspace cleanup; clipped top generated elements removed before overlay"
+}

@@ -1,0 +1,3 @@
+entry_id,title,source_file,source_type,candidate_png,candidate_webp,candidate_status
+B-15,Microsoft Copilot,assets\ponchi\experiments\batches\semantic-regen-007\B-15_overlay_1254x627.png,review_pending_overlay,B-15_candidate.png,B-15_candidate.webp,review_pending
+B-16,Microsoft 365 Copilot,assets\ponchi\experiments\batches\semantic-regen-007\B-16_overlay_1254x627.png,review_pending_overlay,B-16_candidate.png,B-16_candidate.webp,review_pending
