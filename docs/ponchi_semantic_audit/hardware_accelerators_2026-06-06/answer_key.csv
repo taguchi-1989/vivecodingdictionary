@@ -1,0 +1,8 @@
+blind_image_id,entry_id,title,source_file,semantic_focus
+HW-Q001,J-77,GPU concept,assets/ponchi/final_candidates/ponchi-batch-018/J-77_candidate.png,parallel processor with many cores for graphics/AI compute
+HW-Q002,J-76,CPU,assets/ponchi/final_candidates/semantic-regen-004/J-76_candidate.png,general-purpose processor cores/control flow
+HW-Q003,J-70,VRAM,assets/ponchi/final_candidates/ponchi-batch-017/J-70_candidate.png,"GPU-adjacent memory capacity/bandwidth, chips around accelerator"
+HW-Q004,J-72,H100,assets/ponchi/final_candidates/semantic-regen-002/J-72_candidate.png,specific deployed NVIDIA H100 accelerator product cluster
+HW-Q005,J-73,Blackwell,assets/ponchi/final_candidates/semantic-regen-002/J-73_candidate.png,next-generation accelerator architecture and board/system generation
+HW-Q006,J-74,RTX series,assets/ponchi/final_candidates/ponchi-batch-017/J-74_candidate.png,consumer/pro GPU card lineup for graphics/AI workloads
+HW-Q007,J-75,Tensor cores,assets/ponchi/final_candidates/ponchi-batch-017/J-75_candidate.png,matrix multiply compute blocks inside GPU

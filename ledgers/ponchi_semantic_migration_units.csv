@@ -4,7 +4,7 @@ U001,D-openai-model-series,D,D-20;D-21;D-22;D-23;D-24;D-25;D-26,mixed,P0,complet
 U002,B-ms-copilot,B,B-15;B-16;B-17,exact_entry,P0,completed,B-15/B-16 recomposed and staged in semantic-regen-007; B-17 held as existing browser-sidebar keep,committed
 U003,B-coding-assistants,B,B-4;B-5;B-6;B-7;B-8;D-35,exact_entry,P0,completed,B-4/B-7 recomposed and staged in semantic-regen-008; B-5/B-6 kept; B-8/D-35 held for broader assistant retest,committed
 U004,B-ai-assistants-core,B,B-1;B-2;B-3;B-10;B-14;B-15;B-16;B-17;B-19,exact_entry,P1,completed,B-19 recomposed in semantic-regen-009; B-1/B-2/B-3/B-10/B-14/B-15/B-16/B-17 reviewed as holds/keeps,committed
-U005,J-hardware-accelerators,J,J-70;J-72;J-73;J-74;J-75;J-76;J-77,exact_entry,P1,active,review after J-72/J-73/J-76 fixes,commit_after_review
+U005,J-hardware-accelerators,J,J-70;J-72;J-73;J-74;J-75;J-76;J-77,exact_entry,P1,completed,review pack created; J-72/J-73/J-76 prior fixes held; no new regen required,committed
 U006,D-provider-generation-series,D,D-1;D-2;D-3;D-4;D-10;D-11;D-12;D-13;D-20;D-21,cluster_family,P1,planned,classify caption_required vs capability_milestone,commit_after_review
 U007,D-image-video-generation,D,D-51;D-52;D-53;D-55;D-57;D-58,type_distinction,P1,active,verify output-type distinctions after prior fixes,commit_after_review
 U008,I-browser-automation-mcp,I,I-20;I-21;I-22,exact_entry,P1,planned,pairwise Playwright/Puppeteer/DevTools review,commit_after_review

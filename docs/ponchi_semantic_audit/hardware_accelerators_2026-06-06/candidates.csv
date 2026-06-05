@@ -1,0 +1,8 @@
+entry_id,title,semantic_focus
+J-70,VRAM,"GPU-adjacent memory capacity/bandwidth, chips around accelerator"
+J-72,H100,specific deployed NVIDIA H100 accelerator product cluster
+J-73,Blackwell,next-generation accelerator architecture and board/system generation
+J-74,RTX series,consumer/pro GPU card lineup for graphics/AI workloads
+J-75,Tensor cores,matrix multiply compute blocks inside GPU
+J-76,CPU,general-purpose processor cores/control flow
+J-77,GPU concept,parallel processor with many cores for graphics/AI compute
