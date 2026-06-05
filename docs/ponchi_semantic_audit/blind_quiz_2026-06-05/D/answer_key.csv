@@ -1,0 +1,39 @@
+﻿blind_image_id,entry_id,title,score,color_status,recommended_action
+D-Q001,D-40,Llama 系,91,pass,light_review
+D-Q002,D-45,GLM,91,pass,light_review
+D-Q003,D-2,Gemini 2.5 系,95,review,light_review
+D-Q004,D-71,Whisper,88,pass,light_review
+D-Q005,D-50,DALL-E,89,pass,light_review
+D-Q006,D-60,AlphaGo,90,review,light_review
+D-Q007,D-41,Mistral 系,94,review,light_review
+D-Q008,D-46,DeepSeek V3,96,pass,light_review
+D-Q009,D-52,Sora,90,pass,light_review
+D-Q010,D-12,Claude 4 系,95,pass,light_review
+D-Q011,D-4,Gemini 3.1 系,96,review,light_review
+D-Q012,D-13,Claude 4.5 系,96,pass,light_review
+D-Q013,D-44,Kimi,94,pass,light_review
+D-Q014,D-20,GPT-5 系,92,pass,light_review
+D-Q015,D-57,Flow,78,pass,visual_review
+D-Q016,D-70,Amical,93,pass,light_review
+D-Q017,D-24,GPT-3 系,87,pass,light_review
+D-Q018,D-58,Whisk,76,pass,visual_review
+D-Q019,D-30,Grok 系,95,pass,light_review
+D-Q020,D-25,GPT-1 / GPT-2 系,92,pass,light_review
+D-Q021,D-56,Seedance,92,pass,light_review
+D-Q022,D-3,Gemini 3 系,89,review,light_review
+D-Q023,D-47,DeepSeek R1,94,pass,light_review
+D-Q024,D-14,Claude Mythos Preview,92,pass,light_review
+D-Q025,D-51,Imagen,91,review,light_review
+D-Q026,D-11,Claude 3.5 系,97,pass,light_review
+D-Q027,D-43,Qwen 系,97,review,light_review
+D-Q028,D-21,GPT-4 系,90,pass,light_review
+D-Q029,D-10,Claude 3 系,87,pass,light_review
+D-Q030,D-26,gpt-oss,91,pass,light_review
+D-Q031,D-1,Gemini 2 系,97,review,light_review
+D-Q032,D-35,Cursor Composer,86,pass,sparse_diagram_review
+D-Q033,D-23,o3 系,98,pass,light_review
+D-Q034,D-53,Veo,90,review,light_review
+D-Q035,D-54,Stable Diffusion,85,pass,light_review
+D-Q036,D-55,Nano Banana,90,pass,light_review
+D-Q037,D-22,o1 系,97,pass,light_review
+D-Q038,D-42,Gemma 系,96,review,light_review

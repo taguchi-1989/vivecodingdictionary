@@ -1,0 +1,10 @@
+{
+  "base": "assets\\ponchi\\experiments\\batches\\semantic-regen-003\\B-2_base_1254x627.png",
+  "logo": "assets\\logos\\anthropic\\anthropic-media-resources\\Anthropic media resources\\Anthropic logos\\Claude logos\\1 Claude logo\\PNG\\Claude logo - Slate.png",
+  "output": "assets\\ponchi\\experiments\\batches\\semantic-regen-003\\B-2_overlay_1254x627.png",
+  "logo_width": 500,
+  "x": 696,
+  "y": 36,
+  "right_margin": 58,
+  "adjustment_reason": "B-2 regenerated after body-only blind test confused old body with Perplexity/search; clearspace cleanup applied to normalized base; raw image preserved."
+}

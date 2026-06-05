@@ -1,0 +1,17 @@
+entry_id,title,category,subtype
+B-24,Google Cloud,service,hosting_cloud
+B-33,Canva,service,saas_design
+B-8,Codex,service,ai_assistant
+B-32,Figma,service,saas_design
+B-52,Gemini の料金プラン,service,pricing
+B-31,Excalidraw,service,saas_design
+B-27,Vertex AI,service,managed_ai
+B-5,GitHub Copilot,service,ai_assistant
+B-51,ChatGPT の料金プラン,service,pricing
+B-50,Claude の料金プラン,service,pricing
+B-1,Gemini,service,ai_assistant
+B-26,Azure OpenAI,service,managed_ai
+B-4,Cursor,service,ai_assistant
+B-25,Azure,service,hosting_cloud
+B-7,Claude Code,service,ai_assistant
+B-6,Windsurf,service,ai_assistant

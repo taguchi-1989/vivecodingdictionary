@@ -1,0 +1,6 @@
+entry_id,title,source_file,source_type,candidate_png,candidate_webp,candidate_status
+J-72,H100,assets\ponchi\experiments\batches\semantic-regen-002\J-72_base_1254x627.png,review_pending_base,J-72_candidate.png,J-72_candidate.webp,review_pending
+J-73,Blackwell,assets\ponchi\experiments\batches\semantic-regen-002\J-73_base_1254x627.png,review_pending_base,J-73_candidate.png,J-73_candidate.webp,review_pending
+F-84,Ghostty,assets\ponchi\experiments\batches\semantic-regen-002\F-84_overlay_1254x627.png,review_pending_overlay,F-84_candidate.png,F-84_candidate.webp,review_pending
+D-51,Imagen,assets\ponchi\experiments\batches\semantic-regen-002\D-51_overlay_1254x627.png,review_pending_overlay,D-51_candidate.png,D-51_candidate.webp,review_pending
+D-57,Flow,assets\ponchi\experiments\batches\semantic-regen-002\D-57_overlay_1254x627.png,review_pending_overlay,D-57_candidate.png,D-57_candidate.webp,review_pending

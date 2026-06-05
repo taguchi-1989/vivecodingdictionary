@@ -1,0 +1,18 @@
+blind_image_id,top1_guess,top1_confidence,top2_guess,top3_guess,semantic_comment
+D-SRQ001,D-22,78,D-23,D-20,OpenAI reasoning staircase and slow deliberate workflow suggest o1.
+D-SRQ002,D-51,74,D-55,D-57,Image thumbnails and generation/editing pipeline fit Imagen-style image model.
+D-SRQ003,D-21,82,D-20,D-24,OpenAI multimodal inputs to chat/tools strongly suggest GPT-4 series.
+D-SRQ004,D-55,62,D-51,D-58,Many image variants and selection panels suggest Nano Banana image editing/generation.
+D-SRQ005,D-53,70,D-56,D-52,Image-to-video/storyboard interface with generated clips fits Veo.
+D-SRQ006,D-71,92,B-18,B-13,OpenAI audio waveform and transcription pipeline point to Whisper.
+D-SRQ007,D-52,90,D-53,D-56,OpenAI video storyboard timeline and play preview indicate Sora.
+D-SRQ008,B-13,99,D-71,B-18,ElevenLabs logo plus voice waveform tracks make this explicit.
+D-SRQ009,D-20,76,D-21,D-23,OpenAI coding, multimodal agent, and charts suggest GPT-5 series.
+D-SRQ010,D-54,97,D-51,D-55,stability.ai logo and image diffusion pipeline are explicit.
+D-SRQ011,D-57,67,D-53,D-56,Creative media flow board with image/video panels suggests Flow.
+D-SRQ012,D-24,64,D-21,D-20,OpenAI broad business adoption and chart imagery feels like GPT-3 era.
+D-SRQ013,B-18,86,D-71,B-13,Voice input UI with mic controls and routing suggests Aqua Voice.
+D-SRQ014,D-58,88,D-55,D-51,Kitchen blender combining visual references is the classic Whisk cue.
+D-SRQ015,D-70,72,B-18,D-71,Speech to secured laptop/documents with app logo suggests Amical solution.
+D-SRQ016,D-56,80,D-53,D-52,Filmstrip video generation and camera workflow fit Seedance.
+D-SRQ017,D-23,72,D-20,D-22,OpenAI reasoning tree with evaluation/check panels suggests o3.

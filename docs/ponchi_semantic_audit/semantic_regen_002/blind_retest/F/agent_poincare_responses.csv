@@ -1,0 +1,7 @@
+blind_image_id,top1_guess,top1_confidence,top2_guess,top3_guess,visual_evidence,confused_with,semantic_comment
+J2-F001,F-84,92,F-83,J-91,"Black terminal-emulator app icon with ghost-like face; surrounding UI reads as hosted terminal surface rather than a shell language.",F-83,"Strong Ghostty signal; distinguishable as terminal emulator branding, not PowerShell/bash/CLI."
+J2-F002,J-91,58,F-81,F-82,"Many prompt rows, command blocks, file transformations, pipeline arrows, and generic terminal interaction without a specific branded shell logo.",F-81,"Looks like generic command-line workflow more than a named shell."
+J2-F003,B-7,64,F-84,J-91,"Coding workspace with terminal/editor, automation icons, and a large friendly assistant face beside tool panels.",F-84,"Assistant-agent imagery pushes it toward Claude Code, though the dark face could be confused with Ghostty-style branding."
+J2-F004,F-83,96,J-91,F-81,"Large unmistakable PowerShell >_ logo plus command panels, objects, security/admin icons, and module-like UI blocks.",J-91,"Clear PowerShell visual identity."
+J2-F005,F-81,46,B-7,J-91,"Dark code/terminal panel with script-like blue lines, command cards, and workflow outputs; no Windows/PowerShell/Ghostty branding.",B-7,"Most shell-script-like; robot assistant adds Claude Code confusion."
+J2-F006,F-82,50,B-7,J-91,"Windows-like workflow board connected to Linux/server stack, terminal pane, system dashboard, and cross-environment arrows.",B-7,"Best fit for WSL as OS integration around terminal use, but assistant robot makes Claude Code plausible."

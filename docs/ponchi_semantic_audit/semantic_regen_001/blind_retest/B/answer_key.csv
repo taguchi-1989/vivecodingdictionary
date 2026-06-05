@@ -1,0 +1,17 @@
+blind_image_id,entry_id,title,image_path,is_regen_target
+B-SRQ001,B-24,Google Cloud,assets/ponchi/final/B-24.webp,no
+B-SRQ002,B-33,Canva,assets/ponchi/final/B-33.webp,no
+B-SRQ003,B-8,Codex,assets/ponchi/final/B-8.webp,no
+B-SRQ004,B-32,Figma,assets/ponchi/final/B-32.webp,no
+B-SRQ005,B-52,Gemini の料金プラン,assets/ponchi/experiments/batches/semantic-regen-001/B-52_overlay_1254x627.png,yes
+B-SRQ006,B-31,Excalidraw,assets/ponchi/experiments/batches/semantic-regen-001/B-31_overlay_1254x627.png,yes
+B-SRQ007,B-27,Vertex AI,assets/ponchi/final/B-27.webp,no
+B-SRQ008,B-5,GitHub Copilot,assets/ponchi/experiments/batches/semantic-regen-001/B-5_overlay_1254x627.png,yes
+B-SRQ009,B-51,ChatGPT の料金プラン,assets/ponchi/final/B-51.webp,no
+B-SRQ010,B-50,Claude の料金プラン,assets/ponchi/final/B-50.webp,no
+B-SRQ011,B-1,Gemini,assets/ponchi/final/B-1.webp,no
+B-SRQ012,B-26,Azure OpenAI,assets/ponchi/experiments/batches/semantic-regen-001/B-26_overlay_1254x627.png,yes
+B-SRQ013,B-4,Cursor,assets/ponchi/final/B-4.webp,no
+B-SRQ014,B-25,Azure,assets/ponchi/final/B-25.webp,no
+B-SRQ015,B-7,Claude Code,assets/ponchi/final/B-7.webp,no
+B-SRQ016,B-6,Windsurf,assets/ponchi/experiments/batches/semantic-regen-001/B-6_overlay_1254x627.png,yes

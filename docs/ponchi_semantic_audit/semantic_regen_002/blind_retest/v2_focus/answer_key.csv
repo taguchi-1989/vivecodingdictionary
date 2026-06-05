@@ -1,0 +1,7 @@
+blind_image_id,entry_id,title,image_file,wave2_target
+J2V2-Q001,J-72,H100,assets/ponchi/experiments/batches/semantic-regen-002/J-72_v2_base_1254x627.png,yes
+J2V2-Q002,J-73,Blackwell,assets/ponchi/final_candidates/semantic-regen-002/J-73_candidate.png,no
+J2V2-Q003,D-57,Flow,assets/ponchi/experiments/batches/semantic-regen-002/D-57_v2_overlay_1254x627.png,yes
+J2V2-Q004,D-51,Imagen,assets/ponchi/final_candidates/semantic-regen-002/D-51_candidate.png,no
+J2V2-Q005,D-53,Veo,assets/ponchi/final_candidates/semantic-regen-001/D-53_candidate.png,no
+J2V2-Q006,D-58,Whisk,assets/ponchi/final_candidates/semantic-regen-001/D-58_candidate.png,no

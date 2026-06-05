@@ -1,0 +1,41 @@
+﻿entry_id,title,category,subtype
+B-1,Gemini,service,ai_assistant
+B-2,Claude,service,ai_assistant
+B-3,ChatGPT,service,ai_assistant
+B-4,Cursor,service,ai_assistant
+B-5,GitHub Copilot,service,ai_assistant
+B-6,Windsurf,service,ai_assistant
+B-7,Claude Code,service,ai_assistant
+B-8,Codex,service,ai_assistant
+B-9,v0,service,ai_assistant
+B-10,Devin,service,ai_assistant
+B-11,Bolt.new,service,ai_assistant
+B-12,Perplexity,service,ai_assistant
+B-13,ElevenLabs,service,tts_service
+B-14,Genspark,service,ai_assistant
+B-15,Microsoft Copilot,service,ai_assistant
+B-16,Microsoft 365 Copilot,service,ai_assistant
+B-17,Edge Copilot,service,ai_assistant
+B-18,Aqua Voice,service,voice_input_saas
+B-19,Claude Cowork,service,collaboration_service
+B-20,Vercel,service,hosting_cloud
+B-21,Netlify,service,hosting_cloud
+B-22,Cloudflare,service,hosting_cloud
+B-23,AWS,service,hosting_cloud
+B-24,Google Cloud,service,hosting_cloud
+B-25,Azure,service,hosting_cloud
+B-26,Azure OpenAI,service,managed_ai
+B-27,Vertex AI,service,managed_ai
+B-28,Render,service,hosting_cloud
+B-29,Supabase,service,baas
+B-30,Amazon Bedrock,service,managed_ai
+B-31,Excalidraw,service,saas_design
+B-32,Figma,service,saas_design
+B-33,Canva,service,saas_design
+B-40,Reddit,service,info_source
+B-41,arXiv,service,info_source
+B-50,Claude の料金プラン,service,pricing
+B-51,ChatGPT の料金プラン,service,pricing
+B-52,Gemini の料金プラン,service,pricing
+B-60,Suno,service,creative_media
+B-61,ACE-Step 1.5,service,creative_media

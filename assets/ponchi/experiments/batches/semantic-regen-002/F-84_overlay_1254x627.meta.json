@@ -1,0 +1,12 @@
+{
+  "base_image": "assets\\ponchi\\experiments\\batches\\semantic-regen-002\\F-84_base_clearspace_1254x627.png",
+  "official_asset": "assets\\logos\\ghostty\\social-share-card.jpg",
+  "output_image": "assets\\ponchi\\experiments\\batches\\semantic-regen-002\\F-84_overlay_1254x627.png",
+  "overlay_rect": {
+    "x": 1036,
+    "y": 34,
+    "width": 170,
+    "height": 96
+  },
+  "note": "Only this rectangle may contain official-asset color exceptions."
+}

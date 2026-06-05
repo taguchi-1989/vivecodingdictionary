@@ -1,0 +1,34 @@
+priority,entry_id,title,semantic_issue,visual_status,recommended_action
+P0,J-72,H100,H100固有性が弱く汎用GPUクラスタ図に寄る。J-73との差も弱い。,low;color_fail,再構図
+P0,J-73,Blackwell,Blackwell世代の特徴が弱くH100との差が見えにくい。,low;color_fail,再構図
+P0,F-84,Ghostty,端末アプリの意味はあるが黒画面が強くシリーズ外れ値。,low,再構図
+P1,D-35,Cursor Composer,Composer固有の複数ファイル編集や差分作成が弱くロゴ依存。,sparse_diagram,再構図
+P1,J-42,Web3,分散・所有・台帳の意味が弱く汎用ノード図に見える。,mid,再構図候補
+P1,A-6,評価日・時変情報の見方,意味は通るが色ゲートfail。,color_fail,色補正優先
+P1,I-10,Filesystem MCP,ファイルツリーの意味は明確だが色ゲートfail。,color_fail,色補正優先
+P1,J-55,個人情報保護法,法/保護の文脈は出ているが色ゲートfail。,color_fail,色補正優先
+P1,J-76,CPU,CPUの意味は出ているが色ゲートfail。,color_fail,色補正優先
+P2,B-4,Cursor,コーディング支援サービス群の中でエディタ+パネルに寄り差分が弱い。,cluster_review,横並び比較
+P2,B-5,GitHub Copilot,コーディング支援サービス群の中でロゴを除く差分が弱い。,cluster_review,横並び比較
+P2,B-6,Windsurf,コーディング支援サービス群の中でエディタ+パネルに寄り差分が弱い。,cluster_review,横並び比較
+P2,B-7,Claude Code,コーディング支援サービス群の中でClaude Code固有のCLI/agent作業が弱い。,cluster_review,横並び比較
+P2,B-8,Codex,コーディング支援サービス群の中でCodex固有の差分が弱い。,cluster_review,横並び比較
+P2,B-15,Microsoft Copilot,Microsoft Copilot系の差分確認対象。,cluster_review,横並び比較
+P2,B-16,Microsoft 365 Copilot,Microsoft Copilot系の差分確認対象。,cluster_review,横並び比較
+P2,B-17,Edge Copilot,Microsoft Copilot系の差分確認対象。,cluster_review,横並び比較
+P2,B-19,Claude Cowork,人物+AI作業場面としては分かるがサービス固有性確認対象。,cluster_review,横並び比較
+P2,D-1,Gemini 2,モデル世代群で世代差が読みにくい。,model_series_review,世代差ルール確認
+P2,D-2,Gemini 2.5,モデル世代群で世代差が読みにくい。,model_series_review,世代差ルール確認
+P2,D-3,Gemini 3,モデル世代群で世代差が読みにくい。,model_series_review,世代差ルール確認
+P2,D-10,Claude 3 系,モデル世代群で世代差が読みにくい。,model_series_review,世代差ルール確認
+P2,D-11,Claude 3.5 系,モデル世代群で世代差が読みにくい。,model_series_review,世代差ルール確認
+P2,D-12,Claude 4 系,モデル世代群で世代差が読みにくい。,model_series_review,世代差ルール確認
+P2,D-20,GPT-5,OpenAIモデル世代群で世代差が読みにくい。,model_series_review,世代差ルール確認
+P2,D-21,GPT-4,OpenAIモデル世代群で世代差が読みにくい。,model_series_review,世代差ルール確認
+P2,D-22,o1,OpenAIモデル世代群で世代差が読みにくい。,model_series_review,世代差ルール確認
+P2,D-23,o3,OpenAIモデル世代群で世代差が読みにくい。,model_series_review,世代差ルール確認
+P2,D-24,GPT-3,OpenAIモデル世代群で世代差が読みにくい。,model_series_review,世代差ルール確認
+P2,D-25,GPT-1 / GPT-2,OpenAIモデル世代群で世代差が読みにくい。,model_series_review,世代差ルール確認
+P2,I-20,Playwright MCP,Puppeteer MCPとの差分確認対象。,tool_pair_review,横並び比較
+P2,I-21,Puppeteer MCP,Playwright MCPとの差分確認対象。,tool_pair_review,横並び比較
+P2,J-12,Neural Network,意味は直接的だがシリーズ内では単純で密度が弱い。,simple_but_clear,再構図候補

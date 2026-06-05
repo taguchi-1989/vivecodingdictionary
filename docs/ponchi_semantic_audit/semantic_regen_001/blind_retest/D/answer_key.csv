@@ -1,0 +1,18 @@
+blind_image_id,entry_id,title,image_path,is_regen_target
+D-SRQ001,D-22,o1 系,assets/ponchi/experiments/batches/semantic-regen-001/D-22_overlay_1254x627.png,yes
+D-SRQ002,D-56,Seedance,assets/ponchi/final/D-56.webp,no
+D-SRQ003,D-20,GPT-5 系,assets/ponchi/final/D-20.webp,no
+D-SRQ004,D-51,Imagen,assets/ponchi/final/D-51.webp,no
+D-SRQ005,D-55,Nano Banana,assets/ponchi/final/D-55.webp,no
+D-SRQ006,D-71,Whisper,assets/ponchi/final/D-71.webp,no
+D-SRQ007,D-52,Sora,assets/ponchi/final/D-52.webp,no
+D-SRQ008,B-13,ElevenLabs,assets/ponchi/final/B-13.webp,no
+D-SRQ009,D-21,GPT-4 系,assets/ponchi/final/D-21.webp,no
+D-SRQ010,D-54,Stable Diffusion,assets/ponchi/final/D-54.webp,no
+D-SRQ011,D-57,Flow,assets/ponchi/final/D-57.webp,no
+D-SRQ012,D-24,GPT-3 系,assets/ponchi/final/D-24.webp,no
+D-SRQ013,B-18,Aqua Voice,assets/ponchi/final/B-18.webp,no
+D-SRQ014,D-58,Whisk,assets/ponchi/experiments/batches/semantic-regen-001/D-58_overlay_1254x627.png,yes
+D-SRQ015,D-70,Amical,assets/ponchi/experiments/batches/semantic-regen-001/D-70_overlay_1254x627.png,yes
+D-SRQ016,D-53,Veo,assets/ponchi/experiments/batches/semantic-regen-001/D-53_overlay_1254x627.png,yes
+D-SRQ017,D-23,o3 系,assets/ponchi/final/D-23.webp,no

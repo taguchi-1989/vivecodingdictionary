@@ -1,0 +1,8 @@
+blind_image_id,expected_entry_id,expected_title,top1_guess,top1_guess_raw,top1_confidence,top2_guess,top2_guess_raw,top3_guess,top3_guess_raw,top1_correct,top3_correct,semantic_decision,visual_evidence,confused_with,semantic_comment
+D53V4-Q001,D-53,Veo,D-53,D-53,86,D-52,D-52,D-56,D-56,true,true,semantic_ok,,,video generation pipeline with synchronized waveform audio cues points to Veo
+D53V4-Q002,D-51,Imagen,D-57,D-57,78,D-53,D-53,D-58,D-58,false,false,misleading,,,workflow/client interface orchestrating many media steps matches Flow
+D53V4-Q003,D-58,Whisk,D-58,D-58,80,D-51,D-51,D-55,D-55,true,true,semantic_ok,,,multi-image composition and remix canvas cues fit Whisk
+D53V4-Q004,D-56,Seedance,D-56,D-56,76,D-53,D-53,D-52,D-52,true,true,semantic_ok,,,short-video comparison/timeline workflow suggests Seedance
+D53V4-Q005,D-57,Flow,D-51,D-51,72,D-58,D-58,D-55,D-55,false,false,misleading,,,image generation panels and still-image transformations fit Imagen
+D53V4-Q006,D-52,Sora,D-52,D-52,95,D-53,D-53,D-56,D-56,true,true,semantic_ok,,,OpenAI branding with video timeline makes Sora the strongest match
+D53V4-Q007,D-55,Nano Banana,D-55,D-55,84,D-51,D-51,D-58,D-58,true,true,semantic_ok,,,Gemini-style image editing/generation workflow points to Nano Banana

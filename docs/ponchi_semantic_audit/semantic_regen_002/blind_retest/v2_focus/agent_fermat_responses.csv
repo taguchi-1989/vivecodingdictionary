@@ -1,0 +1,7 @@
+blind_image_id,top1_guess,top1_confidence,top2_guess,top3_guess,visual_evidence,confused_with,semantic_comment
+J2V2-Q001,J-72,82,J-73,J-77,"data-center accelerator racks, removable GPU modules, cloud-to-AI workload arrows, operator monitoring cluster","J-73","Specific server GPU deployment rather than generic GPU concept"
+J2V2-Q002,J-73,86,J-72,J-75,"chip-to-superchip-to-board-to-rack progression, dense rack interconnects, performance charts and AI/network diagrams","J-72","Looks like next-gen GPU platform scaling architecture"
+J2V2-Q003,D-57,78,D-53,D-52,"film/storyboard editing UI, prompt controls, scene thumbnails, video timeline and export workflow","D-53","Tool interface for making videos, not just the video model itself"
+J2V2-Q004,D-51,74,D-53,D-57,"text and image inputs feed a central generation model, multiple still landscape outputs, image adjustment controls, Gemini-style mark","D-53","Image generation workflow with variations rather than temporal video timeline"
+J2V2-Q005,D-53,80,D-52,D-57,"prompt and media inputs produce landscape video clips, timeline with audio waveform, Gemini-style mark, video production controls","D-57","Video generation model output presentation rather than full editing app"
+J2V2-Q006,D-58,88,D-51,D-56,"user combines subject/style/scene reference cards in a blender, outputs several stylized chair-room images","D-51","Reference-mixing image tool metaphor strongly matches Whisk"

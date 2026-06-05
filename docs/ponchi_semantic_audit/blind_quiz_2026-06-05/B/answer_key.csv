@@ -1,0 +1,41 @@
+﻿blind_image_id,entry_id,title,score,color_status,recommended_action
+B-Q001,B-27,Vertex AI,89,review,light_review
+B-Q002,B-19,Claude Cowork,97,pass,light_review
+B-Q003,B-28,Render,96,review,light_review
+B-Q004,B-5,GitHub Copilot,79,review,visual_review
+B-Q005,B-4,Cursor,96,review,composition_regen_review
+B-Q006,B-2,Claude,96,review,composition_regen_review
+B-Q007,B-21,Netlify,97,pass,light_review
+B-Q008,B-7,Claude Code,90,pass,light_review
+B-Q009,B-22,Cloudflare,90,pass,light_review
+B-Q010,B-51,ChatGPT の料金プラン,95,pass,light_review
+B-Q011,B-12,Perplexity,91,pass,light_review
+B-Q012,B-1,Gemini,97,review,light_review
+B-Q013,B-33,Canva,96,pass,light_review
+B-Q014,B-26,Azure OpenAI,95,pass,light_review
+B-Q015,B-30,Amazon Bedrock,87,fail,official_overlay_color_review
+B-Q016,B-14,Genspark,94,pass,light_review
+B-Q017,B-23,AWS,88,pass,light_review
+B-Q018,B-18,Aqua Voice,94,pass,light_review
+B-Q019,B-10,Devin,94,pass,light_review
+B-Q020,B-32,Figma,97,review,light_review
+B-Q021,B-41,arXiv,83,fail,official_overlay_color_review
+B-Q022,B-61,ACE-Step 1.5,94,pass,light_review
+B-Q023,B-3,ChatGPT,92,review,composition_regen_review
+B-Q024,B-24,Google Cloud,96,review,light_review
+B-Q025,B-20,Vercel,92,pass,light_review
+B-Q026,B-6,Windsurf,81,review,visual_review
+B-Q027,B-60,Suno,96,pass,light_review
+B-Q028,B-17,Edge Copilot,94,review,light_review
+B-Q029,B-52,Gemini の料金プラン,92,review,light_review
+B-Q030,B-15,Microsoft Copilot,93,review,light_review
+B-Q031,B-11,Bolt.new,94,pass,light_review
+B-Q032,B-9,v0,93,pass,light_review
+B-Q033,B-50,Claude の料金プラン,93,pass,light_review
+B-Q034,B-16,Microsoft 365 Copilot,95,review,light_review
+B-Q035,B-29,Supabase,96,pass,light_review
+B-Q036,B-25,Azure,96,fail,official_overlay_color_review
+B-Q037,B-40,Reddit,94,fail,official_overlay_color_review
+B-Q038,B-8,Codex,91,pass,light_review
+B-Q039,B-13,ElevenLabs,92,pass,light_review
+B-Q040,B-31,Excalidraw,95,review,light_review

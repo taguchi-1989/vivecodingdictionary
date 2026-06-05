@@ -1,0 +1,39 @@
+﻿entry_id,title,category,subtype
+D-1,Gemini 2 系,model,google
+D-2,Gemini 2.5 系,model,google
+D-3,Gemini 3 系,model,google
+D-4,Gemini 3.1 系,model,google
+D-10,Claude 3 系,model,anthropic
+D-11,Claude 3.5 系,model,anthropic
+D-12,Claude 4 系,model,anthropic
+D-13,Claude 4.5 系,model,anthropic
+D-14,Claude Mythos Preview,model,frontier_model
+D-20,GPT-5 系,model,openai
+D-21,GPT-4 系,model,openai
+D-22,o1 系,model,openai
+D-23,o3 系,model,openai
+D-24,GPT-3 系,model,openai
+D-25,GPT-1 / GPT-2 系,model,openai
+D-26,gpt-oss,model,openai
+D-30,Grok 系,model,xai
+D-35,Cursor Composer,model,other_closed
+D-40,Llama 系,model,open
+D-41,Mistral 系,model,open
+D-42,Gemma 系,model,open
+D-43,Qwen 系,model,open
+D-44,Kimi,model,open
+D-45,GLM,model,open_weight_llm
+D-46,DeepSeek V3,model,open
+D-47,DeepSeek R1,model,open
+D-50,DALL-E,model,image_video
+D-51,Imagen,model,image_video
+D-52,Sora,model,image_video
+D-53,Veo,model,video_generation
+D-54,Stable Diffusion,model,image_video
+D-55,Nano Banana,model,image_video
+D-56,Seedance,model,video_generation
+D-57,Flow,model,image_video
+D-58,Whisk,model,image_video
+D-60,AlphaGo,model,historical
+D-70,Amical,model,ai_solution
+D-71,Whisper,model,voice_audio

@@ -1,0 +1,8 @@
+entry_id,title,category,subtype
+D-58,Whisk,model,image_video
+D-52,Sora,model,image_video
+D-53,Veo,model,video_generation
+D-51,Imagen,model,image_video
+D-55,Nano Banana,model,image_video
+D-56,Seedance,model,video_generation
+D-57,Flow,model,image_video

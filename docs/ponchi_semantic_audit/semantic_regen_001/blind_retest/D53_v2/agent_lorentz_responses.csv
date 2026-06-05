@@ -1,0 +1,8 @@
+blind_image_id,top1_guess,top1_confidence,top2_guess,top3_guess,semantic_comment
+D53V2-Q001,D-52,99,D-53,D-57,"OpenAI branding and video/image generation workflow point to Sora."
+D53V2-Q002,D-51,78,D-55,D-58,"Image panels, edit controls, and generative image UI cues fit Imagen more than video-first entries."
+D53V2-Q003,D-53,92,D-57,D-51,"Gemini/Google access-path cues plus video outputs indicate Veo as the foundation video model."
+D53V2-Q004,D-57,88,D-53,D-56,"Large Flow-like blue mark and filmmaking storyboard interface suggest Google's Flow client workflow."
+D53V2-Q005,D-56,82,D-53,D-57,"Short-video timeline, clip comparison, and production workflow cues fit Seedance."
+D53V2-Q006,D-58,84,D-55,D-51,"Prompt-to-moodboard/image variation workflow and Whisk-like mark suggest Whisk."
+D53V2-Q007,D-55,76,D-51,D-58,"Multi-image generation/editing comparison layout with compact model controls best fits Nano Banana."

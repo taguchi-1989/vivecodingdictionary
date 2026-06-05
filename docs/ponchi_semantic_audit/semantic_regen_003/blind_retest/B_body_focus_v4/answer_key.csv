@@ -1,0 +1,8 @@
+blind_image_id,entry_id,title,image_file,wave3_target
+B3BODYFOCUSV4-01,B-19,Claude Cowork,assets\ponchi\final\B-19.webp,false
+B3BODYFOCUSV4-02,B-27,Vertex AI,assets\ponchi\final\B-27.webp,false
+B3BODYFOCUSV4-03,B-1,Gemini,assets\ponchi\experiments\batches\semantic-regen-003\B-1_base_1254x627.png,true
+B3BODYFOCUSV4-04,B-3,ChatGPT,assets\ponchi\experiments\batches\semantic-regen-003\B-3_base_1254x627.png,true
+B3BODYFOCUSV4-05,B-12,Perplexity,assets\ponchi\final\B-12.webp,false
+B3BODYFOCUSV4-06,B-2,Claude,assets\ponchi\experiments\batches\semantic-regen-003\B-2_base_1254x627.png,true
+B3BODYFOCUSV4-07,B-14,Genspark,assets\ponchi\experiments\batches\semantic-regen-003\B-14_base_1254x627.png,true

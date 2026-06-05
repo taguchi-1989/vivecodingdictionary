@@ -1,0 +1,18 @@
+entry_id,title,category,subtype
+D-22,o1 系,model,openai
+D-56,Seedance,model,video_generation
+D-20,GPT-5 系,model,openai
+D-51,Imagen,model,image_video
+D-55,Nano Banana,model,image_video
+D-71,Whisper,model,voice_audio
+D-52,Sora,model,image_video
+B-13,ElevenLabs,service,tts_service
+D-21,GPT-4 系,model,openai
+D-54,Stable Diffusion,model,image_video
+D-57,Flow,model,image_video
+D-24,GPT-3 系,model,openai
+B-18,Aqua Voice,service,voice_input_saas
+D-58,Whisk,model,image_video
+D-70,Amical,model,ai_solution
+D-53,Veo,model,video_generation
+D-23,o3 系,model,openai

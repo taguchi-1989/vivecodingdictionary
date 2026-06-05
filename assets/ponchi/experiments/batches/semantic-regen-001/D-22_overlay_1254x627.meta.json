@@ -1,0 +1,12 @@
+{
+  "base_image": "assets\\ponchi\\experiments\\batches\\semantic-regen-001\\D-22_base_1254x627.png",
+  "official_asset": "assets\\logos\\openai\\openai_wordmark_black_official_template_layer.png",
+  "output_image": "assets\\ponchi\\experiments\\batches\\semantic-regen-001\\D-22_overlay_1254x627.png",
+  "overlay_rect": {
+    "x": 776,
+    "y": 42,
+    "width": 430,
+    "height": 116
+  },
+  "note": "Only this rectangle may contain official-asset color exceptions."
+}

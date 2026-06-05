@@ -1,0 +1,8 @@
+blind_image_id,top1_guess,top1_confidence,top2_guess,top3_guess,semantic_comment
+D53V4-Q001,D-53,86,D-52,D-56,"video generation pipeline with synchronized waveform audio cues points to Veo"
+D53V4-Q002,D-57,78,D-53,D-58,"workflow/client interface orchestrating many media steps matches Flow"
+D53V4-Q003,D-58,80,D-51,D-55,"multi-image composition and remix canvas cues fit Whisk"
+D53V4-Q004,D-56,76,D-53,D-52,"short-video comparison/timeline workflow suggests Seedance"
+D53V4-Q005,D-51,72,D-58,D-55,"image generation panels and still-image transformations fit Imagen"
+D53V4-Q006,D-52,95,D-53,D-56,"OpenAI branding with video timeline makes Sora the strongest match"
+D53V4-Q007,D-55,84,D-51,D-58,"Gemini-style image editing/generation workflow points to Nano Banana"

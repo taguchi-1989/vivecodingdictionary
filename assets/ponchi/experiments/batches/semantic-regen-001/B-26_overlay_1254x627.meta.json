@@ -1,0 +1,12 @@
+{
+  "base_image": "assets\\ponchi\\experiments\\batches\\semantic-regen-001\\B-26_base_1254x627.png",
+  "official_asset": "assets\\logos\\azure\\Azure_Public_Service_Icons_V23\\Azure_Public_Service_Icons\\Icons\\ai + machine learning\\03438-icon-service-Azure-OpenAI.svg",
+  "output_image": "assets\\ponchi\\experiments\\batches\\semantic-regen-001\\B-26_overlay_1254x627.png",
+  "overlay_rect": {
+    "x": 1026,
+    "y": 36,
+    "width": 180,
+    "height": 180
+  },
+  "note": "Only this rectangle may contain official-asset color exceptions."
+}

@@ -1,0 +1,12 @@
+{
+  "base_image": "assets\\ponchi\\experiments\\batches\\semantic-regen-001\\D-58_base_1254x627.png",
+  "official_asset": "assets\\logos\\google-whisk\\whisk_favicon_b.svg",
+  "output_image": "assets\\ponchi\\experiments\\batches\\semantic-regen-001\\D-58_overlay_1254x627.png",
+  "overlay_rect": {
+    "x": 1036,
+    "y": 34,
+    "width": 170,
+    "height": 178
+  },
+  "note": "Only this rectangle may contain official-asset color exceptions."
+}

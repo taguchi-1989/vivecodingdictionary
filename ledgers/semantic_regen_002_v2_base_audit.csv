@@ -1,0 +1,3 @@
+file,entry_id,size,size_ok,bbox_coverage,density_ok,clearspace_required,clearspace_ink_ratio,clearspace_ok,status
+assets\ponchi\experiments\batches\semantic-regen-002\J-72_v2_base_1254x627.png,J-72_v2,1254x627,true,0.850,true,true,0.2327,false,review
+assets\ponchi\experiments\batches\semantic-regen-002\D-57_v2_base_1254x627.png,D-57_v2,1254x627,true,0.715,true,true,0.0218,false,review

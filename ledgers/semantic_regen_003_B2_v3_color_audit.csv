@@ -1,0 +1,2 @@
+batch_id,entry_id,title,candidate_file,audited_file,audit_source_type,candidate_status,source_type,size,inspected_pixels,disallowed_pixels,disallowed_ratio,disallowed_bbox,dominant_disallowed,status,notes
+semantic-regen-003,B-2,,assets/ponchi/experiments/batches/semantic-regen-003/B-2_base_1254x627.png,assets/ponchi/experiments/batches/semantic-regen-003/B-2_base_1254x627.png,direct_image,,,1254x627,786258,2942,0.003742,"44,111,1191,416",blue:2771;dark:109;neutral:44;orange:9;purple:7,pass,

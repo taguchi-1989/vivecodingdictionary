@@ -14,65 +14,68 @@ This is a mechanical outlier score for planning visual review and regeneration. 
 
 | band | count |
 | --- | ---: |
-| `high` | 325 |
-| `mid` | 24 |
-| `low` | 1 |
+| `high` | 327 |
+| `mid` | 20 |
+| `low` | 3 |
 
 ## Recommended Actions
 
 | action | count |
 | --- | ---: |
+| `color_or_full_regen` | 6 |
 | `composition_regen_review` | 23 |
 | `full_regen_review` | 1 |
-| `light_review` | 290 |
-| `official_overlay_color_review` | 10 |
-| `sparse_diagram_review` | 4 |
-| `visual_review` | 22 |
+| `light_review` | 294 |
+| `official_overlay_color_review` | 9 |
+| `sparse_diagram_review` | 1 |
+| `visual_review` | 16 |
 
 ## Color Gate Counts
 
 | color status | count |
 | --- | ---: |
-| `pass` | 304 |
-| `review` | 36 |
-| `fail` | 10 |
+| `pass` | 242 |
+| `review` | 93 |
+| `fail` | 15 |
 
 ## Lowest Scores
 
 | entry | title | score | action | reasons |
 | --- | --- | ---: | --- | --- |
-| `F-84` | Ghostty | 56 | `full_regen_review` | `色味;明るさ;濃淡;線密度;外れ値` |
-| `D-58` | Whisk | 71 | `visual_review` | `濃淡;線密度` |
-| `C-59` | Jensen Huang | 72 | `visual_review` | `濃淡;線密度` |
-| `D-57` | Flow | 73 | `visual_review` | `濃淡;線密度` |
-| `A-3` | 図鑑の歩き方 | 79 | `visual_review` | `濃淡;線密度;余白` |
-| `C-51` | Dario Amodei | 80 | `visual_review` | `濃淡;線密度` |
-| `C-56` | Yann LeCun | 80 | `visual_review` | `濃淡;線密度;color_review` |
-| `D-54` | Stable Diffusion | 80 | `visual_review` | `濃淡;線密度` |
-| `B-9` | v0 | 81 | `visual_review` | `濃淡;線密度;color_review;official_asset_color_context` |
-| `B-41` | arXiv | 81 | `official_overlay_color_review` | `濃淡;線密度;color_fail;official_asset_color_context` |
-| `C-52` | Demis Hassabis | 81 | `visual_review` | `濃淡;color_review` |
-| `C-58` | Elon Musk | 81 | `visual_review` | `濃淡;線密度` |
-| `C-82` | まさお | 81 | `official_overlay_color_review` | `濃淡;線密度;color_fail;official_asset_color_context` |
-| `E-3` | Terminal-Bench | 81 | `visual_review` | `濃淡` |
-| `J-42` | Web3 | 81 | `visual_review` | `濃淡;線密度` |
-| `A-8` | 色・記号の凡例 | 82 | `visual_review` | `濃淡` |
-| `C-10` | Moonshot AI | 82 | `visual_review` | `濃淡` |
-| `D-10` | Claude 3 系 | 82 | `visual_review` | `濃淡;線密度` |
-| `D-24` | GPT-3 系 | 82 | `visual_review` | `濃淡;線密度` |
-| `A-6` | 評価日・時変情報の見方 | 83 | `visual_review` | `濃淡` |
-| `C-14` | AMD | 84 | `visual_review` | `濃淡;線密度;color_review;official_asset_color_context` |
-| `C-81` | にゃんた | 84 | `visual_review` | `濃淡;線密度` |
-| `D-50` | DALL-E | 84 | `visual_review` | `濃淡;線密度` |
-| `F-82` | WSL | 84 | `visual_review` | `濃淡` |
-| `J-50` | AI 倫理 | 84 | `visual_review` | `濃淡` |
+| `F-84` | Ghostty | 59 | `full_regen_review` | `色味;明るさ;濃淡;線密度;外れ値` |
+| `J-73` | Blackwell | 67 | `color_or_full_regen` | `濃淡;線密度;外れ値;color_fail` |
+| `J-72` | H100 | 69 | `color_or_full_regen` | `濃淡;線密度;外れ値;color_fail` |
+| `J-78` | HDD | 70 | `visual_review` | `濃淡;線密度;color_review` |
+| `C-59` | Jensen Huang | 76 | `visual_review` | `濃淡;線密度` |
+| `D-58` | Whisk | 76 | `visual_review` | `濃淡;線密度` |
+| `J-42` | Web3 | 76 | `visual_review` | `濃淡;線密度;余白` |
+| `J-79` | SSD | 76 | `visual_review` | `濃淡;線密度;color_review` |
+| `J-91` | CLI | 77 | `composition_regen_review` | `濃淡;known_padding_2to1;color_review` |
+| `D-57` | Flow | 78 | `visual_review` | `濃淡;線密度` |
+| `B-5` | GitHub Copilot | 79 | `visual_review` | `濃淡;color_review;official_asset_color_context` |
+| `I-24` | Context7 MCP | 79 | `visual_review` | `濃淡;線密度;color_review` |
+| `J-80` | SATA | 80 | `visual_review` | `線密度;color_review` |
+| `A-6` | 評価日・時変情報の見方 | 81 | `color_or_full_regen` | `線密度;color_fail` |
+| `B-6` | Windsurf | 81 | `visual_review` | `濃淡;color_review;official_asset_color_context` |
+| `J-93` | Ubuntu | 81 | `composition_regen_review` | `濃淡;線密度;known_padding_2to1` |
+| `B-41` | arXiv | 83 | `official_overlay_color_review` | `濃淡;線密度;color_fail;official_asset_color_context` |
+| `G-18` | Chain of Thought | 83 | `visual_review` | `線密度` |
+| `J-75` | Tensor コア | 83 | `visual_review` | `線密度;color_review` |
+| `G-7` | 指示追従性 | 84 | `visual_review` | `線密度` |
+| `G-19` | Prompt Caching | 84 | `visual_review` | `線密度` |
+| `J-71` | RAM | 84 | `visual_review` | `線密度` |
+| `J-74` | RTX シリーズ | 84 | `visual_review` | `線密度;color_review` |
+| `C-51` | Dario Amodei | 85 | `light_review` | `濃淡;線密度` |
+| `C-56` | Yann LeCun | 85 | `light_review` | `濃淡;color_review` |
 
 ## Mid Band With Structural Reasons
 
 | entry | title | score | action | reasons |
 | --- | --- | ---: | --- | --- |
-| `B-41` | arXiv | 81 | `official_overlay_color_review` | `濃淡;線密度;color_fail;official_asset_color_context` |
-| `C-82` | まさお | 81 | `official_overlay_color_review` | `濃淡;線密度;color_fail;official_asset_color_context` |
+| `J-91` | CLI | 77 | `composition_regen_review` | `濃淡;known_padding_2to1;color_review` |
+| `A-6` | 評価日・時変情報の見方 | 81 | `color_or_full_regen` | `線密度;color_fail` |
+| `J-93` | Ubuntu | 81 | `composition_regen_review` | `濃淡;線密度;known_padding_2to1` |
+| `B-41` | arXiv | 83 | `official_overlay_color_review` | `濃淡;線密度;color_fail;official_asset_color_context` |
 
 ## Sparse High-Score Diagram Candidates
 
@@ -80,13 +83,7 @@ These score well mechanically but are likely too thin for branded/service illust
 
 | entry | title | score | file KB | ink | contrast | reasons |
 | --- | --- | ---: | ---: | ---: | ---: | --- |
-| `B-6` | Windsurf | 93 | 24.1 | 0.11176 | 10.250 | `sparse_logo_diagram` |
-| `B-4` | Cursor | 95 | 30.5 | 0.12977 | 11.794 | `known_padding_2to1;sparse_logo_diagram` |
-| `B-1` | Gemini | 97 | 30.8 | 0.15343 | 11.471 | `color_fail;official_asset_color_context;sparse_logo_diagram` |
-| `B-7` | Claude Code | 95 | 31.6 | 0.14572 | 11.378 | `color_review;official_asset_color_context;sparse_logo_diagram` |
-| `B-5` | GitHub Copilot | 96 | 32.5 | 0.15104 | 12.070 | `color_review;official_asset_color_context;sparse_logo_diagram` |
-| `B-2` | Claude | 95 | 34.5 | 0.15951 | 12.050 | `known_padding_2to1;color_review;official_asset_color_context;sparse_logo_diagram` |
-| `D-35` | Cursor Composer | 91 | 44.7 | 0.15245 | 10.081 | `sparse_logo_diagram` |
+| `D-35` | Cursor Composer | 86 | 44.7 | 0.15245 | 10.081 | `線密度;sparse_logo_diagram` |
 
 ## Known Mechanical Padding Set
 
@@ -94,29 +91,29 @@ These score well mechanically but are likely too thin for branded/service illust
 
 | entry | title | score | action | central shape |
 | --- | --- | ---: | --- | --- |
-| `B-2` | Claude | 95 | `composition_regen_review` | `no` |
-| `B-3` | ChatGPT | 87 | `composition_regen_review` | `no` |
-| `B-4` | Cursor | 95 | `composition_regen_review` | `no` |
-| `E-25` | AIME | 96 | `composition_regen_review` | `no` |
-| `E-26` | Humanity's Last Exam | 86 | `composition_regen_review` | `no` |
-| `E-27` | IQ Bench | 96 | `composition_regen_review` | `no` |
-| `E-30` | TAU-Bench | 95 | `composition_regen_review` | `no` |
-| `E-50` | Chatbot Arena | 94 | `composition_regen_review` | `no` |
-| `H-1` | TDD | 95 | `composition_regen_review` | `no` |
-| `H-5` | Scrum / Agile | 90 | `composition_regen_review` | `no` |
-| `H-6` | Git Flow | 89 | `composition_regen_review` | `no` |
-| `H-7` | CI/CD | 91 | `composition_regen_review` | `no` |
-| `H-8` | DevOps | 97 | `composition_regen_review` | `no` |
-| `I-2` | MCP Server | 92 | `composition_regen_review` | `no` |
-| `I-3` | MCP Client | 97 | `composition_regen_review` | `no` |
-| `I-4` | MCP Transport | 90 | `composition_regen_review` | `no` |
-| `I-5` | MCP SDK | 94 | `composition_regen_review` | `no` |
-| `J-81` | M.2 | 91 | `composition_regen_review` | `no` |
-| `J-90` | GUI | 94 | `composition_regen_review` | `no` |
-| `J-91` | CLI | 95 | `composition_regen_review` | `no` |
-| `J-92` | Linux | 95 | `composition_regen_review` | `no` |
-| `J-93` | Ubuntu | 87 | `composition_regen_review` | `no` |
-| `J-100` | 識字（リテラシー） | 89 | `composition_regen_review` | `no` |
+| `B-2` | Claude | 96 | `composition_regen_review` | `no` |
+| `B-3` | ChatGPT | 92 | `composition_regen_review` | `no` |
+| `B-4` | Cursor | 96 | `composition_regen_review` | `no` |
+| `E-25` | AIME | 95 | `composition_regen_review` | `no` |
+| `E-26` | Humanity's Last Exam | 91 | `composition_regen_review` | `no` |
+| `E-27` | IQ Bench | 97 | `composition_regen_review` | `no` |
+| `E-30` | TAU-Bench | 98 | `composition_regen_review` | `no` |
+| `E-50` | Chatbot Arena | 93 | `composition_regen_review` | `no` |
+| `H-1` | TDD | 93 | `composition_regen_review` | `no` |
+| `H-5` | Scrum / Agile | 94 | `composition_regen_review` | `no` |
+| `H-6` | Git Flow | 85 | `composition_regen_review` | `no` |
+| `H-7` | CI/CD | 86 | `composition_regen_review` | `no` |
+| `H-8` | DevOps | 92 | `composition_regen_review` | `no` |
+| `I-2` | MCP Server | 97 | `composition_regen_review` | `no` |
+| `I-3` | MCP Client | 93 | `composition_regen_review` | `no` |
+| `I-4` | MCP Transport | 92 | `composition_regen_review` | `no` |
+| `I-5` | MCP SDK | 95 | `composition_regen_review` | `no` |
+| `J-81` | M.2 | 89 | `composition_regen_review` | `no` |
+| `J-90` | GUI | 95 | `composition_regen_review` | `no` |
+| `J-91` | CLI | 77 | `composition_regen_review` | `no` |
+| `J-92` | Linux | 96 | `composition_regen_review` | `no` |
+| `J-93` | Ubuntu | 81 | `composition_regen_review` | `no` |
+| `J-100` | 識字（リテラシー） | 95 | `composition_regen_review` | `no` |
 
 ## Initial Rule Assessment
 

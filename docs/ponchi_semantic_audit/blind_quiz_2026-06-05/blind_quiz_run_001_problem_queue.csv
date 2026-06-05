@@ -1,0 +1,44 @@
+﻿priority,chapter,blind_image_id,entry_id,title,semantic_decision,top1_guess,top1_guess_raw,top1_confidence,top2_guess,top3_guess,confused_with,semantic_comment
+P0,B,B-Q014,B-26,Azure OpenAI,misleading,B-27,Vertex AI,72,B-24,B-1,Google Cloud; Gemini,Sparkle icon and model/data cloud diagram point to Vertex AI.
+P0,B,B-Q040,B-31,Excalidraw,misleading,B-6,Windsurf,88,B-4,B-11,Cursor; Bolt.new,Logo strongly suggests Windsurf though scene is also generic app-building.
+P0,B,B-Q004,B-5,GitHub Copilot,misleading,B-4,Cursor,70,B-7,B-8,Claude Code; Codex,Strong coding IDE signal; still no explicit Cursor logo.
+P0,B,B-Q029,B-52,Gemini の料金プラン,misleading,B-1,Gemini,95,B-27,B-14,Vertex AI; Genspark,Direct Gemini-style logo evidence.
+P0,B,B-Q026,B-6,Windsurf,misleading,B-4,Cursor,74,B-7,B-8,Claude Code; Codex,Strong IDE cue supports Cursor though logo is absent.
+P0,D,D-Q037,D-22,o1 系,misleading,D-71,D-71,84,D-21,D-24,D-21|D-24,Audio/voice cues are concrete.
+P0,D,D-Q034,D-53,Veo,misleading,D-51,D-51,82,D-55,D-54,D-55|D-54,Image-generation semantics and DeepMind branding are strong.
+P0,D,D-Q018,D-58,Whisk,misleading,D-57,D-57,76,D-53,D-56,D-53|D-56,Video/story workflow is fairly specific.
+P0,D,D-Q016,D-70,Amical,misleading,D-58,D-58,83,D-55,D-51,D-55|D-51,The image-mixing workflow communicates the entry well.
+P1,B,B-Q012,B-1,Gemini,generic,B-31,Excalidraw,38,B-32,B-33,Figma; Canva,Diagramming signal fits Excalidraw but no clear logo.
+P1,B,B-Q019,B-10,Devin,generic,B-19,Claude Cowork,66,B-2,B-16,Claude; Microsoft 365 Copilot,Collaboration is the dominant semantic cue.
+P1,B,B-Q016,B-14,Genspark,generic,B-10,Devin,58,B-8,B-7,Codex; Claude Code,Autonomous software-agent scene fits Devin better than general coding assistants.
+P1,B,B-Q006,B-2,Claude,generic,B-5,GitHub Copilot,50,B-8,B-7,Codex; Claude Code,Generic coding assistant scene; no strong Copilot icon.
+P1,B,B-Q003,B-28,Render,generic,B-9,v0,38,B-33,B-32,Canva; Figma,Looks like an app generation or design interface but lacks a readable brand cue.
+P1,B,B-Q023,B-3,ChatGPT,generic,B-5,GitHub Copilot,44,B-8,B-7,Codex; Claude Code,Generic AI coding screen; no distinctive Copilot branding.
+P1,D,D-Q031,D-1,Gemini 2 系,generic,D-4,D-4,36,D-3,D-2,D-3|D-2|D-1,Generic Gemini dashboard; exact 3.1 confidence is low.
+P1,D,D-Q029,D-10,Claude 3 系,generic,D-14,D-14,32,D-13,D-12,D-13|D-12|D-11,Very ambiguous Claude panel.
+P1,D,D-Q026,D-11,Claude 3.5 系,generic,D-13,D-13,41,D-12,D-14,D-12|D-14|D-11,Brand clear; exact Claude version is weak.
+P1,D,D-Q012,D-13,Claude 4.5 系,generic,D-11,D-11,45,D-10,D-12,D-10|D-12,Brand clear; exact version weak.
+P1,D,D-Q024,D-14,Claude Mythos Preview,generic,D-12,D-12,42,D-13,D-11,D-13|D-11,Claude clear; version assignment is tentative.
+P1,D,D-Q020,D-25,GPT-1 / GPT-2 系,generic,D-20,D-20,38,D-23,D-21,D-23|D-21,Mostly generic OpenAI model imagery; low exact-version confidence.
+P1,D,D-Q025,D-51,Imagen,generic,D-70,D-70,34,D-50,D-58,D-50|D-58,Weak semantic signal; could be several image/AI-solution entries.
+P1,D,D-Q004,D-71,Whisper,generic,D-25,D-25,35,D-24,D-21,D-24|D-21,"Communicates OpenAI LLM, not the exact generation."
+P2,B,B-Q001,B-27,Vertex AI,ambiguous,B-14,Genspark,42,B-1,B-27,Gemini; Vertex AI,Mostly generic AI workspace; logo is the main clue.
+P2,B,B-Q005,B-4,Cursor,ambiguous,B-7,Claude Code,62,B-8,B-4,Codex; Cursor,Communicates coding agent more than general chat assistant.
+P2,B,B-Q008,B-7,Claude Code,ambiguous,B-8,Codex,50,B-7,B-4,Claude Code; Cursor,Coding agent interface is plausible but visually generic.
+P2,B,B-Q038,B-8,Codex,ambiguous,B-7,Claude Code,55,B-4,B-8,Cursor; Codex,Coding assistant screen is generic; no concrete brand marker.
+P2,D,D-Q010,D-12,Claude 4 系,ambiguous,D-10,D-10,48,D-11,D-12,D-11|D-12,Claude is clear; version is ambiguous.
+P2,D,D-Q014,D-20,GPT-5 系,ambiguous,D-21,D-21,42,D-20,D-23,D-20|D-23|D-24,OpenAI LLM is clear; version is not.
+P2,D,D-Q028,D-21,GPT-4 系,ambiguous,D-22,D-22,52,D-23,D-21,D-23|D-21,"Reasoning cue helps, but exact o-series member is uncertain."
+P2,D,D-Q022,D-3,Gemini 3 系,ambiguous,D-1,D-1,36,D-2,D-3,D-2|D-3|D-4,Generic Gemini visual; exact version is weak.
+P2,D,D-Q011,D-4,Gemini 3.1 系,ambiguous,D-3,D-3,38,D-2,D-4,D-2|D-4|D-1,Very generic Gemini model diagram.
+P2,D,D-Q015,D-57,Flow,ambiguous,D-53,D-53,78,D-56,D-57,D-56|D-57,Video model semantics are clear; brand/version moderately clear.
+P3,B,B-Q018,B-18,Aqua Voice,weak_but_identifiable,B-18,Aqua Voice,67,B-13,B-60,ElevenLabs; Suno,Voice-input workflow fits Aqua Voice more than TTS or music.
+P3,B,B-Q002,B-19,Claude Cowork,weak_but_identifiable,B-19,Claude Cowork,55,B-2,B-7,Claude; Microsoft 365 Copilot,Coworking scene is clearer than a single assistant but still not distinctive.
+P3,B,B-Q015,B-30,Amazon Bedrock,weak_but_identifiable,B-30,Amazon Bedrock,62,B-23,B-26,AWS; Azure OpenAI,Managed foundation-model routing is Bedrock-like but logo is not fully clear.
+P3,B,B-Q032,B-9,v0,weak_but_identifiable,B-9,v0,58,B-32,B-33,Figma; Canva,App UI generation is likely v0 but lacks explicit Vercel/v0 mark.
+P3,D,D-Q003,D-2,Gemini 2.5 系,weak_but_identifiable,D-2,D-2,42,D-1,D-3,D-1|D-3|D-4,Generic Gemini dashboard; exact version is weak.
+P3,D,D-Q033,D-23,o3 系,weak_but_identifiable,D-23,D-23,56,D-20,D-22,D-20|D-22,"Reasoning/eval visual supports o3, but OpenAI model versions remain confusable."
+P3,D,D-Q017,D-24,GPT-3 系,weak_but_identifiable,D-24,D-24,45,D-21,D-25,D-21|D-25,OpenAI LLM obvious; exact historical generation uncertain.
+P3,D,D-Q030,D-26,gpt-oss,weak_but_identifiable,D-26,D-26,60,D-20,D-21,D-20|D-21,Open/deployment cue is useful but not definitive.
+P3,D,D-Q036,D-55,Nano Banana,weak_but_identifiable,D-55,D-55,62,D-51,D-58,D-51|D-58,Image model is clear; Nano Banana specifically is moderate confidence.
+P3,D,D-Q021,D-56,Seedance,weak_but_identifiable,D-56,D-56,48,D-52,D-53,D-52|D-53,"Communicates video generation, not a distinctive product."

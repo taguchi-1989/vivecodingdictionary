@@ -1,0 +1,18 @@
+blind_image_id,expected_entry_id,expected_title,top1_guess,top1_guess_raw,top1_confidence,top2_guess,top2_guess_raw,top3_guess,top3_guess_raw,top1_correct,top3_correct,semantic_decision,visual_evidence,confused_with,semantic_comment
+D-SRQ001,D-22,o1 系,D-22,D-22,78,D-23,D-23,D-20,D-20,true,true,semantic_ok,,,OpenAI reasoning staircase and slow deliberate workflow suggest o1.
+D-SRQ002,D-56,Seedance,D-51,D-51,74,D-55,D-55,D-57,D-57,false,false,misleading,,,Image thumbnails and generation/editing pipeline fit Imagen-style image model.
+D-SRQ003,D-20,GPT-5 系,D-21,D-21,82,D-20,D-20,D-24,D-24,false,true,ambiguous,,,OpenAI multimodal inputs to chat/tools strongly suggest GPT-4 series.
+D-SRQ004,D-51,Imagen,D-55,D-55,62,D-51,D-51,D-58,D-58,false,true,ambiguous,,,Many image variants and selection panels suggest Nano Banana image editing/generation.
+D-SRQ005,D-55,Nano Banana,D-53,D-53,70,D-56,D-56,D-52,D-52,false,false,misleading,,,Image-to-video/storyboard interface with generated clips fits Veo.
+D-SRQ006,D-71,Whisper,D-71,D-71,92,B-18,B-18,B-13,B-13,true,true,semantic_ok,,,OpenAI audio waveform and transcription pipeline point to Whisper.
+D-SRQ007,D-52,Sora,D-52,D-52,90,D-53,D-53,D-56,D-56,true,true,semantic_ok,,,OpenAI video storyboard timeline and play preview indicate Sora.
+D-SRQ008,B-13,ElevenLabs,B-13,B-13,99,D-71,D-71,B-18,B-18,true,true,semantic_ok,,,ElevenLabs logo plus voice waveform tracks make this explicit.
+D-SRQ009,D-21,GPT-4 系,D-20,D-20,76,D-21,D-21,D-23,D-23,false,true,ambiguous,,,OpenAI coding
+D-SRQ010,D-54,Stable Diffusion,D-54,D-54,97,D-51,D-51,D-55,D-55,true,true,semantic_ok,,,stability.ai logo and image diffusion pipeline are explicit.
+D-SRQ011,D-57,Flow,D-57,D-57,67,D-53,D-53,D-56,D-56,true,true,weak_but_identifiable,,,Creative media flow board with image/video panels suggests Flow.
+D-SRQ012,D-24,GPT-3 系,D-24,D-24,64,D-21,D-21,D-20,D-20,true,true,weak_but_identifiable,,,OpenAI broad business adoption and chart imagery feels like GPT-3 era.
+D-SRQ013,B-18,Aqua Voice,B-18,B-18,86,D-71,D-71,B-13,B-13,true,true,semantic_ok,,,Voice input UI with mic controls and routing suggests Aqua Voice.
+D-SRQ014,D-58,Whisk,D-58,D-58,88,D-55,D-55,D-51,D-51,true,true,semantic_ok,,,Kitchen blender combining visual references is the classic Whisk cue.
+D-SRQ015,D-70,Amical,D-70,D-70,72,B-18,B-18,D-71,D-71,true,true,semantic_ok,,,Speech to secured laptop/documents with app logo suggests Amical solution.
+D-SRQ016,D-53,Veo,D-56,D-56,80,D-53,D-53,D-52,D-52,false,true,ambiguous,,,Filmstrip video generation and camera workflow fit Seedance.
+D-SRQ017,D-23,o3 系,D-23,D-23,72,D-20,D-20,D-22,D-22,true,true,semantic_ok,,,OpenAI reasoning tree with evaluation/check panels suggests o3.
