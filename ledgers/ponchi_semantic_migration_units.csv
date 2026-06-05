@@ -1,0 +1,27 @@
+unit_id,cluster_id,chapter,entry_ids,pass_mode,priority,status,next_action,commit_policy
+U000,semantic-foundation,ALL,registry;rules;migration-plan,mixed,P0,in_progress,commit foundation and migration plan,commit_after_plan
+U001,D-openai-model-series,D,D-20;D-21;D-22;D-23;D-24;D-25;D-26,mixed,P0,completed,D-25 recomposed; D-20/D-21/D-23 caption_required,committed
+U002,B-ms-copilot,B,B-15;B-16;B-17,exact_entry,P0,ready,recompose B-15 and B-16 if image generation available,commit_after_candidates
+U003,B-coding-assistants,B,B-4;B-5;B-6;B-7;B-8;D-35,exact_entry,P0,ready,recompose B-4 and B-7; focus retest B-8 and D-35,commit_after_candidates
+U004,B-ai-assistants-core,B,B-1;B-2;B-3;B-10;B-14;B-15;B-16;B-17;B-19,exact_entry,P1,active,fold in results from U002/U003 and retest remaining confusions,commit_after_review
+U005,J-hardware-accelerators,J,J-70;J-72;J-73;J-74;J-75;J-76;J-77,exact_entry,P1,active,review after J-72/J-73/J-76 fixes,commit_after_review
+U006,D-provider-generation-series,D,D-1;D-2;D-3;D-4;D-10;D-11;D-12;D-13;D-20;D-21,cluster_family,P1,planned,classify caption_required vs capability_milestone,commit_after_review
+U007,D-image-video-generation,D,D-51;D-52;D-53;D-55;D-57;D-58,type_distinction,P1,active,verify output-type distinctions after prior fixes,commit_after_review
+U008,I-browser-automation-mcp,I,I-20;I-21;I-22,exact_entry,P1,planned,pairwise Playwright/Puppeteer/DevTools review,commit_after_review
+U009,A-common-frontmatter,A,A-1;A-2;A-3;A-4;A-5;A-6;A-7;A-8;A-9;A-10;A-11,capability_milestone,P2,planned,frontmatter/meta meaning and color review,commit_after_review
+U010,C-organizations,C,C-1;C-2;C-3;C-4;C-5;C-6;C-7;C-8;C-9;C-10;C-11;C-12;C-13;C-14,exact_entry,P2,planned,organization identity plus role/context review,commit_after_review
+U011,C-people,C,C-50;C-51;C-52;C-53;C-54;C-55;C-56;C-57;C-58;C-59;C-60,caption_required,P2,planned,person role/context review without overclaiming likeness,commit_after_review
+U012,C-youtubers,C,C-80;C-81;C-82;C-83,exact_entry,P2,planned,channel identity/source review,commit_after_review
+U013,E-benchmarks,E,E-1;E-2;E-3;E-4;E-5;E-10;E-11;E-12;E-13;E-14;E-15;E-20;E-21;E-22;E-25;E-26;E-27;E-30;E-50,type_distinction,P2,planned,benchmark task/result/ranking distinctions,commit_after_review
+U014,F-languages-frameworks,F,F-1;F-2;F-3;F-4;F-5;F-6;F-7;F-8;F-9;F-10;F-11;F-12;F-13;F-14;F-15;F-16;F-17,exact_entry,P2,planned,language/framework logo dependency and use-case review,commit_after_review
+U015,F-devtools-git-editor,F,F-20;F-21;F-30;F-34;F-35;F-36;F-50;F-51;F-52;F-53;F-54;F-55;F-56;F-57;F-58;F-60;F-61;F-62;F-63;F-64;F-65,type_distinction,P2,planned,dev tool workflow distinctions,commit_after_review
+U016,F-cloud-db-runtime,F,F-22;F-23;F-24;F-25;F-26;F-40;F-41;F-42;F-43;F-44;F-70;F-71;F-72;F-73;F-74;F-80;F-81;F-82;F-83;F-84;F-85,type_distinction,P2,planned,cloud/db/runtime/shell distinctions,commit_after_review
+U017,G-llm-basic-concepts,G,G-1;G-2;G-3;G-4;G-5;G-6;G-7;G-8;G-9;G-10;G-11;G-12;G-13;G-14;G-15,type_distinction,P2,planned,LLM concept diagrams review,commit_after_review
+U018,G-llm-techniques-control,G,G-16;G-17;G-18;G-19;G-20;G-21;G-22;G-23;G-24;G-30;G-31;G-32;G-33;G-34;G-35;G-36;G-40;G-41;G-42;G-43;G-44;G-45;G-46;G-47,type_distinction,P2,planned,technique/control/ops distinctions,commit_after_review
+U019,H-history-timelines,H,H-50;H-51;H-52;H-53;H-54;H-55;H-56;H-57;H-63,capability_milestone,P2,planned,timeline/event distinction review,commit_after_review
+U020,H-workflows,H,H-1;H-2;H-3;H-4;H-5;H-6;H-7;H-8,capability_milestone,P2,planned,workflow/methodology review,commit_after_review
+U021,I-mcp-core,I,I-1;I-2;I-3;I-4;I-5;I-80;I-81,type_distinction,P2,planned,MCP core structure review,commit_after_review
+U022,I-mcp-tools,I,I-10;I-11;I-12;I-13;I-20;I-21;I-22;I-23;I-24;I-30;I-41;I-50,exact_entry,P2,planned,tool-specific MCP distinctions,commit_after_review
+U023,J-ai-ml-basics,J,J-1;J-2;J-3;J-4;J-10;J-11;J-12;J-13;J-14;J-15;J-16;J-17;J-18;J-19;J-20;J-21;J-22,type_distinction,P2,planned,AI/ML basic concept review,commit_after_review
+U024,J-law-ethics,J,J-50;J-51;J-52;J-53;J-54;J-55;J-56;J-62,capability_milestone,P2,planned,law/ethics meaning and color review,commit_after_review
+U025,J-ui-os-storage,J,J-30;J-31;J-32;J-33;J-40;J-41;J-42;J-43;J-70;J-71;J-72;J-73;J-74;J-75;J-76;J-77;J-78;J-79;J-80;J-81;J-90;J-91;J-92;J-93;J-100,type_distinction,P2,planned,general tech/hardware/storage/UI review including pending J-42,commit_after_review
