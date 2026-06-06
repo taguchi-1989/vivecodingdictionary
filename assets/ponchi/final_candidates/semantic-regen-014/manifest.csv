@@ -1,0 +1,5 @@
+entry_id,title,source_file,source_type,candidate_png,candidate_webp,candidate_status
+J-50,AI 倫理,assets\ponchi\experiments\batches\semantic-regen-014\J-50_base_1254x627.png,review_pending_base,J-50_candidate.png,J-50_candidate.webp,review_pending
+J-52,Sycophancy,assets\ponchi\experiments\batches\semantic-regen-014\J-52_base_1254x627.png,review_pending_base,J-52_candidate.png,J-52_candidate.webp,review_pending
+J-53,著作権法 30 条の 4（日本）,assets\ponchi\experiments\batches\semantic-regen-014\J-53_base_1254x627.png,review_pending_base,J-53_candidate.png,J-53_candidate.webp,review_pending
+J-54,ISO/IEC 42001,assets\ponchi\experiments\batches\semantic-regen-014\J-54_base_1254x627.png,review_pending_base,J-54_candidate.png,J-54_candidate.webp,review_pending
