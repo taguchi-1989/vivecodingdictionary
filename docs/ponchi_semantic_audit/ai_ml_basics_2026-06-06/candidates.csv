@@ -1,0 +1,18 @@
+entry_id,title,subtype,image_path,expected_signal,exists
+J-1,AGI,ai_concept,assets/ponchi/final/J-1.png,general intelligence across tasks,True
+J-2,強い AI／弱い AI,ai_concept,assets/ponchi/final/J-2.png,strong vs narrow AI contrast,True
+J-3,Singularity,ai_concept,assets/ponchi/final/J-3.png,accelerating capability threshold,True
+J-4,ASI,ai_concept,assets/ponchi/final/J-4.png,superintelligence above human level,True
+J-10,Machine Learning,ml_basic,assets/ponchi/final/J-10.png,data/training to model prediction,True
+J-11,Deep Learning,ml_basic,assets/ponchi/final/J-11.png,many-layer neural learning,True
+J-12,Neural Network,ml_basic,assets/ponchi/final/J-12.png,node/edge network structure,True
+J-13,Transformer,ml_basic,assets/ponchi/final/J-13.png,attention blocks/sequence model,True
+J-14,LLM,ml_basic,assets/ponchi/final/J-14.png,large text model pipeline,True
+J-15,VLM,ml_basic,assets/ponchi/final/J-15.png,vision-language image+text model,True
+J-16,Fine-tuning,ml_basic,assets/ponchi/final/J-16.png,adapt pretrained model to task,True
+J-17,Attention,ml_basic,assets/ponchi/final/J-17.png,focus weights over tokens/features,True
+J-18,MoE,ml_basic,assets/ponchi/final/J-18.png,router selects expert modules,True
+J-19,量子化,ml_basic,assets/ponchi/final/J-19.png,compress precision/weights,True
+J-20,Big Data,data_learning,assets/ponchi/final/J-20.png,large data collection/processing,True
+J-21,LoRA,data_learning,assets/ponchi/final/J-21.png,low-rank adapter fine-tuning,True
+J-22,パラメータ数の単位,data_learning,assets/ponchi/final/J-22.png,parameter count scale units,True
