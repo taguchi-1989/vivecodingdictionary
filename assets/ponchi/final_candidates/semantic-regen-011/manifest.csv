@@ -1,0 +1,3 @@
+entry_id,title,source_file,source_type,candidate_png,candidate_webp,candidate_status
+A-9,索引,assets\ponchi\experiments\batches\semantic-regen-011\A-9_base_1254x627.png,review_pending_base,A-9_candidate.png,A-9_candidate.webp,review_pending
+A-11,略称表記,assets\ponchi\experiments\batches\semantic-regen-011\A-11_base_1254x627.png,review_pending_base,A-11_candidate.png,A-11_candidate.webp,review_pending

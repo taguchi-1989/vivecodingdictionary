@@ -1,0 +1,12 @@
+blind_image_id,entry_id,title,source_file,semantic_focus
+AF-Q001,A-1,まえがき,assets/ponchi/final_candidates/ponchi-batch-001/A-1_candidate.png,preface / reader enters book
+AF-Q002,A-2,この本の読み方,assets/ponchi/final_candidates/ponchi-batch-001/A-2_candidate.png,how to read the book / reading path
+AF-Q003,A-3,図鑑の歩き方,assets/ponchi/final_candidates/ponchi-batch-001/A-3_candidate.png,navigation through encyclopedia entries
+AF-Q004,A-4,体験区分の凡例,assets/ponchi/final_candidates/ponchi-batch-001/A-4_candidate.png,experience category legend
+AF-Q005,A-5,読者レベルの凡例,assets/ponchi/final_candidates/ponchi-batch-001/A-5_candidate.png,reader level legend
+AF-Q006,A-6,評価日・時変情報の見方,assets/ponchi/final_candidates/semantic-regen-004/A-6_candidate.png,evaluation date and time-sensitive information
+AF-Q007,A-7,図のタイプ,assets/ponchi/final_candidates/ponchi-batch-001/A-7_candidate.png,figure type legend
+AF-Q008,A-8,色・記号の凡例,assets/ponchi/final_candidates/ponchi-batch-001/A-8_candidate.png,color and symbol legend
+AF-Q009,A-9,索引,assets/ponchi/final_candidates/semantic-regen-011/A-9_candidate.png,index / lookup grid with magnifier and page references
+AF-Q010,A-10,更新履歴と更新方針,assets/ponchi/final_candidates/ponchi-batch-001/A-10_candidate.png,update history and policy
+AF-Q011,A-11,略称表記,assets/ponchi/final_candidates/semantic-regen-011/A-11_candidate.png,abbreviation short-to-long mapping table
