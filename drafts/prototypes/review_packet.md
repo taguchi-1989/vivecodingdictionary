@@ -6,6 +6,20 @@
 3. 次に、デザイン案の方向性が合うか
 4. 最後に、細かい言い回しを見る
 
+確認の入口:
+- `drafts/prototypes/template_review_hub.html`
+
+## I/J ポンチ絵再生成の一覧成果物
+
+今回の I/J 全再生成は、production final を上書きせず、確認待ち候補としてステージ済みです。
+
+- 一覧: `docs/ponchi_semantic_audit/ij_full_regen_deliverables_2026-06-06.md`
+- 状態台帳: `ledgers/ij_full_regen_batches.csv`
+- 対象: I 章 19 点、J 章 50 点、合計 69 点
+- 結果: `semantic-regen-015`〜`semantic-regen-024` はすべて `candidate_staged`
+- 品質: high=61、mid=8、low=0
+- 確認順: 各 batch の `final_candidates_contact_sheet.png` → `results.md` → `comparison_audit.csv` → `candidate_update.csv`
+
 ## 本文テンプレについて
 現時点の共通本文:
 

@@ -66,6 +66,19 @@ Each rebuild batch must pass these checks:
 | `semantic-regen-023` | `J-50;J-51;J-52;J-53;J-54;J-55;J-56;J-62` | law/ethics/safety retest as full rebuild set | reuse semantic-regen-014 direction, add privacy-law fixes |
 | `semantic-regen-024` | `J-90;J-92;J-93` | UI/OS ecosystem | human workflow plus OS ecosystem diagrams |
 
+## Completion Summary
+
+All planned full I/J rebuild batches are staged as review candidates.
+
+| item | result |
+| --- | --- |
+| completed batches | `semantic-regen-015` through `semantic-regen-024` |
+| candidate count | 69 |
+| final production files | not overwritten |
+| quality score | high=61, mid=8, low=0 |
+| status ledger | `ledgers/ij_full_regen_batches.csv` |
+| deliverables index | `docs/ponchi_semantic_audit/ij_full_regen_deliverables_2026-06-06.md` |
+
 ## First Batch Acceptance
 
 `semantic-regen-015` is accepted only if:

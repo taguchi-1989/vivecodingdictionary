@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>バイブコーディング図鑑 - テンプレ確認ハブ</title>
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f7f9fc;
+    --paper: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --line: #cbd5e1;
+    --blue: #2563eb;
+    --blue-soft: #dbeafe;
+    --blue-deep: #1e3a8a;
+    --warn: #fef3c7;
+    --shadow: 0 18px 40px rgba(37, 99, 235, 0.08);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", system-ui, sans-serif;
+    background: linear-gradient(180deg, #f8fbff 0%, var(--bg) 100%);
+    color: var(--text);
+    line-height: 1.65;
+  }
+
+  .shell {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 40px 20px 72px;
+  }
+
+  .hero {
+    display: grid;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .hero-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: var(--shadow);
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: var(--blue-soft);
+    color: var(--blue-deep);
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  h1 {
+    margin: 12px 0 8px;
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.08;
+    font-weight: 800;
+  }
+
+  .lede {
+    margin: 0;
+    max-width: 860px;
+    color: var(--muted);
+    font-size: 15px;
+  }
+
+  .meta-grid,
+  .content-grid,
+  .decision-grid {
+    display: grid;
+    gap: 16px;
+  }
+
+  .meta-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin-top: 18px;
+  }
+
+  .meta-box,
+  .panel,
+  .entry-card,
+  .decision-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+  }
+
+  .meta-box {
+    padding: 18px;
+  }
+
+  .meta-box strong,
+  .decision-card strong {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--blue-deep);
+    font-size: 13px;
+    letter-spacing: 0.02em;
+  }
+
+  .meta-box p,
+  .decision-card p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .content-grid {
+    grid-template-columns: 320px minmax(0, 1fr);
+    margin-top: 22px;
+  }
+
+  .panel {
+    padding: 22px;
+  }
+
+  .panel h2,
+  .entries h2,
+  .decision-strip h2 {
+    margin: 0 0 12px;
+    font-size: 20px;
+  }
+
+  .checklist,
+  .linklist,
+  .decision-list {
+    display: grid;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .checklist li,
+  .linklist li,
+  .decision-list li {
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: #fbfdff;
+    font-size: 14px;
+  }
+
+  .linklist a,
+  .entry-card a,
+  .footer-links a {
+    color: var(--blue-deep);
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .linklist a:hover,
+  .entry-card a:hover,
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+
+  .entries {
+    display: grid;
+    gap: 16px;
+  }
+
+  .entry-card {
+    overflow: hidden;
+  }
+
+  .entry-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 12px;
+    padding: 18px 20px 14px;
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  }
+
+  .entry-kicker {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .entry-title {
+    flex: 1 1 100%;
+    margin: 2px 0 0;
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: white;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .pill.blue {
+    background: var(--blue-soft);
+    border-color: #bfd4ff;
+    color: var(--blue-deep);
+  }
+
+  .pill.warn {
+    background: #fffaf0;
+    border-color: #f5d68a;
+    color: #8a5a00;
+  }
+
+  .entry-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.9fr);
+    gap: 18px;
+    padding: 18px 20px 20px;
+  }
+
+  .entry-body p {
+    margin: 0 0 10px;
+    font-size: 14px;
+  }
+
+  .entry-body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .mini-figure {
+    min-height: 230px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background:
+      radial-gradient(circle at top right, rgba(37, 99, 235, 0.12), transparent 32%),
+      linear-gradient(180deg, #ffffff 0%, #f4f8ff 100%);
+    padding: 16px;
+    display: grid;
+    gap: 12px;
+    align-content: start;
+  }
+
+  .mini-figure h3 {
+    margin: 0;
+    font-size: 14px;
+    color: var(--blue-deep);
+  }
+
+  .structure-demo,
+  .compare-demo,
+  .beforeafter-demo {
+    display: grid;
+    gap: 10px;
+  }
+
+  .structure-box,
+  .compare-row div,
+  .beforeafter-box {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.9);
+  }
+
+  .structure-box {
+    padding: 11px 12px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .structure-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .compare-axis {
+    height: 94px;
+    border: 1px dashed #9fb9ea;
+    border-radius: 12px;
+    position: relative;
+    background: rgba(255,255,255,0.84);
+  }
+
+  .compare-axis::before,
+  .compare-axis::after {
+    content: "";
+    position: absolute;
+    background: #b9cdf3;
+  }
+
+  .compare-axis::before {
+    left: 50%;
+    top: 10px;
+    bottom: 10px;
+    width: 1px;
+    transform: translateX(-50%);
+  }
+
+  .compare-axis::after {
+    top: 50%;
+    left: 10px;
+    right: 10px;
+    height: 1px;
+    transform: translateY(-50%);
+  }
+
+  .dot {
+    position: absolute;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: var(--blue);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    transform: translate(-50%, -50%);
+  }
+
+  .dot.pro { left: 38%; top: 26%; }
+  .dot.flash { left: 54%; top: 48%; }
+  .dot.lite { left: 72%; top: 68%; }
+
+  .compare-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .compare-row div {
+    padding: 11px;
+    font-size: 12px;
+  }
+
+  .compare-row strong,
+  .beforeafter-box strong {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--blue-deep);
+    font-size: 13px;
+  }
+
+  .beforeafter-demo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .beforeafter-box {
+    padding: 12px;
+    min-height: 124px;
+  }
+
+  .beforeafter-box code {
+    display: block;
+    margin-top: 8px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: #f8fafc;
+    color: #334155;
+    font-size: 12px;
+    line-height: 1.5;
+    white-space: pre-line;
+  }
+
+  .decision-strip {
+    margin-top: 24px;
+  }
+
+  .decision-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin-top: 14px;
+  }
+
+  .decision-card {
+    padding: 18px;
+  }
+
+  .footer-links {
+    margin-top: 30px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  @media (max-width: 980px) {
+    .content-grid,
+    .entry-body {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .shell { padding: 24px 14px 48px; }
+    .hero-card,
+    .panel,
+    .decision-card { padding: 18px; }
+    .entry-head,
+    .entry-body { padding: 16px; }
+    .compare-row,
+    .structure-row,
+    .beforeafter-demo { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-card">
+        <span class="eyebrow">Template Review</span>
+        <h1>今見るべきものだけをまとめた確認ハブ</h1>
+        <p class="lede">既存の本文サンプル、誌面プレビュー、デザイン案、判断メモをひとつに集約した。まずここで標準レイアウトを比べ、細部は既存の `preview` と `mockups` に降りる前提。</p>
+        <div class="meta-grid">
+          <div class="meta-box">
+            <strong>まず決めること</strong>
+            <p>本文の共通見出し、標準レイアウトを3種類に絞るか、公開面と裏台帳の情報分離。</p>
+          </div>
+          <div class="meta-box">
+            <strong>今は保留でよいこと</strong>
+            <p>最終紙面サイズ、アイコン細部、図解の最終画像、印刷ツールの固定。</p>
+          </div>
+          <div class="meta-box">
+            <strong>現時点の仮説</strong>
+            <p>本文は共通化し、誌面は `structure` `comparison` `before_after` で分ける。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-grid">
+      <aside class="panel">
+        <h2>確認順</h2>
+        <ol class="checklist">
+          <li>読者に合っているか</li>
+          <li>本文量が多すぎないか</li>
+          <li>レイアウトの方向が合うか</li>
+          <li>最後に細かい言い回しを見る</li>
+        </ol>
+
+        <h2 style="margin-top:22px;">関連メモ</h2>
+        <ul class="linklist">
+          <li><a href="./review_packet.md">review_packet.md</a><br>確認時の見る順番と論点。</li>
+          <li><a href="./page_wireframes.md">page_wireframes.md</a><br>4種類のワイヤー。</li>
+          <li><a href="./design_tokens.md">design_tokens.md</a><br>色とラベルの案。</li>
+          <li><a href="./layout_decision_log.md">layout_decision_log.md</a><br>仮決定と保留事項。</li>
+          <li><a href="./mockups/index.html">mockups/index.html</a><br>既存のデザインモック一覧。</li>
+          <li><a href="../../docs/ponchi_semantic_audit/ij_full_regen_deliverables_2026-06-06.md">I/Jポンチ再生成一覧</a><br>69点の候補ステージ結果と確認用成果物。</li>
+        </ul>
+      </aside>
+
+      <section class="entries">
+        <h2>標準候補の3レイアウト</h2>
+
+        <article class="entry-card">
+          <header class="entry-head">
+            <span class="entry-kicker">Structure</span>
+            <span class="pill blue">Service</span>
+            <span class="pill">Lv.2</span>
+            <span class="pill warn">更新頻度: 高</span>
+            <h3 class="entry-title">Gemini / 図鑑カード型</h3>
+          </header>
+          <div class="entry-body">
+            <div>
+              <p><strong>見せたいこと:</strong> 「Gemini」という言葉がサービス、API、モデル群、Vertex AI をまたぐ構造。</p>
+              <p><strong>向いている:</strong> Service / Tool / Person の入口ページ。</p>
+              <p><strong>判断ポイント:</strong> 図鑑らしさは強い。長文には弱いので、説明を短い箱に切る前提が必要。</p>
+              <p><a href="./preview/B-1.html">既存プレビュー B-1 を開く</a> / <a href="../..//content/entries/service/101_gemini[凍].md">凍結サンプル本文を見る</a></p>
+            </div>
+            <div class="mini-figure">
+              <h3>構造図の見せ方</h3>
+              <div class="structure-demo">
+                <div class="structure-box">Gemini</div>
+                <div class="structure-row">
+                  <div class="structure-box">Chat</div>
+                  <div class="structure-box">API</div>
+                  <div class="structure-box">Vertex AI</div>
+                </div>
+                <div class="structure-row">
+                  <div class="structure-box">Pro</div>
+                  <div class="structure-box">Flash</div>
+                  <div class="structure-box">Flash-Lite</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="entry-card">
+          <header class="entry-head">
+            <span class="entry-kicker">Comparison</span>
+            <span class="pill blue">Model</span>
+            <span class="pill">Lv.2</span>
+            <span class="pill warn">更新頻度: 高</span>
+            <h3 class="entry-title">Gemini 2.5 Pro / Flash / Flash-Lite / 比較マップ型</h3>
+          </header>
+          <div class="entry-body">
+            <div>
+              <p><strong>見せたいこと:</strong> 「一番賢いものを使う」ではなく、仕事の重さに応じて選ぶこと。</p>
+              <p><strong>向いている:</strong> Model / Benchmark / 複数候補比較。</p>
+              <p><strong>判断ポイント:</strong> 違いを直感で掴みやすい。数値や価格を入れすぎると更新負荷が上がる。</p>
+              <p><a href="./preview/D-2.html">既存プレビュー D-2 を開く</a> / <a href="../../content/entries/model/201_gemini_models[凍].md">凍結サンプル本文を見る</a></p>
+            </div>
+            <div class="mini-figure">
+              <h3>比較図の見せ方</h3>
+              <div class="compare-demo">
+                <div class="compare-axis">
+                  <span class="dot pro">Pro</span>
+                  <span class="dot flash">Flash</span>
+                  <span class="dot lite">Lite</span>
+                </div>
+                <div class="compare-row">
+                  <div><strong>Pro</strong>深く考える</div>
+                  <div><strong>Flash</strong>普段使い</div>
+                  <div><strong>Lite</strong>軽く大量に回す</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="entry-card">
+          <header class="entry-head">
+            <span class="entry-kicker">Before / After</span>
+            <span class="pill blue">Term</span>
+            <span class="pill">Lv.2</span>
+            <span class="pill">更新頻度: 中</span>
+            <h3 class="entry-title">TypeScript / Before・After 型</h3>
+          </header>
+          <div class="entry-body">
+            <div>
+              <p><strong>見せたいこと:</strong> 「何が嬉しいのか」を一目で理解させること。実行後に気づくミスが、書いている途中で見える。</p>
+              <p><strong>向いている:</strong> 技術用語、導入前後で意味が変わる概念、つまずきが明確な項目。</p>
+              <p><strong>判断ポイント:</strong> 非エンジニア向けの入口として強い。単純化しすぎると正確さが落ちるので本文の補足が必要。</p>
+              <p><a href="./preview/F-2.html">既存プレビュー F-2 を開く</a> / <a href="../../content/entries/term/302_typescript[凍].md">凍結サンプル本文を見る</a></p>
+            </div>
+            <div class="mini-figure">
+              <h3>対比図の見せ方</h3>
+              <div class="beforeafter-demo">
+                <div class="beforeafter-box">
+                  <strong>Before</strong>
+                  実行してからズレに気づく
+                  <code>add('1', 2)
+=> '12'</code>
+                </div>
+                <div class="beforeafter-box">
+                  <strong>After</strong>
+                  実行前に赤線で気づく
+                  <code>add('1', 2)
+// type error</code>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </section>
+
+    <section class="decision-strip">
+      <h2>今の判断材料</h2>
+      <div class="decision-grid">
+        <div class="decision-card">
+          <strong>採用候補</strong>
+          <p>`structure` `comparison` `before_after` の3本を標準にする案が最も量産しやすい。</p>
+        </div>
+        <div class="decision-card">
+          <strong>公開面に出すか迷う情報</strong>
+          <p>`出典メモ` と `コミュニティ補完メモ` は公開ページから外し、裏台帳へ逃がす案もありえる。</p>
+        </div>
+        <div class="decision-card">
+          <strong>次に見る対象</strong>
+          <p>余裕があれば `ESLint` と `Next.js` を同じルールで当てて、例外が多すぎないか確認する。</p>
+        </div>
+        <div class="decision-card">
+          <strong>I/Jポンチ絵の確認</strong>
+          <p>全69点は `semantic-regen-015`〜`024` で候補化済み。まず一覧から contact sheet を見て、近い概念同士の識別性を確認する。</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-links">
+      <span><a href="./mockups/index.html">モック一覧</a></span>
+      <span><a href="./preview/B-1.html">Gemini preview</a></span>
+      <span><a href="./preview/D-2.html">Gemini 2.5 preview</a></span>
+      <span><a href="./preview/F-2.html">TypeScript preview</a></span>
+      <span><a href="../../content/frontmatter/00_concept_spread.md">concept spread</a></span>
+    </div>
+  </main>
+</body>
+</html>
