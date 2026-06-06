@@ -1,0 +1,26 @@
+slot,entry_id,title,subtype,image_path,expected_signal
+1,G-16,Embedding,technique,assets/ponchi/final/G-16.png,text/data converted into vector representation
+2,G-17,ベクトル DB,technique,assets/ponchi/final/G-17.png,vector index/search database
+3,G-18,Chain of Thought,technique,assets/ponchi/final/G-18.png,step-by-step reasoning chain
+4,G-19,Prompt Caching,technique,assets/ponchi/final/G-19.png,reuse cached prompt/context prefix
+5,G-20,CLAUDE.md,config_file,assets/ponchi/final/G-20.png,project instruction file for Claude Code
+6,G-21,AGENTS.md,config_file,assets/ponchi/final/G-21.png,agent instruction file shared across tools
+7,G-22,SKILL.md,config_file,assets/ponchi/final/G-22.png,Codex skill instruction package
+8,G-23,.claude/settings.json,config_file,assets/ponchi/final/G-23.png,Claude settings JSON configuration
+9,G-30,Tool Use,control,assets/ponchi/final/G-30.png,model calls external tools
+10,G-31,Hook,control,assets/ponchi/final/G-31.png,event hook intercepts workflow
+11,G-32,Slash Command,control,assets/ponchi/final/G-32.png,typed slash command shortcut
+12,G-33,Function Calling,control,assets/ponchi/final/G-33.png,structured function schema call
+13,G-34,Code Interpreter,code_execution,assets/ponchi/final/G-34.png,sandboxed code execution/results
+14,G-35,Deep Research,control,assets/ponchi/final/G-35.png,multi-step research and synthesis
+15,G-36,Artifact,control,assets/ponchi/final/G-36.png,generated document/app artifact output
+16,G-38,Plan Mode,control,assets/ponchi/final/G-38.png,planning gate before execution
+17,G-39,Permission,control,assets/ponchi/final/G-39.png,approval/permission boundary
+18,G-40,バイブコーディング,ops,assets/ponchi/final/G-40.png,human intent drives iterative coding
+19,G-41,Subagent,ops,assets/ponchi/final/G-41.png,delegated specialized agent worker
+20,G-42,Worktree,ops,assets/ponchi/final/G-42.png,separate git working tree branch context
+21,G-43,オーケストレーション,ops,assets/ponchi/final/G-43.png,coordinating tools/agents/workflows
+22,G-44,マルチエージェント協調,ops,assets/ponchi/final/G-44.png,multiple agents collaborating
+23,G-45,段階的開示,ops,assets/ponchi/final/G-45.png,progressive disclosure of details
+24,G-46,ナーフ（モデルの劣化体感）,ops,assets/ponchi/final/G-46.png,perceived model capability drop
+25,G-47,Auto-compact,ops,assets/ponchi/final/G-47.png,conversation context compaction
