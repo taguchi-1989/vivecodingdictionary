@@ -1,0 +1,50 @@
+entry_id,title,type,subtype,image_path,exists
+B-9,v0,,ai_assistant,assets/ponchi/final/B-9.webp,True
+B-11,Bolt.new,,ai_assistant,assets/ponchi/final/B-11.webp,True
+B-12,Perplexity,,ai_assistant,assets/ponchi/final/B-12.webp,True
+B-13,ElevenLabs,,tts_service,assets/ponchi/final/B-13.webp,True
+B-18,Aqua Voice,,voice_input_saas,assets/ponchi/final/B-18.webp,True
+B-20,Vercel,,hosting_cloud,assets/ponchi/final/B-20.webp,True
+B-21,Netlify,,hosting_cloud,assets/ponchi/final/B-21.webp,True
+B-22,Cloudflare,,hosting_cloud,assets/ponchi/final/B-22.webp,True
+B-23,AWS,,hosting_cloud,assets/ponchi/final/B-23.webp,True
+B-24,Google Cloud,,hosting_cloud,assets/ponchi/final/B-24.webp,True
+B-25,Azure,,hosting_cloud,assets/ponchi/final/B-25.webp,True
+B-26,Azure OpenAI,,managed_ai,assets/ponchi/final/B-26.webp,True
+B-27,Vertex AI,,managed_ai,assets/ponchi/final/B-27.webp,True
+B-28,Render,,hosting_cloud,assets/ponchi/final/B-28.webp,True
+B-29,Supabase,,baas,assets/ponchi/final/B-29.webp,True
+B-30,Amazon Bedrock,,managed_ai,assets/ponchi/final/B-30.webp,True
+B-31,Excalidraw,,saas_design,assets/ponchi/final/B-31.webp,True
+B-32,Figma,,saas_design,assets/ponchi/final/B-32.webp,True
+B-33,Canva,,saas_design,assets/ponchi/final/B-33.webp,True
+B-40,Reddit,,info_source,assets/ponchi/final/B-40.webp,True
+B-41,arXiv,,info_source,assets/ponchi/final/B-41.webp,True
+B-50,Claude の料金プラン,,pricing,assets/ponchi/final/B-50.webp,True
+B-51,ChatGPT の料金プラン,,pricing,assets/ponchi/final/B-51.webp,True
+B-52,Gemini の料金プラン,,pricing,assets/ponchi/final/B-52.webp,True
+B-60,Suno,,creative_media,assets/ponchi/final/B-60.webp,True
+B-61,ACE-Step 1.5,,creative_media,assets/ponchi/final/B-61.webp,True
+D-14,Claude Mythos Preview,,frontier_model,assets/ponchi/final/D-14.webp,True
+D-30,Grok 系,,xai,assets/ponchi/final/D-30.webp,True
+D-40,Llama 系,,open,assets/ponchi/final/D-40.webp,True
+D-41,Mistral 系,,open,assets/ponchi/final/D-41.webp,True
+D-42,Gemma 系,,open,assets/ponchi/final/D-42.webp,True
+D-43,Qwen 系,,open,assets/ponchi/final/D-43.webp,True
+D-44,Kimi,,open,assets/ponchi/final/D-44.webp,True
+D-45,GLM,,open_weight_llm,assets/ponchi/final/D-45.webp,True
+D-46,DeepSeek V3,,open,assets/ponchi/final/D-46.webp,True
+D-47,DeepSeek R1,,open,assets/ponchi/final/D-47.webp,True
+D-50,DALL-E,,image_video,assets/ponchi/final/D-50.webp,True
+D-54,Stable Diffusion,,image_video,assets/ponchi/final/D-54.webp,True
+D-56,Seedance,,video_generation,assets/ponchi/final/D-56.webp,True
+D-60,AlphaGo,,historical,assets/ponchi/final/D-60.webp,True
+D-70,Amical,,ai_solution,assets/ponchi/final/D-70.webp,True
+D-71,Whisper,,voice_audio,assets/ponchi/final/D-71.webp,True
+F-37,Japanese Language Pack for VS Code,,editor_ext,assets/ponchi/final/F-37.webp,True
+F-38,Markdown All in One,,editor_ext,assets/ponchi/final/F-38.webp,True
+H-58,Transformer 論文,,paper,assets/ponchi/final/H-58.webp,True
+H-59,AI エージェント元年,,era,assets/ponchi/final/H-59.webp,True
+H-60,Codex → GitHub Copilot の系譜,,timeline,assets/ponchi/final/H-60.webp,True
+H-61,Preview 版という文化,,culture,assets/ponchi/final/H-61.webp,True
+H-62,Anthropic 創業の流れ,,event,assets/ponchi/final/H-62.webp,True
