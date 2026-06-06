@@ -1,0 +1,11 @@
+entry_id,title,source_file,source_type,candidate_png,candidate_webp,candidate_status
+J-1,AGI,assets\ponchi\experiments\batches\semantic-regen-020\J-1_base_1254x627.png,review_pending_base,J-1_candidate.png,J-1_candidate.webp,review_pending
+J-2,強い AI／弱い AI,assets\ponchi\experiments\batches\semantic-regen-020\J-2_base_1254x627.png,review_pending_base,J-2_candidate.png,J-2_candidate.webp,review_pending
+J-3,Singularity,assets\ponchi\experiments\batches\semantic-regen-020\J-3_base_1254x627.png,review_pending_base,J-3_candidate.png,J-3_candidate.webp,review_pending
+J-4,ASI,assets\ponchi\experiments\batches\semantic-regen-020\J-4_base_1254x627.png,review_pending_base,J-4_candidate.png,J-4_candidate.webp,review_pending
+J-10,Machine Learning,assets\ponchi\experiments\batches\semantic-regen-020\J-10_base_1254x627.png,review_pending_base,J-10_candidate.png,J-10_candidate.webp,review_pending
+J-11,Deep Learning,assets\ponchi\experiments\batches\semantic-regen-020\J-11_base_1254x627.png,review_pending_base,J-11_candidate.png,J-11_candidate.webp,review_pending
+J-12,Neural Network,assets\ponchi\experiments\batches\semantic-regen-020\J-12_base_1254x627.png,review_pending_base,J-12_candidate.png,J-12_candidate.webp,review_pending
+J-13,Transformer,assets\ponchi\experiments\batches\semantic-regen-020\J-13_base_1254x627.png,review_pending_base,J-13_candidate.png,J-13_candidate.webp,review_pending
+J-14,LLM,assets\ponchi\experiments\batches\semantic-regen-020\J-14_base_1254x627.png,review_pending_base,J-14_candidate.png,J-14_candidate.webp,review_pending
+J-15,VLM,assets\ponchi\experiments\batches\semantic-regen-020\J-15_base_1254x627.png,review_pending_base,J-15_candidate.png,J-15_candidate.webp,review_pending
