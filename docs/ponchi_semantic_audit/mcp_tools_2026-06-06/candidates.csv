@@ -1,0 +1,13 @@
+entry_id,title,subtype,image_path,expected_signal,exists
+I-10,Filesystem MCP,reference,assets/ponchi/final/I-10.png,local file read/write MCP,True
+I-11,GitHub MCP,reference,assets/ponchi/final/I-11.png,GitHub repo/issue/PR operations,True
+I-12,Git MCP,reference,assets/ponchi/final/I-12.png,local git repository operations,True
+I-13,Slack MCP,reference,assets/ponchi/final/I-13.png,team chat/workspace messaging,True
+I-20,Playwright MCP,dev_automation,assets/ponchi/final/I-20.png,cross-browser automation/test,True
+I-21,Puppeteer MCP,dev_automation,assets/ponchi/final/I-21.png,single-browser script automation,True
+I-22,Chrome DevTools MCP,dev_automation,assets/ponchi/final/I-22.png,DevTools inspect/network/performance,True
+I-23,Serena MCP,dev_automation,assets/ponchi/final/I-23.png,codebase semantic editing/navigation,True
+I-24,Context7 MCP,dev_automation,assets/ponchi/final/I-24.png,fresh docs/context lookup,True
+I-30,Notion MCP,collab,assets/ponchi/final/I-30.png,workspace notes/database integration,True
+I-41,SQLite MCP,data,assets/ponchi/final/I-41.png,SQLite database query/edit,True
+I-50,AWS MCP,cloud,assets/ponchi/final/I-50.png,AWS cloud resource operations,True

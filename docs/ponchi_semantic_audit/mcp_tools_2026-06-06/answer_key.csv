@@ -1,0 +1,13 @@
+slot,entry_id,title,subtype,image_path,expected_signal
+1,I-10,Filesystem MCP,reference,assets/ponchi/final/I-10.png,local file read/write MCP
+2,I-11,GitHub MCP,reference,assets/ponchi/final/I-11.png,GitHub repo/issue/PR operations
+3,I-12,Git MCP,reference,assets/ponchi/final/I-12.png,local git repository operations
+4,I-13,Slack MCP,reference,assets/ponchi/final/I-13.png,team chat/workspace messaging
+5,I-20,Playwright MCP,dev_automation,assets/ponchi/final/I-20.png,cross-browser automation/test
+6,I-21,Puppeteer MCP,dev_automation,assets/ponchi/final/I-21.png,single-browser script automation
+7,I-22,Chrome DevTools MCP,dev_automation,assets/ponchi/final/I-22.png,DevTools inspect/network/performance
+8,I-23,Serena MCP,dev_automation,assets/ponchi/final/I-23.png,codebase semantic editing/navigation
+9,I-24,Context7 MCP,dev_automation,assets/ponchi/final/I-24.png,fresh docs/context lookup
+10,I-30,Notion MCP,collab,assets/ponchi/final/I-30.png,workspace notes/database integration
+11,I-41,SQLite MCP,data,assets/ponchi/final/I-41.png,SQLite database query/edit
+12,I-50,AWS MCP,cloud,assets/ponchi/final/I-50.png,AWS cloud resource operations
