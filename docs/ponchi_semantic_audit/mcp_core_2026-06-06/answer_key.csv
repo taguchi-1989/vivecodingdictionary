@@ -1,0 +1,8 @@
+slot,entry_id,title,subtype,image_path,expected_signal
+1,I-1,MCP,protocol,assets/ponchi/final/I-1.png,overall model-context-protocol bridge
+2,I-2,MCP Server,protocol,assets/ponchi/final/I-2.png,server exposes tools/resources
+3,I-3,MCP Client,protocol,assets/ponchi/final/I-3.png,client connects model host to servers
+4,I-4,MCP Transport,protocol,assets/ponchi/final/I-4.png,transport channel/messages
+5,I-5,MCP SDK,protocol,assets/ponchi/final/I-5.png,developer SDK building blocks
+6,I-80,自作 MCP のテンプレ,diy,assets/ponchi/final/I-80.png,template project for custom MCP
+7,I-81,MCP の登録・設定,diy,assets/ponchi/final/I-81.png,registration/configuration of MCP server
