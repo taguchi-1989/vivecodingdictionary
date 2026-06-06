@@ -1,0 +1,16 @@
+slot,entry_id,title,subtype,image_path,expected_signal
+1,G-1,Context (コンテキスト),basic,assets/ponchi/final/G-1.png,surrounding conversation/state supplied to model
+2,G-2,Token,basic,assets/ponchi/final/G-2.png,text pieces counted and processed
+3,G-3,Dictation,basic,assets/ponchi/final/G-3.png,voice/text dictation into prompt
+4,G-4,System Prompt,basic,assets/ponchi/final/G-4.png,top-level instruction layer controlling assistant
+5,G-5,Context Window,basic,assets/ponchi/final/G-5.png,limited window holding tokens/context
+6,G-6,One-shot,basic,assets/ponchi/final/G-6.png,single example in prompt
+7,G-7,指示追従性,basic,assets/ponchi/final/G-7.png,instruction following from request to compliant output
+8,G-8,決定論的／非決定論的,basic,assets/ponchi/final/G-8.png,same input stable vs varied outputs
+9,G-9,effort レベル,basic,assets/ponchi/final/G-9.png,reasoning effort/compute level ladder
+10,G-10,Prompt Engineering,technique,assets/ponchi/final/G-10.png,crafting instructions/examples/constraints
+11,G-11,Context Engineering,technique,assets/ponchi/final/G-11.png,curating inputs/tools/memory around model
+12,G-12,Agent Design,technique,assets/ponchi/final/G-12.png,agent loop/tool/planning architecture
+13,G-13,Few-shot Learning,technique,assets/ponchi/final/G-13.png,multiple examples guiding behavior
+14,G-14,Thinking モデル,technique,assets/ponchi/final/G-14.png,deliberate reasoning before answer
+15,G-15,RAG,technique,assets/ponchi/final/G-15.png,retrieve documents then generate answer

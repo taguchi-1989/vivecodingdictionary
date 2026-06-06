@@ -1,0 +1,16 @@
+entry_id,title,subtype,image_path,expected_signal,exists
+G-1,Context (コンテキスト),basic,assets/ponchi/final/G-1.png,surrounding conversation/state supplied to model,True
+G-2,Token,basic,assets/ponchi/final/G-2.png,text pieces counted and processed,True
+G-3,Dictation,basic,assets/ponchi/final/G-3.png,voice/text dictation into prompt,True
+G-4,System Prompt,basic,assets/ponchi/final/G-4.png,top-level instruction layer controlling assistant,True
+G-5,Context Window,basic,assets/ponchi/final/G-5.png,limited window holding tokens/context,True
+G-6,One-shot,basic,assets/ponchi/final/G-6.png,single example in prompt,True
+G-7,指示追従性,basic,assets/ponchi/final/G-7.png,instruction following from request to compliant output,True
+G-8,決定論的／非決定論的,basic,assets/ponchi/final/G-8.png,same input stable vs varied outputs,True
+G-9,effort レベル,basic,assets/ponchi/final/G-9.png,reasoning effort/compute level ladder,True
+G-10,Prompt Engineering,technique,assets/ponchi/final/G-10.png,crafting instructions/examples/constraints,True
+G-11,Context Engineering,technique,assets/ponchi/final/G-11.png,curating inputs/tools/memory around model,True
+G-12,Agent Design,technique,assets/ponchi/final/G-12.png,agent loop/tool/planning architecture,True
+G-13,Few-shot Learning,technique,assets/ponchi/final/G-13.png,multiple examples guiding behavior,True
+G-14,Thinking モデル,technique,assets/ponchi/final/G-14.png,deliberate reasoning before answer,True
+G-15,RAG,technique,assets/ponchi/final/G-15.png,retrieve documents then generate answer,True
