@@ -1,0 +1,9 @@
+entry_id,title,subtype,image_path,expected_signal,exists
+H-1,TDD,methodology,assets/ponchi/final/H-1.png,red-green-refactor test loop,True
+H-2,ペアプログラミング,methodology,assets/ponchi/final/H-2.png,two people collaborating on code,True
+H-3,バイブコーディングの流儀,methodology,assets/ponchi/final/H-3.png,AI-assisted iterative coding style,True
+H-4,コードレビュー,methodology,assets/ponchi/final/H-4.png,review comments and approval,True
+H-5,Scrum / Agile,methodology,assets/ponchi/final/H-5.png,sprint/kanban/team iteration,True
+H-6,Git Flow,methodology,assets/ponchi/final/H-6.png,branching/release workflow,True
+H-7,CI/CD,methodology,assets/ponchi/final/H-7.png,automated build/test/deploy pipeline,True
+H-8,DevOps,methodology,assets/ponchi/final/H-8.png,development-operations feedback loop,True
