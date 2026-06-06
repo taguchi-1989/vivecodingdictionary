@@ -1,0 +1,11 @@
+entry_id,title,semantic_focus
+D-1,Gemini 2 series,"Google/Gemini generation family, multimodal baseline"
+D-2,Gemini 2.5 series,Gemini incremental generation step / stronger reasoning or capability tier
+D-3,Gemini 3 series,future Gemini generation ladder / new major step
+D-4,Gemini 3.1 series,Gemini minor generation refinement after Gemini 3
+D-10,Claude 3 series,Claude generation family baseline
+D-11,Claude 3.5 series,Claude incremental generation step
+D-12,Claude 4 series,Claude major generation step
+D-13,Claude 4.5 series,Claude incremental generation step after Claude 4
+D-20,GPT-5 series,OpenAI GPT generation step / caption-supported exactness
+D-21,GPT-4 series,OpenAI GPT-4 generation / caption-supported exactness

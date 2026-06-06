@@ -1,0 +1,11 @@
+blind_image_id,entry_id,title,source_file,semantic_focus
+PG-Q001,D-1,Gemini 2 series,assets/ponchi/final_candidates/ponchi-batch-005/D-1_candidate.png,"Google/Gemini generation family, multimodal baseline"
+PG-Q002,D-2,Gemini 2.5 series,assets/ponchi/final_candidates/ponchi-batch-005/D-2_candidate.png,Gemini incremental generation step / stronger reasoning or capability tier
+PG-Q003,D-3,Gemini 3 series,assets/ponchi/final_candidates/ponchi-batch-005/D-3_candidate.png,future Gemini generation ladder / new major step
+PG-Q004,D-4,Gemini 3.1 series,assets/ponchi/final_candidates/ponchi-batch-005/D-4_candidate.png,Gemini minor generation refinement after Gemini 3
+PG-Q005,D-10,Claude 3 series,assets/ponchi/final_candidates/ponchi-batch-005/D-10_candidate.png,Claude generation family baseline
+PG-Q006,D-11,Claude 3.5 series,assets/ponchi/final_candidates/ponchi-batch-005/D-11_candidate.png,Claude incremental generation step
+PG-Q007,D-12,Claude 4 series,assets/ponchi/final_candidates/ponchi-batch-005/D-12_candidate.png,Claude major generation step
+PG-Q008,D-13,Claude 4.5 series,assets/ponchi/final_candidates/ponchi-batch-005/D-13_candidate.png,Claude incremental generation step after Claude 4
+PG-Q009,D-20,GPT-5 series,assets/ponchi/final_candidates/ponchi-batch-005/D-20_candidate.png,OpenAI GPT generation step / caption-supported exactness
+PG-Q010,D-21,GPT-4 series,assets/ponchi/final_candidates/ponchi-batch-005/D-21_candidate.png,OpenAI GPT-4 generation / caption-supported exactness
