@@ -1,0 +1,7 @@
+entry_id,title,semantic_focus
+D-51,Imagen,still image generation model / text-to-image outputs
+D-52,Sora,OpenAI video generation model / cinematic video output
+D-53,Veo,Google video generation model / video output timeline
+D-55,Nano Banana,Gemini image generation/editing nickname or image model family
+D-57,Flow,creator-facing video/storyboarding studio workflow
+D-58,Whisk,image remix/ingredient blending workflow

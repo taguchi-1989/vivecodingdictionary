@@ -1,0 +1,7 @@
+blind_image_id,entry_id,title,source_file,semantic_focus
+IV-Q001,D-51,Imagen,assets/ponchi/final_candidates/semantic-regen-002/D-51_candidate.png,still image generation model / text-to-image outputs
+IV-Q002,D-55,Nano Banana,assets/ponchi/final_candidates/ponchi-batch-006/D-55_candidate.png,Gemini image generation/editing nickname or image model family
+IV-Q003,D-58,Whisk,assets/ponchi/final_candidates/semantic-regen-001/D-58_candidate.png,image remix/ingredient blending workflow
+IV-Q004,D-52,Sora,assets/ponchi/final_candidates/ponchi-batch-006/D-52_candidate.png,OpenAI video generation model / cinematic video output
+IV-Q005,D-53,Veo,assets/ponchi/final_candidates/semantic-regen-001/D-53_candidate.png,Google video generation model / video output timeline
+IV-Q006,D-57,Flow,assets/ponchi/final_candidates/semantic-regen-002/D-57_candidate.png,creator-facing video/storyboarding studio workflow
