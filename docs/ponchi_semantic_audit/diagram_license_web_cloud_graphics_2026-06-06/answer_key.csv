@@ -1,0 +1,18 @@
+slot,entry_id,title,subtype,image_path,expected_signal
+1,F-140,Mermaid,diagram,assets/ponchi/final/F-140.png,text-to-diagram flowchart syntax with official logo
+2,F-141,PlantUML,diagram,assets/ponchi/final/F-141.png,UML diagram generation with official logo
+3,F-150,MIT ライセンス,license,assets/ponchi/final/F-150.png,permissive license grant
+4,F-151,Apache 2.0,license,assets/ponchi/final/F-151.png,license with patent/notice obligations
+5,F-152,GPL,license,assets/ponchi/final/F-152.png,copyleft reciprocity
+6,F-153,Creative Commons,license,assets/ponchi/final/F-153.png,content license with CC mark
+7,F-154,OSS,license,assets/ponchi/final/F-154.png,open-source project/community concept
+8,F-160,DOM,web_foundation,assets/ponchi/final/F-160.png,browser document object tree
+9,F-161,SSR,web_foundation,assets/ponchi/final/F-161.png,server renders HTML before browser
+10,F-162,SSG,web_foundation,assets/ponchi/final/F-162.png,static pages generated at build time
+11,F-170,EC2,cloud_service,assets/ponchi/final/F-170.png,AWS compute instance with official icon
+12,F-171,S3,cloud_service,assets/ponchi/final/F-171.png,AWS object storage buckets with official icon
+13,F-172,IAM,cloud_service,assets/ponchi/final/F-172.png,AWS identity/access policy with official icon
+14,F-180,OpenGL,graphics,assets/ponchi/final/F-180.png,native graphics API pipeline with official logo
+15,F-181,WebGL,graphics_api,assets/ponchi/final/F-181.png,browser graphics API with official logo
+16,F-190,サブルーチン,programming_basic,assets/ponchi/final/F-190.png,reusable procedure call/return
+17,F-200,Rust,language,assets/ponchi/final/F-200.png,systems language with official logo
