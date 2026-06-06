@@ -1,0 +1,20 @@
+slot,entry_id,title,subtype,image_path,expected_signal
+1,E-1,SWE-Bench,coding,assets\ponchi\final\E-1.png,repo issue -> patch -> tests
+2,E-2,SWE-Bench Verified,coding,assets\ponchi\final\E-2.png,verified/curated repo issue subset
+3,E-3,Terminal-Bench,coding,assets\ponchi\final\E-3.png,terminal command-line task benchmark
+4,E-4,HumanEval,coding,assets\ponchi\final\E-4.png,function completion with unit tests
+5,E-20,MMLU,reasoning,assets\ponchi\final\E-20.png,broad multiple-choice knowledge exam
+6,E-21,MMLU-Pro,reasoning,assets\ponchi\final\E-21.png,harder professional multi-choice exam
+7,E-22,GPQA,reasoning,assets\ponchi\final\E-22.png,graduate science question answering
+8,E-23,GSM8K,reasoning,assets\ponchi\final\E-23.png,grade-school math word problems
+9,E-24,MATH,reasoning,assets\ponchi\final\E-24.png,competition math proof/solution
+10,E-25,AIME,reasoning,assets\ponchi\final\E-25.png,short-answer math contest
+11,E-26,Humanity's Last Exam,reasoning,assets\ponchi\final\E-26.png,very hard multi-domain final exam
+12,E-27,IQ Bench,reasoning,assets\ponchi\final\E-27.png,IQ/pattern puzzle reasoning
+13,E-30,TAU-Bench,agent,assets\ponchi\final\E-30.png,tool-using agent in transactional workflow
+14,E-31,WebArena,agent,assets\ponchi\final\E-31.png,browser/web task benchmark
+15,E-32,GAIA,agent,assets\ponchi\final\E-32.png,general assistant multi-step tasks
+16,E-33,AgentBench,agent,assets\ponchi\final\E-33.png,agent benchmark across environments
+17,E-34,OSWorld,agent,assets\ponchi\final\E-34.png,desktop/OS control benchmark
+18,E-50,Chatbot Arena,general,assets\ponchi\final\E-50.png,pairwise human vote leaderboard
+19,E-51,LMSYS Arena,general,assets\ponchi\final\E-51.png,arena platform / leaderboard variant
