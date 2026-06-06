@@ -1,0 +1,4 @@
+entry_id,title,source_file,source_type,candidate_png,candidate_webp,candidate_status
+I-20,Playwright MCP,assets\ponchi\experiments\batches\semantic-regen-010\I-20_base_1254x627.png,review_pending_base,I-20_candidate.png,I-20_candidate.webp,review_pending
+I-21,Puppeteer MCP,assets\ponchi\experiments\batches\semantic-regen-010\I-21_base_1254x627.png,review_pending_base,I-21_candidate.png,I-21_candidate.webp,review_pending
+I-22,Chrome DevTools MCP,assets\ponchi\experiments\batches\semantic-regen-010\I-22_base_1254x627.png,review_pending_base,I-22_candidate.png,I-22_candidate.webp,review_pending

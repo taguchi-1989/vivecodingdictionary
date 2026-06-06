@@ -1,0 +1,4 @@
+entry_id,title,semantic_focus
+I-20,Playwright MCP,"cross-browser automation, test runner, traces/screenshots"
+I-21,Puppeteer MCP,single-browser scripted click/type/scrape automation
+I-22,Chrome DevTools MCP,inspect/performance/network/console debugging panel

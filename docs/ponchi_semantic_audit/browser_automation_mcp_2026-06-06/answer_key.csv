@@ -1,0 +1,4 @@
+blind_image_id,entry_id,title,source_file,semantic_focus
+BA-Q001,I-20,Playwright MCP,assets/ponchi/final_candidates/semantic-regen-010/I-20_candidate.png,"cross-browser automation, test runner, traces/screenshots"
+BA-Q002,I-21,Puppeteer MCP,assets/ponchi/final_candidates/semantic-regen-010/I-21_candidate.png,single-browser scripted click/type/scrape automation
+BA-Q003,I-22,Chrome DevTools MCP,assets/ponchi/final_candidates/semantic-regen-010/I-22_candidate.png,inspect/performance/network/console debugging panel

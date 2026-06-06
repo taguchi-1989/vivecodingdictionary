@@ -7,7 +7,7 @@ U004,B-ai-assistants-core,B,B-1;B-2;B-3;B-10;B-14;B-15;B-16;B-17;B-19,exact_entr
 U005,J-hardware-accelerators,J,J-70;J-72;J-73;J-74;J-75;J-76;J-77,exact_entry,P1,completed,review pack created; J-72/J-73/J-76 prior fixes held; no new regen required,committed
 U006,D-provider-generation-series,D,D-1;D-2;D-3;D-4;D-10;D-11;D-12;D-13;D-20;D-21,cluster_family,P1,completed,provider family visible; exact same-provider generation steps classified caption_required,committed
 U007,D-image-video-generation,D,D-51;D-52;D-53;D-55;D-57;D-58,type_distinction,P1,completed,type distinctions pass; Sora/Veo exact product remains caption-supported,committed
-U008,I-browser-automation-mcp,I,I-20;I-21;I-22,exact_entry,P1,planned,pairwise Playwright/Puppeteer/DevTools review,commit_after_review
+U008,I-browser-automation-mcp,I,I-20;I-21;I-22,exact_entry,P1,completed,I-20/I-21/I-22 recomposed and staged in semantic-regen-010,committed
 U009,A-common-frontmatter,A,A-1;A-2;A-3;A-4;A-5;A-6;A-7;A-8;A-9;A-10;A-11,capability_milestone,P2,planned,frontmatter/meta meaning and color review,commit_after_review
 U010,C-organizations,C,C-1;C-2;C-3;C-4;C-5;C-6;C-7;C-8;C-9;C-10;C-11;C-12;C-13;C-14,exact_entry,P2,planned,organization identity plus role/context review,commit_after_review
 U011,C-people,C,C-50;C-51;C-52;C-53;C-54;C-55;C-56;C-57;C-58;C-59;C-60,caption_required,P2,planned,person role/context review without overclaiming likeness,commit_after_review
