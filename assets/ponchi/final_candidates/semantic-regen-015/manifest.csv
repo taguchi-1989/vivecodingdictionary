@@ -1,0 +1,6 @@
+entry_id,title,source_file,source_type,candidate_png,candidate_webp,candidate_status
+J-72,H100,assets\ponchi\experiments\batches\semantic-regen-015\J-72_base_1254x627.png,review_pending_base,J-72_candidate.png,J-72_candidate.webp,review_pending
+J-73,Blackwell,assets\ponchi\experiments\batches\semantic-regen-015\J-73_base_1254x627.png,review_pending_base,J-73_candidate.png,J-73_candidate.webp,review_pending
+J-78,HDD,assets\ponchi\experiments\batches\semantic-regen-015\J-78_base_1254x627.png,review_pending_base,J-78_candidate.png,J-78_candidate.webp,review_pending
+J-79,SSD,assets\ponchi\experiments\batches\semantic-regen-015\J-79_base_1254x627.png,review_pending_base,J-79_candidate.png,J-79_candidate.webp,review_pending
+J-91,CLI,assets\ponchi\experiments\batches\semantic-regen-015\J-91_base_1254x627.png,review_pending_base,J-91_candidate.png,J-91_candidate.webp,review_pending
