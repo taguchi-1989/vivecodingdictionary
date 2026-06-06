@@ -1,6 +1,6 @@
 batch_id,chapter_scope,entry_ids,focus,status,next_action
 semantic-regen-015,J,J-72;J-73;J-78;J-79;J-91,worst hardware/UI outliers,candidate_staged,image/color pass; quality high=3 mid=2 low=0; compare audit recorded; await final promotion decision
-semantic-regen-016,J,J-70;J-71;J-74;J-75;J-76;J-77;J-80;J-81,hardware accelerator memory and storage interfaces,planned,wait for semantic-regen-015 acceptance
+semantic-regen-016,J,J-70;J-71;J-74;J-75;J-76;J-77;J-80;J-81,hardware accelerator memory and storage interfaces,candidate_staged,image/color pass; quality high=4 mid=4 low=0; compare audit recorded; await final promotion decision
 semantic-regen-017,I,I-1;I-2;I-3;I-4;I-5;I-80;I-81,MCP core roles and setup,planned,wait for J outlier batch baseline
 semantic-regen-018,I,I-10;I-11;I-12;I-13;I-23;I-24;I-30;I-41;I-50,MCP tool domains,planned,requires domain-specific visual axes
 semantic-regen-019,I,I-20;I-21;I-22,browser automation MCP exact distinction,planned,retest staged candidates against full rebuild policy

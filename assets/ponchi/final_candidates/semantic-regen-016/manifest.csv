@@ -1,0 +1,9 @@
+entry_id,title,source_file,source_type,candidate_png,candidate_webp,candidate_status
+J-70,VRAM,assets\ponchi\experiments\batches\semantic-regen-016\J-70_base_1254x627.png,review_pending_base,J-70_candidate.png,J-70_candidate.webp,review_pending
+J-71,RAM,assets\ponchi\experiments\batches\semantic-regen-016\J-71_base_1254x627.png,review_pending_base,J-71_candidate.png,J-71_candidate.webp,review_pending
+J-74,RTX シリーズ,assets\ponchi\experiments\batches\semantic-regen-016\J-74_base_1254x627.png,review_pending_base,J-74_candidate.png,J-74_candidate.webp,review_pending
+J-75,Tensor コア,assets\ponchi\experiments\batches\semantic-regen-016\J-75_base_1254x627.png,review_pending_base,J-75_candidate.png,J-75_candidate.webp,review_pending
+J-76,CPU,assets\ponchi\experiments\batches\semantic-regen-016\J-76_base_1254x627.png,review_pending_base,J-76_candidate.png,J-76_candidate.webp,review_pending
+J-77,GPU (概念),assets\ponchi\experiments\batches\semantic-regen-016\J-77_base_1254x627.png,review_pending_base,J-77_candidate.png,J-77_candidate.webp,review_pending
+J-80,SATA,assets\ponchi\experiments\batches\semantic-regen-016\J-80_base_1254x627.png,review_pending_base,J-80_candidate.png,J-80_candidate.webp,review_pending
+J-81,M.2,assets\ponchi\experiments\batches\semantic-regen-016\J-81_base_1254x627.png,review_pending_base,J-81_candidate.png,J-81_candidate.webp,review_pending

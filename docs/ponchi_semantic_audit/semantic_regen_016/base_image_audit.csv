@@ -1,0 +1,9 @@
+file,entry_id,size,size_ok,bbox_coverage,density_ok,clearspace_required,clearspace_ink_ratio,clearspace_ok,status
+assets\ponchi\experiments\batches\semantic-regen-016\J-70_base_1254x627.png,J-70,1254x627,true,0.860,true,false,0.1702,true,pass
+assets\ponchi\experiments\batches\semantic-regen-016\J-71_base_1254x627.png,J-71,1254x627,true,0.847,true,false,0.2173,true,pass
+assets\ponchi\experiments\batches\semantic-regen-016\J-74_base_1254x627.png,J-74,1254x627,true,0.899,true,false,0.5095,true,pass
+assets\ponchi\experiments\batches\semantic-regen-016\J-75_base_1254x627.png,J-75,1254x627,true,0.861,true,false,0.2032,true,pass
+assets\ponchi\experiments\batches\semantic-regen-016\J-76_base_1254x627.png,J-76,1254x627,true,0.886,true,false,0.2260,true,pass
+assets\ponchi\experiments\batches\semantic-regen-016\J-77_base_1254x627.png,J-77,1254x627,true,0.875,true,false,0.2246,true,pass
+assets\ponchi\experiments\batches\semantic-regen-016\J-80_base_1254x627.png,J-80,1254x627,true,0.916,true,false,0.0618,true,pass
+assets\ponchi\experiments\batches\semantic-regen-016\J-81_base_1254x627.png,J-81,1254x627,true,0.925,true,false,0.2020,true,pass
