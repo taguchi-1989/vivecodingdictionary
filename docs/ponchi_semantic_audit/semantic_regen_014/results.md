@@ -29,6 +29,7 @@ overwriting production files under `assets/ponchi/final/`.
 - Generated bases: `assets/ponchi/experiments/batches/semantic-regen-014/`
 - Final candidates: `assets/ponchi/final_candidates/semantic-regen-014/`
 - Candidate audit: `docs/ponchi_batch_audits/semantic-regen-014-final-candidates.md`
+- Candidate update ledger: `ledgers/semantic_regen_014_candidate_update.csv`
 - Image audit: `docs/ponchi_semantic_audit/semantic_regen_014/base_image_audit.md`
 - Color audit: `docs/ponchi_semantic_audit/semantic_regen_014/color_audit.md`
 - Quality scores: `docs/ponchi_semantic_audit/semantic_regen_014/quality_scores.md`
