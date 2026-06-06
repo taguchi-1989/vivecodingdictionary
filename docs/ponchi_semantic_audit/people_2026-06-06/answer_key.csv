@@ -1,0 +1,12 @@
+blind_image_id,entry_id,title,source_file,semantic_focus
+PE-Q001,C-50,Sam Altman,assets/ponchi/final_candidates/ponchi-batch-004/C-50_candidate.png,OpenAI/company leadership context
+PE-Q002,C-51,Dario Amodei,assets/ponchi/final_candidates/ponchi-batch-004/C-51_candidate.png,Anthropic/Claude safety lab leadership context
+PE-Q003,C-52,Demis Hassabis,assets/ponchi/final_candidates/ponchi-batch-004/C-52_candidate.png,DeepMind/science/research leadership context
+PE-Q004,C-53,Andrej Karpathy,assets/ponchi/final_candidates/ponchi-batch-004/C-53_candidate.png,AI education/autonomous driving/deep learning educator context
+PE-Q005,C-54,Ilya Sutskever,assets/ponchi/final_candidates/ponchi-batch-004/C-54_candidate.png,OpenAI/superalignment/research scientist context
+PE-Q006,C-55,Mira Murati,assets/ponchi/final_candidates/ponchi-batch-004/C-55_candidate.png,OpenAI product/research executive context
+PE-Q007,C-56,Yann LeCun,assets/ponchi/final_candidates/ponchi-batch-004/C-56_candidate.png,Meta/Facebook AI and deep learning research context
+PE-Q008,C-57,Geoffrey Hinton,assets/ponchi/final_candidates/ponchi-batch-004/C-57_candidate.png,deep learning pioneer / neural network history context
+PE-Q009,C-58,Elon Musk,assets/ponchi/final_candidates/ponchi-batch-004/C-58_candidate.png,xAI/Tesla/X company ecosystem context
+PE-Q010,C-59,Jensen Huang,assets/ponchi/final_candidates/ponchi-batch-004/C-59_candidate.png,NVIDIA/GPU hardware CEO context
+PE-Q011,C-60,Ray Kurzweil,assets/ponchi/final_candidates/ponchi-batch-004/C-60_candidate.png,futurist/singularity/Google AI context
