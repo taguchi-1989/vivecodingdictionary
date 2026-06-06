@@ -1,0 +1,26 @@
+entry_id,title,subtype,image_path,expected_signal,exists
+J-23,拡散モデル,data_learning,assets/ponchi/final/J-23.webp,diffusion/noise-to-image progression replacing stale J-30 coverage,True
+J-31,第 5 世代コンピュータ,computing_history,assets/ponchi/final/J-31.webp,historical fifth-generation AI computer program and era,True
+J-32,ノイマン型,computing_history,assets/ponchi/final/J-32.webp,von Neumann architecture with CPU memory bus and stored program,True
+J-33,量子コンピュータ,computing_history,assets/ponchi/final/J-33.webp,quantum computer qubits and cryogenic/circuit context,True
+J-40,IoT,buzzword,assets/ponchi/final/J-40.webp,connected physical devices and sensors reporting to cloud,True
+J-41,DX,buzzword,assets/ponchi/final/J-41.webp,business process transformation and digitized workflow,True
+J-42,Web3,buzzword,assets/ponchi/final/J-42.webp,decentralized ownership ledger/network,True
+J-43,SaaS,buzzword,assets/ponchi/final/J-43.webp,cloud-hosted app delivered to many customers,True
+J-70,VRAM,hardware,assets/ponchi/final/J-70.webp,graphics accelerator memory lane and chip memory role,True
+J-71,RAM,hardware,assets/ponchi/final/J-71.webp,main system memory modules and volatile workspace,True
+J-72,H100,hardware,assets/ponchi/final/J-72.webp,datacenter GPU accelerator system,True
+J-73,Blackwell,hardware,assets/ponchi/final/J-73.webp,new-generation GPU platform and rack architecture,True
+J-74,RTX シリーズ,hardware,assets/ponchi/final/J-74.webp,consumer/pro graphics card lineup,True
+J-75,Tensor コア,hardware,assets/ponchi/final/J-75.webp,matrix/tile compute blocks inside accelerator,True
+J-76,CPU,hardware,assets/ponchi/final/J-76.webp,central general-purpose processor and control flow,True
+J-77,GPU (概念),hardware,assets/ponchi/final/J-77.webp,parallel graphics/compute processor concept,True
+J-78,HDD,hardware,assets/ponchi/final/J-78.webp,spinning magnetic disk and actuator arm,True
+J-79,SSD,hardware,assets/ponchi/final/J-79.webp,solid-state flash storage module,True
+J-80,SATA,hardware,assets/ponchi/final/J-80.webp,storage cable/port connection standard,True
+J-81,M.2,hardware,assets/ponchi/final/J-81.webp,compact gumstick module slot on motherboard,True
+J-90,GUI,ui_os,assets/ponchi/final/J-90.webp,windows pointer icons and visual controls,True
+J-91,CLI,ui_os,assets/ponchi/final/J-91.webp,terminal command line workflow,True
+J-92,Linux,ui_os,assets/ponchi/final/J-92.webp,open OS/kernel and filesystem/server ecosystem,True
+J-93,Ubuntu,ui_os,assets/ponchi/final/J-93.webp,desktop Linux distribution/install surface,True
+J-100,識字（リテラシー）,concept,assets/ponchi/final/J-100.webp,reading and interpreting digital information and context,True

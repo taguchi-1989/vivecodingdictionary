@@ -1,0 +1,26 @@
+slot,entry_id,title,subtype,image_path,expected_signal
+1,J-23,拡散モデル,data_learning,assets/ponchi/final/J-23.webp,diffusion/noise-to-image progression replacing stale J-30 coverage
+2,J-31,第 5 世代コンピュータ,computing_history,assets/ponchi/final/J-31.webp,historical fifth-generation AI computer program and era
+3,J-32,ノイマン型,computing_history,assets/ponchi/final/J-32.webp,von Neumann architecture with CPU memory bus and stored program
+4,J-33,量子コンピュータ,computing_history,assets/ponchi/final/J-33.webp,quantum computer qubits and cryogenic/circuit context
+5,J-40,IoT,buzzword,assets/ponchi/final/J-40.webp,connected physical devices and sensors reporting to cloud
+6,J-41,DX,buzzword,assets/ponchi/final/J-41.webp,business process transformation and digitized workflow
+7,J-42,Web3,buzzword,assets/ponchi/final/J-42.webp,decentralized ownership ledger/network
+8,J-43,SaaS,buzzword,assets/ponchi/final/J-43.webp,cloud-hosted app delivered to many customers
+9,J-70,VRAM,hardware,assets/ponchi/final/J-70.webp,graphics accelerator memory lane and chip memory role
+10,J-71,RAM,hardware,assets/ponchi/final/J-71.webp,main system memory modules and volatile workspace
+11,J-72,H100,hardware,assets/ponchi/final/J-72.webp,datacenter GPU accelerator system
+12,J-73,Blackwell,hardware,assets/ponchi/final/J-73.webp,new-generation GPU platform and rack architecture
+13,J-74,RTX シリーズ,hardware,assets/ponchi/final/J-74.webp,consumer/pro graphics card lineup
+14,J-75,Tensor コア,hardware,assets/ponchi/final/J-75.webp,matrix/tile compute blocks inside accelerator
+15,J-76,CPU,hardware,assets/ponchi/final/J-76.webp,central general-purpose processor and control flow
+16,J-77,GPU (概念),hardware,assets/ponchi/final/J-77.webp,parallel graphics/compute processor concept
+17,J-78,HDD,hardware,assets/ponchi/final/J-78.webp,spinning magnetic disk and actuator arm
+18,J-79,SSD,hardware,assets/ponchi/final/J-79.webp,solid-state flash storage module
+19,J-80,SATA,hardware,assets/ponchi/final/J-80.webp,storage cable/port connection standard
+20,J-81,M.2,hardware,assets/ponchi/final/J-81.webp,compact gumstick module slot on motherboard
+21,J-90,GUI,ui_os,assets/ponchi/final/J-90.webp,windows pointer icons and visual controls
+22,J-91,CLI,ui_os,assets/ponchi/final/J-91.webp,terminal command line workflow
+23,J-92,Linux,ui_os,assets/ponchi/final/J-92.webp,open OS/kernel and filesystem/server ecosystem
+24,J-93,Ubuntu,ui_os,assets/ponchi/final/J-93.webp,desktop Linux distribution/install surface
+25,J-100,識字（リテラシー）,concept,assets/ponchi/final/J-100.webp,reading and interpreting digital information and context
