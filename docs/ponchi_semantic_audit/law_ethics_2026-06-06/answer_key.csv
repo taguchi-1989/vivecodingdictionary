@@ -1,0 +1,9 @@
+﻿slot,entry_id,title,subtype,image_path,expected_signal
+1,J-50,AI 倫理,ethics_law,assets/ponchi/final/J-50.png,"balanced AI ethics: fairness, safety, accountability"
+2,J-51,Hallucination,ethics_law,assets/ponchi/final/J-51.png,hallucinated false answer separated from evidence
+3,J-52,Sycophancy,ethics_law,assets/ponchi/final/J-52.png,AI flattering user despite weak/unsafe premise
+4,J-53,著作権法 30 条の 4（日本）,ethics_law,assets/ponchi/final/J-53.png,Japan copyright law article 30-4 and learning/use boundary
+5,J-54,ISO/IEC 42001,ethics_law,assets/ponchi/final/J-54.png,ISO/IEC 42001 AI management system controls
+6,J-55,個人情報保護法,ethics_law,assets/ponchi/final/J-55.png,"personal data protection, consent, privacy shield"
+7,J-56,GDPR,ethics_law,assets/ponchi/final/J-56.png,GDPR/EU privacy rights and compliance
+8,J-62,チューリングテスト,peripheral_test,assets/ponchi/final/J-62.png,human evaluator test distinguishing AI/person conversation
