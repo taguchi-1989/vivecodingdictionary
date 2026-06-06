@@ -1,0 +1,13 @@
+slot,entry_id,title,subtype,image_path,expected_signal
+1,F-100,拡張子早見表,file_format,assets/ponchi/final/F-100.png,file extension lookup table
+2,F-101,.ico,file_format,assets/ponchi/final/F-101.png,favicon/icon file
+3,F-102,.mp4,file_format,assets/ponchi/final/F-102.png,video container/media timeline
+4,F-103,.mp3,file_format,assets/ponchi/final/F-103.png,audio waveform/music file
+5,F-104,.webp,file_format,assets/ponchi/final/F-104.png,compressed web image format
+6,F-110,Lighthouse,quality,assets/ponchi/final/F-110.png,web quality audit/report with official logo
+7,F-111,a11y,quality,assets/ponchi/final/F-111.png,accessibility checks and assistive use
+8,F-120,PostgreSQL,database,assets/ponchi/final/F-120.png,relational database server with official logo
+9,F-121,SQLite,database,assets/ponchi/final/F-121.png,embedded file database with official logo
+10,F-122,Prisma,orm,assets/ponchi/final/F-122.png,ORM schema/client layer with official logo
+11,F-123,ORM,orm,assets/ponchi/final/F-123.png,object-relational mapping concept
+12,F-130,OAuth,auth,assets/ponchi/final/F-130.png,delegated authorization flow

@@ -1,0 +1,13 @@
+entry_id,title,subtype,image_path,expected_signal,exists
+F-100,拡張子早見表,file_format,assets/ponchi/final/F-100.png,file extension lookup table,True
+F-101,.ico,file_format,assets/ponchi/final/F-101.png,favicon/icon file,True
+F-102,.mp4,file_format,assets/ponchi/final/F-102.png,video container/media timeline,True
+F-103,.mp3,file_format,assets/ponchi/final/F-103.png,audio waveform/music file,True
+F-104,.webp,file_format,assets/ponchi/final/F-104.png,compressed web image format,True
+F-110,Lighthouse,quality,assets/ponchi/final/F-110.png,web quality audit/report with official logo,True
+F-111,a11y,quality,assets/ponchi/final/F-111.png,accessibility checks and assistive use,True
+F-120,PostgreSQL,database,assets/ponchi/final/F-120.png,relational database server with official logo,True
+F-121,SQLite,database,assets/ponchi/final/F-121.png,embedded file database with official logo,True
+F-122,Prisma,orm,assets/ponchi/final/F-122.png,ORM schema/client layer with official logo,True
+F-123,ORM,orm,assets/ponchi/final/F-123.png,object-relational mapping concept,True
+F-130,OAuth,auth,assets/ponchi/final/F-130.png,delegated authorization flow,True
