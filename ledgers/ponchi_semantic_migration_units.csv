@@ -11,7 +11,7 @@ U008,I-browser-automation-mcp,I,I-20;I-21;I-22,exact_entry,P1,completed,I-20/I-2
 U009,A-common-frontmatter,A,A-1;A-2;A-3;A-4;A-5;A-6;A-7;A-8;A-9;A-10;A-11,capability_milestone,P2,completed,A-9/A-11 recomposed and staged in semantic-regen-011; remaining frontmatter candidates held,committed
 U010,C-organizations,C,C-1;C-2;C-3;C-4;C-5;C-6;C-7;C-8;C-9;C-10;C-11;C-12;C-13;C-14,exact_entry,P2,completed,C-8/C-11 recomposed and staged in semantic-regen-012; remaining organization candidates held,committed
 U011,C-people,C,C-50;C-51;C-52;C-53;C-54;C-55;C-56;C-57;C-58;C-59;C-60,caption_required,P2,completed,role/context review completed; all people entries remain caption_required with no likeness overclaim,committed
-U012,C-youtubers,C,C-80;C-81;C-82;C-83,exact_entry,P2,planned,channel identity/source review,commit_after_review
+U012,C-youtubers,C,C-80;C-81;C-82;C-83,exact_entry,P2,completed,official-avatar review completed; no regeneration required; C-82 color risk and C-83 naming note carried forward,committed
 U013,E-benchmarks,E,E-1;E-2;E-3;E-4;E-5;E-10;E-11;E-12;E-13;E-14;E-15;E-20;E-21;E-22;E-25;E-26;E-27;E-30;E-50,type_distinction,P2,planned,benchmark task/result/ranking distinctions,commit_after_review
 U014,F-languages-frameworks,F,F-1;F-2;F-3;F-4;F-5;F-6;F-7;F-8;F-9;F-10;F-11;F-12;F-13;F-14;F-15;F-16;F-17,exact_entry,P2,planned,language/framework logo dependency and use-case review,commit_after_review
 U015,F-devtools-git-editor,F,F-20;F-21;F-30;F-34;F-35;F-36;F-50;F-51;F-52;F-53;F-54;F-55;F-56;F-57;F-58;F-60;F-61;F-62;F-63;F-64;F-65,type_distinction,P2,planned,dev tool workflow distinctions,commit_after_review
