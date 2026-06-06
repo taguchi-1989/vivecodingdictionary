@@ -1,0 +1,20 @@
+entry_id,title,subtype,image_path,expected_signal,exists
+F-20,ESLint,linter,assets\ponchi\final\F-20.png,static lint diagnostics and rule checks,True
+F-21,Prettier,formatter,assets\ponchi\final\F-21.png,formatting pipeline and consistent layout,True
+F-30,VS Code,editor,assets\ponchi\final\F-30.png,code editor workspace with official logo,True
+F-34,VS Code 拡張機能,editor,assets\ponchi\final\F-34.png,extension marketplace/plugins on VS Code,True
+F-35,Markdown Preview Enhanced,editor_ext,assets\ponchi\final\F-35.png,Markdown preview/render pane extension,True
+F-36,Git Graph,editor_ext,assets\ponchi\final\F-36.png,branch graph visualization extension,True
+F-50,git,git,assets\ponchi\final\F-50.png,version-control graph with official git logo,True
+F-51,git push,git,assets\ponchi\final\F-51.png,local to remote upload arrow,True
+F-52,git pull,git,assets\ponchi\final\F-52.png,remote to local download/sync arrow,True
+F-53,branch,git,assets\ponchi\final\F-53.png,diverging branch lines,True
+F-54,commit,git,assets\ponchi\final\F-54.png,snapshot/checkpoint node,True
+F-55,merge,git,assets\ponchi\final\F-55.png,branches joining,True
+F-56,.gitignore,git,assets\ponchi\final\F-56.png,ignored files filtered from tracking,True
+F-57,リポジトリ,git,assets\ponchi\final\F-57.png,repository storage/workspace container,True
+F-58,git stash,git,assets\ponchi\final\F-58.png,temporary shelf/stash workflow,True
+F-59,README.md,git,assets\ponchi\final\F-59.png,repository documentation front page,True
+F-60,GitHub,github,assets\ponchi\final\F-60.png,hosting/collaboration platform with official logo,True
+F-61,Pull Request,github,assets\ponchi\final\F-61.png,review request and diff workflow,True
+F-62,GitHub Actions,github,assets\ponchi\final\F-62.png,CI workflow automation,True
