@@ -1,0 +1,16 @@
+entry_id,title,subtype,image_path,expected_signal,exists
+F-40,npm,cli_build,assets/ponchi/final/F-40.png,package manager registry/install workflow,True
+F-41,Vite,cli_build,assets/ponchi/final/F-41.png,fast dev server/build pipeline,True
+F-42,ビルド,cli_build,assets/ponchi/final/F-42.png,source to bundled artifact pipeline,True
+F-44,pnpm,cli_build,assets/ponchi/final/F-44.png,workspace/package manager with content-addressed store,True
+F-71,ripgrep (rg),search,assets/ponchi/final/F-71.png,fast recursive code search,True
+F-80,Node.js,runtime,assets/ponchi/final/F-80.png,JavaScript server runtime with official logo,True
+F-81,bash,shell,assets/ponchi/final/F-81.png,Unix shell command pipeline,True
+F-82,WSL,shell,assets/ponchi/final/F-82.png,Linux-on-Windows boundary,True
+F-83,PowerShell,shell,assets/ponchi/final/F-83.png,Windows automation shell with official logo,True
+F-84,Ghostty,terminal,assets/ponchi/final_candidates/semantic-regen-013/F-84_candidate.png,terminal emulator panes/tabs/config with official favicon candidate,True
+F-85,SuperClaude Framework,framework,assets/ponchi/final/F-85.png,Claude Code community command/pattern framework without logo,True
+F-86,ollama,runtime,assets/ponchi/final/F-86.png,local LLM runtime/serve workflow with official icon,True
+F-87,sudo,shell,assets/ponchi/final/F-87.png,privilege escalation / admin command gate,True
+F-90,Docker,container,assets/ponchi/final/F-90.png,container image/build/run workflow with official logo,True
+F-91,.env,env,assets/ponchi/final/F-91.png,environment variable secrets/config file,True
