@@ -1,0 +1,15 @@
+entry_id,title,semantic_focus
+C-1,OpenAI,"AI lab/platform: ChatGPT, API, model research"
+C-2,Anthropic,"AI safety lab: Claude, constitutional/safety framing"
+C-3,Google DeepMind,Google AI research lab: science/research/model systems
+C-4,Meta AI,Meta open/social AI: assistant/research/open weights context
+C-5,xAI,Grok/X ecosystem: real-time/social feed AI context
+C-6,Mistral AI,European/open model company context
+C-7,Hugging Face,model hub/community/datasets/spaces platform
+C-8,Microsoft AI,"organization hub coordinating Copilot, Azure OpenAI, Phi, and OpenAI partnership"
+C-9,NVIDIA,GPU/accelerator company and AI compute stack
+C-10,Moonshot AI,Chinese AI lab / Kimi-style long-context assistant
+C-11,Z.ai,GLM model lab with open weights/API/regulation context
+C-12,TSMC,semiconductor foundry / wafer manufacturing supply chain
+C-13,Groq,AI inference accelerator / LPU speed context
+C-14,AMD,CPU/GPU company and accelerator competitor

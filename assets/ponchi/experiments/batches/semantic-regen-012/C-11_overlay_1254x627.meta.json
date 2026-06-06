@@ -1,0 +1,14 @@
+{
+  "entry_id": "C-11",
+  "official_asset": "assets/logos/z-ai/z-ai-logo-official.512.png",
+  "base_file": "assets/ponchi/experiments/batches/semantic-regen-012/C-11_base_1254x627.png",
+  "output_file": "assets/ponchi/experiments/batches/semantic-regen-012/C-11_overlay_1254x627.png",
+  "placement": {
+    "x": 1110,
+    "y": 34,
+    "width": 96,
+    "height": 96
+  },
+  "clearspace": "rightmost 40% of top 25%",
+  "method": "deterministic PIL alpha composite after readable-text cleanup and clearspace restoration"
+}

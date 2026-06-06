@@ -1,0 +1,15 @@
+blind_image_id,entry_id,title,source_file,semantic_focus
+OR-Q001,C-1,OpenAI,assets/ponchi/final_candidates/ponchi-batch-003/C-1_candidate.png,"AI lab/platform: ChatGPT, API, model research"
+OR-Q002,C-2,Anthropic,assets/ponchi/final_candidates/ponchi-batch-003/C-2_candidate.png,"AI safety lab: Claude, constitutional/safety framing"
+OR-Q003,C-3,Google DeepMind,assets/ponchi/final_candidates/ponchi-batch-003/C-3_candidate.png,Google AI research lab: science/research/model systems
+OR-Q004,C-4,Meta AI,assets/ponchi/final_candidates/ponchi-batch-003/C-4_candidate.png,Meta open/social AI: assistant/research/open weights context
+OR-Q005,C-5,xAI,assets/ponchi/final_candidates/ponchi-batch-003/C-5_candidate.png,Grok/X ecosystem: real-time/social feed AI context
+OR-Q006,C-6,Mistral AI,assets/ponchi/final_candidates/ponchi-batch-003/C-6_candidate.png,European/open model company context
+OR-Q007,C-7,Hugging Face,assets/ponchi/final_candidates/ponchi-batch-003/C-7_candidate.png,model hub/community/datasets/spaces platform
+OR-Q008,C-8,Microsoft AI,assets/ponchi/final_candidates/semantic-regen-012/C-8_candidate.png,"organization hub coordinating Copilot, Azure OpenAI, Phi, and OpenAI partnership"
+OR-Q009,C-9,NVIDIA,assets/ponchi/final_candidates/ponchi-batch-003/C-9_candidate.png,GPU/accelerator company and AI compute stack
+OR-Q010,C-14,AMD,assets/ponchi/final_candidates/ponchi-batch-004/C-14_candidate.png,CPU/GPU company and accelerator competitor
+OR-Q011,C-13,Groq,assets/ponchi/final_candidates/ponchi-batch-004/C-13_candidate.png,AI inference accelerator / LPU speed context
+OR-Q012,C-12,TSMC,assets/ponchi/final_candidates/ponchi-batch-004/C-12_candidate.png,semiconductor foundry / wafer manufacturing supply chain
+OR-Q013,C-10,Moonshot AI,assets/ponchi/final_candidates/ponchi-batch-004/C-10_candidate.png,Chinese AI lab / Kimi-style long-context assistant
+OR-Q014,C-11,Z.ai,assets/ponchi/final_candidates/semantic-regen-012/C-11_candidate.png,GLM model lab with open weights/API/regulation context
