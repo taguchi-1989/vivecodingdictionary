@@ -1,0 +1,10 @@
+slot,entry_id,title,subtype,image_path,expected_signal
+1,H-50,Bard → Gemini,timeline,assets/ponchi/final/H-50.png,Google assistant/model naming transition
+2,H-51,Preview から正式版への流れ,culture,assets/ponchi/final/H-51.png,preview/beta to stable release path
+3,H-52,Copilot から Claude Code までの流れ,timeline,assets/ponchi/final/H-52.png,coding assistant timeline
+4,H-53,ChatGPT 登場,event,assets/ponchi/final/H-53.png,public ChatGPT launch moment
+5,H-54,GPT-4 リリース,event,assets/ponchi/final/H-54.png,GPT-4 capability release event
+6,H-55,LLaMA のオープン化,event,assets/ponchi/final/H-55.png,open model release/community spread
+7,H-56,Claude のバージョン史,timeline,assets/ponchi/final/H-56.png,Claude version progression
+8,H-57,Gemini の命名史,timeline,assets/ponchi/final/H-57.png,Gemini naming evolution
+9,H-63,Vibe Coding 命名,event,assets/ponchi/final/H-63.png,vibe coding term popularization
