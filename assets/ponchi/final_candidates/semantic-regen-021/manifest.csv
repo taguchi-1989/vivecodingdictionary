@@ -1,0 +1,9 @@
+entry_id,title,source_file,source_type,candidate_png,candidate_webp,candidate_status
+J-16,Fine-tuning,assets\ponchi\experiments\batches\semantic-regen-021\J-16_base_1254x627.png,review_pending_base,J-16_candidate.png,J-16_candidate.webp,review_pending
+J-17,Attention,assets\ponchi\experiments\batches\semantic-regen-021\J-17_base_1254x627.png,review_pending_base,J-17_candidate.png,J-17_candidate.webp,review_pending
+J-18,MoE,assets\ponchi\experiments\batches\semantic-regen-021\J-18_base_1254x627.png,review_pending_base,J-18_candidate.png,J-18_candidate.webp,review_pending
+J-19,量子化,assets\ponchi\experiments\batches\semantic-regen-021\J-19_base_1254x627.png,review_pending_base,J-19_candidate.png,J-19_candidate.webp,review_pending
+J-20,Big Data,assets\ponchi\experiments\batches\semantic-regen-021\J-20_base_1254x627.png,review_pending_base,J-20_candidate.png,J-20_candidate.webp,review_pending
+J-21,LoRA,assets\ponchi\experiments\batches\semantic-regen-021\J-21_base_1254x627.png,review_pending_base,J-21_candidate.png,J-21_candidate.webp,review_pending
+J-22,パラメータ数の単位,assets\ponchi\experiments\batches\semantic-regen-021\J-22_base_1254x627.png,review_pending_base,J-22_candidate.png,J-22_candidate.webp,review_pending
+J-23,拡散モデル,assets\ponchi\experiments\batches\semantic-regen-021\J-23_base_1254x627.png,review_pending_base,J-23_candidate.png,J-23_candidate.webp,review_pending
