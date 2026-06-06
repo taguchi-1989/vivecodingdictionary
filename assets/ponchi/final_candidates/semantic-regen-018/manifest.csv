@@ -1,0 +1,10 @@
+entry_id,title,source_file,source_type,candidate_png,candidate_webp,candidate_status
+I-10,Filesystem MCP,assets\ponchi\experiments\batches\semantic-regen-018\I-10_base_1254x627.png,review_pending_base,I-10_candidate.png,I-10_candidate.webp,review_pending
+I-11,GitHub MCP,assets\ponchi\experiments\batches\semantic-regen-018\I-11_base_1254x627.png,review_pending_base,I-11_candidate.png,I-11_candidate.webp,review_pending
+I-12,Git MCP,assets\ponchi\experiments\batches\semantic-regen-018\I-12_base_1254x627.png,review_pending_base,I-12_candidate.png,I-12_candidate.webp,review_pending
+I-13,Slack MCP,assets\ponchi\experiments\batches\semantic-regen-018\I-13_base_1254x627.png,review_pending_base,I-13_candidate.png,I-13_candidate.webp,review_pending
+I-23,Serena MCP,assets\ponchi\experiments\batches\semantic-regen-018\I-23_base_1254x627.png,review_pending_base,I-23_candidate.png,I-23_candidate.webp,review_pending
+I-24,Context7 MCP,assets\ponchi\experiments\batches\semantic-regen-018\I-24_base_1254x627.png,review_pending_base,I-24_candidate.png,I-24_candidate.webp,review_pending
+I-30,Notion MCP,assets\ponchi\experiments\batches\semantic-regen-018\I-30_base_1254x627.png,review_pending_base,I-30_candidate.png,I-30_candidate.webp,review_pending
+I-41,SQLite MCP,assets\ponchi\experiments\batches\semantic-regen-018\I-41_base_1254x627.png,review_pending_base,I-41_candidate.png,I-41_candidate.webp,review_pending
+I-50,AWS MCP,assets\ponchi\experiments\batches\semantic-regen-018\I-50_base_1254x627.png,review_pending_base,I-50_candidate.png,I-50_candidate.webp,review_pending
