@@ -1,0 +1,9 @@
+file,entry_id,size,size_ok,bbox_coverage,density_ok,clearspace_required,clearspace_ink_ratio,clearspace_ok,status
+assets\ponchi\final\J-70.webp,J-70,1254x627,true,0.860,true,false,0.1702,true,pass
+assets\ponchi\final\J-71.webp,J-71,1254x627,true,0.847,true,false,0.2173,true,pass
+assets\ponchi\final\J-74.webp,J-74,1254x627,true,0.899,true,false,0.5095,true,pass
+assets\ponchi\final\J-75.webp,J-75,1254x627,true,0.861,true,false,0.2032,true,pass
+assets\ponchi\final\J-76.webp,J-76,1254x627,true,0.886,true,false,0.2260,true,pass
+assets\ponchi\final\J-77.webp,J-77,1254x627,true,0.875,true,false,0.2246,true,pass
+assets\ponchi\final\J-80.webp,J-80,1254x627,true,0.916,true,false,0.0618,true,pass
+assets\ponchi\final\J-81.webp,J-81,1254x627,true,0.925,true,false,0.2020,true,pass

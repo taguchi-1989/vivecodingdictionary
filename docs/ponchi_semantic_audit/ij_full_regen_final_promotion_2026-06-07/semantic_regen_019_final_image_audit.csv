@@ -1,0 +1,4 @@
+file,entry_id,size,size_ok,bbox_coverage,density_ok,clearspace_required,clearspace_ink_ratio,clearspace_ok,status
+assets\ponchi\final\I-20.webp,I-20,1254x627,true,0.857,true,false,0.1546,true,pass
+assets\ponchi\final\I-21.webp,I-21,1254x627,true,0.754,true,false,0.0571,true,pass
+assets\ponchi\final\I-22.webp,I-22,1254x627,true,0.876,true,false,0.1607,true,pass

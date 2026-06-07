@@ -1,6 +1,6 @@
 # I/J full ponchi regeneration plan
 
-Date: 2026-06-06
+Date: 2026-06-06; final promotion updated 2026-06-07
 
 Goal: rebuild every I/J ponchi image as a new raster candidate, not just repair
 low-score rows. Existing `assets/ponchi/final/` files remain untouched until a
@@ -68,16 +68,19 @@ Each rebuild batch must pass these checks:
 
 ## Completion Summary
 
-All planned full I/J rebuild batches are staged as review candidates.
+All planned full I/J rebuild batches were staged as review candidates and then
+promoted to final production assets on 2026-06-07.
 
 | item | result |
 | --- | --- |
 | completed batches | `semantic-regen-015` through `semantic-regen-024` |
 | candidate count | 69 |
-| final production files | not overwritten |
-| quality score | high=61, mid=8, low=0 |
+| final production files | promoted to `assets/ponchi/final/` |
+| candidate quality score | high=61, mid=8, low=0 |
+| final promotion audit | image pass=69, color pass=69, quality high=59 mid=7 low=3; visual accepted |
 | status ledger | `ledgers/ij_full_regen_batches.csv` |
 | deliverables index | `docs/ponchi_semantic_audit/ij_full_regen_deliverables_2026-06-06.md` |
+| final promotion results | `docs/ponchi_semantic_audit/ij_full_regen_final_promotion_2026-06-07/results.md` |
 
 ## First Batch Acceptance
 

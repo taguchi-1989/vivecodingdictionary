@@ -1,10 +1,10 @@
 # I/J full ponchi regeneration deliverables
 
-Date: 2026-06-06
+Date: 2026-06-06; final promotion updated 2026-06-07
 
-Purpose: review index for the full I/J ponchi image rebuild. These are staged
-review candidates only; production files under `assets/ponchi/final/` were not
-overwritten.
+Purpose: review index and final promotion record for the full I/J ponchi image
+rebuild. The accepted candidates are now promoted to production files under
+`assets/ponchi/final/`.
 
 ## Overall Status
 
@@ -12,13 +12,14 @@ overwritten.
 | --- | --- |
 | scope | I chapter 19 images, J chapter 50 images |
 | total candidates staged | 69 |
-| batch status | `semantic-regen-015` through `semantic-regen-024` are `candidate_staged` |
+| batch status | `semantic-regen-015` through `semantic-regen-024` are `final_promoted` |
 | prompt lint | all target prompts passed |
 | image audit | all staged candidates passed |
 | color audit | all staged candidates passed after documented palette normalization where needed |
 | quality score | high=61, mid=8, low=0 |
 | comparison audit | recorded for every batch |
-| production update | none; candidates remain review-pending |
+| final promotion audit | image pass=69, color pass=69, quality high=59 mid=7 low=3; visual accepted |
+| production update | promoted to `assets/ponchi/final/` on 2026-06-07 |
 
 ## Batch Deliverables
 
@@ -35,6 +36,13 @@ overwritten.
 | `semantic-regen-023` | `J-50;J-51;J-52;J-53;J-54;J-55;J-56;J-62` | law ethics safety | high=8 mid=0 low=0 | `assets/ponchi/final_candidates/semantic-regen-023/final_candidates_contact_sheet.png` | `docs/ponchi_semantic_audit/semantic_regen_023/results.md` | `ledgers/semantic_regen_023_candidate_update.csv` |
 | `semantic-regen-024` | `J-90;J-92;J-93` | UI OS ecosystem | high=3 mid=0 low=0 | `assets/ponchi/final_candidates/semantic-regen-024/final_candidates_contact_sheet.png` | `docs/ponchi_semantic_audit/semantic_regen_024/results.md` | `ledgers/semantic_regen_024_candidate_update.csv` |
 
+## Final Promotion Artifacts
+
+- Promotion ledger: `ledgers/ij_full_regen_final_promotion_2026-06-07.csv`
+- Promotion results: `docs/ponchi_semantic_audit/ij_full_regen_final_promotion_2026-06-07/results.md`
+- Final color audit: `ledgers/ij_full_regen_final_promotion_color_audit_2026-06-07.csv`
+- Final quality score: `ledgers/ij_full_regen_final_promotion_quality_scores_2026-06-07.csv`
+
 ## Review Order
 
 1. Open each `final_candidates_contact_sheet.png` and check visual distinction
@@ -43,7 +51,8 @@ overwritten.
    `comparison_audit.csv`.
 3. Use the corresponding `candidate_update.csv` to compare candidate file size
    and promotion status against the current final image.
-4. Promote only after a separate visual promotion decision.
+4. Final promotion has been completed; use the final promotion artifacts above
+   for post-promotion audit checks.
 
 ## Source Ledgers
 

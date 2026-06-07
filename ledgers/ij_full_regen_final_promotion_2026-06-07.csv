@@ -1,0 +1,70 @@
+entry_id,title,batch_id,candidate_webp,final_webp,old_final_webp_bytes,new_final_webp_bytes,status
+J-72,H100,semantic-regen-015,assets/ponchi/final_candidates/semantic-regen-015/J-72_candidate.webp,assets/ponchi/final/J-72.webp,127442,766340,promoted
+J-73,Blackwell,semantic-regen-015,assets/ponchi/final_candidates/semantic-regen-015/J-73_candidate.webp,assets/ponchi/final/J-73.webp,129422,715386,promoted
+J-78,HDD,semantic-regen-015,assets/ponchi/final_candidates/semantic-regen-015/J-78_candidate.webp,assets/ponchi/final/J-78.webp,106412,48888,promoted
+J-79,SSD,semantic-regen-015,assets/ponchi/final_candidates/semantic-regen-015/J-79_candidate.webp,assets/ponchi/final/J-79.webp,107630,70928,promoted
+J-91,CLI,semantic-regen-015,assets/ponchi/final_candidates/semantic-regen-015/J-91_candidate.webp,assets/ponchi/final/J-91.webp,70170,383102,promoted
+J-70,VRAM,semantic-regen-016,assets/ponchi/final_candidates/semantic-regen-016/J-70_candidate.webp,assets/ponchi/final/J-70.webp,100082,498378,promoted
+J-71,RAM,semantic-regen-016,assets/ponchi/final_candidates/semantic-regen-016/J-71_candidate.webp,assets/ponchi/final/J-71.webp,100796,537258,promoted
+J-74,RTX シリーズ,semantic-regen-016,assets/ponchi/final_candidates/semantic-regen-016/J-74_candidate.webp,assets/ponchi/final/J-74.webp,112392,655262,promoted
+J-75,Tensor コア,semantic-regen-016,assets/ponchi/final_candidates/semantic-regen-016/J-75_candidate.webp,assets/ponchi/final/J-75.webp,124516,553446,promoted
+J-76,CPU,semantic-regen-016,assets/ponchi/final_candidates/semantic-regen-016/J-76_candidate.webp,assets/ponchi/final/J-76.webp,92682,41432,promoted
+J-77,GPU (概念),semantic-regen-016,assets/ponchi/final_candidates/semantic-regen-016/J-77_candidate.webp,assets/ponchi/final/J-77.webp,101760,460706,promoted
+J-80,SATA,semantic-regen-016,assets/ponchi/final_candidates/semantic-regen-016/J-80_candidate.webp,assets/ponchi/final/J-80.webp,77940,36750,promoted
+J-81,M.2,semantic-regen-016,assets/ponchi/final_candidates/semantic-regen-016/J-81_candidate.webp,assets/ponchi/final/J-81.webp,52978,52766,promoted
+I-1,MCP,semantic-regen-017,assets/ponchi/final_candidates/semantic-regen-017/I-1_candidate.webp,assets/ponchi/final/I-1.webp,102940,496488,promoted
+I-2,MCP Server,semantic-regen-017,assets/ponchi/final_candidates/semantic-regen-017/I-2_candidate.webp,assets/ponchi/final/I-2.webp,77512,421404,promoted
+I-3,MCP Client,semantic-regen-017,assets/ponchi/final_candidates/semantic-regen-017/I-3_candidate.webp,assets/ponchi/final/I-3.webp,84610,450304,promoted
+I-4,MCP Transport,semantic-regen-017,assets/ponchi/final_candidates/semantic-regen-017/I-4_candidate.webp,assets/ponchi/final/I-4.webp,64086,435252,promoted
+I-5,MCP SDK,semantic-regen-017,assets/ponchi/final_candidates/semantic-regen-017/I-5_candidate.webp,assets/ponchi/final/I-5.webp,78118,40984,promoted
+I-80,自作 MCP のテンプレ,semantic-regen-017,assets/ponchi/final_candidates/semantic-regen-017/I-80_candidate.webp,assets/ponchi/final/I-80.webp,96284,475134,promoted
+I-81,MCP の登録・設定,semantic-regen-017,assets/ponchi/final_candidates/semantic-regen-017/I-81_candidate.webp,assets/ponchi/final/I-81.webp,97026,413778,promoted
+I-10,Filesystem MCP,semantic-regen-018,assets/ponchi/final_candidates/semantic-regen-018/I-10_candidate.webp,assets/ponchi/final/I-10.webp,92064,449326,promoted
+I-11,GitHub MCP,semantic-regen-018,assets/ponchi/final_candidates/semantic-regen-018/I-11_candidate.webp,assets/ponchi/final/I-11.webp,98728,34666,promoted
+I-12,Git MCP,semantic-regen-018,assets/ponchi/final_candidates/semantic-regen-018/I-12_candidate.webp,assets/ponchi/final/I-12.webp,89340,466194,promoted
+I-13,Slack MCP,semantic-regen-018,assets/ponchi/final_candidates/semantic-regen-018/I-13_candidate.webp,assets/ponchi/final/I-13.webp,92490,472692,promoted
+I-23,Serena MCP,semantic-regen-018,assets/ponchi/final_candidates/semantic-regen-018/I-23_candidate.webp,assets/ponchi/final/I-23.webp,94566,490368,promoted
+I-24,Context7 MCP,semantic-regen-018,assets/ponchi/final_candidates/semantic-regen-018/I-24_candidate.webp,assets/ponchi/final/I-24.webp,88186,457966,promoted
+I-30,Notion MCP,semantic-regen-018,assets/ponchi/final_candidates/semantic-regen-018/I-30_candidate.webp,assets/ponchi/final/I-30.webp,94774,472524,promoted
+I-41,SQLite MCP,semantic-regen-018,assets/ponchi/final_candidates/semantic-regen-018/I-41_candidate.webp,assets/ponchi/final/I-41.webp,107888,424022,promoted
+I-50,AWS MCP,semantic-regen-018,assets/ponchi/final_candidates/semantic-regen-018/I-50_candidate.webp,assets/ponchi/final/I-50.webp,114288,49284,promoted
+I-20,Playwright MCP,semantic-regen-019,assets/ponchi/final_candidates/semantic-regen-019/I-20_candidate.webp,assets/ponchi/final/I-20.webp,89274,48826,promoted
+I-21,Puppeteer MCP,semantic-regen-019,assets/ponchi/final_candidates/semantic-regen-019/I-21_candidate.webp,assets/ponchi/final/I-21.webp,75980,479030,promoted
+I-22,Chrome DevTools MCP,semantic-regen-019,assets/ponchi/final_candidates/semantic-regen-019/I-22_candidate.webp,assets/ponchi/final/I-22.webp,88532,448242,promoted
+J-1,AGI,semantic-regen-020,assets/ponchi/final_candidates/semantic-regen-020/J-1_candidate.webp,assets/ponchi/final/J-1.webp,95920,572600,promoted
+J-2,強い AI／弱い AI,semantic-regen-020,assets/ponchi/final_candidates/semantic-regen-020/J-2_candidate.webp,assets/ponchi/final/J-2.webp,98110,504450,promoted
+J-3,Singularity,semantic-regen-020,assets/ponchi/final_candidates/semantic-regen-020/J-3_candidate.webp,assets/ponchi/final/J-3.webp,107698,491644,promoted
+J-4,ASI,semantic-regen-020,assets/ponchi/final_candidates/semantic-regen-020/J-4_candidate.webp,assets/ponchi/final/J-4.webp,101122,474484,promoted
+J-10,Machine Learning,semantic-regen-020,assets/ponchi/final_candidates/semantic-regen-020/J-10_candidate.webp,assets/ponchi/final/J-10.webp,100026,471544,promoted
+J-11,Deep Learning,semantic-regen-020,assets/ponchi/final_candidates/semantic-regen-020/J-11_candidate.webp,assets/ponchi/final/J-11.webp,126160,52554,promoted
+J-12,Neural Network,semantic-regen-020,assets/ponchi/final_candidates/semantic-regen-020/J-12_candidate.webp,assets/ponchi/final/J-12.webp,93950,38798,promoted
+J-13,Transformer,semantic-regen-020,assets/ponchi/final_candidates/semantic-regen-020/J-13_candidate.webp,assets/ponchi/final/J-13.webp,107600,489210,promoted
+J-14,LLM,semantic-regen-020,assets/ponchi/final_candidates/semantic-regen-020/J-14_candidate.webp,assets/ponchi/final/J-14.webp,97536,441348,promoted
+J-15,VLM,semantic-regen-020,assets/ponchi/final_candidates/semantic-regen-020/J-15_candidate.webp,assets/ponchi/final/J-15.webp,105270,431530,promoted
+J-16,Fine-tuning,semantic-regen-021,assets/ponchi/final_candidates/semantic-regen-021/J-16_candidate.webp,assets/ponchi/final/J-16.webp,114898,522416,promoted
+J-17,Attention,semantic-regen-021,assets/ponchi/final_candidates/semantic-regen-021/J-17_candidate.webp,assets/ponchi/final/J-17.webp,93148,27104,promoted
+J-18,MoE,semantic-regen-021,assets/ponchi/final_candidates/semantic-regen-021/J-18_candidate.webp,assets/ponchi/final/J-18.webp,84982,419380,promoted
+J-19,量子化,semantic-regen-021,assets/ponchi/final_candidates/semantic-regen-021/J-19_candidate.webp,assets/ponchi/final/J-19.webp,87056,42418,promoted
+J-20,Big Data,semantic-regen-021,assets/ponchi/final_candidates/semantic-regen-021/J-20_candidate.webp,assets/ponchi/final/J-20.webp,122120,636438,promoted
+J-21,LoRA,semantic-regen-021,assets/ponchi/final_candidates/semantic-regen-021/J-21_candidate.webp,assets/ponchi/final/J-21.webp,81232,509780,promoted
+J-22,パラメータ数の単位,semantic-regen-021,assets/ponchi/final_candidates/semantic-regen-021/J-22_candidate.webp,assets/ponchi/final/J-22.webp,98716,44406,promoted
+J-23,拡散モデル,semantic-regen-021,assets/ponchi/final_candidates/semantic-regen-021/J-23_candidate.webp,assets/ponchi/final/J-23.webp,56450,603028,promoted
+J-31,第 5 世代コンピュータ,semantic-regen-022,assets/ponchi/final_candidates/semantic-regen-022/J-31_candidate.webp,assets/ponchi/final/J-31.webp,120738,605530,promoted
+J-32,ノイマン型,semantic-regen-022,assets/ponchi/final_candidates/semantic-regen-022/J-32_candidate.webp,assets/ponchi/final/J-32.webp,82372,422188,promoted
+J-33,量子コンピュータ,semantic-regen-022,assets/ponchi/final_candidates/semantic-regen-022/J-33_candidate.webp,assets/ponchi/final/J-33.webp,104786,534552,promoted
+J-40,IoT,semantic-regen-022,assets/ponchi/final_candidates/semantic-regen-022/J-40_candidate.webp,assets/ponchi/final/J-40.webp,98492,482364,promoted
+J-41,DX,semantic-regen-022,assets/ponchi/final_candidates/semantic-regen-022/J-41_candidate.webp,assets/ponchi/final/J-41.webp,112538,53580,promoted
+J-42,Web3,semantic-regen-022,assets/ponchi/final_candidates/semantic-regen-022/J-42_candidate.webp,assets/ponchi/final/J-42.webp,45802,490160,promoted
+J-43,SaaS,semantic-regen-022,assets/ponchi/final_candidates/semantic-regen-022/J-43_candidate.webp,assets/ponchi/final/J-43.webp,101470,505254,promoted
+J-100,識字（リテラシー）,semantic-regen-022,assets/ponchi/final_candidates/semantic-regen-022/J-100_candidate.webp,assets/ponchi/final/J-100.webp,81610,41018,promoted
+J-50,AI 倫理,semantic-regen-023,assets/ponchi/final_candidates/semantic-regen-023/J-50_candidate.webp,assets/ponchi/final/J-50.webp,84752,443548,promoted
+J-51,Hallucination,semantic-regen-023,assets/ponchi/final_candidates/semantic-regen-023/J-51_candidate.webp,assets/ponchi/final/J-51.webp,83902,393528,promoted
+J-52,Sycophancy,semantic-regen-023,assets/ponchi/final_candidates/semantic-regen-023/J-52_candidate.webp,assets/ponchi/final/J-52.webp,84474,31952,promoted
+J-53,著作権法 30 条の 4（日本）,semantic-regen-023,assets/ponchi/final_candidates/semantic-regen-023/J-53_candidate.webp,assets/ponchi/final/J-53.webp,110468,536968,promoted
+J-54,ISO/IEC 42001,semantic-regen-023,assets/ponchi/final_candidates/semantic-regen-023/J-54_candidate.webp,assets/ponchi/final/J-54.webp,95906,475880,promoted
+J-55,個人情報保護法,semantic-regen-023,assets/ponchi/final_candidates/semantic-regen-023/J-55_candidate.webp,assets/ponchi/final/J-55.webp,96988,482664,promoted
+J-56,GDPR,semantic-regen-023,assets/ponchi/final_candidates/semantic-regen-023/J-56_candidate.webp,assets/ponchi/final/J-56.webp,100012,57514,promoted
+J-62,チューリングテスト,semantic-regen-023,assets/ponchi/final_candidates/semantic-regen-023/J-62_candidate.webp,assets/ponchi/final/J-62.webp,73850,416054,promoted
+J-90,GUI,semantic-regen-024,assets/ponchi/final_candidates/semantic-regen-024/J-90_candidate.webp,assets/ponchi/final/J-90.webp,78896,460456,promoted
+J-92,Linux,semantic-regen-024,assets/ponchi/final_candidates/semantic-regen-024/J-92_candidate.webp,assets/ponchi/final/J-92.webp,65370,60250,promoted
+J-93,Ubuntu,semantic-regen-024,assets/ponchi/final_candidates/semantic-regen-024/J-93_candidate.webp,assets/ponchi/final/J-93.webp,81134,433788,promoted
