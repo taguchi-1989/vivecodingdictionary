@@ -24,3 +24,8 @@
 - 7本のサンプルを読んで、本文量が多いか少ないかを見る。
 - デザイン案A/B/C/Dのどれが一番「図鑑らしい」かを見る。
 - 公開面と裏台帳の情報分離を決める。
+
+## 参照入口
+- `drafts/prototypes/template_review_hub.html`
+- `drafts/prototypes/mockups/index.html`
+- `drafts/prototypes/preview/`

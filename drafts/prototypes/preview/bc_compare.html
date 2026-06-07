@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>B/C 系列比較 - バイブコーディング図鑑</title>
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f3f6fb;
+    --paper: #ffffff;
+    --ink: #1a2333;
+    --muted: #6c7a91;
+    --line: #d8e0eb;
+    --blue: #27406b;
+    --blue2: #2a5db0;
+    --soft: #eef3fb;
+    --green: #1d6b48;
+    --amber: #8a5a00;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Meiryo", system-ui, sans-serif;
+    line-height: 1.6;
+  }
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 4;
+    padding: 18px 24px;
+    color: #fff;
+    background: #0c2552;
+    border-bottom: 1px solid rgba(255,255,255,.18);
+  }
+  h1 {
+    margin: 0;
+    font-size: 22px;
+    line-height: 1.25;
+  }
+  .sub {
+    margin-top: 4px;
+    color: rgba(255,255,255,.78);
+    font-size: 12px;
+  }
+  main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 22px 20px 64px;
+  }
+  .toolbar {
+    display: grid;
+    grid-template-columns: minmax(220px, 1fr) auto auto;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+  input, select {
+    min-height: 38px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--ink);
+    font: inherit;
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+  .summary {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  .stat,
+  .panel,
+  .pair,
+  .card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+  }
+  .stat {
+    padding: 14px 16px;
+  }
+  .stat b {
+    display: block;
+    color: var(--blue);
+    font-size: 20px;
+    line-height: 1.1;
+  }
+  .stat span {
+    display: block;
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 12px;
+  }
+  .panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .panel {
+    overflow: hidden;
+  }
+  .panel h2 {
+    margin: 0;
+    padding: 14px 16px;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    color: var(--blue);
+    font-size: 16px;
+  }
+  .panel .note {
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--line);
+    background: #fbfdff;
+    color: var(--muted);
+    font-size: 12px;
+  }
+  .list {
+    display: grid;
+    gap: 8px;
+    padding: 12px;
+  }
+  .card {
+    display: grid;
+    grid-template-columns: 52px minmax(0, 1fr) auto;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+  }
+  .code {
+    color: var(--blue2);
+    font-weight: 800;
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-size: 13px;
+  }
+  .title {
+    min-width: 0;
+  }
+  .title a {
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .title a:hover {
+    color: var(--blue2);
+    text-decoration: underline;
+  }
+  .hint {
+    color: var(--muted);
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .badge {
+    padding: 3px 7px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--muted);
+    background: #fff;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  .badge.ready { color: var(--green); background: #ecfdf3; border-color: #b7e4c7; }
+  .badge.review { color: var(--amber); background: #fff7e6; border-color: #f4d58d; }
+  .pairs {
+    margin-top: 18px;
+  }
+  .pairs h2 {
+    margin: 0 0 10px;
+    color: var(--blue);
+    font-size: 16px;
+  }
+  .pair-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 10px;
+  }
+  .pair {
+    padding: 12px;
+  }
+  .pair .row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 8px;
+    align-items: center;
+  }
+  .pair a {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .pair a:hover { text-decoration: underline; }
+  .arrow {
+    color: var(--muted);
+    font-weight: 800;
+  }
+  .pair small {
+    display: block;
+    margin-top: 8px;
+    color: var(--muted);
+  }
+  footer {
+    margin-top: 24px;
+    color: var(--muted);
+    font-size: 12px;
+  }
+  footer a {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 700;
+  }
+  footer a:hover { text-decoration: underline; }
+  .hidden { display: none !important; }
+  @media (max-width: 860px) {
+    .toolbar,
+    .summary,
+    .panels {
+      grid-template-columns: 1fr;
+    }
+    .card {
+      grid-template-columns: 48px minmax(0, 1fr);
+    }
+    .card .badge {
+      grid-column: 2;
+      width: max-content;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>B/C 系列比較</h1>
+  <div class="sub">B = サービス / C = 人・会社。関連するサービスと提供元を横断して確認するための軽量ビュー。</div>
+</header>
+<main>
+  <section class="toolbar">
+    <input id="q" type="search" placeholder="B-1, Gemini, OpenAI, Microsoft などで絞り込み">
+    <select id="status">
+      <option value="all">すべての状態</option>
+      <option value="ready">ready のみ</option>
+      <option value="review">needs_review のみ</option>
+    </select>
+    <select id="chapter">
+      <option value="all">B/C 両方</option>
+      <option value="B">B サービス</option>
+      <option value="C">C 人・会社</option>
+    </select>
+  </section>
+
+  <section class="summary">
+    <div class="stat"><b>40</b><span>B サービス</span></div>
+    <div class="stat"><b>28</b><span>C 人・会社</span></div>
+    <div class="stat"><b>7</b><span>代表ペア</span></div>
+    <div class="stat"><b>HTML/PDF</b><span>各プレビューへ直接リンク</span></div>
+  </section>
+
+  <section class="panels">
+    <div class="panel">
+      <h2>B サービス</h2>
+      <div class="note">AIアシスタント、開発支援、クラウド、料金プランなど。製品・サービスとして読者が触る入口。</div>
+      <div class="list" id="bList">
+        <div class="card" data-chapter="B" data-status="ready" data-search="b-1 gemini google ai assistant"><span class="code">B-1</span><div class="title"><a href="B-1.html">Gemini</a><div class="hint">Google の AI アシスタント</div></div><span class="badge ready">ready</span></div>
+        <div class="card" data-chapter="B" data-status="ready" data-search="b-2 claude anthropic ai assistant"><span class="code">B-2</span><div class="title"><a href="B-2.html">Claude</a><div class="hint">Anthropic の AI アシスタント</div></div><span class="badge ready">ready</span></div>
+        <div class="card" data-chapter="B" data-status="ready" data-search="b-3 chatgpt openai ai assistant"><span class="code">B-3</span><div class="title"><a href="B-3.html">ChatGPT</a><div class="hint">OpenAI の対話型 AI</div></div><span class="badge ready">ready</span></div>
+        <div class="card" data-chapter="B" data-status="ready" data-search="b-4 cursor ai editor"><span class="code">B-4</span><div class="title"><a href="B-4.html">Cursor</a><div class="hint">AI コーディングエディタ</div></div><span class="badge ready">ready</span></div>
+        <div class="card" data-chapter="B" data-status="ready" data-search="b-5 github copilot microsoft"><span class="code">B-5</span><div class="title"><a href="B-5.html">GitHub Copilot</a><div class="hint">GitHub / Microsoft の開発支援</div></div><span class="badge ready">ready</span></div>
+        <div class="card" data-chapter="B" data-status="ready" data-search="b-7 claude code anthropic coding"><span class="code">B-7</span><div class="title"><a href="B-7.html">Claude Code</a><div class="hint">Claude のコーディング入口</div></div><span class="badge ready">ready</span></div>
+        <div class="card" data-chapter="B" data-status="ready" data-search="b-8 codex openai coding"><span class="code">B-8</span><div class="title"><a href="B-8.html">Codex</a><div class="hint">OpenAI の開発支援</div></div><span class="badge ready">ready</span></div>
+        <div class="card" data-chapter="B" data-status="ready" data-search="b-20 vercel hosting deploy"><span class="code">B-20</span><div class="title"><a href="B-20.html">Vercel</a><div class="hint">フロントエンド系ホスティング</div></div><span class="badge ready">ready</span></div>
+        <div class="card" data-chapter="B" data-status="ready" data-search="b-23 aws cloud"><span class="code">B-23</span><div class="title"><a href="B-23.html">AWS</a><div class="hint">クラウド基盤</div></div><span class="badge ready">ready</span></div>
+        <div class="card" data-chapter="B" data-status="ready" data-search="b-24 google cloud vertex ai"><span class="code">B-24</span><div class="title"><a href="B-24.html">Google Cloud</a><div class="hint">Google のクラウド基盤</div></div><span class="badge ready">ready</span></div>
+        <div class="card" data-chapter="B" data-status="ready" data-search="b-25 azure microsoft cloud"><span class="code">B-25</span><div class="title"><a href="B-25.html">Azure</a><div class="hint">Microsoft のクラウド基盤</div></div><span class="badge ready">ready</span></div>
+        <div class="card" data-chapter="B" data-status="ready" data-search="b-50 claude pricing plan"><span class="code">B-50</span><div class="title"><a href="B-50.html">Claude の料金プラン</a><div class="hint">料金プラン比較</div></div><span class="badge ready">ready</span></div>
+        <div class="card" data-chapter="B" data-status="ready" data-search="b-51 chatgpt pricing plan"><span class="code">B-51</span><div class="title"><a href="B-51.html">ChatGPT の料金プラン</a><div class="hint">料金プラン比較</div></div><span class="badge ready">ready</span></div>
+        <div class="card" data-chapter="B" data-status="ready" data-search="b-52 gemini pricing plan"><span class="code">B-52</span><div class="title"><a href="B-52.html">Gemini の料金プラン</a><div class="hint">料金プラン比較</div></div><span class="badge ready">ready</span></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>C 人・会社</h2>
+      <div class="note">AI企業、半導体企業、研究者、コミュニティ人物など。B系列の提供元・背景として読む入口。</div>
+      <div class="list" id="cList">
+        <div class="card" data-chapter="C" data-status="ready" data-search="c-1 openai chatgpt codex"><span class="code">C-1</span><div class="title"><a href="C-1.html">OpenAI</a><div class="hint">ChatGPT / Codex の提供元</div></div><span class="badge ready">ready</span></div>
+        <div class="card" data-chapter="C" data-status="ready" data-search="c-2 anthropic claude"><span class="code">C-2</span><div class="title"><a href="C-2.html">Anthropic</a><div class="hint">Claude の提供元</div></div><span class="badge ready">ready</span></div>
+        <div class="card" data-chapter="C" data-status="ready" data-search="c-3 google deepmind gemini"><span class="code">C-3</span><div class="title"><a href="C-3.html">Google DeepMind</a><div class="hint">Gemini 系の中核</div></div><span class="badge ready">ready</span></div>
+        <div class="card" data-chapter="C" data-status="ready" data-search="c-4 meta ai llama"><span class="code">C-4</span><div class="title"><a href="C-4.html">Meta AI</a><div class="hint">Llama 系の提供元</div></div><span class="badge ready">ready</span></div>
+        <div class="card" data-chapter="C" data-status="ready" data-search="c-5 xai grok"><span class="code">C-5</span><div class="title"><a href="C-5.html">xAI</a><div class="hint">Grok 系の提供元</div></div><span class="badge ready">ready</span></div>
+        <div class="card" data-chapter="C" data-status="ready" data-search="c-6 mistral ai"><span class="code">C-6</span><div class="title"><a href="C-6.html">Mistral AI</a><div class="hint">Mistral 系の提供元</div></div><span class="badge ready">ready</span></div>
+        <div class="card" data-chapter="C" data-status="ready" data-search="c-7 hugging face"><span class="code">C-7</span><div class="title"><a href="C-7.html">Hugging Face</a><div class="hint">モデル共有・実行基盤</div></div><span class="badge ready">ready</span></div>
+        <div class="card" data-chapter="C" data-status="ready" data-search="c-8 microsoft ai copilot azure"><span class="code">C-8</span><div class="title"><a href="C-8.html">Microsoft AI</a><div class="hint">Copilot / Azure と接続</div></div><span class="badge ready">ready</span></div>
+        <div class="card" data-chapter="C" data-status="ready" data-search="c-9 nvidia gpu"><span class="code">C-9</span><div class="title"><a href="C-9.html">NVIDIA</a><div class="hint">GPU / AI計算基盤</div></div><span class="badge ready">ready</span></div>
+        <div class="card" data-chapter="C" data-status="review" data-search="c-10 moonshot ai kimi"><span class="code">C-10</span><div class="title"><a href="C-10.html">Moonshot AI</a><div class="hint">Kimi モデルの提供元</div></div><span class="badge review">needs_review</span></div>
+        <div class="card" data-chapter="C" data-status="review" data-search="c-11 z.ai glm zhipu"><span class="code">C-11</span><div class="title"><a href="C-11.html">Z.ai</a><div class="hint">GLM 系の提供元</div></div><span class="badge review">needs_review</span></div>
+        <div class="card" data-chapter="C" data-status="ready" data-search="c-12 tsmc semiconductor"><span class="code">C-12</span><div class="title"><a href="C-12.html">TSMC</a><div class="hint">AIチップの実製造</div></div><span class="badge ready">ready</span></div>
+        <div class="card" data-chapter="C" data-status="ready" data-search="c-13 groq lpu inference"><span class="code">C-13</span><div class="title"><a href="C-13.html">Groq</a><div class="hint">AI推論チップ</div></div><span class="badge ready">ready</span></div>
+        <div class="card" data-chapter="C" data-status="ready" data-search="c-14 amd gpu cpu"><span class="code">C-14</span><div class="title"><a href="C-14.html">AMD</a><div class="hint">CPU / GPU 企業</div></div><span class="badge ready">ready</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pairs">
+    <h2>代表的な対応関係</h2>
+    <div class="pair-grid">
+      <div class="pair"><div class="row"><a href="B-3.html">B-3 ChatGPT</a><span class="arrow">→</span><a href="C-1.html">C-1 OpenAI</a></div><small>サービスと提供元をセットで読む。</small></div>
+      <div class="pair"><div class="row"><a href="B-2.html">B-2 Claude</a><span class="arrow">→</span><a href="C-2.html">C-2 Anthropic</a></div><small>モデルの印象と企業思想を分けて見る。</small></div>
+      <div class="pair"><div class="row"><a href="B-1.html">B-1 Gemini</a><span class="arrow">→</span><a href="C-3.html">C-3 Google DeepMind</a></div><small>Gemini と Google Cloud まわりを整理する入口。</small></div>
+      <div class="pair"><div class="row"><a href="B-15.html">B-15 Copilot</a><span class="arrow">→</span><a href="C-8.html">C-8 Microsoft AI</a></div><small>Copilot ブランドと Microsoft 側の整理。</small></div>
+      <div class="pair"><div class="row"><a href="D-40.html">D-40 Llama</a><span class="arrow">→</span><a href="C-4.html">C-4 Meta AI</a></div><small>BではなくDモデル側とC企業側の対応例。</small></div>
+      <div class="pair"><div class="row"><a href="D-30.html">D-30 Grok</a><span class="arrow">→</span><a href="C-5.html">C-5 xAI</a></div><small>サービス名・モデル名・会社名の混同を防ぐ。</small></div>
+      <div class="pair"><div class="row"><a href="D-41.html">D-41 Mistral</a><span class="arrow">→</span><a href="C-6.html">C-6 Mistral AI</a></div><small>同名に近いモデル系と企業を対応付ける。</small></div>
+    </div>
+  </section>
+
+  <footer>
+    既存の全体比較は <a href="overview.html">overview.html</a>。通常の目次は <a href="index.html">preview index</a>。
+  </footer>
+</main>
+<script>
+  const q = document.getElementById('q');
+  const status = document.getElementById('status');
+  const chapter = document.getElementById('chapter');
+  const cards = [...document.querySelectorAll('.card')];
+
+  function applyFilters() {
+    const query = q.value.trim().toLowerCase();
+    const wantedStatus = status.value;
+    const wantedChapter = chapter.value;
+    cards.forEach(card => {
+      const okText = !query || card.dataset.search.includes(query);
+      const okStatus = wantedStatus === 'all' || card.dataset.status === wantedStatus;
+      const okChapter = wantedChapter === 'all' || card.dataset.chapter === wantedChapter;
+      card.classList.toggle('hidden', !(okText && okStatus && okChapter));
+    });
+  }
+
+  q.addEventListener('input', applyFilters);
+  status.addEventListener('change', applyFilters);
+  chapter.addEventListener('change', applyFilters);
+</script>
+</body>
+</html>

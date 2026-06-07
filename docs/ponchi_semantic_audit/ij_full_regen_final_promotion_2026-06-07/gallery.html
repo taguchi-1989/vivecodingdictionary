@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>I/J Ponchi Final Gallery</title>
+<style>
+  :root {
+    --bg: #f6f8fb;
+    --paper: #ffffff;
+    --ink: #172033;
+    --muted: #64748b;
+    --line: #d7dee8;
+    --blue: #2563eb;
+    --blue-soft: #e9f1ff;
+    --green: #1f8a55;
+    --amber: #b7791f;
+    --red: #b23b3b;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", system-ui, sans-serif; background: var(--bg); color: var(--ink); }
+  header { position: sticky; top: 0; z-index: 10; background: rgba(246, 248, 251, .96); border-bottom: 1px solid var(--line); backdrop-filter: blur(10px); }
+  .bar { max-width: 1440px; margin: 0 auto; padding: 16px 20px; display: grid; gap: 12px; }
+  h1 { margin: 0; font-size: 22px; letter-spacing: 0; }
+  .summary { display: flex; flex-wrap: wrap; gap: 8px; color: var(--muted); font-size: 13px; }
+  .summary span { background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: 5px 8px; }
+  .controls { display: grid; grid-template-columns: minmax(220px, 340px) 1fr; gap: 10px; align-items: start; }
+  input { width: 100%; border: 1px solid var(--line); border-radius: 6px; padding: 9px 10px; font: inherit; background: var(--paper); }
+  .segments { display: flex; flex-wrap: wrap; gap: 6px; }
+  .seg { border: 1px solid var(--line); background: var(--paper); border-radius: 6px; padding: 8px 10px; font: inherit; cursor: pointer; color: var(--ink); }
+  .seg.active { border-color: var(--blue); background: var(--blue-soft); color: #0f3d9a; }
+  .seg span { color: var(--muted); margin-left: 4px; }
+  main { max-width: 1440px; margin: 0 auto; padding: 18px 20px 48px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+  .card { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; display: grid; }
+  .thumb { aspect-ratio: 2 / 1; background: #fff; border-bottom: 1px solid var(--line); }
+  .thumb img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .card-body { padding: 10px 12px 12px; display: grid; gap: 5px; }
+  .row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  h2 { margin: 0; font-size: 15px; line-height: 1.3; }
+  p { margin: 0; color: var(--muted); font-size: 12px; }
+  .reasons { min-height: 32px; }
+  .pill { border-radius: 999px; padding: 3px 7px; font-size: 12px; border: 1px solid var(--line); white-space: nowrap; }
+  .pill.high { color: var(--green); background: #edf8f2; border-color: #b9e2ca; }
+  .pill.mid { color: var(--amber); background: #fff8e7; border-color: #efd391; }
+  .pill.low { color: var(--red); background: #fff1f1; border-color: #efb3b3; }
+  .links { display: flex; gap: 10px; font-size: 12px; }
+  a { color: var(--blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .hidden { display: none; }
+  @media (max-width: 760px) { .controls { grid-template-columns: 1fr; } main { padding-inline: 12px; } .bar { padding-inline: 12px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <div>
+      <h1>I/J Ponchi Final Gallery</h1>
+      <div class="summary">
+        <span>final promoted: 69</span>
+        <span>image audit: pass 69</span>
+        <span>color audit: pass 69</span>
+        <span>quality: high 59 / mid 7 / low 3</span>
+        <span><a href="./results.md">results.md</a></span>
+        <span><a href="../../../ledgers/ij_full_regen_final_promotion_2026-06-07.csv">promotion csv</a></span>
+      </div>
+    </div>
+    <div class="controls">
+      <input id="search" type="search" placeholder="ID / title / batch search" autocomplete="off">
+      <div class="segments" id="batchFilters"><button class="seg active" data-filter="batch" data-value="all">All</button><button class="seg" data-filter="batch" data-value="semantic-regen-015">015 <span>5</span></button><button class="seg" data-filter="batch" data-value="semantic-regen-016">016 <span>8</span></button><button class="seg" data-filter="batch" data-value="semantic-regen-017">017 <span>7</span></button><button class="seg" data-filter="batch" data-value="semantic-regen-018">018 <span>9</span></button><button class="seg" data-filter="batch" data-value="semantic-regen-019">019 <span>3</span></button><button class="seg" data-filter="batch" data-value="semantic-regen-020">020 <span>10</span></button><button class="seg" data-filter="batch" data-value="semantic-regen-021">021 <span>8</span></button><button class="seg" data-filter="batch" data-value="semantic-regen-022">022 <span>8</span></button><button class="seg" data-filter="batch" data-value="semantic-regen-023">023 <span>8</span></button><button class="seg" data-filter="batch" data-value="semantic-regen-024">024 <span>3</span></button></div>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="grid" id="grid">
+
+      <article class="card" data-entry="J-72" data-title="H100" data-batch="semantic-regen-015" data-band="low">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-72.webp" alt="J-72 H100" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-72</strong><span class="pill low">low 57</span></div>
+          <h2>H100</h2>
+          <p>semantic-regen-015</p>
+          <p class="reasons">色味;明るさ;濃淡;線密度;外れ値</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-72.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-015/J-72_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-73" data-title="Blackwell" data-batch="semantic-regen-015" data-band="mid">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-73.webp" alt="J-73 Blackwell" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-73</strong><span class="pill mid">mid 75</span></div>
+          <h2>Blackwell</h2>
+          <p>semantic-regen-015</p>
+          <p class="reasons">濃淡;線密度</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-73.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-015/J-73_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-78" data-title="HDD" data-batch="semantic-regen-015" data-band="mid">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-78.webp" alt="J-78 HDD" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-78</strong><span class="pill mid">mid 72</span></div>
+          <h2>HDD</h2>
+          <p>semantic-regen-015</p>
+          <p class="reasons">濃淡;線密度</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-78.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-015/J-78_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-79" data-title="SSD" data-batch="semantic-regen-015" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-79.webp" alt="J-79 SSD" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-79</strong><span class="pill high">high 89</span></div>
+          <h2>SSD</h2>
+          <p>semantic-regen-015</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-79.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-015/J-79_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-91" data-title="CLI" data-batch="semantic-regen-015" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-91.webp" alt="J-91 CLI" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-91</strong><span class="pill high">high 94</span></div>
+          <h2>CLI</h2>
+          <p>semantic-regen-015</p>
+          <p class="reasons">known_padding_2to1</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-91.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-015/J-91_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-70" data-title="VRAM" data-batch="semantic-regen-016" data-band="mid">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-70.webp" alt="J-70 VRAM" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-70</strong><span class="pill mid">mid 80</span></div>
+          <h2>VRAM</h2>
+          <p>semantic-regen-016</p>
+          <p class="reasons">濃淡;線密度</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-70.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-016/J-70_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-71" data-title="RAM" data-batch="semantic-regen-016" data-band="mid">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-71.webp" alt="J-71 RAM" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-71</strong><span class="pill mid">mid 83</span></div>
+          <h2>RAM</h2>
+          <p>semantic-regen-016</p>
+          <p class="reasons">線密度</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-71.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-016/J-71_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-74" data-title="RTX シリーズ" data-batch="semantic-regen-016" data-band="mid">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-74.webp" alt="J-74 RTX シリーズ" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-74</strong><span class="pill mid">mid 78</span></div>
+          <h2>RTX シリーズ</h2>
+          <p>semantic-regen-016</p>
+          <p class="reasons">濃淡;線密度</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-74.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-016/J-74_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-75" data-title="Tensor コア" data-batch="semantic-regen-016" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-75.webp" alt="J-75 Tensor コア" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-75</strong><span class="pill high">high 92</span></div>
+          <h2>Tensor コア</h2>
+          <p>semantic-regen-016</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-75.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-016/J-75_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-76" data-title="CPU" data-batch="semantic-regen-016" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-76.webp" alt="J-76 CPU" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-76</strong><span class="pill high">high 88</span></div>
+          <h2>CPU</h2>
+          <p>semantic-regen-016</p>
+          <p class="reasons">線密度</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-76.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-016/J-76_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-77" data-title="GPU (概念)" data-batch="semantic-regen-016" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-77.webp" alt="J-77 GPU (概念)" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-77</strong><span class="pill high">high 95</span></div>
+          <h2>GPU (概念)</h2>
+          <p>semantic-regen-016</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-77.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-016/J-77_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-80" data-title="SATA" data-batch="semantic-regen-016" data-band="low">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-80.webp" alt="J-80 SATA" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-80</strong><span class="pill low">low 66</span></div>
+          <h2>SATA</h2>
+          <p>semantic-regen-016</p>
+          <p class="reasons">濃淡;線密度;外れ値</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-80.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-016/J-80_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-81" data-title="M.2" data-batch="semantic-regen-016" data-band="low">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-81.webp" alt="J-81 M.2" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-81</strong><span class="pill low">low 58</span></div>
+          <h2>M.2</h2>
+          <p>semantic-regen-016</p>
+          <p class="reasons">濃淡;線密度;外れ値;known_padding_2to1</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-81.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-016/J-81_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="I-1" data-title="MCP" data-batch="semantic-regen-017" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/I-1.webp" alt="I-1 MCP" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>I-1</strong><span class="pill high">high 94</span></div>
+          <h2>MCP</h2>
+          <p>semantic-regen-017</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/I-1.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-017/I-1_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="I-2" data-title="MCP Server" data-batch="semantic-regen-017" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/I-2.webp" alt="I-2 MCP Server" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>I-2</strong><span class="pill high">high 94</span></div>
+          <h2>MCP Server</h2>
+          <p>semantic-regen-017</p>
+          <p class="reasons">known_padding_2to1</p>
+          <div class="links"><a href="../../../assets/ponchi/final/I-2.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-017/I-2_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="I-3" data-title="MCP Client" data-batch="semantic-regen-017" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/I-3.webp" alt="I-3 MCP Client" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>I-3</strong><span class="pill high">high 96</span></div>
+          <h2>MCP Client</h2>
+          <p>semantic-regen-017</p>
+          <p class="reasons">known_padding_2to1</p>
+          <div class="links"><a href="../../../assets/ponchi/final/I-3.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-017/I-3_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="I-4" data-title="MCP Transport" data-batch="semantic-regen-017" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/I-4.webp" alt="I-4 MCP Transport" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>I-4</strong><span class="pill high">high 95</span></div>
+          <h2>MCP Transport</h2>
+          <p>semantic-regen-017</p>
+          <p class="reasons">known_padding_2to1</p>
+          <div class="links"><a href="../../../assets/ponchi/final/I-4.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-017/I-4_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="I-5" data-title="MCP SDK" data-batch="semantic-regen-017" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/I-5.webp" alt="I-5 MCP SDK" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>I-5</strong><span class="pill high">high 89</span></div>
+          <h2>MCP SDK</h2>
+          <p>semantic-regen-017</p>
+          <p class="reasons">線密度;known_padding_2to1</p>
+          <div class="links"><a href="../../../assets/ponchi/final/I-5.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-017/I-5_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="I-80" data-title="自作 MCP のテンプレ" data-batch="semantic-regen-017" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/I-80.webp" alt="I-80 自作 MCP のテンプレ" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>I-80</strong><span class="pill high">high 97</span></div>
+          <h2>自作 MCP のテンプレ</h2>
+          <p>semantic-regen-017</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/I-80.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-017/I-80_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="I-81" data-title="MCP の登録・設定" data-batch="semantic-regen-017" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/I-81.webp" alt="I-81 MCP の登録・設定" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>I-81</strong><span class="pill high">high 97</span></div>
+          <h2>MCP の登録・設定</h2>
+          <p>semantic-regen-017</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/I-81.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-017/I-81_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="I-10" data-title="Filesystem MCP" data-batch="semantic-regen-018" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/I-10.webp" alt="I-10 Filesystem MCP" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>I-10</strong><span class="pill high">high 96</span></div>
+          <h2>Filesystem MCP</h2>
+          <p>semantic-regen-018</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/I-10.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-018/I-10_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="I-11" data-title="GitHub MCP" data-batch="semantic-regen-018" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/I-11.webp" alt="I-11 GitHub MCP" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>I-11</strong><span class="pill high">high 93</span></div>
+          <h2>GitHub MCP</h2>
+          <p>semantic-regen-018</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/I-11.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-018/I-11_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="I-12" data-title="Git MCP" data-batch="semantic-regen-018" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/I-12.webp" alt="I-12 Git MCP" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>I-12</strong><span class="pill high">high 93</span></div>
+          <h2>Git MCP</h2>
+          <p>semantic-regen-018</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/I-12.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-018/I-12_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="I-13" data-title="Slack MCP" data-batch="semantic-regen-018" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/I-13.webp" alt="I-13 Slack MCP" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>I-13</strong><span class="pill high">high 96</span></div>
+          <h2>Slack MCP</h2>
+          <p>semantic-regen-018</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/I-13.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-018/I-13_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="I-23" data-title="Serena MCP" data-batch="semantic-regen-018" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/I-23.webp" alt="I-23 Serena MCP" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>I-23</strong><span class="pill high">high 89</span></div>
+          <h2>Serena MCP</h2>
+          <p>semantic-regen-018</p>
+          <p class="reasons">線密度</p>
+          <div class="links"><a href="../../../assets/ponchi/final/I-23.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-018/I-23_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="I-24" data-title="Context7 MCP" data-batch="semantic-regen-018" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/I-24.webp" alt="I-24 Context7 MCP" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>I-24</strong><span class="pill high">high 96</span></div>
+          <h2>Context7 MCP</h2>
+          <p>semantic-regen-018</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/I-24.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-018/I-24_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="I-30" data-title="Notion MCP" data-batch="semantic-regen-018" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/I-30.webp" alt="I-30 Notion MCP" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>I-30</strong><span class="pill high">high 87</span></div>
+          <h2>Notion MCP</h2>
+          <p>semantic-regen-018</p>
+          <p class="reasons">線密度</p>
+          <div class="links"><a href="../../../assets/ponchi/final/I-30.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-018/I-30_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="I-41" data-title="SQLite MCP" data-batch="semantic-regen-018" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/I-41.webp" alt="I-41 SQLite MCP" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>I-41</strong><span class="pill high">high 94</span></div>
+          <h2>SQLite MCP</h2>
+          <p>semantic-regen-018</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/I-41.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-018/I-41_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="I-50" data-title="AWS MCP" data-batch="semantic-regen-018" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/I-50.webp" alt="I-50 AWS MCP" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>I-50</strong><span class="pill high">high 91</span></div>
+          <h2>AWS MCP</h2>
+          <p>semantic-regen-018</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/I-50.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-018/I-50_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="I-20" data-title="Playwright MCP" data-batch="semantic-regen-019" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/I-20.webp" alt="I-20 Playwright MCP" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>I-20</strong><span class="pill high">high 92</span></div>
+          <h2>Playwright MCP</h2>
+          <p>semantic-regen-019</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/I-20.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-019/I-20_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="I-21" data-title="Puppeteer MCP" data-batch="semantic-regen-019" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/I-21.webp" alt="I-21 Puppeteer MCP" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>I-21</strong><span class="pill high">high 93</span></div>
+          <h2>Puppeteer MCP</h2>
+          <p>semantic-regen-019</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/I-21.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-019/I-21_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="I-22" data-title="Chrome DevTools MCP" data-batch="semantic-regen-019" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/I-22.webp" alt="I-22 Chrome DevTools MCP" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>I-22</strong><span class="pill high">high 92</span></div>
+          <h2>Chrome DevTools MCP</h2>
+          <p>semantic-regen-019</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/I-22.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-019/I-22_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-1" data-title="AGI" data-batch="semantic-regen-020" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-1.webp" alt="J-1 AGI" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-1</strong><span class="pill high">high 87</span></div>
+          <h2>AGI</h2>
+          <p>semantic-regen-020</p>
+          <p class="reasons">線密度</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-1.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-020/J-1_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-2" data-title="強い AI／弱い AI" data-batch="semantic-regen-020" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-2.webp" alt="J-2 強い AI／弱い AI" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-2</strong><span class="pill high">high 96</span></div>
+          <h2>強い AI／弱い AI</h2>
+          <p>semantic-regen-020</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-2.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-020/J-2_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-3" data-title="Singularity" data-batch="semantic-regen-020" data-band="mid">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-3.webp" alt="J-3 Singularity" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-3</strong><span class="pill mid">mid 84</span></div>
+          <h2>Singularity</h2>
+          <p>semantic-regen-020</p>
+          <p class="reasons">濃淡</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-3.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-020/J-3_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-4" data-title="ASI" data-batch="semantic-regen-020" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-4.webp" alt="J-4 ASI" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-4</strong><span class="pill high">high 93</span></div>
+          <h2>ASI</h2>
+          <p>semantic-regen-020</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-4.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-020/J-4_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-10" data-title="Machine Learning" data-batch="semantic-regen-020" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-10.webp" alt="J-10 Machine Learning" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-10</strong><span class="pill high">high 92</span></div>
+          <h2>Machine Learning</h2>
+          <p>semantic-regen-020</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-10.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-020/J-10_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-11" data-title="Deep Learning" data-batch="semantic-regen-020" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-11.webp" alt="J-11 Deep Learning" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-11</strong><span class="pill high">high 90</span></div>
+          <h2>Deep Learning</h2>
+          <p>semantic-regen-020</p>
+          <p class="reasons">線密度</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-11.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-020/J-11_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-12" data-title="Neural Network" data-batch="semantic-regen-020" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-12.webp" alt="J-12 Neural Network" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-12</strong><span class="pill high">high 88</span></div>
+          <h2>Neural Network</h2>
+          <p>semantic-regen-020</p>
+          <p class="reasons">線密度</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-12.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-020/J-12_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-13" data-title="Transformer" data-batch="semantic-regen-020" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-13.webp" alt="J-13 Transformer" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-13</strong><span class="pill high">high 99</span></div>
+          <h2>Transformer</h2>
+          <p>semantic-regen-020</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-13.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-020/J-13_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-14" data-title="LLM" data-batch="semantic-regen-020" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-14.webp" alt="J-14 LLM" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-14</strong><span class="pill high">high 91</span></div>
+          <h2>LLM</h2>
+          <p>semantic-regen-020</p>
+          <p class="reasons">線密度</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-14.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-020/J-14_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-15" data-title="VLM" data-batch="semantic-regen-020" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-15.webp" alt="J-15 VLM" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-15</strong><span class="pill high">high 96</span></div>
+          <h2>VLM</h2>
+          <p>semantic-regen-020</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-15.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-020/J-15_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-16" data-title="Fine-tuning" data-batch="semantic-regen-021" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-16.webp" alt="J-16 Fine-tuning" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-16</strong><span class="pill high">high 99</span></div>
+          <h2>Fine-tuning</h2>
+          <p>semantic-regen-021</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-16.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-021/J-16_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-17" data-title="Attention" data-batch="semantic-regen-021" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-17.webp" alt="J-17 Attention" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-17</strong><span class="pill high">high 86</span></div>
+          <h2>Attention</h2>
+          <p>semantic-regen-021</p>
+          <p class="reasons">線密度</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-17.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-021/J-17_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-18" data-title="MoE" data-batch="semantic-regen-021" data-band="mid">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-18.webp" alt="J-18 MoE" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-18</strong><span class="pill mid">mid 81</span></div>
+          <h2>MoE</h2>
+          <p>semantic-regen-021</p>
+          <p class="reasons">濃淡;線密度</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-18.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-021/J-18_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-19" data-title="量子化" data-batch="semantic-regen-021" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-19.webp" alt="J-19 量子化" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-19</strong><span class="pill high">high 88</span></div>
+          <h2>量子化</h2>
+          <p>semantic-regen-021</p>
+          <p class="reasons">線密度</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-19.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-021/J-19_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-20" data-title="Big Data" data-batch="semantic-regen-021" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-20.webp" alt="J-20 Big Data" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-20</strong><span class="pill high">high 91</span></div>
+          <h2>Big Data</h2>
+          <p>semantic-regen-021</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-20.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-021/J-20_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-21" data-title="LoRA" data-batch="semantic-regen-021" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-21.webp" alt="J-21 LoRA" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-21</strong><span class="pill high">high 92</span></div>
+          <h2>LoRA</h2>
+          <p>semantic-regen-021</p>
+          <p class="reasons">線密度</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-21.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-021/J-21_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-22" data-title="パラメータ数の単位" data-batch="semantic-regen-021" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-22.webp" alt="J-22 パラメータ数の単位" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-22</strong><span class="pill high">high 94</span></div>
+          <h2>パラメータ数の単位</h2>
+          <p>semantic-regen-021</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-22.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-021/J-22_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-23" data-title="拡散モデル" data-batch="semantic-regen-021" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-23.webp" alt="J-23 拡散モデル" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-23</strong><span class="pill high">high 96</span></div>
+          <h2>拡散モデル</h2>
+          <p>semantic-regen-021</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-23.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-021/J-23_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-31" data-title="第 5 世代コンピュータ" data-batch="semantic-regen-022" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-31.webp" alt="J-31 第 5 世代コンピュータ" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-31</strong><span class="pill high">high 87</span></div>
+          <h2>第 5 世代コンピュータ</h2>
+          <p>semantic-regen-022</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-31.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-022/J-31_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-32" data-title="ノイマン型" data-batch="semantic-regen-022" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-32.webp" alt="J-32 ノイマン型" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-32</strong><span class="pill high">high 97</span></div>
+          <h2>ノイマン型</h2>
+          <p>semantic-regen-022</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-32.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-022/J-32_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-33" data-title="量子コンピュータ" data-batch="semantic-regen-022" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-33.webp" alt="J-33 量子コンピュータ" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-33</strong><span class="pill high">high 94</span></div>
+          <h2>量子コンピュータ</h2>
+          <p>semantic-regen-022</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-33.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-022/J-33_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-40" data-title="IoT" data-batch="semantic-regen-022" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-40.webp" alt="J-40 IoT" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-40</strong><span class="pill high">high 91</span></div>
+          <h2>IoT</h2>
+          <p>semantic-regen-022</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-40.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-022/J-40_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-41" data-title="DX" data-batch="semantic-regen-022" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-41.webp" alt="J-41 DX" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-41</strong><span class="pill high">high 96</span></div>
+          <h2>DX</h2>
+          <p>semantic-regen-022</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-41.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-022/J-41_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-42" data-title="Web3" data-batch="semantic-regen-022" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-42.webp" alt="J-42 Web3" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-42</strong><span class="pill high">high 92</span></div>
+          <h2>Web3</h2>
+          <p>semantic-regen-022</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-42.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-022/J-42_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-43" data-title="SaaS" data-batch="semantic-regen-022" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-43.webp" alt="J-43 SaaS" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-43</strong><span class="pill high">high 92</span></div>
+          <h2>SaaS</h2>
+          <p>semantic-regen-022</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-43.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-022/J-43_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-100" data-title="識字（リテラシー）" data-batch="semantic-regen-022" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-100.webp" alt="J-100 識字（リテラシー）" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-100</strong><span class="pill high">high 97</span></div>
+          <h2>識字（リテラシー）</h2>
+          <p>semantic-regen-022</p>
+          <p class="reasons">known_padding_2to1</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-100.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-022/J-100_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-50" data-title="AI 倫理" data-batch="semantic-regen-023" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-50.webp" alt="J-50 AI 倫理" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-50</strong><span class="pill high">high 90</span></div>
+          <h2>AI 倫理</h2>
+          <p>semantic-regen-023</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-50.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-023/J-50_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-51" data-title="Hallucination" data-batch="semantic-regen-023" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-51.webp" alt="J-51 Hallucination" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-51</strong><span class="pill high">high 85</span></div>
+          <h2>Hallucination</h2>
+          <p>semantic-regen-023</p>
+          <p class="reasons">線密度</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-51.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-023/J-51_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-52" data-title="Sycophancy" data-batch="semantic-regen-023" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-52.webp" alt="J-52 Sycophancy" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-52</strong><span class="pill high">high 87</span></div>
+          <h2>Sycophancy</h2>
+          <p>semantic-regen-023</p>
+          <p class="reasons">線密度</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-52.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-023/J-52_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-53" data-title="著作権法 30 条の 4（日本）" data-batch="semantic-regen-023" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-53.webp" alt="J-53 著作権法 30 条の 4（日本）" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-53</strong><span class="pill high">high 97</span></div>
+          <h2>著作権法 30 条の 4（日本）</h2>
+          <p>semantic-regen-023</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-53.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-023/J-53_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-54" data-title="ISO/IEC 42001" data-batch="semantic-regen-023" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-54.webp" alt="J-54 ISO/IEC 42001" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-54</strong><span class="pill high">high 93</span></div>
+          <h2>ISO/IEC 42001</h2>
+          <p>semantic-regen-023</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-54.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-023/J-54_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-55" data-title="個人情報保護法" data-batch="semantic-regen-023" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-55.webp" alt="J-55 個人情報保護法" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-55</strong><span class="pill high">high 92</span></div>
+          <h2>個人情報保護法</h2>
+          <p>semantic-regen-023</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-55.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-023/J-55_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-56" data-title="GDPR" data-batch="semantic-regen-023" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-56.webp" alt="J-56 GDPR" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-56</strong><span class="pill high">high 96</span></div>
+          <h2>GDPR</h2>
+          <p>semantic-regen-023</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-56.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-023/J-56_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-62" data-title="チューリングテスト" data-batch="semantic-regen-023" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-62.webp" alt="J-62 チューリングテスト" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-62</strong><span class="pill high">high 91</span></div>
+          <h2>チューリングテスト</h2>
+          <p>semantic-regen-023</p>
+          <p class="reasons">no review flags</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-62.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-023/J-62_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-90" data-title="GUI" data-batch="semantic-regen-024" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-90.webp" alt="J-90 GUI" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-90</strong><span class="pill high">high 93</span></div>
+          <h2>GUI</h2>
+          <p>semantic-regen-024</p>
+          <p class="reasons">known_padding_2to1</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-90.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-024/J-90_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-92" data-title="Linux" data-batch="semantic-regen-024" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-92.webp" alt="J-92 Linux" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-92</strong><span class="pill high">high 88</span></div>
+          <h2>Linux</h2>
+          <p>semantic-regen-024</p>
+          <p class="reasons">余白;known_padding_2to1</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-92.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-024/J-92_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+      <article class="card" data-entry="J-93" data-title="Ubuntu" data-batch="semantic-regen-024" data-band="high">
+        <div class="thumb"><img src="../../../assets/ponchi/final/J-93.webp" alt="J-93 Ubuntu" loading="lazy"></div>
+        <div class="card-body">
+          <div class="row"><strong>J-93</strong><span class="pill high">high 94</span></div>
+          <h2>Ubuntu</h2>
+          <p>semantic-regen-024</p>
+          <p class="reasons">known_padding_2to1</p>
+          <div class="links"><a href="../../../assets/ponchi/final/J-93.webp">final</a><a href="../../../assets/ponchi/final_candidates/semantic-regen-024/J-93_candidate.webp">candidate</a></div>
+        </div>
+      </article>
+  </section>
+</main>
+<script>
+  const state = { batch: 'all', query: '' };
+  const cards = [...document.querySelectorAll('.card')];
+  const search = document.querySelector('#search');
+  function applyFilters() {
+    const q = state.query.trim().toLowerCase();
+    let shown = 0;
+    for (const card of cards) {
+      const haystack = `${card.dataset.entry} ${card.dataset.title} ${card.dataset.batch} ${card.dataset.band}`.toLowerCase();
+      const okBatch = state.batch === 'all' || card.dataset.batch === state.batch;
+      const okSearch = !q || haystack.includes(q);
+      const visible = okBatch && okSearch;
+      card.classList.toggle('hidden', !visible);
+      if (visible) shown += 1;
+    }
+    document.title = `I/J Ponchi Final Gallery (${shown})`;
+  }
+  document.querySelector('#batchFilters').addEventListener('click', (event) => {
+    const button = event.target.closest('button[data-filter="batch"]');
+    if (!button) return;
+    state.batch = button.dataset.value;
+    document.querySelectorAll('.seg').forEach(item => item.classList.toggle('active', item === button));
+    applyFilters();
+  });
+  search.addEventListener('input', () => { state.query = search.value; applyFilters(); });
+</script>
+</body>
+</html>

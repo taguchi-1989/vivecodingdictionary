@@ -32,6 +32,7 @@ out/
 # Claude Code
 .claude/settings.local.json
 .playwright-mcp/
+.codex-remote-attachments/
 
 # Python
 __pycache__/
