@@ -57,6 +57,7 @@ skills/            執筆・取り込みスキル
 - [docs/editorial_style.md](docs/editorial_style.md) — トーン・文体の原則
 - [docs/component_spec_v2.md](docs/component_spec_v2.md) — 実装担当（Astro + React）への引き渡し仕様
 - [docs/front_section_layout.md](docs/front_section_layout.md) — 前付け（A 章）の例外レイアウト仕様
+- [drafts/front_section/page_count_plan.html](drafts/front_section/page_count_plan.html) — 前付け・後付けのページ数設計 HTML
 - [templates/entry_template.md](templates/entry_template.md) — エントリの構造テンプレート
 
 ## 監視レポート（コミット対象）

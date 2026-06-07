@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>前付け・後付け ページ数設計メモ</title>
+<link rel="stylesheet" href="../prototypes/mockups/design_philosophy_v2/base.css">
+<link rel="stylesheet" href="_common.css">
+<style>
+  .plan-title {
+    font-weight: 900;
+    font-size: 34px;
+    line-height: 1.25;
+    margin: 0 0 var(--sp-4) 0;
+  }
+  .plan-sub {
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--ink-2);
+    margin: 0 0 var(--sp-5) 0;
+  }
+  .stat-band {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--sp-3);
+    margin: 0 0 var(--sp-5) 0;
+  }
+  .stat-card {
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    background: var(--paper);
+    padding: var(--sp-3);
+  }
+  .stat-card .num {
+    font-family: var(--font-en);
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--ink-blue);
+    margin-bottom: 5px;
+  }
+  .stat-card .label {
+    font-size: 10.5px;
+    line-height: 1.35;
+    color: var(--ink-2);
+  }
+  .decision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--sp-3);
+    margin: var(--sp-4) 0 var(--sp-4) 0;
+  }
+  .decision-card {
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    background: var(--paper);
+    padding: var(--sp-3);
+    min-height: 126px;
+  }
+  .decision-card.recommended {
+    border: 2px solid var(--ink-blue);
+    background: #F4F8FE;
+  }
+  .decision-card .tag {
+    font-family: var(--font-en);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--ink-blue);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .decision-card h3 {
+    font-size: 15px;
+    line-height: 1.35;
+    margin: 0 0 7px 0;
+  }
+  .decision-card p {
+    margin: 0;
+    font-size: 11.5px;
+    line-height: 1.62;
+    color: var(--ink-2);
+  }
+  .flow-svg {
+    width: 100%;
+    height: 156px;
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F6F8FB 100%);
+    margin: 0 0 var(--sp-5) 0;
+  }
+  .rule-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-3);
+    margin-top: 0;
+  }
+  .bottom-stack {
+    margin-top: auto;
+  }
+  .review-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-3);
+    margin-bottom: var(--sp-3);
+  }
+  .review-item {
+    border: 1px solid var(--rule);
+    border-radius: 7px;
+    background: #F7FAFD;
+    padding: 10px 11px;
+    font-size: 11.2px;
+    line-height: 1.55;
+    color: var(--ink-2);
+  }
+  .review-item strong {
+    display: block;
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--ink-blue-900);
+    margin-bottom: 4px;
+  }
+  .rule {
+    border-left: 4px solid var(--ink-blue);
+    background: var(--ink-blue-50);
+    padding: var(--sp-3);
+    font-size: 12px;
+    line-height: 1.65;
+    color: var(--ink-blue-900);
+  }
+  .rule.warn {
+    border-left-color: #6B7C91;
+    background: #F3F6FB;
+    color: var(--ink);
+  }
+  .spread-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 9px;
+    margin: var(--sp-4) 0 var(--sp-5) 0;
+  }
+  .spread-row {
+    display: grid;
+    grid-template-columns: 54px 1fr 92px;
+    gap: var(--sp-3);
+    align-items: center;
+    border: 1px solid var(--rule);
+    border-radius: 7px;
+    background: var(--paper);
+    padding: 9px 11px;
+  }
+  .spread-row .no {
+    font-family: var(--font-en);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    color: var(--ink-blue);
+  }
+  .spread-row .main {
+    font-size: 13px;
+    line-height: 1.45;
+  }
+  .spread-row .main strong {
+    font-weight: 900;
+  }
+  .spread-row .sub {
+    color: var(--ink-2);
+    font-size: 11px;
+  }
+  .spread-row .pages {
+    text-align: right;
+    font-family: var(--font-en);
+    font-size: 11px;
+    color: var(--ink-2);
+  }
+  .image-policy {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: var(--sp-4);
+    margin-top: auto;
+  }
+  .image-slot {
+    border: 1.5px dashed var(--ink-blue);
+    border-radius: 8px;
+    background: var(--paper);
+    padding: var(--sp-3);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-3);
+  }
+  .image-card {
+    min-height: 168px;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    background: #F7FAFD;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .image-card .thumb {
+    flex: 1;
+    min-height: 132px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    filter: saturate(0.86) contrast(0.96) brightness(1.03);
+    opacity: 0.96;
+  }
+  .image-card .caption {
+    border-top: 1px solid var(--rule);
+    padding: 5px 7px;
+    font-size: 10px;
+    line-height: 1.35;
+    color: var(--ink-2);
+    text-align: center;
+    background: var(--paper);
+  }
+  .policy-text {
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--ink-2);
+  }
+  .policy-text strong {
+    color: var(--ink);
+  }
+  .badge-soft {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: var(--ink-blue-50);
+    color: var(--ink-blue-900);
+    font-size: 10px;
+    font-weight: 700;
+    margin-left: 6px;
+  }
+</style>
+</head>
+<body class="vbcd">
+
+<div class="draft-stamp">FRONT/BACK · PAGE PLAN · DRAFT</div>
+
+<div class="spread">
+
+  <section class="page left">
+    <div class="section-label">PAGE COUNT LOGIC</div>
+    <h1 class="plan-title">前付けは、<br>厚くしすぎず、薄くしない。</h1>
+    <p class="plan-sub">
+      A章は用語本文ではなく、本編に入る前の案内です。単独で読む価値があるページは分け、凡例・索引・更新情報はまとめて、密度のある入口にします。
+    </p>
+
+    <div class="stat-band">
+      <div class="stat-card">
+        <div class="num">327</div>
+        <div class="label">現行エントリ<br>実ファイル</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">316</div>
+        <div class="label">A章以外<br>本編候補</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">632</div>
+        <div class="label">本編ページ<br>1項目2P</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">+14</div>
+        <div class="label">現行A章案<br>7見開き</div>
+      </div>
+    </div>
+
+    <svg class="flow-svg" viewBox="0 0 610 156" role="img" aria-label="ページ構成の流れ">
+      <defs>
+        <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" fill="#1E66B3"></path>
+        </marker>
+      </defs>
+      <rect x="18" y="35" width="104" height="70" rx="8" fill="#EAF1FB" stroke="#1E66B3" stroke-width="1.5"></rect>
+      <rect x="162" y="22" width="146" height="96" rx="8" fill="#FFFFFF" stroke="#BBC7D6" stroke-width="1.5"></rect>
+      <rect x="348" y="35" width="108" height="70" rx="8" fill="#FFFFFF" stroke="#BBC7D6" stroke-width="1.5"></rect>
+      <rect x="496" y="35" width="86" height="70" rx="8" fill="#F3F6FB" stroke="#6B7C91" stroke-width="1.5"></rect>
+      <path d="M124 70 H154" stroke="#1E66B3" stroke-width="2" marker-end="url(#arrow)"></path>
+      <path d="M310 70 H340" stroke="#1E66B3" stroke-width="2" marker-end="url(#arrow)"></path>
+      <path d="M458 70 H488" stroke="#1E66B3" stroke-width="2" marker-end="url(#arrow)"></path>
+      <text x="70" y="60" text-anchor="middle" font-size="12" font-weight="700" fill="#123D67">前付け</text>
+      <text x="70" y="81" text-anchor="middle" font-size="11" fill="#4A6078">6〜7見開き</text>
+      <text x="235" y="53" text-anchor="middle" font-size="12" font-weight="700" fill="#1F2937">本編</text>
+      <text x="235" y="74" text-anchor="middle" font-size="11" fill="#4A6078">A章以外 316項目</text>
+      <text x="235" y="94" text-anchor="middle" font-size="11" fill="#4A6078">約632ページ</text>
+      <text x="402" y="60" text-anchor="middle" font-size="12" font-weight="700" fill="#1F2937">後付け</text>
+      <text x="402" y="81" text-anchor="middle" font-size="11" fill="#4A6078">あとがき + 奥付</text>
+      <text x="539" y="60" text-anchor="middle" font-size="12" font-weight="700" fill="#5B351B">索引</text>
+      <text x="539" y="81" text-anchor="middle" font-size="11" fill="#5B351B">別判断</text>
+      <text x="305" y="138" text-anchor="middle" font-size="11" fill="#6B7C91">ページ番号はIDと独立。組版時に最終確定する。</text>
+    </svg>
+
+    <div class="decision-grid">
+      <div class="decision-card">
+        <div class="tag">圧縮案</div>
+        <h3>5見開き</h3>
+        <p>扉とまえがきを統合し、更新履歴・略称も巻末へ逃がす。軽い一方、入口の説明は急になります。</p>
+      </div>
+      <div class="decision-card recommended">
+        <div class="tag">採用案</div>
+        <h3>6見開き</h3>
+        <p>扉とまえがきを近接させ、凡例系を圧縮。スカスカを避けつつ、読者案内を残します。</p>
+      </div>
+      <div class="decision-card">
+        <div class="tag">現行案</div>
+        <h3>7見開き</h3>
+        <p>既存仕様どおり。余白は作りやすいが、本編が大部なので前付けが長く見えます。</p>
+      </div>
+    </div>
+
+    <div class="bottom-stack">
+      <div class="review-strip">
+        <div class="review-item">
+          <strong>見る順番</strong>
+          入口の納得感、凡例の密度、あとがきの置き場の順で確認します。
+        </div>
+        <div class="review-item">
+          <strong>直す対象</strong>
+          余白が大きい見開きは統合。逆に説明が詰まる見開きは独立させます。
+        </div>
+        <div class="review-item">
+          <strong>掲載場所</strong>
+          Pagesのプレビュー目次とREADMEから、このHTMLへ辿れるようにします。
+        </div>
+      </div>
+      <div class="rule-box">
+        <div class="rule">
+          <strong>分ける基準:</strong><br>
+          読者が最初に単独で読むべきもの。まえがき、読み方、歩き方は候補。
+        </div>
+        <div class="rule warn">
+          <strong>まとめる基準:</strong><br>
+          凡例・記号・更新情報のように、参照されることで意味が立つもの。
+        </div>
+      </div>
+    </div>
+
+    <div class="page-foot">
+      <div class="left-meta">PAGE PLAN · FRONT/BACK</div>
+      <div class="right-meta">DRAFT · HTML WIRE</div>
+    </div>
+    <div class="page-num">PLAN-L</div>
+  </section>
+
+  <section class="page right">
+    <div class="section-label">RECOMMENDED STRUCTURE</div>
+    <h2 class="front-title-sm">採用案: 前付け6見開き + あとがき1見開き</h2>
+    <p class="plan-sub">
+      A章は「入口・読み方・探し方・凡例」に集中させます。あとがきは巻末に置き、制作過程とAI共著の話を受け止める場所にします。
+    </p>
+
+    <div class="spread-list">
+      <div class="spread-row">
+        <div class="no">FR-01</div>
+        <div class="main"><strong>扉 + まえがき</strong><br><span class="sub">止まらないための約束 / 著者の動機</span></div>
+        <div class="pages">2P</div>
+      </div>
+      <div class="spread-row">
+        <div class="no">FR-02</div>
+        <div class="main"><strong>A-2 見開きの読み方</strong><br><span class="sub">実物ページの分解図。コールアウト中心</span></div>
+        <div class="pages">2P</div>
+      </div>
+      <div class="spread-row">
+        <div class="no">FR-03</div>
+        <div class="main"><strong>A-3 + A-9 歩き方とミニ索引</strong><br><span class="sub">どこから読むか / 代表語を探す</span></div>
+        <div class="pages">2P</div>
+      </div>
+      <div class="spread-row">
+        <div class="no">FR-04</div>
+        <div class="main"><strong>A-4 + A-5 + A-6 注意マーク</strong><br><span class="sub">体験区分、読者レベル、評価日の見方</span></div>
+        <div class="pages">2P</div>
+      </div>
+      <div class="spread-row">
+        <div class="no">FR-05</div>
+        <div class="main"><strong>A-7 + A-8 図と色の見本帳</strong><br><span class="sub">図タイプ、色、ピル、バッジ、アイコン</span></div>
+        <div class="pages">2P</div>
+      </div>
+      <div class="spread-row">
+        <div class="no">FR-06</div>
+        <div class="main"><strong>A-10 + A-11 更新履歴と略称</strong><br><span class="sub">前付けに残す。ただし巻末移動も可能</span></div>
+        <div class="pages">2P</div>
+      </div>
+      <div class="spread-row">
+        <div class="no">BK-01</div>
+        <div class="main"><strong>あとがき</strong><span class="badge-soft">既存HTMLあり</span><br><span class="sub">どう作ったか。多エージェント、音声口述、AI共著</span></div>
+        <div class="pages">2P</div>
+      </div>
+    </div>
+
+    <div class="image-policy">
+      <div class="image-slot">
+        <div class="image-card">
+          <div class="thumb">
+            <img src="../../assets/front_section/generated/render_drafts_front_section_0_concept_spread.png" alt="扉見開きのレンダー見本">
+          </div>
+          <div class="caption">前付けの実ページ見本</div>
+        </div>
+        <div class="image-card">
+          <div class="thumb">
+            <img src="../../assets/front_section/generated/7-1_afterword_human_ai_coauthor.png" alt="あとがき用の共著イメージ">
+          </div>
+          <div class="caption">あとがきの主役図候補</div>
+        </div>
+      </div>
+      <div class="policy-text">
+        <strong>絵の扱い:</strong><br>
+        仮SVGだけで止めず、既存の前付けレンダーや生成済み図版を置いて密度を見ます。本文が固まったら、各見開きの主役図を清書します。最終段階では、ページ全体を1枚絵として書き出す案も残します。
+        <br><br>
+        <strong>色の扱い:</strong><br>
+        既存前付けと同じ白地、濃紺、淡青をベースにします。判断メモも青グレーに寄せ、差し色は最小限にします。
+      </div>
+    </div>
+
+    <div class="page-foot">
+      <div class="left-meta">RECOMMENDED · 6 FRONT SPREADS</div>
+      <div class="right-meta">+ BACK AFTERWORD</div>
+    </div>
+    <div class="page-num">PLAN-R</div>
+  </section>
+
+</div>
+
+</body>
+</html>

@@ -13,6 +13,7 @@ A 群（A-1〜A-11）を `spread_v1` ではなく独自レイアウト（`front_
 
 | # | ファイル | 見開き | layout | ID |
 |:-:|:--|:--|:--|:--|
+| plan | `page_count_plan.html` | 前付け・後付けページ数設計 | `page_count_plan` | A章 + afterword |
 | 0 | `0_concept_spread.html` | 扉「知らないことばで、止まらない。」 | `front_concept_spread` | front_concept |
 | 1 | `1_a1_preface.html` | まえがき | `front_essay` | A-1 |
 | 2 | `2_a2_anatomy.html` | 見開きの読み方（分解図） | `front_anatomy` | A-2 |
