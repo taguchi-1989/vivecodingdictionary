@@ -19,6 +19,12 @@
   ul.grid a { color: #1a3a6c; text-decoration: none; padding: 3px 6px; border-radius: 4px; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   ul.grid a:hover { background: #e6eef9; }
   .code { color: #2a5db0; font-weight: 700; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.78rem; margin-right: 4px; }
+  .hero { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 4px 0 20px; }
+  .hero-card { display: flex; flex-direction: column; gap: 4px; background: #fff; border: 1px solid #d4dded; border-radius: 10px; padding: 14px 16px; text-decoration: none; color: #1a2333; }
+  .hero-card:hover { border-color: #2a5db0; box-shadow: 0 2px 8px rgba(12,37,82,0.08); }
+  .hero-card .step { font-size: 0.72rem; font-weight: 800; color: #2a5db0; letter-spacing: 0.1em; }
+  .hero-card strong { font-size: 0.95rem; color: #0c2552; }
+  .hero-card .desc { font-size: 0.75rem; color: #6c7a91; line-height: 1.5; }
   .filter { margin: 8px 0 18px; }
   .filter input { width: 100%; padding: 8px 12px; border: 1px solid #d4dded; border-radius: 6px; font-size: 0.9rem; }
   footer { color: #6c7a91; font-size: 0.75rem; padding: 24px; text-align: center; }
@@ -28,37 +34,34 @@
 <body>
 <header>
   <h1>バイブコーディング図鑑 — 管理トップ</h1>
-  <div class="sub">作りかけ含め、全 HTML ページにリンクで飛べる目次です。最終更新: 2026-05-26 21:48 JST</div>
+  <div class="sub">作りかけ含め、全 HTML ページにリンクで飛べる目次です。最終更新: 2026-06-12 06:01 JST</div>
 </header>
 <main>
+  <div class="hero">
+    <a class="hero-card" href="/front_section/0_concept_spread.html"><span class="step">1</span><strong>扉から読み始める</strong><span class="desc">前付け 7 見開き（A 群）。上部ナビで順にめくれます</span></a>
+    <a class="hero-card" href="/book/index.html"><span class="step">2</span><strong>本編を読む（B〜J）</strong><span class="desc">もくじ付きリーダーで全エントリを本のように</span></a>
+    <a class="hero-card" href="/back_section/afterword.html"><span class="step">3</span><strong>あとがき</strong><span class="desc">この本ができるまで</span></a>
+    <a class="hero-card" href="/search/index.html"><span class="step">🔍</span><strong>検索</strong><span class="desc">用語名・本文からエントリを探す</span></a>
+  </div>
   <div class="filter"><input id="q" type="search" placeholder="絞り込み（ID やタイトルで検索）..." autofocus></div>
-  <h2>誌面モック / Design Philosophy v2</h2>
+  <h2>本を読む（リーダー・前付け・あとがき）</h2>
     <ul class="grid">
-      <li data-search="b3_chatgpt_spread b-3 chatgpt 見開き — 他エントリ適応確認"><a href="/prototypes/mockups/design_philosophy_v2/b3_chatgpt_spread.html">B-3 ChatGPT 見開き — 他エントリ適応確認</a></li>
-      <li data-search="typescript_spread typescript 見開き — iter 1"><a href="/prototypes/mockups/design_philosophy_v2/typescript_spread.html">TypeScript 見開き — iter 1</a></li>
+      <li data-search="0_concept_spread 前付け 0 - 扉「知らないことばで、止まらない。」"><a href="/front_section/0_concept_spread.html">前付け 0 - 扉「知らないことばで、止まらない。」</a></li>
+      <li data-search="1_a1_preface 前付け 1 - a-1 まえがき (front_essay)"><a href="/front_section/1_a1_preface.html">前付け 1 - A-1 まえがき (front_essay)</a></li>
+      <li data-search="2_a2_anatomy 前付け 2 - a-2 見開きの読み方 (front_anatomy)"><a href="/front_section/2_a2_anatomy.html">前付け 2 - A-2 見開きの読み方 (front_anatomy)</a></li>
+      <li data-search="3_a3_a9_map_index 前付け 3 - a-3 + a-9 図鑑の歩き方と索引 (front_map_index)"><a href="/front_section/3_a3_a9_map_index.html">前付け 3 - A-3 + A-9 図鑑の歩き方と索引 (front_map_index)</a></li>
+      <li data-search="4_a4_a5_a6_legend_marks 前付け 4 - a-4 + a-5 + a-6 注意マークの凡例 (front_legend_marks)"><a href="/front_section/4_a4_a5_a6_legend_marks.html">前付け 4 - A-4 + A-5 + A-6 注意マークの凡例 (front_legend_marks)</a></li>
+      <li data-search="5_a7_a8_swatch 前付け 5 - a-7 + a-8 図と色の見本帳 (front_swatch)"><a href="/front_section/5_a7_a8_swatch.html">前付け 5 - A-7 + A-8 図と色の見本帳 (front_swatch)</a></li>
+      <li data-search="6_a10_a11_log_glossary 前付け 6 - a-10 + a-11 更新履歴と略称 (front_log_glossary)"><a href="/front_section/6_a10_a11_log_glossary.html">前付け 6 - A-10 + A-11 更新履歴と略称 (front_log_glossary)</a></li>
+      <li data-search="afterword あとがき — この本ができるまで"><a href="/back_section/afterword.html">あとがき — この本ができるまで</a></li>
+      <li data-search="index 本のように読む"><a href="/book/index.html">本のように読む</a></li>
+      <li data-search="index 前付け 7 見開き 一覧"><a href="/front_section/index.html">前付け 7 見開き 一覧</a></li>
+      <li data-search="page_count_plan 前付け・後付け ページ数設計メモ"><a href="/front_section/page_count_plan.html">前付け・後付け ページ数設計メモ</a></li>
     </ul>
-  <h2>誌面モック / A・B・C 案</h2>
+  <h2>探す（検索・読者ルート）</h2>
     <ul class="grid">
-      <li data-search="design_a_v2_human 誌面モック a案 v2：人物入り clean zukan"><a href="/prototypes/mockups/design_A_v2_human.html">誌面モック A案 v2：人物入り Clean Zukan</a></li>
-      <li data-search="design_a_zukan 誌面モック a案：clean zukan"><a href="/prototypes/mockups/design_A_zukan.html">誌面モック A案：Clean Zukan</a></li>
-      <li data-search="design_b_editorial 誌面モック b案：editorial navy"><a href="/prototypes/mockups/design_B_editorial.html">誌面モック B案：Editorial Navy</a></li>
-      <li data-search="design_c_blueprint 誌面モック c案：blueprint / tech note"><a href="/prototypes/mockups/design_C_blueprint.html">誌面モック C案：Blueprint / Tech Note</a></li>
-      <li data-search="index モック一覧"><a href="/prototypes/mockups/index.html">モック一覧</a></li>
-    </ul>
-  <h2>表紙・裏表紙</h2>
-    <ul class="grid">
-      <li data-search="vibe-coding-back-cover vibecoding 図鑑 裏表紙案"><a href="/covers/vibe-coding-back-cover.html">VibeCoding 図鑑 裏表紙案</a></li>
-      <li data-search="vibe-coding-cover-a バイブコーディング用語図鑑 表紙案a"><a href="/covers/vibe-coding-cover-a.html">バイブコーディング用語図鑑 表紙案A</a></li>
-      <li data-search="vibe-coding-cover-rich バイブコーディング用語図鑑 表紙リッチ案"><a href="/covers/vibe-coding-cover-rich.html">バイブコーディング用語図鑑 表紙リッチ案</a></li>
-      <li data-search="vibe-coding-cover-sell 表紙再設計案"><a href="/covers/vibe-coding-cover-sell.html">表紙再設計案</a></li>
-    </ul>
-  <h2>オープニング見開き</h2>
-    <ul class="grid">
-      <li data-search="opening-spread-annotated 冒頭見開き 注釈ページ"><a href="/opening/opening-spread-annotated.html">冒頭見開き 注釈ページ</a></li>
-    </ul>
-  <h2>ツール</h2>
-    <ul class="grid">
-      <li data-search="ponchi_quality_review ponchi quality review"><a href="/tools/ponchi_quality_review.html">Ponchi Quality Review</a></li>
+      <li data-search="index 読者タイプ別 おすすめルート — たたき台"><a href="/reading_routes/index.html">読者タイプ別 おすすめルート — たたき台</a></li>
+      <li data-search="index 検索"><a href="/search/index.html">検索</a></li>
     </ul>
   <h2>エントリプレビュー (A〜J)</h2>
     <h3>目次・一覧</h3>
@@ -122,6 +125,7 @@
       <li data-search="b-52 gemini の料金プラン"><span class="code">B-52</span><a href="/prototypes/preview/B-52.html">Gemini の料金プラン</a></li>
       <li data-search="b-60 suno"><span class="code">B-60</span><a href="/prototypes/preview/B-60.html">Suno</a></li>
       <li data-search="b-61 ace-step 1.5"><span class="code">B-61</span><a href="/prototypes/preview/B-61.html">ACE-Step 1.5</a></li>
+      <li data-search="bc_compare b/c 系列比較 - バイブコーディング図鑑"><a href="/prototypes/preview/bc_compare.html">B/C 系列比較 - バイブコーディング図鑑</a></li>
     </ul>
     <h3>C</h3>
     <ul class="grid">
@@ -414,6 +418,34 @@
       <li data-search="j-92 linux"><span class="code">J-92</span><a href="/prototypes/preview/J-92.html">Linux</a></li>
       <li data-search="j-93 ubuntu"><span class="code">J-93</span><a href="/prototypes/preview/J-93.html">Ubuntu</a></li>
       <li data-search="j-100 識字（リテラシー）"><span class="code">J-100</span><a href="/prototypes/preview/J-100.html">識字（リテラシー）</a></li>
+    </ul>
+  <h2>表紙・裏表紙</h2>
+    <ul class="grid">
+      <li data-search="vibe-coding-back-cover vibecoding 図鑑 裏表紙案"><a href="/covers/vibe-coding-back-cover.html">VibeCoding 図鑑 裏表紙案</a></li>
+      <li data-search="vibe-coding-cover-a バイブコーディング用語図鑑 表紙案a"><a href="/covers/vibe-coding-cover-a.html">バイブコーディング用語図鑑 表紙案A</a></li>
+      <li data-search="vibe-coding-cover-rich バイブコーディング用語図鑑 表紙リッチ案"><a href="/covers/vibe-coding-cover-rich.html">バイブコーディング用語図鑑 表紙リッチ案</a></li>
+      <li data-search="vibe-coding-cover-sell 表紙再設計案"><a href="/covers/vibe-coding-cover-sell.html">表紙再設計案</a></li>
+    </ul>
+  <h2>オープニング見開き</h2>
+    <ul class="grid">
+      <li data-search="opening-spread-annotated 冒頭見開き 注釈ページ"><a href="/opening/opening-spread-annotated.html">冒頭見開き 注釈ページ</a></li>
+    </ul>
+  <h2>誌面モック / Design Philosophy v2</h2>
+    <ul class="grid">
+      <li data-search="b3_chatgpt_spread b-3 chatgpt 見開き — 他エントリ適応確認"><a href="/prototypes/mockups/design_philosophy_v2/b3_chatgpt_spread.html">B-3 ChatGPT 見開き — 他エントリ適応確認</a></li>
+      <li data-search="typescript_spread typescript 見開き — iter 1"><a href="/prototypes/mockups/design_philosophy_v2/typescript_spread.html">TypeScript 見開き — iter 1</a></li>
+    </ul>
+  <h2>誌面モック / A・B・C 案</h2>
+    <ul class="grid">
+      <li data-search="design_a_v2_human 誌面モック a案 v2：人物入り clean zukan"><a href="/prototypes/mockups/design_A_v2_human.html">誌面モック A案 v2：人物入り Clean Zukan</a></li>
+      <li data-search="design_a_zukan 誌面モック a案：clean zukan"><a href="/prototypes/mockups/design_A_zukan.html">誌面モック A案：Clean Zukan</a></li>
+      <li data-search="design_b_editorial 誌面モック b案：editorial navy"><a href="/prototypes/mockups/design_B_editorial.html">誌面モック B案：Editorial Navy</a></li>
+      <li data-search="design_c_blueprint 誌面モック c案：blueprint / tech note"><a href="/prototypes/mockups/design_C_blueprint.html">誌面モック C案：Blueprint / Tech Note</a></li>
+      <li data-search="index モック一覧"><a href="/prototypes/mockups/index.html">モック一覧</a></li>
+    </ul>
+  <h2>ツール</h2>
+    <ul class="grid">
+      <li data-search="ponchi_quality_review ponchi quality review"><a href="/tools/ponchi_quality_review.html">Ponchi Quality Review</a></li>
     </ul>
 </main>
 <footer>

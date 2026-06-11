@@ -225,3 +225,41 @@ body {
   color: var(--ink-blue);
   text-transform: uppercase;
 }
+
+/* ==========================================================================
+   読書ナビ（画面閲覧用・印刷時は非表示）
+   前付け 0〜6 とあとがきの各ページ先頭に挿入する共通バー
+   ========================================================================== */
+.reader-nav {
+  position: sticky;
+  top: 8px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 1500px;
+  margin: 0 auto 24px;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  font-size: 13px;
+}
+.reader-nav a {
+  color: var(--ink-blue-900);
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+.reader-nav a:hover { background: var(--ink-blue-50); }
+.reader-nav .nav-center { display: flex; gap: 6px; }
+.reader-nav .nav-book {
+  background: var(--ink-blue);
+  color: white;
+  font-weight: 700;
+}
+.reader-nav .nav-book:hover { background: var(--ink-blue-700); color: white; }
+@media print { .reader-nav { display: none; } }
