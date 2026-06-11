@@ -870,6 +870,20 @@
       `<span class="rel-pill" data-rel="${escapeHTML(r)}">${escapeHTML(r)}</span>`
     ).join('');
 
+    // A 群は前付け見開きが完成版。対応する spread へ誘導する
+    const FRONT_SPREADS = {
+      'A-1': '1_a1_preface.html', 'A-2': '2_a2_anatomy.html',
+      'A-3': '3_a3_a9_map_index.html', 'A-9': '3_a3_a9_map_index.html',
+      'A-4': '4_a4_a5_a6_legend_marks.html', 'A-5': '4_a4_a5_a6_legend_marks.html', 'A-6': '4_a4_a5_a6_legend_marks.html',
+      'A-7': '5_a7_a8_swatch.html', 'A-8': '5_a7_a8_swatch.html',
+      'A-10': '6_a10_a11_log_glossary.html', 'A-11': '6_a10_a11_log_glossary.html',
+    };
+    const frontHtml = FRONT_SPREADS[e.id] ? `
+          <div style="margin:0 0 16px;padding:10px 14px;background:var(--ink-blue-50);border:1px solid var(--rule);border-radius:8px;font-size:13px;">
+            📕 この項目は前付け見開きとして完成版があります —
+            <a href="../front_section/${FRONT_SPREADS[e.id]}" style="color:var(--ink-blue);font-weight:700;">見開きを開く →</a>
+          </div>` : '';
+
     const bodyHtml = mdToHtml(e.body || '');
     const ponchiHtml = `
           <figure class="entry-ponchi">
@@ -884,12 +898,14 @@
             ${e.reader_level ? `<span class="lv-pill">Lv ${escapeHTML(e.reader_level)}</span>` : ''}
             <span class="status-pill ${e.status}">${escapeHTML(statusJa)}</span>
             ${e.evaluation_date ? `<span style="font-size:11px;color:#888;margin-left:auto;">評価日 ${escapeHTML(e.evaluation_date)}</span>` : ''}
+            <a href="../prototypes/preview/${escapeHTML(e.id)}.html" style="font-size:11px;color:var(--ink-blue);text-decoration:none;border:1px solid var(--rule);border-radius:999px;padding:2px 10px;${e.evaluation_date ? '' : 'margin-left:auto;'}">📄 誌面プレビュー</a>
           </div>
           <h1 class="entry-title-big">${escapeHTML(e.title)}</h1>
           ${e.title_reading ? `<div class="entry-reading">${escapeHTML(e.title_reading)}</div>` : ''}
           ${e.tagline ? `<div class="entry-tagline">${escapeHTML(e.tagline)}</div>` : ''}
         </header>
 
+        ${frontHtml}
         ${ponchiHtml}
 
         <div class="md">${bodyHtml}</div>

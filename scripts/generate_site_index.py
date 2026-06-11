@@ -54,12 +54,17 @@ def collect() -> list[tuple[Path, str]]:
 
 
 SECTIONS = [
-    ("誌面モック / Design Philosophy v2", "prototypes/mockups/design_philosophy_v2/"),
-    ("誌面モック / A・B・C 案", "prototypes/mockups/"),
+    ("本を読む（リーダー・前付け・あとがき）", "book/"),
+    ("本を読む（リーダー・前付け・あとがき）", "front_section/"),
+    ("本を読む（リーダー・前付け・あとがき）", "back_section/"),
+    ("探す（検索・読者ルート）", "search/"),
+    ("探す（検索・読者ルート）", "reading_routes/"),
+    ("エントリプレビュー (A〜J)", "prototypes/preview/"),
     ("表紙・裏表紙", "covers/"),
     ("オープニング見開き", "opening/"),
+    ("誌面モック / Design Philosophy v2", "prototypes/mockups/design_philosophy_v2/"),
+    ("誌面モック / A・B・C 案", "prototypes/mockups/"),
     ("ツール", "tools/"),
-    ("エントリプレビュー (A〜J)", "prototypes/preview/"),
 ]
 
 
@@ -111,6 +116,12 @@ def build_html(items: list[tuple[Path, str]]) -> str:
   ul.grid a { color: #1a3a6c; text-decoration: none; padding: 3px 6px; border-radius: 4px; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   ul.grid a:hover { background: #e6eef9; }
   .code { color: #2a5db0; font-weight: 700; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.78rem; margin-right: 4px; }
+  .hero { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 4px 0 20px; }
+  .hero-card { display: flex; flex-direction: column; gap: 4px; background: #fff; border: 1px solid #d4dded; border-radius: 10px; padding: 14px 16px; text-decoration: none; color: #1a2333; }
+  .hero-card:hover { border-color: #2a5db0; box-shadow: 0 2px 8px rgba(12,37,82,0.08); }
+  .hero-card .step { font-size: 0.72rem; font-weight: 800; color: #2a5db0; letter-spacing: 0.1em; }
+  .hero-card strong { font-size: 0.95rem; color: #0c2552; }
+  .hero-card .desc { font-size: 0.75rem; color: #6c7a91; line-height: 1.5; }
   .filter { margin: 8px 0 18px; }
   .filter input { width: 100%; padding: 8px 12px; border: 1px solid #d4dded; border-radius: 6px; font-size: 0.9rem; }
   footer { color: #6c7a91; font-size: 0.75rem; padding: 24px; text-align: center; }
@@ -123,10 +134,20 @@ def build_html(items: list[tuple[Path, str]]) -> str:
   <div class=\"sub\">作りかけ含め、全 HTML ページにリンクで飛べる目次です。最終更新: __UPDATED__</div>
 </header>
 <main>
+  <div class=\"hero\">
+    <a class=\"hero-card\" href=\"/front_section/0_concept_spread.html\"><span class=\"step\">1</span><strong>扉から読み始める</strong><span class=\"desc\">前付け 7 見開き（A 群）。上部ナビで順にめくれます</span></a>
+    <a class=\"hero-card\" href=\"/book/index.html\"><span class=\"step\">2</span><strong>本編を読む（B〜J）</strong><span class=\"desc\">もくじ付きリーダーで全エントリを本のように</span></a>
+    <a class=\"hero-card\" href=\"/back_section/afterword.html\"><span class=\"step\">3</span><strong>あとがき</strong><span class=\"desc\">この本ができるまで</span></a>
+    <a class=\"hero-card\" href=\"/search/index.html\"><span class=\"step\">🔍</span><strong>検索</strong><span class=\"desc\">用語名・本文からエントリを探す</span></a>
+  </div>
   <div class=\"filter\"><input id=\"q\" type=\"search\" placeholder=\"絞り込み（ID やタイトルで検索）...\" autofocus></div>
 """)
 
+    seen_labels: set[str] = set()
     for sec_label, _ in SECTIONS:
+        if sec_label in seen_labels:
+            continue
+        seen_labels.add(sec_label)
         if sec_label not in groups:
             continue
         parts.append(f"  <h2>{html.escape(sec_label)}</h2>\n")

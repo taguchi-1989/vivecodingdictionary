@@ -922,6 +922,13 @@ a:hover {{ background: var(--ink-blue-50); color: var(--ink-blue-900); }}
   <h1>バイブコーディング図鑑 <span style="color:var(--ink-blue-700);font-size:20px;">preview</span></h1>
   <div class="sub">開発中に iter 22 レイアウトの反映を確認するためのプレビュー目次。本番は Astro + React（component_spec_v2.md §0）。</div>
 
+  <nav style="display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px;">
+    <a href="../../book/index.html" style="font-size:12px;color:white;background:var(--ink-blue);text-decoration:none;border-radius:6px;padding:5px 12px;font-weight:700;">📖 本として読む</a>
+    <a href="../../front_section/index.html" style="font-size:12px;color:var(--ink-2);text-decoration:none;border:1px solid var(--rule);border-radius:6px;padding:5px 12px;">📕 前付け一覧</a>
+    <a href="../../search/index.html" style="font-size:12px;color:var(--ink-2);text-decoration:none;border:1px solid var(--rule);border-radius:6px;padding:5px 12px;">🔍 検索</a>
+    <a href="../../index.html" style="font-size:12px;color:var(--ink-2);text-decoration:none;border:1px solid var(--rule);border-radius:6px;padding:5px 12px;">管理トップ</a>
+  </nav>
+
   <div class="meta">
     <b>集計:</b> 全 {total} エントリ（{active} active / {archived} archived）<br>
     <b>生成日:</b> scripts/preview_gen.py を最後に実行した時点<br>
