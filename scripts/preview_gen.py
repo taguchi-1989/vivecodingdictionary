@@ -26,6 +26,7 @@ import csv
 import io
 import re
 import sys
+import math
 import webbrowser
 from html import escape
 from pathlib import Path
@@ -513,14 +514,170 @@ def _scalar(v) -> str:
     return str(v)
 
 
+def _level_palette(lvl: str) -> tuple[str, str]:
+    """reader_level（'2' / '2-3' / '1-2' / '4-5' 等）の上限レベル（難しさの天井）を取り、
+    A-5 凡例と同じ色帯を返す。戻り値 = (背景色, 文字色)。
+    上限基準にするのは、難易度の高いエントリ（専門寄り）を誌面で目立たせるため。"""
+    nums = [int(x) for x in re.findall(r"\d", str(lvl))]
+    n = max(nums) if nums else 0
+    bands = {
+        1: ("#F5F9FE", "#123E82"),
+        2: ("#EAF1FB", "#123E82"),
+        3: ("#DEE9F8", "#123E82"),
+        4: ("#C6D9F2", "#123E82"),
+        5: ("#A9C5EB", "#0F2E5C"),
+        6: ("#8AB0E3", "#FFFFFF"),
+    }
+    return bands.get(n, ("", ""))
+
+
+# ─── 難易度＝勲章バッジ（Lv1 若葉マーク＋星1 / Lv2-6 丸メダル）────────────
+# 星数＝レベル、素材 銅(2-3)/銀(4)/金(5-6)、リボン色で階級差。range は上限で判定。
+_MEDAL_TIERS = {
+    "bronze": {"hi": "#F1C492", "mid": "#C77B3B", "lo": "#7A431C", "shi": "#9A5A28", "slo": "#542C12"},
+    "silver": {"hi": "#F6F9FC", "mid": "#AAB3BF", "lo": "#69727E", "shi": "#8A94A0", "slo": "#4E565F"},
+    "gold":   {"hi": "#FCEBAE", "mid": "#E2BB42", "lo": "#946E10", "shi": "#BE951F", "slo": "#6E5108"},
+}
+_MEDAL_RIBBON = {
+    1: ("#5BB06A", "#2E7D40"), 2: ("#5BB06A", "#2E7D40"), 3: ("#4E9BD6", "#225E96"),
+    4: ("#5566B8", "#2C3A86"), 5: ("#9A5FB0", "#5E2E78"), 6: ("#C8505E", "#7E2330"),
+}
+
+
+def _medal_tier(lv: int) -> dict:
+    if lv <= 3:
+        return _MEDAL_TIERS["bronze"]
+    if lv == 4:
+        return _MEDAL_TIERS["silver"]
+    return _MEDAL_TIERS["gold"]
+
+
+def _star_d(cx: float, cy: float, r: float) -> str:
+    pts = []
+    for i in range(10):
+        rr = r if i % 2 == 0 else r * 0.4
+        a = math.pi * 2 * i / 10 - math.pi / 2
+        pts.append(("M" if i == 0 else "L") + f"{cx + rr * math.cos(a):.2f} {cy + rr * math.sin(a):.2f}")
+    return " ".join(pts) + " Z"
+
+
+def _star_positions(n: int, R: float) -> list[tuple[float, float]]:
+    if n <= 1:
+        return [(0.0, 0.0)]
+    if n == 2:
+        return [(-R, 0), (R, 0)]
+    if n == 3:
+        return [(0, -R), (-R * 0.87, R * 0.5), (R * 0.87, R * 0.5)]
+    if n == 4:
+        return [(-R * 0.72, -R * 0.72), (R * 0.72, -R * 0.72), (-R * 0.72, R * 0.72), (R * 0.72, R * 0.72)]
+    out = []
+    for i in range(n):
+        a = -math.pi / 2 + math.pi * 2 * i / n
+        out.append((R * math.cos(a), R * math.sin(a)))
+    return out
+
+
+def _medal_beads(cx: float, cy: float, R: float, n: int, fill: str) -> str:
+    s = ""
+    for i in range(n):
+        a = math.pi * 2 * i / n
+        s += f'<circle cx="{cx + R * math.cos(a):.2f}" cy="{cy + R * math.sin(a):.2f}" r="1.5" fill="{fill}"/>'
+    return s
+
+
+def medal_svg(lv: int, w: int = 38, h: int = 41, cls: str = "level-medal") -> str:
+    """難易度勲章 SVG。lv は 1〜6（range は呼び出し側で上限に丸める）。"""
+    lv = max(1, min(6, lv))
+    if lv == 1:
+        outer = "M32 15 C28 27 25 35 22 46 C27 66 39 80 48 90 C57 80 69 66 74 46 C71 35 68 27 64 15 C58 24 53 27 48 31 C43 27 38 24 32 15 Z"
+        left = "M48 31 C43 27 38 24 32 15 C28 27 25 35 22 46 C27 66 39 80 48 90 Z"
+        return (
+            f'<svg class="{cls}" width="{w}" height="{h}" viewBox="0 0 96 104" role="img" aria-label="読者レベル1 入門">'
+            '<defs>'
+            '<linearGradient id="wkY" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD93A"/><stop offset="1" stop-color="#E0A400"/></linearGradient>'
+            '<linearGradient id="wkG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#46BE63"/><stop offset="1" stop-color="#1C7B3C"/></linearGradient>'
+            '<filter id="wkS" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#1A2A44" flood-opacity="0.22"/></filter>'
+            '</defs>'
+            '<g filter="url(#wkS)" transform="translate(48 50) scale(0.8) translate(-48 -50)">'
+            f'<path d="{outer}" fill="url(#wkY)"/>'
+            f'<path d="{left}" fill="url(#wkG)"/>'
+            f'<path d="{outer}" fill="none" stroke="#B8860B" stroke-width="2.2" stroke-linejoin="round"/>'
+            f'<path d="{_star_d(48, 58, 8)}" fill="#FFFFFF" stroke="#7A5A12" stroke-width="0.6"/>'
+            '</g></svg>'
+        )
+    t = _medal_tier(lv)
+    rib = _MEDAL_RIBBON[lv]
+    R = {2: 9, 3: 9.5, 4: 10, 5: 10.6, 6: 11}[lv]
+    sz = {2: 6.6, 3: 6.0, 4: 5.3, 5: 4.8, 6: 4.4}[lv]
+    s = f'<svg class="{cls}" width="{w}" height="{h}" viewBox="0 0 96 104" role="img" aria-label="読者レベル{lv}">'
+    s += (
+        '<defs>'
+        f'<radialGradient id="disc{lv}" cx="38%" cy="30%" r="78%"><stop offset="0" stop-color="{t["hi"]}"/><stop offset="55%" stop-color="{t["mid"]}"/><stop offset="100%" stop-color="{t["lo"]}"/></radialGradient>'
+        f'<linearGradient id="mstar{lv}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{t["shi"]}"/><stop offset="1" stop-color="{t["slo"]}"/></linearGradient>'
+        f'<linearGradient id="rib{lv}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{rib[0]}"/><stop offset="1" stop-color="{rib[1]}"/></linearGradient>'
+        f'<filter id="sh{lv}" x="-35%" y="-35%" width="170%" height="170%"><feDropShadow dx="0" dy="1.6" stdDeviation="1.7" flood-color="#1A2A44" flood-opacity="0.30"/></filter>'
+        '</defs>'
+    )
+    s += f'<path d="M40 8 L56 8 L52 30 L48 26 L44 30 Z" fill="url(#rib{lv})"/>'
+    s += '<line x1="48" y1="9" x2="48" y2="27" stroke="#00000055" stroke-width="0.7"/>'
+    s += f'<rect x="38" y="18" width="20" height="6" rx="3" fill="url(#disc{lv})" stroke="{t["lo"]}" stroke-width="0.8"/>'
+    s += f'<g filter="url(#sh{lv})"><circle cx="48" cy="48" r="22" fill="{t["lo"]}"/></g>'
+    s += _medal_beads(48, 48, 22, 36, t["hi"])
+    s += f'<circle cx="48" cy="48" r="19.5" fill="{t["lo"]}"/>'
+    s += f'<circle cx="48" cy="48" r="18" fill="url(#disc{lv})"/>'
+    s += '<path d="M34 41 A 18 18 0 0 1 59 33" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>'
+    for dx, dy in _star_positions(lv, R):
+        x, y = 48 + dx, 48 + dy
+        s += f'<path d="{_star_d(x, y, sz)}" fill="url(#mstar{lv})" stroke="{t["slo"]}" stroke-width="0.5"/>'
+        s += f'<path d="{_star_d(x, y - sz * 0.18, sz * 0.5)}" fill="#ffffff" opacity="0.28"/>'
+    s += '</svg>'
+    return s
+
+
+def render_level_badge(fm: dict) -> str:
+    """上チロム右に出す難易度勲章バッジ。reader_level の上限レベルで勲章を選ぶ。"""
+    lvl = _scalar(fm.get("reader_level"))
+    if not lvl:
+        return ""
+    nums = [int(x) for x in re.findall(r"\d", str(lvl))]
+    if not nums:
+        return ""
+    return medal_svg(max(nums))
+
+
+# ─── 体験区分＝関与バー（電波強度方式）────────────────────────────
+# hands_on=3本 / partial=2本 / research_only=1本。難易度の勲章とは別系統（青）。
+_EXP_BARS = {"hands_on": 3, "partial": 2, "research_only": 1}
+
+
+def exp_bars_svg(exp_raw: str, w: int = 18, h: int = 16, cls: str = "exp-bars") -> str:
+    """体験区分の関与バー SVG。未知/未記入は空文字。"""
+    n = _EXP_BARS.get((exp_raw or "").strip(), 0)
+    if n == 0:
+        return ""
+    blue = "#2F7BE6"
+    hs = [14, 22, 30]
+    xs = [10, 22, 34]
+    s = f'<svg class="{cls}" width="{w}" height="{h}" viewBox="0 0 48 44" role="img" aria-label="体験区分 {escape(exp_raw)}">'
+    for i in range(3):
+        fill = blue if i < n else "#FFFFFF"
+        s += f'<rect x="{xs[i]}" y="{38 - hs[i]}" width="9" height="{hs[i]}" rx="2.5" fill="{fill}" stroke="{blue}" stroke-width="2"/>'
+    s += "</svg>"
+    return s
+
+
 def render_tagline_tags(fm: dict) -> str:
     exp_raw = _scalar(fm.get("experience_level"))
     exp = EXPERIENCE_LABELS.get(exp_raw, exp_raw) or "（未記入）"
     lvl = _scalar(fm.get("reader_level")) or "（未記入）"
+    bg, fg = _level_palette(lvl)
+    # 難易度（reader_level の下限）で凡例と同じ色帯に塗る。未記入は既定スタイル。
+    lvl_style = f' style="background:{bg};color:{fg};border-color:{bg};"' if bg else ""
+    exp_icon = exp_bars_svg(exp_raw) or USER_ICON_SVG  # 体験区分は関与バー（電波方式）
     return f'''
       <div class="tag-row">
-        <span class="tag-chip">{USER_ICON_SVG}体験区分：{escape(exp)}</span>
-        <span class="tag-chip">{LEVEL_ICON_SVG}推奨読者レベル：Level {escape(lvl)}</span>
+        <span class="tag-chip">{exp_icon}体験区分：{escape(exp)}</span>
+        <span class="tag-chip"{lvl_style}>{LEVEL_ICON_SVG}推奨読者レベル：Level {escape(lvl)}</span>
       </div>'''
 
 
@@ -738,6 +895,12 @@ body {{ margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: va
 }}
 .flow-row .flow-arrow {{ flex: 0 0 auto !important; }}
 
+/* 読者レベル（難易度）＝勲章バッジ：上チロム右、ページ番号の隣。 */
+.page-chrome-top .chrome-right {{ display: flex; align-items: center; gap: 8px; }}
+.level-medal {{ display: block; margin-top: -6px; margin-bottom: -8px; }}
+/* 体験区分の関与バー（チップ内アイコン） */
+.tag-chip .exp-bars {{ vertical-align: -3px; margin-right: 2px; }}
+
 /* ─── PDF 出力（Cmd/Ctrl+P → PDF として保存）───
    2026-04-28 W 案: ポンチ絵スロットを iter 22 前の旧サイズに戻し、書籍判型 A 系 √2 に収める方向。
    @page は CSS 設計値 750×1061px の物理換算（≒199×281mm）。
@@ -799,7 +962,10 @@ body {{ margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: va
       <div class="chrome-left">
         {book_icon}<span class="chrome-label">{tilde_top}</span>
       </div>
-      <span class="chrome-page">{page_left}</span>
+      <div class="chrome-right">
+        {level_badge}
+        <span class="chrome-page">{page_left}</span>
+      </div>
     </div>
 
     <div class="page-body">
@@ -1081,6 +1247,7 @@ def render_page(entry: dict, prev: dict | None, next_: dict | None, drawer_html:
         evaluation_date=escape(fm.get("evaluation_date", "")),
         evaluation_month=escape((fm.get("evaluation_date", "") or "")[:7].replace("-", ".")),
         tilde_top=escape(chapter["tilde"]),
+        level_badge=render_level_badge(fm),
         base_css=BASE_CSS_REL,
         overlay_css=OVERLAY_CSS_REL,
         overlay_tight_css=OVERLAY_TIGHT_CSS_REL,

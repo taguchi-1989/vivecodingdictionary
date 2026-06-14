@@ -20,36 +20,12 @@ a:hover { background: var(--ink-blue-50); color: var(--ink-blue-900); }
 .code { display: inline-block; width: 52px; font-weight: 700; color: var(--ink-blue-700); font-family: var(--font-mono, monospace); font-size: 13px; }
 .count { color: var(--ink-3); font-size: 12px; margin-left: 6px; }
 .meta { background: #eef3fb; padding: 12px 16px; border-radius: 8px; margin-bottom: 20px; font-size: 12px; color: var(--ink-2); }
-.front-link {
-  background: #f7fafd;
-  border: 1px solid #dfe6ef;
-  border-left: 4px solid var(--ink-blue);
-  border-radius: 8px;
-  padding: 12px 16px;
-  margin: 0 0 22px;
-  font-size: 13px;
-  line-height: 1.7;
-  color: var(--ink-2);
-}
-.front-link b { color: var(--ink-blue-900); }
-.front-link a {
-  color: var(--ink-blue-900);
-  font-weight: 700;
-  padding: 0 2px;
-}
-.front-link a:hover { background: transparent; text-decoration: underline; }
 </style>
 </head>
 <body>
 <main>
   <h1>バイブコーディング図鑑 <span style="color:var(--ink-blue-700);font-size:20px;">preview</span></h1>
   <div class="sub">開発中に iter 22 レイアウトの反映を確認するためのプレビュー目次。本番は Astro + React（component_spec_v2.md §0）。</div>
-
-  <div class="meta">
-    <b>集計:</b> 全 320 エントリ（319 active / 1 archived）<br>
-    <b>生成日:</b> scripts/preview_gen.py を最後に実行した時点<br>
-    <b>更新方法:</b> markdown を書き換えたあと <code>python scripts/preview_gen.py</code>
-  </div>
 
   <nav style="display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px;">
     <a href="../../book/index.html" style="font-size:12px;color:white;background:var(--ink-blue);text-decoration:none;border-radius:6px;padding:5px 12px;font-weight:700;">📖 本として読む</a>
@@ -58,10 +34,10 @@ a:hover { background: var(--ink-blue-50); color: var(--ink-blue-900); }
     <a href="../../index.html" style="font-size:12px;color:var(--ink-2);text-decoration:none;border:1px solid var(--rule);border-radius:6px;padding:5px 12px;">管理トップ</a>
   </nav>
 
-  <div class="front-link">
-    <b>前付け設計:</b>
-    <a href="../../front_section/page_count_plan.html">前付け・後付け ページ数設計</a>
-    ／ <a href="../../front_section/index.html">前付けHTML一覧</a>
+  <div class="meta">
+    <b>集計:</b> 全 320 エントリ（319 active / 1 archived）<br>
+    <b>生成日:</b> scripts/preview_gen.py を最後に実行した時点<br>
+    <b>更新方法:</b> markdown を書き換えたあと <code>python scripts/preview_gen.py</code>
   </div>
 
   <h2>A. はじめに・読み方<span class="count">（11 件）</span></h2>
