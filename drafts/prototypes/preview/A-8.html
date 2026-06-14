@@ -84,6 +84,12 @@ body { margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: var
 }
 .flow-row .flow-arrow { flex: 0 0 auto !important; }
 
+/* 読者レベル（難易度）＝勲章バッジ：上チロム右、ページ番号の隣。 */
+.page-chrome-top .chrome-right { display: flex; align-items: center; gap: 8px; }
+.level-medal { display: block; margin-top: -6px; margin-bottom: -8px; }
+/* 体験区分の関与バー（チップ内アイコン） */
+.tag-chip .exp-bars { vertical-align: -3px; margin-right: 2px; }
+
 /* ─── PDF 出力（Cmd/Ctrl+P → PDF として保存）───
    2026-04-28 W 案: ポンチ絵スロットを iter 22 前の旧サイズに戻し、書籍判型 A 系 √2 に収める方向。
    @page は CSS 設計値 750×1061px の物理換算（≒199×281mm）。
@@ -228,7 +234,10 @@ body { margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: var
       <div class="chrome-left">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span class="chrome-label">読み方</span>
       </div>
-      <span class="chrome-page">18</span>
+      <div class="chrome-right">
+        <svg class="level-medal" width="38" height="41" viewBox="0 0 96 104" role="img" aria-label="読者レベル1 入門"><defs><linearGradient id="wkY" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD93A"/><stop offset="1" stop-color="#E0A400"/></linearGradient><linearGradient id="wkG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#46BE63"/><stop offset="1" stop-color="#1C7B3C"/></linearGradient><filter id="wkS" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#1A2A44" flood-opacity="0.22"/></filter></defs><g filter="url(#wkS)" transform="translate(48 50) scale(0.8) translate(-48 -50)"><path d="M32 15 C28 27 25 35 22 46 C27 66 39 80 48 90 C57 80 69 66 74 46 C71 35 68 27 64 15 C58 24 53 27 48 31 C43 27 38 24 32 15 Z" fill="url(#wkY)"/><path d="M48 31 C43 27 38 24 32 15 C28 27 25 35 22 46 C27 66 39 80 48 90 Z" fill="url(#wkG)"/><path d="M32 15 C28 27 25 35 22 46 C27 66 39 80 48 90 C57 80 69 66 74 46 C71 35 68 27 64 15 C58 24 53 27 48 31 C43 27 38 24 32 15 Z" fill="none" stroke="#B8860B" stroke-width="2.2" stroke-linejoin="round"/><path d="M48.00 50.00 L49.88 55.41 L55.61 55.53 L51.04 58.99 L52.70 64.47 L48.00 61.20 L43.30 64.47 L44.96 58.99 L40.39 55.53 L46.12 55.41 Z" fill="#FFFFFF" stroke="#7A5A12" stroke-width="0.6"/></g></svg>
+        <span class="chrome-page">18</span>
+      </div>
     </div>
 
     <div class="page-body">
@@ -237,8 +246,8 @@ body { margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: var
       <div class="tagline-bar"></div>
       
       <div class="tag-row">
-        <span class="tag-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>体験区分：触った</span>
-        <span class="tag-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="15" width="4" height="6"/><rect x="10" y="10" width="4" height="11"/><rect x="17" y="5" width="4" height="16"/></svg>推奨読者レベル：Level 1</span>
+        <span class="tag-chip"><svg class="exp-bars" width="18" height="16" viewBox="0 0 48 44" role="img" aria-label="体験区分 hands_on"><rect x="10" y="24" width="9" height="14" rx="2.5" fill="#2F7BE6" stroke="#2F7BE6" stroke-width="2"/><rect x="22" y="16" width="9" height="22" rx="2.5" fill="#2F7BE6" stroke="#2F7BE6" stroke-width="2"/><rect x="34" y="8" width="9" height="30" rx="2.5" fill="#2F7BE6" stroke="#2F7BE6" stroke-width="2"/></svg>体験区分：触った</span>
+        <span class="tag-chip" style="background:#F5F9FE;color:#123E82;border-color:#F5F9FE;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="15" width="4" height="6"/><rect x="10" y="10" width="4" height="11"/><rect x="17" y="5" width="4" height="16"/></svg>推奨読者レベル：Level 1</span>
       </div>
 
       <div class="body-section">

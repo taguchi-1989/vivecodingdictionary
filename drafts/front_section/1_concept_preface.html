@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>前付け 1 - 扉＋まえがき（圧縮案 5 見開き / FR-01）</title>
+<link rel="stylesheet" href="../prototypes/mockups/design_philosophy_v2/base.css">
+<link rel="stylesheet" href="_common.css">
+<style>
+  /* ── 左ページ: 扉コピー＋3コマ（旧 0_concept_spread 左ページ由来）── */
+  .concept-copy {
+    font-weight: 900;
+    font-size: 52px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin: 0 0 var(--sp-7) 0;
+  }
+  .concept-copy .em { color: var(--ink-blue); }
+
+  .three-panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--sp-4);
+    margin-top: auto;
+    margin-bottom: var(--sp-8);
+  }
+  .panel {
+    aspect-ratio: 1 / 1;
+    border: 1.5px solid var(--ink);
+    border-radius: 12px;
+    padding: var(--sp-3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--paper);
+  }
+  .panel .num {
+    font-family: var(--font-en);
+    font-weight: 900;
+    font-size: 18px;
+    color: var(--ink-blue);
+    margin-bottom: var(--sp-2);
+  }
+  .panel .figure {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink-3);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+  }
+  .panel .figure.has-generated { overflow: hidden; border-radius: 8px; }
+  .panel .figure img { width: 100%; height: 100%; object-fit: contain; }
+  .panel .label {
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--ink);
+    margin-top: var(--sp-2);
+  }
+
+  /* ── 右ページ: まえがき essay 2段（旧 1_a1_preface 右ページ由来）── */
+  .essay {
+    column-count: 2;
+    column-gap: var(--sp-7);
+    column-rule: 1px solid var(--rule);
+    font-size: 15px;
+    line-height: 1.95;
+    color: var(--ink);
+    letter-spacing: 0.03em;
+    flex: 1;
+    margin-top: var(--sp-5);
+  }
+  .essay p {
+    margin: 0 0 1.2em 0;
+    break-inside: avoid-column;
+  }
+  .essay .dropcap::first-letter {
+    font-size: 56px;
+    font-weight: 900;
+    color: var(--ink-blue);
+    line-height: 0.9;
+    float: left;
+    margin: 4px 8px 0 0;
+    font-family: var(--font-jp);
+  }
+  .essay-title {
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 1.3;
+    color: var(--ink);
+    margin: 0 0 var(--sp-3) 0;
+  }
+  .essay-by {
+    font-family: var(--font-en);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--ink-3);
+    margin-bottom: var(--sp-5);
+  }
+  .essay-lead {
+    border-left: 4px solid var(--ink-blue);
+    padding-left: var(--sp-4);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--ink);
+    margin: 0 0 var(--sp-2) 0;
+  }
+</style>
+</head>
+<body class="vbcd">
+
+
+<nav class="reader-nav">
+  <a href="../index.html">← 管理トップ</a>
+  <div class="nav-center">
+    <a href="index.html">前付け一覧</a>
+    <a class="nav-book" href="../book/index.html">📖 本として読む</a>
+  </div>
+  <a href="2_a2_anatomy.html">見開きの読み方 →</a>
+</nav>
+
+<div class="draft-stamp">FRONT 01 · CONCEPT + PREFACE · DRAFT（圧縮案 5 見開き）</div>
+
+<div class="spread">
+
+  <!-- 左ページ: まえがき（巻頭言スタート） -->
+  <section class="page left">
+    <div class="section-label">A-1 · PREFACE · 巻頭言</div>
+    <h1 class="essay-title">まえがき</h1>
+    <div class="essay-by">By the author</div>
+
+    <p class="essay-lead">
+      同じ日本語を話していても、同じ言語空間にいるとは限りません。
+    </p>
+
+    <div class="essay">
+      <p class="dropcap">AI 開発やフロントエンド開発の現場では、「コンテキスト」「モデル」「API」「TypeScript」「Lint」のような言葉が当たり前のように飛び交います。触っている側には自然な語彙でも、初めて関わる人には、何を指しているのか、なぜ重要なのかが見えにくいものです。</p>
+
+      <p>打ち合わせで「コンテキストが足りない」と言われたとき、AI への指示が期待通りに返ってこないとき、Claude と ChatGPT の違いを聞かれたとき。そんな場面で手元に置き、気になる語から引いて数分で読める本を目指しました。</p>
+
+      <p>完全な入門書ではなく、会話の前提をそろえるための共通語彙集です。読者は、AI を仕事で使いたいけれどプログラミングで生計を立てているわけではない人を想定しています。私自身も同じ立場で、AI を使う側として現場の戸惑いを共有しています。</p>
+
+      <p>通読する必要はありません。気になることばだけ引いて、現場の会話に戻ってください。この本が立つ場所を、次のページで一言にしました。</p>
+    </div>
+
+    <div class="page-foot">
+      <div class="left-meta">2026.05 · Draft</div>
+      <div class="right-meta">A-1 · FRONT</div>
+    </div>
+    <div class="page-num">02</div>
+  </section>
+
+  <!-- 右ページ: 扉コピー（まえがきを受ける宣言） -->
+  <section class="page right">
+    <div class="section-label">VIBE CODING DICTIONARY</div>
+
+    <h1 class="concept-copy">
+      知らないことばで、<br>
+      <span class="em">止まらない。</span>
+    </h1>
+
+    <p class="front-body" style="max-width: 540px;">
+      AI や開発の現場では、知っている人には普通のことばが、初めて聞く人には会話を止める原因になります。この図鑑は、その止まり方をなくすための「戻れる場所」です。
+    </p>
+
+    <div class="three-panels">
+      <div class="panel">
+        <div class="num">01</div>
+        <div class="figure has-generated"><img class="generated-art soft" src="../../assets/front_section/generated/0-1_concept_stuck.png" alt=""></div>
+        <div class="label">知らない語で<br>止まる</div>
+      </div>
+      <div class="panel">
+        <div class="num">02</div>
+        <div class="figure has-generated"><img class="generated-art soft" src="../../assets/front_section/generated/0-2_concept_open_book.png" alt=""></div>
+        <div class="label">図鑑を<br>引く</div>
+      </div>
+      <div class="panel">
+        <div class="num">03</div>
+        <div class="figure has-generated"><img class="generated-art soft" src="../../assets/front_section/generated/0-3_concept_return_conversation.png" alt=""></div>
+        <div class="label">会話に<br>戻る</div>
+      </div>
+    </div>
+
+    <div class="page-foot">
+      <div class="left-meta">FRONT 01 · OPENING</div>
+      <div class="right-meta">📖 バイブコーディング図鑑</div>
+    </div>
+    <div class="page-num">03</div>
+  </section>
+
+</div>
+
+</body>
+</html>

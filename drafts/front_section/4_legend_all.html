@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>前付け 4 - この本の記号と凡例（1 見開きに集約 / 旧 FR-04+FR-05）</title>
+<link rel="stylesheet" href="../prototypes/mockups/design_philosophy_v2/base.css">
+<link rel="stylesheet" href="_common.css">
+<style>
+  /* 凡例 1 見開き集約版。左＝読む前の区分／右＝誌面の記号。全体的に詰める。 */
+  .lg-h {
+    font-weight: 700; font-size: 12.5px; color: var(--ink-blue);
+    letter-spacing: 0.06em; margin: var(--sp-4) 0 var(--sp-2);
+    padding-bottom: 3px; border-bottom: 1px solid var(--rule);
+    display: flex; align-items: baseline; gap: 8px;
+  }
+  .lg-h:first-of-type { margin-top: var(--sp-3); }
+  .lg-h .en { font-family: var(--font-en); font-size: 9.5px; color: var(--ink-3); letter-spacing: 0.1em; }
+
+  /* 体験区分 */
+  .exp-row {
+    display: grid; grid-template-columns: 34px 96px 1fr; align-items: center; gap: var(--sp-3);
+    padding: 6px var(--sp-3); background: var(--paper); border: 1px solid var(--rule);
+    border-radius: 5px; margin-bottom: 5px;
+  }
+  .exp-row .mark { font-size: 20px; line-height: 1; text-align: center; color: var(--ink-blue-900); }
+  .exp-row .enum {
+    font-family: var(--font-en); font-weight: 700; font-size: 11px; color: var(--ink-blue);
+    background: var(--ink-blue-50); padding: 2px 5px; border-radius: 4px; text-align: center;
+  }
+  .exp-row .desc { font-size: 12px; line-height: 1.4; color: var(--ink); }
+
+  /* 読者レベル */
+  .level-ladder { display: flex; flex-direction: column; gap: 3px; }
+  .level-row {
+    display: grid; grid-template-columns: 30px 76px 1fr; align-items: center; gap: var(--sp-3);
+    padding: 4px var(--sp-3); border-radius: 4px;
+  }
+  .level-row .num { font-family: var(--font-en); font-weight: 900; font-size: 18px; text-align: center; line-height: 1; color: var(--ink-blue-900); }
+  .level-row .name { font-weight: 700; font-size: 12px; color: var(--ink-blue-900); }
+  .level-row .ex { font-size: 11px; color: var(--ink-2); line-height: 1.4; }
+  .level-row.l1 { background: #F5F9FE; } .level-row.l2 { background: #EAF1FB; }
+  .level-row.l3 { background: #DEE9F8; } .level-row.l4 { background: #C6D9F2; }
+  .level-row.l5 { background: #A9C5EB; } .level-row.l6 { background: #8AB0E3; }
+  .level-row.l6 .num, .level-row.l6 .name, .level-row.l6 .ex { color: white; }
+
+  /* 評価日・時変フラグ（コンパクト行） */
+  .flag-row {
+    border: 1px solid var(--rule); border-radius: 5px; padding: 7px var(--sp-3);
+    margin-bottom: 5px; background: var(--paper);
+  }
+  .flag-row.required { border-color: var(--ink-blue); background: var(--paper-2); }
+  .flag-row .fh { display: flex; align-items: center; gap: 6px; margin-bottom: 3px; flex-wrap: wrap; }
+  .flag-row .code { font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--ink-blue); background: var(--ink-blue-50); padding: 1px 6px; border-radius: 4px; }
+  .flag-row .rb { font-family: var(--font-en); font-size: 8.5px; letter-spacing: 0.1em; background: var(--ink-blue); color: white; padding: 1px 5px; border-radius: 3px; }
+  .flag-row .ob { font-family: var(--font-en); font-size: 8.5px; letter-spacing: 0.1em; background: var(--paper-3); color: var(--ink-blue-900); padding: 1px 5px; border-radius: 3px; }
+  .flag-row .vals { display: inline-flex; gap: 5px; margin-left: 4px; }
+  .flag-row .v { font-family: var(--font-mono); font-size: 10px; background: var(--paper); border: 1px solid var(--rule); border-radius: 3px; padding: 0 5px; }
+  .flag-row .desc { font-size: 11.5px; line-height: 1.45; color: var(--ink); }
+
+  /* 色のトーン */
+  .color-row { display: grid; grid-template-columns: 72px 1fr; gap: var(--sp-3); align-items: center; margin-bottom: 6px; }
+  .color-swatch { height: 30px; border-radius: 5px; }
+  .color-row .desc { font-size: 11.5px; color: var(--ink); line-height: 1.45; }
+  .color-row .desc strong { color: var(--ink-blue-900); }
+
+  /* バッジ */
+  .badge-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
+  .badge-cell { display: flex; align-items: center; gap: 7px; padding: 6px; background: var(--paper); border: 1px solid var(--rule); border-radius: 5px; }
+  .badge-cell .glyph { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 15px; color: white; flex-shrink: 0; }
+  .glyph.star { background: #D24F46; } .glyph.warn { background: #E59450; }
+  .glyph.first { background: var(--ink-blue); } .glyph.good { background: #5FBF8F; }
+  .glyph.bad { background: var(--ink-2); } .glyph.who { background: var(--ink-blue-700); }
+  .badge-cell .lbl { font-size: 10px; color: var(--ink-2); line-height: 1.3; }
+  .badge-cell .lbl strong { color: var(--ink-blue-900); font-size: 11px; display: block; }
+
+  /* 6 視点アイコン */
+  .icon-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 5px; }
+  .icon-cell { border: 1px solid var(--rule); border-radius: 5px; padding: 6px 2px; text-align: center; background: var(--paper); }
+  .icon-cell .ico { font-size: 18px; }
+  .icon-cell .il { font-size: 9px; font-weight: 700; color: var(--ink); margin-top: 2px; line-height: 1.2; }
+
+  /* ピル */
+  .pills-demo { display: flex; gap: 6px; flex-wrap: wrap; margin: 4px 0; }
+  .pills-demo .pill { font-size: 11px; }
+  .pill-note { font-size: 11px; color: var(--ink-2); line-height: 1.5; }
+
+  /* 読者レベル凡例＝勲章（inject_legend_medals.py が差し込み） */
+  .level-row { grid-template-columns: 46px 78px 1fr !important; }
+  .lvl-badge { display: flex; justify-content: center; align-items: center; }
+  .lvl-badge .level-medal { display: block; }
+</style>
+</head>
+<body class="vbcd">
+
+
+<nav class="reader-nav">
+  <a href="3_a3_a9_map_index.html">← 歩き方と探し方</a>
+  <div class="nav-center">
+    <a href="index.html">前付け一覧</a>
+    <a class="nav-book" href="../book/index.html">📖 本として読む</a>
+  </div>
+  <a href="6_a10_a11_log_glossary.html">巻末 →</a>
+</nav>
+
+<div class="draft-stamp">FRONT 04 · LEGEND（凡例 1 見開き集約）· DRAFT</div>
+
+<div class="spread">
+
+  <!-- 左ページ: 読む前の区分 -->
+  <section class="page left">
+    <div class="section-label">FRONT · LEGEND ①</div>
+    <h1 class="front-title-sm">この本の記号と凡例</h1>
+    <p class="front-lead">読む前に知っておく 3 つの区分です。タイトル横やタグライン帯に出ます。</p>
+
+    <div class="lg-h">体験区分 <span class="en">experience_level</span></div>
+    <div class="exp-row"><div class="mark"><svg class="exp-bars" width="30" height="27" viewBox="0 0 48 44" role="img" aria-label="体験区分 hands_on"><rect x="10" y="24" width="9" height="14" rx="2.5" fill="#2F7BE6" stroke="#2F7BE6" stroke-width="2"/><rect x="22" y="16" width="9" height="22" rx="2.5" fill="#2F7BE6" stroke="#2F7BE6" stroke-width="2"/><rect x="34" y="8" width="9" height="30" rx="2.5" fill="#2F7BE6" stroke="#2F7BE6" stroke-width="2"/></svg></div><div class="enum">hands_on</div><div class="desc">業務や個人で動かしたことがある</div></div>
+    <div class="exp-row"><div class="mark"><svg class="exp-bars" width="30" height="27" viewBox="0 0 48 44" role="img" aria-label="体験区分 partial"><rect x="10" y="24" width="9" height="14" rx="2.5" fill="#2F7BE6" stroke="#2F7BE6" stroke-width="2"/><rect x="22" y="16" width="9" height="22" rx="2.5" fill="#2F7BE6" stroke="#2F7BE6" stroke-width="2"/><rect x="34" y="8" width="9" height="30" rx="2.5" fill="#FFFFFF" stroke="#2F7BE6" stroke-width="2"/></svg></div><div class="enum">partial</div><div class="desc">一部のみ触れた／概要を確認した</div></div>
+    <div class="exp-row"><div class="mark"><svg class="exp-bars" width="30" height="27" viewBox="0 0 48 44" role="img" aria-label="体験区分 research_only"><rect x="10" y="24" width="9" height="14" rx="2.5" fill="#2F7BE6" stroke="#2F7BE6" stroke-width="2"/><rect x="22" y="16" width="9" height="22" rx="2.5" fill="#FFFFFF" stroke="#2F7BE6" stroke-width="2"/><rect x="34" y="8" width="9" height="30" rx="2.5" fill="#FFFFFF" stroke="#2F7BE6" stroke-width="2"/></svg></div><div class="enum">research_only</div><div class="desc">公開情報・他者の体験談ベース</div></div>
+
+    <div class="lg-h">読者レベル <span class="en">reader_level 1〜6</span></div>
+    <div class="level-ladder">
+      <div class="level-row"><div class="lvl-badge"><svg class="level-medal" width="36" height="39" viewBox="0 0 96 104" role="img" aria-label="読者レベル1 入門"><defs><linearGradient id="wkY" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD93A"/><stop offset="1" stop-color="#E0A400"/></linearGradient><linearGradient id="wkG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#46BE63"/><stop offset="1" stop-color="#1C7B3C"/></linearGradient><filter id="wkS" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#1A2A44" flood-opacity="0.22"/></filter></defs><g filter="url(#wkS)" transform="translate(48 50) scale(0.8) translate(-48 -50)"><path d="M32 15 C28 27 25 35 22 46 C27 66 39 80 48 90 C57 80 69 66 74 46 C71 35 68 27 64 15 C58 24 53 27 48 31 C43 27 38 24 32 15 Z" fill="url(#wkY)"/><path d="M48 31 C43 27 38 24 32 15 C28 27 25 35 22 46 C27 66 39 80 48 90 Z" fill="url(#wkG)"/><path d="M32 15 C28 27 25 35 22 46 C27 66 39 80 48 90 C57 80 69 66 74 46 C71 35 68 27 64 15 C58 24 53 27 48 31 C43 27 38 24 32 15 Z" fill="none" stroke="#B8860B" stroke-width="2.2" stroke-linejoin="round"/><path d="M48.00 50.00 L49.88 55.41 L55.61 55.53 L51.04 58.99 L52.70 64.47 L48.00 61.20 L43.30 64.47 L44.96 58.99 L40.39 55.53 L46.12 55.41 Z" fill="#FFFFFF" stroke="#7A5A12" stroke-width="0.6"/></g></svg></div><div class="name">入門</div><div class="ex">ChatGPT / Hallucination</div></div>
+      <div class="level-row"><div class="lvl-badge"><svg class="level-medal" width="36" height="39" viewBox="0 0 96 104" role="img" aria-label="読者レベル2"><defs><radialGradient id="disc2" cx="38%" cy="30%" r="78%"><stop offset="0" stop-color="#F1C492"/><stop offset="55%" stop-color="#C77B3B"/><stop offset="100%" stop-color="#7A431C"/></radialGradient><linearGradient id="mstar2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9A5A28"/><stop offset="1" stop-color="#542C12"/></linearGradient><linearGradient id="rib2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5BB06A"/><stop offset="1" stop-color="#2E7D40"/></linearGradient><filter id="sh2" x="-35%" y="-35%" width="170%" height="170%"><feDropShadow dx="0" dy="1.6" stdDeviation="1.7" flood-color="#1A2A44" flood-opacity="0.30"/></filter></defs><path d="M40 8 L56 8 L52 30 L48 26 L44 30 Z" fill="url(#rib2)"/><line x1="48" y1="9" x2="48" y2="27" stroke="#00000055" stroke-width="0.7"/><rect x="38" y="18" width="20" height="6" rx="3" fill="url(#disc2)" stroke="#7A431C" stroke-width="0.8"/><g filter="url(#sh2)"><circle cx="48" cy="48" r="22" fill="#7A431C"/></g><circle cx="70.00" cy="48.00" r="1.5" fill="#F1C492"/><circle cx="69.67" cy="51.82" r="1.5" fill="#F1C492"/><circle cx="68.67" cy="55.52" r="1.5" fill="#F1C492"/><circle cx="67.05" cy="59.00" r="1.5" fill="#F1C492"/><circle cx="64.85" cy="62.14" r="1.5" fill="#F1C492"/><circle cx="62.14" cy="64.85" r="1.5" fill="#F1C492"/><circle cx="59.00" cy="67.05" r="1.5" fill="#F1C492"/><circle cx="55.52" cy="68.67" r="1.5" fill="#F1C492"/><circle cx="51.82" cy="69.67" r="1.5" fill="#F1C492"/><circle cx="48.00" cy="70.00" r="1.5" fill="#F1C492"/><circle cx="44.18" cy="69.67" r="1.5" fill="#F1C492"/><circle cx="40.48" cy="68.67" r="1.5" fill="#F1C492"/><circle cx="37.00" cy="67.05" r="1.5" fill="#F1C492"/><circle cx="33.86" cy="64.85" r="1.5" fill="#F1C492"/><circle cx="31.15" cy="62.14" r="1.5" fill="#F1C492"/><circle cx="28.95" cy="59.00" r="1.5" fill="#F1C492"/><circle cx="27.33" cy="55.52" r="1.5" fill="#F1C492"/><circle cx="26.33" cy="51.82" r="1.5" fill="#F1C492"/><circle cx="26.00" cy="48.00" r="1.5" fill="#F1C492"/><circle cx="26.33" cy="44.18" r="1.5" fill="#F1C492"/><circle cx="27.33" cy="40.48" r="1.5" fill="#F1C492"/><circle cx="28.95" cy="37.00" r="1.5" fill="#F1C492"/><circle cx="31.15" cy="33.86" r="1.5" fill="#F1C492"/><circle cx="33.86" cy="31.15" r="1.5" fill="#F1C492"/><circle cx="37.00" cy="28.95" r="1.5" fill="#F1C492"/><circle cx="40.48" cy="27.33" r="1.5" fill="#F1C492"/><circle cx="44.18" cy="26.33" r="1.5" fill="#F1C492"/><circle cx="48.00" cy="26.00" r="1.5" fill="#F1C492"/><circle cx="51.82" cy="26.33" r="1.5" fill="#F1C492"/><circle cx="55.52" cy="27.33" r="1.5" fill="#F1C492"/><circle cx="59.00" cy="28.95" r="1.5" fill="#F1C492"/><circle cx="62.14" cy="31.15" r="1.5" fill="#F1C492"/><circle cx="64.85" cy="33.86" r="1.5" fill="#F1C492"/><circle cx="67.05" cy="37.00" r="1.5" fill="#F1C492"/><circle cx="68.67" cy="40.48" r="1.5" fill="#F1C492"/><circle cx="69.67" cy="44.18" r="1.5" fill="#F1C492"/><circle cx="48" cy="48" r="19.5" fill="#7A431C"/><circle cx="48" cy="48" r="18" fill="url(#disc2)"/><path d="M34 41 A 18 18 0 0 1 59 33" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/><path d="M39.00 41.40 L40.55 45.86 L45.28 45.96 L41.51 48.82 L42.88 53.34 L39.00 50.64 L35.12 53.34 L36.49 48.82 L32.72 45.96 L37.45 45.86 Z" fill="url(#mstar2)" stroke="#542C12" stroke-width="0.5"/><path d="M39.00 43.51 L39.78 45.74 L42.14 45.79 L40.26 47.22 L40.94 49.48 L39.00 48.13 L37.06 49.48 L37.74 47.22 L35.86 45.79 L38.22 45.74 Z" fill="#ffffff" opacity="0.28"/><path d="M57.00 41.40 L58.55 45.86 L63.28 45.96 L59.51 48.82 L60.88 53.34 L57.00 50.64 L53.12 53.34 L54.49 48.82 L50.72 45.96 L55.45 45.86 Z" fill="url(#mstar2)" stroke="#542C12" stroke-width="0.5"/><path d="M57.00 43.51 L57.78 45.74 L60.14 45.79 L58.26 47.22 L58.94 49.48 L57.00 48.13 L55.06 49.48 L55.74 47.22 L53.86 45.79 L56.22 45.74 Z" fill="#ffffff" opacity="0.28"/></svg></div><div class="name">一般</div><div class="ex">Context / MCP / Cursor</div></div>
+      <div class="level-row"><div class="lvl-badge"><svg class="level-medal" width="36" height="39" viewBox="0 0 96 104" role="img" aria-label="読者レベル3"><defs><radialGradient id="disc3" cx="38%" cy="30%" r="78%"><stop offset="0" stop-color="#F1C492"/><stop offset="55%" stop-color="#C77B3B"/><stop offset="100%" stop-color="#7A431C"/></radialGradient><linearGradient id="mstar3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9A5A28"/><stop offset="1" stop-color="#542C12"/></linearGradient><linearGradient id="rib3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4E9BD6"/><stop offset="1" stop-color="#225E96"/></linearGradient><filter id="sh3" x="-35%" y="-35%" width="170%" height="170%"><feDropShadow dx="0" dy="1.6" stdDeviation="1.7" flood-color="#1A2A44" flood-opacity="0.30"/></filter></defs><path d="M40 8 L56 8 L52 30 L48 26 L44 30 Z" fill="url(#rib3)"/><line x1="48" y1="9" x2="48" y2="27" stroke="#00000055" stroke-width="0.7"/><rect x="38" y="18" width="20" height="6" rx="3" fill="url(#disc3)" stroke="#7A431C" stroke-width="0.8"/><g filter="url(#sh3)"><circle cx="48" cy="48" r="22" fill="#7A431C"/></g><circle cx="70.00" cy="48.00" r="1.5" fill="#F1C492"/><circle cx="69.67" cy="51.82" r="1.5" fill="#F1C492"/><circle cx="68.67" cy="55.52" r="1.5" fill="#F1C492"/><circle cx="67.05" cy="59.00" r="1.5" fill="#F1C492"/><circle cx="64.85" cy="62.14" r="1.5" fill="#F1C492"/><circle cx="62.14" cy="64.85" r="1.5" fill="#F1C492"/><circle cx="59.00" cy="67.05" r="1.5" fill="#F1C492"/><circle cx="55.52" cy="68.67" r="1.5" fill="#F1C492"/><circle cx="51.82" cy="69.67" r="1.5" fill="#F1C492"/><circle cx="48.00" cy="70.00" r="1.5" fill="#F1C492"/><circle cx="44.18" cy="69.67" r="1.5" fill="#F1C492"/><circle cx="40.48" cy="68.67" r="1.5" fill="#F1C492"/><circle cx="37.00" cy="67.05" r="1.5" fill="#F1C492"/><circle cx="33.86" cy="64.85" r="1.5" fill="#F1C492"/><circle cx="31.15" cy="62.14" r="1.5" fill="#F1C492"/><circle cx="28.95" cy="59.00" r="1.5" fill="#F1C492"/><circle cx="27.33" cy="55.52" r="1.5" fill="#F1C492"/><circle cx="26.33" cy="51.82" r="1.5" fill="#F1C492"/><circle cx="26.00" cy="48.00" r="1.5" fill="#F1C492"/><circle cx="26.33" cy="44.18" r="1.5" fill="#F1C492"/><circle cx="27.33" cy="40.48" r="1.5" fill="#F1C492"/><circle cx="28.95" cy="37.00" r="1.5" fill="#F1C492"/><circle cx="31.15" cy="33.86" r="1.5" fill="#F1C492"/><circle cx="33.86" cy="31.15" r="1.5" fill="#F1C492"/><circle cx="37.00" cy="28.95" r="1.5" fill="#F1C492"/><circle cx="40.48" cy="27.33" r="1.5" fill="#F1C492"/><circle cx="44.18" cy="26.33" r="1.5" fill="#F1C492"/><circle cx="48.00" cy="26.00" r="1.5" fill="#F1C492"/><circle cx="51.82" cy="26.33" r="1.5" fill="#F1C492"/><circle cx="55.52" cy="27.33" r="1.5" fill="#F1C492"/><circle cx="59.00" cy="28.95" r="1.5" fill="#F1C492"/><circle cx="62.14" cy="31.15" r="1.5" fill="#F1C492"/><circle cx="64.85" cy="33.86" r="1.5" fill="#F1C492"/><circle cx="67.05" cy="37.00" r="1.5" fill="#F1C492"/><circle cx="68.67" cy="40.48" r="1.5" fill="#F1C492"/><circle cx="69.67" cy="44.18" r="1.5" fill="#F1C492"/><circle cx="48" cy="48" r="19.5" fill="#7A431C"/><circle cx="48" cy="48" r="18" fill="url(#disc3)"/><path d="M34 41 A 18 18 0 0 1 59 33" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/><path d="M48.00 32.50 L49.41 36.56 L53.71 36.65 L50.28 39.24 L51.53 43.35 L48.00 40.90 L44.47 43.35 L45.72 39.24 L42.29 36.65 L46.59 36.56 Z" fill="url(#mstar3)" stroke="#542C12" stroke-width="0.5"/><path d="M48.00 34.42 L48.71 36.45 L50.85 36.49 L49.14 37.79 L49.76 39.85 L48.00 38.62 L46.24 39.85 L46.86 37.79 L45.15 36.49 L47.29 36.45 Z" fill="#ffffff" opacity="0.28"/><path d="M39.73 46.75 L41.15 50.81 L45.44 50.90 L42.02 53.49 L43.26 57.60 L39.73 55.15 L36.21 57.60 L37.45 53.49 L34.03 50.90 L38.32 50.81 Z" fill="url(#mstar3)" stroke="#542C12" stroke-width="0.5"/><path d="M39.73 48.67 L40.44 50.70 L42.59 50.74 L40.88 52.04 L41.50 54.10 L39.73 52.87 L37.97 54.10 L38.59 52.04 L36.88 50.74 L39.03 50.70 Z" fill="#ffffff" opacity="0.28"/><path d="M56.27 46.75 L57.68 50.81 L61.97 50.90 L58.55 53.49 L59.79 57.60 L56.27 55.15 L52.74 57.60 L53.98 53.49 L50.56 50.90 L54.85 50.81 Z" fill="url(#mstar3)" stroke="#542C12" stroke-width="0.5"/><path d="M56.27 48.67 L56.97 50.70 L59.12 50.74 L57.41 52.04 L58.03 54.10 L56.27 52.87 L54.50 54.10 L55.12 52.04 L53.41 50.74 L55.56 50.70 Z" fill="#ffffff" opacity="0.28"/></svg></div><div class="name">中級</div><div class="ex">Tool Use / Hook / Slash Command</div></div>
+      <div class="level-row"><div class="lvl-badge"><svg class="level-medal" width="36" height="39" viewBox="0 0 96 104" role="img" aria-label="読者レベル4"><defs><radialGradient id="disc4" cx="38%" cy="30%" r="78%"><stop offset="0" stop-color="#F6F9FC"/><stop offset="55%" stop-color="#AAB3BF"/><stop offset="100%" stop-color="#69727E"/></radialGradient><linearGradient id="mstar4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8A94A0"/><stop offset="1" stop-color="#4E565F"/></linearGradient><linearGradient id="rib4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5566B8"/><stop offset="1" stop-color="#2C3A86"/></linearGradient><filter id="sh4" x="-35%" y="-35%" width="170%" height="170%"><feDropShadow dx="0" dy="1.6" stdDeviation="1.7" flood-color="#1A2A44" flood-opacity="0.30"/></filter></defs><path d="M40 8 L56 8 L52 30 L48 26 L44 30 Z" fill="url(#rib4)"/><line x1="48" y1="9" x2="48" y2="27" stroke="#00000055" stroke-width="0.7"/><rect x="38" y="18" width="20" height="6" rx="3" fill="url(#disc4)" stroke="#69727E" stroke-width="0.8"/><g filter="url(#sh4)"><circle cx="48" cy="48" r="22" fill="#69727E"/></g><circle cx="70.00" cy="48.00" r="1.5" fill="#F6F9FC"/><circle cx="69.67" cy="51.82" r="1.5" fill="#F6F9FC"/><circle cx="68.67" cy="55.52" r="1.5" fill="#F6F9FC"/><circle cx="67.05" cy="59.00" r="1.5" fill="#F6F9FC"/><circle cx="64.85" cy="62.14" r="1.5" fill="#F6F9FC"/><circle cx="62.14" cy="64.85" r="1.5" fill="#F6F9FC"/><circle cx="59.00" cy="67.05" r="1.5" fill="#F6F9FC"/><circle cx="55.52" cy="68.67" r="1.5" fill="#F6F9FC"/><circle cx="51.82" cy="69.67" r="1.5" fill="#F6F9FC"/><circle cx="48.00" cy="70.00" r="1.5" fill="#F6F9FC"/><circle cx="44.18" cy="69.67" r="1.5" fill="#F6F9FC"/><circle cx="40.48" cy="68.67" r="1.5" fill="#F6F9FC"/><circle cx="37.00" cy="67.05" r="1.5" fill="#F6F9FC"/><circle cx="33.86" cy="64.85" r="1.5" fill="#F6F9FC"/><circle cx="31.15" cy="62.14" r="1.5" fill="#F6F9FC"/><circle cx="28.95" cy="59.00" r="1.5" fill="#F6F9FC"/><circle cx="27.33" cy="55.52" r="1.5" fill="#F6F9FC"/><circle cx="26.33" cy="51.82" r="1.5" fill="#F6F9FC"/><circle cx="26.00" cy="48.00" r="1.5" fill="#F6F9FC"/><circle cx="26.33" cy="44.18" r="1.5" fill="#F6F9FC"/><circle cx="27.33" cy="40.48" r="1.5" fill="#F6F9FC"/><circle cx="28.95" cy="37.00" r="1.5" fill="#F6F9FC"/><circle cx="31.15" cy="33.86" r="1.5" fill="#F6F9FC"/><circle cx="33.86" cy="31.15" r="1.5" fill="#F6F9FC"/><circle cx="37.00" cy="28.95" r="1.5" fill="#F6F9FC"/><circle cx="40.48" cy="27.33" r="1.5" fill="#F6F9FC"/><circle cx="44.18" cy="26.33" r="1.5" fill="#F6F9FC"/><circle cx="48.00" cy="26.00" r="1.5" fill="#F6F9FC"/><circle cx="51.82" cy="26.33" r="1.5" fill="#F6F9FC"/><circle cx="55.52" cy="27.33" r="1.5" fill="#F6F9FC"/><circle cx="59.00" cy="28.95" r="1.5" fill="#F6F9FC"/><circle cx="62.14" cy="31.15" r="1.5" fill="#F6F9FC"/><circle cx="64.85" cy="33.86" r="1.5" fill="#F6F9FC"/><circle cx="67.05" cy="37.00" r="1.5" fill="#F6F9FC"/><circle cx="68.67" cy="40.48" r="1.5" fill="#F6F9FC"/><circle cx="69.67" cy="44.18" r="1.5" fill="#F6F9FC"/><circle cx="48" cy="48" r="19.5" fill="#69727E"/><circle cx="48" cy="48" r="18" fill="url(#disc4)"/><path d="M34 41 A 18 18 0 0 1 59 33" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/><path d="M40.80 35.50 L42.05 39.08 L45.84 39.16 L42.82 41.46 L43.92 45.09 L40.80 42.92 L37.68 45.09 L38.78 41.46 L35.76 39.16 L39.55 39.08 Z" fill="url(#mstar4)" stroke="#4E565F" stroke-width="0.5"/><path d="M40.80 37.20 L41.42 38.99 L43.32 39.03 L41.81 40.17 L42.36 41.99 L40.80 40.91 L39.24 41.99 L39.79 40.17 L38.28 39.03 L40.18 38.99 Z" fill="#ffffff" opacity="0.28"/><path d="M55.20 35.50 L56.45 39.08 L60.24 39.16 L57.22 41.46 L58.32 45.09 L55.20 42.92 L52.08 45.09 L53.18 41.46 L50.16 39.16 L53.95 39.08 Z" fill="url(#mstar4)" stroke="#4E565F" stroke-width="0.5"/><path d="M55.20 37.20 L55.82 38.99 L57.72 39.03 L56.21 40.17 L56.76 41.99 L55.20 40.91 L53.64 41.99 L54.19 40.17 L52.68 39.03 L54.58 38.99 Z" fill="#ffffff" opacity="0.28"/><path d="M40.80 49.90 L42.05 53.48 L45.84 53.56 L42.82 55.86 L43.92 59.49 L40.80 57.32 L37.68 59.49 L38.78 55.86 L35.76 53.56 L39.55 53.48 Z" fill="url(#mstar4)" stroke="#4E565F" stroke-width="0.5"/><path d="M40.80 51.60 L41.42 53.39 L43.32 53.43 L41.81 54.57 L42.36 56.39 L40.80 55.31 L39.24 56.39 L39.79 54.57 L38.28 53.43 L40.18 53.39 Z" fill="#ffffff" opacity="0.28"/><path d="M55.20 49.90 L56.45 53.48 L60.24 53.56 L57.22 55.86 L58.32 59.49 L55.20 57.32 L52.08 59.49 L53.18 55.86 L50.16 53.56 L53.95 53.48 Z" fill="url(#mstar4)" stroke="#4E565F" stroke-width="0.5"/><path d="M55.20 51.60 L55.82 53.39 L57.72 53.43 L56.21 54.57 L56.76 56.39 L55.20 55.31 L53.64 56.39 L54.19 54.57 L52.68 53.43 L54.58 53.39 Z" fill="#ffffff" opacity="0.28"/></svg></div><div class="name">応用</div><div class="ex">TypeScript / Lint</div></div>
+      <div class="level-row"><div class="lvl-badge"><svg class="level-medal" width="36" height="39" viewBox="0 0 96 104" role="img" aria-label="読者レベル5"><defs><radialGradient id="disc5" cx="38%" cy="30%" r="78%"><stop offset="0" stop-color="#FCEBAE"/><stop offset="55%" stop-color="#E2BB42"/><stop offset="100%" stop-color="#946E10"/></radialGradient><linearGradient id="mstar5" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BE951F"/><stop offset="1" stop-color="#6E5108"/></linearGradient><linearGradient id="rib5" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9A5FB0"/><stop offset="1" stop-color="#5E2E78"/></linearGradient><filter id="sh5" x="-35%" y="-35%" width="170%" height="170%"><feDropShadow dx="0" dy="1.6" stdDeviation="1.7" flood-color="#1A2A44" flood-opacity="0.30"/></filter></defs><path d="M40 8 L56 8 L52 30 L48 26 L44 30 Z" fill="url(#rib5)"/><line x1="48" y1="9" x2="48" y2="27" stroke="#00000055" stroke-width="0.7"/><rect x="38" y="18" width="20" height="6" rx="3" fill="url(#disc5)" stroke="#946E10" stroke-width="0.8"/><g filter="url(#sh5)"><circle cx="48" cy="48" r="22" fill="#946E10"/></g><circle cx="70.00" cy="48.00" r="1.5" fill="#FCEBAE"/><circle cx="69.67" cy="51.82" r="1.5" fill="#FCEBAE"/><circle cx="68.67" cy="55.52" r="1.5" fill="#FCEBAE"/><circle cx="67.05" cy="59.00" r="1.5" fill="#FCEBAE"/><circle cx="64.85" cy="62.14" r="1.5" fill="#FCEBAE"/><circle cx="62.14" cy="64.85" r="1.5" fill="#FCEBAE"/><circle cx="59.00" cy="67.05" r="1.5" fill="#FCEBAE"/><circle cx="55.52" cy="68.67" r="1.5" fill="#FCEBAE"/><circle cx="51.82" cy="69.67" r="1.5" fill="#FCEBAE"/><circle cx="48.00" cy="70.00" r="1.5" fill="#FCEBAE"/><circle cx="44.18" cy="69.67" r="1.5" fill="#FCEBAE"/><circle cx="40.48" cy="68.67" r="1.5" fill="#FCEBAE"/><circle cx="37.00" cy="67.05" r="1.5" fill="#FCEBAE"/><circle cx="33.86" cy="64.85" r="1.5" fill="#FCEBAE"/><circle cx="31.15" cy="62.14" r="1.5" fill="#FCEBAE"/><circle cx="28.95" cy="59.00" r="1.5" fill="#FCEBAE"/><circle cx="27.33" cy="55.52" r="1.5" fill="#FCEBAE"/><circle cx="26.33" cy="51.82" r="1.5" fill="#FCEBAE"/><circle cx="26.00" cy="48.00" r="1.5" fill="#FCEBAE"/><circle cx="26.33" cy="44.18" r="1.5" fill="#FCEBAE"/><circle cx="27.33" cy="40.48" r="1.5" fill="#FCEBAE"/><circle cx="28.95" cy="37.00" r="1.5" fill="#FCEBAE"/><circle cx="31.15" cy="33.86" r="1.5" fill="#FCEBAE"/><circle cx="33.86" cy="31.15" r="1.5" fill="#FCEBAE"/><circle cx="37.00" cy="28.95" r="1.5" fill="#FCEBAE"/><circle cx="40.48" cy="27.33" r="1.5" fill="#FCEBAE"/><circle cx="44.18" cy="26.33" r="1.5" fill="#FCEBAE"/><circle cx="48.00" cy="26.00" r="1.5" fill="#FCEBAE"/><circle cx="51.82" cy="26.33" r="1.5" fill="#FCEBAE"/><circle cx="55.52" cy="27.33" r="1.5" fill="#FCEBAE"/><circle cx="59.00" cy="28.95" r="1.5" fill="#FCEBAE"/><circle cx="62.14" cy="31.15" r="1.5" fill="#FCEBAE"/><circle cx="64.85" cy="33.86" r="1.5" fill="#FCEBAE"/><circle cx="67.05" cy="37.00" r="1.5" fill="#FCEBAE"/><circle cx="68.67" cy="40.48" r="1.5" fill="#FCEBAE"/><circle cx="69.67" cy="44.18" r="1.5" fill="#FCEBAE"/><circle cx="48" cy="48" r="19.5" fill="#946E10"/><circle cx="48" cy="48" r="18" fill="url(#disc5)"/><path d="M34 41 A 18 18 0 0 1 59 33" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/><path d="M48.00 32.60 L49.13 35.85 L52.57 35.92 L49.83 37.99 L50.82 41.28 L48.00 39.32 L45.18 41.28 L46.17 37.99 L43.43 35.92 L46.87 35.85 Z" fill="url(#mstar5)" stroke="#6E5108" stroke-width="0.5"/><path d="M48.00 34.14 L48.56 35.76 L50.28 35.79 L48.91 36.83 L49.41 38.48 L48.00 37.50 L46.59 38.48 L47.09 36.83 L45.72 35.79 L47.44 35.76 Z" fill="#ffffff" opacity="0.28"/><path d="M58.08 39.92 L59.21 43.17 L62.65 43.24 L59.91 45.32 L60.90 48.61 L58.08 46.64 L55.26 48.61 L56.26 45.32 L53.52 43.24 L56.95 43.17 Z" fill="url(#mstar5)" stroke="#6E5108" stroke-width="0.5"/><path d="M58.08 41.46 L58.65 43.08 L60.36 43.12 L58.99 44.16 L59.49 45.80 L58.08 44.82 L56.67 45.80 L57.17 44.16 L55.80 43.12 L57.52 43.08 Z" fill="#ffffff" opacity="0.28"/><path d="M54.23 51.78 L55.36 55.02 L58.80 55.09 L56.06 57.17 L57.05 60.46 L54.23 58.50 L51.41 60.46 L52.40 57.17 L49.67 55.09 L53.10 55.02 Z" fill="url(#mstar5)" stroke="#6E5108" stroke-width="0.5"/><path d="M54.23 53.31 L54.79 54.93 L56.51 54.97 L55.14 56.01 L55.64 57.65 L54.23 56.67 L52.82 57.65 L53.32 56.01 L51.95 54.97 L53.67 54.93 Z" fill="#ffffff" opacity="0.28"/><path d="M41.77 51.78 L42.90 55.02 L46.33 55.09 L43.60 57.17 L44.59 60.46 L41.77 58.50 L38.95 60.46 L39.94 57.17 L37.20 55.09 L40.64 55.02 Z" fill="url(#mstar5)" stroke="#6E5108" stroke-width="0.5"/><path d="M41.77 53.31 L42.33 54.93 L44.05 54.97 L42.68 56.01 L43.18 57.65 L41.77 56.67 L40.36 57.65 L40.86 56.01 L39.49 54.97 L41.21 54.93 Z" fill="#ffffff" opacity="0.28"/><path d="M37.92 39.92 L39.05 43.17 L42.48 43.24 L39.74 45.32 L40.74 48.61 L37.92 46.64 L35.10 48.61 L36.09 45.32 L33.35 43.24 L36.79 43.17 Z" fill="url(#mstar5)" stroke="#6E5108" stroke-width="0.5"/><path d="M37.92 41.46 L38.48 43.08 L40.20 43.12 L38.83 44.16 L39.33 45.80 L37.92 44.82 L36.51 45.80 L37.01 44.16 L35.64 43.12 L37.35 43.08 Z" fill="#ffffff" opacity="0.28"/></svg></div><div class="name">上級</div><div class="ex">量子化 / LoRA / Tensor コア</div></div>
+      <div class="level-row"><div class="lvl-badge"><svg class="level-medal" width="36" height="39" viewBox="0 0 96 104" role="img" aria-label="読者レベル6"><defs><radialGradient id="disc6" cx="38%" cy="30%" r="78%"><stop offset="0" stop-color="#FCEBAE"/><stop offset="55%" stop-color="#E2BB42"/><stop offset="100%" stop-color="#946E10"/></radialGradient><linearGradient id="mstar6" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BE951F"/><stop offset="1" stop-color="#6E5108"/></linearGradient><linearGradient id="rib6" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C8505E"/><stop offset="1" stop-color="#7E2330"/></linearGradient><filter id="sh6" x="-35%" y="-35%" width="170%" height="170%"><feDropShadow dx="0" dy="1.6" stdDeviation="1.7" flood-color="#1A2A44" flood-opacity="0.30"/></filter></defs><path d="M40 8 L56 8 L52 30 L48 26 L44 30 Z" fill="url(#rib6)"/><line x1="48" y1="9" x2="48" y2="27" stroke="#00000055" stroke-width="0.7"/><rect x="38" y="18" width="20" height="6" rx="3" fill="url(#disc6)" stroke="#946E10" stroke-width="0.8"/><g filter="url(#sh6)"><circle cx="48" cy="48" r="22" fill="#946E10"/></g><circle cx="70.00" cy="48.00" r="1.5" fill="#FCEBAE"/><circle cx="69.67" cy="51.82" r="1.5" fill="#FCEBAE"/><circle cx="68.67" cy="55.52" r="1.5" fill="#FCEBAE"/><circle cx="67.05" cy="59.00" r="1.5" fill="#FCEBAE"/><circle cx="64.85" cy="62.14" r="1.5" fill="#FCEBAE"/><circle cx="62.14" cy="64.85" r="1.5" fill="#FCEBAE"/><circle cx="59.00" cy="67.05" r="1.5" fill="#FCEBAE"/><circle cx="55.52" cy="68.67" r="1.5" fill="#FCEBAE"/><circle cx="51.82" cy="69.67" r="1.5" fill="#FCEBAE"/><circle cx="48.00" cy="70.00" r="1.5" fill="#FCEBAE"/><circle cx="44.18" cy="69.67" r="1.5" fill="#FCEBAE"/><circle cx="40.48" cy="68.67" r="1.5" fill="#FCEBAE"/><circle cx="37.00" cy="67.05" r="1.5" fill="#FCEBAE"/><circle cx="33.86" cy="64.85" r="1.5" fill="#FCEBAE"/><circle cx="31.15" cy="62.14" r="1.5" fill="#FCEBAE"/><circle cx="28.95" cy="59.00" r="1.5" fill="#FCEBAE"/><circle cx="27.33" cy="55.52" r="1.5" fill="#FCEBAE"/><circle cx="26.33" cy="51.82" r="1.5" fill="#FCEBAE"/><circle cx="26.00" cy="48.00" r="1.5" fill="#FCEBAE"/><circle cx="26.33" cy="44.18" r="1.5" fill="#FCEBAE"/><circle cx="27.33" cy="40.48" r="1.5" fill="#FCEBAE"/><circle cx="28.95" cy="37.00" r="1.5" fill="#FCEBAE"/><circle cx="31.15" cy="33.86" r="1.5" fill="#FCEBAE"/><circle cx="33.86" cy="31.15" r="1.5" fill="#FCEBAE"/><circle cx="37.00" cy="28.95" r="1.5" fill="#FCEBAE"/><circle cx="40.48" cy="27.33" r="1.5" fill="#FCEBAE"/><circle cx="44.18" cy="26.33" r="1.5" fill="#FCEBAE"/><circle cx="48.00" cy="26.00" r="1.5" fill="#FCEBAE"/><circle cx="51.82" cy="26.33" r="1.5" fill="#FCEBAE"/><circle cx="55.52" cy="27.33" r="1.5" fill="#FCEBAE"/><circle cx="59.00" cy="28.95" r="1.5" fill="#FCEBAE"/><circle cx="62.14" cy="31.15" r="1.5" fill="#FCEBAE"/><circle cx="64.85" cy="33.86" r="1.5" fill="#FCEBAE"/><circle cx="67.05" cy="37.00" r="1.5" fill="#FCEBAE"/><circle cx="68.67" cy="40.48" r="1.5" fill="#FCEBAE"/><circle cx="69.67" cy="44.18" r="1.5" fill="#FCEBAE"/><circle cx="48" cy="48" r="19.5" fill="#946E10"/><circle cx="48" cy="48" r="18" fill="url(#disc6)"/><path d="M34 41 A 18 18 0 0 1 59 33" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/><path d="M48.00 32.60 L49.03 35.58 L52.18 35.64 L49.67 37.54 L50.59 40.56 L48.00 38.76 L45.41 40.56 L46.33 37.54 L43.82 35.64 L46.97 35.58 Z" fill="url(#mstar6)" stroke="#6E5108" stroke-width="0.5"/><path d="M48.00 34.01 L48.52 35.50 L50.09 35.53 L48.84 36.48 L49.29 37.99 L48.00 37.09 L46.71 37.99 L47.16 36.48 L45.91 35.53 L47.48 35.50 Z" fill="#ffffff" opacity="0.28"/><path d="M57.53 38.10 L58.56 41.08 L61.71 41.14 L59.20 43.04 L60.11 46.06 L57.53 44.26 L54.94 46.06 L55.85 43.04 L53.34 41.14 L56.49 41.08 Z" fill="url(#mstar6)" stroke="#6E5108" stroke-width="0.5"/><path d="M57.53 39.51 L58.04 41.00 L59.62 41.03 L58.36 41.98 L58.82 43.49 L57.53 42.59 L56.23 43.49 L56.69 41.98 L55.43 41.03 L57.01 41.00 Z" fill="#ffffff" opacity="0.28"/><path d="M57.53 49.10 L58.56 52.08 L61.71 52.14 L59.20 54.04 L60.11 57.06 L57.53 55.26 L54.94 57.06 L55.85 54.04 L53.34 52.14 L56.49 52.08 Z" fill="url(#mstar6)" stroke="#6E5108" stroke-width="0.5"/><path d="M57.53 50.51 L58.04 52.00 L59.62 52.03 L58.36 52.98 L58.82 54.49 L57.53 53.59 L56.23 54.49 L56.69 52.98 L55.43 52.03 L57.01 52.00 Z" fill="#ffffff" opacity="0.28"/><path d="M48.00 54.60 L49.03 57.58 L52.18 57.64 L49.67 59.54 L50.59 62.56 L48.00 60.76 L45.41 62.56 L46.33 59.54 L43.82 57.64 L46.97 57.58 Z" fill="url(#mstar6)" stroke="#6E5108" stroke-width="0.5"/><path d="M48.00 56.01 L48.52 57.50 L50.09 57.53 L48.84 58.48 L49.29 59.99 L48.00 59.09 L46.71 59.99 L47.16 58.48 L45.91 57.53 L47.48 57.50 Z" fill="#ffffff" opacity="0.28"/><path d="M38.47 49.10 L39.51 52.08 L42.66 52.14 L40.15 54.04 L41.06 57.06 L38.47 55.26 L35.89 57.06 L36.80 54.04 L34.29 52.14 L37.44 52.08 Z" fill="url(#mstar6)" stroke="#6E5108" stroke-width="0.5"/><path d="M38.47 50.51 L38.99 52.00 L40.57 52.03 L39.31 52.98 L39.77 54.49 L38.47 53.59 L37.18 54.49 L37.64 52.98 L36.38 52.03 L37.96 52.00 Z" fill="#ffffff" opacity="0.28"/><path d="M38.47 38.10 L39.51 41.08 L42.66 41.14 L40.15 43.04 L41.06 46.06 L38.47 44.26 L35.89 46.06 L36.80 43.04 L34.29 41.14 L37.44 41.08 Z" fill="url(#mstar6)" stroke="#6E5108" stroke-width="0.5"/><path d="M38.47 39.51 L38.99 41.00 L40.57 41.03 L39.31 41.98 L39.77 43.49 L38.47 42.59 L37.18 43.49 L37.64 41.98 L36.38 41.03 L37.96 41.00 Z" fill="#ffffff" opacity="0.28"/></svg></div><div class="name">専門</div><div class="ex">gpt-oss / ノイマン型 / Anthropic 創業史</div></div>
+    </div>
+
+    <div class="lg-h">評価日・時変フラグ <span class="en">time-varying</span></div>
+    <div class="flag-row required">
+      <div class="fh"><span class="code">evaluation_date</span><span class="rb">REQUIRED</span></div>
+      <div class="desc">書いた／確認した日付。料金・モデル名など時期で変わる情報は「この日時点では…」と読む。</div>
+    </div>
+    <div class="flag-row">
+      <div class="fh"><span class="code">version_status</span><span class="ob">OPTIONAL</span><span class="vals"><span class="v">active</span><span class="v">preview</span><span class="v">deprecated</span></span></div>
+      <div class="desc">モデル・サービスの状態。タグライン帯付近に小バッジで表示。</div>
+    </div>
+    <div class="flag-row">
+      <div class="fh"><span class="code">pricing_note</span><span class="ob">OPTIONAL</span><span class="vals"><span class="v">none</span><span class="v">paid</span><span class="v">freemium</span></span></div>
+      <div class="desc">料金の発生有無。具体的な価格は時変なので本文側に記載。</div>
+    </div>
+
+    <div class="page-foot">
+      <div class="left-meta">2026.05 · Draft</div>
+      <div class="right-meta">LEGEND · FRONT</div>
+    </div>
+    <div class="page-num">10</div>
+  </section>
+
+  <!-- 右ページ: 誌面に出る記号 -->
+  <section class="page right">
+    <div class="section-label">FRONT · LEGEND ②</div>
+    <h1 class="front-title-sm">誌面に出る記号</h1>
+    <p class="front-lead">色・著者欄のバッジ・右ページの 6 視点アイコン・関連用語ピルの意味です。</p>
+
+    <div class="lg-h">色のトーン <span class="en">color</span></div>
+    <div class="color-row"><div class="color-swatch" style="background: var(--ink-blue-100);"></div><div class="desc"><strong>タグライン青</strong>　左ページ tagline 帯の背景</div></div>
+    <div class="color-row"><div class="color-swatch" style="background: var(--paper); border: 1.5px dashed var(--ink-blue);"></div><div class="desc"><strong>dashed 青</strong>　擬人化ポンチ絵スロットの枠線</div></div>
+    <div class="color-row"><div class="color-swatch" style="background: white; border: 1px solid var(--rule); color: var(--ink-blue); display:flex; align-items:center; padding:0 10px; font-family: var(--font-en); font-size: 12px;">https://example.com</div><div class="desc"><strong>リンク青</strong>　参考 URL の文字色</div></div>
+
+    <div class="lg-h">著者欄・判定の記号 <span class="en">badge</span></div>
+    <div class="badge-grid">
+      <div class="badge-cell"><div class="glyph first">🙂</div><div class="lbl"><strong>第一印象</strong>最初の感想</div></div>
+      <div class="badge-cell"><div class="glyph good">👍</div><div class="lbl"><strong>良い点</strong>評価する点</div></div>
+      <div class="badge-cell"><div class="glyph bad">👎</div><div class="lbl"><strong>ダメな点</strong>気になる点</div></div>
+      <div class="badge-cell"><div class="glyph who">👥</div><div class="lbl"><strong>誰向けか</strong>想定読者</div></div>
+      <div class="badge-cell"><div class="glyph star">☆</div><div class="lbl"><strong>違反</strong>修正必須</div></div>
+      <div class="badge-cell"><div class="glyph warn">⚠</div><div class="lbl"><strong>警告</strong>要目視</div></div>
+    </div>
+
+    <div class="lg-h">6 視点アイコン <span class="en">icon</span></div>
+    <div class="icon-grid">
+      <div class="icon-cell"><div class="ico">🎯</div><div class="il">役割</div></div>
+      <div class="icon-cell"><div class="ico">💗</div><div class="il">うれしさ</div></div>
+      <div class="icon-cell"><div class="ico">⚠</div><div class="il">注意点</div></div>
+      <div class="icon-cell"><div class="ico">💡</div><div class="il">どこで</div></div>
+      <div class="icon-cell"><div class="ico">🌱</div><div class="il">はじめに</div></div>
+      <div class="icon-cell"><div class="ico">🔎</div><div class="il">深掘り</div></div>
+    </div>
+
+    <div class="lg-h">関連用語ピル <span class="en">pill</span></div>
+    <div class="pills-demo"><span class="pill">Context</span><span class="pill">Token</span><span class="pill">MCP</span><span class="pill">RAG</span></div>
+    <p class="pill-note">右ページ下段の青いピル。3〜5 個を置き、次に読む語への入口にします。</p>
+
+    <div class="page-foot">
+      <div class="left-meta">LEGEND · FRONT</div>
+      <div class="right-meta">📖 バイブコーディング図鑑</div>
+    </div>
+    <div class="page-num">11</div>
+  </section>
+
+</div>
+
+</body>
+</html>

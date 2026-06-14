@@ -84,6 +84,12 @@ body { margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: var
 }
 .flow-row .flow-arrow { flex: 0 0 auto !important; }
 
+/* 読者レベル（難易度）＝勲章バッジ：上チロム右、ページ番号の隣。 */
+.page-chrome-top .chrome-right { display: flex; align-items: center; gap: 8px; }
+.level-medal { display: block; margin-top: -6px; margin-bottom: -8px; }
+/* 体験区分の関与バー（チップ内アイコン） */
+.tag-chip .exp-bars { vertical-align: -3px; margin-right: 2px; }
+
 /* ─── PDF 出力（Cmd/Ctrl+P → PDF として保存）───
    2026-04-28 W 案: ポンチ絵スロットを iter 22 前の旧サイズに戻し、書籍判型 A 系 √2 に収める方向。
    @page は CSS 設計値 750×1061px の物理換算（≒199×281mm）。
@@ -228,7 +234,10 @@ body { margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: var
       <div class="chrome-left">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span class="chrome-label">人・会社</span>
       </div>
-      <span class="chrome-page">108</span>
+      <div class="chrome-right">
+        <svg class="level-medal" width="38" height="41" viewBox="0 0 96 104" role="img" aria-label="読者レベル2"><defs><radialGradient id="disc2" cx="38%" cy="30%" r="78%"><stop offset="0" stop-color="#F1C492"/><stop offset="55%" stop-color="#C77B3B"/><stop offset="100%" stop-color="#7A431C"/></radialGradient><linearGradient id="mstar2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9A5A28"/><stop offset="1" stop-color="#542C12"/></linearGradient><linearGradient id="rib2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5BB06A"/><stop offset="1" stop-color="#2E7D40"/></linearGradient><filter id="sh2" x="-35%" y="-35%" width="170%" height="170%"><feDropShadow dx="0" dy="1.6" stdDeviation="1.7" flood-color="#1A2A44" flood-opacity="0.30"/></filter></defs><path d="M40 8 L56 8 L52 30 L48 26 L44 30 Z" fill="url(#rib2)"/><line x1="48" y1="9" x2="48" y2="27" stroke="#00000055" stroke-width="0.7"/><rect x="38" y="18" width="20" height="6" rx="3" fill="url(#disc2)" stroke="#7A431C" stroke-width="0.8"/><g filter="url(#sh2)"><circle cx="48" cy="48" r="22" fill="#7A431C"/></g><circle cx="70.00" cy="48.00" r="1.5" fill="#F1C492"/><circle cx="69.67" cy="51.82" r="1.5" fill="#F1C492"/><circle cx="68.67" cy="55.52" r="1.5" fill="#F1C492"/><circle cx="67.05" cy="59.00" r="1.5" fill="#F1C492"/><circle cx="64.85" cy="62.14" r="1.5" fill="#F1C492"/><circle cx="62.14" cy="64.85" r="1.5" fill="#F1C492"/><circle cx="59.00" cy="67.05" r="1.5" fill="#F1C492"/><circle cx="55.52" cy="68.67" r="1.5" fill="#F1C492"/><circle cx="51.82" cy="69.67" r="1.5" fill="#F1C492"/><circle cx="48.00" cy="70.00" r="1.5" fill="#F1C492"/><circle cx="44.18" cy="69.67" r="1.5" fill="#F1C492"/><circle cx="40.48" cy="68.67" r="1.5" fill="#F1C492"/><circle cx="37.00" cy="67.05" r="1.5" fill="#F1C492"/><circle cx="33.86" cy="64.85" r="1.5" fill="#F1C492"/><circle cx="31.15" cy="62.14" r="1.5" fill="#F1C492"/><circle cx="28.95" cy="59.00" r="1.5" fill="#F1C492"/><circle cx="27.33" cy="55.52" r="1.5" fill="#F1C492"/><circle cx="26.33" cy="51.82" r="1.5" fill="#F1C492"/><circle cx="26.00" cy="48.00" r="1.5" fill="#F1C492"/><circle cx="26.33" cy="44.18" r="1.5" fill="#F1C492"/><circle cx="27.33" cy="40.48" r="1.5" fill="#F1C492"/><circle cx="28.95" cy="37.00" r="1.5" fill="#F1C492"/><circle cx="31.15" cy="33.86" r="1.5" fill="#F1C492"/><circle cx="33.86" cy="31.15" r="1.5" fill="#F1C492"/><circle cx="37.00" cy="28.95" r="1.5" fill="#F1C492"/><circle cx="40.48" cy="27.33" r="1.5" fill="#F1C492"/><circle cx="44.18" cy="26.33" r="1.5" fill="#F1C492"/><circle cx="48.00" cy="26.00" r="1.5" fill="#F1C492"/><circle cx="51.82" cy="26.33" r="1.5" fill="#F1C492"/><circle cx="55.52" cy="27.33" r="1.5" fill="#F1C492"/><circle cx="59.00" cy="28.95" r="1.5" fill="#F1C492"/><circle cx="62.14" cy="31.15" r="1.5" fill="#F1C492"/><circle cx="64.85" cy="33.86" r="1.5" fill="#F1C492"/><circle cx="67.05" cy="37.00" r="1.5" fill="#F1C492"/><circle cx="68.67" cy="40.48" r="1.5" fill="#F1C492"/><circle cx="69.67" cy="44.18" r="1.5" fill="#F1C492"/><circle cx="48" cy="48" r="19.5" fill="#7A431C"/><circle cx="48" cy="48" r="18" fill="url(#disc2)"/><path d="M34 41 A 18 18 0 0 1 59 33" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/><path d="M39.00 41.40 L40.55 45.86 L45.28 45.96 L41.51 48.82 L42.88 53.34 L39.00 50.64 L35.12 53.34 L36.49 48.82 L32.72 45.96 L37.45 45.86 Z" fill="url(#mstar2)" stroke="#542C12" stroke-width="0.5"/><path d="M39.00 43.51 L39.78 45.74 L42.14 45.79 L40.26 47.22 L40.94 49.48 L39.00 48.13 L37.06 49.48 L37.74 47.22 L35.86 45.79 L38.22 45.74 Z" fill="#ffffff" opacity="0.28"/><path d="M57.00 41.40 L58.55 45.86 L63.28 45.96 L59.51 48.82 L60.88 53.34 L57.00 50.64 L53.12 53.34 L54.49 48.82 L50.72 45.96 L55.45 45.86 Z" fill="url(#mstar2)" stroke="#542C12" stroke-width="0.5"/><path d="M57.00 43.51 L57.78 45.74 L60.14 45.79 L58.26 47.22 L58.94 49.48 L57.00 48.13 L55.06 49.48 L55.74 47.22 L53.86 45.79 L56.22 45.74 Z" fill="#ffffff" opacity="0.28"/></svg>
+        <span class="chrome-page">108</span>
+      </div>
     </div>
 
     <div class="page-body">
@@ -237,8 +246,8 @@ body { margin: 0; padding: 12px 20px 40px; background: #E5EAF0; font-family: var
       <div class="tagline-bar">Claude を作り、最先端モデルを提供する AI 企業です。三大 AI 企業の一つです。</div>
       
       <div class="tag-row">
-        <span class="tag-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>体験区分：調査ベース</span>
-        <span class="tag-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="15" width="4" height="6"/><rect x="10" y="10" width="4" height="11"/><rect x="17" y="5" width="4" height="16"/></svg>推奨読者レベル：Level 2</span>
+        <span class="tag-chip"><svg class="exp-bars" width="18" height="16" viewBox="0 0 48 44" role="img" aria-label="体験区分 research_only"><rect x="10" y="24" width="9" height="14" rx="2.5" fill="#2F7BE6" stroke="#2F7BE6" stroke-width="2"/><rect x="22" y="16" width="9" height="22" rx="2.5" fill="#FFFFFF" stroke="#2F7BE6" stroke-width="2"/><rect x="34" y="8" width="9" height="30" rx="2.5" fill="#FFFFFF" stroke="#2F7BE6" stroke-width="2"/></svg>体験区分：調査ベース</span>
+        <span class="tag-chip" style="background:#EAF1FB;color:#123E82;border-color:#EAF1FB;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="15" width="4" height="6"/><rect x="10" y="10" width="4" height="11"/><rect x="17" y="5" width="4" height="16"/></svg>推奨読者レベル：Level 2</span>
       </div>
 
       <div class="body-section">
