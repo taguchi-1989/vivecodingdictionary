@@ -70,6 +70,14 @@ CATEGORY_DIR_MAP = {
 # 日本語タイトル → 英語スラグ（手動マップ）
 # 必要に応じて書き足す。マップに無い日本語タイトルは ID のみのファイル名にする。
 SLUG_OVERRIDES: dict[str, str] = {
+    # Lv6 自己学習シェルフ（和文・混在タイトル用、2026-06-22）
+    "J-94": "parallelism",
+    "J-89": "moe_routing",
+    "J-25": "tokenizer_bpe",
+    "J-26": "latent_space",
+    "J-82": "speculative_decoding",
+    "J-84": "batch_inference",
+    "J-85": "throughput_latency",
     "A-1": "preface",
     "A-2": "reading_guide",
     "A-3": "walking_guide",

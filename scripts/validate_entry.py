@@ -304,6 +304,36 @@ def check_yaml(fm: dict, r: Report) -> None:
             "(A=必須 / B=一般 / C=中級 / D=上級 / E=開発者向け)"
         )
 
+    # 2026-06-22: reader_level（任意）の書式チェック
+    #   - 1〜5 = 刊行スコープ / 6 = 著者の自己学習シェルフ（刊行外）
+    #   - 範囲表記は幅 1 段まで（"2-3" / "4-5"）。幅 2 以上は禁止
+    #   - 6 は単一値のみ。6 を含む範囲（"5-6" 等）は禁止
+    #   詳細: docs/level_policy.md §2-4, §2-6
+    rl = str(fm.get("reader_level", "")).strip()
+    if rl:
+        if not re.match(r"^(\d|\d-\d)$", rl):
+            r.warn(
+                f"A. YAML: `reader_level` が `{rl}` — `1`〜`6` の単一値か "
+                "`2-3` 形式の範囲で指定してください"
+            )
+        else:
+            nums = [int(x) for x in re.findall(r"\d", rl)]
+            if any(n < 1 or n > 6 for n in nums):
+                r.warn(f"A. YAML: `reader_level` の値が範囲外（{rl}） — 1〜6 で指定してください")
+            if "-" in rl:
+                lo, hi = min(nums), max(nums)
+                if hi - lo >= 2:
+                    r.warn(
+                        f"A. YAML: `reader_level` の範囲幅が 2 段以上（{rl}） — "
+                        "幅は最大 1 段（例 `2-3`）にし、迷ったら単一値に寄せてください"
+                    )
+                if 6 in nums:
+                    r.warn(
+                        f"A. YAML: `reader_level` に 6 を含む範囲（{rl}） — "
+                        "6 は刊行スコープ外シェルフなので単一値 `6` で指定してください"
+                        "（docs/level_policy.md §2-6）"
+                    )
+
 
 def check_structure(body: str, r: Report) -> None:
     for sec in REQUIRED_SECTIONS:
@@ -737,6 +767,13 @@ def is_author_fields_filled(body: str) -> bool:
     return True
 
 
+def reader_level_max(fm: dict) -> int:
+    """reader_level の上限レベル（数字）を返す。未記入は 0。
+    6 を含むなら刊行スコープ外シェルフ（docs/level_policy.md §2-6）。"""
+    nums = [int(x) for x in re.findall(r"\d", str(fm.get("reader_level", "")))]
+    return max(nums) if nums else 0
+
+
 def main() -> int:
     path = resolve_path_from_stdin_or_argv()
     if path is None:
@@ -784,6 +821,22 @@ def main() -> int:
     posix = path.as_posix()
     if "/content/entries/common/" in posix or posix.startswith("content/entries/common/"):
         return 0
+
+    # reader_level 6 = 著者の自己学習シェルフ（刊行スコープ外・docs/level_policy.md §2-6）。
+    # 誌面レイアウト前提の制約（字数・ですます・著者欄）は外し、
+    # YAML と構造の最小サニティ＋出典日だけ見る。深掘り・数式・長文・常体 OK。
+    # 自動昇格もしない（著者本人が status を管理する学習ノートのため）。
+    if reader_level_max(fm) >= 6:
+        r = Report(path)
+        check_yaml(fm, r)
+        check_structure(body, r)
+        check_sources_date(body, fm, r)
+        rendered = r.render()
+        if r.star_fails:
+            print(rendered, file=sys.stderr)
+        else:
+            print(rendered)
+        return r.exit_code
 
     r = Report(path)
     check_yaml(fm, r)
