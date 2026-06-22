@@ -322,6 +322,13 @@ J-20,,Big Data,term_general,data_learning,ready,,content/entries/term_general/J-
 J-21,,LoRA,term_general,data_learning,ready,,content/entries/term_general/J-21_lora[済].md
 J-22,,パラメータ数の単位,term_general,data_learning,drafting,,
 J-23,,拡散モデル,term_general,data_learning,ready,画像・動画生成の主流アーキテクチャ,content/entries/term_general/J-23_diffusion_model[済].md
+J-24,,Encoder-Decoder,term_general,ml_basic,drafting,Lv6自己学習シェルフ（刊行外）,content/entries/term_general/J-24_encoder_decoder.md
+J-25,,Tokenizer・BPE,term_general,ml_basic,drafting,Lv6自己学習シェルフ（刊行外）,content/entries/term_general/J-25_tokenizer_bpe.md
+J-26,,潜在空間,term_general,ml_basic,drafting,Lv6自己学習シェルフ（刊行外）,content/entries/term_general/J-26_latent_space.md
+J-27,,RoPE,term_general,ml_basic,drafting,Lv6自己学習シェルフ（刊行外）,content/entries/term_general/J-27_rope.md
+J-28,,MLA,term_general,ml_basic,drafting,Lv6自己学習シェルフ（刊行外）,content/entries/term_general/J-28_mla.md
+J-29,,KV Cache,term_general,inference,drafting,Lv6自己学習シェルフ（刊行外）,content/entries/term_general/J-29_kv_cache.md
+J-30,,Flash Attention,term_general,inference,drafting,Lv6自己学習シェルフ（刊行外）,content/entries/term_general/J-30_flash_attention.md
 J-31,,第 5 世代コンピュータ,term_general,computing_history,ready,,content/entries/term_general/J-31_fifth_generation_computer[済].md
 J-32,,ノイマン型,term_general,computing_history,skeleton,,
 J-33,,量子コンピュータ,term_general,computing_history,ready,,content/entries/term_general/J-33_quantum-computer[済].md
@@ -349,8 +356,17 @@ J-78,,HDD,term_general,hardware,ready,2026-04-30 entry-writer 執筆,content/ent
 J-79,,SSD,term_general,hardware,ready,2026-04-30 entry-writer 執筆,content/entries/term_general/J-79_ssd[済].md
 J-80,,SATA,term_general,hardware,ready,,content/entries/term_general/J-80_sata[済].md
 J-81,,M.2,term_general,hardware,ready,2026-04-29 entry-writer 執筆,content/entries/term_general/J-81_m_2[済].md
+J-82,,投機的デコード,term_general,inference,drafting,Lv6自己学習シェルフ（刊行外）,content/entries/term_general/J-82_speculative_decoding.md
+J-83,,vLLM,term_general,inference,drafting,Lv6自己学習シェルフ（刊行外）,content/entries/term_general/J-83_vllm.md
+J-84,,バッチ推論,term_general,inference,drafting,Lv6自己学習シェルフ（刊行外）,content/entries/term_general/J-84_batch_inference.md
+J-85,,スループットとレイテンシ,term_general,inference,drafting,Lv6自己学習シェルフ（刊行外）,content/entries/term_general/J-85_throughput_latency.md
+J-86,,GQA,term_general,ml_basic,drafting,Lv6自己学習シェルフ（刊行外）,content/entries/term_general/J-86_gqa.md
+J-87,,QK-Norm,term_general,ml_basic,drafting,Lv6自己学習シェルフ（刊行外）,content/entries/term_general/J-87_qk_norm.md
+J-88,,MTP,term_general,ml_basic,drafting,Lv6自己学習シェルフ（刊行外）,content/entries/term_general/J-88_mtp.md
+J-89,,MoE ルーティング,term_general,ml_basic,drafting,Lv6自己学習シェルフ（刊行外）,content/entries/term_general/J-89_moe_routing.md
 J-90,,GUI,term_general,ui_os,ready,,content/entries/term_general/J-90_gui[済].md
 J-91,,CLI,term_general,ui_os,ready,,content/entries/term_general/J-91_cli[済].md
 J-92,,Linux,term_general,ui_os,ready,,content/entries/term_general/J-92_linux[済].md
 J-93,,Ubuntu,term_general,ui_os,ready,,content/entries/term_general/J-93_ubuntu[済].md
+J-94,,並列化戦略,term_general,inference,drafting,Lv6自己学習シェルフ（刊行外）。分散推論 TP/PP/EP/DP,content/entries/term_general/J-94_parallelism.md
 J-100,,識字（リテラシー）,term_general,concept,ready,タイトルを驚き屋から識字（リテラシー）に変更（2026-04-30）,content/entries/term_general/J-100_literacy[済].md

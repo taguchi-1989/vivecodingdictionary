@@ -514,6 +514,14 @@ def _scalar(v) -> str:
     return str(v)
 
 
+def _reader_level_max(fm) -> int:
+    """reader_level の上限レベル（数字）を返す。未記入は 0。
+    上限で見るのは「6 を含むなら刊行スコープ外シェルフ」と判定するため
+    （docs/level_policy.md §2-6）。"""
+    nums = [int(x) for x in re.findall(r"\d", _scalar(fm.get("reader_level")))]
+    return max(nums) if nums else 0
+
+
 def _level_palette(lvl: str) -> tuple[str, str]:
     """reader_level（'2' / '2-3' / '1-2' / '4-5' 等）の上限レベル（難しさの天井）を取り、
     A-5 凡例と同じ色帯を返す。戻り値 = (背景色, 文字色)。
@@ -1327,11 +1335,17 @@ def main() -> int:
     csv_rows = load_entries_from_csv()
     entries: list[dict] = []
     archived_count = 0
+    shelf_count = 0
     for row in csv_rows:
         rec = make_entry_record(row)
         if rec is None:
             if row.get("path"):
                 archived_count += 1
+            continue
+        # reader_level 6 = 著者の自己学習シェルフ（刊行スコープ外）。
+        # 原稿・CSV は残すが誌面には出さない（docs/level_policy.md §2-6）。
+        if _reader_level_max(rec["fm"]) >= 6:
+            shelf_count += 1
             continue
         entries.append(rec)
 
@@ -1364,7 +1378,10 @@ def main() -> int:
     index_path.write_text(index_html, encoding="utf-8")
     print(f"  OK  {index_path.relative_to(ROOT)}")
 
-    print(f"\n=== 生成 {len(entries)} エントリ + 目次 1、archived {archived_count} 件スキップ ===")
+    print(
+        f"\n=== 生成 {len(entries)} エントリ + 目次 1、"
+        f"archived {archived_count} 件 / 自己学習シェルフ(Lv6) {shelf_count} 件スキップ ==="
+    )
 
     if args.open:
         webbrowser.open(index_path.as_uri())

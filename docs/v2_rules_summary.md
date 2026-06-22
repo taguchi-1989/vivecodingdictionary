@@ -89,7 +89,7 @@
 | category | 必須 | service / model / term / tool / workflow / history / person / benchmark / common / mcp | ❌ |
 | subtype | 任意 | language / framework / ai_assistant などの下位分類 | ℹ️ |
 | experience_level | 推奨 | hands_on / partial / research_only | ⚠️ |
-| reader_level | 推奨 | 1〜6 または範囲（`2-3`） | ⚠️ |
+| reader_level | 推奨 | 1〜5＝刊行スコープ／6＝著者の自己学習シェルフ（刊行外）。範囲は幅1段まで（`2-3`）、6 は単一値のみ。詳細 [level_policy.md](level_policy.md) §2-6 | ⚠️ |
 | figure_type | 必須 | before_after / structure / comparison / workflow / timeline | ❌ |
 | page_layout | 必須 | `spread_v1` | ❌ |
 | evaluation_date | 必須 | YYYY-MM-DD | ❌（書式も） |

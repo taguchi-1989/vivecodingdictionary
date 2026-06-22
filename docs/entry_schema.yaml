@@ -121,8 +121,11 @@ frontmatter:
       severity: warn
     - key: reader_level
       format: regex
-      pattern: "^(\\d|\\d-\\d)$"   # "1" または "2-3"
+      pattern: "^(\\d|\\d-\\d)$"   # "1" 単一値、または "2-3" 範囲
       severity: warn
+      # 1〜5 = 刊行スコープ / 6 = 著者の自己学習シェルフ（刊行外）。
+      # 範囲は幅 1 段まで、6 は単一値のみ（"5-6" 禁止）。
+      # 厳密チェックは scripts/validate_entry.py、運用は docs/level_policy.md §2-4・§2-6。
 
     - key: importance
       description: |

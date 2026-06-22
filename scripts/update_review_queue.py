@@ -20,6 +20,7 @@ Usage:
 """
 
 import argparse
+import re
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -124,6 +125,10 @@ def collect():
                         status = "ready"
                         promoted_ids.append(eid + " (needs_review→ready)")
 
+        reader_level = str(fm.get("reader_level", "")).strip()
+        rl_nums = [int(x) for x in re.findall(r"\d", reader_level)]
+        rl_max = max(rl_nums) if rl_nums else 0
+
         rows.append({
             "id": eid,
             "title": title,
@@ -135,6 +140,8 @@ def collect():
             "is_common": is_common,
             "is_frontmatter_dir": is_frontmatter_dir,
             "is_front": is_front,
+            "reader_level": reader_level,
+            "rl_max": rl_max,
         })
     return rows, promoted_ids
 
@@ -188,6 +195,18 @@ def render(rows):
             lines.append(f"- **{s}**: {by_status[s]} 件")
     lines.append(f"- **合計**: {len(rows)} 件")
 
+    # 刊行スコープ集計（docs/level_policy.md §2-6）:
+    #  reader_level 6 = 著者の自己学習シェルフ（刊行外）。誌面ビルドから除外される。
+    shelf_rows = [
+        r for r in rows
+        if r["rl_max"] >= 6 and r["status"] not in SKIP_STATUSES
+    ]
+    lines.append("")
+    lines.append(
+        f"- **自己学習シェルフ（reader_level 6・刊行外）**: {len(shelf_rows)} 件"
+        "（誌面には出ません。`scripts/preview_gen.py` が除外）"
+    )
+
     def section(title: str, items: list, empty_msg: str = "なし"):
         out = [
             "",
@@ -214,6 +233,8 @@ def render(rows):
     lines += section("✅ 完成（ready・全パス）", ready_clean)
     lines += section("📖 前付け（front_*・著者本人レビュー必須）", front_rows,
                      empty_msg="なし（A 章 / 扉が front_* レイアウトに移行すると表示されます）")
+    lines += section("📚 自己学習シェルフ（reader_level 6・今季は刊行しない）", shelf_rows,
+                     empty_msg="なし（KV Cache・MLA 等の深掘り技術を 6 にすると、ここに集まり誌面からは外れます）")
     lines.append("")
     lines.append("## 動線")
     lines.append("")
